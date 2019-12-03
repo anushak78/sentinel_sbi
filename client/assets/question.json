@@ -90,10 +90,10 @@
       "q_id": 1
     },
     {
-      "question": "Name in the community certificate?",
+      "question": "Is community certificate document correct?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Valid",
+        "option2": "Invalid",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -110,6 +110,27 @@
       "approved": "1",
       "doc_id": 3,
       "q_id": 3
+    },
+    {
+      "question": "Sub caste claimed same as community on certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 4
+    },
+    {
+      "question": "Community certificate issued in Father's name?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 5
     }
   ],
   "Diploma Certificate": [

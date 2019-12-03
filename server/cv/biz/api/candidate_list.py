@@ -336,7 +336,7 @@ def get_candidate_details(request):
     on ocd.ocd_status_id_fk = osm.osm_status_pk
     INNER JOIN oes_candidate_images oci
     ON ocd.ocd_user_fk = oci.oci_user_fk
-    INNER JOIN oes_work_experience owe
+    left JOIN oes_work_experience owe
     ON owe.owe_user_fk = ocd.ocd_user_fk
     where ocd.ocd_created_by = :candidate_id
                           """)
@@ -354,7 +354,7 @@ def get_candidate_details(request):
     )
 
     document_list_query = text("""
-        select
+        select distinct * from ( select
         ocd_flag,
         ocd_doc_file_name,
         CASE
@@ -403,7 +403,7 @@ def get_candidate_details(request):
         LEFT JOIN tnu.oes_work_experience owe
         ON oum_user_id = owe.owe_created_by
         where oum_user_id = :candidate_id
-        order by cdtm.doc_id asc
+        order by cdtm.doc_id asc) d1
                               """)
 
     document_list = request.dbsession.execute(document_list_query, {

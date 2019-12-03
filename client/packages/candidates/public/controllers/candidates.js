@@ -40,6 +40,12 @@
         };
 
 
+        $scope.remarksText = {
+            '3c2':'Document correct remarks',
+            '3c3':'New community',
+            '3c4':'New sub caste'
+        };
+
         $scope.titles =
         {
             "10th / SSLC Certificate": 'SSLC Certificate',
@@ -82,7 +88,9 @@
 
         $scope.resetValues = function () {
             vm.doc13 = '';
+            vm.doc32 = '';
             vm.doc33 = '';
+            vm.doc34 = '';
             vm.doc84 = '';
             vm.doc123 = '';
             vm.doc242 = '';
@@ -94,7 +102,9 @@
             vm.doc182 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc13 = "";
+            vm.radio_values.init_doc32 = "";
             vm.radio_values.init_doc33 = "";
+            vm.radio_values.init_doc34 = "";
             vm.radio_values.init_doc124 = "";
             vm.radio_values.init_doc53 = "";
             vm.radio_values.init_doc84 = "";

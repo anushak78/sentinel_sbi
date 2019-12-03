@@ -6,18 +6,24 @@
                     Candidate List
                 </div>
                 <div class="col-lg-2">
-                    <button type="button" class="btn btn-success" ng-click="exportCandidateData()">Export Reports</button>
+                    <button type="button" class="btn btn-success"
+                            ng-click="exportCandidateData()">Export Reports
+                    </button>
                 </div>
                 <div ng-if="userData.level == 1" class="col-lg-2 pull-right">
-                    <select class="form-control DD" id="DD" ng-model="packages.filterDD">
+                    <select class="form-control DD" id="DD"
+                            ng-model="packages.filterDD">
                         <option value="">All</option>
                         <option value="A">Approved</option>
-                        <option value="R">{{userData.level==1?'Not Matching / Not Clear':'Rejected'}}</option>
+                        <option value="R">{{userData.level==1?'Not Matching /
+                            Not Clear':'Rejected'}}
+                        </option>
                         <option value="P">Pending</option>
                     </select>
                 </div>
                 <div class="col-lg-4 pull-right">
-                    <input type="text" placeholder="Search By Candidate ID" id="searchByCandidateID"
+                    <input type="text" placeholder="Search By Candidate ID"
+                           id="searchByCandidateID"
                            class="form-control"
                            ng-model="packages.searchByCandidateID">
                 </div>
@@ -31,44 +37,60 @@
                         <th width="30%">Name</th>
                         <!--<th width="20%">Mobile NO.</th>-->
                         <!--<th width="20%">Email</th>-->
-                        <th width="15%" ng-if="userData.level>1">Level 1 Status</th>
-                        <th width="15%" ng-if="userData.level>2">Level 2 Status</th>
+                        <th width="15%" ng-if="userData.level>1">Level 1
+                            Status
+                        </th>
+                        <th width="15%" ng-if="userData.level>2">Level 2
+                            Status
+                        </th>
                         <th width="20%">Status</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr dir-paginate="u in rows | itemsPerPage: pageSize" total-items="totalCount"
-                        current-page="currentPage" class="listingDiv" data-index="{{$index}}"
+                    <tr dir-paginate="u in rows | itemsPerPage: pageSize"
+                        total-items="totalCount"
+                        current-page="currentPage" class="listingDiv"
+                        data-index="{{$index}}"
                         data-userId="{{u.oum_user_id}}"
                         style="cursor: pointer">
 
-                        <td width="5%" data-ng-init="currentCount=((currentPage-1)*pageSize)"
+                        <td width="5%"
+                            data-ng-init="currentCount=((currentPage-1)*pageSize)"
                             ng-click="showCustomModal(u.oum_user_id,$index)">
                             {{currentCount+$index+1}}
                         </td>
-                        <td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.oum_user_id}}</td>
-                        <td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.ocd_first_name}} {{u.ocd_last_name}}
+                        <td ng-click="showCustomModal(u.oum_user_id,$index)">
+                            {{u.oum_user_id}}
                         </td>
-                        <td ng-click="showCustomModal(u.oum_user_id,$index)" ng-if="userData.level>1">
+                        <td ng-click="showCustomModal(u.oum_user_id,$index)">
+                            {{u.ocd_first_name}} {{u.ocd_last_name}}
+                        </td>
+                        <td ng-click="showCustomModal(u.oum_user_id,$index)"
+                            ng-if="userData.level>1">
                             Not Matching / Not Clear
                         </td>
-                        <td ng-click="showCustomModal(u.oum_user_id,$index)" ng-if="userData.level>2">
+                        <td ng-click="showCustomModal(u.oum_user_id,$index)"
+                            ng-if="userData.level>2">
                             Rejected
                         </td>
                         <!--<td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.oum_mobile_no}}</td>-->
                         <!--<td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.oum_email_id}}</td>-->
                         <!--LEVEL WISE STATUS-->
                         <!--LEVEL 1-->
-                        <td ng-if="userData.level == 1" ng-click="showCustomModal(u.oum_user_id,$index)">
-                            {{u.status == 2 ? 'Not Matching / Not Clear' : u.status == 1 ? 'Matched' : 'Pending'}}
+                        <td ng-if="userData.level == 1"
+                            ng-click="showCustomModal(u.oum_user_id,$index)">
+                            {{u.status == 2 ? 'Not Matching / Not Clear' :
+                            u.status == 1 ? 'Matched' : 'Pending'}}
                         </td>
 
-                        <td ng-if="userData.level >1 " ng-click="showCustomModal(u.oum_user_id,$index)">
-                            {{u.status == 2 ? 'Rejected' : u.status == 1 ? 'Approved' : 'Pending'}}
+                        <td ng-if="userData.level >1 "
+                            ng-click="showCustomModal(u.oum_user_id,$index)">
+                            {{u.status == 2 ? 'Rejected' : u.status == 1 ?
+                            'Approved' : 'Pending'}}
                         </td>
 
                         <!--<td ng-if="userData.level == 3" ng-click="showCustomModal(u.oum_user_id,$index)">-->
-                            <!--{{u.status == 2 ? 'Rejected' : u.status == 1 ? 'Approved' : 'Pending'}}-->
+                        <!--{{u.status == 2 ? 'Rejected' : u.status == 1 ? 'Approved' : 'Pending'}}-->
                         <!--</td>-->
                     </tr>
                     <tr ng-if="rows.length==0" class="listingDiv">
@@ -85,26 +107,36 @@
                     </small>
                 </div>
                 <div class="col-sm-8 text-right text-center-xs">
-                    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)">
-                        <ul class="pagination" ng-if="1 < pages.length || !autoHide">
+                    <dir-pagination-controls boundary-links="true"
+                                             on-page-change="pageChangeHandler(newPageNumber)">
+                        <ul class="pagination"
+                            ng-if="1 < pages.length || !autoHide">
                             <!---->
-                            <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 }">
+                            <li ng-if="boundaryLinks"
+                                ng-class="{ disabled : pagination.current == 1 }">
                                 <a href="" ng-click="setCurrent(1)">&laquo;</a>
                             </li>
 
-                            <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }">
-                                <a href="" ng-click="setCurrent(pagination.current - 1)">&lsaquo;</a>
+                            <li ng-if="directionLinks"
+                                ng-class="{ disabled : pagination.current == 1 }">
+                                <a href=""
+                                   ng-click="setCurrent(pagination.current - 1)">&lsaquo;</a>
                             </li>
                             <li ng-repeat="pageNumber in pages track by tracker(pageNumber, $index)"
                                 ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }">
-                                <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+                                <a href="" ng-click="setCurrent(pageNumber)">{{
+                                    pageNumber }}</a>
                             </li>
 
-                            <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
-                                <a href="" ng-click="setCurrent(pagination.current + 1)">&rsaquo;</a>
+                            <li ng-if="directionLinks"
+                                ng-class="{ disabled : pagination.current == pagination.last }">
+                                <a href=""
+                                   ng-click="setCurrent(pagination.current + 1)">&rsaquo;</a>
                             </li>
-                            <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == pagination.last }">
-                                <a href="" ng-click="setCurrent(pagination.last)">&raquo;</a>
+                            <li ng-if="boundaryLinks"
+                                ng-class="{ disabled : pagination.current == pagination.last }">
+                                <a href=""
+                                   ng-click="setCurrent(pagination.last)">&raquo;</a>
                             </li>
                         </ul>
                     </dir-pagination-controls>
@@ -116,29 +148,35 @@
     <div class="vbox right-side-nav" id="sideNav"
          style="background: rgb(66, 88, 110);width: 54%;z-index: 9;height: calc(100% - 50px);position: fixed;right: -54%;top: 50px;">
         <div class="closeButton" style="height: 100%;overflow: scroll">
-            <section class="wrapper header h4" style="width: 100%;height:7%;position:absolute;top:0;z-index:9;color:white;background: #89cc97;">
+            <section class="wrapper header h4"
+                     style="width: 100%;height:7%;position:absolute;top:0;z-index:9;color:white;background: #89cc97;">
                 <span class="pull-left col-6">Candidate Details</span>
                 <span class="pull-left"
                       style="text-decoration: underline; cursor: pointer; margin-left: 370px"
                       ng-click="showApplicationForm()">
                     Application Form
                 </span>
-                <span ng-click="closeCustomModal()" class="close pull-right" data-dismiss="popover"
+                <span ng-click="closeCustomModal()" class="close pull-right"
+                      data-dismiss="popover"
                       style="opacity:1;color:white;">×</span>
             </section>
-            <section class="wrapper custom-class" style="color: white;margin-top:7%">
-                <div class="slimScrollDiv" style="position: relative; overflow-y: scroll; width: auto;">
+            <section class="wrapper custom-class"
+                     style="color: white;margin-top:7%">
+                <div class="slimScrollDiv"
+                     style="position: relative; overflow-y: scroll; width: auto;">
                     <div class="col-md-4">
                         <section class="panel-body" style="font-size: 12px">
                             User ID:<br/><span style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>
                         </section>
                     </div>
                     <div class="col-md-4">
-                        <img ng-src="{{candidateDetails['candidate_details'][0]['oci_photo_image_path']}}" height="100">
+                        <img ng-src="{{candidateDetails['candidate_details'][0]['oci_photo_image_path']}}"
+                             height="100">
                         <!--<img src="/assets/src/images/avatar.jpg" height="100">-->
                     </div>
                     <div class="col-md-4">
-                        <img ng-src="{{candidateDetails['candidate_details'][0]['oci_sign_image_path']}}" height="58">
+                        <img ng-src="{{candidateDetails['candidate_details'][0]['oci_sign_image_path']}}"
+                             height="58">
                         <!--<img src="/assets/src/images/avatar.jpg" height="100">-->
                     </div>
                     <div class="clearfix"></div>
@@ -194,18 +232,22 @@
                     </div>
                     <div class="clearfix"></div>
                     <!--</div>-->
-                    <div style="margin: 0px; height: 10px" class="line line-dashed pull-in"></div>
+                    <div style="margin: 0px; height: 10px"
+                         class="line line-dashed pull-in"></div>
 
                     <!--<div class="slimScrollDiv"-->
                     <!--style="position: relative; overflow-y: scroll; width: auto;height: 311px">-->
                     <div style="clear: both"></div>
-                    <div ng-if="userData.level==1 || userData.level==2 || userData.level==3" class="col-sm-12"
+                    <div ng-if="userData.level==1 || userData.level==2 || userData.level==3"
+                         class="col-sm-12"
                          style="color: black !important;">
                         <section class="panel panel-default">
                             <header class="panel-heading">
-                                <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px"
+                                <ul class="nav nav-tabs pull-right"
+                                    style="margin-top:-9.5px;margin-right: 1px"
                                     ng-if="userData.level==1 && showVerify">
-                                    <a href="#" class="btn btn-info" ng-click="showModal()">
+                                    <a href="#" class="btn btn-info"
+                                       ng-click="showModal()">
                                         <i class="fa fa-check"></i>
                                         Verify
                                     </a>
@@ -229,10 +271,15 @@
                                         </span>
                                     </td>
                                     <td>
-                                        {{d.status.level1.length>0?(d.status.level1[0]['status']==1?"Matched":"Not Matching/Not Clear"):(userData.level==1 && object.keys(finalJsonData).length>0?(finalJsonData[d.odm_name]['status']==1?'Matched':(finalJsonData[d.odm_name]['status']==2?'Not Matching/Not Clear':'---')):'---')}}
+                                        {{d.status.level1.length>0?(d.status.level1[0]['status']==1?"Matched":"Not
+                                        Matching/Not Clear"):(userData.level==1
+                                        &&
+                                        object.keys(finalJsonData).length>0?(finalJsonData[d.odm_name]['status']==1?'Matched':(finalJsonData[d.odm_name]['status']==2?'Not
+                                        Matching/Not Clear':'---')):'---')}}
                                     </td>
                                     <td>
-                                        <span ng-repeat="(key, value) in finalJsonData" data-check="{{key}} / {{d.odm_name}}"
+                                        <span ng-repeat="(key, value) in finalJsonData"
+                                              data-check="{{key}} / {{d.odm_name}}"
                                               ng-if="object.keys(finalJsonData).length>0 && key==d.odm_name && userData.level==1">
                                             <span ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                                   ng-if="a.additional_info.length>0">
@@ -241,8 +288,9 @@
                                                 <div>New DOB :- {{a.additional_info}}</div>
                                                 </span>
                                                 <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 3"> <!--/*Community*/-->
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
+                                                    <!--<div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>-->
+                                                <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                                <!--<div>{{ a.additional_info}}</div>-->
                                                 </span>
                                                 <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
                                                 <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
@@ -264,8 +312,9 @@
                                                 <div>New DOB :- {{a.additional_info}}</div>
                                             </span>
                                             <span ng-if="d.status.level1[0]['doc_id'] == 3"> <!--/*Community*/-->
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
+                                                <!--<div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>-->
+                                                <!--<div>New Community :- {{a.additional_info}}</div>-->
+                                                <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                             </span>
                                             <span ng-if="d.status.level1[0]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
                                                 <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
@@ -276,7 +325,7 @@
                                                 <div>New Enlistment Date :- {{a.additional_info}}</div>
                                             </span>
                                             <!--<span ng-if="d.status.level1[0]['doc_id'] == 24"> &lt;!&ndash;/*NOC*/&ndash;&gt;-->
-                                                <!--<div ng-if="a.additional_info!=selectedDocType">Extra Qualifications :- {{a.additional_info}}</div>-->
+                                            <!--<div ng-if="a.additional_info!=selectedDocType">Extra Qualifications :- {{a.additional_info}}</div>-->
                                             <!--</span>-->
                                         </span>
                                     </td>
@@ -297,13 +346,16 @@
                         </section>
                         <br/>
                     </div>
-                    <div ng-if="userData.level==2 || userData.level==3" class="col-sm-12"
+                    <div ng-if="userData.level==2 || userData.level==3"
+                         class="col-sm-12"
                          style="color: black !important;">
                         <section class="panel panel-default">
                             <header class="panel-heading">
-                                <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px"
+                                <ul class="nav nav-tabs pull-right"
+                                    style="margin-top:-9.5px;margin-right: 1px"
                                     ng-if="userData.level==2 && showVerify">
-                                    <a href="#" class="btn btn-info" ng-click="showModal()">
+                                    <a href="#" class="btn btn-info"
+                                       ng-click="showModal()">
                                         <i class="fa fa-check"></i>
                                         Verify
                                     </a>
@@ -328,7 +380,8 @@
                                     </td>
                                     <td>
                                         {{d.status.level2.length>0?(d.status.level2[0]['status']==1?"Matched":"Not
-                                        Matching/Not Clear"):(userData.level==2 &&
+                                        Matching/Not Clear"):(userData.level==2
+                                        &&
                                         object.keys(finalJsonData).length>0?(finalJsonData[d.odm_name]['status']==1?'Matched':(finalJsonData[d.odm_name]['status']==2?'Not
                                         Matching/Not Clear':'---')):'---')}}
                                     </td>
@@ -380,7 +433,8 @@
                                 </tbody>
                             </table>
                             <div style="height: 10px; width: 100%"></div>
-                            <div class="col-md-12" ng-if="object.keys(candidateDetails['comments']['level2']).length>0">
+                            <div class="col-md-12"
+                                 ng-if="object.keys(candidateDetails['comments']['level2']).length>0">
                                 <div>
                                     <label>Level 2 Comment : </label>
                                     {{candidateDetails['comments']['level2']['comment']}}
@@ -393,50 +447,90 @@
                                 <div class="form-group">
                                     <label>Comment :-</label>
                                     <!--<textarea class="form-control" ng-model="packages.comment"></textarea>-->
-                                    <select class="form-control" id="dd-comment-2" ng-model="packages.comment">
+                                    <select class="form-control"
+                                            id="dd-comment-2"
+                                            ng-model="packages.comment">
                                         <option value="">--Select--</option>
-                                        <option>APPROVED - CHANGE OF COMMUNITY</option>
-                                        <option>APPROVED - EDUCATION - QUALIFIED</option>
-                                        <option>APPROVED - OTHER THAN ABOVE REASONS</option>
+                                        <option>APPROVED - CHANGE OF
+                                            COMMUNITY
+                                        </option>
+                                        <option>APPROVED - EDUCATION -
+                                            QUALIFIED
+                                        </option>
+                                        <option>APPROVED - OTHER THAN ABOVE
+                                            REASONS
+                                        </option>
                                         <option>APPROVED - OVERSIGHT</option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM DESTITUTE WIDOW</option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM EX-SERVICEMAN/ SERVICE MAN(GOING
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM DESTITUTE WIDOW
+                                        </option>
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM EX-SERVICEMAN/ SERVICE
+                                            MAN(GOING
                                             TO
                                             RETIRE)
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM DEPARTMENT QUOTA</option>
-                                        <option>APPROVED - TREATED AS OC (NOT UPLOADED COMMUNITY CERTIFICATE)
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM DEPARTMENT QUOTA
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (OTHER STATE COMMUNITY CERTIFICATE)
+                                        <option>APPROVED - TREATED AS OC (NOT
+                                            UPLOADED COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS NON-PSTM FROM PSTM</option>
-                                        <option>REJECTED - OTHER THAN ABOVE REASONS</option>
+                                        <option>APPROVED - TREATED AS OC (OTHER
+                                            STATE COMMUNITY CERTIFICATE)
+                                        </option>
+                                        <option>APPROVED - TREATED AS NON-PSTM
+                                            FROM PSTM
+                                        </option>
+                                        <option>REJECTED - OTHER THAN ABOVE
+                                            REASONS
+                                        </option>
                                         <option>REJECTED - OVERAGE</option>
-                                        <option>REJECTED - OVERAGE - EX-SERVICEMAN / SERVICE MAN (GOING TO RETIRE)
+                                        <option>REJECTED - OVERAGE -
+                                            EX-SERVICEMAN / SERVICE MAN (GOING
+                                            TO RETIRE)
                                         </option>
-                                        <option>REJECTED - OVERAGE - DEPARTMENT</option>
-                                        <option>REJECTED - EDUCATION - NOT POSSESSING PRESCRIBED DEGREE / DIPLOMA
+                                        <option>REJECTED - OVERAGE -
+                                            DEPARTMENT
+                                        </option>
+                                        <option>REJECTED - EDUCATION - NOT
+                                            POSSESSING PRESCRIBED DEGREE /
+                                            DIPLOMA
                                         </option>
                                         <option>REJECTED - NOT CLEAR</option>
-                                        <option>REJECTED - PARTIALLY UPLOADED</option>
-                                        <option>REJECTED - NOT AVAILABLE</option>
-                                        <option>REJECTED - OVERAGE - DESTITUTE WIDOW</option>
-                                        <option>REJECTED - OVERAGE - COMMUNITY</option>
-                                        <option>REJECTED - OVERAGE - OTHER STATE COMMUNITY CERTIFICATE</option>
-                                        <option>REJECTED - PHOTO AND / OR SIGNATURE NOT PROPER</option>
-                                        <option>REJECTED - UNDER QUALIFICATION</option>
+                                        <option>REJECTED - PARTIALLY UPLOADED
+                                        </option>
+                                        <option>REJECTED - NOT AVAILABLE
+                                        </option>
+                                        <option>REJECTED - OVERAGE - DESTITUTE
+                                            WIDOW
+                                        </option>
+                                        <option>REJECTED - OVERAGE -
+                                            COMMUNITY
+                                        </option>
+                                        <option>REJECTED - OVERAGE - OTHER
+                                            STATE COMMUNITY CERTIFICATE
+                                        </option>
+                                        <option>REJECTED - PHOTO AND / OR
+                                            SIGNATURE NOT PROPER
+                                        </option>
+                                        <option>REJECTED - UNDER
+                                            QUALIFICATION
+                                        </option>
                                         <option>REJECTED - UNDERAGE</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-md-12" ng-if="object.keys(candidateDetails['comments']['level2']).length>0">
+                            <div class="col-md-12"
+                                 ng-if="object.keys(candidateDetails['comments']['level2']).length>0">
                                 <div>
                                     <label>Candidate Status : </label>
                                     {{candidateDetails['comments']['level2']['status']==1?'Approved':'Rejected'}}
                                 </div>
                             </div>
-                            <div class="col-6" ng-if="userData.level==2 && showVerify">
+                            <div class="col-6"
+                                 ng-if="userData.level==2 && showVerify">
                                 <!-- <div class="form-group text-center">
                                      <input type="button" class="btn btn-success text-center"
                                             ng-click=submitQuestion()
@@ -453,12 +547,15 @@
                             </div>
                         </section>
                     </div>
-                    <div ng-if="userData.level==3" class="col-sm-12" style="color: black !important;">
+                    <div ng-if="userData.level==3" class="col-sm-12"
+                         style="color: black !important;">
                         <section class="panel panel-default">
                             <header class="panel-heading">
-                                <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px"
+                                <ul class="nav nav-tabs pull-right"
+                                    style="margin-top:-9.5px;margin-right: 1px"
                                     ng-if="userData.level==3 && showVerify">
-                                    <a href="#" class="btn btn-info" ng-click="showModal()">
+                                    <a href="#" class="btn btn-info"
+                                       ng-click="showModal()">
                                         <i class="fa fa-check"></i>
                                         Verify
                                     </a>
@@ -537,7 +634,8 @@
                                 </tbody>
                             </table>
                             <div style="height: 10px; width: 100%"></div>
-                            <div class="col-md-12" ng-if="object.keys(candidateDetails['comments']['level3']).length>0">
+                            <div class="col-md-12"
+                                 ng-if="object.keys(candidateDetails['comments']['level3']).length>0">
                                 <div ng-if="userData.level == 3">
                                     <label>Level 3 Comment : </label>
                                     {{candidateDetails['comments']['level3']['comment']}}
@@ -550,51 +648,91 @@
                                 <div class="form-group">
                                     <label>Comment :-</label>
                                     <!--<textarea class="form-control" ng-model="packages.comment"></textarea>-->
-                                    <select id="dd-comment-3" class="form-control" ng-model="packages.comment">
+                                    <select id="dd-comment-3"
+                                            class="form-control"
+                                            ng-model="packages.comment">
                                         <option value="">--Select--</option>
-                                        <option>APPROVED - CHANGE OF COMMUNITY</option>
-                                        <option>APPROVED - EDUCATION - QUALIFIED</option>
-                                        <option>APPROVED - OTHER THAN ABOVE REASONS</option>
+                                        <option>APPROVED - CHANGE OF
+                                            COMMUNITY
+                                        </option>
+                                        <option>APPROVED - EDUCATION -
+                                            QUALIFIED
+                                        </option>
+                                        <option>APPROVED - OTHER THAN ABOVE
+                                            REASONS
+                                        </option>
                                         <option>APPROVED - OVERSIGHT</option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM DESTITUTE WIDOW</option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM EX-SERVICEMAN/ SERVICE MAN(GOING
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM DESTITUTE WIDOW
+                                        </option>
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM EX-SERVICEMAN/ SERVICE
+                                            MAN(GOING
                                             TO
                                             RETIRE)
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL FROM DEPARTMENT QUOTA</option>
-                                        <option>APPROVED - TREATED AS OC (NOT UPLOADED COMMUNITY CERTIFICATE)
+                                        <option>APPROVED - TREATED AS GENERAL
+                                            FROM DEPARTMENT QUOTA
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (OTHER STATE COMMUNITY CERTIFICATE)
+                                        <option>APPROVED - TREATED AS OC (NOT
+                                            UPLOADED COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS NON-PSTM FROM PSTM</option>
-                                        <option>REJECTED - OTHER THAN ABOVE REASONS</option>
+                                        <option>APPROVED - TREATED AS OC (OTHER
+                                            STATE COMMUNITY CERTIFICATE)
+                                        </option>
+                                        <option>APPROVED - TREATED AS NON-PSTM
+                                            FROM PSTM
+                                        </option>
+                                        <option>REJECTED - OTHER THAN ABOVE
+                                            REASONS
+                                        </option>
                                         <option>REJECTED - OVERAGE</option>
-                                        <option>REJECTED - OVERAGE - EX-SERVICEMAN / SERVICE MAN (GOING TO RETIRE)
+                                        <option>REJECTED - OVERAGE -
+                                            EX-SERVICEMAN / SERVICE MAN (GOING
+                                            TO RETIRE)
                                         </option>
-                                        <option>REJECTED - OVERAGE - DEPARTMENT</option>
-                                        <option>REJECTED - EDUCATION - NOT POSSESSING PRESCRIBED DEGREE / DIPLOMA
+                                        <option>REJECTED - OVERAGE -
+                                            DEPARTMENT
+                                        </option>
+                                        <option>REJECTED - EDUCATION - NOT
+                                            POSSESSING PRESCRIBED DEGREE /
+                                            DIPLOMA
                                         </option>
                                         <option>REJECTED - NOT CLEAR</option>
-                                        <option>REJECTED - PARTIALLY UPLOADED</option>
-                                        <option>REJECTED - NOT AVAILABLE</option>
-                                        <option>REJECTED - OVERAGE - DESTITUTE WIDOW</option>
-                                        <option>REJECTED - OVERAGE - COMMUNITY</option>
-                                        <option>REJECTED - OVERAGE - OTHER STATE COMMUNITY CERTIFICATE</option>
-                                        <option>REJECTED - PHOTO AND / OR SIGNATURE NOT PROPER</option>
-                                        <option>REJECTED - UNDER QUALIFICATION</option>
+                                        <option>REJECTED - PARTIALLY UPLOADED
+                                        </option>
+                                        <option>REJECTED - NOT AVAILABLE
+                                        </option>
+                                        <option>REJECTED - OVERAGE - DESTITUTE
+                                            WIDOW
+                                        </option>
+                                        <option>REJECTED - OVERAGE -
+                                            COMMUNITY
+                                        </option>
+                                        <option>REJECTED - OVERAGE - OTHER
+                                            STATE COMMUNITY CERTIFICATE
+                                        </option>
+                                        <option>REJECTED - PHOTO AND / OR
+                                            SIGNATURE NOT PROPER
+                                        </option>
+                                        <option>REJECTED - UNDER
+                                            QUALIFICATION
+                                        </option>
                                         <option>REJECTED - UNDERAGE</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-md-12" ng-if="object.keys(candidateDetails['comments']['level3']).length>0">
+                            <div class="col-md-12"
+                                 ng-if="object.keys(candidateDetails['comments']['level3']).length>0">
                                 <div>
                                     <label>Candidate Status : </label>
                                     {{candidateDetails['comments']['level3']['status']==1?'Approved':'Rejected'}}
                                 </div>
                             </div>
 
-                            <div class="col-6" ng-if="userData.level==3 && showVerify">
+                            <div class="col-6"
+                                 ng-if="userData.level==3 && showVerify">
                                 <!--<div class="form-group text-center">-->
                                 <!--<input type="button" class="btn btn-success text-center"-->
                                 <!--ng-click=submitQuestion()-->
@@ -609,17 +747,21 @@
                     <div style="height: 8px"></div>
                     <div class="col-6" ng-if="userData.level==1 && showVerify">
                         <div class="form-group text-center">
-                            <input type="button" class="btn btn-success text-center"
+                            <input type="button"
+                                   class="btn btn-success text-center"
                                    ng-click=submitQuestion()
                                    value="Submit"/>
                         </div>
                     </div>
                     <div>
-                        <div ng-if="userData.level > 1 && rows[selectedIndex]['status']<1" class="form-group text-center float-left">
-                            <input type="button" class="btn btn-success text-center"
+                        <div ng-if="userData.level > 1 && rows[selectedIndex]['status']<1"
+                             class="form-group text-center float-left">
+                            <input type="button"
+                                   class="btn btn-success text-center"
                                    ng-click=submitQuestion(1)
                                    value="Approve"/>
-                            <input type="button" class="btn btn-danger text-center"
+                            <input type="button"
+                                   class="btn btn-danger text-center"
                                    ng-click=submitQuestion(2)
                                    value="Reject"/>
                         </div>
@@ -630,7 +772,8 @@
     </div>
 
     <div class="modal fade" id="modal-form">
-        <div class="modal-dialog" style="width: 96% !important;height: 100% !important;">
+        <div class="modal-dialog"
+             style="width: 96% !important;height: 100% !important;">
             <div class="modal-content" style="height: 100% !important;">
                 <div class="modal-body" style="height: 100% !important;">
                     <div class="row" style="height: 100% !important;">
@@ -641,59 +784,80 @@
                             </iframe>
                         </div>
                         <div class="col-sm-4" style="height: 100% !important;">
-                            <section class="panel-default" style="height: 100% !important;">
-                                <header class="font-bold">Document Questions &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                            <section class="panel-default"
+                                     style="height: 100% !important;">
+                                <header class="font-bold">Document Questions
+                                    &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
                                     {{titles[selectedDocType]}}
                                 </header>
                                 <div class="slimScrollDiv"
                                      style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto;height: 35%">
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            User ID:<br/><span style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            User ID:<br/><span
+                                                style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Name:<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_last_name']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Name:<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_last_name']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Father Name :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Father Name :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Mother Name :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Mother Name :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            D.O.B. :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            D.O.B. :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Community :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['octm_category_desc']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Community :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['octm_category_desc']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Gender :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Gender :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            Payment Status :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            Payment Status :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
                                         </section>
                                     </div>
                                     <div class="col-md-6">
-                                        <section class="panel-body" style="font-size: 12px">
-                                            State Name :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
+                                        <section class="panel-body"
+                                                 style="font-size: 12px">
+                                            State Name :<br/><span
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
                                         </section>
                                     </div>
                                 </div>
-                                <div style="width: 100%; height: 1%; margin-top: 1%;" align="center">
+                                <div style="width: 100%; height: 1%; margin-top: 1%;"
+                                     align="center">
                                     <div style="width: 90%; height: 1px; background: #bfbebe"></div>
                                 </div>
                                 <div class="slimScrollDiv"
@@ -703,85 +867,113 @@
                                          ng-include="'/candidates/view/templates/Additional_Documents.html'">
 
                                     </div>
-                                    <header class="panel-heading font-bold">Questions :</header>
-                                    <section class="panel-body slim-scroll" style="margin-top: -20px">
-                                        <div id="1" ng-if="selectedDocType=='10th / SSLC Certificate'">
+                                    <header class="panel-heading font-bold">
+                                        Questions :
+                                    </header>
+                                    <section class="panel-body slim-scroll"
+                                             style="margin-top: -20px">
+                                        <div id="1"
+                                             ng-if="selectedDocType=='10th / SSLC Certificate'">
                                             <tenth-sslc-certificate></tenth-sslc-certificate>
                                         </div>
-                                        <div id="2" ng-if="selectedDocType=='XII / HSC Certificate'">
+                                        <div id="2"
+                                             ng-if="selectedDocType=='XII / HSC Certificate'">
                                             <twelth-certificate></twelth-certificate>
                                         </div>
-                                        <div id="3" ng-if="selectedDocType=='Community Certificate'">
+                                        <div id="3"
+                                             ng-if="selectedDocType=='Community Certificate'">
                                             <community-certificate></community-certificate>
                                         </div>
-                                        <div id="4" ng-if="selectedDocType=='Diploma Certificate'">
+                                        <div id="4"
+                                             ng-if="selectedDocType=='Diploma Certificate'">
                                             <diploma-certificate></diploma-certificate>
                                         </div>
-                                        <div id="5" ng-if="selectedDocType=='Graduation Degree Certificate'">
+                                        <div id="5"
+                                             ng-if="selectedDocType=='Graduation Degree Certificate'">
                                             <degree-certificate></degree-certificate>
                                         </div>
-                                        <div id="6" ng-if="selectedDocType=='Destitute Widow Certificate'">
+                                        <div id="6"
+                                             ng-if="selectedDocType=='Destitute Widow Certificate'">
                                             <destitute-widow-certificate></destitute-widow-certificate>
                                         </div>
-                                        <div id="7" ng-if="selectedDocType=='PSTM Certificate'">
+                                        <div id="7"
+                                             ng-if="selectedDocType=='PSTM Certificate'">
                                             <pstm-certificate></pstm-certificate>
                                         </div>
                                         <div id="8"
                                              ng-if="selectedDocType=='Discharged / to be discharged certificate'">
                                             <ex-servicemen-certificate></ex-servicemen-certificate>
                                         </div>
-                                        <div id="9" ng-if="selectedDocType=='Highest Certificate For NSS'">
+                                        <div id="9"
+                                             ng-if="selectedDocType=='Highest Certificate For NSS'">
                                             <highest-certificate-for-nss></highest-certificate-for-nss>
                                         </div>
-                                        <div id="10" ng-if="selectedDocType=='Highest Certificate For NCC'">
+                                        <div id="10"
+                                             ng-if="selectedDocType=='Highest Certificate For NCC'">
                                             <highest-certificate-for-ncc></highest-certificate-for-ncc>
                                         </div>
-                                        <div id="11" ng-if="selectedDocType=='Medal Certificate (For Department)'">
+                                        <div id="11"
+                                             ng-if="selectedDocType=='Medal Certificate (For Department)'">
                                             <medal-certificate-for-department></medal-certificate-for-department>
                                         </div>
-                                        <div id="12" ng-if="selectedDocType=='Noc (Police Department)'">
+                                        <div id="12"
+                                             ng-if="selectedDocType=='Noc (Police Department)'">
                                             <noc-certificate-for-department></noc-certificate-for-department>
                                         </div>
-                                        <div id="13" ng-if="selectedDocType=='Highest Sports Certificate'">
+                                        <div id="13"
+                                             ng-if="selectedDocType=='Highest Sports Certificate'">
                                             <highest-sports-certificate></highest-sports-certificate>
                                         </div>
-                                        <div id="14" ng-if="selectedDocType=='Additional Mark'">
+                                        <div id="14"
+                                             ng-if="selectedDocType=='Additional Mark'">
                                             <additional-mark></additional-mark>
                                         </div>
-                                        <div id="15" ng-if="selectedDocType=='Transgender Certificate'">
+                                        <div id="15"
+                                             ng-if="selectedDocType=='Transgender Certificate'">
                                             <transgender-certificate></transgender-certificate>
                                         </div>
-                                        <div id="16" ng-if="selectedDocType=='Photo'">
+                                        <div id="16"
+                                             ng-if="selectedDocType=='Photo'">
                                             <photo></photo>
                                         </div>
-                                        <div id="17" ng-if="selectedDocType=='Sign'">
+                                        <div id="17"
+                                             ng-if="selectedDocType=='Sign'">
                                             <sign></sign>
                                         </div>
-                                        <div id="18" ng-if="selectedDocType=='MCA - 3 years'">
+                                        <div id="18"
+                                             ng-if="selectedDocType=='MCA - 3 years'">
                                             <mca></mca>
                                         </div>
-                                        <div id="19" ng-if="selectedDocType=='M.E. or M.Tech. degree in Computer Science or I.T. - 2 years'">
+                                        <div id="19"
+                                             ng-if="selectedDocType=='M.E. or M.Tech. degree in Computer Science or I.T. - 2 years'">
                                             <me-it></me-it>
                                         </div>
-                                        <div id="20" ng-if="selectedDocType=='M.E or M.Tech degree in Communication Systems - 2 years'">
+                                        <div id="20"
+                                             ng-if="selectedDocType=='M.E or M.Tech degree in Communication Systems - 2 years'">
                                             <me-cs></me-cs>
                                         </div>
-                                        <div id="21" ng-if="selectedDocType=='Post Graduate Diploma in Computer application - 1 year'">
+                                        <div id="21"
+                                             ng-if="selectedDocType=='Post Graduate Diploma in Computer application - 1 year'">
                                             <pg-ca></pg-ca>
                                         </div>
-                                        <div id="22" ng-if="selectedDocType=='B.E or B.Tech degree in Computer Science or I.T - 4 years'">
+                                        <div id="22"
+                                             ng-if="selectedDocType=='B.E or B.Tech degree in Computer Science or I.T - 4 years'">
                                             <be-it></be-it>
                                         </div>
-                                        <div id="23" ng-if="selectedDocType=='BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years'">
+                                        <div id="23"
+                                             ng-if="selectedDocType=='BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years'">
                                             <bca></bca>
                                         </div>
-                                        <div id="24" ng-if="selectedDocType=='B.E. degree in Electronics and Communication Engineering - 4 years'">
+                                        <div id="24"
+                                             ng-if="selectedDocType=='B.E. degree in Electronics and Communication Engineering - 4 years'">
                                             <be-etc></be-etc>
                                         </div>
-                                        <div id="25" ng-if="selectedDocType=='PG Degree Certificate'">
+                                        <div id="25"
+                                             ng-if="selectedDocType=='PG Degree Certificate'">
                                             <pg-degree-certificate></pg-degree-certificate>
                                         </div>
-                                        <div id="26" ng-if="selectedDocType=='Noc (Other Department)'">
+                                        <div id="26"
+                                             ng-if="selectedDocType=='Noc (Other Department)'">
                                             <noc-certificate-for-other-department></noc-certificate-for-other-department>
                                         </div>
 
@@ -803,14 +995,20 @@
                                 </div>
 
                                 <footer class="text-right lter fixed-bottom">
-                                    <button ng-show="selectedDocNo>0" type="submit" class="btn btn-success btn-s-xs"
-                                            ng-click="previousQuestions()">Previous
+                                    <button ng-show="selectedDocNo>0"
+                                            type="submit"
+                                            class="btn btn-success btn-s-xs"
+                                            ng-click="previousQuestions()">
+                                        Previous
                                     </button>
-                                    <button ng-show="!showSubmit" type="submit" class="btn btn-success btn-s-xs"
+                                    <button ng-show="!showSubmit" type="submit"
+                                            class="btn btn-success btn-s-xs"
                                             ng-click="showNextQuestion()">Next
                                     </button>
-                                    <button ng-show="showSubmit" type="submit" class="btn btn-success btn-s-xs"
-                                            ng-click="showNextQuestion('done')">Done
+                                    <button ng-show="showSubmit" type="submit"
+                                            class="btn btn-success btn-s-xs"
+                                            ng-click="showNextQuestion('done')">
+                                        Done
                                     </button>
                                 </footer>
                             </section>
@@ -823,8 +1021,6 @@
         <!-- /.modal-dialog -->
     </div>
 </section>
-
-
 
 
 <!--//USRB005114 NOC FOR POLICE DEPARTMENT-->
