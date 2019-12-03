@@ -1,0 +1,124 @@
+#!/usr/bin/env python
+
+import argparse
+from os import path
+
+py_copyright_tmpl = \
+"""# Copyright (C) 2018 NSEIT Limited, Mumbai. All rights reserved.
+#
+# This program and the accompanying materials are made available
+# under the terms described in the LICENSE file which accompanies
+# this distribution. If the LICENSE file was not attached to this
+# distribution or for further clarifications, please contact
+# legal@nseit.com.
+"""
+
+py_editor_var_tmpl = """\n# Local Variables:
+# mode: python
+# End:
+"""
+
+js_copyright_tmpl = \
+"""// Copyright (C) 2018 NSEIT Limited, Mumbai. All rights reserved.
+//
+// This program and the accompanying materials are made available
+// under the terms described in the LICENSE file which accompanies
+// this distribution. If the LICENSE file was not attached to this
+// distribution or for further clarifications, please contact
+// legal@nseit.com.
+"""
+
+js_editor_var_tmpl = """\n// Local Variables:
+// mode: javascript
+// End:
+"""
+
+css_copyright_tmpl = \
+"""/* Copyright (C) 2018 NSEIT Limited, Mumbai. All rights reserved.
+ *
+ * This program and the accompanying materials are made available
+ * under the terms described in the LICENSE file which accompanies
+ * this distribution. If the LICENSE file was not attached to this
+ * distribution or for further clarifications, please contact
+ * legal@nseit.com. */
+"""
+
+css_editor_var_tmpl = """\n/*
+  Local Variables:
+  mode: css
+  End:
+*/
+"""
+
+html_copyright_tmpl = \
+"""<!--!
+Copyright (C) 2018 NSEIT Limited, Mumbai. All rights reserved.
+
+This program and the accompanying materials are made available under
+the terms described in the LICENSE file which accompanies this
+distribution. If the LICENSE file was not attached to this
+distribution or for further clarifications, please contact
+legal@nseit.com.
+-->
+"""
+
+html_editor_var_tmpl = """\n<!--!
+  Local Variables:
+  mode: html
+  End:
+-->
+"""
+
+
+def py_create (file_handle):
+    file_handle.write (py_copyright_tmpl)
+    file_handle.write (py_editor_var_tmpl)
+    file_handle.close ()
+
+
+def js_create (file_handle):
+    file_handle.write (js_copyright_tmpl)
+    file_handle.write (js_editor_var_tmpl)
+    file_handle.close ()
+
+
+def css_create (file_handle):
+    file_handle.write (css_copyright_tmpl)
+    file_handle.write (css_editor_var_tmpl)
+    file_handle.close ()
+
+
+def html_create (file_handle):
+    file_handle.write (html_copyright_tmpl)
+    file_handle.write (html_editor_var_tmpl)
+    file_handle.close ()
+
+
+def main():
+    parser = argparse.ArgumentParser (
+        prog="stool", description="Source file generation tool")
+    parser.add_argument ("file",
+                         help="Name of the python file",
+                         type=argparse.FileType('w'))
+    args = vars(parser.parse_args ())
+
+    _file = args['file']
+    fn, ext = path.splitext(_file.name)
+    if ext == ".py":
+        py_create(_file)
+    elif ext == ".js":
+        js_create(_file)
+    elif ext == ".css":
+        css_create(_file)
+    elif ext == ".html":
+        html_create(_file)
+    else:
+        print("Bad file type.")
+
+if __name__ == "__main__":
+    main ()
+
+
+# Local Variables:
+# mode: python
+# End:

@@ -1,0 +1,102 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div ng-if="radio[5] == '1'">
+    <div class="questions">
+        Name in the UG degree certificate?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio52" name="radio52"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio52" name="radio52"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio52" name="radio52"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Name of the Degree(UG)?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc53" class="q_radio radio53" name="radio53"
+                       value="1">
+                B.Sc
+            </label>
+            <!--<label  ng-if="$ctrl.radio_values.init_doc53 == '1'">-->
+                <!--<div class="radio">-->
+                    <!--<label class="radio-custom">-->
+                        <!--<input type="radio" class="q_radio radio55" name="radio55"-->
+                               <!--value="1">-->
+                        <!--3 Years-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                    <!--<label class="radio-custom">-->
+                        <!--<input type="radio" class="q_radio radio55" name="radio55"-->
+                               <!--value="2">-->
+                        <!--4 Years-->
+                    <!--</label>-->
+                <!--</div>-->
+
+            <!--</label>-->
+        </div>
+
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc53" class="q_radio radio53" name="radio53"
+                       value="2">
+                Others
+            </label>
+        </div>
+
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Result
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio54" name="radio54"
+                       value="1">
+                Pass
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio54" name="radio54"
+                       value="2">
+                Fail
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio54" name="radio54"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+

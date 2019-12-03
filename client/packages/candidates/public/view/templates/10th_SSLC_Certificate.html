@@ -1,0 +1,92 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div ng-if="radio[1] == '1'">
+    <div class="questions">
+        Name in the SSLC mark sheet?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio12"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio12"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio12"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        DOB in the SSLC mark sheet?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
+                       value="2">
+                Not matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc13=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc13" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc13"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Result
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio14" name="radio14"
+                       value="1">
+                Pass
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio14" name="radio14"
+                       value="2">
+                Fail
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio14" name="radio14"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

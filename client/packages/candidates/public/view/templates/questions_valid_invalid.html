@@ -1,0 +1,15 @@
+<div ng-if="$index ==0">
+    <div class="questions">
+        {{q.question}}
+    </div>
+    <div class="col-sm-6">
+        <div class="radio" ng-repeat="(key, value) in q.options">
+            <label class="radio-custom">
+                <input ng-model="radio[q.doc_id]" type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}" name="radio{{q.doc_id}}{{q.q_id}}"
+                       value="{{($index+1)}}">
+                {{value}}
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,37 @@
+<section class="vbox">
+    <section class="w-f scrollable">
+        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px"
+             data-color="#333333">
+            <nav class="nav-primary hidden-xs">
+                <ul class="nav">
+                    <li ng-class="{'active': $index == 0}" ng-repeat="m in $root.MENUS">
+                        <a href="javascript:void(0)" ui-sref="{{m.path}}">
+                            <i class="fa {{m.icon}} icon">
+                                <b class="bg-danger"></b>
+                            </i>
+                            <span>{{m.menu_name}}</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="active">
+                        <a href="javascript:void(0)" ui-sref="main.candidates.list">
+                            <i class="fa fa-dashboard icon">
+                                <b class="bg-danger"></b>
+                            </i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <footer class="footer lt hidden-xs b-t b-dark">
+        <div class="pull-left btn btn-sm btn-icon">V1.1</div>
+        <a href="" data-toggle="class:nav-xs" class="pull-right btn btn-sm btn-dark btn-icon">
+            <i class="fa fa-angle-left text"></i>
+            <i class="fa fa-angle-right text-active"></i>
+        </a>
+    </footer>
+</section>

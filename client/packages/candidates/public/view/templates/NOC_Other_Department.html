@@ -1,0 +1,33 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div ng-if="radio[26] == '1'">
+    <div class="questions">
+        Name in the NOC certificate?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio262" name="radio262"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio262" name="radio262"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio262" name="radio262"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,817 @@
+{
+  "10th / SSLC Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the SSLC mark sheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 2
+    },
+    {
+      "question": "DOB in the SSLC mark sheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 3
+    },
+    {
+      "question": "Result",
+      "options": {
+        "option1": "Pass",
+        "option2": "Fail",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 4
+    }
+  ],
+  "XII / HSC Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the HSC mark sheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 2
+    },
+    {
+      "question": "Result",
+      "options": {
+        "option1": "Pass",
+        "option2": "Fail",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 3
+    }
+  ],
+  "Community Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the community certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 2
+    },
+    {
+      "question": "Community claimed same as community on certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 3
+    }
+  ],
+  "Diploma Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the marksheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 2
+    },
+    {
+      "question": "Type of Diploma",
+      "options": {
+        "option1": "ECE",
+        "option2": "Others"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 3
+    },
+    {
+      "question": "Result",
+      "options": {
+        "option1": "Pass",
+        "option2": "Fail",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 4
+    }
+  ],
+  "Graduation Degree Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 5,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the marksheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 5,
+      "q_id": 2
+    },
+    {
+      "question": "Name of the Degree?",
+      "options": {
+        "option1": "ECE",
+        "option2": "Others"
+      },
+      "approved": "1",
+      "doc_id": 5,
+      "q_id": 3
+    },
+    {
+      "question": "Result",
+      "options": {
+        "option1": "Pass",
+        "option2": "Fail",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 5,
+      "q_id": 4
+    },
+    {
+      "question": "ECE?",
+      "options": {
+        "option1": "3 Years",
+        "option2": "4 Years"
+      },
+      "approved": "1",
+      "required": false,
+      "doc_id": 5,
+      "q_id": 5
+    }
+  ],
+  "PSTM Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the PSTM certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 2
+    }
+  ],
+  "Destitute Widow Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 7,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the Destitute widow certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 7,
+      "q_id": 2
+    },
+    {
+      "question": "Is DW certificate issued by RDO/SDM/Deputy Collector of above rank?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 7,
+      "q_id": 3
+    }
+  ],
+  "Discharged / to be discharged certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 8,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the Ex-Servicemen certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 8,
+      "q_id": 2
+    },
+    {
+      "question": "Ex-Servicemen or Going to retired?",
+      "options": {
+        "option1": "Retired",
+        "option2": "Going to Retire"
+      },
+      "required":false,
+      "approved": "1",
+      "doc_id": 8,
+      "q_id": 3
+    },
+    {
+      "question": "Is date of retirement submitted same as in the certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 8,
+      "q_id": 4
+    }
+  ],
+  "Highest Certificate For NSS": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 9,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the NSS certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 9,
+      "q_id": 2
+    }
+  ],
+  "Highest Certificate For NCC": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 10,
+      "q_id": 1
+    },
+    {
+      "question": "Name on NCC Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 10,
+      "q_id": 2
+    },
+    {
+      "question": "Category of certificate",
+      "options": {
+        "option1": "A",
+        "option2": "B",
+        "option3": "C",
+        "option4": "Others"
+      },
+      "approved": "1",
+      "doc_id": 10,
+      "required":false,
+      "q_id": 3
+    }
+  ],
+  "Medal Certificate (For Department)": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 11,
+      "required":false,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the Medal certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 11,
+      "required":false,
+      "q_id": 2
+    },
+    {
+      "question": "Type of Medal",
+      "options": {
+        "option1": "Gold",
+        "option2": "Silver",
+        "option3": "Bronze",
+        "option4": "Others"
+      },
+      "approved": "1",
+      "doc_id": 11,
+      "required":false,
+      "q_id": 3
+    }
+  ],
+  "Noc (Police Department)": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 1
+    },
+    {
+      "question": "Name of candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 2
+    },
+    {
+      "question": "Date of Enlishment",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 3
+    },
+    {
+      "question": "Type of quota",
+      "options": {
+        "option1": "Open",
+        "option2": "Department"
+      },
+      "approved": "1",
+      "required": false,
+      "doc_id": 12,
+      "q_id": 4
+    },
+    {
+      "question": "Candidate have complete 5 years of service?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 5
+    },
+    {
+      "question": "Is the Certificate issued by competent authority SP/CMT/DC/DIG/JC/ Addl.COP/IGP/COP/ADGP/DGP ",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 6
+    },
+    {
+      "question": "Is the Certificate in prescribed format?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 7
+    },
+    {
+      "question": "Date of issue is after date of notification?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 8
+    }
+  ],
+  "Highest Sports Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 13,
+      "q_id": 1
+    },
+    {
+      "question": "Name in the Sports certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 13,
+      "q_id": 2
+    }
+  ],
+  "Additional Mark": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 14,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 14,
+      "q_id": 2
+    },
+    {
+      "question": "ADDITIONAL MARKS FOR EXTRA QUALIFICATION",
+      "options": {
+        "option1": "B.E. (ECE) - 4 years",
+        "option2": "BCA/B.Sc Computer Science / B.Sc. IT - 3 years",
+        "option3": "B.E/B.Tech Computer Science / I.T - 4 years",
+        "option4": "PG Diploma in Computer Application - 1 year",
+        "option5": "M.E / M.Tech in Communication Systems - 2 years",
+        "option6": "M.E / M.Tech in Computer Science/ I.T. - 2 years",
+        "option7": "MCA - 3 years"
+      },
+      "approved": "1",
+      "doc_id": 14,
+      "q_id": 3
+    }
+  ],
+  "Gender Certificate(Transgender)": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 15,
+      "q_id": 1
+    },
+    {
+      "question": "Name of Transgender certificate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 15,
+      "q_id": 2
+    }
+  ],
+  "Photo": [
+    {
+      "question": "Is the Photo Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 16,
+      "q_id": 1
+    }
+  ],
+  "Sign": [
+    {
+      "question": "Is the Sign Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 17,
+      "q_id": 1
+    }
+  ],
+  "MCA - 3 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 18,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 18,
+      "q_id": 2
+    }
+  ],
+  "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 19,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 19,
+      "q_id": 2
+    }
+  ],
+  "M.E or M.Tech degree in Communication Systems - 2 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 20,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 20,
+      "q_id": 2
+    }
+  ],
+  "Post Graduate Diploma in Computer application - 1 year": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 21,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 21,
+      "q_id": 2
+    }
+  ],
+  "B.E or B.Tech degree in Computer Science or I.T - 4 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 22,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 22,
+      "q_id": 2
+    }
+  ],
+  "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 23,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 23,
+      "q_id": 2
+    }
+  ],
+  "B.E. degree in Electronics and Communication Engineering - 4 years": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 24,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 24,
+      "q_id": 2
+    }
+  ],
+  "PG Degree Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 1
+    },
+    {
+      "question": "Name of the candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 2
+    }
+  ],
+  "Noc (Other Department)": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 26,
+      "required":false,
+      "q_id": 1
+    },
+    {
+      "question": "Name of candidate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "required":false,
+      "doc_id": 26,
+      "q_id": 2
+    }
+  ]
+}
+

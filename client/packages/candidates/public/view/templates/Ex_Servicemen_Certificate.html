@@ -1,0 +1,79 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div ng-if="radio[8] == '1'">
+    <div class="questions">
+        Name in the Ex-Servicemen certificate?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio82" name="radio82"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio82" name="radio82"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio82" name="radio82"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Ex-Servicemen or Going to retired?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio83" name="radio83"
+                       value="1">
+                Retired
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio83" name="radio83"
+                       value="2">
+                Going to Retire
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Is date of retirement submitted same as in the certificate?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc84" class="q_radio radio84" name="radio84"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc84" class="q_radio radio84" name="radio84"
+                       value="2">
+                No
+            </label>
+            <label style="position:relative; {{ $ctrl.radio_values.init_doc84=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc84" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc84"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label class="col-lg-4 control-label">Documents : </label>
+    <div class="col-lg-8">
+        <p style="float: left" ng-style="{'color': selectedInnerDoc==$index?'blue':''}" ng-repeat="i in candidateDetails['document_list'][selectedDocNo]['document_list']"
+           ng-click="changeIframeSrc(i.ocd_doc_file_name,$index)"
+           class="float-left">{{i.ocd_flag}}{{candidateDetails['document_list'][selectedDocNo]['document_list'].length>$index+1?'&nbsp;,&nbsp;':''}}</p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div style="width: 100%; height: 1%; margin-top: 1%;" align="center">
+    <div style="width: 90%; height: 1px; background: #bfbebe"></div>
+</div>

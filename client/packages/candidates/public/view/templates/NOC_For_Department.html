@@ -1,0 +1,172 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div ng-if="radio[12] == '1'">
+    <div class="questions">
+        Name in the NOC certificate?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio122" name="radio122"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio122" name="radio122"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio122" name="radio122"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Type of Quota?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc124" class="q_radio radio124" name="radio124"
+                       value="1">
+                Open
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-change="initializeInputs()" ng-model="$ctrl.radio_values.init_doc124" class="q_radio radio124" name="radio124"
+                       value="2">
+                Department
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-change="initializeInputs()" ng-model="$ctrl.radio_values.init_doc124" class="q_radio radio124" name="radio124"
+                       value="3">
+                Both
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions" ng-if="$ctrl.radio_values.init_doc124==2 || $ctrl.radio_values.init_doc124==3">
+        Date of Enlistment
+    </div>
+    <div class="col-sm-6" ng-if="$ctrl.radio_values.init_doc124==2 || $ctrl.radio_values.init_doc124==3">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc123" class="q_radio radio123" name="radio123"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc123" class="q_radio radio123" name="radio123"
+                       value="2">
+                Not matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc123=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc123" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc123"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc123" class="q_radio radio123" name="radio123"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the Certificate issued by competent authority SP/CMT/DC/DIG/JC/ Addl.COP/IGP/COP/ADGP/DGP
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio126" name="radio126"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio126" name="radio126"
+                       value="2">
+                No
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio126" name="radio126"
+                       value="2">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the certificate in prescribed format?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio127" name="radio127"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio127" name="radio127"
+                       value="2">
+                No
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio127" name="radio127"
+                       value="2">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Date of issue is after date notification?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio128" name="radio128"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio128" name="radio128"
+                       value="2">
+                No
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio128" name="radio128"
+                       value="2">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,52 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div ng-if="radio[18] == '1'">
+    <div class="questions">
+        Name of the candidate
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio182"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio182"
+                       value="2">
+                Not matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio12" name="radio182"
+                       value="2">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div>
+        <div class="questions">
+            Additional Marks for extra qualifications
+        </div>
+        <div class="radio">
+            <label>
+                <select class="form-control" ng-model="$ctrl.doc182">
+                    <option value="">--Select--</option>
+                    <option value="B.E. (ECE) - 4 years">B.E. (ECE) - 4 years</option>
+                    <option value="BCA/B.Sc Computer Science / B.Sc. IT - 3 years">BCA/B.Sc Computer Science / B.Sc. IT - 3 years</option>
+                    <option value="B.E/B.Tech Computer Science / I.T - 4 years">B.E/B.Tech Computer Science / I.T - 4 years</option>
+                    <option value="PG Diploma in Computer Application - 1 year">PG Diploma in Computer Application - 1 year</option>
+                    <option value="M.E / M.Tech in Communication Systems - 2 years">M.E / M.Tech in Communication Systems - 2 years</option>
+                    <option value="M.E / M.Tech in Computer Science/ I.T. - 2 years">M.E / M.Tech in Computer Science/ I.T. - 2 years</option>
+                    <option value="MCA - 3 years">MCA - 3 years</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</div>
+
