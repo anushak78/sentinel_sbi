@@ -33,18 +33,28 @@
       "q_id": 3
     },
     {
-      "question": "Result",
+      "question": "Year of Passing in the Mark sheet?",
       "options": {
-        "option1": "Pass",
-        "option2": "Fail",
+        "option1": "Matching",
+        "option2": "Not matching",
         "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 1,
       "q_id": 4
+    },
+    {
+      "question": "Is Tamil a Part-I language in the Mark sheet?",
+      "options": {
+        "option1": "Correct",
+        "option2": "Incorrect"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 5
     }
   ],
-  "XII / HSC Certificate": [
+  "12th / HSC Certificate": [
     {
       "question": "Is the Document Valid?",
       "options": {
@@ -56,7 +66,7 @@
       "q_id": 1
     },
     {
-      "question": "Name in the HSC mark sheet?",
+      "question": "Name in Mark sheet?",
       "options": {
         "option1": "Matching",
         "option2": "Not matching",
@@ -67,15 +77,36 @@
       "q_id": 2
     },
     {
-      "question": "Result",
+      "question": "DOB in Mark sheet?",
       "options": {
-        "option1": "Pass",
-        "option2": "Fail",
+        "option1": "Matching",
+        "option2": "Not matching",
         "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 2,
       "q_id": 3
+    },
+    {
+      "question": "Year of Passing in the Mark sheet?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 4
+    },
+    {
+      "question": "Is Tamil a Part-I language in the Mark sheet?",
+      "options": {
+        "option1": "Correct",
+        "option2": "Incorrect"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 5
     }
   ],
   "Community Certificate": [
@@ -90,10 +121,10 @@
       "q_id": 1
     },
     {
-      "question": "Is community certificate document correct?",
+      "question": "Community in the certificate?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid",
+        "option1": "Matching",
+        "option2": "Not Matching",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -101,36 +132,14 @@
       "q_id": 2
     },
     {
-      "question": "Community claimed same as community on certificate?",
-      "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 3,
-      "q_id": 3
-    },
-    {
-      "question": "Sub caste claimed same as community on certificate?",
-      "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 3,
-      "q_id": 4
-    },
-    {
-      "question": "Community certificate issued in Father's name?",
+      "question": "Is Community certificate issued by Tamil Nadu Government?",
       "options": {
         "option1": "Yes",
         "option2": "No"
       },
       "approved": "1",
       "doc_id": 3,
-      "q_id": 5
+      "q_id": 3
     }
   ],
   "Diploma Certificate": [
@@ -244,15 +253,54 @@
       "q_id": 1
     },
     {
-      "question": "Name in the PSTM certificate?",
+      "question": "Claimed for PSTM Medium Reservation?",
       "options": {
         "option1": "Matching",
-        "option2": "Not matching",
-        "option3": "Not Clear"
+        "option2": "Not matching"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 2
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG with Ph.D degree in Tamil Medium ?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 3
+    },
+    {
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 4
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 5
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 6
     }
   ],
   "Destitute Widow Certificate": [
@@ -611,6 +659,17 @@
       "approved": "1",
       "doc_id": 16,
       "q_id": 1
+    },
+    {
+      "question": "Gender",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not Matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 16,
+      "q_id": 2
     }
   ],
   "Sign": [
@@ -798,7 +857,7 @@
       "q_id": 1
     },
     {
-      "question": "Name of the candidate",
+      "question": "Name of Degree and Subject in the PG Certificate?",
       "options": {
         "option1": "Matching",
         "option2": "Not matching",
@@ -807,6 +866,80 @@
       "approved": "1",
       "doc_id": 25,
       "q_id": 2
+    },
+    {
+      "question": "Name of University in the PG Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 3
+    },
+    {
+      "question": "Year of Passing in the PG Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 4
+    },
+    {
+      "question": "Period of Study in the PG Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 5
+    },
+    {
+      "question": "What is the Mode of Study?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 6
+    },
+    {
+      "question": "Percentage of Marks in PG?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not Matching"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 7
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not Matching"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 7
+    },
+    {
+      "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not Matching"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 7
     }
   ],
   "Noc (Other Department)": [
@@ -832,6 +965,207 @@
       "required":false,
       "doc_id": 26,
       "q_id": 2
+    }
+  ],
+  "M.Phil Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 1
+    },
+    {
+      "question": "Name of Degree and Subject in the M.Phil Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 2
+    },
+    {
+      "question": "Name of University in the M.Phil Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 3
+    },
+    {
+      "question": "Year of Passing in the M.Phil Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 4
+    },
+    {
+      "question": "Period of Study in the M.Phil Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 5
+    },
+    {
+      "question": "What is the Mode of Study?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 6
+    }
+  ],
+  "SLET/NET Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 1
+    },
+    {
+      "question": "Name of Degree and Subject in the SLET / NET Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 2
+    },
+    {
+      "question": "Name of University in the SLET / NET Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 3
+    },
+    {
+      "question": "Year of Passing in the SLET / NET Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 4
+    },
+    {
+      "question": "Period of Study in the SLET / NET Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 5
+    },
+    {
+      "question": "What is the Mode of Study?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 6
+    }
+  ],
+  "Phd Certificate": [
+    {
+      "question": "Is the Document Valid?",
+      "options": {
+        "option1": "Valid",
+        "option2": "Invalid"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 1
+    },
+    {
+      "question": "Name of Degree and Subject in the PHD Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 2
+    },
+    {
+      "question": "Name of University in the PHD Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 3
+    },
+    {
+      "question": "Year of Passing in the PHD Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 4
+    },
+    {
+      "question": "Period of Study in the PHD Certificate?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 5
+    },
+    {
+      "question": "What is the Mode of Study?",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 6
     }
   ]
 }

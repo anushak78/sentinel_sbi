@@ -1,0 +1,170 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div ng-if="radio[29] == '1'">
+    <div class="questions">
+        Name of Degree and Subject in the PHD Certificate?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio292" name="radio292"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio292" name="radio292"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio292" name="radio292"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Name of University in the PHD Certificate?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio293" name="radio293"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio293" name="radio293"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio293" name="radio293"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Year of Passing in the PHD Certificate?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc294" class="q_radio radio294"
+                       ng-change="$ctrl.doc294=''" name="radio294"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc294" class="q_radio radio294"
+                       name="radio294" value="2">
+                Not matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc294=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc294" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc294"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc294" class="q_radio radio294"
+                       ng-change="$ctrl.doc294=''" name="radio294"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Period of Study in the PHD Certificate?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
+                       ng-change="$ctrl.doc295=''" name="radio295"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
+                       name="radio295" value="2">
+                Not matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc295=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc295" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc295"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
+                       ng-change="$ctrl.doc295=''" name="radio295"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        What is the Mode of Study?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc296" ng-change="$ctrl.doc296=''"
+                       class="q_radio radio296" name="radio296"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc296"
+                       class="q_radio radio296" name="radio296"
+                       value="2">
+                Not Matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc296=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc296">
+                    <option value="">--Select--</option>
+                    <option value="Regular">Regular
+                    </option>
+                    <option value="Distance">Distance
+                    </option>
+                    <option value="Part time">Part time
+                    </option>
+                    <option value="Correspondence">Correspondence
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc296"
+                       ng-change="$ctrl.doc296=''"
+                       class="q_radio radio296" name="radio296"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

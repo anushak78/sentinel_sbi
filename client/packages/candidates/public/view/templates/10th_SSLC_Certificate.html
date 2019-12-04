@@ -36,15 +36,16 @@
     <div class="col-sm-6">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
+                       ng-change="$ctrl.doc13=''" name="radio13"
                        value="1">
                 Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
-                       value="2">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
+                       name="radio13" value="2">
                 Not matching
             </label>
             <label style="{{ $ctrl.radio_values.init_doc13=='2' ? 'display:block':'display:none'}}">
@@ -54,7 +55,8 @@
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13" name="radio13"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
+                       ng-change="$ctrl.doc13=''" name="radio13"
                        value="3">
                 Not Clear
             </label>
@@ -63,28 +65,53 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Result
+        Year of Passing in the Mark sheet?
     </div>
     <div class="col-sm-6">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio14" name="radio14"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc14" class="q_radio radio14" name="radio14"
                        value="1">
-                Pass
+                Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio14" name="radio14"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc14" class="q_radio radio14" name="radio14"
                        value="2">
-                Fail
+                Not matching
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc14=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc14" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc14"
+                       class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio14" name="radio14"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc14" class="q_radio radio14" name="radio14"
                        value="3">
                 Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Is Tamil a Part-I language in the Mark sheet?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio15" name="radio15"
+                       value="1">
+                Correct
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio15" name="radio15"
+                       value="2">
+                Incorrect
             </label>
         </div>
     </div>

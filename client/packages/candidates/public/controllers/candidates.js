@@ -8,9 +8,13 @@
         $scope.urlPath = window.location.origin;
         $scope.radio = {};
         vm.doc13 = '';
-        vm.doc33 = '';
+        vm.doc14 = '';
+        vm.doc23 = '';
+        vm.doc24 = '';
+        vm.doc32 = '';
         vm.doc84 = '';
         vm.doc123 = '';
+        vm.doc162 = '';
         vm.doc242 = '';
         vm.doc232 = '';
         vm.doc222 = '';
@@ -18,13 +22,41 @@
         vm.doc202 = '';
         vm.doc192 = '';
         vm.doc182 = '';
+        vm.doc254 = '';
+        vm.doc255 = '';
+        vm.doc256 = '';
+        vm.doc274 = '';
+        vm.doc275 = '';
+        vm.doc276 = '';
+        vm.doc284 = '';
+        vm.doc285 = '';
+        vm.doc286 = '';
+        vm.doc294 = '';
+        vm.doc295 = '';
+        vm.doc296 = '';
         vm.radio_values = {};
         vm.radio_values.init_doc13 = "";
-        vm.radio_values.init_doc33 = "";
+        vm.radio_values.init_doc14 = "";
+        vm.radio_values.init_doc23 = "";
+        vm.radio_values.init_doc24 = "";
+        vm.radio_values.init_doc32 = "";
         vm.radio_values.init_doc124 = "";
+        vm.radio_values.init_doc162 = "";
         vm.radio_values.init_doc84 = "";
         vm.radio_values.init_doc123 = "";
         vm.radio_values.init_doc53 = "";
+        vm.radio_values.init_doc254 = "";
+        vm.radio_values.init_doc255 = "";
+        vm.radio_values.init_doc257 = "";
+        vm.radio_values.init_doc274 = "";
+        vm.radio_values.init_doc275 = "";
+        vm.radio_values.init_doc277 = "";
+        vm.radio_values.init_doc284 = "";
+        vm.radio_values.init_doc285 = "";
+        vm.radio_values.init_doc287 = "";
+        vm.radio_values.init_doc294 = "";
+        vm.radio_values.init_doc295 = "";
+        vm.radio_values.init_doc297 = "";
         $scope.packages = {
             name: 'candidates',
             finalAction: false,
@@ -41,15 +73,33 @@
 
 
         $scope.remarksText = {
-            '3c2':'Document correct remarks',
-            '3c3':'New community',
-            '3c4':'New sub caste'
+            '3c2':'New community',
+            '3c4':'New sub caste',
+            '1c3':'New date of birth',
+            '1c4':'New year of passing',
+            '2c3':'New date of birth',
+            '2c4':'New year of passing',
+            '16c2':'New Gender',
+            '25c4':'New Year of Passing',
+            '25c5':'New Period of study',
+            '25c6':'New Mode of study',
+            '27c4':'New Year of Passing',
+            '27c5':'New Period of study',
+            '27c6':'New Mode of study',
+            '28c4':'New Year of Passing',
+            '28c5':'New Period of study',
+            '28c6':'New Mode of study',
+            '29c4':'New Year of Passing',
+            '29c5':'New Period of study',
+            '29c6':'New Mode of study',
         };
+
+        $scope.remarkToShow = [1,2,3,8,12,16,25,27,28,29];
 
         $scope.titles =
         {
             "10th / SSLC Certificate": 'SSLC Certificate',
-            "XII / HSC Certificate": 'HSC Certificate',
+            "12th / HSC Certificate": 'HSC Certificate',
             "Community Certificate": 'Community Certificate',
             "Diploma Certificate": 'Diploma Certificate',
             "Graduation Degree Certificate": 'UG Degree Certificate',
@@ -73,7 +123,10 @@
             "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years":'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years',
             "B.E. degree in Electronics and Communication Engineering - 4 years":'B.E. degree in Electronics and Communication Engineering - 4 years',
             "PG Degree Certificate":'PG Degree Certificate',
-            "Noc (Other Department)":'NOC (OTHER DEPARTMENT)'
+            "Noc (Other Department)":'NOC (OTHER DEPARTMENT)',
+            "M.Phil Certificate":'M.Phil Certificate',
+            "SLET/NET Certificate":'SLET / NET Certificate',
+            "Phd Certificate":'PHD Certificate'
         };
 
         $scope.object = Object;
@@ -88,11 +141,13 @@
 
         $scope.resetValues = function () {
             vm.doc13 = '';
+            vm.doc14 = '';
+            vm.doc23 = '';
+            vm.doc24 = '';
             vm.doc32 = '';
-            vm.doc33 = '';
-            vm.doc34 = '';
             vm.doc84 = '';
             vm.doc123 = '';
+            vm.doc162 = '';
             vm.doc242 = '';
             vm.doc232 = '';
             vm.doc222 = '';
@@ -100,15 +155,41 @@
             vm.doc202 = '';
             vm.doc192 = '';
             vm.doc182 = '';
+            vm.doc254 = '';
+            vm.doc255 = '';
+            vm.doc256 = '';
+            vm.doc274 = '';
+            vm.doc275 = '';
+            vm.doc276 = '';
+            vm.doc284 = '';
+            vm.doc285 = '';
+            vm.doc286 = '';
+            vm.doc294 = '';
+            vm.doc295 = '';
+            vm.doc296 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc13 = "";
+            vm.radio_values.init_doc14 = "";
+            vm.radio_values.init_doc23 = "";
+            vm.radio_values.init_doc24 = "";
             vm.radio_values.init_doc32 = "";
-            vm.radio_values.init_doc33 = "";
-            vm.radio_values.init_doc34 = "";
             vm.radio_values.init_doc124 = "";
-            vm.radio_values.init_doc53 = "";
+            vm.radio_values.init_doc162 = "";
             vm.radio_values.init_doc84 = "";
             vm.radio_values.init_doc123 = "";
+            vm.radio_values.init_doc53 = "";
+            vm.radio_values.init_doc254 = "";
+            vm.radio_values.init_doc255 = "";
+            vm.radio_values.init_doc257 = "";
+            vm.radio_values.init_doc274 = "";
+            vm.radio_values.init_doc275 = "";
+            vm.radio_values.init_doc277 = "";
+            vm.radio_values.init_doc284 = "";
+            vm.radio_values.init_doc285 = "";
+            vm.radio_values.init_doc287 = "";
+            vm.radio_values.init_doc294 = "";
+            vm.radio_values.init_doc295 = "";
+            vm.radio_values.init_doc297 = "";
             $scope.radio = {};
             $('#dd-comment-2').val('');
             $('#dd-comment-3').val('');
@@ -380,11 +461,17 @@
 
         $scope.initializeInputs = function () {
             setTimeout(function () {
-                $("#doc13, #doc84, #doc123").datepicker({
+                $("#doc13, #doc23, #doc84, #doc123").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
-                    vm.doc13 = moment(value.date).format("DD-MM-YYYY")
+                    // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
+                });
+                $("#doc14, #doc24, #doc254, #doc255, #doc274, #doc275, #doc284, #doc285, #doc294, #doc295").datepicker({
+                    format: 'MM yyyy',
+                    orientation: "auto"
+                }).on('changeDate', function (value) {
+                    // vm.doc23 = moment(value.date).format("MM-YYYY")
                 })
             },0);
         };
@@ -687,6 +774,18 @@
     }).directive('nocCertificateForOtherDepartment', function () {
         return {
             templateUrl: "/candidates/view/templates/NOC_Other_Department.html"
+        };
+    }).directive('mphilDegreeCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MPHIL_Degree.html"
+        };
+    }).directive('sletnetDegreeCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/SLETNET_Degree.html"
+        };
+    }).directive('phdDegreeCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Phd_Degree.html"
         };
     })
 })();

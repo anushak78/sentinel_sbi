@@ -283,50 +283,16 @@
                                               ng-if="object.keys(finalJsonData).length>0 && key==d.odm_name && userData.level==1">
                                             <span ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                                   ng-if="a.additional_info.length>0">
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 1"> <!--/*SSC Certificate*/-->
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
+                                                <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 3"> <!--/*Community*/-->
-                                                    <!--<div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>-->
-                                                <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
-                                                <!--<div>{{ a.additional_info}}</div>-->
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
-                                                </span>
-                                                <!--<span ng-if="finalJsonData[d.odm_name]['doc_id'] == 24"> &lt;!&ndash;/*NOC*/&ndash;&gt;-->
-                                                <!--<div ng-if="a.additional_info!=selectedDocType">Extra Qualifications :- {{a.additional_info}}</div>-->
-                                                <!--</span>-->
                                             </span>
                                         </span>
                                         <span ng-repeat="a in d.status.level1[0]['answers']"
                                               ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level != 1)">
-                                            <span ng-if="d.status.level1[0]['doc_id'] == 1"> <!--/*SSC Certificate*/-->
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level1[0]['doc_id'] == 3"> <!--/*Community*/-->
-                                                <!--<div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>-->
-                                                <!--<div>New Community :- {{a.additional_info}}</div>-->
-                                                <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level1[0]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level1[0]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
-                                            </span>
-                                            <!--<span ng-if="d.status.level1[0]['doc_id'] == 24"> &lt;!&ndash;/*NOC*/&ndash;&gt;-->
-                                            <!--<div ng-if="a.additional_info!=selectedDocType">Extra Qualifications :- {{a.additional_info}}</div>-->
-                                            <!--</span>-->
+                                                <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                                </span>
                                         </span>
                                     </td>
                                 </tr>
@@ -390,21 +356,8 @@
                                               ng-if="object.keys(finalJsonData).length>0 && key==d.odm_name && userData.level==2">
                                             <span ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                                   ng-if="a.additional_info.length>0">
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 1"> <!--/*SSC Certificate*/-->
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 3"> <!--/*Community*/-->
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
+                                                <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                             </span>
                                         </span>
@@ -412,22 +365,9 @@
 
                                         <span ng-repeat="a in d.status.level2[0]['answers']"
                                               ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level > 2)">
-                                            <span ng-if="d.status.level2[0]['doc_id'] == 1">
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level2[0]['doc_id'] == 3">
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level2[0]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level2[0]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
-                                            </span>
+                                             <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                                </span>
                                         </span>
                                 </tr>
                                 </tbody>
@@ -590,21 +530,8 @@
                                               ng-if="object.keys(finalJsonData).length>0 && key==d.odm_name && userData.level==3">
                                             <span ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                                   ng-if="a.additional_info.length>0">
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 1"> <!--/*SSC Certificate*/-->
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 3"> <!--/*Community*/-->
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc']}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                                </span>
-                                                <span ng-if="finalJsonData[d.odm_name]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
+                                                 <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                             </span>
                                         </span>
@@ -612,22 +539,9 @@
 
                                         <span ng-repeat="a in d.status.level3[0]['answers']"
                                               ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level != 3)">
-                                            <span ng-if="d.status.level3[0]['doc_id'] == 1">
-                                                <div>Old DOB :- {{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New DOB :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level3[0]['doc_id'] == 3">
-                                                <div>Old Community :- {{candidateDetails['candidate_details'][0]['octm_category_desc'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Community :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level3[0]['doc_id'] == 8"> <!--/*Ex Servicemen*/-->
-                                                <div>Old Retirement Date :- {{candidateDetails['candidate_details'][0]['ocad_date_of_discharge'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Retirement Date :- {{a.additional_info}}</div>
-                                            </span>
-                                            <span ng-if="d.status.level3[0]['doc_id'] == 12"> <!--/*NOC*/-->
-                                                <div>Old Enlistment Date :- {{candidateDetails['candidate_details'][0]['owe_enlistment'] | date:'dd-MM-yyyy'}}</div>
-                                                <div>New Enlistment Date :- {{a.additional_info}}</div>
-                                            </span>
+                                          <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                                </span>
                                         </span>
                                     </td>
                                 </tr>
@@ -877,7 +791,7 @@
                                             <tenth-sslc-certificate></tenth-sslc-certificate>
                                         </div>
                                         <div id="2"
-                                             ng-if="selectedDocType=='XII / HSC Certificate'">
+                                             ng-if="selectedDocType=='12th / HSC Certificate'">
                                             <twelth-certificate></twelth-certificate>
                                         </div>
                                         <div id="3"
@@ -975,6 +889,18 @@
                                         <div id="26"
                                              ng-if="selectedDocType=='Noc (Other Department)'">
                                             <noc-certificate-for-other-department></noc-certificate-for-other-department>
+                                        </div>
+                                        <div id="27"
+                                             ng-if="selectedDocType=='M.Phil Certificate'">
+                                            <mphil-degree-certificate></mphil-degree-certificate>
+                                        </div>
+                                        <div id="28"
+                                             ng-if="selectedDocType=='SLET/NET Certificate'">
+                                            <sletnet-degree-certificate></sletnet-degree-certificate>
+                                        </div>
+                                        <div id="29"
+                                             ng-if="selectedDocType=='Phd Certificate'">
+                                            <phd-degree-certificate></phd-degree-certificate>
                                         </div>
 
                                         <!--<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">-->

@@ -4,48 +4,16 @@
 </div>
 
 <div ng-if="radio[3] == '1'">
-    <div class="questions">
-        Is community certificate document correct?
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc32" ng-change="$ctrl.doc32=''"
-                       class="q_radio radio32" name="radio32"
-                       value="1">
-                Yes
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc32"
-                       class="q_radio radio32" name="radio32"
-                       value="2">
-                No
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc32=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc32">
-                    <option value="">--Select--</option>
-                    <option value="Incorrect Document">Incorrect Document
-                    </option>
-                    <option value="Document issued by other state/Union Territory">
-                        Document issued by other state/Union Territory
-                    </option>
-                </select>
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div ng-if="$ctrl.radio_values.init_doc32=='1'">
+    <div>
         <div class="questions">
-            Community claimed same as community on certificate?
+            Community in the certificate?
         </div>
         <div class="col-sm-12">
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc33"
-                           class="q_radio radio33" name="radio33"
+                           ng-model="$ctrl.radio_values.init_doc32"
+                           class="q_radio radio32" name="radio32"
                            value="1">
                     Matching
                 </label>
@@ -53,13 +21,13 @@
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc33"
-                           class="q_radio radio33" name="radio33"
+                           ng-model="$ctrl.radio_values.init_doc32"
+                           class="q_radio radio32" name="radio32"
                            value="2">
                     Not Matching
                 </label>
-                <label style="{{ $ctrl.radio_values.init_doc33=='2' ? 'display:block':'display:none'}}">
-                    <select class="form-control" ng-model="$ctrl.doc33">
+                <label style="{{ $ctrl.radio_values.init_doc32=='2' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc32">
                         <option value="">--Select--</option>
                         <option value="OC">OC</option>
                         <option value="OC - Other State">OC - Other State
@@ -76,55 +44,8 @@
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc33"
-                           class="q_radio radio33" name="radio33"
-                           value="3">
-                    Not Clear
-                </label>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="questions">
-            Sub caste claimed same as community on certificate?
-        </div>
-        <div class="col-sm-12">
-            <div class="radio">
-                <label class="radio-custom">
-                    <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc34"
-                           class="q_radio radio34" name="radio34"
-                           value="1">
-                    Matching
-                </label>
-            </div>
-            <div class="radio">
-                <label class="radio-custom">
-                    <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc34"
-                           class="q_radio radio34" name="radio34"
-                           value="2">
-                    Not Matching
-                </label>
-                <label style="{{ $ctrl.radio_values.init_doc34=='2' ? 'display:block':'display:none'}}">
-                    <select class="form-control" ng-model="$ctrl.doc34">
-                        <option value="">--Select--</option>
-                        <option value="OC">OC</option>
-                        <option value="OC - Other State">OC - Other State
-                        </option>
-                        <option value="BC">BC</option>
-                        <option value="BC-MUSLIM">BC-MUSLIM</option>
-                        <option value="SC">SC</option>
-                        <option value="SC(A)">SC(A)</option>
-                        <option value="ST">ST</option>
-                        <option value="MBC / DNC">MBC / DNC</option>
-                    </select>
-                </label>
-            </div>
-            <div class="radio">
-                <label class="radio-custom">
-                    <input type="radio"
-                           ng-model="$ctrl.radio_values.init_doc34"
-                           class="q_radio radio34" name="radio34"
+                           ng-model="$ctrl.radio_values.init_doc32"
+                           class="q_radio radio32" name="radio32"
                            value="3">
                     Not Clear
                 </label>
@@ -133,13 +54,13 @@
         <div class="clearfix"></div>
 
         <div class="questions">
-            Community certificate issued in Father's name?
+            Is Community certificate issued by Tamil Nadu Government?
         </div>
         <div class="col-sm-12">
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           class="q_radio radio35" name="radio35"
+                           class="q_radio radio33" name="radio33"
                            value="1">
                     Yes
                 </label>
@@ -147,7 +68,7 @@
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           class="q_radio radio35" name="radio35"
+                           class="q_radio radio33" name="radio33"
                            value="2">
                     No
                 </label>
