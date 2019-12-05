@@ -243,10 +243,10 @@
         $scope.pageChangeHandler($scope.currentPage);
         $scope.showVerify = true;
         $scope.getDocumentData = function (candidate_id) {
-
             Http.get("/ui/candidate/" + candidate_id, {
                 level: $rootScope.userData['level']
             }).then(function (object) {
+                console.log(object);
                 if (object['code'] == 1) {
                     $scope.candidateDetails = object['data'];
                     $scope.finalJsonData = {};
@@ -261,7 +261,6 @@
                             // console.log($scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']]);
                             $scope.finalJsonData[$scope.candidateDetails['document_list'][i]['odm_name']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0];
                             $scope.radio[$scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']][0]['doc_id']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0]['answers'][0]['ans_id']
-
                         }
 
                         console.log('final json data');
@@ -337,14 +336,12 @@
             window.open(path);
         };
 
-        $scope.showHistory = function (index) {
+        $scope.showHistory = function (index, level) {
             $scope.selectedDocNo = index;
             $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
             $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
             $('#docFrame').attr("src", $scope.selectedDocPath);
             $('#modal-form').modal();
-            $scope.setAnswerGiven();
-            console.log("SHOW HISTORY CALLED")
         };
 
         $scope.previousQuestions = function () {
@@ -357,7 +354,6 @@
 
 
         $scope.showNextQuestion = function (value) {
-
             var answers = [];
             var documentApproved = 1;
             var flag = false;
@@ -404,11 +400,14 @@
                 }
             }
 
-            $scope.finalJsonData[$scope.selectedDocType] = {
-                "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
-                "status": documentApproved,
-                "answers": answers
-            };
+
+
+                $scope.finalJsonData[$scope.selectedDocType] = {
+                    "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
+                    "status": documentApproved,
+                    "answers": answers
+                };
+
 
             if ($scope.selectedDocNo != ($scope.candidateDetails['document_list'].length - 1)) {
                 $scope.selectedDocNo++;
@@ -419,15 +418,12 @@
                 $scope.showSubmit = true;
             }
 
-            console.log($scope.candidateDetails['document_list']);
 
             if (value == 'done') {
                 $('#modal-form').modal("toggle");
                 $scope.candidateDetails['document_list'].push('hi');
                 $scope.candidateDetails['document_list'].splice($scope.candidateDetails['document_list'].length - 1, 1);
             }
-            console.log('final json');
-            console.log($scope.finalJsonData);
         };
 
 
@@ -453,9 +449,12 @@
                 console.log("IN THE ELSE PART")
             }
             setTimeout(function () {
-                if ($scope.rows[$scope.selectedIndex].status != 0) {
-                    $("#modal-form input[type=radio], #modal-form input[type=text], #modal-form select").attr("disabled", "disabled")
+                if(typeof $scope.selectedIndex != 'undefined'){
+                    if ($scope.rows[$scope.selectedIndex].status != 0) {
+                        $("#modal-form input[type=radio], #modal-form input[type=text], #modal-form select").attr("disabled", "disabled")
+                    }
                 }
+
             }, 200)
         };
 
@@ -495,22 +494,14 @@
         };
 
         $scope.$watch('selectedDocNo', function () {
-
-            console.log('watch');
-            console.log($scope.selectedDocNo);
-            console.log($scope.candidateDetails);
-
             if ($scope.selectedDocNo >= 0 && $scope.candidateDetails) {
                 if ($scope.selectedDocNo == ($scope.candidateDetails['document_list'].length - 1)) {
                     $scope.showSubmit = true;
                 } else {
                     $scope.showSubmit = false;
                 }
-                $scope.setAnswerGiven();
-            } else {
-                $scope.setAnswerGiven();
             }
-
+            $scope.setAnswerGiven();
         });
 
         $scope.$watch('radio', function (oldValue, newValue) {

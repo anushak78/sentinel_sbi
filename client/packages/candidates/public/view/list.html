@@ -265,7 +265,7 @@
                                 <tbody>
                                 <tr ng-repeat="d in candidateDetails['document_list']">
                                     <td>
-                                        <span ng-click="showHistory($index)">{{titles[d.odm_name]}}</span>
+                                        <span ng-click="showHistory($index,1)">{{titles[d.odm_name]}}</span>
                                         <span ng-click="openDocFile(d.ocd_doc_file_name)">
                                             <i class="fa fa-eye"></i>
                                         </span>
@@ -290,8 +290,8 @@
                                         </span>
                                         <span ng-repeat="a in d.status.level1[0]['answers']"
                                               ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level != 1)">
-                                                <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
-                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                                <span ng-if="remarkToShow.includes(a.doc_id)">
+                                                    <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                         </span>
                                     </td>
@@ -339,7 +339,7 @@
                                 <tbody>
                                 <tr ng-repeat="d in candidateDetails['document_list']">
                                     <td>
-                                        <span ng-click="showHistory($index)">{{titles[d.odm_name]}}</span>
+                                        <span ng-click="showHistory($index,2)">{{titles[d.odm_name]}}</span>
                                         <span ng-click="openDocFile(d.ocd_doc_file_name)">
                                             <i class="fa fa-eye"></i>
                                         </span>
@@ -365,8 +365,8 @@
 
                                         <span ng-repeat="a in d.status.level2[0]['answers']"
                                               ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level > 2)">
-                                             <span ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
-                                                    <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
+                                             <span ng-if="remarkToShow.includes(a.doc_id)">
+                                                    <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                         </span>
                                 </tr>
@@ -513,7 +513,7 @@
                                 <tbody>
                                 <tr ng-repeat="d in candidateDetails['document_list']">
                                     <td>
-                                        <span ng-click="showHistory($index)">{{titles[d.odm_name]}}</span>
+                                        <span ng-click="showHistory($index,3)">{{titles[d.odm_name]}}</span>
                                         <span ng-click="openDocFile(d.ocd_doc_file_name)">
                                             <i class="fa fa-eye"></i>
                                         </span>

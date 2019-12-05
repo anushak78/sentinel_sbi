@@ -6,6 +6,7 @@
     <meta name="description"
           content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="/assets/src/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/assets/src/css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="/assets/src/css/font-awesome.min.css" type="text/css"/>
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="/assets/src/js/datepicker/datepicker.css" type="text/css"/>
 </head>
 <body>
+<input type="button" id="goFS" value="Go Fullscreen!">
 <div class="loader" id="loader" style="display: none;">
     <div class="spinner" id="spinner">
         <div class="double-bounce1"></div>
@@ -36,5 +38,11 @@
 <script src="/assets/src/js/datepicker/bootstrap-datepicker.js"></script>
 <!--<script src="/assets/src/js/jquery.daterangepicker.js"></script>-->
 <script src="/build/app.js"></script>
+<script>
+    var goFS = document.getElementById("goFS");
+    goFS.addEventListener("click", function() {
+        document.body.requestFullscreen();
+    }, false);
+</script>
 </body>
 </html>
