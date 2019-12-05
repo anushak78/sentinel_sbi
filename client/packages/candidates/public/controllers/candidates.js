@@ -50,7 +50,7 @@
         vm.radio_values.init_doc257 = "";
         vm.radio_values.init_doc274 = "";
         vm.radio_values.init_doc275 = "";
-        vm.radio_values.init_doc277 = "";
+        vm.radio_values.init_doc276 = "";
         vm.radio_values.init_doc284 = "";
         vm.radio_values.init_doc285 = "";
         vm.radio_values.init_doc287 = "";
@@ -467,12 +467,30 @@
                 }).on('changeDate', function (value) {
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
-                $("#doc14, #doc24, #doc254, #doc255, #doc274, #doc275, #doc284, #doc285, #doc294, #doc295").datepicker({
-                    format: 'MM yyyy',
-                    orientation: "auto"
+                $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294").datepicker({
+                    format: "M yyyy",
+                    startView: 1,
+                    minViewMode: 1,
+                    maxViewMode: 2,
+                    autoClose:true,
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
-                })
+                });
+                $('#doc255, #doc275, #doc285, #doc295').datepicker({
+                    format: "M yyyy",
+                    startView: 1,
+                    minViewMode: 1,
+                    maxViewMode: 2,
+                    multidate: true,
+                    multidateSeparator: "-",
+                    autoClose:true,
+                }).on("changeDate",function(event){
+                    var dates = event.dates, elem=$(this);
+                    if(elem.data("selecteddates")==dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+                    if(dates.length>2) dates=dates.splice(dates.length-1);
+                    dates.sort(function(a,b){return new Date(a).getTime()-new Date(b).getTime()});
+                    elem.data("selecteddates",dates.join(",")).datepicker('setDates',dates);
+                });
             },0);
         };
 

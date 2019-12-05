@@ -109,7 +109,7 @@
                 Not matching
             </label>
             <label style="{{ $ctrl.radio_values.init_doc275=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc275" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc275"
+                <input type="text"  id="doc275" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc275"
                        class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
@@ -129,7 +129,8 @@
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc276" ng-change="$ctrl.doc276=''"
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc276"
+                       ng-change="$ctrl.doc276=''"
                        class="q_radio radio276" name="radio276"
                        value="1">
                 Matching
