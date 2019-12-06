@@ -1,31 +1,26 @@
-<section class="layout-column wrapper" style="width: 100%;">
-    <section style="width: 100%" class="wrapper">
-        <section class="panel panel-default">
+<section class="layout-column wrapper" style="width: 100%;height: 100%">
+    <section style="width: 100%;height: 100%" class="wrapper">
+        <section class="panel panel-default" style="height: 100%">
             <div class="wrapper header h4 " style="padding: 10px;">
-                <div class="col-lg-4">
+                <div class="col-xs-3">
                     Candidate List
                 </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-success"
-                            ng-click="exportCandidateData()">Export Reports
-                    </button>
+                <div class="col-xs-3">
+                    <button type="button" class="btn btn-success" ng-click="exportCandidateData()">Export Reports</button>
                 </div>
-                <div ng-if="userData.level == 1" class="col-lg-2 pull-right">
-                    <select class="form-control DD" id="DD"
-                            ng-model="packages.filterDD">
-                        <option value="">All</option>
-                        <option value="A">Approved</option>
-                        <option value="R">{{userData.level==1?'Not Matching /
-                            Not Clear':'Rejected'}}
-                        </option>
-                        <option value="P">Pending</option>
-                    </select>
-                </div>
-                <div class="col-lg-4 pull-right">
-                    <input type="text" placeholder="Search By Candidate ID"
-                           id="searchByCandidateID"
+
+                <div class="col-xs-4">
+                    <input type="text" placeholder="Search By Candidate ID" id="searchByCandidateID"
                            class="form-control"
                            ng-model="packages.searchByCandidateID">
+                </div>
+                <div ng-if="userData.level == 1" class="col-xs-2">
+                    <select class="form-control DD" id="DD" ng-model="packages.filterDD">
+                        <option value="">All</option>
+                        <option value="A">Approved</option>
+                        <option value="R">{{userData.level==1?'Not Matching / Not Clear':'Rejected'}}</option>
+                        <option value="P">Pending</option>
+                    </select>
                 </div>
             </div>
             <div class="table-responsive">
@@ -149,16 +144,27 @@
          style="background: rgb(66, 88, 110);width: 54%;z-index: 9;height: calc(100% - 50px);position: fixed;right: -54%;top: 50px;">
         <div class="closeButton" style="height: 100%;overflow: scroll">
             <section class="wrapper header h4"
-                     style="width: 100%;height:7%;position:absolute;top:0;z-index:9;color:white;background: #89cc97;">
-                <span class="pull-left col-6">Candidate Details</span>
-                <span class="pull-left"
-                      style="text-decoration: underline; cursor: pointer; margin-left: 370px"
-                      ng-click="showApplicationForm()">
-                    Application Form
-                </span>
-                <span ng-click="closeCustomModal()" class="close pull-right"
-                      data-dismiss="popover"
-                      style="opacity:1;color:white;">×</span>
+                     style="width: 100%;min-height:7%;position:absolute;top:0;z-index:9;color:white;background: #89cc97;">
+                <div class="col-sm-12">
+                    <div class="col-xs-4">Candidate Details</div>
+                    <div class="col-xs-6 text-right">
+                            <span ng-click="showApplicationForm()"
+                                  style="text-decoration: underline">Application Form</span>
+                    </div>
+                    <div class="col-xs-2">
+                            <span ng-click="closeCustomModal()" class="close" data-dismiss="popover"
+                                  style="opacity:1;color:white;">×</span>
+                    </div>
+                </div>
+                <!--<span class="pull-left col-6">Candidate Details</span>-->
+                <!--<span class="pull-left"-->
+                      <!--style="text-decoration: underline; cursor: pointer; margin-left: 370px"-->
+                      <!--ng-click="showApplicationForm()">-->
+                    <!--Application Form-->
+                <!--</span>-->
+                <!--<span ng-click="closeCustomModal()" class="close pull-right"-->
+                      <!--data-dismiss="popover"-->
+                      <!--style="opacity:1;color:white;">×</span>-->
             </section>
             <section class="wrapper custom-class"
                      style="color: white;margin-top:7%">
@@ -195,6 +201,8 @@
                             Mother Name :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
                         </section>
                     </div>
+
+                    <div class="clearfix"></div>
                     <!--<div class="col-md-4">-->
                     <!--<section class="panel-body" style="font-size: 12px">-->
                     <!--Email ID :<br/><span style="font-size: 14px">{{rows[selectedIndex]['oum_email_id']}}</span>-->
@@ -220,6 +228,8 @@
                             Gender :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
                         </section>
                     </div>
+
+                    <div class="clearfix"></div>
                     <div class="col-md-4">
                         <section class="panel-body" style="font-size: 12px">
                             Payment Status :<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
@@ -391,73 +401,54 @@
                                             id="dd-comment-2"
                                             ng-model="packages.comment">
                                         <option value="">--Select--</option>
-                                        <option>APPROVED - CHANGE OF
-                                            COMMUNITY
+                                        <option>APPROVED – EDUCATION – QUALIFIED
                                         </option>
-                                        <option>APPROVED - EDUCATION -
-                                            QUALIFIED
+                                        <option>APPROVED – CHANGE IN DATE OF BIRTH
                                         </option>
-                                        <option>APPROVED - OTHER THAN ABOVE
-                                            REASONS
+                                        <option>APPROVED – CHANGE OF COMMUNITY
                                         </option>
-                                        <option>APPROVED - OVERSIGHT</option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM DESTITUTE WIDOW
+                                        <option>APPROVED – OTHER THAN ABOVE REASON</option>
+                                        <option>APPROVED – OVER SIGHT
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM EX-SERVICEMAN/ SERVICE
-                                            MAN(GOING
-                                            TO
-                                            RETIRE)
+                                        <option>APPROVED – TREATED AS OC (NOT UPLOADED COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM DEPARTMENT QUOTA
+                                        <option>APPROVED – TREATED AS OC (OTHER PERSON COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (NOT
-                                            UPLOADED COMMUNITY CERTIFICATE)
+                                        <option>APPROVED – TREATED AS OC (OTHER STATE COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (OTHER
-                                            STATE COMMUNITY CERTIFICATE)
+                                        <option>APPROVED – TREATED AS SPORTS QUOTA TO GENERAL
                                         </option>
-                                        <option>APPROVED - TREATED AS NON-PSTM
-                                            FROM PSTM
+                                        <option>APPROVED – TREATED AS GENERAL  TO SPORTS QUOTA
                                         </option>
-                                        <option>REJECTED - OTHER THAN ABOVE
-                                            REASONS
+                                        <option>APPROVED – TREATED AS DESTITUTE WIDOW TO GENERAL
                                         </option>
-                                        <option>REJECTED - OVERAGE</option>
-                                        <option>REJECTED - OVERAGE -
-                                            EX-SERVICEMAN / SERVICE MAN (GOING
-                                            TO RETIRE)
+                                        <option>APPROVED – TREATED AS EX-SERIVICEMAN/ SERVICE MAN (GOING TO RETIRE) TO  GENERAL</option>
+                                        <option>REJECTED – UNDER AGE
                                         </option>
-                                        <option>REJECTED - OVERAGE -
-                                            DEPARTMENT
+                                        <option>REJECTED – OVER AGE
                                         </option>
-                                        <option>REJECTED - EDUCATION - NOT
-                                            POSSESSING PRESCRIBED DEGREE /
-                                            DIPLOMA
+                                        <option>REJECTED – UNDER QUALIFICATION
                                         </option>
-                                        <option>REJECTED - NOT CLEAR</option>
-                                        <option>REJECTED - PARTIALLY UPLOADED
+                                        <option>REJECTED - OTHER THAN ABOVE REASON</option>
+                                        <option>REJECTED – OVER AGE EX- SERVICE MAN/SERVICE MAN (GOING TO RETIRE)
                                         </option>
-                                        <option>REJECTED - NOT AVAILABLE
+                                        <option>REJECTED – OVERAGE – OTHER STATE COMMUNITY CERIFICATE
                                         </option>
-                                        <option>REJECTED - OVERAGE - DESTITUTE
-                                            WIDOW
+                                        <option>REJECTED – OVERAGE – COMMUNITY
                                         </option>
-                                        <option>REJECTED - OVERAGE -
-                                            COMMUNITY
+                                        <option>REJECTED – OVERAGE – COMMUNITY – OTHER PERSON
                                         </option>
-                                        <option>REJECTED - OVERAGE - OTHER
-                                            STATE COMMUNITY CERTIFICATE
+                                        <option>REJECTED – OVERAGE – DESTITUTE WIDOW
                                         </option>
-                                        <option>REJECTED - PHOTO AND / OR
-                                            SIGNATURE NOT PROPER
+                                        <option>REJECTED  - SSLC- OTHERPERSON
                                         </option>
-                                        <option>REJECTED - UNDER
-                                            QUALIFICATION
+                                        <option>REJECTED – NOT AVAILABLE –SSLC
                                         </option>
-                                        <option>REJECTED - UNDERAGE</option>
+                                        <option>REJECTED – NOT AVAILABLE –COMMUNITY </option>
+                                        <option>REJECTED – NOT CLEAR – SSLC </option>
+                                        <option>REJECTED – NOT CLEAR - COMMUNITY </option>
+                                        <option>REJECTED – PARTIALLY UPLOADED – SSLC </option>
+                                        <option>REJECTED – PARTIALLY UPLOADED - COMMUNITY </option>
                                     </select>
                                 </div>
                             </div>
@@ -566,73 +557,54 @@
                                             class="form-control"
                                             ng-model="packages.comment">
                                         <option value="">--Select--</option>
-                                        <option>APPROVED - CHANGE OF
-                                            COMMUNITY
+                                        <option>APPROVED – EDUCATION – QUALIFIED
                                         </option>
-                                        <option>APPROVED - EDUCATION -
-                                            QUALIFIED
+                                        <option>APPROVED – CHANGE IN DATE OF BIRTH
                                         </option>
-                                        <option>APPROVED - OTHER THAN ABOVE
-                                            REASONS
+                                        <option>APPROVED – CHANGE OF COMMUNITY
                                         </option>
-                                        <option>APPROVED - OVERSIGHT</option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM DESTITUTE WIDOW
+                                        <option>APPROVED – OTHER THAN ABOVE REASON</option>
+                                        <option>APPROVED – OVER SIGHT
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM EX-SERVICEMAN/ SERVICE
-                                            MAN(GOING
-                                            TO
-                                            RETIRE)
+                                        <option>APPROVED – TREATED AS OC (NOT UPLOADED COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS GENERAL
-                                            FROM DEPARTMENT QUOTA
+                                        <option>APPROVED – TREATED AS OC (OTHER PERSON COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (NOT
-                                            UPLOADED COMMUNITY CERTIFICATE)
+                                        <option>APPROVED – TREATED AS OC (OTHER STATE COMMUNITY CERTIFICATE)
                                         </option>
-                                        <option>APPROVED - TREATED AS OC (OTHER
-                                            STATE COMMUNITY CERTIFICATE)
+                                        <option>APPROVED – TREATED AS SPORTS QUOTA TO GENERAL
                                         </option>
-                                        <option>APPROVED - TREATED AS NON-PSTM
-                                            FROM PSTM
+                                        <option>APPROVED – TREATED AS GENERAL  TO SPORTS QUOTA
                                         </option>
-                                        <option>REJECTED - OTHER THAN ABOVE
-                                            REASONS
+                                        <option>APPROVED – TREATED AS DESTITUTE WIDOW TO GENERAL
                                         </option>
-                                        <option>REJECTED - OVERAGE</option>
-                                        <option>REJECTED - OVERAGE -
-                                            EX-SERVICEMAN / SERVICE MAN (GOING
-                                            TO RETIRE)
+                                        <option>APPROVED – TREATED AS EX-SERIVICEMAN/ SERVICE MAN (GOING TO RETIRE) TO  GENERAL</option>
+                                        <option>REJECTED – UNDER AGE
                                         </option>
-                                        <option>REJECTED - OVERAGE -
-                                            DEPARTMENT
+                                        <option>REJECTED – OVER AGE
                                         </option>
-                                        <option>REJECTED - EDUCATION - NOT
-                                            POSSESSING PRESCRIBED DEGREE /
-                                            DIPLOMA
+                                        <option>REJECTED – UNDER QUALIFICATION
                                         </option>
-                                        <option>REJECTED - NOT CLEAR</option>
-                                        <option>REJECTED - PARTIALLY UPLOADED
+                                        <option>REJECTED - OTHER THAN ABOVE REASON</option>
+                                        <option>REJECTED – OVER AGE EX- SERVICE MAN/SERVICE MAN (GOING TO RETIRE)
                                         </option>
-                                        <option>REJECTED - NOT AVAILABLE
+                                        <option>REJECTED – OVERAGE – OTHER STATE COMMUNITY CERIFICATE
                                         </option>
-                                        <option>REJECTED - OVERAGE - DESTITUTE
-                                            WIDOW
+                                        <option>REJECTED – OVERAGE – COMMUNITY
                                         </option>
-                                        <option>REJECTED - OVERAGE -
-                                            COMMUNITY
+                                        <option>REJECTED – OVERAGE – COMMUNITY – OTHER PERSON
                                         </option>
-                                        <option>REJECTED - OVERAGE - OTHER
-                                            STATE COMMUNITY CERTIFICATE
+                                        <option>REJECTED – OVERAGE – DESTITUTE WIDOW
                                         </option>
-                                        <option>REJECTED - PHOTO AND / OR
-                                            SIGNATURE NOT PROPER
+                                        <option>REJECTED  - SSLC- OTHERPERSON
                                         </option>
-                                        <option>REJECTED - UNDER
-                                            QUALIFICATION
+                                        <option>REJECTED – NOT AVAILABLE –SSLC
                                         </option>
-                                        <option>REJECTED - UNDERAGE</option>
+                                        <option>REJECTED – NOT AVAILABLE –COMMUNITY </option>
+                                        <option>REJECTED – NOT CLEAR – SSLC </option>
+                                        <option>REJECTED – NOT CLEAR - COMMUNITY </option>
+                                        <option>REJECTED – PARTIALLY UPLOADED – SSLC </option>
+                                        <option>REJECTED – PARTIALLY UPLOADED - COMMUNITY </option>
                                     </select>
                                 </div>
                             </div>
@@ -720,6 +692,7 @@
                                                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_last_name']}}</span>
                                         </section>
                                     </div>
+                                    <div class="clearfix"></div>
                                     <div class="col-md-6">
                                         <section class="panel-body"
                                                  style="font-size: 12px">
@@ -734,6 +707,7 @@
                                                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
                                         </section>
                                     </div>
+                                    <div class="clearfix"></div>
                                     <div class="col-md-6">
                                         <section class="panel-body"
                                                  style="font-size: 12px">
@@ -748,6 +722,7 @@
                                                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['octm_category_desc']}}</span>
                                         </section>
                                     </div>
+                                    <div class="clearfix"></div>
                                     <div class="col-md-6">
                                         <section class="panel-body"
                                                  style="font-size: 12px">
@@ -762,6 +737,7 @@
                                                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
                                         </section>
                                     </div>
+                                    <div class="clearfix"></div>
                                     <div class="col-md-6">
                                         <section class="panel-body"
                                                  style="font-size: 12px">
@@ -769,6 +745,7 @@
                                                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
                                         </section>
                                     </div>
+                                    <div class="clearfix"></div>
                                 </div>
                                 <div style="width: 100%; height: 1%; margin-top: 1%;"
                                      align="center">

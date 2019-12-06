@@ -73,61 +73,61 @@
 
 
         $scope.remarksText = {
-            '3c2':'New community',
-            '3c4':'New sub caste',
-            '1c3':'New date of birth',
-            '1c4':'New year of passing',
-            '2c3':'New date of birth',
-            '2c4':'New year of passing',
-            '16c2':'New Gender',
-            '25c4':'New Year of Passing',
-            '25c5':'New Period of study',
-            '25c6':'New Mode of study',
-            '27c4':'New Year of Passing',
-            '27c5':'New Period of study',
-            '27c6':'New Mode of study',
-            '28c4':'New Year of Passing',
-            '28c5':'New Period of study',
-            '28c6':'New Mode of study',
-            '29c4':'New Year of Passing',
-            '29c5':'New Period of study',
-            '29c6':'New Mode of study',
+            '3c2': 'New community',
+            '3c4': 'New sub caste',
+            '1c3': 'New date of birth',
+            '1c4': 'New year of passing',
+            '2c3': 'New date of birth',
+            '2c4': 'New year of passing',
+            '16c2': 'New Gender',
+            '25c4': 'New Year of Passing',
+            '25c5': 'New Period of study',
+            '25c6': 'New Mode of study',
+            '27c4': 'New Year of Passing',
+            '27c5': 'New Period of study',
+            '27c6': 'New Mode of study',
+            '28c4': 'New Year of Passing',
+            '28c5': 'New Period of study',
+            '28c6': 'New Mode of study',
+            '29c4': 'New Year of Passing',
+            '29c5': 'New Period of study',
+            '29c6': 'New Mode of study',
         };
 
-        $scope.remarkToShow = [1,2,3,8,12,16,25,27,28,29];
+        $scope.remarkToShow = [1, 2, 3, 8, 12, 16, 25, 27, 28, 29];
 
         $scope.titles =
-        {
-            "10th / SSLC Certificate": 'SSLC Certificate',
-            "12th / HSC Certificate": 'HSC Certificate',
-            "Community Certificate": 'Community Certificate',
-            "Diploma Certificate": 'Diploma Certificate',
-            "Graduation Degree Certificate": 'UG Degree Certificate',
-            "PSTM Certificate": 'PSTM Certificate',
-            "Destitute Widow Certificate":'DESTITUTE WIDOW',
-            "Discharged / to be discharged certificate":'EX-SERVICEMEN',
-            "Highest Certificate For NSS":'NSS CERTIFICATE',
-            "Highest Certificate For NCC":'NCC CERTIFICATE',
-            "Medal Certificate (For Department)":'MEDAL',
-            "Noc (Police Department)":'NOC (POLICE DEPARTMENT)',
-            "Highest Sports Certificate":'SPORTS SPECIAL MARK CERTIFICATE',
-            "Additional Mark":'Additional Mark',
-            "Gender Certificate(Transgender)":'Gender Certificate(Transgender)',
-            "Photo":'PHOTO',
-            "Sign":'SIGNATURE',
-            "MCA - 3 years":'MCA - 3 years',
-            "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years":'M.E. or M.Tech. degree in Computer Science or I.T. - 2 years',
-            "M.E or M.Tech degree in Communication Systems - 2 years":'M.E or M.Tech degree in Communication Systems - 2 years',
-            "Post Graduate Diploma in Computer application - 1 year":'Post Graduate Diploma in Computer application - 1 year',
-            "B.E or B.Tech degree in Computer Science or I.T - 4 years":'B.E or B.Tech degree in Computer Science or I.T - 4 years',
-            "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years":'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years',
-            "B.E. degree in Electronics and Communication Engineering - 4 years":'B.E. degree in Electronics and Communication Engineering - 4 years',
-            "PG Degree Certificate":'PG Degree Certificate',
-            "Noc (Other Department)":'NOC (OTHER DEPARTMENT)',
-            "M.Phil Certificate":'M.Phil Certificate',
-            "SLET/NET Certificate":'SLET / NET Certificate',
-            "Phd Certificate":'PHD Certificate'
-        };
+            {
+                "10th / SSLC Certificate": 'SSLC Certificate',
+                "12th / HSC Certificate": 'HSC Certificate',
+                "Community Certificate": 'Community Certificate',
+                "Diploma Certificate": 'Diploma Certificate',
+                "Graduation Degree Certificate": 'UG Degree Certificate',
+                "PSTM Certificate": 'PSTM Certificate',
+                "Destitute Widow Certificate": 'DESTITUTE WIDOW',
+                "Discharged / to be discharged certificate": 'EX-SERVICEMEN',
+                "Highest Certificate For NSS": 'NSS CERTIFICATE',
+                "Highest Certificate For NCC": 'NCC CERTIFICATE',
+                "Medal Certificate (For Department)": 'MEDAL',
+                "Noc (Police Department)": 'NOC (POLICE DEPARTMENT)',
+                "Highest Sports Certificate": 'SPORTS SPECIAL MARK CERTIFICATE',
+                "Additional Mark": 'Additional Mark',
+                "Gender Certificate(Transgender)": 'Gender Certificate(Transgender)',
+                "Photo": 'PHOTO',
+                "Sign": 'SIGNATURE',
+                "MCA - 3 years": 'MCA - 3 years',
+                "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years": 'M.E. or M.Tech. degree in Computer Science or I.T. - 2 years',
+                "M.E or M.Tech degree in Communication Systems - 2 years": 'M.E or M.Tech degree in Communication Systems - 2 years',
+                "Post Graduate Diploma in Computer application - 1 year": 'Post Graduate Diploma in Computer application - 1 year',
+                "B.E or B.Tech degree in Computer Science or I.T - 4 years": 'B.E or B.Tech degree in Computer Science or I.T - 4 years',
+                "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years": 'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years',
+                "B.E. degree in Electronics and Communication Engineering - 4 years": 'B.E. degree in Electronics and Communication Engineering - 4 years',
+                "PG Degree Certificate": 'PG Degree Certificate',
+                "Noc (Other Department)": 'NOC (OTHER DEPARTMENT)',
+                "M.Phil Certificate": 'M.Phil Certificate',
+                "SLET/NET Certificate": 'SLET / NET Certificate',
+                "Phd Certificate": 'PHD Certificate'
+            };
 
         $scope.object = Object;
 
@@ -193,7 +193,7 @@
             $scope.radio = {};
             $('#dd-comment-2').val('');
             $('#dd-comment-3').val('');
-            $scope.packages.comment='';
+            $scope.packages.comment = '';
             $("#modal-form input[type=radio], #modal-form input[type=text], #modal-form select").removeAttr("disabled")
         };
 
@@ -224,7 +224,7 @@
             })
         };
 
-        $('body').on('change','#DD', function () {
+        $('body').on('change', '#DD', function () {
             $scope.packages.filterDD = $(this).val();
             $scope.pageChangeHandler(1);
         });
@@ -232,7 +232,7 @@
         $scope.safeApply = function (fn) {
             var phase = this.$root.$$phase;
             if (phase == '$apply' || phase == '$digest') {
-                if (fn && (typeof(fn) === 'function')) {
+                if (fn && (typeof (fn) === 'function')) {
                     fn();
                 }
             } else {
@@ -299,7 +299,7 @@
             if (this.$root) {
                 var phase = this.$root.$$phase;
                 if (phase == '$apply' || phase == '$digest') {
-                    if (fn && (typeof(fn) === 'function')) {
+                    if (fn && (typeof (fn) === 'function')) {
                         fn();
                     }
                 } else {
@@ -337,11 +337,15 @@
         };
 
         $scope.showHistory = function (index, level) {
-            $scope.selectedDocNo = index;
-            $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
-            $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
-            $('#docFrame').attr("src", $scope.selectedDocPath);
-            $('#modal-form').modal();
+            if (level < $rootScope.userData.level) {
+                return false;
+            } else {
+                $scope.selectedDocNo = index;
+                $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
+                $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+                $('#docFrame').attr("src", $scope.selectedDocPath);
+                $('#modal-form').modal();
+            }
         };
 
         $scope.previousQuestions = function () {
@@ -401,12 +405,11 @@
             }
 
 
-
-                $scope.finalJsonData[$scope.selectedDocType] = {
-                    "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
-                    "status": documentApproved,
-                    "answers": answers
-                };
+            $scope.finalJsonData[$scope.selectedDocType] = {
+                "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
+                "status": documentApproved,
+                "answers": answers
+            };
 
 
             if ($scope.selectedDocNo != ($scope.candidateDetails['document_list'].length - 1)) {
@@ -449,7 +452,7 @@
                 console.log("IN THE ELSE PART")
             }
             setTimeout(function () {
-                if(typeof $scope.selectedIndex != 'undefined'){
+                if (typeof $scope.selectedIndex != 'undefined') {
                     if ($scope.rows[$scope.selectedIndex].status != 0) {
                         $("#modal-form input[type=radio], #modal-form input[type=text], #modal-form select").attr("disabled", "disabled")
                     }
@@ -471,7 +474,7 @@
                     startView: 1,
                     minViewMode: 1,
                     maxViewMode: 2,
-                    autoClose:true,
+                    autoClose: true,
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
@@ -482,15 +485,17 @@
                     maxViewMode: 2,
                     multidate: true,
                     multidateSeparator: "-",
-                    autoClose:true,
-                }).on("changeDate",function(event){
-                    var dates = event.dates, elem=$(this);
-                    if(elem.data("selecteddates")==dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
-                    if(dates.length>2) dates=dates.splice(dates.length-1);
-                    dates.sort(function(a,b){return new Date(a).getTime()-new Date(b).getTime()});
-                    elem.data("selecteddates",dates.join(",")).datepicker('setDates',dates);
+                    autoClose: true,
+                }).on("changeDate", function (event) {
+                    var dates = event.dates, elem = $(this);
+                    if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+                    if (dates.length > 2) dates = dates.splice(dates.length - 1);
+                    dates.sort(function (a, b) {
+                        return new Date(a).getTime() - new Date(b).getTime()
+                    });
+                    elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
                 });
-            },0);
+            }, 0);
         };
 
         $scope.$watch('selectedDocNo', function () {
@@ -518,31 +523,47 @@
                     alert("Please select comment");
                     return false;
                 }
-                $scope.dataToSend = [];
-                for (var key in $scope.finalJsonData) {
-                    $scope.dataToSend.push($scope.finalJsonData[key]);
+
+                if ($rootScope.userData.level > 1) {
+                    var a = confirm("Confirmation 1 !!! Are you sure you want to submit the detail of candidate id - " + $scope.rows[$scope.selectedIndex]['oum_user_id'])
+                    if (a) {
+                        var b = confirm("Confirmation 2 !!! Details can not be updated once submitted.");
+                        if (b) {
+                            $scope.submitFinalData(status);
+                        }
+                    }
+                } else {
+                    $scope.submitFinalData(status);
                 }
 
-                Http.post("/ui/verify-documents", {
-                    candidate_id: $scope.rows[$scope.selectedIndex]['oum_user_id'],
-                    level: $rootScope.userData.level,
-                    user_id: $rootScope.userData.user_id,
-                    document_status: JSON.stringify($scope.dataToSend),
-                    comments: $scope.packages.comment,
-                    candidate_status:$rootScope.userData.level==1?'':status
-                }).then(function (object) {
-                    if (object['code'] == 1) {
-                        // $scope.getDocumentData($scope.rows[$scope.selectedIndex]['oum_user_id']);
-                        $('#sideNav').animate({'right': '-65%'}, 300);
-                        $scope.pageChangeHandler($scope.currentPage)
-                    } else {
-                        alert(object['message']);
-                    }
-                });
             } else {
                 alert('Please input answers for all the questions');
             }
 
+        };
+
+        $scope.submitFinalData = function (status) {
+            $scope.dataToSend = [];
+            for (var key in $scope.finalJsonData) {
+                $scope.dataToSend.push($scope.finalJsonData[key]);
+            }
+
+            Http.post("/ui/verify-documents", {
+                candidate_id: $scope.rows[$scope.selectedIndex]['oum_user_id'],
+                level: $rootScope.userData.level,
+                user_id: $rootScope.userData.user_id,
+                document_status: JSON.stringify($scope.dataToSend),
+                comments: $scope.packages.comment,
+                candidate_status: $rootScope.userData.level == 1 ? '' : status
+            }).then(function (object) {
+                if (object['code'] == 1) {
+                    // $scope.getDocumentData($scope.rows[$scope.selectedIndex]['oum_user_id']);
+                    $('#sideNav').animate({'right': '-65%'}, 300);
+                    $scope.pageChangeHandler($scope.currentPage)
+                } else {
+                    alert(object['message']);
+                }
+            });
         };
 
         $scope.openDefinedModal = function (name) {
@@ -553,9 +574,9 @@
             $('#' + name).modal('toggle');
         };
 
-        document.removeEventListener("keydown",function(){
+        document.removeEventListener("keydown", function () {
             alert('removed');
-        },false);
+        }, false);
 
         document.addEventListener("keydown", function (e) {
             var keyCode = e.keyCode;
@@ -576,13 +597,13 @@
                 $("#loader").show();
                 if (object['code'] == 1) {
                     setTimeout(function () {
-                        $("body").append('<a target="_blank" id="download" href="'+object['data']['file_path']+'"></a>');
+                        $("body").append('<a target="_blank" id="download" href="' + object['data']['file_path'] + '"></a>');
                         $("#download")[0].click();
                         setTimeout(function () {
                             $("#download").remove();
                         });
                         $("#loader").hide();
-                    },3000);
+                    }, 3000);
                     // $scope.checkExportDone(object['data']['number']);
                 }
             })
@@ -670,6 +691,7 @@
                 }
             });
         };
+
     }
 
     angular

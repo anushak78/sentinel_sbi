@@ -1,10 +1,10 @@
 <header ng-include="'/main/view/includes/header.html'" class="bg-dark dk header navbar navbar-fixed-top-xs"></header>
+<aside  ng-include="'/main/view/includes/left-side-menu.html'" class="aside-menu bg-dark lter aside-md hidden-print"
+        id="nav"></aside>
 <section>
-    <section class="hbox stretch">
-        <aside ng-include="'/main/view/includes/left-side-menu.html'" class="bg-dark lter aside-md hidden-print"
-               id="nav"></aside>
-        <section id="content">
-            <section ui-view="main" class="vbox"></section>
-        </section>
+  <section class="hbox stretch">
+    <section id="content">
+      <section ui-view="main" class="vbox"></section>
     </section>
+  </section>
 </section>

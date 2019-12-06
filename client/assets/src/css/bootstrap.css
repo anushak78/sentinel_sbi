@@ -7351,3 +7351,11 @@ td.visible-print {
 }
 
 
+.aside-menu {
+    position: fixed;
+    /* top: 0; */
+    left: -220px;
+    width: 220px;
+    height: 100%;
+    z-index: 99;
+}
