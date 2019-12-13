@@ -43,8 +43,7 @@ module.exports = function (dataObj) {
         stateNewVal = dataObj.stateValDesc;
         districtNewVal2 = dataObj.altDistrictValDesc;
         policeJurisdictionNewVal2 = dataObj.addressBean.alternateCity;
-    }
-    else {
+    } else {
         stateNewVal = dataObj.altStateValDesc;
         districtNewVal2 = dataObj.altDistrictValOthers;
         policeJurisdictionNewVal2 = dataObj.alternateCityother;
@@ -54,8 +53,7 @@ module.exports = function (dataObj) {
         stateNewVal = dataObj.stateValDesc;
         districtNewVal = dataObj.districtValDesc;
         policeJurisdictionNewVal = dataObj.addressBean.cityName;
-    }
-    else {
+    } else {
         stateNewVal = dataObj.stateValDesc;
         districtNewVal = dataObj.districtValother;
         policeJurisdictionNewVal = dataObj.cityNameother;
@@ -65,8 +63,7 @@ module.exports = function (dataObj) {
         religionLabel = "Religion /";
         religionTamilVal = "மதம் ";
         religionVal = dataObj.religionBelief;
-    }
-    else {
+    } else {
         religionLabel = "Other Religion /";
         religionTamilVal = "பிற மதம்";
         religionVal = dataObj.religionBeliefOthers == null ? ' ' : dataObj.religionBeliefOthers;
@@ -77,8 +74,7 @@ module.exports = function (dataObj) {
 
     if (dataObj.governmntTamil == "Y") {
         governmntTamilNewVal = "Yes";
-    }
-    else {
+    } else {
         governmntTamilNewVal = "No";
     }
 
@@ -86,42 +82,50 @@ module.exports = function (dataObj) {
     var GovtempNewVal = "";
     var MedalNewVal = "";
 
-    if (dataObj.wkExperienceDtlsList[0].govtemp == "Y") {
-        GovtempNewVal = "Yes";
-    } else {
-        GovtempNewVal = "No";
+    // console.log(dataObj.wkExperienceDtlsList);
+    // console.log('GOVTEMP');
+    if (dataObj.wkExperienceDtlsList.length > 0) {
+        if (dataObj.wkExperienceDtlsList[0].govtemp == "Y") {
+            GovtempNewVal = "Yes";
+        } else {
+            GovtempNewVal = "No";
+        }
     }
+
 
     //console.log(dataObj.wkExperienceDtlsList[0]['govtemp']);
     //console.log(GovtempNewVal);
 
     //console.log(dataObj.wkExperienceDtlsList[0].policeStation == null ? "''" : dataObj.wkExperienceDtlsList[0].policeStation)
 
-    if (dataObj.wkExperienceDtlsList[0].policeMedalsName == "Y") {
-        MedalNewVal = "Yes";
-    }
-    else {
-        MedalNewVal = "No";
+    if (dataObj.wkExperienceDtlsList.length > 0) {
+        if (dataObj.wkExperienceDtlsList[0].policeMedalsName == "Y") {
+            MedalNewVal = "Yes";
+        } else {
+            MedalNewVal = "No";
+        }
     }
 
 
     var designationOfIssuingAuthority = "";
-    if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "1") {
-        designationOfIssuingAuthority = "SP/ DC/ Commandant";
-    } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "2") {
-        designationOfIssuingAuthority = "DIG/ JC";
-    } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "3") {
-        designationOfIssuingAuthority = "IGP/ADDL.COP/COP";
-    } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "4") {
-        designationOfIssuingAuthority = "ADGP/COP";
-    } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "5") {
-        designationOfIssuingAuthority = "DGP";
-    }else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "6") {
-        designationOfIssuingAuthority = "SP / DC/ Commandant";
-    }else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "7") {
-        designationOfIssuingAuthority = "DIG/ JC";
-    } else {
-        designationOfIssuingAuthority = dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority;
+    if (dataObj.wkExperienceDtlsList.length > 0) {
+        if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "1") {
+            designationOfIssuingAuthority = "SP/ DC/ Commandant";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "2") {
+            designationOfIssuingAuthority = "DIG/ JC";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "3") {
+            designationOfIssuingAuthority = "IGP/ADDL.COP/COP";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "4") {
+            designationOfIssuingAuthority = "ADGP/COP";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "5") {
+            designationOfIssuingAuthority = "DGP";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "6") {
+            designationOfIssuingAuthority = "SP / DC/ Commandant";
+        } else if (dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority == "7") {
+            designationOfIssuingAuthority = "DIG/ JC";
+        } else {
+            designationOfIssuingAuthority = dataObj.wkExperienceDtlsList[0].designationOfIssuingAuthority;
+        }
     }
 
 
@@ -129,13 +133,11 @@ module.exports = function (dataObj) {
     var specialOption = dataObj.getAgeQuotaDetailsRadioChk;
     var dtArr;
     var yearVal;
-    if(ageDiff!=null && ageDiff!='')
-    {
+    if (ageDiff != null && ageDiff != '') {
         dtArr = ageDiff.split(" ");
         yearVal = parseInt(dtArr[0]);
-    }else
-    {
-        yearVal='';
+    } else {
+        yearVal = '';
     }
 
 
@@ -160,7 +162,10 @@ module.exports = function (dataObj) {
             body: [
                 [
                     {
-                        text: [{text: 'APPLICATION FOR SUB - INSPECTOR OF POLICE (Fingerprint) - 2018', bold: true}]
+                        text: [{
+                            text: 'APPLICATION FOR SUB - INSPECTOR OF POLICE (Fingerprint) - 2018',
+                            bold: true
+                        }]
                     }
                 ]
             ]
@@ -206,7 +211,10 @@ module.exports = function (dataObj) {
                                 text: 'தேர்வு ', font: 'latha'
                             }]
                         },
-                        {text: returnStringIfNull(dataObj.disciplineTypeDesc), bold: true}
+                        {
+                            text: returnStringIfNull(dataObj.disciplineTypeDesc),
+                            bold: true
+                        }
                     ]
                 ]
             },
@@ -250,11 +258,17 @@ module.exports = function (dataObj) {
                         body: [
                             [
                                 {
-                                    text: [{text: 'Preference ' + count + ' / ', bold: true}, {
+                                    text: [{
+                                        text: 'Preference ' + count + ' / ',
+                                        bold: true
+                                    }, {
                                         text: 'விருப்பப்பதவி ', font: 'latha'
                                     }, count]
                                 },
-                                {text: returnStringIfNull(dataObj.postMasterList[i]), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.postMasterList[i]),
+                                    bold: true
+                                }
                             ]
                         ]
                     },
@@ -325,7 +339,7 @@ module.exports = function (dataObj) {
                 ]
             },
             layout: 'noBorders'
-        },{
+        }, {
             table: {
                 widths: [170, '*'],
                 headerRows: 1,
@@ -347,7 +361,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Date Of Birth / ', {text: 'பிறந்த தேதி ', font: 'latha',}]},
+                        {
+                            text: ['Date Of Birth / ', {
+                                text: 'பிறந்த தேதி ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: returnStringIfNull(dataObj.personalDetailsBean.dateOfBirth)}
                     ]
                 ]
@@ -371,7 +390,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Marital Status / ', {text: 'திருமண நிலை ', font: 'latha',}]},
+                        {
+                            text: ['Marital Status / ', {
+                                text: 'திருமண நிலை ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: dataObj.mariatalStatus == null ? ' ' : dataObj.mariatalStatus}
                     ]
                 ]
@@ -384,7 +408,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Identification Marks 1 / ', {text: 'அங்கமச்ச அடையாளங்கள் ', font: 'latha',}]},
+                        {
+                            text: ['Identification Marks 1 / ', {
+                                text: 'அங்கமச்ச அடையாளங்கள் ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: dataObj.idMarks == null ? ' ' : dataObj.idMarks}
                     ]
                 ]
@@ -399,7 +428,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Identification Marks 2 / ', {text: 'அங்கமச்ச அடையாளங்கள் ', font: 'latha',}]},
+                        {
+                            text: ['Identification Marks 2 / ', {
+                                text: 'அங்கமச்ச அடையாளங்கள் ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: dataObj.idMarks1 == null ? ' ' : dataObj.idMarks1}
                     ]
                 ]
@@ -413,7 +447,12 @@ module.exports = function (dataObj) {
             headerRows: 1,
             body: [
                 [
-                    {text: ['Nationality / ', {text: 'குடியுரிமை ', font: 'latha',}]},
+                    {
+                        text: ['Nationality / ', {
+                            text: 'குடியுரிமை ',
+                            font: 'latha',
+                        }]
+                    },
                     {text: dataObj.nationalityDesc == null ? ' ' : dataObj.nationalityDesc}
                 ]
             ]
@@ -421,13 +460,18 @@ module.exports = function (dataObj) {
         layout: 'noBorders'
     });
 
-    contentCheck.push( {
+    contentCheck.push({
         table: {
             widths: [170, '*'],
             headerRows: 1,
             body: [
                 [
-                    {text: ['Father\'s Name /', {text: 'தந்தை பெயர் ', font: 'latha',}]},
+                    {
+                        text: ['Father\'s Name /', {
+                            text: 'தந்தை பெயர் ',
+                            font: 'latha',
+                        }]
+                    },
                     {text: returnStringIfNull(dataObj.personalDetailsBean.fatherFirstName) + ' ' + returnStringIfNull(dataObj.personalDetailsBean.fatherLastName)}
                 ]
             ]
@@ -439,7 +483,12 @@ module.exports = function (dataObj) {
             headerRows: 1,
             body: [
                 [
-                    {text: ['Mother\'s Name / ', {text: 'தாயார் பெயர் ', font: 'latha',}]},
+                    {
+                        text: ['Mother\'s Name / ', {
+                            text: 'தாயார் பெயர் ',
+                            font: 'latha',
+                        }]
+                    },
                     {text: dataObj.personalDetailsBean.motherFirstName + ' ' + dataObj.personalDetailsBean.motherLastName}
                 ]
             ]
@@ -651,7 +700,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Permanent Address / ', {text: 'நிரந்தர முகவரி ', font: 'latha',}]},
+                        {
+                            text: ['Permanent Address / ', {
+                                text: 'நிரந்தர முகவரி ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: ' '}
                     ]
                 ]
@@ -664,7 +718,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Address / ', {text: 'முகவரி ', font: 'latha',}]},
+                        {
+                            text: ['Address / ', {
+                                text: 'முகவரி ',
+                                font: 'latha',
+                            }]
+                        },
                         [
                             {text: returnStringIfNull(dataObj.addressBean.addressFiled1)},
                             {text: returnStringIfNull(dataObj.addressBean.addressFiled2)},
@@ -706,7 +765,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(districtNewVal), bold: true}
+                            {
+                                text: returnStringIfNull(districtNewVal),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -725,7 +787,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(policeJurisdictionNewVal), bold: true}
+                            {
+                                text: returnStringIfNull(policeJurisdictionNewVal),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -744,7 +809,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(dataObj.addressBean.pinCode), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.addressBean.pinCode),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -756,7 +824,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Address for Communication / ', {text: 'கடித முகவரி ', font: 'latha',}]},
+                        {
+                            text: ['Address for Communication / ', {
+                                text: 'கடித முகவரி ',
+                                font: 'latha',
+                            }]
+                        },
                         [
                             {text: ''},
                         ],
@@ -770,7 +843,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Address / ', {text: 'முகவரி ', font: 'latha',}]},
+                        {
+                            text: ['Address / ', {
+                                text: 'முகவரி ',
+                                font: 'latha',
+                            }]
+                        },
                         [
                             {text: dataObj.addressBean.alternateAddressFiled1 == null ? ' ' : dataObj.addressBean.alternateAddressFiled1},
                             {text: dataObj.addressBean.alternateAddressFiled2 == null ? ' ' : dataObj.addressBean.alternateAddressFiled2},
@@ -793,7 +871,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: dataObj.altStateValDesc == null ? ' ' : dataObj.altStateValDesc, bold: true}
+                            {
+                                text: dataObj.altStateValDesc == null ? ' ' : dataObj.altStateValDesc,
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -812,7 +893,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(districtNewVal2), bold: true}
+                            {
+                                text: returnStringIfNull(districtNewVal2),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -831,7 +915,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(policeJurisdictionNewVal2), bold: true}
+                            {
+                                text: returnStringIfNull(policeJurisdictionNewVal2),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -899,9 +986,17 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Religion / ', {text: "மதம் ", font: 'latha',}]},
+                        {
+                            text: ['Religion / ', {
+                                text: "மதம் ",
+                                font: 'latha',
+                            }]
+                        },
                         [
-                            {text: returnStringIfNull(dataObj.religionBelief), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.religionBelief),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -916,9 +1011,17 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Other Religion / ', {text: "பிற மதம் ", font: 'latha',}]},
+                        {
+                            text: ['Other Religion / ', {
+                                text: "பிற மதம் ",
+                                font: 'latha',
+                            }]
+                        },
                         [
-                            {text: returnStringIfNull(dataObj.religionBeliefOthers), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.religionBeliefOthers),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -940,7 +1043,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(governmntTamilNewVal), bold: true}
+                            {
+                                text: returnStringIfNull(governmntTamilNewVal),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -953,7 +1059,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Community / ', {text: 'வகுப்பு ', font: 'latha',}]},
+                        {
+                            text: ['Community / ', {
+                                text: 'வகுப்பு ',
+                                font: 'latha',
+                            }]
+                        },
                         {text: dataObj.categoryValDesc == null ? ' ' : dataObj.categoryValDesc}
                     ]
                 ]
@@ -1060,7 +1171,12 @@ module.exports = function (dataObj) {
                 headerRows: 1,
                 body: [
                     [
-                        {text: ['Age Relaxation Options / ', {text: 'வயது தளர்வு விருப்பம்', font: 'latha',}]},
+                        {
+                            text: ['Age Relaxation Options / ', {
+                                text: 'வயது தளர்வு விருப்பம்',
+                                font: 'latha',
+                            }]
+                        },
                         {text: dataObj.candidateAgeQuotacheck == null ? ' ' : dataObj.candidateAgeQuotacheck}
                     ]
                 ]
@@ -1508,501 +1624,550 @@ module.exports = function (dataObj) {
         },
         layout: 'noBorders'
     })
-    if (GovtempNewVal == 'Yes') {
-        contentCheck.push({
-            margin: [0, 10, 0, 0],
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['Department / ', {
-                                text: 'துறை ',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        });
-    }
-    if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) == "Police") {
-        contentCheck.push({
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {text: ['Are you Ministerial or Executive Staff?  / ', {text: 'நீவீர் அமைச்சுப்பணியாளரா அல்லது களப்பணியாளரா?', font: 'latha',}]},
-                        {text: returnStringIfNull(dataObj.miniExeStaff)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        },{
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {text: ['Date Of Enlistment / ', {text: 'பணியில் சேர்ந்த நாள் ', font: 'latha',}]},
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].enlistment)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        }, {
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: [' Service as on(29-08-2018) / ', {
-                                text: 'இன்றைய நாளில் பணிக்காலம்',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].serviceAsOn)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        });
+    // if (GovtempNewVal == 'Yes') {
+    //     contentCheck.push({
+    //         margin: [0, 10, 0, 0],
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Department / ', {
+    //                             text: 'துறை ',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     });
+    // }
+    // if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) == "Police") {
+    //     contentCheck.push({
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Are you Ministerial or Executive Staff?  / ', {
+    //                             text: 'நீவீர் அமைச்சுப்பணியாளரா அல்லது களப்பணியாளரா?',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.miniExeStaff)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Date Of Enlistment / ', {
+    //                             text: 'பணியில் சேர்ந்த நாள் ',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].enlistment)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: [' Service as on(29-08-2018) / ', {
+    //                             text: 'இன்றைய நாளில் பணிக்காலம்',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].serviceAsOn)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     });
+    //
+    //     if (yearVal >= '5') {
+    //         if (specialOption != '3') {
+    //
+    //             if (returnStringIfNull(dataObj.miniExeStaff) != "" && returnStringIfNull(dataObj.miniExeStaff) != "Ministerial") {
+    //
+    //                 contentCheck.push({
+    //                     table: {
+    //                         widths: [170, '*'],
+    //                         headerRows: 1,
+    //                         body: [
+    //                             [
+    //                                 {
+    //                                     text: [' Are you applying under departmental Quota or open quota or Both? / ', {
+    //                                         text: 'நீங்கள் துறை ஒதுக்கீடு அல்லது திறந்த ஒதுக்கீடு அல்லது இரண்டின் கீழ் விண்ணப்பிக்கிறீர்களா?',
+    //                                         font: 'latha',
+    //                                     }]
+    //                                 },
+    //                                 {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].underQuota)}
+    //                             ]
+    //                         ]
+    //                     },
+    //                     layout: 'noBorders'
+    //                 });
+    //             }
+    //         }
+    //     }
+    //
+    //     contentCheck.push({
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['GPF/CPS Number / ', {
+    //                             text: 'பொது வருங்கால வைப்புநிதிக் கணக்கு எண்/ பங்கீட்டு ஓய்வூதியக் கணக்கு எண் ',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].gpfNumber)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     });
+    //
+    //     if (returnStringIfNull(dataObj.miniExeStaff) == "Ministerial") {
+    //
+    //         contentCheck.push({
+    //             table: {
+    //                 widths: [170, '*'],
+    //                 headerRows: 1,
+    //                 body: [
+    //                     [
+    //                         {
+    //                             text: [' Present Rank / ', {
+    //                                 text: 'தற்போதைய பதவி',
+    //                                 font: 'latha',
+    //                             }]
+    //                         },
+    //                         {text: returnStringIfNull(dataObj.presentRankMini)}
+    //                     ]
+    //                 ]
+    //             },
+    //             layout: 'noBorders'
+    //         }, {
+    //             table: {
+    //                 widths: [170, '*'],
+    //                 headerRows: 1,
+    //                 body: [
+    //                     [
+    //                         {
+    //                             text: ['Present Posting at / ', {
+    //                                 text: 'தற்போது பணிபுரியும் இடம் ',
+    //                                 font: 'latha',
+    //                             }]
+    //                         },
+    //                         {text: ''}
+    //                     ]
+    //                 ]
+    //             },
+    //             layout: 'noBorders'
+    //         }, {
+    //             table: {
+    //                 widths: [170, '*'],
+    //                 headerRows: 1,
+    //                 body: [
+    //                     [
+    //                         {
+    //                             text: ['Unit  / ', {
+    //                                 text: 'பிரிவு ',
+    //                                 font: 'latha',
+    //                             }]
+    //                         },
+    //                         {text: returnStringIfNull(dataObj.presentPostingUnitMini)}
+    //                     ]
+    //                 ]
+    //             },
+    //             layout: 'noBorders'
+    //         });
+    //     }
+    //
+    //     if (returnStringIfNull(dataObj.miniExeStaff) == "Executive") {
+    //         if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != "Other") {
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Present Rank / ', {
+    //                                     text: 'தற்போதைய பதவி',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentRank)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             }, {
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Present Posting at / ', {
+    //                                     text: 'தற்போது பணிபுரியும் இடம் ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: ''}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             }, {
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Unit  / ', {
+    //                                     text: 'பிரிவு ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPostingUnit)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             });
+    //         } else {
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Present Rank 2/ ', {
+    //                                     text: 'தற்போதைய பதவி ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.rank)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             }, {
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Unit  / ', {
+    //                                     text: 'பிரிவு ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].unit)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             });
+    //         }
+    //         if (dataObj.wkExperienceDtlsList[0].presentPostingUnit == "YOUTH BRIGADE" || dataObj.wkExperienceDtlsList[0].presentPostingUnit == "TALUK POLICE") {
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['District / City / Commissionarate  / ', {
+    //                                     text: 'மாவட்டம்/நகரம்/மாநகரம் ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPosting)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             }, {
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Police Station  / ', {
+    //                                     text: 'காவல் நிலையம்',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: dataObj.wkExperienceDtlsList[0].policeStation == null ? "''" : dataObj.wkExperienceDtlsList[0].policeStation}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             })
+    //         }
+    //
+    //         if (dataObj.wkExperienceDtlsList[0].presentPostingUnit == "OTHER") {
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Please Specify Other Unit  / ', {
+    //                                     text: 'மாவட்டம்/நகரம்/மாநகரம் ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: dataObj.wkExperienceDtlsList[0].unitsOther == null ? "" : dataObj.wkExperienceDtlsList[0].unitsOther}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             })
+    //         }
+    //
+    //         if (dataObj.wkExperienceDtlsList[0].presentPostingUnit != "YOUTH BRIGADE" && dataObj.wkExperienceDtlsList[0].presentPostingUnit != "TALUK POLICE" &&
+    //             dataObj.wkExperienceDtlsList[0].presentPostingUnit != "POLICE HEADQUARTERS" && dataObj.wkExperienceDtlsList[0].presentPostingUnit != "OTHER" && dataObj.wkExperienceDtlsList[0].policedept != "Other") {
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['District / City / Commissionarate  / ', {
+    //                                     text: 'மாவட்டம்/நகரம்/மாநகரம் ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPosting)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             })
+    //         }
+    //     }
+    //
+    //     if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != "Other") {
+    //
+    //         if (returnStringIfNull(dataObj.underQuotaOption) == "1" || returnStringIfNull(dataObj.underQuotaOption) == "3") {
+    //
+    //             contentCheck.push({
+    //                 table: {
+    //                     widths: [170, '*'],
+    //                     headerRows: 1,
+    //                     body: [
+    //                         [
+    //                             {
+    //                                 text: ['Have you won any Medal in National Police Duty Meet?  / ', {
+    //                                     text: 'தேசிய அளவிலான காவல்துறை பணி சம்மந்தப்பட்ட திறனாய்வு போட்டிகளில் பதக்கம் பெற்றுள்ளீரா? ',
+    //                                     font: 'latha',
+    //                                 }]
+    //                             },
+    //                             {text: returnStringIfNull(MedalNewVal)}
+    //                         ]
+    //                     ]
+    //                 },
+    //                 layout: 'noBorders'
+    //             })
+    //
+    //
+    //             if (MedalNewVal == "Yes") {
+    //                 contentCheck.push(
+    //                     {
+    //                         table: {
+    //                             widths: [170, '*'],
+    //                             headerRows: 1,
+    //                             body: [
+    //                                 [
+    //                                     {
+    //                                         text: ['Select Year of Duty Meet  / ', {
+    //                                             text: 'தேசிய அளவிலான காவல்துறை திறனாய்வு போட்டி வருடம்',
+    //                                             font: 'latha',
+    //                                         }]
+    //                                     },
+    //                                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].dutyYear)}
+    //                                 ]
+    //                             ]
+    //                         },
+    //                         layout: 'noBorders'
+    //                     },
+    //                     {
+    //                         table: {
+    //                             widths: [170, '*'],
+    //                             headerRows: 1,
+    //                             body: [
+    //                                 [
+    //                                     {
+    //                                         text: ['Event Police Duty Meet  / ', {
+    //                                             text: 'தேசிய அளவிலான காவல்துறை திறனாய்வு போட்டியில் தாங்கள் கலந்து கொண்ட நிகழ்வு',
+    //                                             font: 'latha',
+    //                                         }]
+    //                                     },
+    //                                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].event)}
+    //                                 ]
+    //                             ]
+    //                         },
+    //                         layout: 'noBorders'
+    //                     },
+    //                     {
+    //                         table: {
+    //                             widths: [170, '*'],
+    //                             headerRows: 1,
+    //                             body: [
+    //                                 [
+    //                                     {
+    //                                         text: ['Type of Medal Won  / ', {
+    //                                             text: 'வெற்றிப்பெற்ற பதக்கத்தின் வகை',
+    //                                             font: 'latha',
+    //                                         }]
+    //                                     },
+    //                                     {text: returnStringIfNull(dataObj.policeMedals)}
+    //                                 ]
+    //                             ]
+    //                         },
+    //                         layout: 'noBorders'
+    //                     })
+    //             }
+    //         }
+    //     }
+    // }
+    // if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) == "Other") {
+    //     contentCheck.push({
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Present Rank  / ', {
+    //                             text: 'தற்போதைய பதவி',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.rank)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Unit / ', {
+    //                             text: 'பிரிவு',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.unit)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Department Name  / ', {
+    //                             text: 'துறையின் பெயர் ',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.department)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     })
+    // }
 
-        if (yearVal >= '5') {
-            if (specialOption != '3') {
-
-                if(returnStringIfNull(dataObj.miniExeStaff) != "" && returnStringIfNull(dataObj.miniExeStaff) != "Ministerial")
-                {
-
-                    contentCheck.push({
-                        table: {
-                            widths: [170, '*'],
-                            headerRows: 1,
-                            body: [
-                                [
-                                    {
-                                        text: [' Are you applying under departmental Quota or open quota or Both? / ', {
-                                            text: 'நீங்கள் துறை ஒதுக்கீடு அல்லது திறந்த ஒதுக்கீடு அல்லது இரண்டின் கீழ் விண்ணப்பிக்கிறீர்களா?',
-                                            font: 'latha',
-                                        }]
-                                    },
-                                    {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].underQuota)}
-                                ]
-                            ]
-                        },
-                        layout: 'noBorders'
-                    });
-                }
-            }
-        }
-
-        contentCheck.push({
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['GPF/CPS Number / ', {
-                                text: 'பொது வருங்கால வைப்புநிதிக் கணக்கு எண்/ பங்கீட்டு ஓய்வூதியக் கணக்கு எண் ',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].gpfNumber)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        });
-
-        if(returnStringIfNull(dataObj.miniExeStaff) == "Ministerial"){
-
-            contentCheck.push({
-                table: {
-                    widths: [170, '*'],
-                    headerRows: 1,
-                    body: [
-                        [
-                            {text: [' Present Rank / ', {text: 'தற்போதைய பதவி', font: 'latha',}]},
-                            {text: returnStringIfNull(dataObj.presentRankMini)}
-                        ]
-                    ]
-                },
-                layout: 'noBorders'
-            },{
-                table: {
-                    widths: [170, '*'],
-                    headerRows: 1,
-                    body: [
-                        [
-                            {text: ['Present Posting at / ', {text: 'தற்போது பணிபுரியும் இடம் ', font: 'latha',}]},
-                            {text: ''}
-                        ]
-                    ]
-                },
-                layout: 'noBorders'
-            }, {
-                table: {
-                    widths: [170, '*'],
-                    headerRows: 1,
-                    body: [
-                        [
-                            {text: ['Unit  / ', {text: 'பிரிவு ', font: 'latha',}]},
-                            {text: returnStringIfNull(dataObj.presentPostingUnitMini)}
-                        ]
-                    ]
-                },
-                layout: 'noBorders'
-            });
-        }
-
-        if(returnStringIfNull(dataObj.miniExeStaff) == "Executive"){
-            if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != "Other") {
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {text: ['Present Rank / ', {text: 'தற்போதைய பதவி', font: 'latha',}]},
-                                {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentRank)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                },{
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {text: ['Present Posting at / ', {text: 'தற்போது பணிபுரியும் இடம் ', font: 'latha',}]},
-                                {text: ''}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                }, {
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {text: ['Unit  / ', {text: 'பிரிவு ', font: 'latha',}]},
-                                {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPostingUnit)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                });
-            } else {
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {text: ['Present Rank 2/ ', {text: 'தற்போதைய பதவி ', font: 'latha',}]},
-                                {text: returnStringIfNull(dataObj.rank)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                }, {
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {text: ['Unit  / ', {text: 'பிரிவு ', font: 'latha',}]},
-                                {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].unit)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                });
-            }
-            if (dataObj.wkExperienceDtlsList[0].presentPostingUnit == "YOUTH BRIGADE" || dataObj.wkExperienceDtlsList[0].presentPostingUnit == "TALUK POLICE") {
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {
-                                    text: ['District / City / Commissionarate  / ', {
-                                        text: 'மாவட்டம்/நகரம்/மாநகரம் ',
-                                        font: 'latha',
-                                    }]
-                                },
-                                {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPosting)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                }, {
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {
-                                    text: ['Police Station  / ', {
-                                        text: 'காவல் நிலையம்',
-                                        font: 'latha',
-                                    }]
-                                },
-                                {text: dataObj.wkExperienceDtlsList[0].policeStation == null ? "''" : dataObj.wkExperienceDtlsList[0].policeStation}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                })
-            }
-
-            if (dataObj.wkExperienceDtlsList[0].presentPostingUnit == "OTHER") {
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {
-                                    text: ['Please Specify Other Unit  / ', {
-                                        text: 'மாவட்டம்/நகரம்/மாநகரம் ',
-                                        font: 'latha',
-                                    }]
-                                },
-                                {text: dataObj.wkExperienceDtlsList[0].unitsOther == null ? "" : dataObj.wkExperienceDtlsList[0].unitsOther}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                })
-            }
-
-            if (dataObj.wkExperienceDtlsList[0].presentPostingUnit != "YOUTH BRIGADE" && dataObj.wkExperienceDtlsList[0].presentPostingUnit != "TALUK POLICE" &&
-                dataObj.wkExperienceDtlsList[0].presentPostingUnit != "POLICE HEADQUARTERS" && dataObj.wkExperienceDtlsList[0].presentPostingUnit != "OTHER" && dataObj.wkExperienceDtlsList[0].policedept != "Other") {
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {
-                                    text: ['District / City / Commissionarate  / ', {
-                                        text: 'மாவட்டம்/நகரம்/மாநகரம் ',
-                                        font: 'latha',
-                                    }]
-                                },
-                                {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].presentPosting)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                })
-            }
-        }
-
-        if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != "Other") {
-
-            if (returnStringIfNull(dataObj.underQuotaOption) == "1" || returnStringIfNull(dataObj.underQuotaOption) == "3") {
-
-                contentCheck.push({
-                    table: {
-                        widths: [170, '*'],
-                        headerRows: 1,
-                        body: [
-                            [
-                                {
-                                    text: ['Have you won any Medal in National Police Duty Meet?  / ', {
-                                        text: 'தேசிய அளவிலான காவல்துறை பணி சம்மந்தப்பட்ட திறனாய்வு போட்டிகளில் பதக்கம் பெற்றுள்ளீரா? ',
-                                        font: 'latha',
-                                    }]
-                                },
-                                {text: returnStringIfNull(MedalNewVal)}
-                            ]
-                        ]
-                    },
-                    layout: 'noBorders'
-                })
-
-
-                if (MedalNewVal == "Yes") {
-                    contentCheck.push(
-                        {
-                            table: {
-                                widths: [170, '*'],
-                                headerRows: 1,
-                                body: [
-                                    [
-                                        {
-                                            text: ['Select Year of Duty Meet  / ', {
-                                                text: 'தேசிய அளவிலான காவல்துறை திறனாய்வு போட்டி வருடம்',
-                                                font: 'latha',
-                                            }]
-                                        },
-                                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].dutyYear)}
-                                    ]
-                                ]
-                            },
-                            layout: 'noBorders'
-                        },
-                        {
-                            table: {
-                                widths: [170, '*'],
-                                headerRows: 1,
-                                body: [
-                                    [
-                                        {
-                                            text: ['Event Police Duty Meet  / ', {
-                                                text: 'தேசிய அளவிலான காவல்துறை திறனாய்வு போட்டியில் தாங்கள் கலந்து கொண்ட நிகழ்வு',
-                                                font: 'latha',
-                                            }]
-                                        },
-                                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].event)}
-                                    ]
-                                ]
-                            },
-                            layout: 'noBorders'
-                        },
-                        {
-                            table: {
-                                widths: [170, '*'],
-                                headerRows: 1,
-                                body: [
-                                    [
-                                        {
-                                            text: ['Type of Medal Won  / ', {
-                                                text: 'வெற்றிப்பெற்ற பதக்கத்தின் வகை',
-                                                font: 'latha',
-                                            }]
-                                        },
-                                        {text: returnStringIfNull(dataObj.policeMedals)}
-                                    ]
-                                ]
-                            },
-                            layout: 'noBorders'
-                        })
-                }
-            }
-        }
-    }
-    if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) == "Other") {
-        contentCheck.push({
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['Present Rank  / ', {
-                                text: 'தற்போதைய பதவி',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.rank)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        },{
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['Unit / ', {
-                                text: 'பிரிவு',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.unit)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        },{
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['Department Name  / ', {
-                                text: 'துறையின் பெயர் ',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.department)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        })
-    }
-
-    if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != null && returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) !='') {
-
-        contentCheck.push({
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['NOC Number /', {
-                                text: 'தடையில்லா சான்றிதழ் எண்',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].certificateNumber)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        }, {
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['Designation Of NOC Issuing Authority  / ', {
-                                text: 'தடையில்லா சான்றிதழ் வழங்கிய அதிகாரி',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(designationOfIssuingAuthority)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        }, {
-            table: {
-                widths: [170, '*'],
-                headerRows: 1,
-                body: [
-                    [
-                        {
-                            text: ['NOC Date  / ', {
-                                text: 'தடையில்லா சான்றின் நாள்',
-                                font: 'latha',
-                            }]
-                        },
-                        {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].nocDate)}
-                    ]
-                ]
-            },
-            layout: 'noBorders'
-        })
-    }
+    // if (returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != null && returnStringIfNull(dataObj.wkExperienceDtlsList[0].policedept) != '') {
+    //
+    //     contentCheck.push({
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['NOC Number /', {
+    //                             text: 'தடையில்லா சான்றிதழ் எண்',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].certificateNumber)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['Designation Of NOC Issuing Authority  / ', {
+    //                             text: 'தடையில்லா சான்றிதழ் வழங்கிய அதிகாரி',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(designationOfIssuingAuthority)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     }, {
+    //         table: {
+    //             widths: [170, '*'],
+    //             headerRows: 1,
+    //             body: [
+    //                 [
+    //                     {
+    //                         text: ['NOC Date  / ', {
+    //                             text: 'தடையில்லா சான்றின் நாள்',
+    //                             font: 'latha',
+    //                         }]
+    //                     },
+    //                     {text: returnStringIfNull(dataObj.wkExperienceDtlsList[0].nocDate)}
+    //                 ]
+    //             ]
+    //         },
+    //         layout: 'noBorders'
+    //     })
+    // }
 
     /*End of Work Experience*/
 
@@ -2633,7 +2798,8 @@ module.exports = function (dataObj) {
 
     /* Start of Quotas */
 
-    contentCheck.push({fontSize: 14,
+    contentCheck.push({
+        fontSize: 14,
         table: {
             widths: ['*'],
             headerRows: 1,
@@ -2651,12 +2817,11 @@ module.exports = function (dataObj) {
     });
 
 
-    if(specialOption != null && specialOption == "3") { // condition to hide the special marks heading
+    if (specialOption != null && specialOption == "3") { // condition to hide the special marks heading
 
-    }
-    else if (returnStringIfNull(dataObj.underQuotaOption) != null && returnStringIfNull(dataObj.underQuotaOption) == "1") { //Departmental Under Quota
+    } else if (returnStringIfNull(dataObj.underQuotaOption) != null && returnStringIfNull(dataObj.underQuotaOption) == "1") { //Departmental Under Quota
 
-    }else{
+    } else {
         contentCheck.push(
             {
                 fontSize: 14,
@@ -2671,10 +2836,10 @@ module.exports = function (dataObj) {
                                     bold: true
                                 }, {
                                     text: 'சிறப்பு மதிப்பெண்கள்', font: 'latha',
-                                },{
+                                }, {
                                     text: ' & Age Relaxation/ ',
                                     bold: true
-                                },{
+                                }, {
                                     text: 'வயது தளர்வு', font: 'latha',
                                 }]
                             },
@@ -2686,9 +2851,7 @@ module.exports = function (dataObj) {
     }
 
 
-
     if ((dataObj.getAgeQuotaDetailsRadioChk != null && dataObj.getAgeQuotaDetailsRadioChk != '3') || (dataObj.underQuotaOption != null && dataObj.underQuotaOption != '1')) {
-
 
 
         if (dataObj.additionalDetailsBean.nccCertificate != null) {
@@ -2709,7 +2872,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.nccCertificate), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.nccCertificate),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2733,7 +2899,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.nssCertificate), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.nssCertificate),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2755,7 +2924,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.sportsQuaota), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.sportsQuaota),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2783,7 +2955,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(dataObj.additionalDetailsBean.exServiceman), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.additionalDetailsBean.exServiceman),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -2804,7 +2979,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.serviceNumber), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.serviceNumber),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2822,7 +3000,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfEnlistment), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfEnlistment),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2840,7 +3021,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDischarge), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDischarge),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2905,7 +3089,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(dataObj.additionalDetailsBean.exServiceWoman), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.additionalDetailsBean.exServiceWoman),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -2926,7 +3113,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.serviceNumber), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.serviceNumber),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2944,7 +3134,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfEnlistment), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfEnlistment),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -2962,7 +3155,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDischarge), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDischarge),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -3028,7 +3224,10 @@ module.exports = function (dataObj) {
                             }]
                         },
                         [
-                            {text: returnStringIfNull(dataObj.additionalDetailsBean.widow), bold: true}
+                            {
+                                text: returnStringIfNull(dataObj.additionalDetailsBean.widow),
+                                bold: true
+                            }
                         ],
                     ]
                 ]
@@ -3049,7 +3248,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.nameOfLateHusband), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.nameOfLateHusband),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -3067,7 +3269,10 @@ module.exports = function (dataObj) {
                                 }]
                             },
                             [
-                                {text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDeath), bold: true}
+                                {
+                                    text: returnStringIfNull(dataObj.additionalDetailsBean.dateOfDeath),
+                                    bold: true
+                                }
                             ],
                         ]
                     ]
@@ -3209,11 +3414,17 @@ module.exports = function (dataObj) {
                 font: 'latha',
             }]
         },
-        "Community Certificate": {text: ['Community Certificate / ', {text: 'சாதிச்சான்றிதழ் ', font: 'latha',}]},
+        "Community Certificate": {
+            text: ['Community Certificate / ', {
+                text: 'சாதிச்சான்றிதழ் ',
+                font: 'latha',
+            }]
+        },
         "10th / SSLC Certificate": {
             text: ['10th / SSLC Certificate/ ', {
-                text:[ '10th / SSLC ',
-                    {	text:'சான்றிதழ்',
+                text: ['10th / SSLC ',
+                    {
+                        text: 'சான்றிதழ்',
                         font: 'latha',
                     }]
             }]
@@ -3292,27 +3503,27 @@ module.exports = function (dataObj) {
                 text: 'உயர்ந்தபட்ச விளையாட்டு',
                 font: 'latha',
             }]
-        },"Highest Certificate For NCC": {
+        }, "Highest Certificate For NCC": {
             text: ['Highest Certificate For NCC /', {
                 text: 'உயர்ந்தபட்ச சான்றிதழ் தேசிய மாணவர் படை',
                 font: 'latha',
             }]
-        },"Highest Certificate For NSS": {
+        }, "Highest Certificate For NSS": {
             text: ['Highest Certificate For NSS /', {
                 text: 'உயர்ந்தபட்ச சான்றிதழ் நாட்டு நலப்பணித் திட்டம்',
                 font: 'latha',
             }]
-        },"Destitute Widow Certificate": {
+        }, "Destitute Widow Certificate": {
             text: ['Destitute Widow Certificate /', {
                 text: 'ஆதரவற்ற விதவைக்கான சான்றிதழ்',
                 font: 'latha',
             }]
-        },"Discharged / to be discharged certificate": {
+        }, "Discharged / to be discharged certificate": {
             text: ['Discharged / to be discharged certificate', {
                 text: 'பணியிலிருந்து விடுவிக்கப்பட்ட நாள்',
                 font: 'latha',
             }]
-        },"Gender Certificate(Transgender)": {
+        }, "Gender Certificate(Transgender)": {
             text: ['Gender Certificate(Transgender)', {
                 text: 'திருநங்கைக்கான சான்றிதழ்',
                 font: 'latha',
@@ -4199,8 +4410,6 @@ module.exports = function (dataObj) {
      End of Age Details  */
 
 
-
-
     // start of ward quota
     /*  if(returnStringIfNull(dataObj.getAgeQuotaDetailsRadioChk)=="" || returnStringIfNull(dataObj.getAgeQuotaDetailsRadioChk)==null){
 
@@ -4768,8 +4977,7 @@ module.exports = function (dataObj) {
             //console.log(data[key]);
             if (isObject(data[key])) {
                 data[key] = iterateObject(data[key])
-            }
-            else if (isArray(data[key])) {
+            } else if (isArray(data[key])) {
                 data[key] = iterateArray(data[key])
             } else {
                 if (key == "text") {
@@ -4787,8 +4995,7 @@ module.exports = function (dataObj) {
             //console.log(data[i]);
             if (isObject(data[i])) {
                 data[i] = iterateObject(data[i])
-            }
-            else if (isArray(data[i])) {
+            } else if (isArray(data[i])) {
                 data[i] = iterateArray(data[i])
             } else {
                 //console.log(data[i]);

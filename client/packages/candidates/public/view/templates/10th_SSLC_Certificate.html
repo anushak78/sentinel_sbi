@@ -2,22 +2,44 @@
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 <div ng-if="radio[1] == '1'">
+    <div ng-if="userData.level > 1">
+        <div class="questions">
+            Is Document Matching ?
+        </div>
+        <div class="col-sm-6">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio16" name="radio16"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio16" name="radio16"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
     <div class="questions">
-        Name in the SSLC mark sheet?
+        Name in the Mark sheet?
     </div>
     <div class="col-sm-6">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio12" name="radio12"
                        value="1">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio12" name="radio12"
                        value="2">
-                Not matching
+                Not Matched
             </label>
         </div>
         <div class="radio">
@@ -33,24 +55,27 @@
     <div class="questions">
         DOB in the SSLC mark sheet?
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
                        ng-change="$ctrl.doc13=''" name="radio13"
                        value="1">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
                        name="radio13" value="2">
-                Not matching
+                Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc13=='2' ? 'display:block':'display:none'}}">
                 <input type="text" id="doc13" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc13"
                        class="modified_date input-sm input-s datepicker-input form-control">
+                <label id="doc13_age" style="margin-top: 5px">
+                    Age (as on 07.07.2010) - {{$ctrl.calculateAge($ctrl.doc13)}}
+                </label>
             </label>
         </div>
         <div class="radio">
@@ -72,14 +97,14 @@
             <label class="radio-custom">
                 <input type="radio" ng-model="$ctrl.radio_values.init_doc14" class="q_radio radio14" name="radio14"
                        value="1">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" ng-model="$ctrl.radio_values.init_doc14" class="q_radio radio14" name="radio14"
                        value="2">
-                Not matching
+                Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc14=='2' ? 'display:block':'display:none'}}">
                 <input type="text" id="doc14" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc14"
@@ -104,14 +129,14 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio15" name="radio15"
                        value="1">
-                Correct
+                Studied Tamil in Part - I
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio15" name="radio15"
                        value="2">
-                Incorrect
+                Not Studied Tamil
             </label>
         </div>
     </div>

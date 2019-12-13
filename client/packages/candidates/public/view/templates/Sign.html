@@ -1,3 +1,25 @@
 <div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
+<div ng-if="userData.level > 1">
+    <div class="questions">
+        Is Document Matching ?
+    </div>
+    <div class="col-sm-6">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio172" name="radio172"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio172" name="radio172"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

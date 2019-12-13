@@ -2,6 +2,28 @@
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 <div ng-if="radio[16] == '1'">
+    <div ng-if="userData.level > 1">
+        <div class="questions">
+            Is Document Matching ?
+        </div>
+        <div class="col-sm-6">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio163" name="radio163"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio163" name="radio163"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
     <div class="questions">
         Gender?
     </div>

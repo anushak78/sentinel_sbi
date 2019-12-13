@@ -6,7 +6,7 @@
 <div ng-if="radio[3] == '1'">
     <div>
         <div class="questions">
-            Community in the certificate?
+            Community of category as per the community certificate?
         </div>
         <div class="col-sm-12">
             <div class="radio">
@@ -15,7 +15,7 @@
                            ng-model="$ctrl.radio_values.init_doc32"
                            class="q_radio radio32" name="radio32"
                            value="1">
-                    Matching
+                    Matched
                 </label>
             </div>
             <div class="radio">
@@ -24,7 +24,7 @@
                            ng-model="$ctrl.radio_values.init_doc32"
                            class="q_radio radio32" name="radio32"
                            value="2">
-                    Not Matching
+                    Not Matched
                 </label>
                 <label style="{{ $ctrl.radio_values.init_doc32=='2' ? 'display:block':'display:none'}}">
                     <select class="form-control" ng-model="$ctrl.doc32">
@@ -62,7 +62,7 @@
                     <input type="radio"
                            class="q_radio radio33" name="radio33"
                            value="1">
-                    Yes
+                    Issued in Tamil Nadu
                 </label>
             </div>
             <div class="radio">
@@ -70,7 +70,7 @@
                     <input type="radio"
                            class="q_radio radio33" name="radio33"
                            value="2">
-                    No
+                    Not issued in Tamil Nadu
                 </label>
             </div>
         </div>

@@ -1,20 +1,20 @@
 {
   "10th / SSLC Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 1,
       "q_id": 1
     },
     {
-      "question": "Name in the SSLC mark sheet?",
+      "question": "Name in the certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -24,8 +24,8 @@
     {
       "question": "DOB in the SSLC mark sheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -35,8 +35,8 @@
     {
       "question": "Year of Passing in the Mark sheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -46,30 +46,40 @@
     {
       "question": "Is Tamil a Part-I language in the Mark sheet?",
       "options": {
-        "option1": "Correct",
-        "option2": "Incorrect"
+        "option1": "Studied Tamil in Part - I",
+        "option2": "Not Studied Tamil"
       },
       "approved": "1",
       "doc_id": 1,
       "q_id": 5
+    },
+    {
+      "question": "Is document valid ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 6
     }
   ],
   "12th / HSC Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 2,
       "q_id": 1
     },
     {
-      "question": "Name in Mark sheet?",
+      "question": "Name in the certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -77,10 +87,10 @@
       "q_id": 2
     },
     {
-      "question": "DOB in Mark sheet?",
+      "question": "DOB in HSC Mark sheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -101,8 +111,8 @@
     {
       "question": "Is Tamil a Part-I language in the Mark sheet?",
       "options": {
-        "option1": "Correct",
-        "option2": "Incorrect"
+        "option1": "Studied Tamil in Part - I",
+        "option2": "Not Studied Tamil"
       },
       "approved": "1",
       "doc_id": 2,
@@ -111,20 +121,20 @@
   ],
   "Community Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 3,
       "q_id": 1
     },
     {
-      "question": "Community in the certificate?",
+      "question": "Community of category as per the community certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -134,8 +144,8 @@
     {
       "question": "Is Community certificate issued by Tamil Nadu Government?",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Issued in Tamil Nadu",
+        "option2": "Not issued in Tamil Nadu"
       },
       "approved": "1",
       "doc_id": 3,
@@ -144,10 +154,10 @@
   ],
   "Diploma Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 4,
@@ -188,10 +198,10 @@
   ],
   "Graduation Degree Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 5,
@@ -243,72 +253,82 @@
   ],
   "PSTM Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 1
     },
     {
-      "question": "Claimed for PSTM Medium Reservation?",
+      "question": "Whether submitted PSTM certificate from competent authority for Post Graduate Degree / Equivalent?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 2
     },
     {
-      "question": "Whether submitted the PSTM Certificate for both PG with Ph.D degree in Tamil Medium ?",
+      "question": "Claim for PSTM reservation ",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 3
     },
     {
-      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree ?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 4
     },
     {
-      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 5
     },
     {
-      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "question": "Whether submitted the PSTM Certificate for M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 6
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 7
     }
   ],
   "Destitute Widow Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 7,
@@ -338,10 +358,10 @@
   ],
   "Discharged / to be discharged certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 8,
@@ -364,7 +384,7 @@
         "option1": "Retired",
         "option2": "Going to Retire"
       },
-      "required":false,
+      "required": false,
       "approved": "1",
       "doc_id": 8,
       "q_id": 3
@@ -382,10 +402,10 @@
   ],
   "Highest Certificate For NSS": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 9,
@@ -405,10 +425,10 @@
   ],
   "Highest Certificate For NCC": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 10,
@@ -435,20 +455,20 @@
       },
       "approved": "1",
       "doc_id": 10,
-      "required":false,
+      "required": false,
       "q_id": 3
     }
   ],
   "Medal Certificate (For Department)": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 11,
-      "required":false,
+      "required": false,
       "q_id": 1
     },
     {
@@ -460,7 +480,7 @@
       },
       "approved": "1",
       "doc_id": 11,
-      "required":false,
+      "required": false,
       "q_id": 2
     },
     {
@@ -473,16 +493,16 @@
       },
       "approved": "1",
       "doc_id": 11,
-      "required":false,
+      "required": false,
       "q_id": 3
     }
   ],
   "Noc (Police Department)": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 12,
@@ -567,10 +587,10 @@
   ],
   "Highest Sports Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 13,
@@ -590,10 +610,10 @@
   ],
   "Additional Mark": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 14,
@@ -628,10 +648,10 @@
   ],
   "Gender Certificate(Transgender)": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 15,
@@ -651,10 +671,10 @@
   ],
   "Photo": [
     {
-      "question": "Is the Photo Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 16,
@@ -670,26 +690,46 @@
       "approved": "1",
       "doc_id": 16,
       "q_id": 2
+    },
+    {
+      "question": "Is document valid ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 16,
+      "q_id": 3
     }
   ],
   "Sign": [
     {
-      "question": "Is the Sign Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 17,
       "q_id": 1
+    },
+    {
+      "question": "Is document valid ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 17,
+      "q_id": 2
     }
   ],
   "MCA - 3 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 18,
@@ -709,10 +749,10 @@
   ],
   "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 19,
@@ -732,10 +772,10 @@
   ],
   "M.E or M.Tech degree in Communication Systems - 2 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 20,
@@ -755,10 +795,10 @@
   ],
   "Post Graduate Diploma in Computer application - 1 year": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 21,
@@ -778,10 +818,10 @@
   ],
   "B.E or B.Tech degree in Computer Science or I.T - 4 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 22,
@@ -801,10 +841,10 @@
   ],
   "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 23,
@@ -824,10 +864,10 @@
   ],
   "B.E. degree in Electronics and Communication Engineering - 4 years": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 24,
@@ -847,10 +887,10 @@
   ],
   "PG Degree Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 25,
@@ -859,8 +899,8 @@
     {
       "question": "Name of Degree and Subject in the PG Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -870,8 +910,8 @@
     {
       "question": "Name of University in the PG Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -881,8 +921,8 @@
     {
       "question": "Year of Passing in the PG Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -892,8 +932,8 @@
     {
       "question": "Period of Study in the PG Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -903,8 +943,8 @@
     {
       "question": "What is the Mode of Study?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -914,8 +954,8 @@
     {
       "question": "Percentage of Marks in PG?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 25,
@@ -924,8 +964,8 @@
     {
       "question": "Whether studied PG Degree in Tamil Medium?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 25,
@@ -934,8 +974,8 @@
     {
       "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 25,
@@ -944,14 +984,14 @@
   ],
   "Noc (Other Department)": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 26,
-      "required":false,
+      "required": false,
       "q_id": 1
     },
     {
@@ -962,17 +1002,17 @@
         "option3": "Not Clear"
       },
       "approved": "1",
-      "required":false,
+      "required": false,
       "doc_id": 26,
       "q_id": 2
     }
   ],
   "M.Phil Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 27,
@@ -981,8 +1021,8 @@
     {
       "question": "Name of Degree and Subject in the M.Phil Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -992,8 +1032,8 @@
     {
       "question": "Name of University in the M.Phil Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1003,8 +1043,8 @@
     {
       "question": "Year of Passing in the M.Phil Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1014,8 +1054,8 @@
     {
       "question": "Period of Study in the M.Phil Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1025,8 +1065,8 @@
     {
       "question": "What is the Mode of Study?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1036,20 +1076,20 @@
   ],
   "SLET/NET Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 28,
       "q_id": 1
     },
     {
-      "question": "Name of Degree and Subject in the SLET / NET Certificate?",
+      "question": "Name of the Subject in the SLET / NET Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1057,10 +1097,10 @@
       "q_id": 2
     },
     {
-      "question": "Name of University in the SLET / NET Certificate?",
+      "question": "Name of Conducting agency in the SLET / NET Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1070,8 +1110,8 @@
     {
       "question": "Year of Passing in the SLET / NET Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1081,8 +1121,8 @@
     {
       "question": "Period of Study in the SLET / NET Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1092,8 +1132,8 @@
     {
       "question": "What is the Mode of Study?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1103,10 +1143,10 @@
   ],
   "Phd Certificate": [
     {
-      "question": "Is the Document Valid?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Valid",
-        "option2": "Invalid"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 29,
@@ -1115,8 +1155,8 @@
     {
       "question": "Name of Degree and Subject in the PHD Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1126,8 +1166,8 @@
     {
       "question": "Name of University in the PHD Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1137,8 +1177,8 @@
     {
       "question": "Year of Passing in the PHD Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1148,8 +1188,8 @@
     {
       "question": "Period of Study in the PHD Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1159,8 +1199,8 @@
     {
       "question": "What is the Mode of Study?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",

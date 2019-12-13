@@ -12,6 +12,7 @@
         vm.doc23 = '';
         vm.doc24 = '';
         vm.doc32 = '';
+        vm.doc62 = '';
         vm.doc84 = '';
         vm.doc123 = '';
         vm.doc162 = '';
@@ -40,6 +41,7 @@
         vm.radio_values.init_doc23 = "";
         vm.radio_values.init_doc24 = "";
         vm.radio_values.init_doc32 = "";
+        vm.radio_values.init_doc62 = "";
         vm.radio_values.init_doc124 = "";
         vm.radio_values.init_doc162 = "";
         vm.radio_values.init_doc84 = "";
@@ -79,6 +81,7 @@
             '1c4': 'New year of passing',
             '2c3': 'New date of birth',
             '2c4': 'New year of passing',
+            '6c2': 'New Authority',
             '16c2': 'New Gender',
             '25c4': 'New Year of Passing',
             '25c5': 'New Period of study',
@@ -94,7 +97,7 @@
             '29c6': 'New Mode of study',
         };
 
-        $scope.remarkToShow = [1, 2, 3, 8, 12, 16, 25, 27, 28, 29];
+        $scope.remarkToShow = [1, 2, 3, 8, 6, 12, 16, 25, 27, 28, 29];
 
         $scope.titles =
             {
@@ -145,6 +148,7 @@
             vm.doc23 = '';
             vm.doc24 = '';
             vm.doc32 = '';
+            vm.doc62 = '';
             vm.doc84 = '';
             vm.doc123 = '';
             vm.doc162 = '';
@@ -173,6 +177,7 @@
             vm.radio_values.init_doc23 = "";
             vm.radio_values.init_doc24 = "";
             vm.radio_values.init_doc32 = "";
+            vm.radio_values.init_doc62 = "";
             vm.radio_values.init_doc124 = "";
             vm.radio_values.init_doc162 = "";
             vm.radio_values.init_doc84 = "";
@@ -467,6 +472,7 @@
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
+                    console.log($("#"+event.target.id+"_age").val('abcded'));
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
                 $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294").datepicker({
@@ -691,6 +697,22 @@
                 }
             });
         };
+
+        vm.calculateAge = function (value) {
+            if(value != ''){
+                console.log(value);
+                var a = moment([2019, 7, 1]);
+                var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]);
+                var years = a.diff(b, 'year');
+                b.add(years, 'years');
+
+                var months = a.diff(b, 'months');
+                b.add(months, 'months');
+
+                var days = a.diff(b, 'days');
+                return years + ' years ' + months + ' months ' + days + ' days';
+            }
+        }
 
     }
 
