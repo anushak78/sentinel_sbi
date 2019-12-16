@@ -1,10 +1,10 @@
 {
   "10th / SSLC Certificate": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Visible / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 1,
@@ -54,10 +54,10 @@
       "q_id": 5
     },
     {
-      "question": "Is document valid ?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 1,
@@ -66,10 +66,10 @@
   ],
   "12th / HSC Certificate": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Valid / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 2,
@@ -117,14 +117,24 @@
       "approved": "1",
       "doc_id": 2,
       "q_id": 5
-    }
-  ],
-  "Community Certificate": [
+    },
     {
       "question": "Is the document relevant to claim?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 6
+    }
+  ],
+  "Community Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 3,
@@ -150,6 +160,16 @@
       "approved": "1",
       "doc_id": 3,
       "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 4
     }
   ],
   "Diploma Certificate": [
@@ -253,10 +273,10 @@
   ],
   "PSTM Certificate": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Valid / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 6,
@@ -276,7 +296,8 @@
       "question": "Claim for PSTM reservation ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -286,7 +307,8 @@
       "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree ?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -296,7 +318,8 @@
       "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -306,7 +329,8 @@
       "question": "Whether submitted the PSTM Certificate for M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -316,11 +340,21 @@
       "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 7
+    },{
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 8
     }
   ],
   "Destitute Widow Certificate": [
@@ -671,10 +705,10 @@
   ],
   "Photo": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document visible / clear ?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 16,
@@ -692,10 +726,10 @@
       "q_id": 2
     },
     {
-      "question": "Is document valid ?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 16,
@@ -704,20 +738,20 @@
   ],
   "Sign": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Visible / Clear ?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 17,
       "q_id": 1
     },
     {
-      "question": "Is document valid ?",
+      "question": "Is the document relevant to claim?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 17,
@@ -887,10 +921,10 @@
   ],
   "PG Degree Certificate": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Valid / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 25,
@@ -969,7 +1003,7 @@
       },
       "approved": "1",
       "doc_id": 25,
-      "q_id": 7
+      "q_id": 8
     },
     {
       "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
@@ -979,7 +1013,17 @@
       },
       "approved": "1",
       "doc_id": 25,
-      "q_id": 7
+      "q_id": 9
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 10
     }
   ],
   "Noc (Other Department)": [
@@ -1009,10 +1053,10 @@
   ],
   "M.Phil Certificate": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Valid / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 27,
@@ -1072,14 +1116,24 @@
       "approved": "1",
       "doc_id": 27,
       "q_id": 6
-    }
-  ],
-  "SLET/NET Certificate": [
+    },
     {
       "question": "Is the document relevant to claim?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 7
+    }
+  ],
+  "SLET/NET Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 28,
@@ -1139,14 +1193,24 @@
       "approved": "1",
       "doc_id": 28,
       "q_id": 6
-    }
-  ],
-  "Phd Certificate": [
+    },
     {
       "question": "Is the document relevant to claim?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 7
+    }
+  ],
+  "Phd Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 29,
@@ -1206,6 +1270,16 @@
       "approved": "1",
       "doc_id": 29,
       "q_id": 6
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 7
     }
   ]
 }

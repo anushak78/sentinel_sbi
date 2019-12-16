@@ -9,13 +9,18 @@
         $scope.radio = {};
         vm.doc13 = '';
         vm.doc14 = '';
+        vm.doc16 = '';
         vm.doc23 = '';
         vm.doc24 = '';
         vm.doc32 = '';
+        vm.doc34 = '';
         vm.doc62 = '';
+        vm.doc68 = '';
         vm.doc84 = '';
         vm.doc123 = '';
         vm.doc162 = '';
+        vm.doc163 = '';
+        vm.doc172 = '';
         vm.doc242 = '';
         vm.doc232 = '';
         vm.doc222 = '';
@@ -26,38 +31,51 @@
         vm.doc254 = '';
         vm.doc255 = '';
         vm.doc256 = '';
+        vm.doc2510 = '';
         vm.doc274 = '';
         vm.doc275 = '';
         vm.doc276 = '';
+        vm.doc277 = '';
         vm.doc284 = '';
         vm.doc285 = '';
         vm.doc286 = '';
+        vm.doc287 = '';
         vm.doc294 = '';
         vm.doc295 = '';
         vm.doc296 = '';
+        vm.doc297 = '';
         vm.radio_values = {};
         vm.radio_values.init_doc13 = "";
         vm.radio_values.init_doc14 = "";
+        vm.radio_values.init_doc16 = "";
         vm.radio_values.init_doc23 = "";
         vm.radio_values.init_doc24 = "";
         vm.radio_values.init_doc32 = "";
+        vm.radio_values.init_doc34 = "";
         vm.radio_values.init_doc62 = "";
+        vm.radio_values.init_doc68 = "";
         vm.radio_values.init_doc124 = "";
         vm.radio_values.init_doc162 = "";
+        vm.radio_values.init_doc163 = "";
+        vm.radio_values.init_doc172 = "";
         vm.radio_values.init_doc84 = "";
         vm.radio_values.init_doc123 = "";
         vm.radio_values.init_doc53 = "";
         vm.radio_values.init_doc254 = "";
         vm.radio_values.init_doc255 = "";
         vm.radio_values.init_doc257 = "";
+        vm.radio_values.init_doc2510 = "";
         vm.radio_values.init_doc274 = "";
         vm.radio_values.init_doc275 = "";
+        vm.radio_values.init_doc277 = "";
         vm.radio_values.init_doc276 = "";
         vm.radio_values.init_doc284 = "";
         vm.radio_values.init_doc285 = "";
+        vm.radio_values.init_doc286 = "";
         vm.radio_values.init_doc287 = "";
         vm.radio_values.init_doc294 = "";
         vm.radio_values.init_doc295 = "";
+        vm.radio_values.init_doc296 = "";
         vm.radio_values.init_doc297 = "";
         $scope.packages = {
             name: 'candidates',
@@ -72,32 +90,46 @@
             comment: '',
             filterDD: ''
         };
+        vm.notRelevantReasone = [
+            'Relevant 1',
+            'Relevant 2',
+            'Relevant 3'
+        ];
 
 
         $scope.remarksText = {
             '3c2': 'New community',
-            '3c4': 'New sub caste',
+            '3c4': 'Not relevant reason',
             '1c3': 'New date of birth',
             '1c4': 'New year of passing',
+            '1c6': 'Not relevant reason',
             '2c3': 'New date of birth',
             '2c4': 'New year of passing',
+            '2c6': 'Not relevant reason',
             '6c2': 'New Authority',
+            '6c8': 'Not relevant reason',
             '16c2': 'New Gender',
+            '16c3': 'Not relevant reason',
+            '17c2': 'Not relevant reason',
             '25c4': 'New Year of Passing',
             '25c5': 'New Period of study',
             '25c6': 'New Mode of study',
+            '25c10': 'New relevant reason',
             '27c4': 'New Year of Passing',
             '27c5': 'New Period of study',
             '27c6': 'New Mode of study',
+            '27c7': 'Not relevant reason',
             '28c4': 'New Year of Passing',
             '28c5': 'New Period of study',
             '28c6': 'New Mode of study',
+            '28c7': 'New relevant reason',
             '29c4': 'New Year of Passing',
             '29c5': 'New Period of study',
             '29c6': 'New Mode of study',
+            '29c7': 'Not relevant reason',
         };
 
-        $scope.remarkToShow = [1, 2, 3, 8, 6, 12, 16, 25, 27, 28, 29];
+        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
 
         $scope.titles =
             {
@@ -165,6 +197,7 @@
             vm.doc274 = '';
             vm.doc275 = '';
             vm.doc276 = '';
+            vm.doc277 = '';
             vm.doc284 = '';
             vm.doc285 = '';
             vm.doc286 = '';
@@ -400,11 +433,11 @@
                         }
                         answers.push(object);
 
-                        if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
-                            break
-                        } else {
-                            flag = true
-                        }
+                        // if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
+                        //     break
+                        // } else {
+                        //     flag = true
+                        // }
                     }
                 }
             }
@@ -432,6 +465,9 @@
                 $scope.candidateDetails['document_list'].push('hi');
                 $scope.candidateDetails['document_list'].splice($scope.candidateDetails['document_list'].length - 1, 1);
             }
+
+            console.log('final json data');
+            console.log($scope.finalJsonData);
         };
 
 
@@ -472,7 +508,7 @@
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
-                    console.log($("#"+event.target.id+"_age").val('abcded'));
+                    console.log($("#" + event.target.id + "_age").val('abcded'));
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
                 $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294").datepicker({
@@ -699,7 +735,7 @@
         };
 
         vm.calculateAge = function (value) {
-            if(value != ''){
+            if (value != '') {
                 console.log(value);
                 var a = moment([2019, 7, 1]);
                 var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]);

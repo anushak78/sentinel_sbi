@@ -3,7 +3,38 @@
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 
-<div ng-if="radio[3] == '1'">
+<div>
+    <div class="questions">
+        Is the document relevant to claim ?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio34" name="radio34"
+                       value="1" ng-model="$ctrl.radio_values.init_doc34"
+                       ng-change="$ctrl.doc34=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio34" name="radio34"
+                       value="2" ng-model="$ctrl.radio_values.init_doc34"
+                       ng-change="$ctrl.doc34=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc34=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc34">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
     <div>
         <div class="questions">
             Community of category as per the community certificate?
@@ -71,6 +102,14 @@
                            class="q_radio radio33" name="radio33"
                            value="2">
                     Not issued in Tamil Nadu
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio33" name="radio33"
+                           value="3">
+                    Not Clear
                 </label>
             </div>
         </div>

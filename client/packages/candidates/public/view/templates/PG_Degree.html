@@ -2,7 +2,38 @@
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 
-<div ng-if="radio[25] == '1'">
+<div>
+    <div class="questions">
+        Is the document relevant to claim ?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2510" name="radio2510"
+                       value="1" ng-model="$ctrl.radio_values.init_doc2510"
+                       ng-change="$ctrl.doc2510=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2510" name="radio2510"
+                       value="2" ng-model="$ctrl.radio_values.init_doc2510"
+                       ng-change="$ctrl.doc2510=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc2510=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc2510">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
     <div class="questions">
         Name of Degree and Subject in the PG Certificate?
     </div>
@@ -185,6 +216,13 @@
                 Not Matched
             </label>
         </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio257" name="radio257"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
@@ -205,6 +243,13 @@
                 Not Matched
             </label>
         </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio258" name="radio258"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
@@ -223,6 +268,13 @@
                 <input type="radio" class="q_radio radio259" name="radio259"
                        value="2">
                 Not Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio259" name="radio259"
+                       value="3">
+                Not Clear
             </label>
         </div>
     </div>

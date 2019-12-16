@@ -2,7 +2,38 @@
     <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 
-<div ng-if="radio[28] == '1'">
+<div>
+    <div class="questions">
+        Is the document relevant to claim ?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio287" name="radio287"
+                       value="1" ng-model="$ctrl.radio_values.init_doc287"
+                       ng-change="$ctrl.doc287=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio287" name="radio287"
+                       value="2" ng-model="$ctrl.radio_values.init_doc287"
+                       ng-change="$ctrl.doc287=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc287=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc287">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
     <div class="questions">
         Name of the Subject in the SLET / NET Certificate?
     </div>
