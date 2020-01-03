@@ -5,32 +5,28 @@
 
 <div>
     <div class="questions">
-        Is the document relevant to claim ?
+        Claim for PSTM reservation
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio68" name="radio68"
-                       value="1" ng-model="$ctrl.radio_values.init_doc68"
-                       ng-change="$ctrl.doc68=''">
-                Relevant
+                <input type="radio" class="q_radio radio63" name="radio63"
+                       value="1">
+                Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio68" name="radio68"
-                       value="2" ng-model="$ctrl.radio_values.init_doc68"
-                       ng-change="$ctrl.doc68=''">
-                Not Relevant
+                <input type="radio" class="q_radio radio63" name="radio63"
+                       value="2">
+                Not Matched
             </label>
-            <label
-              style="{{ $ctrl.radio_values.init_doc68=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc68">
-                    <option value="">--Select--</option>
-                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
-                        {{r}}
-                    </option>
-                </select>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio63" name="radio63"
+                       value="3">
+                Not Clear
             </label>
         </div>
     </div>
@@ -68,56 +64,176 @@
         </div>
     </div>
     <div class="clearfix"></div>
+
     <div class="questions">
-        Claim for PSTM reservation
+        Whether studied PG Degree in Tamil Medium
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio63" name="radio63"
+                <input type="radio" class="q_radio radio65" name="radio65"
                        value="1">
-                Matched
+                Yes
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio63" name="radio63"
+                <input type="radio" class="q_radio radio65" name="radio65"
                        value="2">
-                Not Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio63" name="radio63"
-                       value="3">
-                Not Clear
+                No
             </label>
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether submitted the PSTM Certificate for both PG and Ph.D degree ?
+        Is the document relevant to the Claim of PG Degree in Tamil Medium?
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio64" name="radio64"
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="1" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="2" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc66=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc66">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether studied Ph.D Degree in Tamil Medium
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio67" name="radio67"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio67" name="radio67"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the document relevant to the Claim of Ph.D in Tamil Medium?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio68" name="radio68"
+                       value="1" ng-model="$ctrl.radio_values.init_doc68"
+                       ng-change="$ctrl.doc68=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio68" name="radio68"
+                       value="2" ng-model="$ctrl.radio_values.init_doc68"
+                       ng-change="$ctrl.doc68=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc68=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc68">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether studied M.Ed in Tamil Medium
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio69" name="radio69"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio69" name="radio69"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the document relevant to the Claim of M.Ed in Tamil Medium?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio610" name="radio610"
+                       value="1" ng-model="$ctrl.radio_values.init_doc610"
+                       ng-change="$ctrl.doc610=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio68" name="radio610"
+                       value="2" ng-model="$ctrl.radio_values.init_doc610"
+                       ng-change="$ctrl.doc610=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc610=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc610">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio611" name="radio611"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio64" name="radio64"
+                <input type="radio" class="q_radio radio611" name="radio611"
                        value="2">
                 Not Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio64" name="radio64"
-                       value="3">
-                Not Clear
             </label>
         </div>
     </div>
@@ -128,50 +244,36 @@
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio65" name="radio65"
+                <input type="radio" class="q_radio radio612" name="radio612"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio65" name="radio65"
+                <input type="radio" class="q_radio radio612" name="radio612"
                        value="2">
                 Not Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio65" name="radio65"
-                       value="3">
-                Not Clear
             </label>
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether submitted the PSTM Certificate for M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium
+        Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
+                <input type="radio" class="q_radio radio613" name="radio613"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
+                <input type="radio" class="q_radio radio613" name="radio613"
                        value="2">
                 Not Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
-                       value="3">
-                Not Clear
             </label>
         </div>
     </div>
@@ -182,23 +284,16 @@
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
+                <input type="radio" class="q_radio radio614" name="radio614"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
+                <input type="radio" class="q_radio radio614" name="radio614"
                        value="2">
                 Not Matched
-            </label>
-        </div>>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
-                       value="3">
-                Not Clear
             </label>
         </div>
     </div>

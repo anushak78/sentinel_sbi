@@ -1,0 +1,110 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+  <div
+    ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div>
+  <div class="questions">
+    Is the document relevant to the Claim of No Objection Certificate?
+  </div>
+  <div class="col-sm-36">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio362" name="radio362"
+               value="1" ng-model="$ctrl.radio_values.init_doc362"
+               ng-change="$ctrl.doc362=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio362" name="radio362"
+               value="2" ng-model="$ctrl.radio_values.init_doc362"
+               ng-change="$ctrl.doc362=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc362=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc362">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+            {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether submitted Last Studied conduct Certificate
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio363" name="radio363"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio363" name="radio363"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is the document relevant to the Latest Conduct Certificate?
+  </div>
+  <div class="col-sm-36">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio364" name="radio364"
+               value="1" ng-model="$ctrl.radio_values.init_doc364"
+               ng-change="$ctrl.doc364=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio364" name="radio364"
+               value="2" ng-model="$ctrl.radio_values.init_doc364"
+               ng-change="$ctrl.doc364=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc364=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc364">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+            {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether submitted Latest Conduct Certificate
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio365" name="radio365"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio365" name="radio365"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

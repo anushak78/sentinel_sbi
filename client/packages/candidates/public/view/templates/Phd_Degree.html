@@ -35,7 +35,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Name of Degree and Subject in the PHD Certificate?
+        Name in the PHD Certificate?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -89,7 +89,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Year of Passing in the PHD Certificate?
+        Month & Year of Passing in the PHD Certificate?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -122,32 +122,26 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Period of Study in the PHD Certificate?
+        Ph.D Certificate Number
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
-                       ng-change="$ctrl.doc295=''" name="radio295"
+                <input type="radio" class="q_radio radio295" name="radio295"
                        value="1">
                 Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
-                       name="radio295" value="2">
-                Not matching
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc295=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc295" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc295"
-                       class="modified_date input-sm input-s datepicker-input form-control">
+                <input type="radio" class="q_radio radio295" name="radio295"
+                       value="2">
+                Not Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc295" class="q_radio radio295"
-                       ng-change="$ctrl.doc295=''" name="radio295"
+                <input type="radio" class="q_radio radio295" name="radio295"
                        value="3">
                 Not Clear
             </label>
@@ -155,47 +149,236 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        What is the Mode of Study?
+        Is the document relevant to the claim of Ph.D Mark Sheets
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc296" ng-change="$ctrl.doc296=''"
-                       class="q_radio radio296" name="radio296"
+                <input type="radio" class="q_radio radio296" name="radio296"
+                       value="1" ng-model="$ctrl.radio_values.init_doc296"
+                       ng-change="$ctrl.doc296=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio296" name="radio296"
+                       value="2" ng-model="$ctrl.radio_values.init_doc296"
+                       ng-change="$ctrl.doc296=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc296=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc296">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Name of the subject
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio298" name="radio298"
                        value="1">
                 Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc296"
-                       class="q_radio radio296" name="radio296"
+                <input type="radio" class="q_radio radio298" name="radio298"
                        value="2">
                 Not Matching
             </label>
-            <label style="{{ $ctrl.radio_values.init_doc296=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc296">
-                    <option value="">--Select--</option>
-                    <option value="Regular">Regular
-                    </option>
-                    <option value="Distance">Distance
-                    </option>
-                    <option value="Part time">Part time
-                    </option>
-                    <option value="Correspondence">Correspondence
-                    </option>
-                </select>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Name of Institution studied
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio299" name="radio299"
+                       value="1">
+                Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc296"
-                       ng-change="$ctrl.doc296=''"
-                       class="q_radio radio296" name="radio296"
+                <input type="radio" class="q_radio radio299" name="radio299"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div> <div class="clearfix"></div>
+    <div class="questions">
+        Mode of Study
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2910" name="radio2910"
+                       value="1">
+                Regular
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2910" name="radio2910"
+                       value="2">
+                Distance
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2910" name="radio2910"
                        value="3">
+                Part time
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2910" name="radio2910"
+                       value="4">
+                Correspondence
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2910" name="radio2910"
+                       value="5">
+                Open University
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Date of Publications of Results in Viva-voce of Ph.D Degree
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2911" name="radio2911"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2911" name="radio2911"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2911" name="radio2911"
+                       value="2">
                 Not Clear
             </label>
         </div>
     </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether obtained Ph.D Degree on or after 03.04.2009 through Part Time/ Correspondence / Distance Education
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2912" name="radio2912"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2912" name="radio2912"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether Ph.D Degree obtained from Foreign Universities
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2913" name="radio2913"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2913" name="radio2913"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        If Foreign Ph.D Degree, Equivalence Certificate obtained from Association Universities, New Delhi
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2914" name="radio2914"
+                       value="1" ng-model="radio[2914]">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2914" name="radio2914"
+                       ng-model="radio[2914]"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div ng-if="radio[2914] == 1">
+        <div class="questions">
+            Is the document relevant to claim ?
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio2915" name="radio2915"
+                           value="1" ng-model="$ctrl.radio_values.init_doc2915"
+                           ng-change="$ctrl.doc2915=''">
+                    Relevant
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio2915" name="radio2915"
+                           value="2" ng-model="$ctrl.radio_values.init_doc2915"
+                           ng-change="$ctrl.doc2915=''">
+                    Not Relevant
+                </label>
+                <label
+                  style="{{ $ctrl.radio_values.init_doc2915=='2' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc2915">
+                        <option value="">--Select--</option>
+                        <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                            {{r}}
+                        </option>
+                    </select>
+                </label>
+            </div>
+        </div>
     <div class="clearfix"></div>
 </div>

@@ -1,0 +1,159 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+  <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div>
+  <div class="questions">
+    Is the document relevant to claim ?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio307" name="radio307"
+               value="1" ng-model="$ctrl.radio_values.init_doc307"
+               ng-change="$ctrl.doc307=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio307" name="radio307"
+               value="2" ng-model="$ctrl.radio_values.init_doc307"
+               ng-change="$ctrl.doc307=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc307=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc307">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+            {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Birth Certificate / SSLC Certificate Number
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio302" name="radio302"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio302" name="radio302"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio302" name="radio302"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Birth Certificate / SSLC Certificate Issuing Authority
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio303" name="radio303"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio303" name="radio303"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Place of Birth
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio304" name="radio304"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio304" name="radio304"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    DOB in the Certificate?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc305" class="q_radio radio305"
+               ng-change="$ctrl.doc305=''" name="radio305"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc305" class="q_radio radio305"
+               name="radio305" value="2">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc305=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc305" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
+               class="modified_date input-sm input-s datepicker-input form-control">
+        <label id="doc305_age" style="margin-top: 5px">
+          Age (as on 07.07.2010) - {{$ctrl.calculateAge($ctrl.doc305)}}
+        </label>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc305" class="q_radio radio305"
+               ng-change="$ctrl.doc305=''" name="radio305"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Age as on 01.07.2019 (Years, Months, Days)
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio306" name="radio306"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio306" name="radio306"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

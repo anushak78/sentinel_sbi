@@ -1,0 +1,125 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div>
+    <div class="questions">
+        Is the document relevant to claim ?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio312" name="radio312"
+                       value="1" ng-model="$ctrl.radio_values.init_doc312"
+                       ng-change="$ctrl.doc312=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio312" name="radio312"
+                       value="2" ng-model="$ctrl.radio_values.init_doc312"
+                       ng-change="$ctrl.doc312=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc312=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc312">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Disability Certificate Number
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio313" name="radio313"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio313" name="radio313"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio313" name="radio313"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Issuing Authority of Disability Certificate
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio314" name="radio314"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio314" name="radio314"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Category of Disability
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio315" name="radio315"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio315" name="radio315"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Percentage of Disability
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio316" name="radio316"
+                       value="1">
+                Matching
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio316" name="radio316"
+                       value="2">
+                Not Matching
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+

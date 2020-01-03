@@ -35,7 +35,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Name of Degree and Subject in the M.Phil Certificate?
+        Name in the M.Phil Certificate?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -89,7 +89,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Year of Passing in the M.Phil Certificate?
+        Month & Year of Passing in the M.Phil Degree?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -122,32 +122,26 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Period of Study in the M.Phil Certificate?
+        M.Phil Degree Certificate Number
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc275" class="q_radio radio275"
-                       ng-change="$ctrl.doc275=''" name="radio275"
+                <input type="radio" class="q_radio radio275" name="radio275"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc275" class="q_radio radio275"
-                       name="radio275" value="2">
+                <input type="radio" class="q_radio radio275" name="radio275"
+                       value="2">
                 Not Matched
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc275=='2' ? 'display:block':'display:none'}}">
-                <input type="text"  id="doc275" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc275"
-                       class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc275" class="q_radio radio275"
-                       ng-change="$ctrl.doc275=''" name="radio275"
+                <input type="radio" class="q_radio radio275" name="radio275"
                        value="3">
                 Not Clear
             </label>
@@ -155,47 +149,203 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        What is the Mode of Study?
+        Is the document relevant to the claim of M.Phil Degree Mark Sheets
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc276"
-                       ng-change="$ctrl.doc276=''"
-                       class="q_radio radio276" name="radio276"
+                <input type="radio" class="q_radio radio276" name="radio276"
+                       value="1" ng-model="$ctrl.radio_values.init_doc276"
+                       ng-change="$ctrl.doc276=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio276" name="radio276"
+                       value="2" ng-model="$ctrl.radio_values.init_doc276"
+                       ng-change="$ctrl.doc276=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc276=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc276">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Name of the subject
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio278" name="radio278"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc276"
-                       class="q_radio radio276" name="radio276"
+                <input type="radio" class="q_radio radio278" name="radio278"
                        value="2">
                 Not Matched
             </label>
-            <label style="{{ $ctrl.radio_values.init_doc276=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc276">
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio278" name="radio278"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Name of Institution studied
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio279" name="radio279"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio279" name="radio279"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Mode of Study
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2710" name="radio2710"
+                       value="1">
+                Regular
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2710" name="radio2710"
+                       value="2">
+                Distance
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2710" name="radio2710"
+                       value="3">
+                Part time
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2710" name="radio2710"
+                       value="4">
+                Correspondence
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2710" name="radio2710"
+                       value="5">
+                Open University
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Date of Publications of Results in M.Phil Mark Sheet
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2711" name="radio2711"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2711" name="radio2711"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2711" name="radio2711"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether obtained M.Phil Degree on or after 03.04.2009 through Part Time/ Correspondence / Distance Education
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2712" name="radio2712"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2712" name="radio2712"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Percentage of Marks in M.Phil?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio"
+                       ng-model="$ctrl.radio_values.init_doc2713"
+                       class="q_radio radio2713" name="radio2713"
+                       value="1">
+                Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc2713=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc2713">
                     <option value="">--Select--</option>
-                    <option value="Regular">Regular
+                    <option value="Average Percentage of Marks is 40 and above but less than 50">Average Percentage of Marks is 40 and above but less than 50</option>
+                    <option value="Average Percentage of Marks is 50 and above but less than 55">Average Percentage of Marks is 50 and above but less than 55
                     </option>
-                    <option value="Distance">Distance
-                    </option>
-                    <option value="Part time">Part time
-                    </option>
-                    <option value="Correspondence">Correspondence / Open University
-                    </option>
+                    <option value="Average Percentage of Marks is 55 and above but less than 60">Average Percentage of Marks is 55 and above but less than 60</option>
+                    <option value="Average Percentage of Marks is 60 and above">Average Percentage of Marks is 60 and above</option>
                 </select>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc276"
-                       ng-change="$ctrl.doc276=''"
-                       class="q_radio radio276" name="radio276"
-                       value="3">
-                Not Clear
+                <input type="radio"
+                       ng-model="$ctrl.radio_values.init_doc2713"
+                       class="q_radio radio2713" name="radio2713"
+                       value="2">
+                Not Matched
             </label>
+
         </div>
     </div>
     <div class="clearfix"></div>

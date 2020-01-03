@@ -10,14 +10,19 @@
         vm.doc13 = '';
         vm.doc14 = '';
         vm.doc16 = '';
-        vm.doc23 = '';
         vm.doc24 = '';
+        vm.doc26 = '';
         vm.doc32 = '';
         vm.doc34 = '';
+        vm.doc38 = '';
         vm.doc62 = '';
+        vm.doc64 = '';
+        vm.doc66 = '';
         vm.doc68 = '';
+        vm.doc610 = '';
         vm.doc84 = '';
         vm.doc123 = '';
+        vm.doc122 = '';
         vm.doc162 = '';
         vm.doc163 = '';
         vm.doc172 = '';
@@ -31,43 +36,89 @@
         vm.doc254 = '';
         vm.doc255 = '';
         vm.doc256 = '';
-        vm.doc2510 = '';
+        vm.doc252 = '';
+        vm.doc2512 = '';
+        vm.doc2515 = '';
+        vm.doc2519 = '';
+        vm.doc2520 = '';
+        vm.doc2521 = '';
+        vm.doc2528 = '';
         vm.doc274 = '';
         vm.doc275 = '';
         vm.doc276 = '';
         vm.doc277 = '';
+        vm.doc2713 = '';
         vm.doc284 = '';
         vm.doc285 = '';
         vm.doc286 = '';
         vm.doc287 = '';
         vm.doc294 = '';
         vm.doc295 = '';
+        vm.doc2915 = '';
         vm.doc296 = '';
         vm.doc297 = '';
+        vm.doc307 = '';
+        vm.doc305 = '';
+        vm.doc312 = '';
+        vm.doc322 = '';
+        vm.doc324 = '';
+        vm.doc3211 = '';
+        vm.doc3212 = '';
+        vm.doc332 = '';
+        vm.doc334 = '';
+        vm.doc3311 = '';
+        vm.doc3312 = '';
+        vm.doc342 = '';
+        vm.doc344 = '';
+        vm.doc3411 = '';
+        vm.doc3412 = '';
+        vm.doc352 = '';
+        vm.doc3511 = '';
+        vm.doc3512 = '';
+        vm.doc362 = '';
+        vm.doc364 = '';
+        vm.doc372= '';
+        vm.doc375= '';
+        vm.doc3715= '';
+        vm.doc3719= '';
+        vm.doc3720= '';
+        vm.doc3721= '';
         vm.radio_values = {};
         vm.radio_values.init_doc13 = "";
         vm.radio_values.init_doc14 = "";
         vm.radio_values.init_doc16 = "";
-        vm.radio_values.init_doc23 = "";
         vm.radio_values.init_doc24 = "";
+        vm.radio_values.init_doc26 = "";
         vm.radio_values.init_doc32 = "";
         vm.radio_values.init_doc34 = "";
+        vm.radio_values.init_doc38 = "";
         vm.radio_values.init_doc62 = "";
+        vm.radio_values.init_doc64 = "";
+        vm.radio_values.init_doc66 = "";
         vm.radio_values.init_doc68 = "";
+        vm.radio_values.init_doc610 = "";
         vm.radio_values.init_doc124 = "";
         vm.radio_values.init_doc162 = "";
         vm.radio_values.init_doc163 = "";
         vm.radio_values.init_doc172 = "";
         vm.radio_values.init_doc84 = "";
         vm.radio_values.init_doc123 = "";
+        vm.radio_values.init_doc122 = "";
         vm.radio_values.init_doc53 = "";
         vm.radio_values.init_doc254 = "";
         vm.radio_values.init_doc255 = "";
         vm.radio_values.init_doc257 = "";
-        vm.radio_values.init_doc2510 = "";
+        vm.radio_values.init_doc252 = "";
+        vm.radio_values.init_doc2512 = "";
+        vm.radio_values.init_doc2515 = "";
+        vm.radio_values.init_doc2519 = "";
+        vm.radio_values.init_doc2520 = "";
+        vm.radio_values.init_doc2521 = "";
+        vm.radio_values.init_doc2528 = "";
         vm.radio_values.init_doc274 = "";
         vm.radio_values.init_doc275 = "";
         vm.radio_values.init_doc277 = "";
+        vm.radio_values.init_doc2713 = "";
         vm.radio_values.init_doc276 = "";
         vm.radio_values.init_doc284 = "";
         vm.radio_values.init_doc285 = "";
@@ -75,8 +126,35 @@
         vm.radio_values.init_doc287 = "";
         vm.radio_values.init_doc294 = "";
         vm.radio_values.init_doc295 = "";
+        vm.radio_values.init_doc2915 = "";
         vm.radio_values.init_doc296 = "";
         vm.radio_values.init_doc297 = "";
+        vm.radio_values.init_doc307 = "";
+        vm.radio_values.init_doc305 = "";
+        vm.radio_values.init_doc312 = "";
+        vm.radio_values.init_doc322 = "";
+        vm.radio_values.init_doc324 = "";
+        vm.radio_values.init_doc3211 = "";
+        vm.radio_values.init_doc3212 = "";
+        vm.radio_values.init_doc332 = "";
+        vm.radio_values.init_doc334 = "";
+        vm.radio_values.init_doc3311 = "";
+        vm.radio_values.init_doc3312 = "";
+        vm.radio_values.init_doc342 = "";
+        vm.radio_values.init_doc344 = "";
+        vm.radio_values.init_doc3411 = "";
+        vm.radio_values.init_doc3412 = "";
+        vm.radio_values.init_doc352 = "";
+        vm.radio_values.init_doc3511= "";
+        vm.radio_values.init_doc3512= "";
+        vm.radio_values.init_doc362= "";
+        vm.radio_values.init_doc364= "";
+        vm.radio_values.init_doc372= "";
+        vm.radio_values.init_doc375= "";
+        vm.radio_values.init_doc3715= "";
+        vm.radio_values.init_doc3719= "";
+        vm.radio_values.init_doc3720= "";
+        vm.radio_values.init_doc3721= "";
         $scope.packages = {
             name: 'candidates',
             finalAction: false,
@@ -91,45 +169,83 @@
             filterDD: ''
         };
         vm.notRelevantReasone = [
-            'Relevant 1',
-            'Relevant 2',
-            'Relevant 3'
+            'Not Clear',
+            'No Document',
+            'Incorrect Document'
         ];
 
 
         $scope.remarksText = {
             '3c2': 'New community',
             '3c4': 'Not relevant reason',
+            '3c8': 'Sub Caste',
             '1c3': 'New date of birth',
             '1c4': 'New year of passing',
             '1c6': 'Not relevant reason',
-            '2c3': 'New date of birth',
             '2c4': 'New year of passing',
             '2c6': 'Not relevant reason',
             '6c2': 'New Authority',
-            '6c8': 'Not relevant reason',
+            '6c4': 'Relevant PG Degree Reason',
+            '6c6': 'Relevant PG Degree in Tamil Reason',
+            '6c8': 'Relevant PHD Degree in Tamil Reason',
+            '6c10': 'Relevant MEd Degree in Tamil Reason',
+            '12c2': 'Relevant reason',
             '16c2': 'New Gender',
             '16c3': 'Not relevant reason',
             '17c2': 'Not relevant reason',
             '25c4': 'New Year of Passing',
-            '25c5': 'New Period of study',
+            '25c5': 'New PG Degree Mark Sheets relevant reason',
             '25c6': 'New Mode of study',
-            '25c10': 'New relevant reason',
+            '25c2': 'Document relevant reason',
+            '25c12': 'New equivalence of PG Degree relevant reason',
+            '25c15': 'New Month & Year of Passing',
+            '25c19': 'New Period of study',
+            '25c20': 'New Mode of study',
+            '25c21': 'Percentage Remarks',
+            '25c28': 'New Foreign PG Degree Relevant Reason',
             '27c4': 'New Year of Passing',
             '27c5': 'New Period of study',
-            '27c6': 'New Mode of study',
+            '27c6': 'New Relevant reason marksheet',
             '27c7': 'Not relevant reason',
+            '27c13': 'Percentage of marks in M.Phill',
             '28c4': 'New Year of Passing',
             '28c5': 'New Period of study',
             '28c6': 'New Mode of study',
             '28c7': 'New relevant reason',
             '29c4': 'New Year of Passing',
             '29c5': 'New Period of study',
+            '29c15': 'Foregin document relevant',
             '29c6': 'New Mode of study',
             '29c7': 'Not relevant reason',
+            '30c7': 'Not relevant reason',
+            '30c5': 'New Birth Certificate Marksheet',
+            '31c2': 'New relevant reason',
+            '32c2': 'New relevant reason',
+            '32c4': 'New Degree Mark Sheets relevant reason',
+            '32c11': 'New Date of Passing',
+            '32c12': 'New Percentage of marks',
+            '33c2': 'Relevant document resaon',
+            '33c4': 'Relevant Marksheet reason',
+            '33c11': 'New Year of passing',
+            '33c12': 'New Percentage of marks',
+            '34c2': 'New Relevant reason',
+            '34c4': 'Degree mark sheet relevant reason',
+            '34c11': 'New Month and Year of Passing',
+            '34c12': 'New Percentage reason',
+            '35c2': 'New relevant Reason',
+            '35c11': 'New Month and Year of Passing',
+            '35c12': 'New Percentage reason',
+            '36c2': 'Last studied conduct relevant',
+            '36c4': 'Latest Conduct Certificate relevant reason',
+            '37c2': 'Document relevant reason',
+            '37c5': 'UG Marksheet relevant reason',
+            '37c15': 'New Month & Year of passing',
+            '37c19': 'Period of study',
+            '37c20': 'Mode of study',
+            '37c21': 'Percentage of marks',
         };
 
-        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
+        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
 
         $scope.titles =
             {
@@ -144,7 +260,7 @@
                 "Highest Certificate For NSS": 'NSS CERTIFICATE',
                 "Highest Certificate For NCC": 'NCC CERTIFICATE',
                 "Medal Certificate (For Department)": 'MEDAL',
-                "Noc (Police Department)": 'NOC (POLICE DEPARTMENT)',
+                "NOC (For Department)": 'No Objection Certificate',
                 "Highest Sports Certificate": 'SPORTS SPECIAL MARK CERTIFICATE',
                 "Additional Mark": 'Additional Mark',
                 "Gender Certificate(Transgender)": 'Gender Certificate(Transgender)',
@@ -161,7 +277,15 @@
                 "Noc (Other Department)": 'NOC (OTHER DEPARTMENT)',
                 "M.Phil Certificate": 'M.Phil Certificate',
                 "SLET/NET Certificate": 'SLET / NET Certificate',
-                "Phd Certificate": 'PHD Certificate'
+                "Phd Certificate": 'PHD Certificate',
+                "Birth Certificate": 'Birth Certificate',
+                "PWD Certificate": 'Special Category',
+                "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment',
+                "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment)',
+                "B.Ed Certificate": 'B.Ed.',
+                "M.Ed Certificate": 'M.Ed.',
+                "Conduct certificate from head of institution last studied": 'Conduct Certificate',
+                "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
             };
 
         $scope.object = Object;
@@ -504,7 +628,7 @@
 
         $scope.initializeInputs = function () {
             setTimeout(function () {
-                $("#doc13, #doc23, #doc84, #doc123").datepicker({
+                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -520,7 +644,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295').datepicker({
+                $('#doc255, #doc275, #doc285, #doc295, #doc3719').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -875,6 +999,38 @@
     }).directive('phdDegreeCertificate', function () {
         return {
             templateUrl: "/candidates/view/templates/Phd_Degree.html"
+        };
+    }).directive('birthCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Birth_Certificate.html"
+        };
+    }).directive('pwdCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PWD_Certificate.html"
+        };
+    }).directive('specialBed', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Special_BED.html"
+        };
+    }).directive('seniorDiploma', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Senior_Diploma.html"
+        };
+    }).directive('bed', function () {
+        return {
+            templateUrl: "/candidates/view/templates/BEd.html"
+        };
+    }).directive('med', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd.html"
+        };
+    }).directive('conductCertificate', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Conduct_Certificate.html"
+        };
+    }).directive('ugDegree', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Degree.html"
         };
     })
 })();

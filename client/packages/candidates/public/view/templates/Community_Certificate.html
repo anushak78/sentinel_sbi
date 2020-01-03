@@ -93,7 +93,7 @@
                     <input type="radio"
                            class="q_radio radio33" name="radio33"
                            value="1">
-                    Issued in Tamil Nadu
+                    Yes, issued in Tamil Nadu
                 </label>
             </div>
             <div class="radio">
@@ -101,18 +101,178 @@
                     <input type="radio"
                            class="q_radio radio33" name="radio33"
                            value="2">
-                    Not issued in Tamil Nadu
+                    No, not issued in Tamil Nadu
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="questions">
+            Is the Community certificate issued with Father’s / Mother’s Name?
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio39" name="radio39"
+                           value="1">
+                    Matched
                 </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
-                           class="q_radio radio33" name="radio33"
+                           class="q_radio radio39" name="radio39"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio39" name="radio39"
                            value="3">
                     Not Clear
                 </label>
             </div>
         </div>
         <div class="clearfix"></div>
+        <div class="questions">
+            Community Certificate Number
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio35" name="radio35"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio35" name="radio35"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio35" name="radio35"
+                           value="3">
+                    Not Clear
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="questions">
+            Community Certificate Date
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio36" name="radio36"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio36" name="radio36"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio36" name="radio36"
+                           value="3">
+                    Not Clear
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="questions">
+            Community Certificate Issuing Authority
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio37" name="radio37"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio37" name="radio37"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio37" name="radio37"
+                           value="3">
+                    Not Clear
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div>
+            <div class="questions">
+                Sub Caste
+            </div>
+            <div class="col-sm-12">
+                <div class="radio">
+                    <label class="radio-custom">
+                        <input type="radio"
+                               ng-model="$ctrl.radio_values.init_doc38"
+                               class="q_radio radio38" name="radio38"
+                               value="1">
+                        Matched
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-custom">
+                        <input type="radio"
+                               ng-model="$ctrl.radio_values.init_doc38"
+                               class="q_radio radio38" name="radio38"
+                               value="2">
+                        Not Matched
+                    </label>
+                    <label style="{{ $ctrl.radio_values.init_doc38=='2' ? 'display:block':'display:none'}}">
+                        <select class="form-control" ng-model="$ctrl.doc38">
+                            <option value="">--Select--</option>
+                            <option value="OC">OC</option>
+                            <option value="OC - Other State">OC - Other State
+                            </option>
+                            <option value="BC">BC</option>
+                            <option value="BC-MUSLIM">BC-MUSLIM</option>
+                            <option value="SC">SC</option>
+                            <option value="SC(A)">SC(A)</option>
+                            <option value="ST">ST</option>
+                            <option value="MBC / DNC">MBC / DNC</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-custom">
+                        <input type="radio"
+                               ng-model="$ctrl.radio_values.init_doc38"
+                               class="q_radio radio38" name="radio38"
+                               value="3">
+                        Not Clear
+                    </label>
+                </div>
+            </div>
     </div>
 </div>

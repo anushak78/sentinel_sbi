@@ -62,35 +62,26 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        DOB in Mark sheet?
+        Date of Publication of Results of HSC in Mark Sheet
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc23" class="q_radio radio23"
-                       ng-change="$ctrl.doc23=''" name="radio23"
+                <input type="radio" class="q_radio radio23" name="radio23"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc23" class="q_radio radio23" name="radio23"
+                <input type="radio" class="q_radio radio23" name="radio23"
                        value="2">
                 Not Matched
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc23=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc23" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc23"
-                       class="modified_date input-sm input-s datepicker-input form-control">
-                <label id="doc13_age" style="margin-top: 5px">
-                    Age (as on 07.07.2010) - {{$ctrl.calculateAge($ctrl.doc23)}}
-                </label>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc23" class="q_radio radio23"
-                       ng-change="$ctrl.doc23=''" name="radio23"
+                <input type="radio" class="q_radio radio23" name="radio23"
                        value="3">
                 Not Clear
             </label>
@@ -139,7 +130,7 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio25" name="radio25"
                        value="1">
-                Studied Tamil in Part - I
+                Studied Tamil
             </label>
         </div>
         <div class="radio">
@@ -147,6 +138,67 @@
                 <input type="radio" class="q_radio radio25" name="radio25"
                        value="2">
                 Not Studied Tamil
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        HSC Mark Sheet Certificate Number
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio27" name="radio27"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio27" name="radio27"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Mode of Study in HSC
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio28" name="radio28"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio28" name="radio28"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Percentage of Marks in HSC
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio29" name="radio29"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio29" name="radio29"
+                       value="2">
+                Not Matched
             </label>
         </div>
     </div>

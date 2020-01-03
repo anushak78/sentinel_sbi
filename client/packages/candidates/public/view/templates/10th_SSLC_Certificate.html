@@ -62,35 +62,26 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        DOB in the SSLC mark sheet?
+        Date of Publication of Results of SSLC in Mark Sheet
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
-                       ng-change="$ctrl.doc13=''" name="radio13"
+                <input type="radio" class="q_radio radio13" name="radio13"
                        value="1">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
-                       name="radio13" value="2">
+                <input type="radio" class="q_radio radio13" name="radio13"
+                       value="2">
                 Not Matched
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc13=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc13" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc13"
-                       class="modified_date input-sm input-s datepicker-input form-control">
-                <label id="doc13_age" style="margin-top: 5px">
-                    Age (as on 07.07.2010) - {{$ctrl.calculateAge($ctrl.doc13)}}
-                </label>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc13" class="q_radio radio13"
-                       ng-change="$ctrl.doc13=''" name="radio13"
+                <input type="radio" class="q_radio radio13" name="radio13"
                        value="3">
                 Not Clear
             </label>
@@ -99,7 +90,7 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Year of Passing in the Mark sheet?
+        Month & Year of Passing in the SSLC Mark sheet?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -138,7 +129,7 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio15" name="radio15"
                        value="1">
-                Studied Tamil in Part - I
+                Studied Tamil
             </label>
         </div>
         <div class="radio">
@@ -146,6 +137,75 @@
                 <input type="radio" class="q_radio radio15" name="radio15"
                        value="2">
                 Not Studied Tamil
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        SSLC Mark Sheet Certificate Number
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio17" name="radio17"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio17" name="radio17"
+                       value="2">
+                Not Matched
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Mode of Study in SSLC
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio18" name="radio18"
+                       value="1">
+                Regular
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio18" name="radio18"
+                       value="2">
+                Private
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio18" name="radio18"
+                       value="3">
+                Open School
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Percentage of Marks in SSLC
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio19" name="radio19"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio19" name="radio19"
+                       value="2">
+                Not Matched
             </label>
         </div>
     </div>

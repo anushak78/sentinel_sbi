@@ -22,7 +22,7 @@
       "q_id": 2
     },
     {
-      "question": "DOB in the SSLC mark sheet?",
+      "question": "Date of Publication of Results of SSLC in Mark Sheet",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -33,7 +33,7 @@
       "q_id": 3
     },
     {
-      "question": "Year of Passing in the Mark sheet?",
+      "question": "Month & Year of Passing in the SSLC Mark sheet?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -62,6 +62,38 @@
       "approved": "1",
       "doc_id": 1,
       "q_id": 6
+    },
+    {
+      "question": "SSLC Mark Sheet Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 7
+    },
+    {
+      "question": "Mode of Study in SSLC",
+      "options": {
+        "option1": "Regular",
+        "option2": "Private",
+        "option3": "Open School"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 8
+    },
+    {
+      "question": "Percentage of Marks in SSLC",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 1,
+      "q_id": 9
     }
   ],
   "12th / HSC Certificate": [
@@ -76,7 +108,7 @@
       "q_id": 1
     },
     {
-      "question": "Name in the certificate?",
+      "question": "Name in the HSC certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -87,7 +119,7 @@
       "q_id": 2
     },
     {
-      "question": "DOB in HSC Mark sheet?",
+      "question": "Date of Publication of Results of HSC in Mark Sheet",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -98,7 +130,7 @@
       "q_id": 3
     },
     {
-      "question": "Year of Passing in the Mark sheet?",
+      "question": "Month & Year of Passing in the HSC Mark sheet?",
       "options": {
         "option1": "Matching",
         "option2": "Not matching",
@@ -127,6 +159,38 @@
       "approved": "1",
       "doc_id": 2,
       "q_id": 6
+    },
+    {
+      "question": "HSC Mark Sheet Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 7
+    },
+    {
+      "question": "Mode of Study in HSC",
+      "options": {
+        "option1": "Regular",
+        "option2": "Private",
+        "option3": "Open School"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 8
+    },
+    {
+      "question": "Percentage of Marks in HSC",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 9
     }
   ],
   "Community Certificate": [
@@ -154,8 +218,8 @@
     {
       "question": "Is Community certificate issued by Tamil Nadu Government?",
       "options": {
-        "option1": "Issued in Tamil Nadu",
-        "option2": "Not issued in Tamil Nadu"
+        "option1": "Yes, issued in Tamil Nadu",
+        "option2": "No, not issued in Tamil Nadu"
       },
       "approved": "1",
       "doc_id": 3,
@@ -170,6 +234,61 @@
       "approved": "1",
       "doc_id": 3,
       "q_id": 4
+    },
+    {
+      "question": "Community Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 5
+    },
+    {
+      "question": "Community Certificate Date",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 6
+    },
+    {
+      "question": "Community Certificate Issuing Authority",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 7
+    },
+    {
+      "question": "Sub Caste",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 8
+    },
+    {
+      "question": "Is the Community certificate issued with Father’s / Mother’s Name?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 3,
+      "q_id": 9
     }
   ],
   "Diploma Certificate": [
@@ -283,7 +402,7 @@
       "q_id": 1
     },
     {
-      "question": "Whether submitted PSTM certificate from competent authority for Post Graduate Degree / Equivalent?",
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -304,50 +423,46 @@
       "q_id": 3
     },
     {
-      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree ?",
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 4
     },
     {
-      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "question": "Whether studied PG Degree in Tamil Medium",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 5
     },
     {
-      "question": "Whether submitted the PSTM Certificate for M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 6
     },
     {
-      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "question": "Whether studied Ph.D Degree in Tamil Medium",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 7
     },{
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -355,6 +470,60 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 8
+    },{
+      "question": "Whether studied M.Ed in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 9
+    },{
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 10
+    },{
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 11
+    },{
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 12
+    },{
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 13
+    },{
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 6,
+      "q_id": 14
     }
   ],
   "Destitute Widow Certificate": [
@@ -531,30 +700,29 @@
       "q_id": 3
     }
   ],
-  "Noc (Police Department)": [
+  "NOC (For Department)": [
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document Visible / Clear?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 12,
       "q_id": 1
     },
     {
-      "question": "Name of candidate",
+      "question": "Is the document relevant to the Claim of No Objection Certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 12,
       "q_id": 2
     },
     {
-      "question": "Date of Enlishment",
+      "question": "Whether working in any Govt. Organization",
       "options": {
         "option1": "Matching",
         "option2": "Not matching",
@@ -565,58 +733,26 @@
       "q_id": 3
     },
     {
-      "question": "Type of quota",
+      "question": "Number of Years completed as Government Servant",
       "options": {
-        "option1": "Open",
-        "option2": "Department"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
-      "required": false,
       "doc_id": 12,
       "q_id": 4
     },
     {
-      "question": "Candidate have complete 5 years of service?",
+      "question": "Details of Departmental disciplinary action if any",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Initiated",
+        "option2": "Pending",
+        "option3": "Punishment Awarded",
+        "option4": "Not available"
       },
       "approved": "1",
       "doc_id": 12,
       "q_id": 5
-    },
-    {
-      "question": "Is the Certificate issued by competent authority SP/CMT/DC/DIG/JC/ Addl.COP/IGP/COP/ADGP/DGP ",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 12,
-      "q_id": 6
-    },
-    {
-      "question": "Is the Certificate in prescribed format?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 12,
-      "q_id": 7
-    },
-    {
-      "question": "Date of issue is after date of notification?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 12,
-      "q_id": 8
     }
   ],
   "Highest Sports Certificate": [
@@ -931,7 +1067,7 @@
       "q_id": 1
     },
     {
-      "question": "Name of Degree and Subject in the PG Certificate?",
+      "question": "Is the document relevant to the claim of PG Degree?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -942,18 +1078,17 @@
       "q_id": 2
     },
     {
-      "question": "Name of University in the PG Certificate?",
+      "question": "PG Degree Certificate Number ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 25,
       "q_id": 3
     },
     {
-      "question": "Year of Passing in the PG Certificate?",
+      "question": "Name in the PG Degree certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -964,7 +1099,7 @@
       "q_id": 4
     },
     {
-      "question": "Period of Study in the PG Certificate?",
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -975,7 +1110,7 @@
       "q_id": 5
     },
     {
-      "question": "What is the Mode of Study?",
+      "question": "Consolidated Mark sheet for PG Course ",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -986,7 +1121,7 @@
       "q_id": 6
     },
     {
-      "question": "Percentage of Marks in PG?",
+      "question": "Number of Mark Sheet in PG Course",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -996,14 +1131,232 @@
       "q_id": 7
     },
     {
-      "question": "Whether studied PG Degree in Tamil Medium?",
+      "question": "Name in the PG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 8
+    },
+    {
+      "question": "Name of the Subject in the PG ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "option3": "Not Clear",
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 9
+    },
+    {
+      "question": "If equivalent Subject in PG Degree Govt. order enclosed",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 10
+    },
+    {
+      "question": "Government Order Number with Date.",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 11
+    },
+    {
+      "question": "Is the document relevant to the claim of equivalence of PG Degree?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 12
+    },
+    {
+      "question": "Name of University in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 14
+    },
+    {
+      "question": "Month & Year of Passing in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 15
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 25,
-      "q_id": 8
+      "q_id": 16
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 17
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 18
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 20
+    },
+    {
+      "question": "Percentage of Marks in PG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 21
+    },
+    {
+      "question": "PG with at least 55% marks for “General Category” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 22
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 23
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 23
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 24
+    },
+    {
+      "question": "Whether studied PG Degree in UGC Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 25
+    },
+    {
+      "question": "Whether PG Degree obtained from Foreign Universities ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 26
+    },
+    {
+      "question": "If Foreign PG Degree, Equivalence Certificate obtained from Association of Indian Universities, New Delhi",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 27
+    },
+    {
+      "question": "Foreign PG Degree document relevant to the claim",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 25,
+      "q_id": 28
     },
     {
       "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
@@ -1013,17 +1366,7 @@
       },
       "approved": "1",
       "doc_id": 25,
-      "q_id": 9
-    },
-    {
-      "question": "Is the document relevant to claim?",
-      "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 10
+      "q_id": 29
     }
   ],
   "Noc (Other Department)": [
@@ -1063,7 +1406,7 @@
       "q_id": 1
     },
     {
-      "question": "Name of Degree and Subject in the M.Phil Certificate?",
+      "question": "Name in the M.Phil Certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1096,7 +1439,7 @@
       "q_id": 4
     },
     {
-      "question": "Period of Study in the M.Phil Certificate?",
+      "question": "M.Phil Degree Certificate Number",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1107,11 +1450,10 @@
       "q_id": 5
     },
     {
-      "question": "What is the Mode of Study?",
+      "question": "Is the document relevant to the claim of M.Phil Degree Mark Sheets",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 27,
@@ -1126,6 +1468,70 @@
       "approved": "1",
       "doc_id": 27,
       "q_id": 7
+    },
+    {
+      "question": "Name of the subject?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 10
+    },
+    {
+      "question": "Date of Publications of Results in M.Phil Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 11
+    },
+    {
+      "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Part Time/ Correspondence / Distance Education",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 12
+    },
+    {
+      "question": "Percentage of Marks in M.Phil?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 27,
+      "q_id": 13
     }
   ],
   "SLET/NET Certificate": [
@@ -1217,7 +1623,7 @@
       "q_id": 1
     },
     {
-      "question": "Name of Degree and Subject in the PHD Certificate?",
+      "question": "Name in the PHD Certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1239,7 +1645,7 @@
       "q_id": 3
     },
     {
-      "question": "Year of Passing in the PHD Certificate?",
+      "question": "Month & Year of Passing in the PHD Certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1250,22 +1656,20 @@
       "q_id": 4
     },
     {
-      "question": "Period of Study in the PHD Certificate?",
+      "question": "Ph.D Certificate Number",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 29,
       "q_id": 5
     },
     {
-      "question": "What is the Mode of Study?",
+      "question": "Is the document relevant to the claim of Ph.D Mark Sheets",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Relevant",
+        "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 29,
@@ -1280,6 +1684,1136 @@
       "approved": "1",
       "doc_id": 29,
       "q_id": 7
+    },
+    {
+      "question": "Name of the subject?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study ?",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 10
+    },
+    {
+      "question": "Date of Publications of Results in Viva-voce of Ph.D Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 11
+    },
+    {
+      "question": "Whether obtained Ph.D Degree on or after 03.04.2009 through Part Time/ Correspondence / Distance Education",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 12
+    },
+    {
+      "question": "Whether Ph.D Degree obtained from Foreign Universities",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 13
+    },
+    {
+      "question": "If Foreign Ph.D Degree, Equivalence Certificate obtained from Association Universities, New Delhi",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 14
+    },
+    {
+      "question": "Is the document relevant to claim ?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 29,
+      "q_id": 15
+    }
+  ],
+  "Birth Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 1
+    },
+    {
+      "question": "Birth Certificate / SSLC Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 2
+    },
+    {
+      "question": "Birth Certificate / SSLC Certificate Issuing Authority",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 3
+    },
+    {
+      "question": "Place of Birth",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 4
+    },
+    {
+      "question": "DOB in the Mark sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 5
+    },
+    {
+      "question": "Age as on 01.07.2019 (Years, Months, Days)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 6
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 7
+    }
+  ],
+  "PWD Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 31,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 31,
+      "q_id": 2
+    },
+    {
+      "question": "Disability Certificate Number",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 31,
+      "q_id": 3
+    },
+    {
+      "question": "Issuing Authority of Disability Certificate",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 31,
+      "q_id": 4
+    },
+    {
+      "question": "Category of Disability",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 5
+    },
+    {
+      "question": "Percentage of Disability",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 4,
+      "q_id": 6
+    }
+  ],
+  "Special B.Ed in Teaching the Hearing Impairment – Marksheet": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 1
+    }, {
+      "question": "Is the document relevant to the claim of Special B.Ed Degree in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 2
+    },
+    {
+      "question": "Special B.Ed in Teaching the Hearing Impairment Degree Certificate Number ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the claim of Special B.Ed in Teaching the Hearing Impairment Degree Mark Sheets",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 4
+    },
+    {
+      "question": "Consolidated Mark sheet for Special B.Ed in Teaching the Hearing Impairment Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 5
+    },
+    {
+      "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 6
+    },
+    {
+      "question": "Name of the subject",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 7
+    },
+    {
+      "question": "Name of the University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 10
+    },
+    {
+      "question": "Month & Year of Passing in the Special B.Ed in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 11
+    },
+    {
+      "question": "Percentage of Marks in Special B.Ed in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in Special B.Ed in Teaching the Hearing Impairment Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 13
+    }
+  ],
+  "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 1
+    }, {
+      "question": "Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment)?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 2
+    },
+    {
+      "question": "Senior Diploma in Teaching Deaf (Hearing Impairment)Certificate Number ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment) Mark Sheets",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 4
+    },
+    {
+      "question": "Consolidated Mark sheet for Special B.Ed in Teaching the Hearing Impairment Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 5
+    },
+    {
+      "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 6
+    },
+    {
+      "question": "Name of the subject",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 7
+    },
+    {
+      "question": "Name of the University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 10
+    },
+    {
+      "question": "Month & Year of Passing in the Special B.Ed in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 11
+    },
+    {
+      "question": "Percentage of Marks in Special B.Ed in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in Special B.Ed in Teaching the Hearing Impairment Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 13
+    },
+    {
+      "question": "Whether submitted certificate issued is recognized by Rehabilitation Council of India",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 33,
+      "q_id": 14
+    }
+  ],
+  "B.Ed Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 1
+    }, {
+      "question": "Is the document relevant to the claim of B.Ed Degree?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 2
+    },
+    {
+      "question": "B.Ed Degree Certificate Number ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 4
+    },
+    {
+      "question": "Consolidated Mark sheet for B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 5
+    },
+    {
+      "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 6
+    },
+    {
+      "question": "Name of the subject",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 7
+    },
+    {
+      "question": "Name of the University studied",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 10
+    },
+    {
+      "question": "Month & Year of Passing in the B.Ed? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 11
+    },
+    {
+      "question": "Percentage of Marks in B.Ed? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in B.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 13
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 15
+    },
+    {
+      "question": "If equivalent Subject in B.Ed Degree Govt. order enclosed",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 16
+    },
+    {
+      "question": "Government Order Number with Date.",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 34,
+      "q_id": 17
+    }
+  ],
+  "M.Ed Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 1
+    }, {
+      "question": "Is the document relevant to the claim of M.Ed?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 2
+    },
+    {
+      "question": "M.Ed Certificate Number ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 4
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 5
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 6
+    },
+    {
+      "question": "Name of the subject",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 7
+    },
+    {
+      "question": "Name of the University studied",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 8
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 10
+    },
+    {
+      "question": "Month & Year of Passing in the M.Ed? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 11
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 13
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 15
+    },
+    {
+      "question": "If equivalent Subject in M.Ed Degree Govt. order enclosed",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 16
+    },
+    {
+      "question": "Government Order Number with Date",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 35,
+      "q_id": 17
+    }
+  ],
+  "Conduct certificate from head of institution last studied": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 36,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the Last Studied conduct Certificate?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 36,
+      "q_id": 2
+    },
+    {
+      "question": "Whether submitted Last Studied conduct Certificate",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not matching"
+      },
+      "approved": "1",
+      "doc_id": 36,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the Latest Conduct Certificate?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 36,
+      "q_id": 4
+    },
+    {
+      "question": "Whether submitted Latest Conduct Certificate",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 36,
+      "q_id": 5
+    }
+  ],
+  "UG Degree / Equivalent or Provsisional Certificate": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 2
+    },
+    {
+      "question": "UG Degree Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 3
+    },
+    {
+      "question": "Name in the UG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 4
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 8
+    },
+    {
+      "question": "Name of the Subject in the UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "option3": "Not Clear",
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 9
+    },
+    {
+      "question": "Name of University in the UG Degree? ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the UG Degree?  ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 14
+    },
+    {
+      "question": "Month & Year of Passing in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 15
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 18
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 20
+    },
+    {
+      "question": "Percentage of Marks in PG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 21
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 24
+    },
+    {
+      "question": "Whether studied UG Degree in UGC Recognized University ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 37
+    },
+    {
+      "question": "Whether the subject in UG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 29
+    },
+    {
+      "question": "Equivalent Government Order Number for UG",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 37,
+      "q_id": 30
     }
   ]
 }

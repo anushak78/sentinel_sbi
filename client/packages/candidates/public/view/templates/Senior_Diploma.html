@@ -1,0 +1,322 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+  <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div>
+  <div class="questions">
+    Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment)?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio332" name="radio332"
+               value="1" ng-model="$ctrl.radio_values.init_doc332"
+               ng-change="$ctrl.doc332=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio332" name="radio332"
+               value="2" ng-model="$ctrl.radio_values.init_doc332"
+               ng-change="$ctrl.doc332=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc332=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc332">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+            {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Senior Diploma in Teaching Deaf (Hearing Impairment)Certificate Number
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio333" name="radio333"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio333" name="radio333"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio333" name="radio333"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment) Mark Sheets
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio334" name="radio334"
+               value="1" ng-model="$ctrl.radio_values.init_doc334"
+               ng-change="$ctrl.doc334=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio334" name="radio334"
+               value="2" ng-model="$ctrl.radio_values.init_doc334"
+               ng-change="$ctrl.doc334=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc334=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc334">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+            {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio337" name="radio337"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio337" name="radio337"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio337" name="radio337"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio338" name="radio338"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio338" name="radio338"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio338" name="radio338"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of Institution studied
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio339" name="radio339"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio339" name="radio339"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio339" name="radio339"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">Mode of Study</div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3310" name="radio3310"
+               value="1">
+        Regular
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3310" name="radio3310"
+               value="2">
+        Distance
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3310" name="radio3310"
+               value="3">
+        Part time
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3310" name="radio3310"
+               value="4">
+        Correspondence
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3310" name="radio3310"
+               value="5">
+        Open University
+      </label>
+    </div>
+  </div>
+  <div class="questions">
+    Month & Year of Passing in the Senior Diploma in Teaching Deaf (Hearing Impairment)?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc3311" class="q_radio radio3311"
+               ng-change="$ctrl.doc3311=''" name="radio3311"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc3311" class="q_radio radio3311"
+               name="radio3311" value="2">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3311=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc3311" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc3311"
+               class="modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc3311" class="q_radio radio3311"
+               ng-change="$ctrl.doc3311=''" name="radio3311"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Percentage of Marks in Senior Diploma in Teaching Deaf (Hearing Impairment)?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc3312"
+               class="q_radio radio3312" name="radio3312"
+               value="1">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3312=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3312">
+          <option value="">--Select--</option>
+          <option value="Average Percentage of Marks is 40 and above but less than 50">Average Percentage of Marks is 40 and above but less than 50</option>
+          <option value="Average Percentage of Marks is 50 and above but less than 55">Average Percentage of Marks is 50 and above but less than 55
+          </option>
+          <option value="Average Percentage of Marks is 55 and above but less than 60">Average Percentage of Marks is 55 and above but less than 60</option>
+          <option value="Average Percentage of Marks is 60 and above">Average Percentage of Marks is 60 and above</option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc3312"
+               class="q_radio radio3312" name="radio3312"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Date of Publications of Results in Senior Diploma in Teaching Deaf (Hearing Impairment)Mark Sheet
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3313" name="radio3313"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3313" name="radio3313"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether submitted certificate issued is recognized by Rehabilitation Council of India
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3314" name="radio3314"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3314" name="radio3314"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
