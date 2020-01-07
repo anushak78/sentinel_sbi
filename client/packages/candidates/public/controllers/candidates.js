@@ -21,6 +21,7 @@
         vm.doc68 = '';
         vm.doc610 = '';
         vm.doc84 = '';
+        vm.doc101 = '';
         vm.doc123 = '';
         vm.doc122 = '';
         vm.doc162 = '';
@@ -77,12 +78,24 @@
         vm.doc3512 = '';
         vm.doc362 = '';
         vm.doc364 = '';
-        vm.doc372= '';
-        vm.doc375= '';
-        vm.doc3715= '';
-        vm.doc3719= '';
-        vm.doc3720= '';
-        vm.doc3721= '';
+        vm.doc372 = '';
+        vm.doc375 = '';
+        vm.doc3715 = '';
+        vm.doc3719 = '';
+        vm.doc3720 = '';
+        vm.doc3721 = '';
+
+        vm.doc382 = '';
+        vm.doc385 = '';
+        vm.doc3815 = '';
+        vm.doc3819 = '';
+        vm.doc3820 = '';
+        vm.doc3821 = '';
+        vm.doc392 = '';
+        vm.doc402 = '';
+        vm.doc412 = '';
+        vm.doc422 = '';
+        vm.doc432 = '';
         vm.radio_values = {};
         vm.radio_values.init_doc13 = "";
         vm.radio_values.init_doc14 = "";
@@ -97,6 +110,7 @@
         vm.radio_values.init_doc66 = "";
         vm.radio_values.init_doc68 = "";
         vm.radio_values.init_doc610 = "";
+        vm.radio_values.init_doc101 = "";
         vm.radio_values.init_doc124 = "";
         vm.radio_values.init_doc162 = "";
         vm.radio_values.init_doc163 = "";
@@ -145,16 +159,27 @@
         vm.radio_values.init_doc3411 = "";
         vm.radio_values.init_doc3412 = "";
         vm.radio_values.init_doc352 = "";
-        vm.radio_values.init_doc3511= "";
-        vm.radio_values.init_doc3512= "";
-        vm.radio_values.init_doc362= "";
-        vm.radio_values.init_doc364= "";
-        vm.radio_values.init_doc372= "";
-        vm.radio_values.init_doc375= "";
-        vm.radio_values.init_doc3715= "";
-        vm.radio_values.init_doc3719= "";
-        vm.radio_values.init_doc3720= "";
-        vm.radio_values.init_doc3721= "";
+        vm.radio_values.init_doc3511 = "";
+        vm.radio_values.init_doc3512 = "";
+        vm.radio_values.init_doc362 = "";
+        vm.radio_values.init_doc364 = "";
+        vm.radio_values.init_doc372 = "";
+        vm.radio_values.init_doc375 = "";
+        vm.radio_values.init_doc3715 = "";
+        vm.radio_values.init_doc3719 = "";
+        vm.radio_values.init_doc3720 = "";
+        vm.radio_values.init_doc3721 = "";
+        vm.radio_values.init_doc382 = "";
+        vm.radio_values.init_doc385 = "";
+        vm.radio_values.init_doc3815 = "";
+        vm.radio_values.init_doc3819 = "";
+        vm.radio_values.init_doc3820 = "";
+        vm.radio_values.init_doc3821 = "";
+        vm.radio_values.init_doc392 = "";
+        vm.radio_values.init_doc402 = "";
+        vm.radio_values.init_doc412 = "";
+        vm.radio_values.init_doc422 = "";
+        vm.radio_values.init_doc432 = "";
         $scope.packages = {
             name: 'candidates',
             finalAction: false,
@@ -189,6 +214,7 @@
             '6c6': 'Relevant PG Degree in Tamil Reason',
             '6c8': 'Relevant PHD Degree in Tamil Reason',
             '6c10': 'Relevant MEd Degree in Tamil Reason',
+            '10c1': 'New Gender',
             '12c2': 'Relevant reason',
             '16c2': 'New Gender',
             '16c3': 'Not relevant reason',
@@ -243,9 +269,20 @@
             '37c19': 'Period of study',
             '37c20': 'Mode of study',
             '37c21': 'Percentage of marks',
+            '38c2': 'Document relevant reason',
+            '38c5': 'UG Marksheet relevant reason',
+            '38c15': 'New Month & Year of passing',
+            '38c19': 'Period of study',
+            '38c20': 'Mode of study',
+            '38c21': 'Percentage of marks',
+            '39c2': 'Relevant document reason',
+            '40c2': 'Relevant document reason',
+            '41c2': 'Relevant document reason',
+            '42c2': 'Relevant document reason',
+            '43c2': 'Relevant document reason',
         };
 
-        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
+        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48];
 
         $scope.titles =
             {
@@ -255,7 +292,7 @@
                 "Diploma Certificate": 'Diploma Certificate',
                 "Graduation Degree Certificate": 'UG Degree Certificate',
                 "PSTM Certificate": 'PSTM Certificate',
-                "Destitute Widow Certificate": 'DESTITUTE WIDOW',
+                "General Information": 'General Information',
                 "Discharged / to be discharged certificate": 'EX-SERVICEMEN',
                 "Highest Certificate For NSS": 'NSS CERTIFICATE',
                 "Highest Certificate For NCC": 'NCC CERTIFICATE',
@@ -286,6 +323,35 @@
                 "M.Ed Certificate": 'M.Ed.',
                 "Conduct certificate from head of institution last studied": 'Conduct Certificate',
                 "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
+                "UG Degree / Equivalent Consolidated Marksheet": 'UG Degree Consolidated Marksheet',
+                "Work Experience 1": 'Work Experience 1',
+                "Work Experience 2": 'Work Experience 2',
+                "Work Experience 3": 'Work Experience 3',
+                "Work Experience 4": 'Work Experience 4',
+                "Work Experience 5": 'Work Experience 5',
+                "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
+                "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
+                "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
+                "UG Degree / Equivalent Marksheet 4": 'UG Degree / Equivalent Marksheet 4',
+                "UG Degree / Equivalent Marksheet 5": 'UG Degree / Equivalent Marksheet 5',
+                "B.Ed Degree / Equivalent Marksheet": 'B.Ed Degree / Equivalent Consolidated Marksheet',
+                "B.Ed Degree / Equivalent Marksheet 1": 'B.Ed Degree / Equivalent Marksheet 1',
+                "B.Ed Degree / Equivalent Marksheet 2": 'B.Ed Degree / Equivalent Marksheet 2',
+                "B.Ed Degree / Equivalent Marksheet 3": 'B.Ed Degree / Equivalent Marksheet 3',
+                "B.Ed Degree / Equivalent Marksheet 4": 'B.Ed Degree / Equivalent Marksheet 4',
+                "B.Ed Degree / Equivalent Marksheet 5": 'B.Ed Degree / Equivalent Marksheet 5',
+                "M.Ed Degree / Equivalent Marksheet": 'M.Ed Degree / Equivalent Consolidated Marksheet',
+                "M.Ed Degree / Equivalent Marksheet 1": 'M.Ed Degree / Equivalent Marksheet 1',
+                "M.Ed Degree / Equivalent Marksheet 2": 'M.Ed Degree / Equivalent Marksheet 2',
+                "M.Ed Degree / Equivalent Marksheet 3": 'M.Ed Degree / Equivalent Marksheet 3',
+                "M.Ed Degree / Equivalent Marksheet 4": 'M.Ed Degree / Equivalent Marksheet 4',
+                "M.Ed Degree / Equivalent Marksheet 5": 'M.Ed Degree / Equivalent Marksheet 5',
+                "PG Degree / Equivalent Consolidated Marksheet": 'PG Degree / Equivalent Consolidated Marksheet',
+                "PG Degree / Equivalent Marksheet 1": 'PG Degree / Equivalent Marksheet 1',
+                "PG Degree / Equivalent Marksheet 2": 'PG Degree / Equivalent Marksheet 2',
+                "PG Degree / Equivalent Marksheet 3": 'PG Degree / Equivalent Marksheet 3',
+                "PG Degree / Equivalent Marksheet 4": 'PG Degree / Equivalent Marksheet 4',
+                "PG Degree / Equivalent Marksheet 5": 'PG Degree / Equivalent Marksheet 5'
             };
 
         $scope.object = Object;
@@ -301,13 +367,24 @@
         $scope.resetValues = function () {
             vm.doc13 = '';
             vm.doc14 = '';
-            vm.doc23 = '';
+            vm.doc16 = '';
             vm.doc24 = '';
+            vm.doc26 = '';
             vm.doc32 = '';
+            vm.doc34 = '';
+            vm.doc38 = '';
             vm.doc62 = '';
+            vm.doc64 = '';
+            vm.doc66 = '';
+            vm.doc68 = '';
+            vm.doc610 = '';
             vm.doc84 = '';
+            vm.doc101 = '';
             vm.doc123 = '';
+            vm.doc122 = '';
             vm.doc162 = '';
+            vm.doc163 = '';
+            vm.doc172 = '';
             vm.doc242 = '';
             vm.doc232 = '';
             vm.doc222 = '';
@@ -318,40 +395,139 @@
             vm.doc254 = '';
             vm.doc255 = '';
             vm.doc256 = '';
+            vm.doc252 = '';
+            vm.doc2512 = '';
+            vm.doc2515 = '';
+            vm.doc2519 = '';
+            vm.doc2520 = '';
+            vm.doc2521 = '';
+            vm.doc2528 = '';
             vm.doc274 = '';
             vm.doc275 = '';
             vm.doc276 = '';
             vm.doc277 = '';
+            vm.doc2713 = '';
             vm.doc284 = '';
             vm.doc285 = '';
             vm.doc286 = '';
+            vm.doc287 = '';
             vm.doc294 = '';
             vm.doc295 = '';
+            vm.doc2915 = '';
             vm.doc296 = '';
+            vm.doc297 = '';
+            vm.doc307 = '';
+            vm.doc305 = '';
+            vm.doc312 = '';
+            vm.doc322 = '';
+            vm.doc324 = '';
+            vm.doc3211 = '';
+            vm.doc3212 = '';
+            vm.doc332 = '';
+            vm.doc334 = '';
+            vm.doc3311 = '';
+            vm.doc3312 = '';
+            vm.doc342 = '';
+            vm.doc344 = '';
+            vm.doc3411 = '';
+            vm.doc3412 = '';
+            vm.doc352 = '';
+            vm.doc3511 = '';
+            vm.doc3512 = '';
+            vm.doc362 = '';
+            vm.doc364 = '';
+            vm.doc372 = '';
+            vm.doc375 = '';
+            vm.doc3715 = '';
+            vm.doc3719 = '';
+            vm.doc3720 = '';
+            vm.doc3721 = '';
+
+            vm.doc382 = '';
+            vm.doc385 = '';
+            vm.doc3815 = '';
+            vm.doc3819 = '';
+            vm.doc3820 = '';
+            vm.doc3821 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc13 = "";
             vm.radio_values.init_doc14 = "";
-            vm.radio_values.init_doc23 = "";
+            vm.radio_values.init_doc16 = "";
             vm.radio_values.init_doc24 = "";
+            vm.radio_values.init_doc26 = "";
             vm.radio_values.init_doc32 = "";
+            vm.radio_values.init_doc34 = "";
+            vm.radio_values.init_doc38 = "";
             vm.radio_values.init_doc62 = "";
+            vm.radio_values.init_doc64 = "";
+            vm.radio_values.init_doc66 = "";
+            vm.radio_values.init_doc68 = "";
+            vm.radio_values.init_doc610 = "";
+            vm.radio_values.init_doc101 = "";
             vm.radio_values.init_doc124 = "";
             vm.radio_values.init_doc162 = "";
+            vm.radio_values.init_doc163 = "";
+            vm.radio_values.init_doc172 = "";
             vm.radio_values.init_doc84 = "";
             vm.radio_values.init_doc123 = "";
+            vm.radio_values.init_doc122 = "";
             vm.radio_values.init_doc53 = "";
             vm.radio_values.init_doc254 = "";
             vm.radio_values.init_doc255 = "";
             vm.radio_values.init_doc257 = "";
+            vm.radio_values.init_doc252 = "";
+            vm.radio_values.init_doc2512 = "";
+            vm.radio_values.init_doc2515 = "";
+            vm.radio_values.init_doc2519 = "";
+            vm.radio_values.init_doc2520 = "";
+            vm.radio_values.init_doc2521 = "";
+            vm.radio_values.init_doc2528 = "";
             vm.radio_values.init_doc274 = "";
             vm.radio_values.init_doc275 = "";
             vm.radio_values.init_doc277 = "";
+            vm.radio_values.init_doc2713 = "";
+            vm.radio_values.init_doc276 = "";
             vm.radio_values.init_doc284 = "";
             vm.radio_values.init_doc285 = "";
+            vm.radio_values.init_doc286 = "";
             vm.radio_values.init_doc287 = "";
             vm.radio_values.init_doc294 = "";
             vm.radio_values.init_doc295 = "";
+            vm.radio_values.init_doc2915 = "";
+            vm.radio_values.init_doc296 = "";
             vm.radio_values.init_doc297 = "";
+            vm.radio_values.init_doc307 = "";
+            vm.radio_values.init_doc305 = "";
+            vm.radio_values.init_doc312 = "";
+            vm.radio_values.init_doc322 = "";
+            vm.radio_values.init_doc324 = "";
+            vm.radio_values.init_doc3211 = "";
+            vm.radio_values.init_doc3212 = "";
+            vm.radio_values.init_doc332 = "";
+            vm.radio_values.init_doc334 = "";
+            vm.radio_values.init_doc3311 = "";
+            vm.radio_values.init_doc3312 = "";
+            vm.radio_values.init_doc342 = "";
+            vm.radio_values.init_doc344 = "";
+            vm.radio_values.init_doc3411 = "";
+            vm.radio_values.init_doc3412 = "";
+            vm.radio_values.init_doc352 = "";
+            vm.radio_values.init_doc3511 = "";
+            vm.radio_values.init_doc3512 = "";
+            vm.radio_values.init_doc362 = "";
+            vm.radio_values.init_doc364 = "";
+            vm.radio_values.init_doc372 = "";
+            vm.radio_values.init_doc375 = "";
+            vm.radio_values.init_doc3715 = "";
+            vm.radio_values.init_doc3719 = "";
+            vm.radio_values.init_doc3720 = "";
+            vm.radio_values.init_doc3721 = "";
+            vm.radio_values.init_doc382 = "";
+            vm.radio_values.init_doc385 = "";
+            vm.radio_values.init_doc3815 = "";
+            vm.radio_values.init_doc3819 = "";
+            vm.radio_values.init_doc3820 = "";
+            vm.radio_values.init_doc3821 = "";
             $scope.radio = {};
             $('#dd-comment-2').val('');
             $('#dd-comment-3').val('');
@@ -628,7 +804,7 @@
 
         $scope.initializeInputs = function () {
             setTimeout(function () {
-                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715").datepicker({
+                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3815").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -644,7 +820,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295, #doc3719').datepicker({
+                $('#doc255, #doc275, #doc285, #doc295, #doc3719, #doc3819').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -676,7 +852,6 @@
         });
 
         $scope.$watch('radio', function (oldValue, newValue) {
-            console.log("radio", oldValue, newValue);
             setTimeout(function () {
                 $scope.initializeInputs();
             }, 200);
@@ -747,8 +922,14 @@
         document.addEventListener("keydown", function (e) {
             var keyCode = e.keyCode;
             if (keyCode == 27) {
-                if ($('#modal-form').is(':visible')) {
-                    $('#modal-form').modal('hide');
+                if ($('#modal-exp').is(':visible')) {
+                    setTimeout(function () {
+                        $('#modal-exp').modal('hide');
+                    }, 500)
+                } else if ($('#modal-form').is(':visible')) {
+                    setTimeout(function () {
+                        $('#modal-form').modal('hide');
+                    }, 500)
                 } else if ($('#sideNav').css("right") == '0px') {
                     $scope.closeCustomModal();
                 }
@@ -857,6 +1038,14 @@
                 }
             });
         };
+
+        $scope.showExperienceModal = function () {
+            $('#modal-exp').modal('toggle');
+        };
+
+        $(document).on('click', '.showModalExp', function () {
+            $scope.showExperienceModal();
+        });
 
         vm.calculateAge = function (value) {
             if (value != '') {
@@ -1031,6 +1220,34 @@
     }).directive('ugDegree', function () {
         return {
             templateUrl: "/candidates/view/templates/UG_Degree.html"
+        };
+    }).directive('ugDegreeConsolidated', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Degree_Consolidated.html"
+        };
+    }).directive('work1', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work1.html"
+        };
+    }).directive('work2', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work2.html"
+        };
+    }).directive('work3', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work3.html"
+        };
+    }).directive('work4', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work4.html"
+        };
+    }).directive('work5', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work5.html"
+        };
+    }).directive('generalInformation', function () {
+        return {
+            templateUrl: "/candidates/view/templates/General_Information.html"
         };
     })
 })();

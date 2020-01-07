@@ -142,7 +142,7 @@ def get_candidate_list(request):
     oum.oum_user_pk,
     oum.oum_mobile_no,
     oum.oum_email_id
-    FROM oes_payment_details opd 
+    FROM oes_payment_details opd
     INNER JOIN oes_user_master oum ON opd.opd_user_fk = oum.oum_user_pk
     INNER JOIN oes_candidate_details ocd ON ocd.ocd_user_fk = oum.oum_user_pk
     WHERE opd.opd_validated_status = 'A'
@@ -387,7 +387,7 @@ def get_candidate_details(request):
       ON odm_abbreviation = ocd_flag
     LEFT JOIN tnu.oes_work_experience owe
       ON oum_user_id = owe.owe_created_by
-  WHERE odm_name IS NOT NULL
+  WHERE odm_name IS NOT NULL AND oes_document_master.odm_status != 'D'
     and oum_user_id = :candidate_id
   GROUP BY odm_name, odm_abbreviation, owe_police_dept) odm
         on odm_abbreviation = ocd_flag
@@ -402,8 +402,9 @@ def get_candidate_details(request):
     document_list = request.dbsession.execute(document_list_query, {
         "candidate_id": candidate_id
     }).fetchall()
-
     document_list = _key_column_generator(document_list)
+    print(document_list)
+    document_list.append({'ocd_flag': 'GI', 'ocd_doc_file_name': '(doc file name)', 'odm_name': 'General Information'})
     document_list = _fix_document_urls(request, document_list, candidate_id)
     document_list.insert(0, {
         "ocd_doc_file_name": candidate_details[0]['oci_photo_image_path'],
