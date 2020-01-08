@@ -461,7 +461,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 7
-    },{
+    },
+    {
       "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
       "options": {
         "option1": "Relevant",
@@ -470,7 +471,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 8
-    },{
+    },
+    {
       "question": "Whether studied M.Ed in Tamil Medium",
       "options": {
         "option1": "Yes",
@@ -479,7 +481,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 9
-    },{
+    },
+    {
       "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
       "options": {
         "option1": "Relevant",
@@ -488,7 +491,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 10
-    },{
+    },
+    {
       "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
       "options": {
         "option1": "Matched",
@@ -497,7 +501,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 11
-    },{
+    },
+    {
       "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
       "options": {
         "option1": "Matched",
@@ -506,7 +511,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 12
-    },{
+    },
+    {
       "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
       "options": {
         "option1": "Matched",
@@ -515,7 +521,8 @@
       "approved": "1",
       "doc_id": 6,
       "q_id": 13
-    },{
+    },
+    {
       "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
       "options": {
         "option1": "Matched",
@@ -1913,7 +1920,8 @@
       "approved": "1",
       "doc_id": 32,
       "q_id": 1
-    }, {
+    },
+    {
       "question": "Is the document relevant to the claim of Special B.Ed Degree in Teaching the Hearing Impairment?",
       "options": {
         "option1": "Relevant",
@@ -2051,7 +2059,8 @@
       "approved": "1",
       "doc_id": 33,
       "q_id": 1
-    }, {
+    },
+    {
       "question": "Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment)?",
       "options": {
         "option1": "Relevant",
@@ -2199,7 +2208,8 @@
       "approved": "1",
       "doc_id": 34,
       "q_id": 1
-    }, {
+    },
+    {
       "question": "Is the document relevant to the claim of B.Ed Degree?",
       "options": {
         "option1": "Relevant",
@@ -2377,7 +2387,8 @@
       "approved": "1",
       "doc_id": 35,
       "q_id": 1
-    }, {
+    },
+    {
       "question": "Is the document relevant to the claim of M.Ed?",
       "options": {
         "option1": "Relevant",
@@ -3028,213 +3039,213 @@
     }
   ],
   "Work Experience 1": [
-  {
-    "question": "Is the document visible / clear ?",
-    "options": {
-      "option1": "Yes",
-      "option2": "No"
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 1
     },
-    "approved": "1",
-    "doc_id": 39,
-    "q_id": 1
-  },
-  {
-    "question": "Is the document relevant to claim?",
-    "options": {
-      "option1": "Relevant",
-      "option2": "Not Relevant"
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 2
     },
-    "approved": "1",
-    "doc_id": 39,
-    "q_id": 2
-  },
-  {
-    "question": "Number of Teaching Experience Certificate ?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 3
     },
-    "approved": "1",
-    "doc_id": 39,
-    "q_id": 3
-  },
-  {
-    "question": "Consolidated Teaching Experience?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 4
     },
-    "approved": "1",
-    "doc_id": 39,
-    "q_id": 4
-  },
-  {
-    "question": "Total Weightage marks for Teaching Experience",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
-    },
-    "approved": "1",
-    "doc_id": 39,
-    "q_id": 5
-  }
-],
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 5
+    }
+  ],
   "Work Experience 2": [
-  {
-    "question": "Is the document visible / clear ?",
-    "options": {
-      "option1": "Yes",
-      "option2": "No"
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 40,
+      "q_id": 1
     },
-    "approved": "1",
-    "doc_id": 40,
-    "q_id": 1
-  },
-  {
-    "question": "Is the document relevant to claim?",
-    "options": {
-      "option1": "Relevant",
-      "option2": "Not Relevant"
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 40,
+      "q_id": 2
     },
-    "approved": "1",
-    "doc_id": 40,
-    "q_id": 2
-  },
-  {
-    "question": "Number of Teaching Experience Certificate ?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 40,
+      "q_id": 3
     },
-    "approved": "1",
-    "doc_id": 40,
-    "q_id": 3
-  },
-  {
-    "question": "Consolidated Teaching Experience?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 40,
+      "q_id": 4
     },
-    "approved": "1",
-    "doc_id": 40,
-    "q_id": 4
-  },
-  {
-    "question": "Total Weightage marks for Teaching Experience",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
-    },
-    "approved": "1",
-    "doc_id": 40,
-    "q_id": 5
-  }
-],
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 40,
+      "q_id": 5
+    }
+  ],
   "Work Experience 3": [
-  {
-    "question": "Is the document visible / clear ?",
-    "options": {
-      "option1": "Yes",
-      "option2": "No"
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 41,
+      "q_id": 1
     },
-    "approved": "1",
-    "doc_id": 41,
-    "q_id": 1
-  },
-  {
-    "question": "Is the document relevant to claim?",
-    "options": {
-      "option1": "Relevant",
-      "option2": "Not Relevant"
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 41,
+      "q_id": 2
     },
-    "approved": "1",
-    "doc_id": 41,
-    "q_id": 2
-  },
-  {
-    "question": "Number of Teaching Experience Certificate ?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 41,
+      "q_id": 3
     },
-    "approved": "1",
-    "doc_id": 41,
-    "q_id": 3
-  },
-  {
-    "question": "Consolidated Teaching Experience?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 41,
+      "q_id": 4
     },
-    "approved": "1",
-    "doc_id": 41,
-    "q_id": 4
-  },
-  {
-    "question": "Total Weightage marks for Teaching Experience",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
-    },
-    "approved": "1",
-    "doc_id": 41,
-    "q_id": 5
-  }
-],
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 41,
+      "q_id": 5
+    }
+  ],
   "Work Experience 4": [
-  {
-    "question": "Is the document visible / clear ?",
-    "options": {
-      "option1": "Yes",
-      "option2": "No"
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 42,
+      "q_id": 1
     },
-    "approved": "1",
-    "doc_id": 42,
-    "q_id": 1
-  },
-  {
-    "question": "Is the document relevant to claim?",
-    "options": {
-      "option1": "Relevant",
-      "option2": "Not Relevant"
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 42,
+      "q_id": 2
     },
-    "approved": "1",
-    "doc_id": 42,
-    "q_id": 2
-  },
-  {
-    "question": "Number of Teaching Experience Certificate ?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 42,
+      "q_id": 3
     },
-    "approved": "1",
-    "doc_id": 42,
-    "q_id": 3
-  },
-  {
-    "question": "Consolidated Teaching Experience?",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 42,
+      "q_id": 4
     },
-    "approved": "1",
-    "doc_id": 42,
-    "q_id": 4
-  },
-  {
-    "question": "Total Weightage marks for Teaching Experience",
-    "options": {
-      "option1": "Matched",
-      "option2": "Not Matched"
-    },
-    "approved": "1",
-    "doc_id": 42,
-    "q_id": 5
-  }
-],
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 42,
+      "q_id": 5
+    }
+  ],
   "Work Experience 5": [
     {
       "question": "Is the document visible / clear ?",
@@ -3285,6 +3296,691 @@
       "approved": "1",
       "doc_id": 43,
       "q_id": 5
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 1": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 4
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 2": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 4
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 3": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 4
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 4": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 4
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 5": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 4
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 49,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 49,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 49,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 49,
+      "q_id": 4
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet 1": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 50,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 50,
+      "q_id": 2
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet 2": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 51,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 51,
+      "q_id": 2
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet 3": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 52,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 52,
+      "q_id": 2
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet 4": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 53,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 53,
+      "q_id": 2
+    }
+  ],
+  "B.Ed Degree / Equivalent Marksheet 5": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 54,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 54,
+      "q_id": 2
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 4
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 1": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 2
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 2": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 2
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 3": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 2
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 4": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 2
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 5": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 2
+    }
+  ],
+  "PG Degree / Equivalent Consolidated Marksheet": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 4
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 1": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 2
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 2": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 2
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 3": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 2
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 4": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 2
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 5": [
+    {
+      "question": "Is the document Valid / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 2
     }
   ]
 }

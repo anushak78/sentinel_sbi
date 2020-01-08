@@ -306,7 +306,7 @@
                                               ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                               ng-if="a.additional_info.length>0">
                                                 <span
-                                                  ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                  ng-if="a.additional_info != ''">
                                                     <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                             </span>
@@ -314,7 +314,7 @@
                     <span ng-repeat="a in d.status.level1[0]['answers']"
                           ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level != 1)">
                                                 <span
-                                                  ng-if="remarkToShow.includes(a.doc_id)">
+                                                  ng-if="a.additional_info != ''">
                                                     <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                         </span>
@@ -383,7 +383,7 @@
                                               ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                               ng-if="a.additional_info.length>0">
                                                 <span
-                                                  ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                  ng-if="a.additional_info != ''">
                                                     <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                             </span>
@@ -393,7 +393,7 @@
                     <span ng-repeat="a in d.status.level2[0]['answers']"
                           ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level > 2)">
                                              <span
-                                               ng-if="remarkToShow.includes(a.doc_id)">
+                                               ng-if="a.additional_info != ''">
                                                     <div>{{remarksText[a.doc_id +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                         </span>
@@ -549,7 +549,7 @@
                                               ng-repeat="a in finalJsonData[d.odm_name]['answers']"
                                               ng-if="a.additional_info.length>0">
                                                  <span
-                                                   ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                                   ng-if="a.additional_info ! =''">
                                                     <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                             </span>
@@ -559,7 +559,7 @@
                     <span ng-repeat="a in d.status.level3[0]['answers']"
                           ng-if="a.additional_info!='' && (object.keys(finalJsonData).length==0 || userData.level != 3)">
                                           <span
-                                            ng-if="remarkToShow.includes(finalJsonData[d.odm_name]['doc_id'])">
+                                            ng-if="a.additional_info ! =''">
                                                     <div>{{remarksText[finalJsonData[d.odm_name]['doc_id'] +'c'+ a.qn_id]}} :- {{a.additional_info}}</div>
                                                 </span>
                                         </span>
@@ -1178,6 +1178,98 @@
                     <div id="43"
                          ng-if="selectedDocType=='Work Experience 5'">
                       <work5></work5>
+                    </div>
+                    <div id="44"
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 1'">
+                      <ug-marksheet1></ug-marksheet1>
+                    </div>
+                    <div id="45"
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 2'">
+                      <ug-marksheet2></ug-marksheet2>
+                    </div>
+                    <div id="46"
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 3'">
+                      <ug-marksheet3></ug-marksheet3>
+                    </div>
+                    <div id="47"
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 4'">
+                      <ug-marksheet4></ug-marksheet4>
+                    </div>
+                    <div id="48"
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 5'">
+                      <ug-marksheet5></ug-marksheet5>
+                    </div>
+                    <div id="49"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet'">
+                      <bed-marksheet-consolidated></bed-marksheet-consolidated>
+                    </div>
+                    <div id="50"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet 1'">
+                      <bed-marksheet1></bed-marksheet1>
+                    </div>
+                    <div id="51"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet 2'">
+                      <bed-marksheet2></bed-marksheet2>
+                    </div>
+                    <div id="52"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet 3'">
+                      <bed-marksheet3></bed-marksheet3>
+                    </div>
+                    <div id="53"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet 4'">
+                      <bed-marksheet1></bed-marksheet1>
+                    </div>
+                    <div id="54"
+                         ng-if="selectedDocType=='B.Ed Degree / Equivalent Marksheet 5'">
+                      <bed-marksheet5></bed-marksheet5>
+                    </div>
+                    <div id="55"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet'">
+                      <med-marksheet-consolidated></med-marksheet-consolidated>
+                    </div>
+                    <div id="56"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 1'">
+                      <med-marksheet1></med-marksheet1>
+                    </div>
+                    <div id="57"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 2'">
+                      <med-marksheet2></med-marksheet2>
+                    </div>
+                    <div id="58"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 3'">
+                      <med-marksheet3></med-marksheet3>
+                    </div>
+                    <div id="59"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 4'">
+                      <med-marksheet4></med-marksheet4>
+                    </div>
+                    <div id="60"
+                         ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 5'">
+                      <med-marksheet5></med-marksheet5>
+                    </div>
+                    <div id="62"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Consolidated Marksheet'">
+                      <pg-marksheet-consolidated></pg-marksheet-consolidated>
+                    </div>
+                    <div id="63"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 1'">
+                      <pg-marksheet1></pg-marksheet1>
+                    </div>
+                    <div id="64"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 2'">
+                      <pg-marksheet2></pg-marksheet2>
+                    </div>
+                    <div id="65"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 3'">
+                      <pg-marksheet3></pg-marksheet3>
+                    </div>
+                    <div id="66"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 4'">
+                      <pg-marksheet4></pg-marksheet4>
+                    </div>
+                    <div id="67"
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 5'">
+                      <pg-marksheet5></pg-marksheet5>
                     </div>
 
                     <!--<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">-->

@@ -96,6 +96,30 @@
         vm.doc412 = '';
         vm.doc422 = '';
         vm.doc432 = '';
+        vm.doc442 = '';
+        vm.doc452 = '';
+        vm.doc462 = '';
+        vm.doc472 = '';
+        vm.doc482 = '';
+        vm.doc492 = '';
+        vm.doc502 = '';
+        vm.doc512 = '';
+        vm.doc522 = '';
+        vm.doc532 = '';
+        vm.doc542 = '';
+        vm.doc552 = '';
+        vm.doc562 = '';
+        vm.doc572 = '';
+        vm.doc582 = '';
+        vm.doc592 = '';
+        vm.doc602 = '';
+        vm.doc622 = '';
+        vm.doc632 = '';
+        vm.doc642 = '';
+        vm.doc652 = '';
+        vm.doc662 = '';
+        vm.doc672 = '';
+
         vm.radio_values = {};
         vm.radio_values.init_doc13 = "";
         vm.radio_values.init_doc14 = "";
@@ -180,6 +204,29 @@
         vm.radio_values.init_doc412 = "";
         vm.radio_values.init_doc422 = "";
         vm.radio_values.init_doc432 = "";
+        vm.radio_values.init_doc442 = "";
+        vm.radio_values.init_doc452 = "";
+        vm.radio_values.init_doc462 = "";
+        vm.radio_values.init_doc472 = "";
+        vm.radio_values.init_doc482 = "";
+        vm.radio_values.init_doc492 = "";
+        vm.radio_values.init_doc502 = "";
+        vm.radio_values.init_doc512 = "";
+        vm.radio_values.init_doc522 = "";
+        vm.radio_values.init_doc532 = "";
+        vm.radio_values.init_doc542 = "";
+        vm.radio_values.init_doc552 = "";
+        vm.radio_values.init_doc562 = "";
+        vm.radio_values.init_doc572 = "";
+        vm.radio_values.init_doc582 = "";
+        vm.radio_values.init_doc592 = "";
+        vm.radio_values.init_doc602 = "";
+        vm.radio_values.init_doc622 = "";
+        vm.radio_values.init_doc632 = "";
+        vm.radio_values.init_doc642 = "";
+        vm.radio_values.init_doc652 = "";
+        vm.radio_values.init_doc662 = "";
+        vm.radio_values.init_doc672 = "";
         $scope.packages = {
             name: 'candidates',
             finalAction: false,
@@ -280,9 +327,30 @@
             '41c2': 'Relevant document reason',
             '42c2': 'Relevant document reason',
             '43c2': 'Relevant document reason',
+            '44c2': 'Relevant document reason',
+            '45c2': 'Relevant document reason',
+            '46c2': 'Relevant document reason',
+            '47c2': 'Relevant document reason',
+            '48c2': 'Relevant document reason',
+            '49c2': 'Relevant document reason',
+            '50c2': 'Relevant document reason',
+            '51c2': 'Relevant document reason',
+            '52c2': 'Relevant document reason',
+            '53c2': 'Relevant document reason',
+            '54c2': 'Relevant document reason',
+            '55c2': 'Relevant document reason',
+            '56c2': 'Relevant document reason',
+            '57c2': 'Relevant document reason',
+            '58c2': 'Relevant document reason',
+            '59c2': 'Relevant document reason',
+            '60c2': 'Relevant document reason',
+            '62c2': 'Relevant document reason',
+            '63c2': 'Relevant document reason',
+            '64c2': 'Relevant document reason',
+            '65c2': 'Relevant document reason',
+            '66c2': 'Relevant document reason',
+            '67c2': 'Relevant document reason'
         };
-
-        $scope.remarkToShow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48];
 
         $scope.titles =
             {
@@ -653,6 +721,8 @@
         $scope.selectedInnerDoc = 0;
         $scope.changeIframeSrc = function (path_name, index) {
             $scope.selectedInnerDoc = index;
+            console.log('path_name');
+            console.log(path_name);
             $('#docFrame').attr("src", path_name);
         };
 
@@ -664,7 +734,14 @@
         $scope.showModalData = function () {
             $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
             $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
-            $('#docFrame').attr("src", $scope.selectedDocPath);
+            console.log('selected path name');
+            console.log($scope.selectedDocPath);
+            if($scope.selectedDocType == 'General Information'){
+                $('#docFrame').attr("src", '../assets/src/images/general information.svg');
+            }else{
+                $('#docFrame').attr("src", $scope.selectedDocPath);
+            }
+
             if ($scope.selectedDocNo == 0) {
                 $('#modal-form').modal();
             }
@@ -681,7 +758,13 @@
                 $scope.selectedDocNo = index;
                 $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
                 $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
-                $('#docFrame').attr("src", $scope.selectedDocPath);
+                console.log('selected doc type');
+                console.log($scope.selectedDocType);
+                if($scope.selectedDocType == 'General Information'){
+                    $('#docFrame').attr("src", '../assets/src/images/general information.svg');
+                }else{
+                    $('#docFrame').attr("src", $scope.selectedDocPath);
+                }
                 $('#modal-form').modal();
             }
         };
@@ -1173,6 +1256,30 @@
         return {
             templateUrl: "/candidates/view/templates/PG_Degree.html"
         };
+    }).directive('pgMarksheetConsolidated', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet_Consolidated.html"
+        };
+    }).directive('pgMarksheet1', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet1.html"
+        };
+    }).directive('pgMarksheet2', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet2.html"
+        };
+    }).directive('pgMarksheet3', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet3.html"
+        };
+    }).directive('pgMarksheet4', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet4.html"
+        };
+    }).directive('pgMarksheet5', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet5.html"
+        };
     }).directive('nocCertificateForOtherDepartment', function () {
         return {
             templateUrl: "/candidates/view/templates/NOC_Other_Department.html"
@@ -1209,9 +1316,57 @@
         return {
             templateUrl: "/candidates/view/templates/BEd.html"
         };
+    }).directive('bedMarksheetConsolidated', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet_Consolidated.html"
+        };
+    }).directive('bedMarksheet1', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet1.html"
+        };
+    }).directive('bedMarksheet2', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet2.html"
+        };
+    }).directive('bedMarksheet3', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet3.html"
+        };
+    }).directive('bedMarksheet4', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet4.html"
+        };
+    }).directive('bedMarksheet5', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet5.html"
+        };
     }).directive('med', function () {
         return {
             templateUrl: "/candidates/view/templates/MEd.html"
+        };
+    }).directive('medMarksheetConsolidated', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet_Consolidated.html"
+        };
+    }).directive('medMarksheet1', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet1.html"
+        };
+    }).directive('medMarksheet2', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet2.html"
+        };
+    }).directive('medMarksheet3', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet3.html"
+        };
+    }).directive('medMarksheet4', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet4.html"
+        };
+    }).directive('medMarksheet5', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet5.html"
         };
     }).directive('conductCertificate', function () {
         return {
@@ -1224,6 +1379,26 @@
     }).directive('ugDegreeConsolidated', function () {
         return {
             templateUrl: "/candidates/view/templates/UG_Degree_Consolidated.html"
+        };
+    }).directive('ugMarksheet1', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet1.html"
+        };
+    }).directive('ugMarksheet2', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet2.html"
+        };
+    }).directive('ugMarksheet3', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet3.html"
+        };
+    }).directive('ugMarksheet4', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet4.html"
+        };
+    }).directive('ugMarksheet5', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet5.html"
         };
     }).directive('work1', function () {
         return {
