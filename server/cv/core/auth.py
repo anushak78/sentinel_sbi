@@ -41,6 +41,7 @@ def login(request):
     login = request.params['login']
     passwd = request.params['password']
     ret = None
+    print(User)
     user = User.by_login(request.dbsession, login)
     if user and user.check_password(passwd):
         headers = remember(request, login)
@@ -59,6 +60,7 @@ def login(request):
         request.response.headerlist.extend(headers)
         request.session.delete()
         ret = compute_whoami(request, None)
+
     return ret
 
 

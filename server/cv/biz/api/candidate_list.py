@@ -113,7 +113,8 @@ def _fix_document_urls(request, document_list, candidate_id):
     for doc in document_list:
         doc['ocd_doc_file_name'] = request.route_url(
             'docs.view', candidate_id=candidate_id,
-            file_name=doc['ocd_flag'] + '_' + doc['ocd_doc_file_name']
+            # file_name=doc['ocd_flag'] + '_' + doc['ocd_doc_file_name']
+            file_name=doc['ocd_doc_file_name']
         )
         new_document_list.append(doc)
     return new_document_list
@@ -137,7 +138,7 @@ def get_candidate_list(request):
     pending_list_query = """
     SELECT
     ocd.ocd_first_name,
-    ocd.ocd_last_name,
+    oum.oum_candidate_name,
     oum.oum_user_id,
     oum.oum_user_pk,
     oum.oum_mobile_no,
@@ -148,7 +149,7 @@ def get_candidate_list(request):
     WHERE opd.opd_validated_status = 'A'
    """
     if (candidate_id != None and candidate_id != ''):
-        pending_list_query += "AND oum.oum_user_id = :candidate_id "
+        pending_list_query += "AND oum.oum_candidate_name LIKE '%" + candidate_id + "%' "
 
     if level == 2:
         pending_list_query += """
@@ -197,6 +198,7 @@ def get_candidate_list(request):
     elif category == 3:
         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
 
+    print(pending_list_query)
     count_query = """select count(*) as total_count
     from (""" + pending_list_query + """) abcd"""
 
@@ -403,8 +405,6 @@ def get_candidate_details(request):
         "candidate_id": candidate_id
     }).fetchall()
     document_list = _key_column_generator(document_list)
-    print(document_list)
-    document_list.append({'ocd_flag': 'GI', 'ocd_doc_file_name': '(doc file name)', 'odm_name': 'General Information'})
     document_list = _fix_document_urls(request, document_list, candidate_id)
     document_list.insert(0, {
         "ocd_doc_file_name": candidate_details[0]['oci_photo_image_path'],
@@ -416,6 +416,11 @@ def get_candidate_details(request):
         "ocd_flag": "Sign",
         "odm_name": "Sign"
     })
+    document_list.insert(2, {
+        "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
+        "ocd_flag": "GI",
+        "odm_name": "General Information"
+    })
 
     # additional_documents = _get_additional_document(request, candidate_id)
     # if len(additional_documents) > 0:
@@ -425,6 +430,14 @@ def get_candidate_details(request):
     #         "ocd_flag": "Additional Mark",
     #         "odm_name": "Additional Mark"
     #     })
+    work_experience_query = text("""
+        select * from oes_work_experience where owe_created_by =  :candidate_id
+    """)
+    work_experience = request.dbsession.execute(work_experience_query, {
+        "candidate_id": candidate_id
+    }).fetchall()
+    work_experience = _key_column_generator(work_experience)
+    print(work_experience)
 
     for list in document_list:
         list['status'] = {}
@@ -446,7 +459,8 @@ def get_candidate_details(request):
         "data": {
             "candidate_details": clean_object(candidate_details),
             "document_list": clean_object(document_list),
-            "comments": comments
+            "comments": comments,
+            "work_experience": clean_object(work_experience)
         }
     }
 
@@ -537,9 +551,10 @@ def download_report(request):
     level = request.session['level']
     date_time = time.time()
     master = os.path.abspath(
-        os.path.join(__file__, "../../../../uploads/"+str(date_time)+'.csv'))
+        os.path.join(__file__,
+                     "../../../../uploads/" + str(date_time) + '.csv'))
     candidate_ids = CandidateDocumentStatus.get_distinct_candidate(
-        request.dbsession,level)
+        request.dbsession, level)
 
     with open(master, 'w') as csvfile:
         all_documents = DocumentTypes.get_all_documents(request.dbsession)
@@ -547,7 +562,8 @@ def download_report(request):
         # Headers
         fieldnames = ['user_id', 'first_name', 'last_name', 'level 1 status',
                       'level 1 scrutiny date', 'level 2 status',
-                      'level 2 scrutiny date', 'level 2 comment', 'level 3 status',
+                      'level 2 scrutiny date', 'level 2 comment',
+                      'level 3 status',
                       'level 3 scrutiny date', 'level 3 comment']
         # Headers for all three levels
         count = 1
@@ -579,10 +595,11 @@ def download_report(request):
                 if (level >= candidate_status['level']):
                     a['level ' + str(
                         candidate_status['level']) + ' status'] = 'Rejected' if \
-                    candidate_status['status'] == 2 else 'Approved'
+                        candidate_status['status'] == 2 else 'Approved'
 
                     a['level ' + str(
-                        candidate_status['level']) + ' comment'] = candidate_status['comment']
+                        candidate_status['level']) + ' comment'] = \
+                        candidate_status['comment']
 
             ignore_docs = [10, 9, 6, 25, 13]
             flag = 1
@@ -595,17 +612,23 @@ def download_report(request):
                             flag = 2
                     status_text = 'Not Matching/Not Clear' if doc_all_status[
                                                                   'status'] == 2 else 'Matching'
-                    a['level 1 scrutiny date'] = datetime.datetime.strptime(str(doc_all_status['created_at'])[:19],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
+                    a['level 1 scrutiny date'] = datetime.datetime.strptime(
+                        str(doc_all_status['created_at'])[:19],
+                        '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
                 elif (doc_all_status['level'] == 2 and level >= doc_all_status[
                     'level']):
                     status_text = 'Not Matching/Not Clear' if doc_all_status[
                                                                   'status'] == 2 else 'Matching'
-                    a['level 2 scrutiny date'] = datetime.datetime.strptime(str(doc_all_status['created_at'])[:19],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
+                    a['level 2 scrutiny date'] = datetime.datetime.strptime(
+                        str(doc_all_status['created_at'])[:19],
+                        '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
                 elif (doc_all_status['level'] == 3 and level >= doc_all_status[
                     'level']):
                     status_text = 'Rejected' if doc_all_status[
                                                     'status'] == 2 else 'Approved'
-                    a['level 3 scrutiny date'] = datetime.datetime.strptime(str(doc_all_status['created_at'])[:19],'%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
+                    a['level 3 scrutiny date'] = datetime.datetime.strptime(
+                        str(doc_all_status['created_at'])[:19],
+                        '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
                 a[
                     'level 1 status'] = 'Not Matching/Not Clear' if flag == 2 else 'Matching'
 
@@ -620,7 +643,7 @@ def download_report(request):
         "data": {
             'file_path': request.route_url(
                 'docs.report',
-                file_name=str(date_time)+'.csv'
+                file_name=str(date_time) + '.csv'
             )
         }
     }

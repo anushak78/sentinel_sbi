@@ -2549,6 +2549,7 @@ fieldset[disabled] .btn-gplus.active {
 .parsley-error {
     border-color: #ff5f5f !important;
 }
+
 .parsley-error-list {
     margin: 0;
     padding: 0;
@@ -2556,28 +2557,32 @@ fieldset[disabled] .btn-gplus.active {
     margin-top: 6px;
     font-size: 12px;
 }
+
 .parsley-error {
-    border-color: #ff5f5f  !important;
+    border-color: #ff5f5f !important;
 }
+
 .parsley-errors-list {
     margin: 0;
     padding: 0;
     list-style: none;
     margin-top: 6px;
     font-size: 12px;
-    color: #b94a48 ;
-}
-.parsley-error {
-    border-color: #ff5f5f  !important;
+    color: #b94a48;
 }
 
-.parsley-errors-list li{
+.parsley-error {
+    border-color: #ff5f5f !important;
+}
+
+.parsley-errors-list li {
     display: none;
 }
 
-.parsley-errors-list li:last-child{
+.parsley-errors-list li:last-child {
     display: block;
 }
+
 .datepicker td.active,
 .datepicker td.active:hover,
 .datepicker td.active:hover.active,
@@ -3988,22 +3993,21 @@ fieldset[disabled] .btn-gplus.active {
     color: #ecebd5 !important;
 }
 
-
-
-.loader{
+.loader {
     position: fixed;
     top: 0px;
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     display: none;
 }
+
 .spinner {
     width: 40px;
     height: 40px;
-    top:calc(50% - 20px);
-    left:calc(50% - 20px);
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
     position: absolute;
     z-index: 999999999;
 }
@@ -4028,18 +4032,23 @@ fieldset[disabled] .btn-gplus.active {
 }
 
 @-webkit-keyframes sk-bounce {
-    0%, 100% { -webkit-transform: scale(0.0) }
-    50% { -webkit-transform: scale(1.0) }
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
 }
 
 @keyframes sk-bounce {
     0%, 100% {
         transform: scale(0.0);
         -webkit-transform: scale(0.0);
-    } 50% {
-          transform: scale(1.0);
-          -webkit-transform: scale(1.0);
-      }
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
 }
 
 .modal-content {
@@ -4047,6 +4056,11 @@ fieldset[disabled] .btn-gplus.active {
     color: white;
 }
 
-iframe{
+iframe {
     background: white;
 }
+
+.work-experience table thead tr th td {
+    border: 1px solid black;
+}
+

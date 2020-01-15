@@ -656,6 +656,7 @@
                 if (object['code'] == 1) {
                     $scope.candidateDetails = object['data'];
                     $scope.finalJsonData = {};
+                    $scope.workExperience = [];
                     $scope.resetValues();
                     $scope.safeApply();
                     if (typeof $scope.candidateDetails['document_list'][0]['status']['level' + $rootScope.userData['level']] != undefined && $scope.candidateDetails['document_list'][0]['status']['level' + $rootScope.userData['level']].length == 0) {
@@ -666,7 +667,9 @@
                         for (var i in $scope.candidateDetails['document_list']) {
                             // console.log($scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']]);
                             $scope.finalJsonData[$scope.candidateDetails['document_list'][i]['odm_name']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0];
+                            if($scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level].length>0){
                             $scope.radio[$scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']][0]['doc_id']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0]['answers'][0]['ans_id']
+                            }
                         }
 
                         console.log('final json data');
@@ -674,6 +677,25 @@
                         $scope.selectedInnerDoc = 0;
                     }
                     $('#sideNav').animate({'right': '0%'}, 300);
+                    $scope.totalExperience = '';
+                    if (object['data']['work_experience'].length > 0) {
+                        $scope.workExperience = object['data']['work_experience'];
+                        $scope.noOfDays = 0;
+                        for (var i = 0; i < object['data']['work_experience'].length; i++) {
+                            if (moment(object['data']['work_experience'][i]['owe_yoe_from'], "DD-MMM-YYYY") < moment("04-Oct-2019", "DD-MMM-YYYY")) {
+                                var endDate = '';
+                                if (moment(object['data']['work_experience'][i]['owe_yoe_to'], "DD-MMM-YYYY") > moment("04-Oct-2019", "DD-MMM-YYYY")) {
+                                    endDate = moment("04-Oct-2019", "DD-MMM-YYYY");
+                                } else {
+                                    endDate = moment(object['data']['work_experience'][i]['owe_yoe_to'], "DD-MMM-YYYY");
+                                }
+                                var startDate = moment(object['data']['work_experience'][i]['owe_yoe_from'], "DD-MMM-YYYY");
+                            }
+                            $scope.noOfDays += endDate.diff(startDate, 'days');
+                        }
+                        console.log($scope.noOfDays);
+                        $scope.totalExperience = Math.floor($scope.noOfDays/365) + ' Years '+Math.floor(($scope.noOfDays%365) / 30) +' Months '+ Math.floor((306%365) % 30) +' Days';
+                    }
                 } else {
                     Message.error(object['message']);
                 }
@@ -736,9 +758,9 @@
             $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
             console.log('selected path name');
             console.log($scope.selectedDocPath);
-            if($scope.selectedDocType == 'General Information'){
+            if ($scope.selectedDocType == 'General Information') {
                 $('#docFrame').attr("src", '../assets/src/images/general information.svg');
-            }else{
+            } else {
                 $('#docFrame').attr("src", $scope.selectedDocPath);
             }
 
@@ -760,9 +782,9 @@
                 $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
                 console.log('selected doc type');
                 console.log($scope.selectedDocType);
-                if($scope.selectedDocType == 'General Information'){
+                if ($scope.selectedDocType == 'General Information') {
                     $('#docFrame').attr("src", '../assets/src/images/general information.svg');
-                }else{
+                } else {
                     $('#docFrame').attr("src", $scope.selectedDocPath);
                 }
                 $('#modal-form').modal();
@@ -894,7 +916,7 @@
                     console.log($("#" + event.target.id + "_age").val('abcded'));
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
-                $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294").datepicker({
+                $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294,  #doc2515").datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -903,7 +925,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295, #doc3719, #doc3819').datepicker({
+                $('#doc255, #doc275, #doc285, #doc295, #doc2519, #doc3719, #doc3819').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -1125,6 +1147,7 @@
         $scope.showExperienceModal = function () {
             $('#modal-exp').modal('toggle');
         };
+
 
         $(document).on('click', '.showModalExp', function () {
             $scope.showExperienceModal();
