@@ -24,10 +24,11 @@
                 Not Relevant
             </label>
             <label
-              style="{{ $ctrl.radio_values.init_doc34=='2' ? 'display:block':'display:none'}}">
+                    style="{{ $ctrl.radio_values.init_doc34=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc34">
                     <option value="">--Select--</option>
-                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                    <option ng-repeat="r in $ctrl.notRelevantReasone"
+                            value="{{r}}">
                         {{r}}
                     </option>
                 </select>
@@ -250,17 +251,34 @@
                         Not Matched
                     </label>
                     <label style="{{ $ctrl.radio_values.init_doc38=='2' ? 'display:block':'display:none'}}">
-                        <select class="form-control" ng-model="$ctrl.doc38">
-                            <option value="">--Select--</option>
-                            <option value="OC">OC</option>
-                            <option value="OC - Other State">OC - Other State
-                            </option>
-                            <option value="BC">BC</option>
-                            <option value="BC-MUSLIM">BC-MUSLIM</option>
-                            <option value="SC">SC</option>
-                            <option value="SC(A)">SC(A)</option>
-                            <option value="ST">ST</option>
-                            <option value="MBC / DNC">MBC / DNC</option>
+                        <select ng-model="$ctrl.doc38" id="selectDoc38">
+                            <optgroup label="List of scheduled castes">
+                                <option value="">--Select--</option>
+                                <option value="OC">OC</option>
+                                <option value="OC - Other State">OC - Other
+                                    State
+                                </option>
+                                <option value="BC">BC</option>
+                                <option value="BC-MUSLIM">BC-MUSLIM</option>
+                                <option value="SC">SC</option>
+                                <option value="SC(A)">SC(A)</option>
+                                <option value="ST">ST</option>
+                                <option value="MBC / DNC">MBC / DNC</option>
+                            </optgroup>
+                            <optgroup label="Group Name 2">
+                                <option value="OC">OC</option>
+                                <option value="OC - Other State">OC - Other
+                                    State
+                                </option>
+                                <option value="BC">BC</option>
+                                <option value="BC-MUSLIM">BC-MUSLIM</option>
+                                <option value="SC">SC</option>
+                                <option value="SC(A)">SC(A)</option>
+                                <option value="ST">ST</option>
+                                <option value="MBC / DNC">MBC / DNC</option>
+                            </optgroup>
+
+
                         </select>
                     </label>
                 </div>
@@ -274,5 +292,6 @@
                     </label>
                 </div>
             </div>
+        </div>
     </div>
 </div>

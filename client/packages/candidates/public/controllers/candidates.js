@@ -667,8 +667,8 @@
                         for (var i in $scope.candidateDetails['document_list']) {
                             // console.log($scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']]);
                             $scope.finalJsonData[$scope.candidateDetails['document_list'][i]['odm_name']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0];
-                            if($scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level].length>0){
-                            $scope.radio[$scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']][0]['doc_id']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0]['answers'][0]['ans_id']
+                            if ($scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level].length > 0) {
+                                $scope.radio[$scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']][0]['doc_id']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0]['answers'][0]['ans_id']
                             }
                         }
 
@@ -694,7 +694,7 @@
                             $scope.noOfDays += endDate.diff(startDate, 'days');
                         }
                         console.log($scope.noOfDays);
-                        $scope.totalExperience = Math.floor($scope.noOfDays/365) + ' Years '+Math.floor(($scope.noOfDays%365) / 30) +' Months '+ Math.floor((306%365) % 30) +' Days';
+                        $scope.totalExperience = Math.floor($scope.noOfDays / 365) + ' Years ' + Math.floor(($scope.noOfDays % 365) / 30) + ' Months ' + Math.floor((306 % 365) % 30) + ' Days';
                     }
                 } else {
                     Message.error(object['message']);
@@ -807,12 +807,15 @@
             $scope.selectedInnerDoc = 0;
 
             let fields = $("label:visible input[type=text], label:visible select");
-            if ($("label:visible input[type=text], label:visible select").length > 0) {
+            if (fields.length > 0) {
                 for (let i = 0; i < fields.length; i++) {
-                    if ($(fields[i]).val() == "") {
-                        alert("All fields are mandatory");
-                        return false;
-                    }
+                    if ($(fields[i])[0]['id'] != 's2id_autogen1') {
+                        if ($(fields[i]).val() == "") {
+                            alert("All fields are mandatory");
+                            return false;
+                        }
+                    };
+
                 }
             }
 
@@ -908,6 +911,7 @@
         };
 
         $scope.initializeInputs = function () {
+            console.log('initialize inpout');
             setTimeout(function () {
                 $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3815").datepicker({
                     format: 'dd-mm-yyyy',
@@ -942,7 +946,9 @@
                     });
                     elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
                 });
-            }, 0);
+
+                $('#selectDoc38').select2();
+            }, 500);
         };
 
         $scope.$watch('selectedDocNo', function () {
