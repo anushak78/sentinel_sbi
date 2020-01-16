@@ -179,11 +179,11 @@
                      style="color: white;margin-top:7%">
                 <div class="slimScrollDiv"
                      style="position: relative; overflow-y: scroll; width: auto;">
-                    <div class="col-md-4">
-                        <section class="panel-body" style="font-size: 12px">
-                            User ID:<br/><span style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>
-                        </section>
-                    </div>
+                    <!--<div class="col-md-4">-->
+                        <!--<section class="panel-body" style="font-size: 12px">-->
+                            <!--User ID:<br/><span style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>-->
+                        <!--</section>-->
+                    <!--</div>-->
                     <div class="col-md-4">
                         <img
                                 ng-src="{{candidateDetails['candidate_details'][0]['oci_photo_image_path']}}"
@@ -199,7 +199,7 @@
                     <div class="clearfix"></div>
                     <div class="col-md-4">
                         <section class="panel-body" style="font-size: 12px">
-                            Name:<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_last_name']}}</span>
+                            Name:<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
                         </section>
                     </div>
                     <div class="col-md-4">
@@ -994,18 +994,18 @@
                                 </header>
                                 <div class="slimScrollDiv"
                                      style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto;height: 35%">
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            User ID:<br/><span
-                                                style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>
-                                        </section>
-                                    </div>
+                                    <!--<div class="col-md-6">-->
+                                        <!--<section class="panel-body"-->
+                                                 <!--style="font-size: 12px">-->
+                                            <!--User ID:<br/><span-->
+                                                <!--style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>-->
+                                        <!--</section>-->
+                                    <!--</div>-->
                                     <div class="col-md-6">
                                         <section class="panel-body"
                                                  style="font-size: 12px">
                                             Name:<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_last_name']}}</span>
+                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
                                         </section>
                                     </div>
                                     <div class="clearfix"></div>

@@ -321,7 +321,8 @@ def get_candidate_details(request):
     orvm.orvm_reference_value,
     osm.osm_status_desc,
     oci.oci_photo_image_path,
-    oci.oci_sign_image_path
+    oci.oci_sign_image_path,
+    oum.*
     from oes_candidate_details ocd
     inner join oes_state_master o
     on ocd.ocd_comm_state_fk = o.osm_state_pk
@@ -333,6 +334,8 @@ def get_candidate_details(request):
     on ocd.ocd_status_id_fk = osm.osm_status_pk
     INNER JOIN oes_candidate_images oci
     ON ocd.ocd_user_fk = oci.oci_user_fk
+    INNER JOIN oes_user_master oum
+    ON oum.oum_user_id = ocd.ocd_created_by
     where ocd.ocd_created_by = :candidate_id
                           """)
     data = request.dbsession.execute(details_query, {
