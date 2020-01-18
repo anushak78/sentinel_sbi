@@ -606,6 +606,8 @@
         $scope.getQuestions = function () {
             Http.get("/assets/question.json", 'local').then(function (object) {
                 $rootScope.documentWithQuestions = object;
+                console.log('document with questions');
+                console.log($rootScope.documentWithQuestions)
             })
         };
 
@@ -809,13 +811,12 @@
             let fields = $("label:visible input[type=text], label:visible select");
             if (fields.length > 0) {
                 for (let i = 0; i < fields.length; i++) {
-                    if ($(fields[i])[0]['id'] != 's2id_autogen1') {
+                    if ($(fields[i]).className == "undefined") {
                         if ($(fields[i]).val() == "") {
                             alert("All fields are mandatory");
                             return false;
                         }
-                    };
-
+                    }
                 }
             }
 
@@ -1173,6 +1174,14 @@
                 var days = a.diff(b, 'days');
                 return years + ' years ' + months + ' months ' + days + ' days';
             }
+        };
+        $scope.generatePDF = function () {
+            // Choose the element that our invoice is rendered in.
+            var element = document.getElementById("invoice");
+            // Choose the element and save the PDF for our user.
+            html2pdf()
+                .from(element)
+                .save();
         }
 
     }

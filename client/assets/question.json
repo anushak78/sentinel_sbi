@@ -854,17 +854,6 @@
       "q_id": 1
     },
     {
-      "question": "Gender",
-      "options": {
-        "option1": "Matching",
-        "option2": "Not Matching",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 16,
-      "q_id": 2
-    },
-    {
       "question": "Is the document relevant to claim?",
       "options": {
         "option1": "Relevant",
