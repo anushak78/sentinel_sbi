@@ -115,7 +115,8 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio39" name="radio39"
-                           value="1">
+                           value="1" ng-model="$ctrl.radio_values.init_doc39"
+                           ng-change="$ctrl.doc39=''">
                     Matched
                 </label>
             </div>
@@ -123,15 +124,23 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio39" name="radio39"
-                           value="2">
+                           value="2" ng-model="$ctrl.radio_values.init_doc39"
+                           ng-change="$ctrl.doc39=''">
                     Not Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc39=='2' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39">
+                        <option value="">--Select--</option>
+                        <option value="Issued in husband’s name">Issued in husband’s name</option>
+                    </select>
                 </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio39" name="radio39"
-                           value="3">
+                           value="3" ng-model="$ctrl.radio_values.init_doc39"
+                           ng-change="$ctrl.doc39=''">
                     Not Clear
                 </label>
             </div>
@@ -145,7 +154,8 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio35" name="radio35"
-                           value="1">
+                           value="1" ng-model="$ctrl.radio_values.init_doc35"
+                           ng-change="$ctrl.doc35=''">
                     Matched
                 </label>
             </div>
@@ -153,15 +163,21 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio35" name="radio35"
-                           value="2">
+                           value="2" ng-model="$ctrl.radio_values.init_doc35"
+                           ng-change="$ctrl.doc35=''">
                     Not Matched
+                </label>
+                <label
+                  style="{{ $ctrl.radio_values.init_doc35=='2' ? 'display:block':'display:none'}}">
+                    <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc35"/>
                 </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio35" name="radio35"
-                           value="3">
+                           value="3" ng-model="$ctrl.radio_values.init_doc35"
+                           ng-change="$ctrl.doc35=''">
                     Not Clear
                 </label>
             </div>

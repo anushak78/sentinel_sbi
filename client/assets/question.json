@@ -191,6 +191,17 @@
       "approved": "1",
       "doc_id": 2,
       "q_id": 9
+    },
+    {
+      "question": "Change in name as per Gazette",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 2,
+      "q_id": 10
     }
   ],
   "Community Certificate": [
@@ -635,16 +646,6 @@
   ],
   "General Information": [
     {
-      "question": "Gender",
-      "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
-      },
-      "approved": "1",
-      "doc_id": 10,
-      "q_id": 1
-    },
-    {
       "question": "Father’s Name",
       "options": {
         "option1": "Matched",
@@ -862,6 +863,17 @@
       "approved": "1",
       "doc_id": 16,
       "q_id": 3
+    },
+    {
+      "question": "Gender",
+      "options": {
+        "option1": "Matching",
+        "option2": "Not Matching",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 16,
+      "q_id": 2
     }
   ],
   "Sign": [
@@ -2641,49 +2653,6 @@
       "q_id": 4
     },
     {
-      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 5
-    },
-    {
-      "question": "Consolidated Mark sheet for UG Course ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 6
-    },
-    {
-      "question": "Number of Mark Sheet in UG Course",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 7
-    },
-    {
-      "question": "Name in the UG Degree Mark Sheets?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 8
-    },
-    {
       "question": "Name of the Subject in the UG?",
       "options": {
         "option1": "Matched",
@@ -2728,16 +2697,6 @@
       "q_id": 15
     },
     {
-      "question": "Date of Publications of Results in UG Mark Sheet",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 18
-    },
-    {
       "question": "Period of Study in the UG Degree?",
       "options": {
         "option1": "Matched",
@@ -2758,28 +2717,6 @@
       "approved": "1",
       "doc_id": 37,
       "q_id": 20
-    },
-    {
-      "question": "Percentage of Marks in PG?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 21
-    },
-    {
-      "question": "Is Tamil Part I Language in UG Degree",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 24
     },
     {
       "question": "Whether studied UG Degree in UGC Recognized University ",
@@ -3329,6 +3266,49 @@
       "approved": "1",
       "doc_id": 44,
       "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 44,
+      "q_id": 8
     }
   ],
   "UG Degree / Equivalent Marksheet 2": [
@@ -3373,6 +3353,49 @@
       "approved": "1",
       "doc_id": 45,
       "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 45,
+      "q_id": 8
     }
   ],
   "UG Degree / Equivalent Marksheet 3": [
@@ -3417,6 +3440,49 @@
       "approved": "1",
       "doc_id": 46,
       "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 46,
+      "q_id": 8
     }
   ],
   "UG Degree / Equivalent Marksheet 4": [
@@ -3461,6 +3527,49 @@
       "approved": "1",
       "doc_id": 47,
       "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 47,
+      "q_id": 8
     }
   ],
   "UG Degree / Equivalent Marksheet 5": [
@@ -3505,6 +3614,49 @@
       "approved": "1",
       "doc_id": 48,
       "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 8
     }
   ],
   "B.Ed Degree / Equivalent Marksheet": [

@@ -90,22 +90,111 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio465" name="radio465"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc465"
+               ng-change="$ctrl.doc465=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio465" name="radio465"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc465"
+               ng-change="$ctrl.doc465=''">
         Not Matched
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc465=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc465">
+          <option value="">--Select--</option>
+          <option value="Initial Missing">Initial Missing</option>
+          <option value="Incorrect Spelling">Incorrect Spelling</option>
+          <option value="A letter / few letters missing">A letter / few letters missing</option>
+          <option value="Change in name as per Gazette">Change in name as per Gazette</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio465" name="radio465"
-               value="3">
+               value="3" ng-model="$ctrl.radio_values.init_doc465"
+               ng-change="$ctrl.doc465=''">
         Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Date of Publications of Results in UG Mark Sheet
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio466" name="radio466"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio466" name="radio466"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is Tamil Part I Language in UG Degree
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio467" name="radio467"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio467" name="radio467"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div><div class="questions">
+  Percentage of Marks in PG?
+</div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc468"
+               ng-change="$ctrl.doc468=''"
+               class="q_radio radio468" name="radio468"
+               value="1">
+        Matched
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc468=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc468">
+          <option value="">--Select--</option>
+          <option
+            value="Average Percentage of Marks is 35 and above">
+            Average Percentage of Marks is 35 and above
+          </option>
+          <option
+            value="Average Percentage of Marks is 40 and above">
+            Average Percentage of Marks is 40 and above
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc468"
+               class="q_radio radio468" name="radio468" ng-change="$ctrl.doc468=''"
+               value="2">
+        Not Matched
       </label>
     </div>
   </div>

@@ -29,6 +29,7 @@
                 let user_id = req.query.user_id
                 let request = require('request');
                 request('http://localhost:6544/ui/get-json-string/' + user_id, function (error, response, body) {
+                    console.log(response);
                     if (!error && response.statusCode == 200) {
                         let b = JSON.parse(body)
                         if (b.code == 1) {

@@ -6,227 +6,6 @@
     function CandidatesController($scope, $stateParams, $rootScope, $ocLazyLoad, Http, Message) {
         var vm = this;
         $scope.urlPath = window.location.origin;
-        $scope.radio = {};
-        vm.doc13 = '';
-        vm.doc14 = '';
-        vm.doc16 = '';
-        vm.doc24 = '';
-        vm.doc26 = '';
-        vm.doc32 = '';
-        vm.doc34 = '';
-        vm.doc38 = '';
-        vm.doc62 = '';
-        vm.doc64 = '';
-        vm.doc66 = '';
-        vm.doc68 = '';
-        vm.doc610 = '';
-        vm.doc84 = '';
-        vm.doc101 = '';
-        vm.doc123 = '';
-        vm.doc122 = '';
-        vm.doc162 = '';
-        vm.doc163 = '';
-        vm.doc172 = '';
-        vm.doc242 = '';
-        vm.doc232 = '';
-        vm.doc222 = '';
-        vm.doc212 = '';
-        vm.doc202 = '';
-        vm.doc192 = '';
-        vm.doc182 = '';
-        vm.doc254 = '';
-        vm.doc255 = '';
-        vm.doc256 = '';
-        vm.doc252 = '';
-        vm.doc2512 = '';
-        vm.doc2515 = '';
-        vm.doc2519 = '';
-        vm.doc2520 = '';
-        vm.doc2521 = '';
-        vm.doc2528 = '';
-        vm.doc274 = '';
-        vm.doc275 = '';
-        vm.doc276 = '';
-        vm.doc277 = '';
-        vm.doc2713 = '';
-        vm.doc284 = '';
-        vm.doc285 = '';
-        vm.doc286 = '';
-        vm.doc287 = '';
-        vm.doc294 = '';
-        vm.doc295 = '';
-        vm.doc2915 = '';
-        vm.doc296 = '';
-        vm.doc297 = '';
-        vm.doc307 = '';
-        vm.doc305 = '';
-        vm.doc312 = '';
-        vm.doc322 = '';
-        vm.doc324 = '';
-        vm.doc3211 = '';
-        vm.doc3212 = '';
-        vm.doc332 = '';
-        vm.doc334 = '';
-        vm.doc3311 = '';
-        vm.doc3312 = '';
-        vm.doc342 = '';
-        vm.doc344 = '';
-        vm.doc3411 = '';
-        vm.doc3412 = '';
-        vm.doc352 = '';
-        vm.doc3511 = '';
-        vm.doc3512 = '';
-        vm.doc362 = '';
-        vm.doc364 = '';
-        vm.doc372 = '';
-        vm.doc375 = '';
-        vm.doc3715 = '';
-        vm.doc3719 = '';
-        vm.doc3720 = '';
-        vm.doc3721 = '';
-
-        vm.doc382 = '';
-        vm.doc385 = '';
-        vm.doc3815 = '';
-        vm.doc3819 = '';
-        vm.doc3820 = '';
-        vm.doc3821 = '';
-        vm.doc392 = '';
-        vm.doc402 = '';
-        vm.doc412 = '';
-        vm.doc422 = '';
-        vm.doc432 = '';
-        vm.doc442 = '';
-        vm.doc452 = '';
-        vm.doc462 = '';
-        vm.doc472 = '';
-        vm.doc482 = '';
-        vm.doc492 = '';
-        vm.doc502 = '';
-        vm.doc512 = '';
-        vm.doc522 = '';
-        vm.doc532 = '';
-        vm.doc542 = '';
-        vm.doc552 = '';
-        vm.doc562 = '';
-        vm.doc572 = '';
-        vm.doc582 = '';
-        vm.doc592 = '';
-        vm.doc602 = '';
-        vm.doc622 = '';
-        vm.doc632 = '';
-        vm.doc642 = '';
-        vm.doc652 = '';
-        vm.doc662 = '';
-        vm.doc672 = '';
-
-        vm.radio_values = {};
-        vm.radio_values.init_doc13 = "";
-        vm.radio_values.init_doc14 = "";
-        vm.radio_values.init_doc16 = "";
-        vm.radio_values.init_doc24 = "";
-        vm.radio_values.init_doc26 = "";
-        vm.radio_values.init_doc32 = "";
-        vm.radio_values.init_doc34 = "";
-        vm.radio_values.init_doc38 = "";
-        vm.radio_values.init_doc62 = "";
-        vm.radio_values.init_doc64 = "";
-        vm.radio_values.init_doc66 = "";
-        vm.radio_values.init_doc68 = "";
-        vm.radio_values.init_doc610 = "";
-        vm.radio_values.init_doc101 = "";
-        vm.radio_values.init_doc124 = "";
-        vm.radio_values.init_doc162 = "";
-        vm.radio_values.init_doc163 = "";
-        vm.radio_values.init_doc172 = "";
-        vm.radio_values.init_doc84 = "";
-        vm.radio_values.init_doc123 = "";
-        vm.radio_values.init_doc122 = "";
-        vm.radio_values.init_doc53 = "";
-        vm.radio_values.init_doc254 = "";
-        vm.radio_values.init_doc255 = "";
-        vm.radio_values.init_doc257 = "";
-        vm.radio_values.init_doc252 = "";
-        vm.radio_values.init_doc2512 = "";
-        vm.radio_values.init_doc2515 = "";
-        vm.radio_values.init_doc2519 = "";
-        vm.radio_values.init_doc2520 = "";
-        vm.radio_values.init_doc2521 = "";
-        vm.radio_values.init_doc2528 = "";
-        vm.radio_values.init_doc274 = "";
-        vm.radio_values.init_doc275 = "";
-        vm.radio_values.init_doc277 = "";
-        vm.radio_values.init_doc2713 = "";
-        vm.radio_values.init_doc276 = "";
-        vm.radio_values.init_doc284 = "";
-        vm.radio_values.init_doc285 = "";
-        vm.radio_values.init_doc286 = "";
-        vm.radio_values.init_doc287 = "";
-        vm.radio_values.init_doc294 = "";
-        vm.radio_values.init_doc295 = "";
-        vm.radio_values.init_doc2915 = "";
-        vm.radio_values.init_doc296 = "";
-        vm.radio_values.init_doc297 = "";
-        vm.radio_values.init_doc307 = "";
-        vm.radio_values.init_doc305 = "";
-        vm.radio_values.init_doc312 = "";
-        vm.radio_values.init_doc322 = "";
-        vm.radio_values.init_doc324 = "";
-        vm.radio_values.init_doc3211 = "";
-        vm.radio_values.init_doc3212 = "";
-        vm.radio_values.init_doc332 = "";
-        vm.radio_values.init_doc334 = "";
-        vm.radio_values.init_doc3311 = "";
-        vm.radio_values.init_doc3312 = "";
-        vm.radio_values.init_doc342 = "";
-        vm.radio_values.init_doc344 = "";
-        vm.radio_values.init_doc3411 = "";
-        vm.radio_values.init_doc3412 = "";
-        vm.radio_values.init_doc352 = "";
-        vm.radio_values.init_doc3511 = "";
-        vm.radio_values.init_doc3512 = "";
-        vm.radio_values.init_doc362 = "";
-        vm.radio_values.init_doc364 = "";
-        vm.radio_values.init_doc372 = "";
-        vm.radio_values.init_doc375 = "";
-        vm.radio_values.init_doc3715 = "";
-        vm.radio_values.init_doc3719 = "";
-        vm.radio_values.init_doc3720 = "";
-        vm.radio_values.init_doc3721 = "";
-        vm.radio_values.init_doc382 = "";
-        vm.radio_values.init_doc385 = "";
-        vm.radio_values.init_doc3815 = "";
-        vm.radio_values.init_doc3819 = "";
-        vm.radio_values.init_doc3820 = "";
-        vm.radio_values.init_doc3821 = "";
-        vm.radio_values.init_doc392 = "";
-        vm.radio_values.init_doc402 = "";
-        vm.radio_values.init_doc412 = "";
-        vm.radio_values.init_doc422 = "";
-        vm.radio_values.init_doc432 = "";
-        vm.radio_values.init_doc442 = "";
-        vm.radio_values.init_doc452 = "";
-        vm.radio_values.init_doc462 = "";
-        vm.radio_values.init_doc472 = "";
-        vm.radio_values.init_doc482 = "";
-        vm.radio_values.init_doc492 = "";
-        vm.radio_values.init_doc502 = "";
-        vm.radio_values.init_doc512 = "";
-        vm.radio_values.init_doc522 = "";
-        vm.radio_values.init_doc532 = "";
-        vm.radio_values.init_doc542 = "";
-        vm.radio_values.init_doc552 = "";
-        vm.radio_values.init_doc562 = "";
-        vm.radio_values.init_doc572 = "";
-        vm.radio_values.init_doc582 = "";
-        vm.radio_values.init_doc592 = "";
-        vm.radio_values.init_doc602 = "";
-        vm.radio_values.init_doc622 = "";
-        vm.radio_values.init_doc632 = "";
-        vm.radio_values.init_doc642 = "";
-        vm.radio_values.init_doc652 = "";
-        vm.radio_values.init_doc662 = "";
-        vm.radio_values.init_doc672 = "";
         $scope.packages = {
             name: 'candidates',
             finalAction: false,
@@ -245,22 +24,305 @@
             'No Document',
             'Incorrect Document'
         ];
+        $scope.initializeVariables = function() {
+            $scope.radio = {};
+            vm.doc13 = '';
+            vm.doc12 = '';
+            vm.doc14 = '';
+            vm.doc16 = '';
+            vm.doc17 = '';
+            vm.doc22 = '';
+            vm.doc23 = '';
+            vm.doc24 = '';
+            vm.doc26 = '';
+            vm.doc27 = '';
+            vm.doc32 = '';
+            vm.doc34 = '';
+            vm.doc35 = '';
+            vm.doc38 = '';
+            vm.doc39 = '';
+            vm.doc62 = '';
+            vm.doc64 = '';
+            vm.doc66 = '';
+            vm.doc68 = '';
+            vm.doc610 = '';
+            vm.doc611 = '';
+            vm.doc612 = '';
+            vm.doc613 = '';
+            vm.doc614 = '';
+            vm.doc84 = '';
+            vm.doc162 = '';
+            vm.doc123 = '';
+            vm.doc122 = '';
+            vm.doc162 = '';
+            vm.doc163 = '';
+            vm.doc172 = '';
+            vm.doc242 = '';
+            vm.doc232 = '';
+            vm.doc222 = '';
+            vm.doc212 = '';
+            vm.doc202 = '';
+            vm.doc192 = '';
+            vm.doc182 = '';
+            vm.doc254 = '';
+            vm.doc255 = '';
+            vm.doc256 = '';
+            vm.doc252 = '';
+            vm.doc2512 = '';
+            vm.doc2515 = '';
+            vm.doc2519 = '';
+            vm.doc2520 = '';
+            vm.doc2521 = '';
+            vm.doc2528 = '';
+            vm.doc274 = '';
+            vm.doc275 = '';
+            vm.doc276 = '';
+            vm.doc277 = '';
+            vm.doc2713 = '';
+            vm.doc284 = '';
+            vm.doc285 = '';
+            vm.doc286 = '';
+            vm.doc287 = '';
+            vm.doc294 = '';
+            vm.doc295 = '';
+            vm.doc2915 = '';
+            vm.doc296 = '';
+            vm.doc297 = '';
+            vm.doc302 = '';
+            vm.doc307 = '';
+            vm.doc305 = '';
+            vm.doc312 = '';
+            vm.doc313 = '';
+            vm.doc322 = '';
+            vm.doc324 = '';
+            vm.doc3211 = '';
+            vm.doc3212 = '';
+            vm.doc332 = '';
+            vm.doc334 = '';
+            vm.doc3311 = '';
+            vm.doc3312 = '';
+            vm.doc342 = '';
+            vm.doc344 = '';
+            vm.doc3411 = '';
+            vm.doc3412 = '';
+            vm.doc352 = '';
+            vm.doc3511 = '';
+            vm.doc3512 = '';
+            vm.doc362 = '';
+            vm.doc364 = '';
+            vm.doc372 = '';
+            vm.doc373 = '';
+            vm.doc374 = '';
+            vm.doc375 = '';
+            vm.doc3715 = '';
+            vm.doc3719 = '';
+            vm.doc3720 = '';
+            vm.doc3721 = '';
 
+            vm.doc382 = '';
+            vm.doc385 = '';
+            vm.doc3815 = '';
+            vm.doc3819 = '';
+            vm.doc3820 = '';
+            vm.doc3821 = '';
+            vm.doc392 = '';
+            vm.doc402 = '';
+            vm.doc412 = '';
+            vm.doc422 = '';
+            vm.doc432 = '';
+            vm.doc442 = '';
+            vm.doc445 = '';
+            vm.doc448 = '';
+            vm.doc455 = '';
+            vm.doc458 = '';
+            vm.doc465 = '';
+            vm.doc468 = '';
+            vm.doc452 = '';
+            vm.doc462 = '';
+            vm.doc472 = '';
+            vm.doc475 = '';
+            vm.doc478 = '';
+            vm.doc482 = '';
+            vm.doc485 = '';
+            vm.doc488 = '';
+            vm.doc492 = '';
+            vm.doc502 = '';
+            vm.doc512 = '';
+            vm.doc522 = '';
+            vm.doc532 = '';
+            vm.doc542 = '';
+            vm.doc552 = '';
+            vm.doc562 = '';
+            vm.doc572 = '';
+            vm.doc582 = '';
+            vm.doc592 = '';
+            vm.doc602 = '';
+            vm.doc622 = '';
+            vm.doc632 = '';
+            vm.doc642 = '';
+            vm.doc652 = '';
+            vm.doc662 = '';
+            vm.doc672 = '';
+            vm.radio_values = {};
+            vm.radio_values.init_doc12 = "";
+            vm.radio_values.init_doc13 = "";
+            vm.radio_values.init_doc14 = "";
+            vm.radio_values.init_doc16 = "";
+            vm.radio_values.init_doc17 = "";
+            vm.radio_values.init_doc22 = "";
+            vm.radio_values.init_doc23 = "";
+            vm.radio_values.init_doc24 = "";
+            vm.radio_values.init_doc26 = "";
+            vm.radio_values.init_doc27 = "";
+            vm.radio_values.init_doc32 = "";
+            vm.radio_values.init_doc34 = "";
+            vm.radio_values.init_doc35 = "";
+            vm.radio_values.init_doc38 = "";
+            vm.radio_values.init_doc39 = "";
+            vm.radio_values.init_doc62 = "";
+            vm.radio_values.init_doc64 = "";
+            vm.radio_values.init_doc66 = "";
+            vm.radio_values.init_doc68 = "";
+            vm.radio_values.init_doc610 = "";
+            vm.radio_values.init_doc611 = "";
+            vm.radio_values.init_doc612 = "";
+            vm.radio_values.init_doc613 = "";
+            vm.radio_values.init_doc614 = "";
+            vm.radio_values.init_doc162 = "";
+            vm.radio_values.init_doc124 = "";
+            vm.radio_values.init_doc162 = "";
+            vm.radio_values.init_doc163 = "";
+            vm.radio_values.init_doc172 = "";
+            vm.radio_values.init_doc84 = "";
+            vm.radio_values.init_doc123 = "";
+            vm.radio_values.init_doc122 = "";
+            vm.radio_values.init_doc53 = "";
+            vm.radio_values.init_doc254 = "";
+            vm.radio_values.init_doc255 = "";
+            vm.radio_values.init_doc257 = "";
+            vm.radio_values.init_doc252 = "";
+            vm.radio_values.init_doc2512 = "";
+            vm.radio_values.init_doc2515 = "";
+            vm.radio_values.init_doc2519 = "";
+            vm.radio_values.init_doc2520 = "";
+            vm.radio_values.init_doc2521 = "";
+            vm.radio_values.init_doc2528 = "";
+            vm.radio_values.init_doc274 = "";
+            vm.radio_values.init_doc275 = "";
+            vm.radio_values.init_doc277 = "";
+            vm.radio_values.init_doc2713 = "";
+            vm.radio_values.init_doc276 = "";
+            vm.radio_values.init_doc284 = "";
+            vm.radio_values.init_doc285 = "";
+            vm.radio_values.init_doc286 = "";
+            vm.radio_values.init_doc287 = "";
+            vm.radio_values.init_doc294 = "";
+            vm.radio_values.init_doc295 = "";
+            vm.radio_values.init_doc2915 = "";
+            vm.radio_values.init_doc296 = "";
+            vm.radio_values.init_doc297 = "";
+            vm.radio_values.init_doc302 = "";
+            vm.radio_values.init_doc307 = "";
+            vm.radio_values.init_doc305 = "";
+            vm.radio_values.init_doc312 = "";
+            vm.radio_values.init_doc313 = "";
+            vm.radio_values.init_doc322 = "";
+            vm.radio_values.init_doc324 = "";
+            vm.radio_values.init_doc3211 = "";
+            vm.radio_values.init_doc3212 = "";
+            vm.radio_values.init_doc332 = "";
+            vm.radio_values.init_doc334 = "";
+            vm.radio_values.init_doc3311 = "";
+            vm.radio_values.init_doc3312 = "";
+            vm.radio_values.init_doc342 = "";
+            vm.radio_values.init_doc344 = "";
+            vm.radio_values.init_doc3411 = "";
+            vm.radio_values.init_doc3412 = "";
+            vm.radio_values.init_doc352 = "";
+            vm.radio_values.init_doc3511 = "";
+            vm.radio_values.init_doc3512 = "";
+            vm.radio_values.init_doc362 = "";
+            vm.radio_values.init_doc364 = "";
+            vm.radio_values.init_doc372 = "";
+            vm.radio_values.init_doc373 = "";
+            vm.radio_values.init_doc374 = "";
+            vm.radio_values.init_doc375 = "";
+            vm.radio_values.init_doc3715 = "";
+            vm.radio_values.init_doc3719 = "";
+            vm.radio_values.init_doc3720 = "";
+            vm.radio_values.init_doc3721 = "";
+            vm.radio_values.init_doc382 = "";
+            vm.radio_values.init_doc385 = "";
+            vm.radio_values.init_doc3815 = "";
+            vm.radio_values.init_doc3819 = "";
+            vm.radio_values.init_doc3820 = "";
+            vm.radio_values.init_doc3821 = "";
+            vm.radio_values.init_doc392 = "";
+            vm.radio_values.init_doc402 = "";
+            vm.radio_values.init_doc412 = "";
+            vm.radio_values.init_doc422 = "";
+            vm.radio_values.init_doc432 = "";
+            vm.radio_values.init_doc442 = "";
+            vm.radio_values.init_doc445 = "";
+            vm.radio_values.init_doc448 = "";
+            vm.radio_values.init_doc455 = "";
+            vm.radio_values.init_doc458 = "";
+            vm.radio_values.init_doc465 = "";
+            vm.radio_values.init_doc468 = "";
+            vm.radio_values.init_doc475 = "";
+            vm.radio_values.init_doc478 = "";
+            vm.radio_values.init_doc485 = "";
+            vm.radio_values.init_doc488 = "";
+            vm.radio_values.init_doc452 = "";
+            vm.radio_values.init_doc462 = "";
+            vm.radio_values.init_doc472 = "";
+            vm.radio_values.init_doc482 = "";
+            vm.radio_values.init_doc492 = "";
+            vm.radio_values.init_doc502 = "";
+            vm.radio_values.init_doc512 = "";
+            vm.radio_values.init_doc522 = "";
+            vm.radio_values.init_doc532 = "";
+            vm.radio_values.init_doc542 = "";
+            vm.radio_values.init_doc552 = "";
+            vm.radio_values.init_doc562 = "";
+            vm.radio_values.init_doc572 = "";
+            vm.radio_values.init_doc582 = "";
+            vm.radio_values.init_doc592 = "";
+            vm.radio_values.init_doc602 = "";
+            vm.radio_values.init_doc622 = "";
+            vm.radio_values.init_doc632 = "";
+            vm.radio_values.init_doc642 = "";
+            vm.radio_values.init_doc652 = "";
+            vm.radio_values.init_doc662 = "";
+            vm.radio_values.init_doc672 = "";
+        };
+        $scope.initializeVariables();
 
         $scope.remarksText = {
             '3c2': 'New community',
             '3c4': 'Not relevant reason',
+            '3c5': 'New certificate number',
             '3c8': 'Sub Caste',
-            '1c3': 'New date of birth',
+            '3c9': 'Comunity certificate issued with',
+            '1c2': 'Name in the certificate',
+            '1c3': 'New date of publication',
             '1c4': 'New year of passing',
             '1c6': 'Not relevant reason',
+            '1c7': 'New certificate number',
+            '2c2': 'Name in the certificate',
+            '2c3': 'New Date of publication',
             '2c4': 'New year of passing',
             '2c6': 'Not relevant reason',
+            '2c7': 'New certificate number',
             '6c2': 'New Authority',
             '6c4': 'Relevant PG Degree Reason',
             '6c6': 'Relevant PG Degree in Tamil Reason',
             '6c8': 'Relevant PHD Degree in Tamil Reason',
             '6c10': 'Relevant MEd Degree in Tamil Reason',
+            '6c11': 'PG & PHD Degree not matched',
+            '6c12': 'Only (PG / PHD) / SLET / NET Degree not matched',
+            '6c13': 'PG and M.Ed degree and Ph.D not matched',
+            '6c14': 'both PG and M.Ed (with (or) without Ph.D not matched',
             '10c1': 'New Gender',
             '12c2': 'Relevant reason',
             '16c2': 'New Gender',
@@ -290,9 +352,11 @@
             '29c15': 'Foregin document relevant',
             '29c6': 'New Mode of study',
             '29c7': 'Not relevant reason',
+            '30c2': 'New Certificate Number',
             '30c7': 'Not relevant reason',
             '30c5': 'New Birth Certificate Marksheet',
             '31c2': 'New relevant reason',
+            '31c3': 'New Certificate Number',
             '32c2': 'New relevant reason',
             '32c4': 'New Degree Mark Sheets relevant reason',
             '32c11': 'New Date of Passing',
@@ -311,6 +375,8 @@
             '36c2': 'Last studied conduct relevant',
             '36c4': 'Latest Conduct Certificate relevant reason',
             '37c2': 'Document relevant reason',
+            '37c3': 'Certificate Number',
+            '37c4': 'Name in the certificate',
             '37c5': 'UG Marksheet relevant reason',
             '37c15': 'New Month & Year of passing',
             '37c19': 'Period of study',
@@ -328,10 +394,20 @@
             '42c2': 'Relevant document reason',
             '43c2': 'Relevant document reason',
             '44c2': 'Relevant document reason',
+            '44c5': 'Name in the marksheet',
+            '44c8': 'Percentage of marks in UG',
+            '45c5': 'Name in the marksheet',
+            '45c8': 'Percentage of marks in UG',
+            '46c5': 'Name in the marksheet',
+            '46c8': 'Percentage of marks in UG',
             '45c2': 'Relevant document reason',
             '46c2': 'Relevant document reason',
             '47c2': 'Relevant document reason',
+            '47c5': 'Name in the marksheet',
+            '47c8': 'Percentage of marks in UG',
             '48c2': 'Relevant document reason',
+            '48c5': 'Name in the marksheet',
+            '48c8': 'Percentage of marks in UG',
             '49c2': 'Relevant document reason',
             '50c2': 'Relevant document reason',
             '51c2': 'Relevant document reason',
@@ -433,170 +509,7 @@
         $scope.pageSize = 10;
 
         $scope.resetValues = function () {
-            vm.doc13 = '';
-            vm.doc14 = '';
-            vm.doc16 = '';
-            vm.doc24 = '';
-            vm.doc26 = '';
-            vm.doc32 = '';
-            vm.doc34 = '';
-            vm.doc38 = '';
-            vm.doc62 = '';
-            vm.doc64 = '';
-            vm.doc66 = '';
-            vm.doc68 = '';
-            vm.doc610 = '';
-            vm.doc84 = '';
-            vm.doc101 = '';
-            vm.doc123 = '';
-            vm.doc122 = '';
-            vm.doc162 = '';
-            vm.doc163 = '';
-            vm.doc172 = '';
-            vm.doc242 = '';
-            vm.doc232 = '';
-            vm.doc222 = '';
-            vm.doc212 = '';
-            vm.doc202 = '';
-            vm.doc192 = '';
-            vm.doc182 = '';
-            vm.doc254 = '';
-            vm.doc255 = '';
-            vm.doc256 = '';
-            vm.doc252 = '';
-            vm.doc2512 = '';
-            vm.doc2515 = '';
-            vm.doc2519 = '';
-            vm.doc2520 = '';
-            vm.doc2521 = '';
-            vm.doc2528 = '';
-            vm.doc274 = '';
-            vm.doc275 = '';
-            vm.doc276 = '';
-            vm.doc277 = '';
-            vm.doc2713 = '';
-            vm.doc284 = '';
-            vm.doc285 = '';
-            vm.doc286 = '';
-            vm.doc287 = '';
-            vm.doc294 = '';
-            vm.doc295 = '';
-            vm.doc2915 = '';
-            vm.doc296 = '';
-            vm.doc297 = '';
-            vm.doc307 = '';
-            vm.doc305 = '';
-            vm.doc312 = '';
-            vm.doc322 = '';
-            vm.doc324 = '';
-            vm.doc3211 = '';
-            vm.doc3212 = '';
-            vm.doc332 = '';
-            vm.doc334 = '';
-            vm.doc3311 = '';
-            vm.doc3312 = '';
-            vm.doc342 = '';
-            vm.doc344 = '';
-            vm.doc3411 = '';
-            vm.doc3412 = '';
-            vm.doc352 = '';
-            vm.doc3511 = '';
-            vm.doc3512 = '';
-            vm.doc362 = '';
-            vm.doc364 = '';
-            vm.doc372 = '';
-            vm.doc375 = '';
-            vm.doc3715 = '';
-            vm.doc3719 = '';
-            vm.doc3720 = '';
-            vm.doc3721 = '';
-
-            vm.doc382 = '';
-            vm.doc385 = '';
-            vm.doc3815 = '';
-            vm.doc3819 = '';
-            vm.doc3820 = '';
-            vm.doc3821 = '';
-            vm.radio_values = {};
-            vm.radio_values.init_doc13 = "";
-            vm.radio_values.init_doc14 = "";
-            vm.radio_values.init_doc16 = "";
-            vm.radio_values.init_doc24 = "";
-            vm.radio_values.init_doc26 = "";
-            vm.radio_values.init_doc32 = "";
-            vm.radio_values.init_doc34 = "";
-            vm.radio_values.init_doc38 = "";
-            vm.radio_values.init_doc62 = "";
-            vm.radio_values.init_doc64 = "";
-            vm.radio_values.init_doc66 = "";
-            vm.radio_values.init_doc68 = "";
-            vm.radio_values.init_doc610 = "";
-            vm.radio_values.init_doc101 = "";
-            vm.radio_values.init_doc124 = "";
-            vm.radio_values.init_doc162 = "";
-            vm.radio_values.init_doc163 = "";
-            vm.radio_values.init_doc172 = "";
-            vm.radio_values.init_doc84 = "";
-            vm.radio_values.init_doc123 = "";
-            vm.radio_values.init_doc122 = "";
-            vm.radio_values.init_doc53 = "";
-            vm.radio_values.init_doc254 = "";
-            vm.radio_values.init_doc255 = "";
-            vm.radio_values.init_doc257 = "";
-            vm.radio_values.init_doc252 = "";
-            vm.radio_values.init_doc2512 = "";
-            vm.radio_values.init_doc2515 = "";
-            vm.radio_values.init_doc2519 = "";
-            vm.radio_values.init_doc2520 = "";
-            vm.radio_values.init_doc2521 = "";
-            vm.radio_values.init_doc2528 = "";
-            vm.radio_values.init_doc274 = "";
-            vm.radio_values.init_doc275 = "";
-            vm.radio_values.init_doc277 = "";
-            vm.radio_values.init_doc2713 = "";
-            vm.radio_values.init_doc276 = "";
-            vm.radio_values.init_doc284 = "";
-            vm.radio_values.init_doc285 = "";
-            vm.radio_values.init_doc286 = "";
-            vm.radio_values.init_doc287 = "";
-            vm.radio_values.init_doc294 = "";
-            vm.radio_values.init_doc295 = "";
-            vm.radio_values.init_doc2915 = "";
-            vm.radio_values.init_doc296 = "";
-            vm.radio_values.init_doc297 = "";
-            vm.radio_values.init_doc307 = "";
-            vm.radio_values.init_doc305 = "";
-            vm.radio_values.init_doc312 = "";
-            vm.radio_values.init_doc322 = "";
-            vm.radio_values.init_doc324 = "";
-            vm.radio_values.init_doc3211 = "";
-            vm.radio_values.init_doc3212 = "";
-            vm.radio_values.init_doc332 = "";
-            vm.radio_values.init_doc334 = "";
-            vm.radio_values.init_doc3311 = "";
-            vm.radio_values.init_doc3312 = "";
-            vm.radio_values.init_doc342 = "";
-            vm.radio_values.init_doc344 = "";
-            vm.radio_values.init_doc3411 = "";
-            vm.radio_values.init_doc3412 = "";
-            vm.radio_values.init_doc352 = "";
-            vm.radio_values.init_doc3511 = "";
-            vm.radio_values.init_doc3512 = "";
-            vm.radio_values.init_doc362 = "";
-            vm.radio_values.init_doc364 = "";
-            vm.radio_values.init_doc372 = "";
-            vm.radio_values.init_doc375 = "";
-            vm.radio_values.init_doc3715 = "";
-            vm.radio_values.init_doc3719 = "";
-            vm.radio_values.init_doc3720 = "";
-            vm.radio_values.init_doc3721 = "";
-            vm.radio_values.init_doc382 = "";
-            vm.radio_values.init_doc385 = "";
-            vm.radio_values.init_doc3815 = "";
-            vm.radio_values.init_doc3819 = "";
-            vm.radio_values.init_doc3820 = "";
-            vm.radio_values.init_doc3821 = "";
-            $scope.radio = {};
+            $scope.initializeVariables();
             $('#dd-comment-2').val('');
             $('#dd-comment-3').val('');
             $scope.packages.comment = '';
@@ -758,8 +671,6 @@
         $scope.showModalData = function () {
             $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
             $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
-            console.log('selected path name');
-            console.log($scope.selectedDocPath);
             if ($scope.selectedDocType == 'General Information') {
                 $('#docFrame').attr("src", '../assets/src/images/general information.svg');
             } else {
@@ -921,7 +832,7 @@
                     console.log($("#" + event.target.id + "_age").val('abcded'));
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
-                $("#doc14, #doc24, #doc254, #doc274, #doc284, #doc294,  #doc2515").datepicker({
+                $("#doc13, #doc14, #doc24, #doc254, #doc274, #doc284, #doc294,  #doc2515").datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -1096,7 +1007,7 @@
                 if (object['code'] == 1) {
                     $("#loader").hide();
                     $scope.count++;
-                    $("body").append("<a id='downloadable" + $scope.count + "' download target='_blank' href='" + window.location.origin + "/api/tamilnadu/candidates/download?file=" + number + "'></a>")
+                    $("body").append("<a id='downloadable" + $scope.count + "' download target='_blank' href='" + $scope.urlPath+ "/api/tamilnadu/candidates/download?file=" + number + "'></a>")
                     setTimeout(function () {
                         $("#downloadable" + $scope.count)[0].click();
                         $("#downloadable" + $scope.count).remove();
@@ -1113,7 +1024,7 @@
             var formData = new FormData();
             formData.append('file', $('#file')[0].files[0]);
             $.ajax({
-                url: window.location.origin + '/api/tamilnadu/candidates/import-candidates',
+                url: $scope.urlPath + '/api/tamilnadu/candidates/import-candidates',
                 type: 'POST',
                 data: formData,
                 processData: false,
@@ -1136,19 +1047,20 @@
 
         $scope.showApplicationForm = function () {
             let user_id = $scope.rows[$scope.selectedIndex]['oum_user_id'];
-            Http.getLocal("/api/get-pdf", {
-                user_id: user_id
-            }).then(function (response) {
-                if (response.code == 1) {
-                    $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
-                    $("#download")[0].click();
-                    setTimeout(function () {
-                        $("#download").remove();
-                    })
-                } else {
-                    alert(response.message)
-                }
-            });
+            window.open($scope.urlPath+'/assets/uploads/'+user_id+'.pdf');
+            // Http.getLocal("/api/get-pdf", {
+            //     user_id: user_id
+            // }).then(function (response) {
+            //     if (response.code == 1) {
+            //         $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
+            //         $("#download")[0].click();
+            //         setTimeout(function () {
+            //             $("#download").remove();
+            //         })
+            //     } else {
+            //         alert(response.message)
+            //     }
+            // });
         };
 
         $scope.showExperienceModal = function () {

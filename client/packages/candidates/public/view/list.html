@@ -156,8 +156,8 @@
                 <div class="col-sm-12">
                     <div class="col-xs-4">Candidate Details</div>
                     <div class="col-xs-6 text-right">
-                        <!--<span ng-click="showApplicationForm()"-->
-                        <!--style="text-decoration: underline">Application Form</span>-->
+                        <span ng-click="showApplicationForm()"
+                              style="text-decoration: underline">Application Form</span>
                     </div>
                     <div class="col-xs-2">
                             <span ng-click="closeCustomModal()" class="close"
@@ -740,8 +740,13 @@
                                     <td>
                                         {{documentWithQuestions[key][$index]['question']}}
                                     </td>
-                                    <td ng-if="q.additional_info ==''"> {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}</td>
-                                    <td ng-if="q.additional_info !=''"> {{remarksText[q['doc_id'] +'c'+ q.qn_id]}} :- {{q.additional_info}}</td>
+                                    <td ng-if="q.additional_info ==''">
+                                        {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}
+                                    </td>
+                                    <td ng-if="q.additional_info !=''">
+                                        {{remarksText[q['doc_id'] +'c'+
+                                        q.qn_id]}} :- {{q.additional_info}}
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

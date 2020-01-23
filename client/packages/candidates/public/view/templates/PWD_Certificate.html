@@ -41,21 +41,28 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio313" name="radio313"
-                       value="1">
+                       value="1" ng-model="$ctrl.radio_values.init_doc313"
+                       ng-change="$ctrl.doc313=''">
                 Matching
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio313" name="radio313"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc313"
+                       ng-change="$ctrl.doc313=''">
                 Not Matching
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc313=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc313"/>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio313" name="radio313"
-                       value="3">
+                       value="3" ng-model="$ctrl.radio_values.init_doc313"
+                       ng-change="$ctrl.doc313=''">
                 Not Clear
             </label>
         </div>

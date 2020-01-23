@@ -22,11 +22,35 @@
                 Not Matched
             </label>
         </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the document relevant to the Claim of PG Degree in Tamil Medium?
+    </div>
+    <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio63" name="radio63"
-                       value="3">
-                Not Clear
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="1" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="2" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc66=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc66">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
             </label>
         </div>
     </div>
@@ -81,37 +105,6 @@
                 <input type="radio" class="q_radio radio65" name="radio65"
                        value="2">
                 No
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
-        Is the document relevant to the Claim of PG Degree in Tamil Medium?
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
-                       value="1" ng-model="$ctrl.radio_values.init_doc66"
-                       ng-change="$ctrl.doc66=''">
-                Relevant
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
-                       value="2" ng-model="$ctrl.radio_values.init_doc66"
-                       ng-change="$ctrl.doc66=''">
-                Not Relevant
-            </label>
-            <label
-              style="{{ $ctrl.radio_values.init_doc66=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc66">
-                    <option value="">--Select--</option>
-                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
-                        {{r}}
-                    </option>
-                </select>
             </label>
         </div>
     </div>
@@ -232,8 +225,18 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio611" name="radio611"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc611"
+                       ng-change="$ctrl.doc611=''">
                 Not Matched
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc611=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc611">
+                    <option value="">--Select--</option>
+                    <option value="Not matched for PG">Not matched for PG</option>
+                    <option value="Not matched for Ph.D">Not matched for Ph.D</option>
+                    <option value="Not matched for both PG and Ph.D">Not matched for both PG and Ph.D</option>
+                </select>
             </label>
         </div>
     </div>
@@ -252,8 +255,16 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio612" name="radio612"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc612"
+                       ng-change="$ctrl.doc612=''">
                 Not Matched
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc612=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc612">
+                    <option value="">--Select--</option>
+                    <option value="Not matched for PG">Not matched for PG</option>
+                </select>
             </label>
         </div>
     </div>
@@ -272,8 +283,21 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio613" name="radio613"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc613"
+                       ng-change="$ctrl.doc613=''">
                 Not Matched
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc613=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc613">
+                    <option value="">--Select--</option>
+                    <option value="Not matched for PG">Not matched for PG</option>
+                    <option value="Not matched for M.Ed">Not matched for M.Ed</option>
+                    <option value="Not matched for Ph.D">Not matched for Ph.D</option>
+                    <option value="Not matched for PG & M.Ed">Not matched for PG & M.Ed</option>
+                    <option value="Not matched for M.Ed & Ph.D">Not matched for M.Ed & Ph.D</option>
+                    <option value="Not matched for PG, M.Ed & Ph.D">Not matched for PG, M.Ed & Ph.D</option>
+                </select>
             </label>
         </div>
     </div>
@@ -292,8 +316,18 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio614" name="radio614"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc614"
+                       ng-change="$ctrl.doc614=''">
                 Not Matched
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc614=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc614">
+                    <option value="">--Select--</option>
+                    <option value="Not matched for PG">Not matched for PG</option>
+                    <option value="Not matched for M.Ed">Not matched for M.Ed</option>
+                    <option value="Not matched for PG & M.Ed">Not matched for PG & M.Ed</option>
+                </select>
             </label>
         </div>
     </div>
