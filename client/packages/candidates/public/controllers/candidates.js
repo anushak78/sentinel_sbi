@@ -120,10 +120,8 @@
             vm.doc3721 = '';
 
             vm.doc382 = '';
-            vm.doc385 = '';
-            vm.doc3815 = '';
-            vm.doc3819 = '';
-            vm.doc3820 = '';
+            vm.doc384 = '';
+            vm.doc3818 = '';
             vm.doc3821 = '';
             vm.doc392 = '';
             vm.doc402 = '';
@@ -132,18 +130,23 @@
             vm.doc432 = '';
             vm.doc442 = '';
             vm.doc445 = '';
+            vm.doc446 = '';
             vm.doc448 = '';
             vm.doc455 = '';
+            vm.doc456 = '';
             vm.doc458 = '';
             vm.doc465 = '';
+            vm.doc466 = '';
             vm.doc468 = '';
             vm.doc452 = '';
             vm.doc462 = '';
             vm.doc472 = '';
             vm.doc475 = '';
+            vm.doc476 = '';
             vm.doc478 = '';
             vm.doc482 = '';
             vm.doc485 = '';
+            vm.doc486 = '';
             vm.doc488 = '';
             vm.doc492 = '';
             vm.doc502 = '';
@@ -252,10 +255,8 @@
             vm.radio_values.init_doc3720 = "";
             vm.radio_values.init_doc3721 = "";
             vm.radio_values.init_doc382 = "";
-            vm.radio_values.init_doc385 = "";
-            vm.radio_values.init_doc3815 = "";
-            vm.radio_values.init_doc3819 = "";
-            vm.radio_values.init_doc3820 = "";
+            vm.radio_values.init_doc384 = "";
+            vm.radio_values.init_doc3818 = "";
             vm.radio_values.init_doc3821 = "";
             vm.radio_values.init_doc392 = "";
             vm.radio_values.init_doc402 = "";
@@ -264,14 +265,19 @@
             vm.radio_values.init_doc432 = "";
             vm.radio_values.init_doc442 = "";
             vm.radio_values.init_doc445 = "";
+            vm.radio_values.init_doc446 = "";
             vm.radio_values.init_doc448 = "";
             vm.radio_values.init_doc455 = "";
+            vm.radio_values.init_doc456 = "";
             vm.radio_values.init_doc458 = "";
             vm.radio_values.init_doc465 = "";
+            vm.radio_values.init_doc466 = "";
             vm.radio_values.init_doc468 = "";
             vm.radio_values.init_doc475 = "";
+            vm.radio_values.init_doc476 = "";
             vm.radio_values.init_doc478 = "";
             vm.radio_values.init_doc485 = "";
+            vm.radio_values.init_doc486 = "";
             vm.radio_values.init_doc488 = "";
             vm.radio_values.init_doc452 = "";
             vm.radio_values.init_doc462 = "";
@@ -383,10 +389,8 @@
             '37c20': 'Mode of study',
             '37c21': 'Percentage of marks',
             '38c2': 'Document relevant reason',
-            '38c5': 'UG Marksheet relevant reason',
-            '38c15': 'New Month & Year of passing',
-            '38c19': 'Period of study',
-            '38c20': 'Mode of study',
+            '38c4': 'New name in the marksheet',
+            '38c18': 'New Date of publications',
             '38c21': 'Percentage of marks',
             '39c2': 'Relevant document reason',
             '40c2': 'Relevant document reason',
@@ -395,18 +399,23 @@
             '43c2': 'Relevant document reason',
             '44c2': 'Relevant document reason',
             '44c5': 'Name in the marksheet',
+            '44c6': 'New date of publications',
             '44c8': 'Percentage of marks in UG',
             '45c5': 'Name in the marksheet',
+            '45c6': 'New date of publications',
             '45c8': 'Percentage of marks in UG',
             '46c5': 'Name in the marksheet',
+            '46c6': 'New date of publications',
             '46c8': 'Percentage of marks in UG',
             '45c2': 'Relevant document reason',
             '46c2': 'Relevant document reason',
             '47c2': 'Relevant document reason',
             '47c5': 'Name in the marksheet',
+            '47c6': 'New date of publications',
             '47c8': 'Percentage of marks in UG',
             '48c2': 'Relevant document reason',
             '48c5': 'Name in the marksheet',
+            '48c6': 'New date of publications',
             '48c8': 'Percentage of marks in UG',
             '49c2': 'Relevant document reason',
             '50c2': 'Relevant document reason',
@@ -825,7 +834,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3815").datepicker({
+                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -841,7 +850,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295, #doc2519, #doc3719, #doc3819').datepicker({
+                $('#doc255, #doc275, #doc285, #doc295, #doc2519, #doc3719').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,

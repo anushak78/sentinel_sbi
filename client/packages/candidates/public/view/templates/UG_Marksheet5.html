@@ -130,15 +130,29 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio486" name="radio486"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc486"
+               ng-change="$ctrl.doc486=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio486" name="radio486"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc486"
+               ng-change="$ctrl.doc486=''">
         Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc486=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc486" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc486"
+               class="modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio486" name="radio486"
+               value="3" ng-model="$ctrl.radio_values.init_doc486"
+               ng-change="$ctrl.doc486=''">
+        Not Clear
       </label>
     </div>
   </div>
