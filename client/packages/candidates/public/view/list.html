@@ -1045,67 +1045,365 @@
                                     <!--style="font-size: 14px">{{rows[selectedIndex]['oum_user_id']}}</span>-->
                                     <!--</section>-->
                                     <!--</div>-->
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Name:<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
-                                        </section>
+                                    <div id="general_info">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Name:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Father Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Mother Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                D.O.B. :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['octm_category_desc']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Gender :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Payment Status :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                State Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
                                     </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Father Name :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
-                                        </section>
+
+                                    <div ng-if="selectedDocType=='10th / SSLC Certificate'">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               SSC University :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               SSC Tamil Pass :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_tamil_pass']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               SSC Full Time:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_part_full_time']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               SSC Percentage:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['scc_percentage']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               SSC Year Of Passing:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_year_of_passing']}}</span>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Mother Name :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_mother_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_mother_last_name']}}</span>
-                                        </section>
+                                     <div ng-if="selectedDocType=='12th / HSC Certificate'">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               HSC University :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               HSC Tamil Pass :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_tamil_pass']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               HSC Full Time:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_part_full_time']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               HSC Percentage:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_percentage']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               HSC Year Of Passing:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_year_of_passing']}}</span>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            D.O.B. :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth'] | date:'dd-MM-yyyy'}}</span>
-                                        </section>
+                                     <div ng-if="selectedDocType.indexOf('UG') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG College Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_college_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Degree Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_degree_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Duration:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_duration']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Main Subject:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_main_subject']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Medium of Instructions:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_medium_of_instruction']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Percentage:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_percentage']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Recognised University:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_recognised_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Ragular/Part/Distance:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_regular_part_distance']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Study From:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_study_from']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Study To:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_study_to']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Subject Group:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_subject_group']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG University:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Tamil Pass:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_tamil_pass']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               UG Year of Passing:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_year_of_passing']}}</span>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Community :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['octm_category_desc']}}</span>
-                                        </section>
+
+                                      <div ng-if="selectedDocType.indexOf('PG') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG College Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_college_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Degree Name :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_degree_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Duration:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_duration']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Main Subject:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Medium of Instructions:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_medium_of_instruction']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Percentage:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_percentage']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Recognised University:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_recognised_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Ragular/Part/Distance:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_regular_part_distance']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Study From:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_study_from']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Study To:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_study_to']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Subject Group:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_subject_group']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG University:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Tamil Pass:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_tamil_pass']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                               PG Year of Passing:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_year_of_passing']}}</span>
+                                            </section>
+                                        </div>
                                     </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Gender :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
-                                        </section>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            Payment Status :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_status_desc']}}</span>
-                                        </section>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6">
-                                        <section class="panel-body"
-                                                 style="font-size: 12px">
-                                            State Name :<br/><span
-                                                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
-                                        </section>
-                                    </div>
-                                    <div class="clearfix"></div>
                                 </div>
                                 <div style="width: 100%; height: 1%; margin-top: 1%;"
                                      align="center">

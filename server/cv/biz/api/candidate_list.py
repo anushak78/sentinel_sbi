@@ -322,7 +322,47 @@ def get_candidate_details(request):
     osm.osm_status_desc,
     oci.oci_photo_image_path,
     oci.oci_sign_image_path,
-    oum.*
+    oum.*,
+    oacd1.oacd_created_by,oacd1.oacd_year_of_passing as ssc_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
+      oacd1.oacd_university_other as ssc_university_other,
+      oacd1.oacd_percentage as scc_percentage,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_part_full_time) as ssc_part_full_time,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_tamil_pass) as ssc_tamil_pass,
+       oacd2.oacd_year_of_passing as hsc_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd2.oacd_university) as hsc_university,
+      oacd2.oacd_university_other as hsc_university_other,
+      oacd2.oacd_percentage as hsc_percentage,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd2.oacd_part_full_time) as hsc_part_full_time,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd2.oacd_tamil_pass) as hsc_tamil_pass,
+       oacd3.oacd_specialization as ug_college_name,
+              oacd3.oacd_year_of_passing as ug_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd3.oacd_university) as ug_university,
+      oacd4.oacd_percentage as ug_percentage,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd3.oacd_part_full_time) as ug_medium_of_instruction,
+            (select osdm_sub_degree_desc from OES_SUB_DEGREE_MASTER where osdm_sub_degree_pk=oacd3.oacd_degree_subject_fk) as ug_degree_name,
+      (select osmsm_sub_main_desc from OES_SUBJECT_MAIN_SUB_MASTER where osmsm_sub_main_pk::varchar=oacd3.oacd_major_subject_fk) as ug_main_subject,
+             (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_tamil_pass) as ug_tamil_pass,
+             oacd3.oacd_period_of_study_from as ug_study_from,
+             oacd3.oacd_period_of_study_to as ug_study_to,
+             oacd3.oacd_duration as ug_duration,
+   (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd3.oacd_recognised_university) as ug_recognised_university,
+   (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd3.oacd_regular_part_distance) as ug_regular_part_distance,
+   (select osgm_sub_grp_desc from OES_SUBJECT_GRP_MASTER where osgm_sub_grp_pk::varchar=oacd3.oacd_subject_group) as ug_subject_group,
+   oacd4.oacd_specialization as pg_college_name,
+              oacd4.oacd_year_of_passing as pg_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_university) as pg_university,
+      oacd4.oacd_percentage as pg_percentage,
+       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_part_full_time) as pg_medium_of_instruction,
+      (select osdm_sub_degree_desc from OES_SUB_DEGREE_MASTER where osdm_sub_degree_pk=oacd4.oacd_degree_subject_fk) as pg_degree_name,
+      (select osmsm_sub_main_desc from OES_SUBJECT_MAIN_SUB_MASTER where osmsm_sub_main_pk::varchar=oacd4.oacd_major_subject_fk) as pg_main_subject,
+             (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_tamil_pass) as pg_tamil_pass,
+             oacd4.oacd_period_of_study_from as pg_study_from,
+             oacd4.oacd_period_of_study_to as pg_study_to,
+             oacd4.oacd_duration as pg_duration,
+   (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_recognised_university) as pg_recognised_university,
+   (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_regular_part_distance) as pg_regular_part_distance,
+   (select osgm_sub_grp_desc from OES_SUBJECT_GRP_MASTER where osgm_sub_grp_pk::varchar=oacd4.oacd_subject_group )as pg_subject_group
     from oes_candidate_details ocd
     inner join oes_state_master o
     on ocd.ocd_comm_state_fk = o.osm_state_pk
@@ -336,6 +376,10 @@ def get_candidate_details(request):
     ON ocd.ocd_user_fk = oci.oci_user_fk
     INNER JOIN oes_user_master oum
     ON oum.oum_user_id = ocd.ocd_created_by
+    left join oes_acdm_cand_details  oacd1 on (oacd1.oacd_user_fk=oum_user_pk and oacd1.oacd_acdm_fk=1)
+    left join oes_acdm_cand_details  oacd2 on (oacd2.oacd_user_fk=oum_user_pk and oacd2.oacd_acdm_fk=2)
+    left join oes_acdm_cand_details  oacd3 on (oacd3.oacd_user_fk=oum_user_pk and oacd3.oacd_acdm_fk=3)
+    left join oes_acdm_cand_details  oacd4 on (oacd4.oacd_user_fk=oum_user_pk and oacd4.oacd_acdm_fk=4)
     where ocd.ocd_created_by = :candidate_id
                           """)
     data = request.dbsession.execute(details_query, {

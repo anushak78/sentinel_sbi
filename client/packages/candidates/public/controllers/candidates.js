@@ -64,15 +64,13 @@
             vm.doc202 = '';
             vm.doc192 = '';
             vm.doc182 = '';
+            vm.doc253 = '';
             vm.doc254 = '';
             vm.doc255 = '';
             vm.doc256 = '';
             vm.doc252 = '';
-            vm.doc2512 = '';
             vm.doc2515 = '';
-            vm.doc2519 = '';
             vm.doc2520 = '';
-            vm.doc2521 = '';
             vm.doc2528 = '';
             vm.doc274 = '';
             vm.doc275 = '';
@@ -161,11 +159,29 @@
             vm.doc592 = '';
             vm.doc602 = '';
             vm.doc622 = '';
+            vm.doc625 = '';
+            vm.doc628 = '';
+            vm.doc629 = '';
             vm.doc632 = '';
+            vm.doc635 = '';
+            vm.doc638 = '';
+            vm.doc639 = '';
             vm.doc642 = '';
+            vm.doc645 = '';
+            vm.doc648 = '';
+            vm.doc649 = '';
             vm.doc652 = '';
+            vm.doc655 = '';
+            vm.doc658 = '';
+            vm.doc659 = '';
             vm.doc662 = '';
+            vm.doc665 = '';
+            vm.doc668 = '';
+            vm.doc669 = '';
             vm.doc672 = '';
+            vm.doc675 = '';
+            vm.doc678 = '';
+            vm.doc679 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc12 = "";
             vm.radio_values.init_doc13 = "";
@@ -200,15 +216,13 @@
             vm.radio_values.init_doc123 = "";
             vm.radio_values.init_doc122 = "";
             vm.radio_values.init_doc53 = "";
+            vm.radio_values.init_doc253 = "";
             vm.radio_values.init_doc254 = "";
             vm.radio_values.init_doc255 = "";
             vm.radio_values.init_doc257 = "";
             vm.radio_values.init_doc252 = "";
-            vm.radio_values.init_doc2512 = "";
             vm.radio_values.init_doc2515 = "";
-            vm.radio_values.init_doc2519 = "";
             vm.radio_values.init_doc2520 = "";
-            vm.radio_values.init_doc2521 = "";
             vm.radio_values.init_doc2528 = "";
             vm.radio_values.init_doc274 = "";
             vm.radio_values.init_doc275 = "";
@@ -296,11 +310,29 @@
             vm.radio_values.init_doc592 = "";
             vm.radio_values.init_doc602 = "";
             vm.radio_values.init_doc622 = "";
+            vm.radio_values.init_doc625 = "";
+            vm.radio_values.init_doc628 = "";
+            vm.radio_values.init_doc629 = "";
             vm.radio_values.init_doc632 = "";
+            vm.radio_values.init_doc635 = "";
+            vm.radio_values.init_doc638 = "";
+            vm.radio_values.init_doc639 = "";
             vm.radio_values.init_doc642 = "";
+            vm.radio_values.init_doc645 = "";
+            vm.radio_values.init_doc648 = "";
+            vm.radio_values.init_doc649 = "";
             vm.radio_values.init_doc652 = "";
+            vm.radio_values.init_doc655 = "";
+            vm.radio_values.init_doc658 = "";
+            vm.radio_values.init_doc659 = "";
             vm.radio_values.init_doc662 = "";
+            vm.radio_values.init_doc665 = "";
+            vm.radio_values.init_doc668 = "";
+            vm.radio_values.init_doc669 = "";
             vm.radio_values.init_doc672 = "";
+            vm.radio_values.init_doc675 = "";
+            vm.radio_values.init_doc678 = "";
+            vm.radio_values.init_doc679 = "";
         };
         $scope.initializeVariables();
 
@@ -334,10 +366,11 @@
             '16c2': 'New Gender',
             '16c3': 'Not relevant reason',
             '17c2': 'Not relevant reason',
-            '25c4': 'New Year of Passing',
+            '25c4': 'New name in the certificate',
             '25c5': 'New PG Degree Mark Sheets relevant reason',
             '25c6': 'New Mode of study',
             '25c2': 'Document relevant reason',
+            '25c3': 'New Degree Certificate Number',
             '25c12': 'New equivalence of PG Degree relevant reason',
             '25c15': 'New Month & Year of Passing',
             '25c19': 'New Period of study',
@@ -430,11 +463,29 @@
             '59c2': 'Relevant document reason',
             '60c2': 'Relevant document reason',
             '62c2': 'Relevant document reason',
+            '62c5': 'Name in the PG Marksheet',
+            '62c8': 'Name date of publications of result',
+            '62c9': 'New Month and year of passing',
             '63c2': 'Relevant document reason',
+            '63c5': 'Name in the PG Degree Certificate',
+            '63c8': 'New date of publication of result',
+            '63c9': 'New period of study',
             '64c2': 'Relevant document reason',
+            '64c5': 'Name in the PG Degree Certificate',
+            '64c8': 'New date of publication of result',
+            '64c9': 'New period of study',
             '65c2': 'Relevant document reason',
+            '65c5': 'Name in the PG Degree Certificate',
+            '65c8': 'New date of publication of result',
+            '65c9': 'New period of study',
             '66c2': 'Relevant document reason',
-            '67c2': 'Relevant document reason'
+            '66c5': 'Name in the PG Degree Certificate',
+            '66c8': 'New date of publication of result',
+            '66c9': 'New period of study',
+            '67c2': 'Relevant document reason',
+            '67c5': 'Name in the PG Degree Certificate',
+            '67c8': 'New date of publication of result',
+            '67c9': 'New period of study'
         };
 
         $scope.titles =
@@ -834,7 +885,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486").datepicker({
+                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -846,18 +897,18 @@
                     startView: 1,
                     minViewMode: 1,
                     maxViewMode: 2,
-                    autoClose: true,
+                    autoClose: true
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295, #doc2519, #doc3719').datepicker({
+                $('#doc255, #doc275, #doc285, #doc295, #doc3719, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
                     maxViewMode: 2,
                     multidate: true,
                     multidateSeparator: "-",
-                    autoClose: true,
+                    autoClose: true
                 }).on("changeDate", function (event) {
                     var dates = event.dates, elem = $(this);
                     if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.

@@ -35,4 +35,250 @@
     </div>
   </div>
   <div class="clearfix"></div>
+  <div class="questions">
+    Consolidated Mark sheet for PG Course
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio653" name="radio653"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio653" name="radio653"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio653" name="radio653"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Number of Mark Sheet in PG Course
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio654" name="radio654"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio654" name="radio654"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name in the PG Degree certificate?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio655" name="radio655"
+               value="1" ng-model="$ctrl.radio_values.init_doc655"
+               ng-change="$ctrl.doc655=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio655" name="radio655"
+               value="2" ng-model="$ctrl.radio_values.init_doc655"
+               ng-change="$ctrl.doc655=''">
+        Not Matched
+      </label>
+      <label
+              style="{{ $ctrl.radio_values.init_doc655=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc655">
+          <option value="">--Select--</option>
+          <option value="Initial Missing">Initial Missing</option>
+          <option value="Incorrect Spelling">Incorrect Spelling</option>
+          <option value="A letter / few letters missing">A letter / few letters missing</option>
+          <option value="Change in name as per Gazette">Change in name as per Gazette</option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio655" name="radio655"
+               value="3" ng-model="$ctrl.radio_values.init_doc655"
+               ng-change="$ctrl.doc655=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Consolidated Mark sheet for PG Course?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio656" name="radio656"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio656" name="radio656"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio656" name="radio656"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Number of Mark Sheet in PG Course?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio657" name="radio657"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio657" name="radio657"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Date of Publications of Results in PG Mark Sheet
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio658" name="radio658"
+               value="1" ng-model="$ctrl.radio_values.init_doc658"
+               ng-change="$ctrl.doc658=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio658" name="radio658"
+               value="2" ng-model="$ctrl.radio_values.init_doc658"
+               ng-change="$ctrl.doc658=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc658=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc658" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc658"
+               class="modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio658" name="radio658"
+               value="3" ng-model="$ctrl.radio_values.init_doc658"
+               ng-change="$ctrl.doc658=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Period of Study in the PG Degree?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc659"
+               class="q_radio radio659"
+               ng-change="$ctrl.doc659=''" name="radio659"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc659"
+               class="q_radio radio659"
+               name="radio659" value="2">
+        Not Matched
+      </label>
+      <label
+              style="{{ $ctrl.radio_values.init_doc659=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc659" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc659"
+               class="modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc659"
+               class="q_radio radio659"
+               ng-change="$ctrl.doc659=''" name="radio659"
+               value="3">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    PG with at least 55% marks for "General Category" (or its equivalent grade) from Recognized University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio6510" name="radio6510"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio6510" name="radio6510"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio6511" name="radio6511"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio6511" name="radio6511"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
 </div>

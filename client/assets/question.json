@@ -1103,49 +1103,6 @@
       "q_id": 4
     },
     {
-      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 5
-    },
-    {
-      "question": "Consolidated Mark sheet for PG Course ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 6
-    },
-    {
-      "question": "Number of Mark Sheet in PG Course",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 7
-    },
-    {
-      "question": "Name in the PG Degree Mark Sheets?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 8
-    },
-    {
       "question": "Name of the Subject in the PG ?",
       "options": {
         "option1": "Matched",
@@ -1184,7 +1141,7 @@
       },
       "approved": "1",
       "doc_id": 25,
-      "q_id": 12
+      "q_id": 5
     },
     {
       "question": "Name of University in the PG Degree?",
@@ -1240,27 +1197,6 @@
       "q_id": 17
     },
     {
-      "question": "Date of Publications of Results in PG Mark Sheet",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 18
-    },
-    {
-      "question": "Period of Study in the PG Degree?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 19
-    },
-    {
       "question": "What is the Mode of Study in PG Degree ?",
       "options": {
         "option1": "Matched",
@@ -1270,47 +1206,6 @@
       "approved": "1",
       "doc_id": 25,
       "q_id": 20
-    },
-    {
-      "question": "Percentage of Marks in PG?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 21
-    },
-    {
-      "question": "PG with at least 55% marks for “General Category” (or its equivalent grade) from Recognized University",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 22
-    },
-    {
-      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 23
-    },
-    {
-      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 23
     },
     {
       "question": "Whether studied PG Degree in Tamil Medium",
@@ -4007,6 +3902,80 @@
       "approved": "1",
       "doc_id": 62,
       "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 11
     }
   ],
   "PG Degree / Equivalent Marksheet 1": [
@@ -4030,6 +3999,101 @@
       "approved": "1",
       "doc_id": 63,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 11
     }
   ],
   "PG Degree / Equivalent Marksheet 2": [
@@ -4053,6 +4117,101 @@
       "approved": "1",
       "doc_id": 64,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 64,
+      "q_id": 11
     }
   ],
   "PG Degree / Equivalent Marksheet 3": [
@@ -4076,6 +4235,101 @@
       "approved": "1",
       "doc_id": 65,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 65,
+      "q_id": 11
     }
   ],
   "PG Degree / Equivalent Marksheet 4": [
@@ -4099,6 +4353,101 @@
       "approved": "1",
       "doc_id": 66,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 11
     }
   ],
   "PG Degree / Equivalent Marksheet 5": [
@@ -4122,6 +4471,101 @@
       "approved": "1",
       "doc_id": 67,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 67,
+      "q_id": 11
     }
   ]
 }
