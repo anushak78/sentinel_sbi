@@ -3,7 +3,7 @@
 </div>
 <div>
   <div class="questions">
-    Is the document relevant to claim ?
+    Is the document relevant to claim of Date of Birth?
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -94,15 +94,21 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio304" name="radio304"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc304"
+               ng-change="$ctrl.doc304=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio304" name="radio304"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc304"
+               ng-change="$ctrl.doc304=''">
         Not Matched
+      </label>
+      <label
+              style="{{ $ctrl.radio_values.init_doc304=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc304"/>
       </label>
     </div>
   </div>

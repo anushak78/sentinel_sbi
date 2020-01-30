@@ -5,7 +5,7 @@
 
 <div>
     <div class="questions">
-        Is the document relevant to claim ?
+        Is the document relevant to claim of communal category?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -38,7 +38,7 @@
     <div class="clearfix"></div>
     <div>
         <div class="questions">
-            Community of category as per the community certificate?
+            Communal Category as per the Community certificate ?
         </div>
         <div class="col-sm-12">
             <div class="radio">
@@ -168,7 +168,7 @@
                     Not Matched
                 </label>
                 <label
-                  style="{{ $ctrl.radio_values.init_doc35=='2' ? 'display:block':'display:none'}}">
+                        style="{{ $ctrl.radio_values.init_doc35=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc35"/>
                 </label>
             </div>
@@ -191,7 +191,8 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio36" name="radio36"
-                           value="1">
+                           value="1" ng-model="$ctrl.radio_values.init_doc36"
+                           ng-change="$ctrl.doc36=''">
                     Matched
                 </label>
             </div>
@@ -199,15 +200,21 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio36" name="radio36"
-                           value="2">
+                           value="2" ng-model="$ctrl.radio_values.init_doc36"
+                           ng-change="$ctrl.doc36=''">
                     Not Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc36=='2' ? 'display:block':'display:none'}}">
+                    <input type="text" id="doc36" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc36"
+                           class="modified_date input-sm input-s datepicker-input form-control">
                 </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio36" name="radio36"
-                           value="3">
+                           value="3" ng-model="$ctrl.radio_values.init_doc36"
+                           ng-change="$ctrl.doc36=''">
                     Not Clear
                 </label>
             </div>
@@ -221,7 +228,8 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio37" name="radio37"
-                           value="1">
+                           value="1" ng-model="$ctrl.radio_values.init_doc37"
+                           ng-change="$ctrl.doc37=''">
                     Matched
                 </label>
             </div>
@@ -229,15 +237,33 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio37" name="radio37"
-                           value="2">
+                           value="2" ng-model="$ctrl.radio_values.init_doc37"
+                           ng-change="$ctrl.doc37=''">
                     Not Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc37=='2' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc37">
+                        <option value="">--Select--</option>
+                        <option value="ST - Revenue Divisional Officer / Sub collector / Assistant collector (if the certificate is issued after 11.11.1989)">
+                            ST - Revenue Divisional Officer / Sub collector / Assistant collector (if the certificate is
+                            issued after 11.11.1989)
+                        </option>
+                        <option value="SC/SCA - Tahsildar of native taluk of the candidate">SC/SCA - Tahsildar of native
+                            taluk of the candidate
+                        </option>
+                        <option value="BC /BCM/MBC / DNC – Headquarters / Special / Zonal Deputy Tahsildar">BC /BCM/MBC
+                            / DNC – Headquarters / Special / Zonal Deputy Tahsildar
+                        </option>
+                        <option value="Other state issuing Authority">Other state issuing Authority</option>
+                    </select>
                 </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio37" name="radio37"
-                           value="3">
+                           value="3" ng-model="$ctrl.radio_values.init_doc37"
+                           ng-change="$ctrl.doc37=''">
                     Not Clear
                 </label>
             </div>
@@ -1483,5 +1509,28 @@
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
+        <div class="questions">
+            Religion
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio310" name="radio310"
+                           value="1">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio310" name="radio310"
+                           value="2">
+                    Not Matched
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
     </div>
 </div>

@@ -39,6 +39,8 @@
             vm.doc32 = '';
             vm.doc34 = '';
             vm.doc35 = '';
+            vm.doc36 = '';
+            vm.doc37 = '';
             vm.doc38 = '';
             vm.doc39 = '';
             vm.doc62 = '';
@@ -69,8 +71,8 @@
             vm.doc255 = '';
             vm.doc256 = '';
             vm.doc252 = '';
+            vm.doc2513 = '';
             vm.doc2515 = '';
-            vm.doc2520 = '';
             vm.doc2528 = '';
             vm.doc274 = '';
             vm.doc275 = '';
@@ -81,16 +83,23 @@
             vm.doc285 = '';
             vm.doc286 = '';
             vm.doc287 = '';
+            vm.doc292 = '';
+            vm.doc293 = '';
             vm.doc294 = '';
             vm.doc295 = '';
             vm.doc2915 = '';
             vm.doc296 = '';
             vm.doc297 = '';
+            vm.doc299 = '';
             vm.doc302 = '';
+            vm.doc304 = '';
             vm.doc307 = '';
             vm.doc305 = '';
             vm.doc312 = '';
             vm.doc313 = '';
+            vm.doc314 = '';
+            vm.doc315 = '';
+            vm.doc316 = '';
             vm.doc322 = '';
             vm.doc324 = '';
             vm.doc3211 = '';
@@ -112,40 +121,59 @@
             vm.doc373 = '';
             vm.doc374 = '';
             vm.doc375 = '';
+            vm.doc3713 = '';
+            vm.doc3714 = '';
             vm.doc3715 = '';
-            vm.doc3719 = '';
             vm.doc3720 = '';
             vm.doc3721 = '';
 
             vm.doc382 = '';
             vm.doc384 = '';
+            vm.doc387 = '';
             vm.doc3818 = '';
-            vm.doc3821 = '';
+            vm.doc3819 = '';
+            vm.doc3820 = '';
+            vm.doc3825 = '';
             vm.doc392 = '';
             vm.doc402 = '';
             vm.doc412 = '';
             vm.doc422 = '';
             vm.doc432 = '';
             vm.doc442 = '';
-            vm.doc445 = '';
+            vm.doc444 = '';
+            vm.doc447 = '';
             vm.doc446 = '';
-            vm.doc448 = '';
-            vm.doc455 = '';
-            vm.doc456 = '';
-            vm.doc458 = '';
-            vm.doc465 = '';
-            vm.doc466 = '';
-            vm.doc468 = '';
+            vm.doc4419 = '';
+            vm.doc4420 = '';
+            vm.doc4425 = '';
             vm.doc452 = '';
+            vm.doc454 = '';
+            vm.doc457 = '';
+            vm.doc456 = '';
+            vm.doc4519 = '';
+            vm.doc4520 = '';
+            vm.doc4525 = '';
             vm.doc462 = '';
+            vm.doc464 = '';
+            vm.doc467 = '';
+            vm.doc466 = '';
+            vm.doc4619 = '';
+            vm.doc4620 = '';
+            vm.doc4625 = '';
             vm.doc472 = '';
-            vm.doc475 = '';
+            vm.doc474 = '';
+            vm.doc477 = '';
             vm.doc476 = '';
-            vm.doc478 = '';
+            vm.doc4719 = '';
+            vm.doc4720 = '';
+            vm.doc4725 = '';
             vm.doc482 = '';
-            vm.doc485 = '';
+            vm.doc484 = '';
+            vm.doc487 = '';
             vm.doc486 = '';
-            vm.doc488 = '';
+            vm.doc4819 = '';
+            vm.doc4820 = '';
+            vm.doc4825 = '';
             vm.doc492 = '';
             vm.doc502 = '';
             vm.doc512 = '';
@@ -160,28 +188,46 @@
             vm.doc602 = '';
             vm.doc622 = '';
             vm.doc625 = '';
+            vm.doc627 = '';
             vm.doc628 = '';
             vm.doc629 = '';
+            vm.doc6214 = '';
+            vm.doc6215 = '';
             vm.doc632 = '';
             vm.doc635 = '';
+            vm.doc637 = '';
             vm.doc638 = '';
             vm.doc639 = '';
+            vm.doc6314 = '';
+            vm.doc6315 = '';
             vm.doc642 = '';
             vm.doc645 = '';
+            vm.doc647 = '';
             vm.doc648 = '';
             vm.doc649 = '';
+            vm.doc6414 = '';
+            vm.doc6415 = '';
             vm.doc652 = '';
             vm.doc655 = '';
+            vm.doc657 = '';
             vm.doc658 = '';
             vm.doc659 = '';
+            vm.doc6514 = '';
+            vm.doc6515 = '';
             vm.doc662 = '';
             vm.doc665 = '';
+            vm.doc667 = '';
             vm.doc668 = '';
             vm.doc669 = '';
+            vm.doc6614 = '';
+            vm.doc6615 = '';
             vm.doc672 = '';
             vm.doc675 = '';
+            vm.doc677 = '';
             vm.doc678 = '';
             vm.doc679 = '';
+            vm.doc6714 = '';
+            vm.doc6715 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc12 = "";
             vm.radio_values.init_doc13 = "";
@@ -196,6 +242,8 @@
             vm.radio_values.init_doc32 = "";
             vm.radio_values.init_doc34 = "";
             vm.radio_values.init_doc35 = "";
+            vm.radio_values.init_doc36 = "";
+            vm.radio_values.init_doc37 = "";
             vm.radio_values.init_doc38 = "";
             vm.radio_values.init_doc39 = "";
             vm.radio_values.init_doc62 = "";
@@ -221,8 +269,8 @@
             vm.radio_values.init_doc255 = "";
             vm.radio_values.init_doc257 = "";
             vm.radio_values.init_doc252 = "";
+            vm.radio_values.init_doc2513 = "";
             vm.radio_values.init_doc2515 = "";
-            vm.radio_values.init_doc2520 = "";
             vm.radio_values.init_doc2528 = "";
             vm.radio_values.init_doc274 = "";
             vm.radio_values.init_doc275 = "";
@@ -233,16 +281,23 @@
             vm.radio_values.init_doc285 = "";
             vm.radio_values.init_doc286 = "";
             vm.radio_values.init_doc287 = "";
+            vm.radio_values.init_doc292 = "";
+            vm.radio_values.init_doc293 = "";
             vm.radio_values.init_doc294 = "";
             vm.radio_values.init_doc295 = "";
             vm.radio_values.init_doc2915 = "";
             vm.radio_values.init_doc296 = "";
             vm.radio_values.init_doc297 = "";
+            vm.radio_values.init_doc299 = "";
             vm.radio_values.init_doc302 = "";
+            vm.radio_values.init_doc304 = "";
             vm.radio_values.init_doc307 = "";
             vm.radio_values.init_doc305 = "";
             vm.radio_values.init_doc312 = "";
             vm.radio_values.init_doc313 = "";
+            vm.radio_values.init_doc314 = "";
+            vm.radio_values.init_doc315 = "";
+            vm.radio_values.init_doc316 = "";
             vm.radio_values.init_doc322 = "";
             vm.radio_values.init_doc324 = "";
             vm.radio_values.init_doc3211 = "";
@@ -264,39 +319,58 @@
             vm.radio_values.init_doc373 = "";
             vm.radio_values.init_doc374 = "";
             vm.radio_values.init_doc375 = "";
+            vm.radio_values.init_doc3713 = "";
+            vm.radio_values.init_doc3714 = "";
             vm.radio_values.init_doc3715 = "";
-            vm.radio_values.init_doc3719 = "";
             vm.radio_values.init_doc3720 = "";
             vm.radio_values.init_doc3721 = "";
             vm.radio_values.init_doc382 = "";
             vm.radio_values.init_doc384 = "";
+            vm.radio_values.init_doc387 = "";
             vm.radio_values.init_doc3818 = "";
-            vm.radio_values.init_doc3821 = "";
+            vm.radio_values.init_doc3819 = "";
+            vm.radio_values.init_doc3820 = "";
+            vm.radio_values.init_doc3825 = "";
             vm.radio_values.init_doc392 = "";
             vm.radio_values.init_doc402 = "";
             vm.radio_values.init_doc412 = "";
             vm.radio_values.init_doc422 = "";
             vm.radio_values.init_doc432 = "";
             vm.radio_values.init_doc442 = "";
-            vm.radio_values.init_doc445 = "";
+            vm.radio_values.init_doc444 = "";
+            vm.radio_values.init_doc447 = "";
             vm.radio_values.init_doc446 = "";
-            vm.radio_values.init_doc448 = "";
-            vm.radio_values.init_doc455 = "";
-            vm.radio_values.init_doc456 = "";
-            vm.radio_values.init_doc458 = "";
-            vm.radio_values.init_doc465 = "";
-            vm.radio_values.init_doc466 = "";
-            vm.radio_values.init_doc468 = "";
-            vm.radio_values.init_doc475 = "";
-            vm.radio_values.init_doc476 = "";
-            vm.radio_values.init_doc478 = "";
-            vm.radio_values.init_doc485 = "";
-            vm.radio_values.init_doc486 = "";
-            vm.radio_values.init_doc488 = "";
+            vm.radio_values.init_doc4419 = "";
+            vm.radio_values.init_doc4420 = "";
+            vm.radio_values.init_doc4425 = "";
             vm.radio_values.init_doc452 = "";
+            vm.radio_values.init_doc454 = "";
+            vm.radio_values.init_doc457 = "";
+            vm.radio_values.init_doc456 = "";
+            vm.radio_values.init_doc4519 = "";
+            vm.radio_values.init_doc4520 = "";
+            vm.radio_values.init_doc4525 = "";
             vm.radio_values.init_doc462 = "";
+            vm.radio_values.init_doc464 = "";
+            vm.radio_values.init_doc467 = "";
+            vm.radio_values.init_doc466 = "";
+            vm.radio_values.init_doc4619 = "";
+            vm.radio_values.init_doc4620 = "";
+            vm.radio_values.init_doc4625 = "";
             vm.radio_values.init_doc472 = "";
+            vm.radio_values.init_doc474 = "";
+            vm.radio_values.init_doc477 = "";
+            vm.radio_values.init_doc476 = "";
+            vm.radio_values.init_doc4719 = "";
+            vm.radio_values.init_doc4720 = "";
+            vm.radio_values.init_doc4725 = "";
             vm.radio_values.init_doc482 = "";
+            vm.radio_values.init_doc484 = "";
+            vm.radio_values.init_doc487 = "";
+            vm.radio_values.init_doc486 = "";
+            vm.radio_values.init_doc4819 = "";
+            vm.radio_values.init_doc4820 = "";
+            vm.radio_values.init_doc4825 = "";
             vm.radio_values.init_doc492 = "";
             vm.radio_values.init_doc502 = "";
             vm.radio_values.init_doc512 = "";
@@ -311,28 +385,46 @@
             vm.radio_values.init_doc602 = "";
             vm.radio_values.init_doc622 = "";
             vm.radio_values.init_doc625 = "";
+            vm.radio_values.init_doc627 = "";
             vm.radio_values.init_doc628 = "";
             vm.radio_values.init_doc629 = "";
+            vm.radio_values.init_doc6214 = "";
+            vm.radio_values.init_doc6215 = "";
             vm.radio_values.init_doc632 = "";
             vm.radio_values.init_doc635 = "";
+            vm.radio_values.init_doc637 = "";
             vm.radio_values.init_doc638 = "";
             vm.radio_values.init_doc639 = "";
+            vm.radio_values.init_doc6314 = "";
+            vm.radio_values.init_doc6315 = "";
             vm.radio_values.init_doc642 = "";
             vm.radio_values.init_doc645 = "";
+            vm.radio_values.init_doc647 = "";
             vm.radio_values.init_doc648 = "";
             vm.radio_values.init_doc649 = "";
+            vm.radio_values.init_doc6414 = "";
+            vm.radio_values.init_doc6415 = "";
             vm.radio_values.init_doc652 = "";
             vm.radio_values.init_doc655 = "";
+            vm.radio_values.init_doc657 = "";
             vm.radio_values.init_doc658 = "";
             vm.radio_values.init_doc659 = "";
+            vm.radio_values.init_doc6514 = "";
+            vm.radio_values.init_doc6515 = "";
             vm.radio_values.init_doc662 = "";
             vm.radio_values.init_doc665 = "";
+            vm.radio_values.init_doc667 = "";
             vm.radio_values.init_doc668 = "";
             vm.radio_values.init_doc669 = "";
+            vm.radio_values.init_doc6614 = "";
+            vm.radio_values.init_doc6615 = "";
             vm.radio_values.init_doc672 = "";
             vm.radio_values.init_doc675 = "";
+            vm.radio_values.init_doc677 = "";
             vm.radio_values.init_doc678 = "";
             vm.radio_values.init_doc679 = "";
+            vm.radio_values.init_doc6714 = "";
+            vm.radio_values.init_doc6715 = "";
         };
         $scope.initializeVariables();
 
@@ -340,6 +432,8 @@
             '3c2': 'New community',
             '3c4': 'Not relevant reason',
             '3c5': 'New certificate number',
+            '3c6': 'New community certificate date',
+            '3c7': 'New Issuing authority',
             '3c8': 'Sub Caste',
             '3c9': 'Comunity certificate issued with',
             '1c2': 'Name in the certificate',
@@ -372,9 +466,9 @@
             '25c2': 'Document relevant reason',
             '25c3': 'New Degree Certificate Number',
             '25c12': 'New equivalence of PG Degree relevant reason',
+            '25c13': 'Name of university',
             '25c15': 'New Month & Year of Passing',
             '25c19': 'New Period of study',
-            '25c20': 'New Mode of study',
             '25c21': 'Percentage Remarks',
             '25c28': 'New Foreign PG Degree Relevant Reason',
             '27c4': 'New Year of Passing',
@@ -386,16 +480,23 @@
             '28c5': 'New Period of study',
             '28c6': 'New Mode of study',
             '28c7': 'New relevant reason',
+            '29c2': 'Name in the PHD Certificate',
+            '29c3': 'Name of the university',
             '29c4': 'New Year of Passing',
-            '29c5': 'New Period of study',
+            '29c5': 'New Certificate Number',
             '29c15': 'Foregin document relevant',
             '29c6': 'New Mode of study',
             '29c7': 'Not relevant reason',
+            '29c9': 'Name of institute',
             '30c2': 'New Certificate Number',
+            '30c4': 'New Place of Birth',
             '30c7': 'Not relevant reason',
-            '30c5': 'New Birth Certificate Marksheet',
+            '30c5': 'New Date of Birth',
             '31c2': 'New relevant reason',
             '31c3': 'New Certificate Number',
+            '31c4': 'New authority of disability certificate',
+            '31c5': 'New category of disability',
+            '31c6': 'New percentage of disability',
             '32c2': 'New relevant reason',
             '32c4': 'New Degree Mark Sheets relevant reason',
             '32c11': 'New Date of Passing',
@@ -417,39 +518,59 @@
             '37c3': 'Certificate Number',
             '37c4': 'Name in the certificate',
             '37c5': 'UG Marksheet relevant reason',
+            '37c13': 'New name of the university',
+            '37c14': 'New institute studied',
             '37c15': 'New Month & Year of passing',
             '37c19': 'Period of study',
             '37c20': 'Mode of study',
             '37c21': 'Percentage of marks',
             '38c2': 'Document relevant reason',
-            '38c4': 'New name in the marksheet',
+            '38c4': 'Name in the marksheet',
+            '38c7': 'No. of Marksheet',
             '38c18': 'New Date of publications',
-            '38c21': 'Percentage of marks',
+            '38c19': 'Period of study',
+            '38c20': 'Mode of study',
+            '38c25': 'Institute Studied',
             '39c2': 'Relevant document reason',
             '40c2': 'Relevant document reason',
             '41c2': 'Relevant document reason',
             '42c2': 'Relevant document reason',
             '43c2': 'Relevant document reason',
             '44c2': 'Relevant document reason',
-            '44c5': 'Name in the marksheet',
+            '44c4': 'Name in the marksheet',
+            '44c7': 'No of marksheet',
             '44c6': 'New date of publications',
-            '44c8': 'Percentage of marks in UG',
-            '45c5': 'Name in the marksheet',
-            '45c6': 'New date of publications',
-            '45c8': 'Percentage of marks in UG',
-            '46c5': 'Name in the marksheet',
-            '46c6': 'New date of publications',
-            '46c8': 'Percentage of marks in UG',
+            '44c19': 'Period of study',
+            '44c20': 'Mode of study',
+            '44c25': 'Name of institute',
             '45c2': 'Relevant document reason',
+            '45c4': 'Name in the marksheet',
+            '45c7': 'No of marksheet',
+            '45c6': 'New date of publications',
+            '45c19': 'Period of study',
+            '45c20': 'Mode of study',
+            '45c25': 'Name of institute',
             '46c2': 'Relevant document reason',
+            '46c4': 'Name in the marksheet',
+            '46c7': 'No of marksheet',
+            '46c6': 'New date of publications',
+            '46c19': 'Period of study',
+            '46c20': 'Mode of study',
+            '46c25': 'Name of institute',
             '47c2': 'Relevant document reason',
-            '47c5': 'Name in the marksheet',
+            '47c4': 'Name in the marksheet',
+            '47c7': 'No of marksheet',
             '47c6': 'New date of publications',
-            '47c8': 'Percentage of marks in UG',
+            '47c19': 'Period of study',
+            '47c20': 'Mode of study',
+            '47c25': 'Name of institute',
             '48c2': 'Relevant document reason',
-            '48c5': 'Name in the marksheet',
+            '48c4': 'Name in the marksheet',
+            '48c7': 'No of marksheet',
             '48c6': 'New date of publications',
-            '48c8': 'Percentage of marks in UG',
+            '48c19': 'Period of study',
+            '48c20': 'Mode of study',
+            '48c25': 'Name of institute',
             '49c2': 'Relevant document reason',
             '50c2': 'Relevant document reason',
             '51c2': 'Relevant document reason',
@@ -464,28 +585,46 @@
             '60c2': 'Relevant document reason',
             '62c2': 'Relevant document reason',
             '62c5': 'Name in the PG Marksheet',
+            '62c7': 'Number of Mark Sheet',
             '62c8': 'Name date of publications of result',
             '62c9': 'New Month and year of passing',
+            '62c14': 'Name of institute',
+            '62c15': 'Mode of study',
             '63c2': 'Relevant document reason',
             '63c5': 'Name in the PG Degree Certificate',
+            '63c7': 'Number of Marksheet',
             '63c8': 'New date of publication of result',
             '63c9': 'New period of study',
+            '63c14': 'Name of institute',
+            '63c15': 'Mode of study',
             '64c2': 'Relevant document reason',
             '64c5': 'Name in the PG Degree Certificate',
+            '64c7': 'Number of Marksheet',
             '64c8': 'New date of publication of result',
             '64c9': 'New period of study',
+            '64c14': 'Name of institute',
+            '64c15': 'Mode of study',
             '65c2': 'Relevant document reason',
             '65c5': 'Name in the PG Degree Certificate',
+            '65c7': 'Number of Marksheet',
             '65c8': 'New date of publication of result',
             '65c9': 'New period of study',
+            '65c14': 'Name of institute',
+            '65c15': 'Mode of study',
             '66c2': 'Relevant document reason',
             '66c5': 'Name in the PG Degree Certificate',
+            '66c7': 'Number of Marksheet',
             '66c8': 'New date of publication of result',
             '66c9': 'New period of study',
+            '66c14': 'Name of institute',
+            '66c15': 'Mode of study',
             '67c2': 'Relevant document reason',
             '67c5': 'Name in the PG Degree Certificate',
+            '67c7': 'Number of Marksheet',
             '67c8': 'New date of publication of result',
-            '67c9': 'New period of study'
+            '67c9': 'New period of study',
+            '67c14': 'Name of institute',
+            '67c15': 'Mode of study'
         };
 
         $scope.titles =
@@ -885,7 +1024,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678").datepicker({
+                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311, #doc3411, #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -901,7 +1040,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc275, #doc285, #doc295, #doc3719, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679').datepicker({
+                $('#doc255, #doc275, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,

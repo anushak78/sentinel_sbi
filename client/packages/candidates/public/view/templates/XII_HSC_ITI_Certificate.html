@@ -75,34 +75,6 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Change in name as per Gazette
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio210" name="radio210"
-                       value="1">
-                Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio210" name="radio210"
-                       value="2">
-                Not Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio210" name="radio210"
-                       value="3">
-                Not Clear
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-
-    <div class="questions">
         Date of Publication of Results of HSC in Mark Sheet
     </div>
     <div class="col-sm-12">
@@ -138,7 +110,7 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Year of Passing in the Mark sheet?
+        Month & Year of Passing in the HSC Mark sheet?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -171,7 +143,33 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Is Tamil a Part-I language in the Mark sheet?
+        HSC Mark Sheet Certificate Number
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio27" name="radio27"
+                       value="1" ng-model="$ctrl.radio_values.init_doc27"
+                       ng-change="$ctrl.doc27=''">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio27" name="radio27"
+                       value="2" ng-model="$ctrl.radio_values.init_doc27"
+                       ng-change="$ctrl.doc27=''">
+                Not Matched
+            </label>
+            <label
+                    style="{{ $ctrl.radio_values.init_doc27=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc27"/>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is Tamil a Part-I language in HSC ?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -192,32 +190,6 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        HSC Mark Sheet Certificate Number
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio27" name="radio27"
-                       value="1" ng-model="$ctrl.radio_values.init_doc27"
-                       ng-change="$ctrl.doc27=''">
-                Matched
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio27" name="radio27"
-                       value="2" ng-model="$ctrl.radio_values.init_doc27"
-                       ng-change="$ctrl.doc27=''">
-                Not Matched
-            </label>
-            <label
-              style="{{ $ctrl.radio_values.init_doc27=='2' ? 'display:block':'display:none'}}">
-                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc27"/>
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
         Mode of Study in HSC
     </div>
     <div class="col-sm-12">
@@ -225,14 +197,21 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio28" name="radio28"
                        value="1">
-                Matched
+                Regular
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio28" name="radio28"
                        value="2">
-                Not Matched
+                Private
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio28" name="radio28"
+                       value="3">
+                Open School
             </label>
         </div>
     </div>
@@ -245,14 +224,21 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio29" name="radio29"
                        value="1">
-                Matched
+                Greater than or equal to 35
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio29" name="radio29"
                        value="2">
-                Not Matched
+                Less than 35
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio29" name="radio29"
+                       value="3">
+                Not Clear
             </label>
         </div>
     </div>

@@ -102,33 +102,6 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Name in the UG Degree Mark Sheets?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio378" name="radio378"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio378" name="radio378"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio378" name="radio378"
-               value="3">
-        Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
     Name of the Subject in the UG?
   </div>
   <div class="col-sm-12">
@@ -163,21 +136,28 @@
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3713" name="radio3713"
-                 value="1">
+                 value="1" ng-model="$ctrl.radio_values.init_doc3713"
+                 ng-change="$ctrl.doc3713=''">
           Matched
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3713" name="radio3713"
-                 value="2">
+                 value="2" ng-model="$ctrl.radio_values.init_doc3713"
+                 ng-change="$ctrl.doc3713=''">
           Not Matched
+        </label>
+        <label
+                style="{{ $ctrl.radio_values.init_doc3713=='2' ? 'display:block':'display:none'}}">
+          <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc3713"/>
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3713" name="radio3713"
-                 value="3">
+                 value="3" ng-model="$ctrl.radio_values.init_doc3713"
+                 ng-change="$ctrl.doc3713=''">
           Not Clear
         </label>
       </div>
@@ -192,21 +172,28 @@
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="1">
+                 value="1" ng-model="$ctrl.radio_values.init_doc3714"
+                 ng-change="$ctrl.doc3714=''">
           Matched
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="2">
+                 value="2" ng-model="$ctrl.radio_values.init_doc3714"
+                 ng-change="$ctrl.doc3714=''">
           Not Matched
+        </label>
+        <label
+                style="{{ $ctrl.radio_values.init_doc3714=='2' ? 'display:block':'display:none'}}">
+          <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc3714"/>
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="3">
+                 value="3" ng-model="$ctrl.radio_values.init_doc3714"
+                 ng-change="$ctrl.doc3714=''">
           Not Clear
         </label>
       </div>
@@ -252,44 +239,6 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Period of Study in the PG Degree?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc3719"
-               class="q_radio radio3719"
-               ng-change="$ctrl.doc3719=''" name="radio3719"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc3719"
-               class="q_radio radio3719"
-               name="radio3719" value="2">
-        Not Matched
-      </label>
-      <label
-        style="{{ $ctrl.radio_values.init_doc3719=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc3719" data-date-format="YYYY-MM-DD"
-               ng-model="$ctrl.doc3719"
-               class="modified_date input-sm input-s datepicker-input form-control">
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc3719"
-               class="q_radio radio3719"
-               ng-change="$ctrl.doc3719=''" name="radio3719"
-               value="3">
-        Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
     What is the Mode of Study in UG Degree
   </div>
   <div class="col-sm-12">
@@ -319,7 +268,9 @@
           </option>
           <option value="Part time">Part time
           </option>
-          <option value="Correspondence">Correspondence / Open University
+          <option value="Correspondence">Correspondence
+          </option>
+          <option value="Correspondence">Open University
           </option>
         </select>
       </label>
