@@ -1,0 +1,138 @@
+<div class="form-group"
+     ng-repeat="q in documentWithQuestions[selectedDocType]">
+    <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div>
+    <div class="questions">
+        Is the document relevant to the claim of M.Phil Degree Mark Sheets?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio687" name="radio687"
+                       value="1" ng-model="$ctrl.radio_values.init_doc687"
+                       ng-change="$ctrl.doc687=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio687" name="radio687"
+                       value="2" ng-model="$ctrl.radio_values.init_doc687"
+                       ng-change="$ctrl.doc687=''">
+                Not Relevant
+            </label>
+            <label
+              style="{{ $ctrl.radio_values.init_doc687=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc687">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Month & Year of Passing in the M.Phil Degree?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc684" class="q_radio radio684"
+                       ng-change="$ctrl.doc684=''" name="radio684"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc684" class="q_radio radio684"
+                       name="radio684" value="2">
+                Not Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc684=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc684" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc684"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" ng-model="$ctrl.radio_values.init_doc684" class="q_radio radio684"
+                       ng-change="$ctrl.doc684=''" name="radio684"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Date of Publications of Results in M.Phil Mark Sheet
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6811" name="radio6811"
+                       value="1" ng-model="$ctrl.radio_values.init_doc6811"
+                       ng-change="$ctrl.doc6811=''">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6811" name="radio6811"
+                       value="2" ng-model="$ctrl.radio_values.init_doc6811"
+                       ng-change="$ctrl.doc6811=''">
+                Not Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc6811=='2' ? 'display:block':'display:none'}}">
+                <input type="text" id="doc6811" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc6811"
+                       class="modified_date input-sm input-s datepicker-input form-control">
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6811" name="radio6811"
+                       value="3" ng-model="$ctrl.radio_values.init_doc6811"
+                       ng-change="$ctrl.doc6811=''">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Percentage of Marks in M.Phil?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6813" name="radio6813"
+                       value="1">
+                Percentage of Marks is 40 and above but less than 50
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6813" name="radio6813"
+                       value="2">
+                Percentage of Marks is 50 and above but less than 55
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6813" name="radio6813"
+                       value="3">
+                Percentage of Marks is 55 and above but less than 60
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6813" name="radio6813"
+                       value="3">
+                Percentage of Marks is 60 and above
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

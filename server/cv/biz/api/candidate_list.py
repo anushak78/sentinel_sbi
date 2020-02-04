@@ -323,6 +323,7 @@ def get_candidate_details(request):
     oci.oci_photo_image_path,
     oci.oci_sign_image_path,
     oum.*,
+    ocad.*,
     oacd1.oacd_created_by,oacd1.oacd_year_of_passing as ssc_year_of_passing,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
       oacd1.oacd_university_other as ssc_university_other,
@@ -380,6 +381,7 @@ def get_candidate_details(request):
     left join oes_acdm_cand_details  oacd2 on (oacd2.oacd_user_fk=oum_user_pk and oacd2.oacd_acdm_fk=2)
     left join oes_acdm_cand_details  oacd3 on (oacd3.oacd_user_fk=oum_user_pk and oacd3.oacd_acdm_fk=3)
     left join oes_acdm_cand_details  oacd4 on (oacd4.oacd_user_fk=oum_user_pk and oacd4.oacd_acdm_fk=4)
+    left join oes_cand_additional_details ocad on oum.oum_user_pk = ocad.ocad_user_fk
     where ocd.ocd_created_by = :candidate_id
                           """)
     data = request.dbsession.execute(details_query, {
