@@ -98,7 +98,7 @@
   ],
   "12th / HSC Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -195,7 +195,7 @@
   ],
   "Community Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -402,7 +402,7 @@
   ],
   "PSTM Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1060,7 +1060,7 @@
   ],
   "PG Degree Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1262,7 +1262,7 @@
   ],
   "M.Phil Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1371,7 +1371,7 @@
   ],
   "SLET/NET Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1448,7 +1448,7 @@
   ],
   "Phd Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1597,7 +1597,7 @@
   ],
   "Birth Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1671,7 +1671,7 @@
   ],
   "PWD Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1734,7 +1734,7 @@
   ],
   "Special B.Ed in Teaching the Hearing Impairment – Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1873,7 +1873,7 @@
   ],
   "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2022,7 +2022,7 @@
   ],
   "B.Ed Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2106,7 +2106,7 @@
   ],
   "M.Ed Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2337,7 +2337,7 @@
   ],
   "UG Degree / Equivalent or Provsisional Certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2423,17 +2423,6 @@
       "q_id": 15
     },
     {
-      "question": "What is the Mode of Study in UG Degree ?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 37,
-      "q_id": 20
-    },
-    {
       "question": "Whether studied UG Degree in UGC Recognized University ",
       "options": {
         "option1": "Matched",
@@ -2466,7 +2455,7 @@
   ],
   "UG Degree / Equivalent Consolidated Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2531,8 +2520,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2572,17 +2561,6 @@
       "approved": "1",
       "doc_id": 38,
       "q_id": 20
-    },
-    {
-      "question": "Name of Institution studied in the UG Degree?  ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 38,
-      "q_id": 25
     }
   ],
   "Work Experience 1": [
@@ -2847,7 +2825,7 @@
   ],
   "UG Degree / Equivalent Marksheet 1": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2912,8 +2890,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2953,22 +2931,11 @@
       "approved": "1",
       "doc_id": 44,
       "q_id": 20
-    },
-    {
-      "question": "Name of Institution studied in the UG Degree?  ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 44,
-      "q_id": 25
     }
   ],
   "UG Degree / Equivalent Marksheet 2": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3033,8 +3000,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3074,22 +3041,11 @@
       "approved": "1",
       "doc_id": 45,
       "q_id": 20
-    },
-    {
-      "question": "Name of Institution studied in the UG Degree?  ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 45,
-      "q_id": 25
     }
   ],
   "UG Degree / Equivalent Marksheet 3": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3154,8 +3110,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3195,22 +3151,11 @@
       "approved": "1",
       "doc_id": 46,
       "q_id": 20
-    },
-    {
-      "question": "Name of Institution studied in the UG Degree?  ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 46,
-      "q_id": 25
     }
   ],
   "UG Degree / Equivalent Marksheet 4": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3275,8 +3220,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3316,22 +3261,11 @@
       "approved": "1",
       "doc_id": 47,
       "q_id": 20
-    },
-    {
-      "question": "Name of Institution studied in the UG Degree?  ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 47,
-      "q_id": 25
     }
   ],
   "UG Degree / Equivalent Marksheet 5": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3397,8 +3331,8 @@
     {
       "question": "Is Tamil Part I Language in UG Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3414,11 +3348,33 @@
       "approved": "1",
       "doc_id": 48,
       "q_id": 8
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 48,
+      "q_id": 20
     }
   ],
   "B.Ed Degree / Equivalent Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3518,7 +3474,7 @@
   ],
   "B.Ed Degree / Equivalent Marksheet 1": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3618,7 +3574,7 @@
   ],
   "B.Ed Degree / Equivalent Marksheet 2": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3718,7 +3674,7 @@
   ],
   "B.Ed Degree / Equivalent Marksheet 3": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3818,7 +3774,7 @@
   ],
   "B.Ed Degree / Equivalent Marksheet 4": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -3918,7 +3874,7 @@
   ],
   "B.Ed Degree / Equivalent Marksheet 5": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4018,7 +3974,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4061,7 +4017,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet 1": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4083,7 +4039,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet 2": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4105,7 +4061,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet 3": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4127,7 +4083,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet 4": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4149,7 +4105,7 @@
   ],
   "M.Ed Degree / Equivalent Marksheet 5": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4171,7 +4127,7 @@
   ],
   "PG Degree / Equivalent Consolidated Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4249,7 +4205,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -4259,7 +4216,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -4269,7 +4227,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -4279,7 +4238,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -4322,7 +4282,7 @@
   ],
   "PG Degree / Equivalent Marksheet 1": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4400,7 +4360,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -4410,7 +4371,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -4420,7 +4382,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -4430,7 +4393,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -4473,7 +4437,7 @@
   ],
   "PG Degree / Equivalent Marksheet 2": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4551,7 +4515,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -4561,7 +4526,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -4571,7 +4537,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -4581,7 +4548,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -4624,7 +4592,7 @@
   ],
   "PG Degree / Equivalent Marksheet 3": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4702,7 +4670,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -4712,7 +4681,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -4722,7 +4692,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -4732,7 +4703,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -4775,7 +4747,7 @@
   ],
   "PG Degree / Equivalent Marksheet 4": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4853,7 +4825,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -4863,7 +4836,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -4873,7 +4847,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -4883,7 +4858,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -4926,7 +4902,7 @@
   ],
   "PG Degree / Equivalent Marksheet 5": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -5004,7 +4980,8 @@
       "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -5014,7 +4991,8 @@
       "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -5024,7 +5002,8 @@
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -5034,7 +5013,8 @@
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -5075,9 +5055,1404 @@
       "q_id": 16
     }
   ],
+  "PG Degree / Equivalent Marksheet 6": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 80,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 7": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 81,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 8": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 82,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 9": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 66,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 83,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 10": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 84,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 11": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 85,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 12": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 86,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 13": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 87,
+      "q_id": 16
+    }
+  ],
+  "PG Degree / Equivalent Marksheet 14": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of PG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 2
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 5
+    },
+    {
+      "question": "Consolidated Mark sheet for PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in PG Course?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 7
+    },
+    {
+      "question": "Date of Publications of Results in PG Mark Sheet?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the PG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 9
+    },
+    {
+      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 10
+    },
+    {
+      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 11
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 12
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in the PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 14
+    },
+    {
+      "question": "What is the Mode of Study in PG Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 15
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40 ",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 88,
+      "q_id": 16
+    }
+  ],
   "M.Phil Marksheet": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -5133,7 +6508,7 @@
   ],
   "SLET / NET Exemption certificate": [
     {
-      "question": "Is the document Valid / Clear?",
+      "question": "Is the document Visible / Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -5161,6 +6536,995 @@
       "approved": "1",
       "doc_id": 69,
       "q_id": 3
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 6": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 70,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 7": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 71,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 8": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 72,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 9": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 73,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 10": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 4
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 5
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 6
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 7
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 8
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 74,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 11": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 75,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 12": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 76,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 13": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 77,
+      "q_id": 20
+    }
+  ],
+  "UG Degree / Equivalent Marksheet 14": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for UG Course ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 6
+    },
+    {
+      "question": "Number of Mark Sheet in UG Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the UG Degree Mark Sheets?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 4
+    },
+    {
+      "question": "Date of Publications of Results in UG Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 18
+    },
+    {
+      "question": "Is Tamil Part I Language in UG Degree",
+      "options": {
+        "option1": "Studied Tamil",
+        "option2": "Not Studied Tamil",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 24
+    },
+    {
+      "question": "Percentage of Marks in UG?",
+      "options": {
+        "option1": "Percentage of Marks is between 35 to 40",
+        "option2": "Percentage of Marks is greater than 40",
+        "option3": "Percentage of Marks is less than 35",
+        "option4": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 21
+    },
+    {
+      "question": "Period of Study in the UG Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 19
+    },
+    {
+      "question": "What is the Mode of Study in UG Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 78,
+      "q_id": 20
     }
   ]
 }

@@ -1343,6 +1343,29 @@
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_year_of_passing']}}</span>
                                             </section>
                                         </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                UG Degree Certificate Number:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugcertno']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                No Of Marksheet:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugmarksheetno']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Date of publications of result:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</span>
+                                            </section>
+                                        </div>
                                     </div>
 
                                     <div ng-if="selectedDocType.indexOf('PG') > -1">
@@ -1442,7 +1465,7 @@
                                         <div class="col-md-6">
                                             <section class="panel-body"
                                                      style="font-size: 12px">
-                                                PG Tamil Pass:<br/><span
+                                                PG in Tamil Medium:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_tamil_pass']}}</span>
                                             </section>
                                         </div>
@@ -1451,6 +1474,44 @@
                                                      style="font-size: 12px">
                                                 PG Year of Passing:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_year_of_passing']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                PG Degree Certificate Number:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgcertno']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                No Of Marksheet:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgmarksheetno']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Date of publications of result:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Studied PG from recognised university:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_recognised_university']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                PG Foreign University:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgforeignuni']}}</span>
                                             </section>
                                         </div>
                                     </div>
@@ -1765,6 +1826,42 @@
                                              ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 5'">
                                             <pg-marksheet5></pg-marksheet5>
                                         </div>
+                                        <div id="80"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 6'">
+                                            <pg-marksheet6></pg-marksheet6>
+                                        </div>
+                                        <div id="81"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 7'">
+                                            <pg-marksheet7></pg-marksheet7>
+                                        </div>
+                                        <div id="82"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 8'">
+                                            <pg-marksheet8></pg-marksheet8>
+                                        </div>
+                                        <div id="83"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 9'">
+                                            <pg-marksheet9></pg-marksheet9>
+                                        </div>
+                                        <div id="84"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 10'">
+                                            <pg-marksheet10></pg-marksheet10>
+                                        </div>
+                                        <div id="85"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 11'">
+                                            <pg-marksheet11></pg-marksheet11>
+                                        </div>
+                                        <div id="86"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 12'">
+                                            <pg-marksheet12></pg-marksheet12>
+                                        </div>
+                                        <div id="87"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 13'">
+                                            <pg-marksheet13></pg-marksheet13>
+                                        </div>
+                                        <div id="88"
+                                             ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 14'">
+                                            <pg-marksheet14></pg-marksheet14>
+                                        </div>
                                         <div id="68"
                                              ng-if="selectedDocType=='M.Phil Marksheet'">
                                             <mphil-degree-marksheet></mphil-degree-marksheet>
@@ -1774,20 +1871,42 @@
                                             <exemption></exemption>
                                         </div>
 
-                                        <!--<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">-->
-                                        <!--<div class="questions">-->
-                                        <!--{{q.question}}-->
-                                        <!--</div>-->
-                                        <!--<div class="col-sm-6">-->
-                                        <!--<div class="radio" ng-repeat="(key, value) in q.options">-->
-                                        <!--<label class="radio-custom">-->
-                                        <!--<input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}" name="radio{{q.doc_id}}{{q.q_id}}" value="{{($index+1)}}">-->
-                                        <!--{{value}}-->
-                                        <!--</label>-->
-                                        <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<div class="clearfix"></div>-->
-                                        <!--</div>-->
+                                        <div id="70"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 6'">
+                                            <ug-marksheet6></ug-marksheet6>
+                                        </div>
+                                        <div id="71"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 7'">
+                                            <ug-marksheet7></ug-marksheet7>
+                                        </div>
+                                        <div id="72"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 8'">
+                                            <ug-marksheet8></ug-marksheet8>
+                                        </div>
+                                        <div id="73"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 9'">
+                                            <ug-marksheet9></ug-marksheet9>
+                                        </div>
+                                        <div id="74"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 10'">
+                                            <ug-marksheet10></ug-marksheet10>
+                                        </div>
+                                        <div id="75"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 11'">
+                                            <ug-marksheet11></ug-marksheet11>
+                                        </div>
+                                        <div id="76"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 12'">
+                                            <ug-marksheet12></ug-marksheet12>
+                                        </div>
+                                        <div id="77"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 13'">
+                                            <ug-marksheet13></ug-marksheet13>
+                                        </div>
+                                        <div id="78"
+                                             ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 14'">
+                                            <ug-marksheet14></ug-marksheet14>
+                                        </div>
                                     </section>
                                 </div>
 

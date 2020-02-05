@@ -69,7 +69,9 @@
             vm.doc253 = '';
             vm.doc254 = '';
             vm.doc255 = '';
-            vm.doc256 = '';
+            vm.doc259 = '';
+            vm.doc2510 = '';
+            vm.doc2525 = '';
             vm.doc252 = '';
             vm.doc2513 = '';
             vm.doc2515 = '';
@@ -124,11 +126,13 @@
             vm.doc373 = '';
             vm.doc374 = '';
             vm.doc375 = '';
+            vm.doc379 = '';
             vm.doc3713 = '';
             vm.doc3714 = '';
             vm.doc3715 = '';
-            vm.doc3720 = '';
             vm.doc3721 = '';
+            vm.doc3725 = '';
+            vm.doc3730 = '';
 
             vm.doc382 = '';
             vm.doc384 = '';
@@ -136,7 +140,6 @@
             vm.doc3818 = '';
             vm.doc3819 = '';
             vm.doc3820 = '';
-            vm.doc3825 = '';
             vm.doc392 = '';
             vm.doc402 = '';
             vm.doc412 = '';
@@ -148,35 +151,30 @@
             vm.doc446 = '';
             vm.doc4419 = '';
             vm.doc4420 = '';
-            vm.doc4425 = '';
             vm.doc452 = '';
             vm.doc454 = '';
             vm.doc457 = '';
             vm.doc456 = '';
             vm.doc4519 = '';
             vm.doc4520 = '';
-            vm.doc4525 = '';
             vm.doc462 = '';
             vm.doc464 = '';
             vm.doc467 = '';
             vm.doc466 = '';
             vm.doc4619 = '';
             vm.doc4620 = '';
-            vm.doc4625 = '';
             vm.doc472 = '';
             vm.doc474 = '';
             vm.doc477 = '';
             vm.doc476 = '';
             vm.doc4719 = '';
             vm.doc4720 = '';
-            vm.doc4725 = '';
             vm.doc482 = '';
             vm.doc484 = '';
             vm.doc487 = '';
             vm.doc486 = '';
             vm.doc4819 = '';
             vm.doc4820 = '';
-            vm.doc4825 = '';
             vm.doc492 = '';
             vm.doc495 = '';
             vm.doc496 = '';
@@ -247,6 +245,126 @@
             vm.doc687 = '';
             vm.doc6811 = '';
             vm.doc693 = '';
+
+            vm.doc702 = '';
+            vm.doc704 = '';
+            vm.doc707 = '';
+            vm.doc706 = '';
+            vm.doc7019 = '';
+            vm.doc7020 = '';
+            vm.doc712 = '';
+            vm.doc714 = '';
+            vm.doc717 = '';
+            vm.doc716 = '';
+            vm.doc7119 = '';
+            vm.doc7120 = '';
+            vm.doc722 = '';
+            vm.doc724 = '';
+            vm.doc727 = '';
+            vm.doc726 = '';
+            vm.doc7219 = '';
+            vm.doc7220 = '';
+            vm.doc732 = '';
+            vm.doc734 = '';
+            vm.doc737 = '';
+            vm.doc736 = '';
+            vm.doc7319 = '';
+            vm.doc7320 = '';
+            vm.doc742 = '';
+            vm.doc744 = '';
+            vm.doc747 = '';
+            vm.doc746 = '';
+            vm.doc7419 = '';
+            vm.doc7420 = '';
+            vm.doc752 = '';
+            vm.doc754 = '';
+            vm.doc757 = '';
+            vm.doc756 = '';
+            vm.doc7519 = '';
+            vm.doc7520 = '';
+            vm.doc762 = '';
+            vm.doc764 = '';
+            vm.doc767 = '';
+            vm.doc766 = '';
+            vm.doc7619 = '';
+            vm.doc7620 = '';
+            vm.doc772 = '';
+            vm.doc774 = '';
+            vm.doc777 = '';
+            vm.doc776 = '';
+            vm.doc7719 = '';
+            vm.doc7720 = '';
+            vm.doc782 = '';
+            vm.doc784 = '';
+            vm.doc787 = '';
+            vm.doc786 = '';
+            vm.doc7819 = '';
+            vm.doc7820 = '';
+
+
+            vm.doc802 = '';
+            vm.doc805 = '';
+            vm.doc807 = '';
+            vm.doc808 = '';
+            vm.doc809 = '';
+            vm.doc8014 = '';
+            vm.doc8015 = '';
+            vm.doc812 = '';
+            vm.doc815 = '';
+            vm.doc817 = '';
+            vm.doc818 = '';
+            vm.doc819 = '';
+            vm.doc8114 = '';
+            vm.doc8115 = '';
+            vm.doc822 = '';
+            vm.doc825 = '';
+            vm.doc827 = '';
+            vm.doc828 = '';
+            vm.doc829 = '';
+            vm.doc8214 = '';
+            vm.doc8215 = '';
+            vm.doc832 = '';
+            vm.doc835 = '';
+            vm.doc837 = '';
+            vm.doc838 = '';
+            vm.doc839 = '';
+            vm.doc8314 = '';
+            vm.doc8315 = '';
+            vm.doc842 = '';
+            vm.doc845 = '';
+            vm.doc847 = '';
+            vm.doc848 = '';
+            vm.doc849 = '';
+            vm.doc8414 = '';
+            vm.doc8415 = '';
+            vm.doc852 = '';
+            vm.doc855 = '';
+            vm.doc857 = '';
+            vm.doc858 = '';
+            vm.doc859 = '';
+            vm.doc8514 = '';
+            vm.doc8515 = '';
+            vm.doc862 = '';
+            vm.doc865 = '';
+            vm.doc867 = '';
+            vm.doc868 = '';
+            vm.doc869 = '';
+            vm.doc8614 = '';
+            vm.doc8615 = '';
+            vm.doc872 = '';
+            vm.doc875 = '';
+            vm.doc877 = '';
+            vm.doc878 = '';
+            vm.doc879 = '';
+            vm.doc8714 = '';
+            vm.doc8715 = '';
+            vm.doc882 = '';
+            vm.doc885 = '';
+            vm.doc887 = '';
+            vm.doc888 = '';
+            vm.doc889 = '';
+            vm.doc8814 = '';
+            vm.doc8815 = '';
             vm.radio_values = {};
             vm.radio_values.init_doc12 = "";
             vm.radio_values.init_doc13 = "";
@@ -286,6 +404,9 @@
             vm.radio_values.init_doc253 = "";
             vm.radio_values.init_doc254 = "";
             vm.radio_values.init_doc255 = "";
+            vm.radio_values.init_doc259 = "";
+            vm.radio_values.init_doc2510 = "";
+            vm.radio_values.init_doc2525 = "";
             vm.radio_values.init_doc257 = "";
             vm.radio_values.init_doc252 = "";
             vm.radio_values.init_doc2513 = "";
@@ -341,18 +462,19 @@
             vm.radio_values.init_doc373 = "";
             vm.radio_values.init_doc374 = "";
             vm.radio_values.init_doc375 = "";
+            vm.radio_values.init_doc379 = "";
             vm.radio_values.init_doc3713 = "";
             vm.radio_values.init_doc3714 = "";
             vm.radio_values.init_doc3715 = "";
-            vm.radio_values.init_doc3720 = "";
             vm.radio_values.init_doc3721 = "";
+            vm.radio_values.init_doc3725 = "";
+            vm.radio_values.init_doc3730 = "";
             vm.radio_values.init_doc382 = "";
             vm.radio_values.init_doc384 = "";
             vm.radio_values.init_doc387 = "";
             vm.radio_values.init_doc3818 = "";
             vm.radio_values.init_doc3819 = "";
             vm.radio_values.init_doc3820 = "";
-            vm.radio_values.init_doc3825 = "";
             vm.radio_values.init_doc392 = "";
             vm.radio_values.init_doc402 = "";
             vm.radio_values.init_doc412 = "";
@@ -364,35 +486,30 @@
             vm.radio_values.init_doc446 = "";
             vm.radio_values.init_doc4419 = "";
             vm.radio_values.init_doc4420 = "";
-            vm.radio_values.init_doc4425 = "";
             vm.radio_values.init_doc452 = "";
             vm.radio_values.init_doc454 = "";
             vm.radio_values.init_doc457 = "";
             vm.radio_values.init_doc456 = "";
             vm.radio_values.init_doc4519 = "";
             vm.radio_values.init_doc4520 = "";
-            vm.radio_values.init_doc4525 = "";
             vm.radio_values.init_doc462 = "";
             vm.radio_values.init_doc464 = "";
             vm.radio_values.init_doc467 = "";
             vm.radio_values.init_doc466 = "";
             vm.radio_values.init_doc4619 = "";
             vm.radio_values.init_doc4620 = "";
-            vm.radio_values.init_doc4625 = "";
             vm.radio_values.init_doc472 = "";
             vm.radio_values.init_doc474 = "";
             vm.radio_values.init_doc477 = "";
             vm.radio_values.init_doc476 = "";
             vm.radio_values.init_doc4719 = "";
             vm.radio_values.init_doc4720 = "";
-            vm.radio_values.init_doc4725 = "";
             vm.radio_values.init_doc482 = "";
             vm.radio_values.init_doc484 = "";
             vm.radio_values.init_doc487 = "";
             vm.radio_values.init_doc486 = "";
             vm.radio_values.init_doc4819 = "";
             vm.radio_values.init_doc4820 = "";
-            vm.radio_values.init_doc4825 = "";
             vm.radio_values.init_doc492 = "";
             vm.radio_values.init_doc495 = "";
             vm.radio_values.init_doc496 = "";
@@ -463,6 +580,127 @@
             vm.radio_values.init_doc687 = "";
             vm.radio_values.init_doc6811 = "";
             vm.radio_values.init_doc693 = "";
+
+
+            vm.radio_values.init_doc702 = "";
+            vm.radio_values.init_doc704 = "";
+            vm.radio_values.init_doc707 = "";
+            vm.radio_values.init_doc706 = "";
+            vm.radio_values.init_doc7019 = "";
+            vm.radio_values.init_doc7020 = "";
+            vm.radio_values.init_doc712 = "";
+            vm.radio_values.init_doc714 = "";
+            vm.radio_values.init_doc717 = "";
+            vm.radio_values.init_doc716 = "";
+            vm.radio_values.init_doc7119 = "";
+            vm.radio_values.init_doc7120 = "";
+            vm.radio_values.init_doc722 = "";
+            vm.radio_values.init_doc724 = "";
+            vm.radio_values.init_doc727 = "";
+            vm.radio_values.init_doc726 = "";
+            vm.radio_values.init_doc7219 = "";
+            vm.radio_values.init_doc7220 = "";
+            vm.radio_values.init_doc732 = "";
+            vm.radio_values.init_doc734 = "";
+            vm.radio_values.init_doc737 = "";
+            vm.radio_values.init_doc736 = "";
+            vm.radio_values.init_doc7319 = "";
+            vm.radio_values.init_doc7320 = "";
+            vm.radio_values.init_doc742 = "";
+            vm.radio_values.init_doc744 = "";
+            vm.radio_values.init_doc747 = "";
+            vm.radio_values.init_doc746 = "";
+            vm.radio_values.init_doc7419 = "";
+            vm.radio_values.init_doc7420 = "";
+            vm.radio_values.init_doc752 = "";
+            vm.radio_values.init_doc754 = "";
+            vm.radio_values.init_doc757 = "";
+            vm.radio_values.init_doc756 = "";
+            vm.radio_values.init_doc7519 = "";
+            vm.radio_values.init_doc7520 = "";
+            vm.radio_values.init_doc762 = "";
+            vm.radio_values.init_doc764 = "";
+            vm.radio_values.init_doc767 = "";
+            vm.radio_values.init_doc766 = "";
+            vm.radio_values.init_doc7619 = "";
+            vm.radio_values.init_doc7620 = "";
+            vm.radio_values.init_doc772 = "";
+            vm.radio_values.init_doc774 = "";
+            vm.radio_values.init_doc777 = "";
+            vm.radio_values.init_doc776 = "";
+            vm.radio_values.init_doc7719 = "";
+            vm.radio_values.init_doc7720 = "";
+            vm.radio_values.init_doc782 = "";
+            vm.radio_values.init_doc784 = "";
+            vm.radio_values.init_doc787 = "";
+            vm.radio_values.init_doc786 = "";
+            vm.radio_values.init_doc7819 = "";
+            vm.radio_values.init_doc7820 = "";
+
+
+            vm.radio_values.init_doc802 = "";
+            vm.radio_values.init_doc805 = "";
+            vm.radio_values.init_doc807 = "";
+            vm.radio_values.init_doc808 = "";
+            vm.radio_values.init_doc809 = "";
+            vm.radio_values.init_doc8014 = "";
+            vm.radio_values.init_doc8015 = "";
+            vm.radio_values.init_doc812 = "";
+            vm.radio_values.init_doc815 = "";
+            vm.radio_values.init_doc817 = "";
+            vm.radio_values.init_doc818 = "";
+            vm.radio_values.init_doc819 = "";
+            vm.radio_values.init_doc8114 = "";
+            vm.radio_values.init_doc8115 = "";
+            vm.radio_values.init_doc822 = "";
+            vm.radio_values.init_doc825 = "";
+            vm.radio_values.init_doc827 = "";
+            vm.radio_values.init_doc828 = "";
+            vm.radio_values.init_doc829 = "";
+            vm.radio_values.init_doc8214 = "";
+            vm.radio_values.init_doc8215 = "";
+            vm.radio_values.init_doc832 = "";
+            vm.radio_values.init_doc835 = "";
+            vm.radio_values.init_doc837 = "";
+            vm.radio_values.init_doc838 = "";
+            vm.radio_values.init_doc839 = "";
+            vm.radio_values.init_doc8314 = "";
+            vm.radio_values.init_doc8315 = "";
+            vm.radio_values.init_doc842 = "";
+            vm.radio_values.init_doc845 = "";
+            vm.radio_values.init_doc847 = "";
+            vm.radio_values.init_doc848 = "";
+            vm.radio_values.init_doc849 = "";
+            vm.radio_values.init_doc8414 = "";
+            vm.radio_values.init_doc8415 = "";
+            vm.radio_values.init_doc852 = "";
+            vm.radio_values.init_doc855 = "";
+            vm.radio_values.init_doc857 = "";
+            vm.radio_values.init_doc858 = "";
+            vm.radio_values.init_doc859 = "";
+            vm.radio_values.init_doc8514 = "";
+            vm.radio_values.init_doc8515 = "";
+            vm.radio_values.init_doc862 = "";
+            vm.radio_values.init_doc865 = "";
+            vm.radio_values.init_doc867 = "";
+            vm.radio_values.init_doc868 = "";
+            vm.radio_values.init_doc869 = "";
+            vm.radio_values.init_doc8614 = "";
+            vm.radio_values.init_doc8615 = "";
+            vm.radio_values.init_doc872 = "";
+            vm.radio_values.init_doc875 = "";
+            vm.radio_values.init_doc877 = "";
+            vm.radio_values.init_doc878 = "";
+            vm.radio_values.init_doc879 = "";
+            vm.radio_values.init_doc8714 = "";
+            vm.radio_values.init_doc8715 = "";
+            vm.radio_values.init_doc882 = "";
+            vm.radio_values.init_doc885 = "";
+            vm.radio_values.init_doc887 = "";
+            vm.radio_values.init_doc888 = "";
+            vm.radio_values.init_doc889 = "";
+            vm.radio_values.init_doc8814 = "";
+            vm.radio_values.init_doc8815 = "";
         };
         $scope.initializeVariables();
 
@@ -500,14 +738,13 @@
             '17c2': 'Not relevant reason',
             '25c4': 'New name in the certificate',
             '25c5': 'New PG Degree Mark Sheets relevant reason',
-            '25c6': 'New Mode of study',
             '25c2': 'Document relevant reason',
             '25c3': 'New Degree Certificate Number',
-            '25c12': 'New equivalence of PG Degree relevant reason',
+            '25c9': 'Name of subject',
+            '25c10': 'Pg Degree Government Order',
             '25c13': 'Name of university',
             '25c15': 'New Month & Year of Passing',
-            '25c19': 'New Period of study',
-            '25c21': 'Percentage Remarks',
+            '25c25': 'UGC Recognised University',
             '25c28': 'New Foreign PG Degree Relevant Reason',
             '27c3': 'Name of the university',
             '27c4': 'New Year of Passing',
@@ -559,19 +796,20 @@
             '37c3': 'Certificate Number',
             '37c4': 'Name in the certificate',
             '37c5': 'UG Marksheet relevant reason',
+            '37c9': 'Name of subject',
             '37c13': 'New name of the university',
             '37c14': 'New institute studied',
             '37c15': 'New Month & Year of passing',
             '37c19': 'Period of study',
-            '37c20': 'Mode of study',
             '37c21': 'Percentage of marks',
+            '37c25': 'UGC Recognised University',
+            '37c30': 'Government Order No for UG',
             '38c2': 'Document relevant reason',
             '38c4': 'Name in the marksheet',
             '38c7': 'No. of Marksheet',
             '38c18': 'New Date of publications',
             '38c19': 'Period of study',
             '38c20': 'Mode of study',
-            '38c25': 'Institute Studied',
             '39c2': 'Relevant document reason',
             '40c2': 'Relevant document reason',
             '41c2': 'Relevant document reason',
@@ -583,35 +821,30 @@
             '44c6': 'New date of publications',
             '44c19': 'Period of study',
             '44c20': 'Mode of study',
-            '44c25': 'Name of institute',
             '45c2': 'Relevant document reason',
             '45c4': 'Name in the marksheet',
             '45c7': 'No of marksheet',
             '45c6': 'New date of publications',
             '45c19': 'Period of study',
             '45c20': 'Mode of study',
-            '45c25': 'Name of institute',
             '46c2': 'Relevant document reason',
             '46c4': 'Name in the marksheet',
             '46c7': 'No of marksheet',
             '46c6': 'New date of publications',
             '46c19': 'Period of study',
             '46c20': 'Mode of study',
-            '46c25': 'Name of institute',
             '47c2': 'Relevant document reason',
             '47c4': 'Name in the marksheet',
             '47c7': 'No of marksheet',
             '47c6': 'New date of publications',
             '47c19': 'Period of study',
             '47c20': 'Mode of study',
-            '47c25': 'Name of institute',
             '48c2': 'Relevant document reason',
             '48c4': 'Name in the marksheet',
             '48c7': 'No of marksheet',
             '48c6': 'New date of publications',
             '48c19': 'Period of study',
             '48c20': 'Mode of study',
-            '48c25': 'Name of institute',
             '49c2': 'Relevant document reason',
             '49c5': 'Date of publications',
             '49c6': 'Name of institute',
@@ -681,7 +914,124 @@
             '68c4': 'Month & Year of passing',
             '68c7': 'Not relevant reason',
             '68c11': 'Date of publication of result',
-            '69c3': 'Not relevant reason'
+            '69c3': 'Not relevant reason',
+            '70c2': 'Relevant document reason',
+            '70c4': 'Name in the marksheet',
+            '70c7': 'No of marksheet',
+            '70c6': 'New date of publications',
+            '70c19': 'Period of study',
+            '70c20': 'Mode of study',
+            '71c2': 'Relevant document reason',
+            '71c4': 'Name in the marksheet',
+            '71c7': 'No of marksheet',
+            '71c6': 'New date of publications',
+            '71c19': 'Period of study',
+            '71c20': 'Mode of study',
+            '72c2': 'Relevant document reason',
+            '72c4': 'Name in the marksheet',
+            '72c7': 'No of marksheet',
+            '72c6': 'New date of publications',
+            '72c19': 'Period of study',
+            '72c20': 'Mode of study',
+            '73c2': 'Relevant document reason',
+            '73c4': 'Name in the marksheet',
+            '73c7': 'No of marksheet',
+            '73c6': 'New date of publications',
+            '73c19': 'Period of study',
+            '73c20': 'Mode of study',
+            '74c2': 'Relevant document reason',
+            '74c4': 'Name in the marksheet',
+            '74c7': 'No of marksheet',
+            '74c6': 'New date of publications',
+            '74c19': 'Period of study',
+            '74c20': 'Mode of study',
+            '75c2': 'Relevant document reason',
+            '75c4': 'Name in the marksheet',
+            '75c7': 'No of marksheet',
+            '75c6': 'New date of publications',
+            '75c19': 'Period of study',
+            '75c20': 'Mode of study',
+            '76c2': 'Relevant document reason',
+            '76c4': 'Name in the marksheet',
+            '76c7': 'No of marksheet',
+            '76c6': 'New date of publications',
+            '76c19': 'Period of study',
+            '76c20': 'Mode of study',
+            '77c2': 'Relevant document reason',
+            '77c4': 'Name in the marksheet',
+            '77c7': 'No of marksheet',
+            '77c6': 'New date of publications',
+            '77c19': 'Period of study',
+            '77c20': 'Mode of study',
+            '78c2': 'Relevant document reason',
+            '78c4': 'Name in the marksheet',
+            '78c7': 'No of marksheet',
+            '78c6': 'New date of publications',
+            '78c19': 'Period of study',
+            '78c20': 'Mode of study',
+            '80c2': 'Relevant document reason',
+            '80c5': 'Name in the PG Degree Certificate',
+            '80c7': 'Number of Marksheet',
+            '80c8': 'New date of publication of result',
+            '80c9': 'New period of study',
+            '80c14': 'Name of institute',
+            '80c15': 'Mode of study',
+            '81c2': 'Relevant document reason',
+            '81c5': 'Name in the PG Degree Certificate',
+            '81c7': 'Number of Marksheet',
+            '81c8': 'New date of publication of result',
+            '81c9': 'New period of study',
+            '81c14': 'Name of institute',
+            '81c15': 'Mode of study',
+            '82c2': 'Relevant document reason',
+            '82c5': 'Name in the PG Degree Certificate',
+            '82c7': 'Number of Marksheet',
+            '82c8': 'New date of publication of result',
+            '82c9': 'New period of study',
+            '82c14': 'Name of institute',
+            '82c15': 'Mode of study',
+            '83c2': 'Relevant document reason',
+            '83c5': 'Name in the PG Degree Certificate',
+            '83c7': 'Number of Marksheet',
+            '83c8': 'New date of publication of result',
+            '83c9': 'New period of study',
+            '83c14': 'Name of institute',
+            '83c15': 'Mode of study',
+            '84c2': 'Relevant document reason',
+            '84c5': 'Name in the PG Degree Certificate',
+            '84c7': 'Number of Marksheet',
+            '84c8': 'New date of publication of result',
+            '84c9': 'New period of study',
+            '84c14': 'Name of institute',
+            '84c15': 'Mode of study',
+            '85c2': 'Relevant document reason',
+            '85c5': 'Name in the PG Degree Certificate',
+            '85c7': 'Number of Marksheet',
+            '85c8': 'New date of publication of result',
+            '85c9': 'New period of study',
+            '85c14': 'Name of institute',
+            '85c15': 'Mode of study',
+            '86c2': 'Relevant document reason',
+            '86c5': 'Name in the PG Degree Certificate',
+            '86c7': 'Number of Marksheet',
+            '86c8': 'New date of publication of result',
+            '86c9': 'New period of study',
+            '86c14': 'Name of institute',
+            '86c15': 'Mode of study',
+            '87c2': 'Relevant document reason',
+            '87c5': 'Name in the PG Degree Certificate',
+            '87c7': 'Number of Marksheet',
+            '87c8': 'New date of publication of result',
+            '87c9': 'New period of study',
+            '87c14': 'Name of institute',
+            '87c15': 'Mode of study',
+            '88c2': 'Relevant document reason',
+            '88c5': 'Name in the PG Degree Certificate',
+            '88c7': 'Number of Marksheet',
+            '88c8': 'New date of publication of result',
+            '88c9': 'New period of study',
+            '88c14': 'Name of institute',
+            '88c15': 'Mode of study',
         };
 
         $scope.titles =
@@ -735,6 +1085,15 @@
                 "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
                 "UG Degree / Equivalent Marksheet 4": 'UG Degree / Equivalent Marksheet 4',
                 "UG Degree / Equivalent Marksheet 5": 'UG Degree / Equivalent Marksheet 5',
+                "UG Degree / Equivalent Marksheet 6": 'UG Degree / Equivalent Marksheet 6',
+                "UG Degree / Equivalent Marksheet 7": 'UG Degree / Equivalent Marksheet 7',
+                "UG Degree / Equivalent Marksheet 8": 'UG Degree / Equivalent Marksheet 8',
+                "UG Degree / Equivalent Marksheet 9": 'UG Degree / Equivalent Marksheet 9',
+                "UG Degree / Equivalent Marksheet 10": 'UG Degree / Equivalent Marksheet 10',
+                "UG Degree / Equivalent Marksheet 11": 'UG Degree / Equivalent Marksheet 11',
+                "UG Degree / Equivalent Marksheet 12": 'UG Degree / Equivalent Marksheet 12',
+                "UG Degree / Equivalent Marksheet 13": 'UG Degree / Equivalent Marksheet 13',
+                "UG Degree / Equivalent Marksheet 14": 'UG Degree / Equivalent Marksheet 14',
                 "B.Ed Degree / Equivalent Marksheet": 'B.Ed Degree / Equivalent Consolidated Marksheet',
                 "B.Ed Degree / Equivalent Marksheet 1": 'B.Ed Degree / Equivalent Marksheet 1',
                 "B.Ed Degree / Equivalent Marksheet 2": 'B.Ed Degree / Equivalent Marksheet 2',
@@ -753,6 +1112,15 @@
                 "PG Degree / Equivalent Marksheet 3": 'PG Degree / Equivalent Marksheet 3',
                 "PG Degree / Equivalent Marksheet 4": 'PG Degree / Equivalent Marksheet 4',
                 "PG Degree / Equivalent Marksheet 5": 'PG Degree / Equivalent Marksheet 5',
+                "PG Degree / Equivalent Marksheet 6": 'PG Degree / Equivalent Marksheet 6',
+                "PG Degree / Equivalent Marksheet 7": 'PG Degree / Equivalent Marksheet 7',
+                "PG Degree / Equivalent Marksheet 8": 'PG Degree / Equivalent Marksheet 8',
+                "PG Degree / Equivalent Marksheet 9": 'PG Degree / Equivalent Marksheet 9',
+                "PG Degree / Equivalent Marksheet 10": 'PG Degree / Equivalent Marksheet 10',
+                "PG Degree / Equivalent Marksheet 11": 'PG Degree / Equivalent Marksheet 11',
+                "PG Degree / Equivalent Marksheet 12": 'PG Degree / Equivalent Marksheet 12',
+                "PG Degree / Equivalent Marksheet 13": 'PG Degree / Equivalent Marksheet 13',
+                "PG Degree / Equivalent Marksheet 14": 'PG Degree / Equivalent Marksheet 14',
                 "SLET / NET Exemption certificate": 'SLET / NET Exemption certificate'
             };
 
@@ -1085,7 +1453,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912").datepicker({
+                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -1101,7 +1469,7 @@
                 }).on('changeDate', function (value) {
                     // vm.doc23 = moment(value.date).format("MM-YYYY")
                 });
-                $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679').datepicker({
+                $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889').datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
@@ -1490,6 +1858,42 @@
         return {
             templateUrl: "/candidates/view/templates/PG_Marksheet5.html"
         };
+    }).directive('pgMarksheet6', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet6.html"
+        };
+    }).directive('pgMarksheet7', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet7.html"
+        };
+    }).directive('pgMarksheet8', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet8.html"
+        };
+    }).directive('pgMarksheet9', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet9.html"
+        };
+    }).directive('pgMarksheet10', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet10.html"
+        };
+    }).directive('pgMarksheet11', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet11.html"
+        };
+    }).directive('pgMarksheet12', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet12.html"
+        };
+    }).directive('pgMarksheet13', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet13.html"
+        };
+    }).directive('pgMarksheet14', function () {
+        return {
+            templateUrl: "/candidates/view/templates/PG_Marksheet14.html"
+        };
     }).directive('nocCertificateForOtherDepartment', function () {
         return {
             templateUrl: "/candidates/view/templates/NOC_Other_Department.html"
@@ -1613,6 +2017,42 @@
     }).directive('ugMarksheet5', function () {
         return {
             templateUrl: "/candidates/view/templates/UG_Marksheet5.html"
+        };
+    }).directive('ugMarksheet6', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet6.html"
+        };
+    }).directive('ugMarksheet7', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet7.html"
+        };
+    }).directive('ugMarksheet8', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet8.html"
+        };
+    }).directive('ugMarksheet9', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet9.html"
+        };
+    }).directive('ugMarksheet10', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet10.html"
+        };
+    }).directive('ugMarksheet11', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet11.html"
+        };
+    }).directive('ugMarksheet12', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet12.html"
+        };
+    }).directive('ugMarksheet13', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet13.html"
+        };
+    }).directive('ugMarksheet14', function () {
+        return {
+            templateUrl: "/candidates/view/templates/UG_Marksheet14.html"
         };
     }).directive('work1', function () {
         return {

@@ -81,7 +81,7 @@
             Not Matched
         </label>
         <label style="{{ $ctrl.radio_values.init_doc387=='2' ? 'display:block':'display:none'}}">
-            <input type="text" id="doc387" maxlength="1" ng-model="$ctrl.doc387"
+            <input type="text" id="doc387" maxlength="2" ng-model="$ctrl.doc387"
                    class="form-control">
         </label>
     </div>
@@ -170,20 +170,27 @@
         <label class="radio-custom">
             <input type="radio" class="q_radio radio3824" name="radio3824"
                    value="1">
-            Matched
+            Studied Tamil
         </label>
     </div>
     <div class="radio">
         <label class="radio-custom">
             <input type="radio" class="q_radio radio3824" name="radio3824"
                    value="2">
-            Not Matched
+            Not Studied Tamil
+        </label>
+    </div>
+    <div class="radio">
+        <label class="radio-custom">
+            <input type="radio" class="q_radio radio3824" name="radio3824"
+                   value="3">
+            Not Clear
         </label>
     </div>
 </div>
 <div class="clearfix"></div>
 <div class="questions">
-    Percentage of Marks in PG?
+    Percentage of Marks in UG?
 </div>
 <div class="col-sm-12">
     <div class="radio">
@@ -295,40 +302,6 @@
                    class="q_radio radio3820" name="radio3820"
                    value="3">
             Not Clear
-        </label>
-    </div>
-</div>
-<div class="clearfix"></div>
-<div class="questions">
-    Name of Institution studied in the UG Degree
-</div>
-<div class="col-sm-12">
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3825" name="radio3825"
-                   value="1" ng-model="$ctrl.radio_values.init_doc3825"
-                   ng-change="$ctrl.doc3825=''">
-            Matched
-        </label>
-    </div>
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3825" name="radio3825"
-                   value="2" ng-model="$ctrl.radio_values.init_doc3825"
-                   ng-change="$ctrl.doc3825=''">
-            Not Matched
-        </label>
-        <label style="{{ $ctrl.radio_values.init_doc3825=='2' ? 'display:block':'display:none'}}">
-            <input type="text" id="doc3825" ng-model="$ctrl.doc3825"
-                   class="form-control">
-        </label>
-    </div>
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3825" name="radio3825"
-                   value="3" ng-model="$ctrl.radio_values.init_doc3825"
-                   ng-change="$ctrl.doc3825=''">
-            Matched
         </label>
     </div>
 </div>

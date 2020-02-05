@@ -10,22 +10,22 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio662" name="radio662"
-               value="1" ng-model="$ctrl.radio_values.init_doc662"
-               ng-change="$ctrl.doc662=''">
+        <input type="radio" class="q_radio radio802" name="radio802"
+               value="1" ng-model="$ctrl.radio_values.init_doc802"
+               ng-change="$ctrl.doc802=''">
         Relevant
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio662" name="radio662"
-               value="2" ng-model="$ctrl.radio_values.init_doc662"
-               ng-change="$ctrl.doc662=''">
+        <input type="radio" class="q_radio radio802" name="radio802"
+               value="2" ng-model="$ctrl.radio_values.init_doc802"
+               ng-change="$ctrl.doc802=''">
         Not Relevant
       </label>
       <label
-        style="{{ $ctrl.radio_values.init_doc662=='2' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc662">
+        style="{{ $ctrl.radio_values.init_doc802=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc802">
           <option value="">--Select--</option>
           <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
             {{r}}
@@ -41,22 +41,22 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio666" name="radio666"
-               value="1" ng-model="$ctrl.radio_values.init_doc666"
-               ng-change="$ctrl.doc666=''">
+        <input type="radio" class="q_radio radio805" name="radio805"
+               value="1" ng-model="$ctrl.radio_values.init_doc805"
+               ng-change="$ctrl.doc805=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio666" name="radio666"
-               value="2" ng-model="$ctrl.radio_values.init_doc666"
-               ng-change="$ctrl.doc666=''">
+        <input type="radio" class="q_radio radio805" name="radio805"
+               value="2" ng-model="$ctrl.radio_values.init_doc805"
+               ng-change="$ctrl.doc805=''">
         Not Matched
       </label>
       <label
-              style="{{ $ctrl.radio_values.init_doc666=='2' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc666">
+              style="{{ $ctrl.radio_values.init_doc805=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc805">
           <option value="">--Select--</option>
           <option value="Initial Missing">Initial Missing</option>
           <option value="Incorrect Spelling">Incorrect Spelling</option>
@@ -67,9 +67,36 @@
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio666" name="radio666"
-               value="3" ng-model="$ctrl.radio_values.init_doc666"
-               ng-change="$ctrl.doc666=''">
+        <input type="radio" class="q_radio radio805" name="radio805"
+               value="3" ng-model="$ctrl.radio_values.init_doc805"
+               ng-change="$ctrl.doc805=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Consolidated Mark sheet for PG Course?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio806" name="radio806"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio806" name="radio806"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio806" name="radio806"
+               value="3">
         Not Clear
       </label>
     </div>
@@ -81,42 +108,22 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio667" name="radio667"
-               value="1" ng-model="$ctrl.radio_values.init_doc667"
-               ng-change="$ctrl.doc667=''">
+        <input type="radio" class="q_radio radio807" name="radio807"
+               value="1" ng-model="$ctrl.radio_values.init_doc807"
+               ng-change="$ctrl.doc807=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio667" name="radio667"
-               value="2" ng-model="$ctrl.radio_values.init_doc667"
-               ng-change="$ctrl.doc667=''">
+        <input type="radio" class="q_radio radio807" name="radio807"
+               value="2" ng-model="$ctrl.radio_values.init_doc807"
+               ng-change="$ctrl.doc807=''">
         Not Matched
       </label>
       <label
-              style="{{ $ctrl.radio_values.init_doc667=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc667"/>
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Number of Mark Sheet in PG Course?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio667" name="radio667"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio667" name="radio667"
-               value="2">
-        Not Matched
+              style="{{ $ctrl.radio_values.init_doc807=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc807"/>
       </label>
     </div>
   </div>
@@ -127,29 +134,29 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio668" name="radio668"
-               value="1" ng-model="$ctrl.radio_values.init_doc668"
-               ng-change="$ctrl.doc668=''">
+        <input type="radio" class="q_radio radio808" name="radio808"
+               value="1" ng-model="$ctrl.radio_values.init_doc808"
+               ng-change="$ctrl.doc808=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio668" name="radio668"
-               value="2" ng-model="$ctrl.radio_values.init_doc668"
-               ng-change="$ctrl.doc668=''">
+        <input type="radio" class="q_radio radio808" name="radio808"
+               value="2" ng-model="$ctrl.radio_values.init_doc808"
+               ng-change="$ctrl.doc808=''">
         Not Matched
       </label>
-      <label style="{{ $ctrl.radio_values.init_doc668=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc668" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc668"
+      <label style="{{ $ctrl.radio_values.init_doc808=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc808" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc808"
                class="modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio668" name="radio668"
-               value="3" ng-model="$ctrl.radio_values.init_doc668"
-               ng-change="$ctrl.doc668=''">
+        <input type="radio" class="q_radio radio808" name="radio808"
+               value="3" ng-model="$ctrl.radio_values.init_doc808"
+               ng-change="$ctrl.doc808=''">
         Not Clear
       </label>
     </div>
@@ -161,32 +168,32 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc669"
-               class="q_radio radio669"
-               ng-change="$ctrl.doc669=''" name="radio669"
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc809"
+               class="q_radio radio809"
+               ng-change="$ctrl.doc809=''" name="radio809"
                value="1">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc669"
-               class="q_radio radio669"
-               name="radio669" value="2">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc809"
+               class="q_radio radio809"
+               name="radio809" value="2">
         Not Matched
       </label>
       <label
-              style="{{ $ctrl.radio_values.init_doc669=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc669" data-date-format="YYYY-MM-DD"
-               ng-model="$ctrl.doc669"
+              style="{{ $ctrl.radio_values.init_doc809=='2' ? 'display:block':'display:none'}}">
+        <input type="text" id="doc809" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc809"
                class="modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" ng-model="$ctrl.radio_values.init_doc669"
-               class="q_radio radio669"
-               ng-change="$ctrl.doc669=''" name="radio669"
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc809"
+               class="q_radio radio809"
+               ng-change="$ctrl.doc809=''" name="radio809"
                value="3">
         Not Clear
       </label>
@@ -199,21 +206,21 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6610" name="radio6610"
+        <input type="radio" class="q_radio radio8010" name="radio8010"
                value="1">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6610" name="radio6610"
+        <input type="radio" class="q_radio radio8010" name="radio8010"
                value="2">
         Not Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6610" name="radio6610"
+        <input type="radio" class="q_radio radio8010" name="radio8010"
                value="3">
         Not Applicable
       </label>
@@ -226,48 +233,49 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6611" name="radio6611"
+        <input type="radio" class="q_radio radio8011" name="radio8011"
                value="1">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6611" name="radio6611"
+        <input type="radio" class="q_radio radio8011" name="radio8011"
                value="2">
         Not Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6611" name="radio6611"
+        <input type="radio" class="q_radio radio8011" name="radio8011"
                value="3">
         Not Applicable
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+
   <div class="questions">
     Studied the Course in Calendar Year pattern (Jan to Dec)
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6612" name="radio6612"
+        <input type="radio" class="q_radio radio8012" name="radio8012"
                value="1">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6612" name="radio6612"
+        <input type="radio" class="q_radio radio8012" name="radio8012"
                value="2">
         Not Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6612" name="radio6612"
+        <input type="radio" class="q_radio radio8012" name="radio8012"
                value="3">
         Not Applicable
       </label>
@@ -281,21 +289,21 @@
     <div class="col-sm-12">
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6613" name="radio6613"
+          <input type="radio" class="q_radio radio8013" name="radio8013"
                  value="1">
           Matched
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6613" name="radio6613"
+          <input type="radio" class="q_radio radio8013" name="radio8013"
                  value="2">
           Not Matched
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6613" name="radio6613"
+          <input type="radio" class="q_radio radio8013" name="radio8013"
                  value="3">
           Not Applicable
         </label>
@@ -309,29 +317,29 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6614" name="radio6614"
-               value="1" ng-model="$ctrl.radio_values.init_doc6614"
-               ng-change="$ctrl.doc6614=''">
+        <input type="radio" class="q_radio radio8014" name="radio8014"
+               value="1" ng-model="$ctrl.radio_values.init_doc8014"
+               ng-change="$ctrl.doc8014=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6614" name="radio6614"
-               value="2" ng-model="$ctrl.radio_values.init_doc6614"
-               ng-change="$ctrl.doc6614=''">
+        <input type="radio" class="q_radio radio8014" name="radio8014"
+               value="2" ng-model="$ctrl.radio_values.init_doc8014"
+               ng-change="$ctrl.doc8014=''">
         Not Matched
       </label>
       <label
-              style="{{ $ctrl.radio_values.init_doc6614=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc6614"/>
+              style="{{ $ctrl.radio_values.init_doc8014=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc8014"/>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6614" name="radio6614"
-               value="3" ng-model="$ctrl.radio_values.init_doc6614"
-               ng-change="$ctrl.doc6614=''">
+        <input type="radio" class="q_radio radio8014" name="radio8014"
+               value="3" ng-model="$ctrl.radio_values.init_doc8014"
+               ng-change="$ctrl.doc8014=''">
         Not Clear
       </label>
     </div>
@@ -343,22 +351,22 @@
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6615" name="radio6615"
-               value="1" ng-model="$ctrl.radio_values.init_doc6615"
-               ng-change="$ctrl.doc6615=''">
+        <input type="radio" class="q_radio radio8015" name="radio8015"
+               value="1" ng-model="$ctrl.radio_values.init_doc8015"
+               ng-change="$ctrl.doc8015=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6615" name="radio6615"
-               value="2" ng-model="$ctrl.radio_values.init_doc6615"
-               ng-change="$ctrl.doc6615=''">
+        <input type="radio" class="q_radio radio8015" name="radio8015"
+               value="2" ng-model="$ctrl.radio_values.init_doc8015"
+               ng-change="$ctrl.doc8015=''">
         Not Matched
       </label>
       <label
-              style="{{ $ctrl.radio_values.init_doc6615=='2' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc6615">
+              style="{{ $ctrl.radio_values.init_doc8015=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc8015">
           <option value="">--Select--</option>
           <option value="Regular">Regular</option>
           <option value="Distance">Distance</option>
@@ -370,9 +378,9 @@
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6615" name="radio6615"
-               value="3" ng-model="$ctrl.radio_values.init_doc6615"
-               ng-change="$ctrl.doc6615=''">
+        <input type="radio" class="q_radio radio8015" name="radio8015"
+               value="3" ng-model="$ctrl.radio_values.init_doc8015"
+               ng-change="$ctrl.doc8015=''">
         Not Clear
       </label>
     </div>
@@ -385,28 +393,28 @@
     <div class="col-sm-12">
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6616" name="radio6616"
+          <input type="radio" class="q_radio radio8016" name="radio8016"
                  value="1">
           Percentage of Marks is between 35 to 40
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6616" name="radio6616"
+          <input type="radio" class="q_radio radio8016" name="radio8016"
                  value="2">
           Percentage of Marks is greater than 40
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6616" name="radio6616"
+          <input type="radio" class="q_radio radio8016" name="radio8016"
                  value="3">
           Percentage of Marks is less than 35
         </label>
       </div>
       <div class="radio">
         <label class="radio-custom">
-          <input type="radio" class="q_radio radio6616" name="radio6616"
+          <input type="radio" class="q_radio radio8016" name="radio8016"
                  value="4">
           Not Clear
         </label>
