@@ -1023,13 +1023,13 @@
             <div class="modal-content" style="height: 100% !important;">
                 <div class="modal-body" style="height: 100% !important;">
                     <div class="row" style="height: 100% !important;">
-                        <div class="col-sm-8" style="height: 100% !important;">
+                        <div class="col-sm-7" style="height: 100% !important;">
                             <iframe id="docFrame"
                                     style="height: 100% !important;width: 100%">
 
                             </iframe>
                         </div>
-                        <div class="col-sm-4" style="height: 100% !important;">
+                        <div class="col-sm-5" style="height: 100% !important;">
                             <section class="panel-default"
                                      style="height: 100% !important;">
                                 <header class="font-bold">Document Questions
@@ -1107,6 +1107,200 @@
                                             </section>
                                         </div>
                                         <div class="clearfix"></div>
+                                    </div>
+
+                                    <div ng-if="selectedDocType.indexOf('Birth') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Birth Certificate issued at
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertificateissuedt']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Birth Certificate issuing
+                                                authority :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertissuingauth']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Birth Certificate
+                                                no.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertno']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('M.Phil') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                M.Phil Certificate Number
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilcertno']}}</span>
+                                            </section>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                M.Phill Institute Name:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilinstitname']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Date of publication of result:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('SLET') > -1">
+                                        <div ng-if="candidateDetails['candidate_details'][0]['oaed_is_slet_checked'] =='true'">
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Year of passing :<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Whether passed in the
+                                                    relevant :<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_passedslet']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Subject.:<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Registration
+                                                    Number.:<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_slet_registration_number']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div ng-if="candidateDetails['candidate_details'][0]['oaed_is_net_checked'] =='true'">
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Year of passing :<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Subject.:<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <section class="panel-body"
+                                                         style="font-size: 12px">
+                                                    Registration
+                                                    Number.:<br/><span
+                                                        style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_registration_number']}}</span>
+                                                </section>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('Community') > -1">
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community Certificate no.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_commcertno']}}</span>
+                                            </section>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Communal Category.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community certificate issued
+                                                with Father's Name.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_with_father_name']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community certificate issued
+                                                date.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community Certificate issued by
+                                                Tamil Nadu
+                                                Government.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_certificate_issued_by_tamil']}}</span>
+                                            </section>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Community Certificate issuing
+                                                authority.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_authority']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                SubCaste.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_subcaste']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Religion.:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
+                                            </section>
+                                        </div>
+
                                     </div>
 
                                     <div ng-if="selectedDocType=='10th / SSLC Certificate'">
@@ -1347,7 +1541,8 @@
                                         <div class="col-md-6">
                                             <section class="panel-body"
                                                      style="font-size: 12px">
-                                                UG Degree Certificate Number:<br/><span
+                                                UG Degree Certificate
+                                                Number:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugcertno']}}</span>
                                             </section>
                                         </div>
@@ -1364,6 +1559,13 @@
                                                      style="font-size: 12px">
                                                 Date of publications of result:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Mode of study:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</span>
                                             </section>
                                         </div>
                                     </div>
@@ -1480,7 +1682,8 @@
                                         <div class="col-md-6">
                                             <section class="panel-body"
                                                      style="font-size: 12px">
-                                                PG Degree Certificate Number:<br/><span
+                                                PG Degree Certificate
+                                                Number:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgcertno']}}</span>
                                             </section>
                                         </div>
@@ -1502,7 +1705,8 @@
                                         <div class="col-md-6">
                                             <section class="panel-body"
                                                      style="font-size: 12px">
-                                                Studied PG from recognised university:<br/><span
+                                                Studied PG from recognised
+                                                university:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_recognised_university']}}</span>
                                             </section>
                                         </div>
@@ -1510,8 +1714,16 @@
                                         <div class="col-md-6">
                                             <section class="panel-body"
                                                      style="font-size: 12px">
-                                                PG Foreign University:<br/><span
+                                                PG Foreign
+                                                University:<br/><span
                                                     style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgforeignuni']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Mode of study:<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_mode_of_study']}}</span>
                                             </section>
                                         </div>
                                     </div>

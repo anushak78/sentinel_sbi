@@ -1381,7 +1381,17 @@
       "q_id": 1
     },
     {
-      "question": "Name of the Subject in the SLET / NET Certificate?",
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 7
+    },
+    {
+      "question": "Name in the SLET certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1392,29 +1402,17 @@
       "q_id": 2
     },
     {
-      "question": "Name of Conducting agency in the SLET / NET Certificate?",
+      "question": "Name of the subject in which the candidate appeared and qualified in SLET",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 28,
       "q_id": 3
     },
     {
-      "question": "Year of Passing in the SLET / NET Certificate?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 28,
-      "q_id": 4
-    },
-    {
-      "question": "Period of Study in the SLET / NET Certificate?",
+      "question": "Whether passed in the SLET in the relevant Subject",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1425,7 +1423,7 @@
       "q_id": 5
     },
     {
-      "question": "What is the Mode of Study?",
+      "question": "Month & Year of Passing in the SLET Certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1433,17 +1431,70 @@
       },
       "approved": "1",
       "doc_id": 28,
+      "q_id": 4
+    },
+    {
+      "question": "Name of the University that conducted SLET?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 28,
       "q_id": 6
     },
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document relevant to the claim of NET/CSIR/JRF??",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
       },
       "approved": "1",
       "doc_id": 28,
-      "q_id": 7
+      "q_id": 8
+    },
+    {
+      "question": "Name in the NET / CSIR / JRF certificate??",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 9
+    },
+    {
+      "question": "Name of the subject in which the candidate appeared and qualified in NET / CSIR / JRF",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 10
+    },
+    {
+      "question": "Whether passed in the NET / CSIR / JRF as per UGC Norms in the relevant Subject",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 11
+    },
+    {
+      "question": "Month & Year of Passing in the NET / CSIR / JRF?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 28,
+      "q_id": 12
     }
   ],
   "Phd Certificate": [

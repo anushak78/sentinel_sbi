@@ -324,7 +324,16 @@ def get_candidate_details(request):
     oci.oci_sign_image_path,
     oum.*,
     ocad.*,
+    oaed.*,
     oacd1.oacd_created_by,oacd1.oacd_year_of_passing as ssc_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_mphildegtype) as mphil_degree_type,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_commcertfathername) as community_issued_with_father_name,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_issueauthcommcert) as community_issued_authority,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_community_cert) as community_certificate_issued_by_tamil,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_religion_belief) as religion,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_ugmode) as ug_mode_of_study,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgmode) as pg_mode_of_study,
+      (select octm_category_desc from oes_category_master where octm_category_pk::varchar=ocd.ocd_community) as community,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
       oacd1.oacd_university_other as ssc_university_other,
       oacd1.oacd_percentage as scc_percentage,
@@ -382,6 +391,7 @@ def get_candidate_details(request):
     left join oes_acdm_cand_details  oacd3 on (oacd3.oacd_user_fk=oum_user_pk and oacd3.oacd_acdm_fk=3)
     left join oes_acdm_cand_details  oacd4 on (oacd4.oacd_user_fk=oum_user_pk and oacd4.oacd_acdm_fk=4)
     left join oes_cand_additional_details ocad on oum.oum_user_pk = ocad.ocad_user_fk
+    left join oes_additional_education_details oaed on oum.oum_user_pk = oaed.oaed_user_fk
     where ocd.ocd_created_by = :candidate_id
                           """)
     data = request.dbsession.execute(details_query, {
@@ -398,56 +408,19 @@ def get_candidate_details(request):
     )
 
     document_list_query = text("""
-        select distinct * from ( select
+        select distinct * from (SELECT
         ocd_flag,
         ocd_doc_file_name,
-        CASE
-        WHEN
-        odm_name = 'NOC (For Department)' AND
-        owe_police_dept = 'Other'
-        THEN 'Noc (Other Department)'
-        WHEN
-        odm_name = 'NOC (For Department)' AND
-        owe_police_dept = 'Police'
-        THEN 'Noc (Police Department)'
-        ELSE
         odm_name
-        END odm_name
-        from oes_user_master
-        left join oes_candidate_doc
-        on oum_user_id = ocd_created_by
-        left join (
-  SELECT
-    CASE
-    WHEN
-      odm_name = 'NOC (For Department)' AND
-      owe_police_dept = 'Other'
-      THEN 'Noc (Other Department)'
-    WHEN
-      odm_name = 'NOC (For Department)' AND
-      owe_police_dept = 'Police'
-      THEN 'Noc (Police Department)'
-    ELSE
-      odm_name
-    END odm_name,
-    odm_abbreviation
-  FROM oes_user_master
-    LEFT JOIN oes_candidate_doc
-      ON oum_user_id = ocd_created_by
-    LEFT JOIN oes_document_master
-      ON odm_abbreviation = ocd_flag
-    LEFT JOIN tnu.oes_work_experience owe
-      ON oum_user_id = owe.owe_created_by
-  WHERE odm_name IS NOT NULL AND oes_document_master.odm_status != 'D'
-    and oum_user_id = :candidate_id
-  GROUP BY odm_name, odm_abbreviation, owe_police_dept) odm
-        on odm_abbreviation = ocd_flag
-        inner join cv.cv_document_types_master cdtm
-        on odm_name = cdtm.doc_type
-        LEFT JOIN tnu.oes_work_experience owe
-        ON oum_user_id = owe.owe_created_by
-        where oum_user_id = :candidate_id
-        order by cdtm.doc_id asc) d1
+      FROM oes_user_master
+        LEFT JOIN oes_candidate_doc
+          ON oum_user_id = ocd_created_by
+        LEFT JOIN oes_document_master odm
+          ON odm_abbreviation = ocd_flag
+        INNER JOIN cv.cv_document_types_master cdtm
+          ON odm_name = cdtm.doc_type
+      WHERE oum_user_id = :candidate_id
+      ORDER BY cdtm.doc_id ASC) d1
                               """)
 
     document_list = request.dbsession.execute(document_list_query, {
@@ -480,19 +453,32 @@ def get_candidate_details(request):
     #         "odm_name": "Additional Mark"
     #     })
     work_experience_query = text("""
-        select * from oes_work_experience where owe_created_by =  :candidate_id
+        select
+	ocd_user_fk,
+	'Work Experience '|| row_number() over(partition by ocd_user_fk order by ocd_user_fk) as ocd_flag,
+	ocd_doc_file_name
+from oes_candidate_doc
+WHERE ocd_wrkdoc_id IS NOT NULL
+AND length(trim(ocd_wrkdoc_id))>0 AND oes_candidate_doc.ocd_created_by =  :candidate_id
     """)
     work_experience = request.dbsession.execute(work_experience_query, {
         "candidate_id": candidate_id
     }).fetchall()
     work_experience = _key_column_generator(work_experience)
+    work_experience = _fix_document_urls(request, work_experience, candidate_id)
     print(work_experience)
+
+    for d in work_experience:
+        print('+++++++++++++++++++')
+        document_list.insert(1, {
+            "ocd_doc_file_name": d['ocd_doc_file_name'],
+            "ocd_flag": d['ocd_flag'],
+            "odm_name": d['ocd_flag'],
+        })
 
     for list in document_list:
         list['status'] = {}
         for i in range(int(level)):
-            print("++++++++++++++++")
-            print(list['odm_name'])
             doc_status = CandidateDocumentStatus.get_document_status(
                 request.dbsession, candidate_id, list['odm_name'], (i + 1))
             for docs in doc_status:

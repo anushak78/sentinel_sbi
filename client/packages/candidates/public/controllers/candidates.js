@@ -82,10 +82,12 @@
             vm.doc277 = '';
             vm.doc278 = '';
             vm.doc279 = '';
+            vm.doc282 = '';
             vm.doc284 = '';
-            vm.doc285 = '';
-            vm.doc286 = '';
             vm.doc287 = '';
+            vm.doc288 = '';
+            vm.doc289 = '';
+            vm.doc2812 = '';
             vm.doc292 = '';
             vm.doc293 = '';
             vm.doc294 = '';
@@ -418,10 +420,12 @@
             vm.radio_values.init_doc277 = "";
             vm.radio_values.init_doc278 = "";
             vm.radio_values.init_doc279 = "";
+            vm.radio_values.init_doc282 = "";
             vm.radio_values.init_doc284 = "";
-            vm.radio_values.init_doc285 = "";
-            vm.radio_values.init_doc286 = "";
             vm.radio_values.init_doc287 = "";
+            vm.radio_values.init_doc288 = "";
+            vm.radio_values.init_doc289 = "";
+            vm.radio_values.init_doc2812 = "";
             vm.radio_values.init_doc292 = "";
             vm.radio_values.init_doc293 = "";
             vm.radio_values.init_doc294 = "";
@@ -752,10 +756,12 @@
             '27c7': 'Not relevant reason',
             '27c8': 'Name of the subject',
             '27c9': 'Name of institute',
+            '28c2': 'Name in the SLET Certificate',
             '28c4': 'New Year of Passing',
-            '28c5': 'New Period of study',
-            '28c6': 'New Mode of study',
             '28c7': 'New relevant reason',
+            '28c8': 'New relevant reason',
+            '28c9': 'Name in the NET Certificate',
+            '28c12': 'New Year of Passing',
             '29c2': 'Name in the PHD Certificate',
             '29c3': 'Name of the university',
             '29c4': 'New Year of Passing',
@@ -1460,7 +1466,7 @@
                     console.log($("#" + event.target.id + "_age").val('abcded'));
                     // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
                 });
-                $("#doc13, #doc14, #doc24, #doc254, #doc274, #doc684, #doc284, #doc294,  #doc2515, #doc3411").datepicker({
+                $("#doc13, #doc14, #doc24, #doc254, #doc274, #doc684, #doc284, #doc2812, #doc294,  #doc2515, #doc3411").datepicker({
                     format: "M yyyy",
                     startView: 1,
                     minViewMode: 1,
