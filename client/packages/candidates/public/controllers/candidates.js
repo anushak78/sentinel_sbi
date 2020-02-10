@@ -147,6 +147,8 @@
             vm.doc348 = '';
             vm.doc3411 = '';
             vm.doc352 = '';
+            vm.doc353 = '';
+            vm.doc358 = '';
             vm.doc3511 = '';
             vm.doc3512 = '';
             vm.doc362 = '';
@@ -239,11 +241,33 @@
             vm.doc925 = '';
             vm.doc926 = '';
             vm.doc552 = '';
+            vm.doc559 = '';
+            vm.doc5512 = '';
+            vm.doc5513 = '';
             vm.doc562 = '';
+            vm.doc569 = '';
+            vm.doc5612 = '';
+            vm.doc5613 = '';
             vm.doc572 = '';
+            vm.doc579 = '';
+            vm.doc5712 = '';
+            vm.doc5713 = '';
             vm.doc582 = '';
+            vm.doc589 = '';
+            vm.doc5812 = '';
+            vm.doc5813 = '';
             vm.doc592 = '';
+            vm.doc599 = '';
+            vm.doc5912 = '';
+            vm.doc5913 = '';
             vm.doc602 = '';
+            vm.doc609 = '';
+            vm.doc6012 = '';
+            vm.doc6013 = '';
+            vm.doc612 = '';
+            vm.doc619 = '';
+            vm.doc6112 = '';
+            vm.doc6113 = '';
             vm.doc622 = '';
             vm.doc625 = '';
             vm.doc627 = '';
@@ -511,6 +535,8 @@
             vm.radio_values.init_doc348 = "";
             vm.radio_values.init_doc3411 = "";
             vm.radio_values.init_doc352 = "";
+            vm.radio_values.init_doc353 = "";
+            vm.radio_values.init_doc358 = "";
             vm.radio_values.init_doc3511 = "";
             vm.radio_values.init_doc3512 = "";
             vm.radio_values.init_doc362 = "";
@@ -601,11 +627,33 @@
             vm.radio_values.init_doc925 = "";
             vm.radio_values.init_doc926 = "";
             vm.radio_values.init_doc552 = "";
+            vm.radio_values.init_doc559 = "";
+            vm.radio_values.init_doc5512 = "";
+            vm.radio_values.init_doc5513 = "";
             vm.radio_values.init_doc562 = "";
+            vm.radio_values.init_doc569 = "";
+            vm.radio_values.init_doc5612 = "";
+            vm.radio_values.init_doc5613 = "";
             vm.radio_values.init_doc572 = "";
+            vm.radio_values.init_doc579 = "";
+            vm.radio_values.init_doc5712 = "";
+            vm.radio_values.init_doc5713 = "";
             vm.radio_values.init_doc582 = "";
+            vm.radio_values.init_doc589 = "";
+            vm.radio_values.init_doc5812 = "";
+            vm.radio_values.init_doc5813 = "";
             vm.radio_values.init_doc592 = "";
+            vm.radio_values.init_doc599 = "";
+            vm.radio_values.init_doc5912 = "";
+            vm.radio_values.init_doc5913 = "";
             vm.radio_values.init_doc602 = "";
+            vm.radio_values.init_doc609 = "";
+            vm.radio_values.init_doc6012 = "";
+            vm.radio_values.init_doc6013 = "";
+            vm.radio_values.init_doc612 = "";
+            vm.radio_values.init_doc619 = "";
+            vm.radio_values.init_doc6112 = "";
+            vm.radio_values.init_doc6113 = "";
             vm.radio_values.init_doc622 = "";
             vm.radio_values.init_doc625 = "";
             vm.radio_values.init_doc627 = "";
@@ -871,6 +919,8 @@
             '34c8': 'Name of university',
             '34c11': 'New Month and Year of Passing',
             '35c2': 'New relevant Reason',
+            '35c3': 'Certificate Number',
+            '35c8': 'Name of university',
             '35c11': 'New Month and Year of Passing',
             '35c12': 'New Percentage reason',
             '36c2': 'Last studied conduct relevant',
@@ -962,11 +1012,33 @@
             '92c5': 'Date of publications',
             '92c6': 'Name of institute',
             '55c2': 'Relevant document reason',
+            '55c9': 'Name of institute',
+            '55c12': 'Percentage of marks',
+            '55c13': 'Date of publications',
             '56c2': 'Relevant document reason',
+            '56c9': 'Name of institute',
+            '56c12': 'Percentage of marks',
+            '56c13': 'Date of publications',
             '57c2': 'Relevant document reason',
+            '57c9': 'Name of institute',
+            '57c12': 'Percentage of marks',
+            '57c13': 'Date of publications',
             '58c2': 'Relevant document reason',
+            '58c9': 'Name of institute',
+            '58c12': 'Percentage of marks',
+            '58c13': 'Date of publications',
             '59c2': 'Relevant document reason',
+            '59c9': 'Name of institute',
+            '59c12': 'Percentage of marks',
+            '59c13': 'Date of publications',
             '60c2': 'Relevant document reason',
+            '60c9': 'Name of institute',
+            '60c12': 'Percentage of marks',
+            '60c13': 'Date of publications',
+            '61c2': 'Relevant document reason',
+            '61c9': 'Name of institute',
+            '61c12': 'Percentage of marks',
+            '61c13': 'Date of publications',
             '62c2': 'Relevant document reason',
             '62c5': 'Name in the PG Marksheet',
             '62c7': 'Number of Mark Sheet',
@@ -1219,6 +1291,7 @@
                 "M.Ed Degree / Equivalent Marksheet 3": 'M.Ed Degree / Equivalent Marksheet 3',
                 "M.Ed Degree / Equivalent Marksheet 4": 'M.Ed Degree / Equivalent Marksheet 4',
                 "M.Ed Degree / Equivalent Marksheet 5": 'M.Ed Degree / Equivalent Marksheet 5',
+                "M.Ed Degree / Equivalent Marksheet 6": 'M.Ed Degree / Equivalent Marksheet 6',
                 "PG Degree / Equivalent Consolidated Marksheet": 'PG Degree / Equivalent Consolidated Marksheet',
                 "PG Degree / Equivalent Marksheet 1": 'PG Degree / Equivalent Marksheet 1',
                 "PG Degree / Equivalent Marksheet 2": 'PG Degree / Equivalent Marksheet 2',
@@ -1566,7 +1639,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888").datepicker({
+                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545,#doc5513,#doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -2110,6 +2183,10 @@
     }).directive('medMarksheet5', function () {
         return {
             templateUrl: "/candidates/view/templates/MEd_Marksheet5.html"
+        };
+    }).directive('medMarksheet6', function () {
+        return {
+            templateUrl: "/candidates/view/templates/MEd_Marksheet6.html"
         };
     }).directive('conductCertificate', function () {
         return {

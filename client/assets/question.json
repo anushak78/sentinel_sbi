@@ -2188,37 +2188,6 @@
       "q_id": 3
     },
     {
-      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
-      "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 4
-    },
-    {
-      "question": "Consolidated Mark sheet for M.Ed Degree ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 5
-    },
-    {
-      "question": "Number of Mark Sheet in M.Ed Degree ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 6
-    },
-    {
       "question": "Name of the subject",
       "options": {
         "option1": "Matched",
@@ -2239,29 +2208,6 @@
       "q_id": 8
     },
     {
-      "question": "Name of Institution studied ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 9
-    },
-    {
-      "question": "Mode of Study",
-      "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 10
-    },
-    {
       "question": "Month & Year of Passing in the M.Ed? ",
       "options": {
         "option1": "Matched",
@@ -2271,47 +2217,6 @@
       "approved": "1",
       "doc_id": 35,
       "q_id": 11
-    },
-    {
-      "question": "Percentage of Marks in M.Ed? ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 12
-    },
-    {
-      "question": "Date of Publications of Results in M.Ed Mark Sheet",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 13
-    },
-    {
-      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 14
-    },
-    {
-      "question": "Studied the Course in Academic Year pattern ( June to May)",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 35,
-      "q_id": 15
     },
     {
       "question": "If equivalent Subject in M.Ed Degree Govt. order enclosed",
@@ -4419,6 +4324,73 @@
       "approved": "1",
       "doc_id": 55,
       "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 15
     }
   ],
   "M.Ed Degree / Equivalent Marksheet 1": [
@@ -4441,6 +4413,94 @@
       "approved": "1",
       "doc_id": 56,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 15
     }
   ],
   "M.Ed Degree / Equivalent Marksheet 2": [
@@ -4463,6 +4523,94 @@
       "approved": "1",
       "doc_id": 57,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 15
     }
   ],
   "M.Ed Degree / Equivalent Marksheet 3": [
@@ -4485,6 +4633,94 @@
       "approved": "1",
       "doc_id": 58,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 15
     }
   ],
   "M.Ed Degree / Equivalent Marksheet 4": [
@@ -4507,6 +4743,94 @@
       "approved": "1",
       "doc_id": 59,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 15
     }
   ],
   "M.Ed Degree / Equivalent Marksheet 5": [
@@ -4529,6 +4853,204 @@
       "approved": "1",
       "doc_id": 60,
       "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 15
+    }
+  ],
+  "M.Ed Degree / Equivalent Marksheet 6": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of B.Ed Degree Mark Sheet?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 2
+    },
+    {
+      "question": "Consolidated Mark sheet for M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in M.Ed Degree ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 4
+    },
+    {
+      "question": "Percentage of Marks in M.Ed? ",
+      "options": {
+        "option1": "Percentage of Marks is 35 and above but less than 40",
+        "option2": "Percentage of Marks is 40 and above but less than 50",
+        "option3": "Percentage of Marks is 50 and above but less than 55",
+        "option4": "Percentage of Marks is 55 and above but less than 60",
+        "option5": "Percentage of Marks is 60 and above"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 12
+    },
+    {
+      "question": "Date of Publications of Results in M.Ed Mark Sheet",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Regular",
+        "option2": "Distance",
+        "option3": "Part time",
+        "option4": "Correspondence",
+        "option5": "Open University"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 10
+    },
+    {
+      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 14
+    },
+    {
+      "question": "Studied the Course in Academic Year pattern ( June to May)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 61,
+      "q_id": 15
     }
   ],
   "PG Degree / Equivalent Consolidated Marksheet": [

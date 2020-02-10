@@ -1772,6 +1772,28 @@
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
+                                    <div ng-if="selectedDocType.indexOf('M.Ed') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                M.Ed. Consolidated Marksheet
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['med_consolidated_marksheet']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('B.Ed') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                B.Ed. Consolidated Marksheet
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['bed_consolidated_marksheet']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                                 <div style="width: 100%; height: 1%; margin-top: 1%;"
                                      align="center">
@@ -2041,6 +2063,10 @@
                                         <div id="60"
                                              ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 5'">
                                             <med-marksheet5></med-marksheet5>
+                                        </div>
+                                        <div id="61"
+                                             ng-if="selectedDocType=='M.Ed Degree / Equivalent Marksheet 6'">
+                                            <med-marksheet6></med-marksheet6>
                                         </div>
                                         <div id="62"
                                              ng-if="selectedDocType=='PG Degree / Equivalent Consolidated Marksheet'">

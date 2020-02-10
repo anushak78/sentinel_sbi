@@ -41,69 +41,29 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio353" name="radio353"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc353"
+                       ng-change="$ctrl.doc353=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio353" name="radio353"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc353"
+                       ng-change="$ctrl.doc353=''">
         Not Matched
       </label>
+      <label
+              style="{{ $ctrl.radio_values.init_doc353=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc353"/>
+            </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio353" name="radio353"
-               value="3">
+               value="3" ng-model="$ctrl.radio_values.init_doc353"
+                       ng-change="$ctrl.doc353=''">
         Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Consolidated Mark sheet for M.Ed Degree
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio355" name="radio355"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio355" name="radio355"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio355" name="radio355"
-               value="3">
-        Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Number of Mark Sheet in M.Ed Degree
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio356" name="radio356"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio356" name="radio356"
-               value="2">
-        Not Matched
       </label>
     </div>
   </div>
@@ -142,91 +102,25 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio358" name="radio358"
-               value="1">
+               value="1"  ng-model="$ctrl.radio_values.init_doc358"
+                       ng-change="$ctrl.doc358=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio358" name="radio358"
-               value="2">
+               value="2"  ng-model="$ctrl.radio_values.init_doc358"
+                       ng-change="$ctrl.doc358=''">
         Not Matched
       </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio358" name="radio358"
-               value="3">
-        Not Clear
-      </label>
+      <label
+              style="{{ $ctrl.radio_values.init_doc358=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc358"/>
+            </label>
     </div>
   </div>
   <div class="clearfix"></div>
-  <div class="questions">
-    Name of Institution studied
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio359" name="radio359"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio359" name="radio359"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio359" name="radio359"
-               value="3">
-        Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">Mode of Study</div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3510" name="radio3510"
-               value="1">
-        Regular
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3510" name="radio3510"
-               value="2">
-        Distance
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3510" name="radio3510"
-               value="3">
-        Part time
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3510" name="radio3510"
-               value="4">
-        Correspondence
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3510" name="radio3510"
-               value="5">
-        Open University
-      </label>
-    </div>
-  </div>
   <div class="questions">
     Month & Year of Passing in the M.Ed?
   </div>
@@ -259,100 +153,7 @@
       </label>
     </div>
   </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Percentage of Marks in M.Ed?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio"
-               ng-model="$ctrl.radio_values.init_doc3512"
-               class="q_radio radio3512" name="radio3512"
-               value="1">
-        Matched
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3512=='1' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc3512">
-          <option value="">--Select--</option>
-          <option value="Average Percentage of Marks is 40 and above but less than 50">Average Percentage of Marks is 40 and above but less than 50</option>
-          <option value="Average Percentage of Marks is 50 and above but less than 55">Average Percentage of Marks is 50 and above but less than 55
-          </option>
-          <option value="Average Percentage of Marks is 55 and above but less than 60">Average Percentage of Marks is 55 and above but less than 60</option>
-          <option value="Average Percentage of Marks is 60 and above">Average Percentage of Marks is 60 and above</option>
-        </select>
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio"
-               ng-model="$ctrl.radio_values.init_doc3512"
-               class="q_radio radio3512" name="radio3512"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Date of Publications of Results in M.Ed Mark Sheet
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3513" name="radio3513"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3513" name="radio3513"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Studied the Course in Calendar Year pattern (Jan to Dec)
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3514" name="radio3514"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3514" name="radio3514"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Studied the Course in Academic Year pattern ( June to May)
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3515" name="radio3515"
-               value="1">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3515" name="radio3515"
-               value="2">
-        Not Matched
-      </label>
-    </div>
-  </div>
+
   <div class="clearfix"></div>
   <div class="questions">
     If equivalent Subject in B.Ed Degree Govt. order enclosed

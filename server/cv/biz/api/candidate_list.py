@@ -335,6 +335,8 @@ def get_candidate_details(request):
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgmode) as pg_mode_of_study,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_ugmarksheet) as ug_consolidated_marksheet,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgmarksheet) as pg_consolidated_marksheet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_bedmarksheet) as bed_consolidated_marksheet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_medmarksheet) as med_consolidated_marksheet,
       (select octm_category_desc from oes_category_master where octm_category_pk::varchar=ocd.ocd_community) as community,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
       oacd1.oacd_university_other as ssc_university_other,
