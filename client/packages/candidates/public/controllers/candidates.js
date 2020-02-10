@@ -228,6 +228,16 @@
             vm.doc542 = '';
             vm.doc545 = '';
             vm.doc546 = '';
+
+            vm.doc902 = '';
+            vm.doc905 = '';
+            vm.doc906 = '';
+            vm.doc912 = '';
+            vm.doc915 = '';
+            vm.doc916 = '';
+            vm.doc922 = '';
+            vm.doc925 = '';
+            vm.doc926 = '';
             vm.doc552 = '';
             vm.doc562 = '';
             vm.doc572 = '';
@@ -581,6 +591,15 @@
             vm.radio_values.init_doc542 = "";
             vm.radio_values.init_doc545 = "";
             vm.radio_values.init_doc546 = "";
+            vm.radio_values.init_doc902 = "";
+            vm.radio_values.init_doc905 = "";
+            vm.radio_values.init_doc906 = "";
+            vm.radio_values.init_doc912 = "";
+            vm.radio_values.init_doc915 = "";
+            vm.radio_values.init_doc916 = "";
+            vm.radio_values.init_doc922 = "";
+            vm.radio_values.init_doc925 = "";
+            vm.radio_values.init_doc926 = "";
             vm.radio_values.init_doc552 = "";
             vm.radio_values.init_doc562 = "";
             vm.radio_values.init_doc572 = "";
@@ -933,6 +952,15 @@
             '54c2': 'Relevant document reason',
             '54c5': 'Date of publications',
             '54c6': 'Name of institute',
+            '90c2': 'Relevant document reason',
+            '90c5': 'Date of publications',
+            '90c6': 'Name of institute',
+            '91c2': 'Relevant document reason',
+            '91c5': 'Date of publications',
+            '91c6': 'Name of institute',
+            '92c2': 'Relevant document reason',
+            '92c5': 'Date of publications',
+            '92c6': 'Name of institute',
             '55c2': 'Relevant document reason',
             '56c2': 'Relevant document reason',
             '57c2': 'Relevant document reason',
@@ -1159,6 +1187,9 @@
                 "Work Experience 3": 'Work Experience 3',
                 "Work Experience 4": 'Work Experience 4',
                 "Work Experience 5": 'Work Experience 5',
+                "Work Experience 6": 'Work Experience 6',
+                "Work Experience 7": 'Work Experience 7',
+                "Work Experience 8": 'Work Experience 8',
                 "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
                 "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
                 "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
@@ -1179,6 +1210,9 @@
                 "B.Ed Degree / Equivalent Marksheet 3": 'B.Ed Degree / Equivalent Marksheet 3',
                 "B.Ed Degree / Equivalent Marksheet 4": 'B.Ed Degree / Equivalent Marksheet 4',
                 "B.Ed Degree / Equivalent Marksheet 5": 'B.Ed Degree / Equivalent Marksheet 5',
+                "B.Ed Degree / Equivalent Marksheet 6": 'B.Ed Degree / Equivalent Marksheet 6',
+                "B.Ed Degree / Equivalent Marksheet 7": 'B.Ed Degree / Equivalent Marksheet 7',
+                "B.Ed Degree / Equivalent Marksheet 8": 'B.Ed Degree / Equivalent Marksheet 8',
                 "M.Ed Degree / Equivalent Marksheet": 'M.Ed Degree / Equivalent Consolidated Marksheet',
                 "M.Ed Degree / Equivalent Marksheet 1": 'M.Ed Degree / Equivalent Marksheet 1',
                 "M.Ed Degree / Equivalent Marksheet 2": 'M.Ed Degree / Equivalent Marksheet 2',
@@ -1532,7 +1566,7 @@
         $scope.initializeInputs = function () {
             console.log('initialize inpout');
             setTimeout(function () {
-                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888").datepicker({
+                $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  #doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, #doc495,#doc505,#doc515,#doc525,#doc535,#doc545,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, #doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888").datepicker({
                     format: 'dd-mm-yyyy',
                     orientation: "auto"
                 }).on('changeDate', function (value) {
@@ -2036,6 +2070,18 @@
     }).directive('bedMarksheet5', function () {
         return {
             templateUrl: "/candidates/view/templates/Bed_Marksheet5.html"
+        };
+    }).directive('bedMarksheet6', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet6.html"
+        };
+    }).directive('bedMarksheet7', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet7.html"
+        };
+    }).directive('bedMarksheet8', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Bed_Marksheet8.html"
         };
     }).directive('med', function () {
         return {
