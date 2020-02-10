@@ -24,6 +24,32 @@
             'No Document',
             'Incorrect Document'
         ];
+        vm.ugcUniversity = [
+            'Commercial University Ltd., Daryaganj, Delhi.',
+            'United Nations University, Delhi.',
+            'Vocational University, Delhi.',
+            'ADR-Centric Juridical University, ADR House, 8J, Gopala Tower, 25 Rajendra Place, New Delhi - 110 008.',
+            'Indian Institute of Science and Engineering, New Delhi.',
+            'Viswakarma Open University for Self-Employment, Rozgar Sewasadan, 672, Sanjay Enclave, Opp. GTK Depot, Delhi-110033.',
+            'Adhyatmik Vishwavidyalaya (Spiritual University), 351-352, Phase-I, Block-A, Vijay Vihar, Rithala, Rohini,Delhi-110085',
+            'Badaganvi Sarkar World Open University Education Society, Gokak, Belgaum, Karnataka.',
+            'St. John’s University, Kishanattam, Kerala.',
+            'Raja Arabic University, Nagpur, Maharashtra.',
+            'Indian Institute of Alternative Medicine, Kolkatta.',
+            'Institute of Alternative Medicine and Research,8-A, Diamond Harbour Road, Builtech inn, 2nd Floor,Thakurpurkur, Kolkatta - 700063',
+            'Varanaseya Sanskrit Vishwavidyalaya, Varanasi (UP) Jagatpuri, Delhi.',
+            'Mahila Gram Vidyapith/Vishwavidyalaya, (Women’s University) Prayag, Allahabad, Uttar Pradesh.',
+            'Gandhi Hindi Vidyapith, Prayag, Allahabad, Uttar Pradesh.',
+            'National University of Electro Complex Homeopathy, Kanpur, Uttar Pradesh.',
+            'Netaji Subhash Chandra Bose University (Open University), Achaltal, Aligarh, Uttar Pradesh.',
+            'Uttar Pradesh Vishwavidyalaya, Kosi Kalan, Mathura, Uttar Pradesh.',
+            'Maharana Pratap Shiksha Niketan Vishwavidyalaya, Pratapgarh, Uttar Pradesh.',
+            'Indraprastha Shiksha Parishad, Institutional Area,Khoda,Makanpur,Noida Phase-II, Uttar Pradesh.',
+            'Nababharat Shiksha Parishad, Anupoorna Bhawan, Plot No. 242, Pani Tanki Road,Shaktinagar, Rourkela-769014.',
+            'North Orissa University of Agriculture & Technology, Odisha.',
+            'Sree Bodhi Academy of Higher Education, No. 186, Thilaspet, Vazhuthavoor Road, Puducherry-605009',
+            'Christ New Testament Deemed University, #32-32-2003, 7th Lane, Kakumanuvarithoto, Guntur, Andhra Pradesh-522002 and another address of Christ New Testament Deemed University, Fit No. 301, Grace Villa Apts., 7/5, Srinagar, Guntur, Andhra Pradesh-522002'
+        ];
         $scope.initializeVariables = function() {
             $scope.radio = {};
             vm.doc13 = '';
@@ -43,6 +69,7 @@
             vm.doc37 = '';
             vm.doc38 = '';
             vm.doc39 = '';
+            vm.doc310 = '';
             vm.doc62 = '';
             vm.doc64 = '';
             vm.doc66 = '';
@@ -137,6 +164,7 @@
             vm.doc3730 = '';
 
             vm.doc382 = '';
+            vm.doc383 = '';
             vm.doc384 = '';
             vm.doc387 = '';
             vm.doc3818 = '';
@@ -148,30 +176,35 @@
             vm.doc422 = '';
             vm.doc432 = '';
             vm.doc442 = '';
+            vm.doc443 = '';
             vm.doc444 = '';
             vm.doc447 = '';
             vm.doc446 = '';
             vm.doc4419 = '';
             vm.doc4420 = '';
             vm.doc452 = '';
+            vm.doc453 = '';
             vm.doc454 = '';
             vm.doc457 = '';
             vm.doc456 = '';
             vm.doc4519 = '';
             vm.doc4520 = '';
             vm.doc462 = '';
+            vm.doc463 = '';
             vm.doc464 = '';
             vm.doc467 = '';
             vm.doc466 = '';
             vm.doc4619 = '';
             vm.doc4620 = '';
             vm.doc472 = '';
+            vm.doc473 = '';
             vm.doc474 = '';
             vm.doc477 = '';
             vm.doc476 = '';
             vm.doc4719 = '';
             vm.doc4720 = '';
             vm.doc482 = '';
+            vm.doc483 = '';
             vm.doc484 = '';
             vm.doc487 = '';
             vm.doc486 = '';
@@ -249,54 +282,63 @@
             vm.doc693 = '';
 
             vm.doc702 = '';
+            vm.doc703 = '';
             vm.doc704 = '';
             vm.doc707 = '';
             vm.doc706 = '';
             vm.doc7019 = '';
             vm.doc7020 = '';
             vm.doc712 = '';
+            vm.doc713 = '';
             vm.doc714 = '';
             vm.doc717 = '';
             vm.doc716 = '';
             vm.doc7119 = '';
             vm.doc7120 = '';
             vm.doc722 = '';
+            vm.doc723 = '';
             vm.doc724 = '';
             vm.doc727 = '';
             vm.doc726 = '';
             vm.doc7219 = '';
             vm.doc7220 = '';
             vm.doc732 = '';
+            vm.doc733 = '';
             vm.doc734 = '';
             vm.doc737 = '';
             vm.doc736 = '';
             vm.doc7319 = '';
             vm.doc7320 = '';
             vm.doc742 = '';
+            vm.doc743 = '';
             vm.doc744 = '';
             vm.doc747 = '';
             vm.doc746 = '';
             vm.doc7419 = '';
             vm.doc7420 = '';
             vm.doc752 = '';
+            vm.doc753 = '';
             vm.doc754 = '';
             vm.doc757 = '';
             vm.doc756 = '';
             vm.doc7519 = '';
             vm.doc7520 = '';
             vm.doc762 = '';
+            vm.doc763 = '';
             vm.doc764 = '';
             vm.doc767 = '';
             vm.doc766 = '';
             vm.doc7619 = '';
             vm.doc7620 = '';
             vm.doc772 = '';
+            vm.doc773 = '';
             vm.doc774 = '';
             vm.doc777 = '';
             vm.doc776 = '';
             vm.doc7719 = '';
             vm.doc7720 = '';
             vm.doc782 = '';
+            vm.doc783 = '';
             vm.doc784 = '';
             vm.doc787 = '';
             vm.doc786 = '';
@@ -385,6 +427,7 @@
             vm.radio_values.init_doc37 = "";
             vm.radio_values.init_doc38 = "";
             vm.radio_values.init_doc39 = "";
+            vm.radio_values.init_doc310 = "";
             vm.radio_values.init_doc62 = "";
             vm.radio_values.init_doc64 = "";
             vm.radio_values.init_doc66 = "";
@@ -474,6 +517,7 @@
             vm.radio_values.init_doc3725 = "";
             vm.radio_values.init_doc3730 = "";
             vm.radio_values.init_doc382 = "";
+            vm.radio_values.init_doc383 = "";
             vm.radio_values.init_doc384 = "";
             vm.radio_values.init_doc387 = "";
             vm.radio_values.init_doc3818 = "";
@@ -485,30 +529,35 @@
             vm.radio_values.init_doc422 = "";
             vm.radio_values.init_doc432 = "";
             vm.radio_values.init_doc442 = "";
+            vm.radio_values.init_doc443 = "";
             vm.radio_values.init_doc444 = "";
             vm.radio_values.init_doc447 = "";
             vm.radio_values.init_doc446 = "";
             vm.radio_values.init_doc4419 = "";
             vm.radio_values.init_doc4420 = "";
             vm.radio_values.init_doc452 = "";
+            vm.radio_values.init_doc453 = "";
             vm.radio_values.init_doc454 = "";
             vm.radio_values.init_doc457 = "";
             vm.radio_values.init_doc456 = "";
             vm.radio_values.init_doc4519 = "";
             vm.radio_values.init_doc4520 = "";
             vm.radio_values.init_doc462 = "";
+            vm.radio_values.init_doc463 = "";
             vm.radio_values.init_doc464 = "";
             vm.radio_values.init_doc467 = "";
             vm.radio_values.init_doc466 = "";
             vm.radio_values.init_doc4619 = "";
             vm.radio_values.init_doc4620 = "";
             vm.radio_values.init_doc472 = "";
+            vm.radio_values.init_doc473 = "";
             vm.radio_values.init_doc474 = "";
             vm.radio_values.init_doc477 = "";
             vm.radio_values.init_doc476 = "";
             vm.radio_values.init_doc4719 = "";
             vm.radio_values.init_doc4720 = "";
             vm.radio_values.init_doc482 = "";
+            vm.radio_values.init_doc483 = "";
             vm.radio_values.init_doc484 = "";
             vm.radio_values.init_doc487 = "";
             vm.radio_values.init_doc486 = "";
@@ -587,54 +636,63 @@
 
 
             vm.radio_values.init_doc702 = "";
+            vm.radio_values.init_doc703 = "";
             vm.radio_values.init_doc704 = "";
             vm.radio_values.init_doc707 = "";
             vm.radio_values.init_doc706 = "";
             vm.radio_values.init_doc7019 = "";
             vm.radio_values.init_doc7020 = "";
             vm.radio_values.init_doc712 = "";
+            vm.radio_values.init_doc713 = "";
             vm.radio_values.init_doc714 = "";
             vm.radio_values.init_doc717 = "";
             vm.radio_values.init_doc716 = "";
             vm.radio_values.init_doc7119 = "";
             vm.radio_values.init_doc7120 = "";
             vm.radio_values.init_doc722 = "";
+            vm.radio_values.init_doc723 = "";
             vm.radio_values.init_doc724 = "";
             vm.radio_values.init_doc727 = "";
             vm.radio_values.init_doc726 = "";
             vm.radio_values.init_doc7219 = "";
             vm.radio_values.init_doc7220 = "";
             vm.radio_values.init_doc732 = "";
+            vm.radio_values.init_doc733 = "";
             vm.radio_values.init_doc734 = "";
             vm.radio_values.init_doc737 = "";
             vm.radio_values.init_doc736 = "";
             vm.radio_values.init_doc7319 = "";
             vm.radio_values.init_doc7320 = "";
             vm.radio_values.init_doc742 = "";
+            vm.radio_values.init_doc743 = "";
             vm.radio_values.init_doc744 = "";
             vm.radio_values.init_doc747 = "";
             vm.radio_values.init_doc746 = "";
             vm.radio_values.init_doc7419 = "";
             vm.radio_values.init_doc7420 = "";
             vm.radio_values.init_doc752 = "";
+            vm.radio_values.init_doc753 = "";
             vm.radio_values.init_doc754 = "";
             vm.radio_values.init_doc757 = "";
             vm.radio_values.init_doc756 = "";
             vm.radio_values.init_doc7519 = "";
             vm.radio_values.init_doc7520 = "";
             vm.radio_values.init_doc762 = "";
+            vm.radio_values.init_doc763 = "";
             vm.radio_values.init_doc764 = "";
             vm.radio_values.init_doc767 = "";
             vm.radio_values.init_doc766 = "";
             vm.radio_values.init_doc7619 = "";
             vm.radio_values.init_doc7620 = "";
             vm.radio_values.init_doc772 = "";
+            vm.radio_values.init_doc773 = "";
             vm.radio_values.init_doc774 = "";
             vm.radio_values.init_doc777 = "";
             vm.radio_values.init_doc776 = "";
             vm.radio_values.init_doc7719 = "";
             vm.radio_values.init_doc7720 = "";
             vm.radio_values.init_doc782 = "";
+            vm.radio_values.init_doc783 = "";
             vm.radio_values.init_doc784 = "";
             vm.radio_values.init_doc787 = "";
             vm.radio_values.init_doc786 = "";
@@ -716,6 +774,7 @@
             '3c7': 'New Issuing authority',
             '3c8': 'Sub Caste',
             '3c9': 'Comunity certificate issued with',
+            '3c10': 'New Religion',
             '1c2': 'Name in the certificate',
             '1c3': 'New date of publication',
             '1c4': 'New year of passing',
@@ -735,7 +794,6 @@
             '6c12': 'Only (PG / PHD) / SLET / NET Degree not matched',
             '6c13': 'PG and M.Ed degree and Ph.D not matched',
             '6c14': 'both PG and M.Ed (with (or) without Ph.D not matched',
-            '10c1': 'New Gender',
             '12c2': 'Relevant reason',
             '16c2': 'New Gender',
             '16c3': 'Not relevant reason',
@@ -811,6 +869,7 @@
             '37c25': 'UGC Recognised University',
             '37c30': 'Government Order No for UG',
             '38c2': 'Document relevant reason',
+            '38c3': 'New Institute',
             '38c4': 'Name in the marksheet',
             '38c7': 'No. of Marksheet',
             '38c18': 'New Date of publications',
@@ -822,30 +881,35 @@
             '42c2': 'Relevant document reason',
             '43c2': 'Relevant document reason',
             '44c2': 'Relevant document reason',
+            '44c3': 'New Institute',
             '44c4': 'Name in the marksheet',
             '44c7': 'No of marksheet',
             '44c6': 'New date of publications',
             '44c19': 'Period of study',
             '44c20': 'Mode of study',
             '45c2': 'Relevant document reason',
+            '45c3': 'New Institute',
             '45c4': 'Name in the marksheet',
             '45c7': 'No of marksheet',
             '45c6': 'New date of publications',
             '45c19': 'Period of study',
             '45c20': 'Mode of study',
             '46c2': 'Relevant document reason',
+            '46c3': 'New Institute',
             '46c4': 'Name in the marksheet',
             '46c7': 'No of marksheet',
             '46c6': 'New date of publications',
             '46c19': 'Period of study',
             '46c20': 'Mode of study',
             '47c2': 'Relevant document reason',
+            '47c3': 'New Institute',
             '47c4': 'Name in the marksheet',
             '47c7': 'No of marksheet',
             '47c6': 'New date of publications',
             '47c19': 'Period of study',
             '47c20': 'Mode of study',
             '48c2': 'Relevant document reason',
+            '48c3': 'New Institute',
             '48c4': 'Name in the marksheet',
             '48c7': 'No of marksheet',
             '48c6': 'New date of publications',
@@ -922,54 +986,63 @@
             '68c11': 'Date of publication of result',
             '69c3': 'Not relevant reason',
             '70c2': 'Relevant document reason',
+            '70c3': 'New Institute',
             '70c4': 'Name in the marksheet',
             '70c7': 'No of marksheet',
             '70c6': 'New date of publications',
             '70c19': 'Period of study',
             '70c20': 'Mode of study',
             '71c2': 'Relevant document reason',
+            '71c3': 'New Institute',
             '71c4': 'Name in the marksheet',
             '71c7': 'No of marksheet',
             '71c6': 'New date of publications',
             '71c19': 'Period of study',
             '71c20': 'Mode of study',
             '72c2': 'Relevant document reason',
+            '72c3': 'New Institute',
             '72c4': 'Name in the marksheet',
             '72c7': 'No of marksheet',
             '72c6': 'New date of publications',
             '72c19': 'Period of study',
             '72c20': 'Mode of study',
             '73c2': 'Relevant document reason',
+            '73c3': 'New Institute',
             '73c4': 'Name in the marksheet',
             '73c7': 'No of marksheet',
             '73c6': 'New date of publications',
             '73c19': 'Period of study',
             '73c20': 'Mode of study',
             '74c2': 'Relevant document reason',
+            '74c3': 'New Institute',
             '74c4': 'Name in the marksheet',
             '74c7': 'No of marksheet',
             '74c6': 'New date of publications',
             '74c19': 'Period of study',
             '74c20': 'Mode of study',
             '75c2': 'Relevant document reason',
+            '75c3': 'New Institute',
             '75c4': 'Name in the marksheet',
             '75c7': 'No of marksheet',
             '75c6': 'New date of publications',
             '75c19': 'Period of study',
             '75c20': 'Mode of study',
             '76c2': 'Relevant document reason',
+            '76c3': 'New Institute',
             '76c4': 'Name in the marksheet',
             '76c7': 'No of marksheet',
             '76c6': 'New date of publications',
             '76c19': 'Period of study',
             '76c20': 'Mode of study',
             '77c2': 'Relevant document reason',
+            '77c3': 'New Institute',
             '77c4': 'Name in the marksheet',
             '77c7': 'No of marksheet',
             '77c6': 'New date of publications',
             '77c19': 'Period of study',
             '77c20': 'Mode of study',
             '78c2': 'Relevant document reason',
+            '78c3': 'New Institute',
             '78c4': 'Name in the marksheet',
             '78c7': 'No of marksheet',
             '78c6': 'New date of publications',

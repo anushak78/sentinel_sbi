@@ -1518,7 +1518,8 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio310" name="radio310"
-                           value="1">
+                           value="1" ng-model="$ctrl.radio_values.init_doc310"
+                           ng-change="$ctrl.doc310=''">
                     Matched
                 </label>
             </div>
@@ -1526,9 +1527,27 @@
                 <label class="radio-custom">
                     <input type="radio"
                            class="q_radio radio310" name="radio310"
-                           value="2">
+                           value="2" ng-model="$ctrl.radio_values.init_doc310"
+                           ng-change="$ctrl.doc310=''">
                     Not Matched
                 </label>
+                <label
+                    style="{{ $ctrl.radio_values.init_doc310=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc310">
+                    <option value="">--Select--</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Muslim">Muslim
+                    </option>
+                    <option value="Christian">Christian
+                    </option>
+                    <option value="Buddhism">Buddhism
+                    </option>
+                    <option value="Jainism">Jainism
+                    </option>
+                    <option value="Sikh">Sikh
+                    </option>
+                </select>
+            </label>
             </div>
         </div>
         <div class="clearfix"></div>

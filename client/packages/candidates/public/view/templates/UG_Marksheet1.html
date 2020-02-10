@@ -1,4 +1,5 @@
-<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+<div class="form-group"
+     ng-repeat="q in documentWithQuestions[selectedDocType]">
     <div
             ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
@@ -28,7 +29,8 @@
                     style="{{ $ctrl.radio_values.init_doc442=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc442">
                     <option value="">--Select--</option>
-                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                    <option ng-repeat="r in $ctrl.notRelevantReasone"
+                            value="{{r}}">
                         {{r}}
                     </option>
                 </select>
@@ -83,7 +85,8 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc447=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc447" maxlength="2" ng-model="$ctrl.doc447"
+                <input type="text" id="doc447" maxlength="2"
+                       ng-model="$ctrl.doc447"
                        class="form-control">
             </label>
         </div>
@@ -113,9 +116,14 @@
                 <select class="form-control" ng-model="$ctrl.doc444">
                     <option value="">--Select--</option>
                     <option value="Initial Missing">Initial Missing</option>
-                    <option value="Incorrect Spelling">Incorrect Spelling</option>
-                    <option value="A letter / few letters missing">A letter / few letters missing</option>
-                    <option value="Change in name as per Gazette">Change in name as per Gazette</option>
+                    <option value="Incorrect Spelling">Incorrect Spelling
+                    </option>
+                    <option value="A letter / few letters missing">A letter /
+                        few letters missing
+                    </option>
+                    <option value="Change in name as per Gazette">Change in
+                        name as per Gazette
+                    </option>
                 </select>
             </label>
         </div>
@@ -149,7 +157,8 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc446=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc446" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc446"
+                <input type="text" id="doc446" data-date-format="YYYY-MM-DD"
+                       ng-model="$ctrl.doc446"
                        class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
@@ -245,7 +254,8 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc4419=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc4419" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc4419"
+                <input type="text" id="doc4419" data-date-format="YYYY-MM-DD"
+                       ng-model="$ctrl.doc4419"
                        class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
@@ -305,6 +315,47 @@
                        value="3">
                 Not Clear
             </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div>
+        <div class="questions">
+            Name of Institution studied in the UG Degree?
+        </div>
+        <div class="col-sm-12">
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio443"
+                           name="radio443"
+                           value="1" ng-model="$ctrl.radio_values.init_doc443"
+                           ng-change="$ctrl.doc443=''">
+                    Matched
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio443"
+                           name="radio443"
+                           value="2" ng-model="$ctrl.radio_values.init_doc443"
+                           ng-change="$ctrl.doc443=''">
+                    Not Matched
+                </label>
+                <label
+                        style="{{ $ctrl.radio_values.init_doc443=='2' ? 'display:block':'display:none'}}">
+                    <input type="text" maxlength="50" class="form-control"
+                           ng-model="$ctrl.doc443"/>
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio443"
+                           name="radio443"
+                           value="3" ng-model="$ctrl.radio_values.init_doc443"
+                           ng-change="$ctrl.doc443=''">
+                    Not Clear
+                </label>
+            </div>
         </div>
     </div>
     <div class="clearfix"></div>

@@ -171,42 +171,7 @@
     </div>
   </div>
   <div class="clearfix"></div>
-  <div>
-    <div class="questions">
-      Name of Institution studied in the UG Degree?
-    </div>
-    <div class="col-sm-12">
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="1" ng-model="$ctrl.radio_values.init_doc3714"
-                 ng-change="$ctrl.doc3714=''">
-          Matched
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="2" ng-model="$ctrl.radio_values.init_doc3714"
-                 ng-change="$ctrl.doc3714=''">
-          Not Matched
-        </label>
-        <label
-                style="{{ $ctrl.radio_values.init_doc3714=='2' ? 'display:block':'display:none'}}">
-          <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc3714"/>
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio3714" name="radio3714"
-                 value="3" ng-model="$ctrl.radio_values.init_doc3714"
-                 ng-change="$ctrl.doc3714=''">
-          Not Clear
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="clearfix"></div>
+
   <div class="questions">
     Month & Year of Passing in the UG Degree?
   </div>
@@ -268,7 +233,10 @@
         style="{{ $ctrl.radio_values.init_doc3725=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc3725">
           <option value="">--Select--</option>
-          <option value="Initial Missing">University not recognized by UGC</option>
+          <option value="University not recognized by UGC">University not recognized by UGC</option>
+            <option ng-repeat="u in $ctrl.ugcUniversity" value="{{u}}">
+            {{u}}
+          </option>
         </select>
       </label>
     </div>

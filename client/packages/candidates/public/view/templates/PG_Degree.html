@@ -151,7 +151,7 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2510" name="radio2510"
-                       value="1"  ng-model="$ctrl.radio_values.init_doc2510"
+                       value="1" ng-model="$ctrl.radio_values.init_doc2510"
                        ng-change="$ctrl.doc2510=''">
                 Yes
             </label>
@@ -166,7 +166,7 @@
             <label
                     style="{{ $ctrl.radio_values.init_doc2510 == '2' ? 'display:block':'display:none'}}">
                 <input type="text" maxlength="50" class="form-control"
-                        ng-model="$ctrl.doc2510"/>
+                       ng-model="$ctrl.doc2510"/>
             </label>
         </div>
     </div>
@@ -348,7 +348,12 @@
                     style="{{ $ctrl.radio_values.init_doc2525=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc2525">
                     <option value="">--Select--</option>
-                    <option value="Initial Missing">University not recognized by UGC</option>
+                    <option value="Initial Missing">University not recognized
+                        by UGC
+                    </option>
+                    <option ng-repeat="u in $ctrl.ugcUniversity" value="{{u}}">
+                        {{u}}
+                    </option>
                 </select>
             </label>
         </div>

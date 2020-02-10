@@ -54,13 +54,14 @@
                value="2">
         Not Matching
       </label>
+      <!--ng-if="candidateDetails['candidate_details'][0]['orvm_reference_value'] != 'Male'"-->
       <label
         style="{{ $ctrl.radio_values.init_doc162=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc162">
           <option value="">--Select--</option>
-          <option value="Male" ng-if="candidateDetails['candidate_details'][0]['orvm_reference_value'] != 'Male'">Male
+          <option value="Male">Male
           </option>
-          <option value="Female" ng-if="candidateDetails['candidate_details'][0]['orvm_reference_value'] != 'FeMale'">Female
+          <option value="Female">Female
           </option>
           <option value="Transgender">Transgender
           </option>
