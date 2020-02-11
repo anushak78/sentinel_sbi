@@ -1794,6 +1794,74 @@
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
+                                    <div ng-if="selectedDocType.indexOf('PSTM') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                B.Ed.: Claimed for PSTM
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['claimed_for_pstm']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('NOC') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                NOC: Whether working in goverment org.
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_government_service']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                NOC: No. of years serve in Govt.
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_noofyrsgovt']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('Conduct') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Conduct: Whether submitted last studied conduct certificate
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['last_conduct_certificate']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                Conduct: Whether submitted latest conduct certificate
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['latest_conduct_certificate']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div ng-if="selectedDocType.indexOf('Phd') > -1">
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                PHD: Date of publication of result
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel-body"
+                                                     style="font-size: 12px">
+                                                PHD: Registration Date
+                                                :<br/><span
+                                                    style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_phd_reg_date']}}</span>
+                                            </section>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                                 <div style="width: 100%; height: 1%; margin-top: 1%;"
                                      align="center">
