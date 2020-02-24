@@ -2779,6 +2779,2242 @@
       "q_id": 5
     }
   ],
+  "Work Experience 6": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 93,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 93,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 93,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 93,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 93,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 7": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 94,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 94,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 94,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 94,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 94,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 8": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 9": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 96,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 96,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 96,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 96,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 96,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 10": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 97,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 97,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 97,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 95,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 97,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 11": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 98,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 98,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 98,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 98,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 98,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 12": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 99,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 99,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 99,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 99,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 99,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 13": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 100,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 100,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 100,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 100,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 100,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 14": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 101,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 101,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 101,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 101,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 101,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 15": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 102,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 102,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 102,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 102,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 102,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 16": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 103,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 103,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 103,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 103,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 103,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 17": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 104,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 104,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 104,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 104,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 104,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 18": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 105,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 105,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 105,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 105,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 105,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 19": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 106,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 106,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 106,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 106,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 106,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 20": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 107,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 107,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 107,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 107,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 107,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 21": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 108,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 108,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 108,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 108,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 108,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 22": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 109,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 109,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 109,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 109,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 109,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 23": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 110,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 110,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 110,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 110,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 110,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 24": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 111,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 111,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 111,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 111,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 111,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 25": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 112,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 112,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 112,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 112,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 112,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 26": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 113,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 113,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 113,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 113,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 113,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 27": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 114,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 114,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 114,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 114,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 114,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 28": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 115,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 115,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 115,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 115,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 115,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 29": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 116,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 116,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 116,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 116,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 116,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 30": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 117,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 117,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 117,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 117,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 117,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 31": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 118,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 118,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 118,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 118,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 118,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 32": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 119,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 119,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 119,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 119,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 119,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 33": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 120,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 120,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 120,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 120,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 120,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 34": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 121,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 121,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 121,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 121,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 121,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 35": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 122,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 122,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 122,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 122,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 122,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 36": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 123,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 123,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 123,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 123,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 123,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 37": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 124,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 124,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 124,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 124,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 124,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 38": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 125,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 125,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 125,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 125,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 125,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 39": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 126,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 126,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 126,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 126,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 126,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 40": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 127,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 127,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 127,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 127,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 127,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 41": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 128,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 128,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 128,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 128,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 128,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 42": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 129,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 129,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 129,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 129,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 129,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 43": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 130,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 130,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 130,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 130,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 130,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 44": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 131,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 131,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 131,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 131,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 131,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 45": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 132,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 132,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 132,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 132,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 132,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 46": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 133,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 133,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 133,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 133,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 133,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 47": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 134,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 134,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 134,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 134,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 134,
+      "q_id": 5
+    }
+  ],
+  "Work Experience 48": [
+    {
+      "question": "Is the document visible / clear ?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 135,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to claim?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 135,
+      "q_id": 2
+    },
+    {
+      "question": "Number of Teaching Experience Certificate ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 135,
+      "q_id": 3
+    },
+    {
+      "question": "Consolidated Teaching Experience?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 135,
+      "q_id": 4
+    },
+    {
+      "question": "Total Weightage marks for Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 135,
+      "q_id": 5
+    }
+  ],
   "UG Degree / Equivalent Marksheet 1": [
     {
       "question": "Is the document Visible / Clear?",

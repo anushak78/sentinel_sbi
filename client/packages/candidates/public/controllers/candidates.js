@@ -177,6 +177,49 @@
             vm.doc412 = '';
             vm.doc422 = '';
             vm.doc432 = '';
+            vm.doc932 = '';
+            vm.doc942 = '';
+            vm.doc952 = '';
+            vm.doc962 = '';
+            vm.doc972 = '';
+            vm.doc982 = '';
+            vm.doc992 = '';
+            vm.doc1002 = '';
+            vm.doc1012 = '';
+            vm.doc1022 = '';
+            vm.doc1032 = '';
+            vm.doc1042 = '';
+            vm.doc1052 = '';
+            vm.doc1062 = '';
+            vm.doc1072 = '';
+            vm.doc1082 = '';
+            vm.doc1092 = '';
+            vm.doc1102 = '';
+            vm.doc1112 = '';
+            vm.doc1122 = '';
+            vm.doc1132 = '';
+            vm.doc1142 = '';
+            vm.doc1152 = '';
+            vm.doc1162 = '';
+            vm.doc1172 = '';
+            vm.doc1182 = '';
+            vm.doc1192 = '';
+            vm.doc1202 = '';
+            vm.doc1212 = '';
+            vm.doc1222 = '';
+            vm.doc1232 = '';
+            vm.doc1242 = '';
+            vm.doc1252 = '';
+            vm.doc1262 = '';
+            vm.doc1272 = '';
+            vm.doc1282 = '';
+            vm.doc1292 = '';
+            vm.doc1302 = '';
+            vm.doc1312 = '';
+            vm.doc1322 = '';
+            vm.doc1332 = '';
+            vm.doc1342 = '';
+            vm.doc1352 = '';
             vm.doc442 = '';
             vm.doc443 = '';
             vm.doc444 = '';
@@ -564,6 +607,49 @@
             vm.radio_values.init_doc412 = "";
             vm.radio_values.init_doc422 = "";
             vm.radio_values.init_doc432 = "";
+            vm.radio_values.init_doc932 = "";
+            vm.radio_values.init_doc942 = "";
+            vm.radio_values.init_doc952 = "";
+            vm.radio_values.init_doc962 = "";
+            vm.radio_values.init_doc972 = "";
+            vm.radio_values.init_doc982 = "";
+            vm.radio_values.init_doc992 = "";
+            vm.radio_values.init_doc1002 = "";
+            vm.radio_values.init_doc1012 = "";
+            vm.radio_values.init_doc1022 = "";
+            vm.radio_values.init_doc1032 = "";
+            vm.radio_values.init_doc1042 = "";
+            vm.radio_values.init_doc1052 = "";
+            vm.radio_values.init_doc1062 = "";
+            vm.radio_values.init_doc1072 = "";
+            vm.radio_values.init_doc1082 = "";
+            vm.radio_values.init_doc1092 = "";
+            vm.radio_values.init_doc1102 = "";
+            vm.radio_values.init_doc1112 = "";
+            vm.radio_values.init_doc1122 = "";
+            vm.radio_values.init_doc1132 = "";
+            vm.radio_values.init_doc1142 = "";
+            vm.radio_values.init_doc1152 = "";
+            vm.radio_values.init_doc1162 = "";
+            vm.radio_values.init_doc1172 = "";
+            vm.radio_values.init_doc1182 = "";
+            vm.radio_values.init_doc1192 = "";
+            vm.radio_values.init_doc1202 = "";
+            vm.radio_values.init_doc1212 = "";
+            vm.radio_values.init_doc1222 = "";
+            vm.radio_values.init_doc1232 = "";
+            vm.radio_values.init_doc1242 = "";
+            vm.radio_values.init_doc1252 = "";
+            vm.radio_values.init_doc1262 = "";
+            vm.radio_values.init_doc1272 = "";
+            vm.radio_values.init_doc1282 = "";
+            vm.radio_values.init_doc1292 = "";
+            vm.radio_values.init_doc1302 = "";
+            vm.radio_values.init_doc1312 = "";
+            vm.radio_values.init_doc1322 = "";
+            vm.radio_values.init_doc1332 = "";
+            vm.radio_values.init_doc1342 = "";
+            vm.radio_values.init_doc1352 = "";
             vm.radio_values.init_doc442 = "";
             vm.radio_values.init_doc443 = "";
             vm.radio_values.init_doc444 = "";
@@ -949,6 +1035,49 @@
             '41c2': 'Relevant document reason',
             '42c2': 'Relevant document reason',
             '43c2': 'Relevant document reason',
+            '93c2': 'Relevant document reason',
+            '94c2': 'Relevant document reason',
+            '95c2': 'Relevant document reason',
+            '96c2': 'Relevant document reason',
+            '97c2': 'Relevant document reason',
+            '98c2': 'Relevant document reason',
+            '99c2': 'Relevant document reason',
+            '100c2': 'Relevant document reason',
+            '101c2': 'Relevant document reason',
+            '102c2': 'Relevant document reason',
+            '103c2': 'Relevant document reason',
+            '104c2': 'Relevant document reason',
+            '105c2': 'Relevant document reason',
+            '106c2': 'Relevant document reason',
+            '107c2': 'Relevant document reason',
+            '108c2': 'Relevant document reason',
+            '109c2': 'Relevant document reason',
+            '110c2': 'Relevant document reason',
+            '111c2': 'Relevant document reason',
+            '112c2': 'Relevant document reason',
+            '113c2': 'Relevant document reason',
+            '114c2': 'Relevant document reason',
+            '115c2': 'Relevant document reason',
+            '116c2': 'Relevant document reason',
+            '117c2': 'Relevant document reason',
+            '118c2': 'Relevant document reason',
+            '119c2': 'Relevant document reason',
+            '120c2': 'Relevant document reason',
+            '121c2': 'Relevant document reason',
+            '122c2': 'Relevant document reason',
+            '123c2': 'Relevant document reason',
+            '124c2': 'Relevant document reason',
+            '125c2': 'Relevant document reason',
+            '126c2': 'Relevant document reason',
+            '127c2': 'Relevant document reason',
+            '128c2': 'Relevant document reason',
+            '129c2': 'Relevant document reason',
+            '130c2': 'Relevant document reason',
+            '131c2': 'Relevant document reason',
+            '132c2': 'Relevant document reason',
+            '133c2': 'Relevant document reason',
+            '134c2': 'Relevant document reason',
+            '135c2': 'Relevant document reason',
             '44c2': 'Relevant document reason',
             '44c3': 'New Institute',
             '44c4': 'Name in the marksheet',
@@ -1262,6 +1391,46 @@
                 "Work Experience 6": 'Work Experience 6',
                 "Work Experience 7": 'Work Experience 7',
                 "Work Experience 8": 'Work Experience 8',
+                "Work Experience 9": 'Work Experience 9',
+                "Work Experience 10": 'Work Experience 10',
+                "Work Experience 11": 'Work Experience 11',
+                "Work Experience 12": 'Work Experience 12',
+                "Work Experience 13": 'Work Experience 13',
+                "Work Experience 14": 'Work Experience 14',
+                "Work Experience 15": 'Work Experience 15',
+                "Work Experience 16": 'Work Experience 16',
+                "Work Experience 17": 'Work Experience 17',
+                "Work Experience 18": 'Work Experience 18',
+                "Work Experience 19": 'Work Experience 19',
+                "Work Experience 20": 'Work Experience 20',
+                "Work Experience 21": 'Work Experience 21',
+                "Work Experience 22": 'Work Experience 22',
+                "Work Experience 23": 'Work Experience 23',
+                "Work Experience 24": 'Work Experience 24',
+                "Work Experience 25": 'Work Experience 25',
+                "Work Experience 26": 'Work Experience 26',
+                "Work Experience 27": 'Work Experience 27',
+                "Work Experience 28": 'Work Experience 28',
+                "Work Experience 29": 'Work Experience 29',
+                "Work Experience 30": 'Work Experience 30',
+                "Work Experience 31": 'Work Experience 31',
+                "Work Experience 32": 'Work Experience 32',
+                "Work Experience 33": 'Work Experience 33',
+                "Work Experience 34": 'Work Experience 34',
+                "Work Experience 35": 'Work Experience 35',
+                "Work Experience 36": 'Work Experience 36',
+                "Work Experience 37": 'Work Experience 37',
+                "Work Experience 38": 'Work Experience 38',
+                "Work Experience 39": 'Work Experience 39',
+                "Work Experience 40": 'Work Experience 40',
+                "Work Experience 41": 'Work Experience 41',
+                "Work Experience 42": 'Work Experience 42',
+                "Work Experience 43": 'Work Experience 43',
+                "Work Experience 44": 'Work Experience 44',
+                "Work Experience 45": 'Work Experience 45',
+                "Work Experience 46": 'Work Experience 46',
+                "Work Experience 47": 'Work Experience 47',
+                "Work Experience 48": 'Work Experience 48',
                 "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
                 "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
                 "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
@@ -2275,6 +2444,178 @@
     }).directive('work5', function () {
         return {
             templateUrl: "/candidates/view/templates/Work5.html"
+        };
+    }).directive('work6', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work6.html"
+        };
+    }).directive('work7', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work7.html"
+        };
+    }).directive('work8', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work8.html"
+        };
+    }).directive('work9', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work9.html"
+        };
+    }).directive('work10', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work10.html"
+        };
+    }).directive('work11', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work11.html"
+        };
+    }).directive('work12', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work12.html"
+        };
+    }).directive('work13', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work13.html"
+        };
+    }).directive('work14', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work14.html"
+        };
+    }).directive('work15', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work15.html"
+        };
+    }).directive('work16', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work16.html"
+        };
+    }).directive('work17', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work17.html"
+        };
+    }).directive('work18', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work18.html"
+        };
+    }).directive('work19', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work19.html"
+        };
+    }).directive('work20', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work20.html"
+        };
+    }).directive('work21', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work21.html"
+        };
+    }).directive('work22', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work22.html"
+        };
+    }).directive('work23', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work23.html"
+        };
+    }).directive('work24', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work24.html"
+        };
+    }).directive('work25', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work25.html"
+        };
+    }).directive('work26', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work26.html"
+        };
+    }).directive('work27', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work27.html"
+        };
+    }).directive('work28', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work28.html"
+        };
+    }).directive('work29', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work29.html"
+        };
+    }).directive('work30', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work30.html"
+        };
+    }).directive('work31', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work31.html"
+        };
+    }).directive('work32', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work32.html"
+        };
+    }).directive('work33', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work33.html"
+        };
+    }).directive('work34', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work34.html"
+        };
+    }).directive('work35', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work35.html"
+        };
+    }).directive('work36', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work36.html"
+        };
+    }).directive('work37', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work37.html"
+        };
+    }).directive('work38', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work38.html"
+        };
+    }).directive('work39', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work39.html"
+        };
+    }).directive('work40', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work40.html"
+        };
+    }).directive('work41', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work41.html"
+        };
+    }).directive('work42', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work42.html"
+        };
+    }).directive('work43', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work43.html"
+        };
+    }).directive('work44', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work44.html"
+        };
+    }).directive('work45', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work45.html"
+        };
+    }).directive('work46', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work46.html"
+        };
+    }).directive('work47', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work47.html"
+        };
+    }).directive('work48', function () {
+        return {
+            templateUrl: "/candidates/view/templates/Work48.html"
         };
     }).directive('generalInformation', function () {
         return {

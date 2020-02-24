@@ -1,0 +1,99 @@
+<div class="showModalExp" style="position:absolute;top:7px;right:33px">
+  <button class="btn btn-info btn-s-xs">Show Table</button>
+</div>
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+  <div
+    ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+<div>
+  <div class="questions">
+    Is the document relevant to claim ?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1312" name="radio1312"
+               value="1" ng-model="$ctrl.radio_values.init_doc1312"
+               ng-change="$ctrl.doc1312=''">
+        Relevant
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1312" name="radio1312"
+               value="2" ng-model="$ctrl.radio_values.init_doc1312"
+               ng-change="$ctrl.doc1312=''">
+        Not Relevant
+      </label>
+      <label
+        style="{{ $ctrl.radio_values.init_doc1312=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc1312">
+          <option value="">--Select--</option>
+          <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+              {{r}}
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Number of Teaching Experience Certificate ?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1313" name="radio1313"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1313" name="radio1313"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Consolidated Teaching Experience?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1314" name="radio1314"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1314" name="radio1314"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Total Weightage marks for Teaching Experience
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1315" name="radio1315"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1315" name="radio1315"
+               value="2">
+        Not Matched
+      </label>
+    </div>
+  </div>
+</div>
