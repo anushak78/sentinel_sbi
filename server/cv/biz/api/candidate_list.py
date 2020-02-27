@@ -113,8 +113,8 @@ def _fix_document_urls(request, document_list, candidate_id):
     for doc in document_list:
         doc['ocd_doc_file_name'] = request.route_url(
             'docs.view', candidate_id=candidate_id,
-            # file_name=doc['ocd_flag'] + '_' + doc['ocd_doc_file_name']
-            file_name=doc['ocd_doc_file_name']
+            file_name=doc['ocd_flag'] + '_' + doc['ocd_doc_file_name']
+            # file_name=doc['ocd_doc_file_name']
         )
         new_document_list.append(doc)
     return new_document_list
@@ -202,7 +202,18 @@ def get_candidate_list(request):
     count_query = """select count(*) as total_count
     from (""" + pending_list_query + """) abcd"""
 
-    pending_list_query += """ ORDER BY oum.oum_user_pk
+    pending_list_query += """ ORDER BY  case when  oum.oum_user_pk=42179 then 1
+                  when  oum.oum_user_pk=38588 then 2
+                  when  oum.oum_user_pk=9655 then 3
+                  when  oum.oum_user_pk=36308 then 4
+                  when  oum.oum_user_pk=29414 then 5
+                  when  oum.oum_user_pk=28917 then 6
+                  when  oum.oum_user_pk=40651 then 7
+                  when  oum.oum_user_pk=16139 then 8
+                  when  oum.oum_user_pk=32272 then 9
+                  when  oum.oum_user_pk=13641 then 10
+              else oum_user_pk
+                  end
                               offset :offset limit :limit
                               """
 
@@ -450,6 +461,11 @@ def get_candidate_details(request):
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "GI",
         "odm_name": "General Information"
+    })
+    document_list.insert(len(document_list), {
+        "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
+        "ocd_flag": "OQ",
+        "odm_name": "Order of Qualification"
     })
 
     # additional_documents = _get_additional_document(request, candidate_id)

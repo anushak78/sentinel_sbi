@@ -543,6 +543,578 @@
       "q_id": 14
     }
   ],
+  "PSTM Certificate for PG Degree": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 1
+    },
+    {
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 2
+    },
+    {
+      "question": "Claim for PSTM reservation ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 4
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 5
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 6
+    },
+    {
+      "question": "Whether studied Ph.D Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 7
+    },
+    {
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 8
+    },
+    {
+      "question": "Whether studied M.Ed in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 9
+    },
+    {
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 10
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 11
+    },
+    {
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 12
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 13
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 136,
+      "q_id": 14
+    }
+  ],
+  "PSTM Certificate for Ph.D Degree": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 1
+    },
+    {
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 2
+    },
+    {
+      "question": "Claim for PSTM reservation ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 4
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 5
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 6
+    },
+    {
+      "question": "Whether studied Ph.D Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 7
+    },
+    {
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 8
+    },
+    {
+      "question": "Whether studied M.Ed in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 9
+    },
+    {
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 10
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 11
+    },
+    {
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 12
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 13
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 137,
+      "q_id": 14
+    }
+  ],
+  "PSTM Certificate for B.Ed Degree": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 1
+    },
+    {
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 2
+    },
+    {
+      "question": "Claim for PSTM reservation ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 4
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 5
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 6
+    },
+    {
+      "question": "Whether studied Ph.D Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 7
+    },
+    {
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 8
+    },
+    {
+      "question": "Whether studied M.Ed in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 9
+    },
+    {
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 10
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 11
+    },
+    {
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 12
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 13
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 138,
+      "q_id": 14
+    }
+  ],
+  "PSTM Certificate for M.Ed Degree": [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 1
+    },
+    {
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 2
+    },
+    {
+      "question": "Claim for PSTM reservation ",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 3
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 4
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 5
+    },
+    {
+      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 6
+    },
+    {
+      "question": "Whether studied Ph.D Degree in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 7
+    },
+    {
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 8
+    },
+    {
+      "question": "Whether studied M.Ed in Tamil Medium",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 9
+    },
+    {
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 10
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 11
+    },
+    {
+      "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 12
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 13
+    },
+    {
+      "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 139,
+      "q_id": 14
+    }
+  ],
   "Destitute Widow Certificate": [
     {
       "question": "Is the document relevant to claim?",
@@ -10788,6 +11360,138 @@
       "approved": "1",
       "doc_id": 78,
       "q_id": 3
+    }
+  ],
+  "Order of Qualification": [
+    {
+      "question": "Whether Educational Qualification in the order 10+2+3+2+1 or 2 / 4 + Years (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or) 10+2+3+1/2+2/3+2/1 or 2/4 years or others - (Mandatory)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 2
+    },
+    {
+      "question": "Any Course completed after discontinuing",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 3
+    },
+    {
+      "question": "Name of the Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 4
+    },
+    {
+      "question": "Discontinued Date",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 5
+    },
+    {
+      "question": "Admission Date (New Course)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 6
+    },
+    {
+      "question": "Rejoining date in the old Course",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 7
+    },
+    {
+      "question": "Whether the candidate possesses prescribed educational qualification  before the cutoff date 04.10.2019",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 8
+    },
+    {
+      "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent as prescribed in the notification.",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 9
+    },
+    {
+      "question": "Whether studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject or its equivalent as prescribed in the notification.",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 10
+    },
+    {
+      "question": "Whether studied PG Degree and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education in the prescribed subject or its equivalent as prescribed in the notification",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 11
+    },
+    {
+      "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification.",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 12
+    },
+    {
+      "question": "Whether studied PG Degree and passed NET/SLET in the same subject or its equivalent as prescribed in the notification",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 13
+    },
+    {
+      "question": "Whether studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 14
     }
   ]
 }
