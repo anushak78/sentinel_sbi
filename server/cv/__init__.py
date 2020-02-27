@@ -85,6 +85,7 @@ def main(global_config, **settings):
     config.set_default_permission("cv.view")
 
     config.include('cv.core')
+    # config.include('cv.biz.api.scores')
     config.scan()
     return config.make_wsgi_app()
 
