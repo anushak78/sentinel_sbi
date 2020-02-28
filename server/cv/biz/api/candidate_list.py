@@ -63,6 +63,24 @@ svc_download_report = Service(
     path="/ui/download-report", cors_policy=cors.POLICY)
 
 
+svc_dump_json = Service(
+    name="core.api.dump_json", permission=NO_PERMISSION_REQUIRED,
+    path="/ui/dump_json", cors_policy=cors.POLICY)
+
+
+@svc_dump_json.get()
+def dump_json(request):
+
+    with open('cv/biz/api/scores/utils/question.json', 'r') as f:
+        data = json.load(f)
+        print(data)
+
+        insert_qry = "INSERT INTO cv.docment_types_master('id','doc_type','doc_id') VALUES(73,'ABC',73)"
+        data = request.dbsession.execute(
+            text(insert_qry)
+        )
+
+
 def _key_column_generator(data):
     list = []
     for v in data:
@@ -489,7 +507,8 @@ AND length(trim(ocd_wrkdoc_id))>0 AND oes_candidate_doc.ocd_created_by =  :candi
         "candidate_id": candidate_id
     }).fetchall()
     work_experience = _key_column_generator(work_experience)
-    work_experience = _fix_document_urls(request, work_experience, candidate_id)
+    work_experience = _fix_document_urls(
+        request, work_experience, candidate_id)
     print(work_experience)
 
     for d in work_experience:
@@ -665,26 +684,26 @@ def download_report(request):
             status_text = ''
             for doc_all_status in document_status:
                 if (doc_all_status['level'] == 1 and level >= doc_all_status[
-                    'level']):
+                        'level']):
                     if (doc_all_status['status'] == 2):
                         if doc_all_status['doc_id'] not in ignore_docs:
                             flag = 2
                     status_text = 'Not Matching/Not Clear' if doc_all_status[
-                                                                  'status'] == 2 else 'Matching'
+                        'status'] == 2 else 'Matching'
                     a['level 1 scrutiny date'] = datetime.datetime.strptime(
                         str(doc_all_status['created_at'])[:19],
                         '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
                 elif (doc_all_status['level'] == 2 and level >= doc_all_status[
-                    'level']):
+                        'level']):
                     status_text = 'Not Matching/Not Clear' if doc_all_status[
-                                                                  'status'] == 2 else 'Matching'
+                        'status'] == 2 else 'Matching'
                     a['level 2 scrutiny date'] = datetime.datetime.strptime(
                         str(doc_all_status['created_at'])[:19],
                         '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
                 elif (doc_all_status['level'] == 3 and level >= doc_all_status[
-                    'level']):
+                        'level']):
                     status_text = 'Rejected' if doc_all_status[
-                                                    'status'] == 2 else 'Approved'
+                        'status'] == 2 else 'Approved'
                     a['level 3 scrutiny date'] = datetime.datetime.strptime(
                         str(doc_all_status['created_at'])[:19],
                         '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')

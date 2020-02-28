@@ -16,3 +16,6 @@ class BusinessConstants:
 
     MATCHED = 1
     NOT_MATCHED = 2
+
+    SLET_STATUS = True
+    NET_STATUS = True
