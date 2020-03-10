@@ -222,16 +222,16 @@ def pgCalc_50mNabove_Upto1891991(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_CUTOFF = datetime.datetime(1991, 9, 18).date()
+    DT_POR_CUTOFF = datetime(1991, 9, 18).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -438,17 +438,17 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(2018, 7, 18).date()
-    DT_POR_TO_CUTOFF = datetime.datetime(2019, 10, 4).date()
+    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
+    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -543,21 +543,21 @@ def phdCalc_submtdbfr_31122002(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(2018, 7, 18).date()
-    DT_POR_TO_CUTOFF = datetime.datetime(2019, 10, 4).date()
-    DT_PHD_TO_CUTOFF = datetime.datetime(2002, 12, 31).date()
+    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
+    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_PHD_TO_CUTOFF = datetime(2002, 12, 31).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.datetime.strptime(request.POST.get(
+    dt_phd_por = datetime.strptime(request.POST.get(
         "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -650,21 +650,21 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(2018, 7, 18).date()
-    DT_POR_TO_CUTOFF = datetime.datetime(2019, 10, 4).date()
-    DT_PHD_TO_CUTOFF = datetime.datetime(2009, 2, 4).date()
+    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
+    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_PHD_TO_CUTOFF = datetime(2009, 2, 4).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.datetime.strptime(request.POST.get(
+    dt_phd_por = datetime.strptime(request.POST.get(
         "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -757,23 +757,23 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(
+    DT_POR_FROM_CUTOFF = datetime(
         2018, 7, 18).date()  # TODO: to be confirmed
-    DT_POR_TO_CUTOFF = datetime.datetime(
+    DT_POR_TO_CUTOFF = datetime(
         2019, 10, 4).date()  # TODO: to be confirmed
-    DT_PHD_TO_CUTOFF = datetime.datetime(2019, 10, 4).date()
+    DT_PHD_TO_CUTOFF = datetime(2019, 10, 4).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.datetime.strptime(request.POST.get(
+    dt_phd_por = datetime.strptime(request.POST.get(
         "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
