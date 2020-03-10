@@ -1,5 +1,7 @@
 import logging
-import datetime
+
+from datetime import datetime
+from dateutil import relativedelta
 
 from pyramid.security import (
     NO_PERMISSION_REQUIRED,
@@ -48,8 +50,8 @@ svc_pg_phdCalc_CS_DE_OU_submtdbfr_04102019 = Service(
 
 
 """
-This method is to check for SLET / NET Check 
- 
+This method is to check for SLET / NET Check
+
 Name : pg_sletNnet
 PARAMETERS :
 -----------
@@ -107,10 +109,10 @@ def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, boo
 
 
 """
-This method is to check for isolate and modulate the differently abled Check 
-with SC variant of 50% marks consideration 
+This method is to check for isolate and modulate the differently abled Check
+with SC variant of 50% marks consideration
 
- 
+
 Name : pg_diffAbCheck
 PARAMETERS :
 -----------
@@ -151,9 +153,9 @@ def pg_diffAbCheck(bool_diffAbled, float_pgMarks, str_caste, cutOffConsidered, f
 
 
 """
-This method is to check for Subject Check if Subject Handled and Subject Applied 
+This method is to check for Subject Check if Subject Handled and Subject Applied
 are the same
- 
+
 Name : pg_subjCheck
 PARAMETERS :
 -----------
@@ -297,12 +299,16 @@ def pgCalc_50mNabove_Upto1891991(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years + " Years and " + diff.months +
+                       " Months and " + diff.days + " Days")
 
     return response
 
 
-"""This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR) 
+"""This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR)
 for SC / SCA / ST / Diff Abled (50% marks)
 
 Name : pgCalc_55MarksforOCnGT_19091991_17072018
@@ -325,17 +331,17 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(1991, 9, 19).date()
-    DT_POR_TO_CUTOFF = datetime.datetime(2018, 7, 17).date()
+    DT_POR_FROM_CUTOFF = datetime(1991, 9, 19).date()
+    DT_POR_TO_CUTOFF = datetime(2018, 7, 17).date()
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
-    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+    dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -400,12 +406,16 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+        # response = str(dt_elp_toDt - dt_elp_fromDt)
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
 
     return response
 
 
-"""This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR) 
+"""This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR)
 for SC / SCA / ST / Diff Abled (50% marks)
 
 Name : pgCalc_55MarksforNonOC_18072018_04102019
@@ -501,12 +511,16 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+        # response = str(dt_elp_toDt - dt_elp_fromDt)
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
 
     return response
 
 
-"""This method is used check the PHD submitted before 31.12.2002  
+"""This method is used check the PHD submitted before 31.12.2002
 for SC / SCA / ST / Diff Abled (50% marks)
 
 Name : phdCalc_submtdbfr_31122002
@@ -596,19 +610,24 @@ def phdCalc_submtdbfr_31122002(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+        # response = str(dt_elp_toDt - dt_elp_fromDt)
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
+
     else:
         response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
 
     return response
 
 
-"""This method is used check the PG , PHD  with 
-    Corespondence , 
+"""This method is used check the PG , PHD  with
+    Corespondence ,
     Distance Education
     Open University
-    
-    submitted before 02.04.2009  
+
+    submitted before 02.04.2009
 for SC / SCA / ST / Diff Abled (50% marks)
 
 Name : pg_phdCalc_CS_DE_OU_submtdbfr_02042009
@@ -698,7 +717,12 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+        # response = str(dt_elp_toDt - dt_elp_fromDt)
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
+
     else:
         response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
 
@@ -802,7 +826,12 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
     print(toConsider)
     if(toConsider == True):
-        response = str(dt_elp_toDt - dt_elp_fromDt)
+        # response = str(dt_elp_toDt - dt_elp_fromDt)
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
+
     else:
         response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
 
