@@ -110,11 +110,11 @@ fnName - Function Name for Logging
 """
 
 
-def pg_diffAbCheck(bool_diffAbled, int_pgMarks, str_caste, cutOffConsidered, fnName):
+def pg_diffAbCheck(bool_diffAbled, float_pgMarks, str_caste, cutOffConsidered, fnName):
     if(bool_diffAbled == True):
         log.info("%s - Step 3 - Candidate in Differently Abled Category", fnName)
 
-        if(int(int_pgMarks) >= BusinessConstants.MARKS_50_PER):
+        if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
             log.info("%s - Step 3.1 - >= 50% Marks Pass", fnName)
             log.info("%s - Step 3.2 - Consider this Date", fnName)
             return True
@@ -126,7 +126,7 @@ def pg_diffAbCheck(bool_diffAbled, int_pgMarks, str_caste, cutOffConsidered, fnN
     else:
         log.info("%s - Step 4 - Candidate Fit & Abled", fnName)
 
-        if(int(int_pgMarks) >= cutOffConsidered):
+        if(float(float_pgMarks) >= cutOffConsidered):
             log.info("%s - Step 4.1 - >=  %s Marks Pass",
                      fnName, cutOffConsidered)
             log.info("%s - Step 4.2 -  Consider this Date", fnName)
@@ -283,7 +283,7 @@ def pg_validity_check_mphil_calc(dt_pg_por, str_caste, pgMarks, diffAbl, str_sub
             if(bool_diffAbled == True):
                 log.info("Step 3 - Candidate in Differently Abled Category")
 
-                if(int(int_pgMarks) >= BusinessConstants.MARKS_50_PER):
+                if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
                     log.info("Step 3.1 - >= 50% Marks Pass")
                     log.info("Step 3.2 - Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
@@ -297,7 +297,7 @@ def pg_validity_check_mphil_calc(dt_pg_por, str_caste, pgMarks, diffAbl, str_sub
             else:
                 log.info("Step 4 - Candidate Fit & Abled")
 
-                if(int(int_pgMarks) >= BusinessConstants.MARKS_55_PER):
+                if(float(float_pgMarks) >= BusinessConstants.MARKS_55_PER):
                     log.info("Step 4.1 - >= 55% Marks Pass")
                     log.info("Step 4.2 -  Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
