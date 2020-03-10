@@ -63,9 +63,9 @@ fnName - Function Name for Logging
 """
 
 
-def pg_sletNnet(sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
+def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
 
-    if (sletNnetStatus == BusinessConstants.NET_STATUS):
+    if (sletStatus == "True"):
         log.info("%s - Step 4.2.1 - NET STATUS MATCHES", fnName)
 
         if(str(v_subjHandled) == str(v_subjNet)):
@@ -79,7 +79,7 @@ def pg_sletNnet(sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equiv
             log.info("%s - Step 4.2.5 - Dont Consider this Date", fnName)
             return False
 
-    elif (sletNnetStatus == BusinessConstants.SLET_STATUS):
+    elif (netStatus == "True"):
         log.info("%s - Step 4.2.1 - SLET Status matches", fnName)
 
         if(str(v_subjHandled) == str(v_subjSlet)):
@@ -359,8 +359,12 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
 
         if (diffAbledCheck == True):
 
-            str_sletNnetStatus = str(request.POST.get(
-                "str_sletNnetStatus", 'No Caste Info Recieved'))
+            sletStatus = request.POST.get(
+                "SLET_STATUS", 'No SLET NET STATUS Info Recieved')
+
+            netStatus = request.POST.get(
+                "NET_STATUS", 'No SLET NET STATUS Info Recieved')
+
             v_subjSlet = request.POST.get(
                 "v_subjSlet", 'No SLET Marks Recieved')
             v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
@@ -371,7 +375,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
             bool_equivFlag2 = False  # No Equivalence Check hence default Fault
 
             sletNetCheck = pg_sletNnet(
-                str_sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
+                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
 
             if(sletNetCheck == True):
                 str_subjHandledStatus = request.POST.get(
@@ -384,7 +388,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
                     "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
                 toConsider = pg_subjCheck(
-                    str_subjHandledStatus, v_subjHandled, v_subjApplied, false, NONE, pgCalc_55MarksforOCnGT_19091991_17072018)
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
 
     if(toConsider == False):
         response = "pgCalc_55MarksforOCnGT : Step 3 - All Checks Failed - Dont Consider This Date "

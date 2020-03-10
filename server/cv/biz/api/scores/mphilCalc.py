@@ -51,9 +51,9 @@ fnName - Function Name for Logging
 """
 
 
-def pg_sletNnet(sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
+def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
 
-    if (sletNnetStatus == BusinessConstants.NET_STATUS):
+    if (sletStatus == "True"):
         log.info("%s - Step 4.2.1 - NET STATUS MATCHES", fnName)
 
         if(str(v_subjHandled) == str(v_subjNet)):
@@ -67,7 +67,7 @@ def pg_sletNnet(sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equiv
             log.info("%s - Step 4.2.5 - Dont Consider this Date", fnName)
             return False
 
-    elif (sletNnetStatus == BusinessConstants.SLET_STATUS):
+    elif (netStatus == "True"):
         log.info("%s - Step 4.2.1 - SLET Status matches", fnName)
 
         if(str(v_subjHandled) == str(v_subjSlet)):
@@ -844,8 +844,12 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
         dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-        str_sletNnetStatus = str(request.POST.get(
-            "str_sletNnetStatus", 'No Caste Info Recieved'))
+        sletStatus = request.POST.get(
+            "SLET_STATUS", 'No SLET Status Recieved')
+
+        netStatus = request.POST.get(
+            "NET_STATUS", 'No NET Status Recieved')
+
         v_subjSlet = request.POST.get(
             "v_subjSlet", 'No SLET Marks Recieved')
         v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
@@ -902,7 +906,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                     "Step 5.11 - Moving to SLET / NET & Subject Handled Check ")
 
             mphil_sletNetCheck = pg_sletNnet(
-                str_sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_pgNmphil_CROUDE_bfr14062006_aftr29062010)
+                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_pgNmphil_CROUDE_bfr14062006_aftr29062010)
 
         else:
             log.info("Step 5.12 - MPHIL NOT WITHIN CUTOFF DATE")
