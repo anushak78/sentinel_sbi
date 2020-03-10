@@ -4,19 +4,41 @@
     (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or)
     10+2+3+1/2+2/3+2/1 or 2/4 years or others - (Mandatory)
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio1402" name="radio1402"
-               value="1" ng-model="radio[140]">
+               value="1"  ng-model="$ctrl.radio_values.init_doc1402"
+               ng-change="$ctrl.doc1402=''">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio1402" name="radio1402"
-               value="2" ng-model="radio[140]">
+               value="2" ng-model="radio[140]" ng-change="$ctrl.doc1402=''">
         Not Matched
+      </label>
+      <label
+        style="{{ radio[140]=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc1402">
+          <option value="">--Select--</option>
+          <option value="10+2+3+2+1 or 2 / 4 + Years">
+            10+2+3+2+1 or 2 / 4 + Years
+          </option>
+          <option value="10+2+3+2 / 3 years">
+            10+2+3+2 / 3 years
+          </option>
+          <option value="10+2+3+2+1 / 2 years / 1 or 2 / 4 Years">
+            10+2+3+2+1 / 2 years / 1 or 2 / 4 Years
+          </option>
+          <option value="10+2+3+1/2+2/3+2/1 or 2/4 years">
+            10+2+3+1/2+2/3+2/1 or 2/4 years
+          </option>
+          <option value="Others (when others selected text box with 100 numeric char with all special symbols must be allowed)">
+            Others (when others selected text box with 100 numeric char with all special symbols must be allowed)
+          </option>
+        </select>
       </label>
     </div>
   </div>
@@ -191,20 +213,64 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio1409"
-               value="1">
-        Name of the Ph.D Degree
+        <input type="radio" class="q_radio radio1409" name="radio1409"
+               value="1"
+               ng-model="radio[1409]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio1409"
-               value="2">
-        Name of the Ph.D Degree
+        <input type="radio" class="q_radio radio1409" name="radio1409"
+               value="2"
+               ng-model="radio[1409]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[1409] == 1">
+    <div class="questions">
+      Name of the subject in PG Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14015" name="radio14015"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14015" name="radio14015"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the subject in Ph.D Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14016" name="radio14016"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14016" name="radio14016"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <div class="questions">
     Whether studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject
     or its equivalent as prescribed in the notification.
@@ -212,20 +278,84 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14010"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio14010" name="radio14010"
+               value="1"
+               ng-model="radio[14010]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14010"
-               value="2">
-        Not Matched
+        <input type="radio" class="q_radio radio14010" name="radio14010"
+               value="2"
+               ng-model="radio[14010]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[14010] == 1">
+    <div class="questions">
+      Name of the subject in PG Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14017" name="radio14017"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14017" name="radio14017"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the subject in Ph.D Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14018" name="radio14018"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14018" name="radio14018"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the subject in M.Ed. Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14019" name="radio14019"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14019" name="radio14019"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <div class="questions">
     Whether studied PG Degree and M.Ed., with or without Ph.D Degree but
     qualified in NET/SLET in Education in the prescribed subject or its
@@ -234,20 +364,104 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14011"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio14011" name="radio14011"
+               value="1"
+               ng-model="radio[14011]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14011"
-               value="2">
-        Not Matched
+        <input type="radio" class="q_radio radio14011" name="radio14011"
+               value="2"
+               ng-model="radio[14011]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[14011] == 1">
+  <div class="questions">
+    Name of the subject in PG Degree
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14020" name="radio14020"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14020" name="radio14020"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject in Ph.D Degree
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14021" name="radio14021"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14021" name="radio14021"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject in M.Ed. Degree
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14022" name="radio14022"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14022" name="radio14022"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject in NET/SLET
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14023" name="radio14023"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14023" name="radio14023"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
   <div class="questions">
     Whether studied PG Degree and Ph.D Degree in the same subject or its
     equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior
@@ -257,20 +471,104 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14012"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio14012" name="radio14012"
+               value="1"
+               ng-model="radio[14012]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14012"
-               value="2">
-        Not Matched
+        <input type="radio" class="q_radio radio14012" name="radio14012"
+               value="2"
+               ng-model="radio[14012]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[14012] == 1">
+    <div class="questions">
+      Name of the subject in PG Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14024" name="radio14024"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14024" name="radio14024"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the subject in Ph.D Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14025" name="radio14025"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14025" name="radio14025"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the Special B.Ed in Teaching the Hearing Impairment
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14026" name="radio14026"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14026" name="radio14026"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the Senior Diploma in Teaching Deaf (Hearing Impairment)
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14027" name="radio14027"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14027" name="radio14027"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <div class="questions">
     Whether studied PG Degree and passed NET/SLET in the same subject or its
     equivalent as prescribed in the notification
@@ -278,20 +576,62 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14013"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio14013" name="radio14013"
+               value="1" ng-model="radio[14013]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14013"
-               value="2">
-        Not Matched
+        <input type="radio" class="q_radio radio14013" name="radio14013"
+               value="2" ng-model="radio[14013]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[14013] == 1">
+    <div class="questions">
+      Name of the subject in PG Degree
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14028" name="radio14028"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14028" name="radio14028"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+      Name of the subject in NET/SLET Passed subject
+    </div>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14029" name="radio14029"
+                 value="1">
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio14029" name="radio14029"
+                 value="2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <div class="questions">
     Whether studied PG Degree and passed NET/SLET in the same subject or its
     equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior
@@ -301,18 +641,100 @@
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14014"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio14014" name="radio14014"
+               value="1" ng-model="radio[14014]">
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio1403" name="radio14014"
-               value="2">
-        Not Matched
+        <input type="radio" class="q_radio radio14014" name="radio14014"
+               value="2" ng-model="radio[14014]">
+        No
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
+  <div ng-if="radio[14014] == 1">
+  <div class="questions">
+    Name of the subject in PG Degree
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14030" name="radio14030"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14030" name="radio14030"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject in NET/SLET Passed subject
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14031" name="radio14031"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14031" name="radio14031"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the Special B.Ed in Teaching the Hearing Impairment
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14032" name="radio14032"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14032" name="radio14032"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the Senior Diploma in Teaching Deaf (Hearing Impairment)
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14033" name="radio14033"
+               value="1">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio14033" name="radio14033"
+               value="2">
+        No
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
 </div>

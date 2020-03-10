@@ -119,6 +119,7 @@
       vm.doc13913 = '';
       vm.doc13914 = '';
 
+      vm.doc1402 = '';
       vm.doc1403 = '';
       vm.doc1405 = '';
       vm.doc1406 = '';
@@ -601,6 +602,7 @@
       vm.radio_values.init_doc13912 = "";
       vm.radio_values.init_doc13913 = "";
       vm.radio_values.init_doc13914 = "";
+      vm.radio_values.init_doc1402 = "";
       vm.radio_values.init_doc1403 = "";
       vm.radio_values.init_doc1405 = "";
       vm.radio_values.init_doc1406 = "";
@@ -1075,6 +1077,7 @@
       '139c12': 'Only (PG / PHD) / SLET / NET Degree not matched',
       '139c13': 'PG and M.Ed degree and Ph.D not matched',
       '139c14': 'both PG and M.Ed (with (or) without Ph.D not matched',
+      '140c2': 'Educational Qualification Order',
       '140c3': 'Any course date',
       '140c5': 'Discontinued date',
       '140c6': 'New admission date',
@@ -1792,6 +1795,8 @@
       $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
       if ($scope.selectedDocType == 'General Information') {
         $('#docFrame').attr("src", '../assets/src/images/general information.svg');
+      } else if ($scope.selectedDocType == 'Order of Qualification') {
+        $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
       } else {
         $('#docFrame').attr("src", $scope.selectedDocPath);
       }
@@ -1816,6 +1821,8 @@
         console.log($scope.selectedDocType);
         if ($scope.selectedDocType == 'General Information') {
           $('#docFrame').attr("src", '../assets/src/images/general information.svg');
+        } else if ($scope.selectedDocType == 'Order of Qualification') {
+          $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
         } else {
           $('#docFrame').attr("src", $scope.selectedDocPath);
         }
