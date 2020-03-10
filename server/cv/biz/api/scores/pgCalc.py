@@ -42,6 +42,10 @@ svc_pg_phdCalc_CS_DE_OU_submtdbfr_02042009 = Service(
     name="biz.api.scores.pg_phdCalc_CS_DE_OU_submtdbfr_02042009", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/pg_phdCalc_CS_DE_OU_submtdbfr_02042009", cors_policy=cors.POLICY)
 
+svc_pg_phdCalc_CS_DE_OU_submtdbfr_04102019 = Service(
+    name="biz.api.scores.pg_phdCalc_CS_DE_OU_submtdbfr_04102019", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/pg_phdCalc_CS_DE_OU_submtdbfr_04102019", cors_policy=cors.POLICY)
+
 
 """
 This method is to check for SLET / NET Check 
@@ -687,6 +691,110 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
                 if(bool_chk1 == True):
                     toConsider = pg_subjCheck(
                         str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+
+    print(toConsider)
+    if(toConsider == True):
+        response = str(dt_elp_toDt - dt_elp_fromDt)
+    else:
+        response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
+
+    return response
+
+
+"""This method is used check the PG , PHD  with 
+    Corespondence , 
+    Distance Education
+    Open University
+    
+    submitted before 02.04.2009  
+for SC / SCA / ST / Diff Abled (50% marks)
+
+Name : pg_phdCalc_CS_DE_OU_submtdbfr_04102019
+Parameters :
+-----------
+
+   dt_por - date of publication of results
+   str_caste - Caste Category
+   int_pgMarks - PG marks
+   bool_diffAbl - Differently Abled Category
+   str_subjHandled - Name of Subject Handled
+   str_postApplied - Name of Post Applied
+"""
+
+
+@svc_pg_phdCalc_CS_DE_OU_submtdbfr_04102019.post(require_csrf=False)
+def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
+    response = "Hello 55 Marks for OC /GT "
+
+    toConsider = False  # Toggle Flag to calculate the Date Difference
+
+    # TODO Move this to a config file or DB
+    DT_POR_FROM_CUTOFF = datetime.datetime(
+        2018, 7, 18).date()  # TODO: to be confirmed
+    DT_POR_TO_CUTOFF = datetime.datetime(
+        2019, 10, 4).date()  # TODO: to be confirmed
+    DT_PHD_TO_CUTOFF = datetime.datetime(2019, 10, 4).date()
+
+    # Get the values from the request object
+    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+        "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
+
+    dt_phd_por = datetime.datetime.strptime(request.POST.get(
+        "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+
+    dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+        "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+
+    dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+
+    str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
+    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+
+    str_subjHandledStatus = request.POST.get(
+        "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+
+    # Special Marks Override to be considered for SC Category
+    percentileToBeConsidered = BusinessConstants.MARKS_55_PER
+
+    # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
+    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+        log.info("%s: Step 1 - POR Date within CutOff Date",
+                 phdCalc_submtdbfr_31122002)
+
+        if str(str_caste) == BusinessConstants.SC_CATEGORY:
+            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+
+            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+                                        str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+
+        if (diffAbledCheck == True):
+
+            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+                log.info("%s: Step 1 - POR Date within CutOff Date",
+                         phdCalc_submtdbfr_31122002)
+
+                bool_chk1 = str(request.POST.get(
+                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+
+                v_subjHandled = request.POST.get(
+                    "v_subjHandled", 'No Subject Handled Recieved')
+
+                v_subjApplied = request.POST.get(
+                    "v_subjApplied", 'No Subject Applied Recieved')
+
+                bool_equivFlag1 = request.POST.get(
+                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+
+                v_equiv1Sub = request.POST.get(
+                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+
+                if(bool_chk1 == True):
+                    toConsider = pg_subjCheck(
+                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
     print(toConsider)
     if(toConsider == True):
