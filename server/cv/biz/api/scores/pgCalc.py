@@ -116,7 +116,7 @@ PARAMETERS :
 -----------
 
 bool_diffAbled - Differently abled flag
-int_pgMarks - PG Marks percentile
+float_pgMarks - PG Marks percentile
 str_caste - Caste category
 fnName - Function Name for Logging
 """
@@ -255,7 +255,7 @@ def pgCalc_50mNabove_Upto1891991(request):
             if(bool_diffAbled == True):
                 log.info("Step 3 - Candidate in Differently Abled Category")
 
-                if(float(int_pgMarks) >= BusinessConstants.MARKS_50_PER):
+                if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
                     log.info("Step 3.1 - >= 50% Marks Pass")
                     log.info("Step 3.2 - Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
@@ -269,7 +269,7 @@ def pgCalc_50mNabove_Upto1891991(request):
             else:
                 log.info("Step 4 - Candidate Fit & Abled")
 
-                if(float(int_pgMarks) >= BusinessConstants.MARKS_55_PER):
+                if(float(float_pgMarks) >= BusinessConstants.MARKS_55_PER):
                     log.info("Step 4.1 - >= 55% Marks Pass")
                     log.info("Step 4.2 -  Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
@@ -311,7 +311,7 @@ Parameters :
 
    dt_por - date of publication of results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -340,7 +340,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     # Special Marks Override to be considered for SC Category
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
@@ -354,7 +354,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
             log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
 
         if (diffAbledCheck == True):
@@ -410,7 +410,7 @@ Parameters :
 
    dt_por - date of publication of results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -439,7 +439,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     # Special Marks Override to be considered for SC Category
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
@@ -453,7 +453,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
             log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
 
         if (diffAbledCheck == True):
@@ -511,7 +511,7 @@ Parameters :
 
    dt_por - date of publication of results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -544,7 +544,7 @@ def phdCalc_submtdbfr_31122002(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -562,7 +562,7 @@ def phdCalc_submtdbfr_31122002(request):
 
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
 
         if (diffAbledCheck == True):
@@ -613,7 +613,7 @@ Parameters :
 
    dt_por - date of publication of results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -646,7 +646,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -664,7 +664,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
 
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
         if (diffAbledCheck == True):
@@ -715,7 +715,7 @@ Parameters :
 
    dt_por - date of publication of results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -750,7 +750,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -768,7 +768,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
         if (diffAbledCheck == True):

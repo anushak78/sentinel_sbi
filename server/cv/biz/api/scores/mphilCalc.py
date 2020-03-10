@@ -104,7 +104,7 @@ PARAMETERS :
 -----------
 
 bool_diffAbled - Differently abled flag
-int_pgMarks - PG Marks percentile
+float_pgMarks - PG Marks percentile
 str_caste - Caste category
 fnName - Function Name for Logging
 """
@@ -257,7 +257,7 @@ Parameters :
 
    dt_pg_por - date of publication of PG results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -334,14 +334,14 @@ Parameters :
 
    dt_pg_por - date of publication of PG results
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
 """
 
 
-def pg_validity_check_sc_criteria(dt_pg_por, str_caste, int_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied):
+def pg_validity_check_sc_criteria(dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied):
     response = "Hello 55 Marks for OC /GT "
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
@@ -363,7 +363,7 @@ def pg_validity_check_sc_criteria(dt_pg_por, str_caste, int_pgMarks, bool_diffAb
 
             percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, int_pgMarks,
+        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
                                         str_caste, percentileToBeConsidered, pg_validity_check_sc_criteria)
 
         if (diffAbledCheck == True):
@@ -394,7 +394,7 @@ Parameters :
    bool_chk2 - Whether applied PHD Degree thru OU , CR , DE
 
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -422,7 +422,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -437,7 +437,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
     log.info(
         "------------------------------ PG Validity Check INITIATE ------------------------------")
     toConsider, response = pg_validity_check_mphil_calc(
-        dt_pg_por, str_caste, int_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
+        dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
 
     print(toConsider)
     # Validate if the PG Check was True then proceed , else print status and exit here.
@@ -575,7 +575,7 @@ Parameters :
    bool_chk2 - Whether applied PHD Degree thru OU , CR , DE
 
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -603,7 +603,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -618,7 +618,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
     log.info(
         "------------------------------ PG + SC Validity Check INITIATE ------------------------------")
     toConsider, response = pg_validity_check_sc_criteria(
-        dt_pg_por, str_caste, int_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
+        dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
 
     print(toConsider)
     # Validate if the PG Check was True then proceed , else print status and exit here.
@@ -756,7 +756,7 @@ Parameters :
    bool_chk2 - Whether applied PHD Degree thru OU , CR , DE
 
    str_caste - Caste Category
-   int_pgMarks - PG marks
+   float_pgMarks - PG marks
    bool_diffAbl - Differently Abled Category
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
@@ -784,7 +784,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
     bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    int_pgMarks = request.POST.get("int_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -799,7 +799,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
     log.info(
         "------------------------------ PG + SC Validity Check INITIATE ------------------------------")
     toConsider, response = pg_validity_check_sc_criteria(
-        dt_pg_por, str_caste, int_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
+        dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
 
     print(toConsider)
     # Validate if the PG Check was True then proceed , else print status and exit here.
