@@ -338,6 +338,12 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
+    dt_por_slet = datetime.strptime(request.POST.get(
+        "dt_por_slet", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
+
+    dt_por_net = datetime.strptime(request.POST.get(
+        "dt_por_net", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
+
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
@@ -407,7 +413,12 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        # find the smallest of the 2 dates to give the benefit to the candidate
+        dt_earliestFrom = min(dt_por_net, dt_por_slet)
+
+        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
 
         response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
