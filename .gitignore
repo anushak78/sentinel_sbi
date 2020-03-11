@@ -1,0 +1,13 @@
+*~
+__pycache__/
+*.egg-info
+env
+bower_components
+node_modules
+build
+assets/uploads
+logs
+.idea
+config/config.js
+config/config.prod.js
+package-lock.json
