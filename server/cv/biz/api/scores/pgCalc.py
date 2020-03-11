@@ -300,7 +300,9 @@ def pgCalc_50mNabove_Upto1891991(request):
     print(toConsider)
     if(toConsider == True):
 
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # Find the difference in date from eligibility from date upto 18.09.1991
+
+        diff = relativedelta.relativedelta(DT_POR_CUTOFF, dt_elp_fromDt)
 
         response = str(diff.years + " Years and " + diff.months +
                        " Months and " + diff.days + " Days")
@@ -338,11 +340,11 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_por_slet = datetime.strptime(request.POST.get(
-        "dt_por_slet", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
+    dt_slet_por = datetime.strptime(request.POST.get(
+        "dt_slet_por", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
 
-    dt_por_net = datetime.strptime(request.POST.get(
-        "dt_por_net", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
+    dt_net_por = datetime.strptime(request.POST.get(
+        "dt_net_por", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -412,11 +414,9 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
 
     print(toConsider)
     if(toConsider == True):
-        # response = str(dt_elp_toDt - dt_elp_fromDt)
-        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
 
         # find the smallest of the 2 dates to give the benefit to the candidate
-        dt_earliestFrom = min(dt_por_net, dt_por_slet)
+        dt_earliestFrom = min(dt_net_por, dt_slet_por)
 
         diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
 
@@ -455,6 +455,12 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
+
+    dt_slet_por = datetime.strptime(request.POST.get(
+        "dt_slet_por", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
+
+    dt_net_por = datetime.strptime(request.POST.get(
+        "dt_net_por", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -523,7 +529,15 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        # response = str(diff.years) + " Years and " + \
+        #     str(diff.months) + " Months and " + str(diff.days) + " Days"
+
+        #             # find the smallest of the 2 dates to give the benefit to the candidate
+        dt_earliestFrom = min(dt_net_por, dt_slet_por)
+
+        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
 
         response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -554,8 +568,8 @@ def phdCalc_submtdbfr_31122002(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
-    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_POR_FROM_CUTOFF = datetime(2002, 7, 31).date()
+    DT_POR_TO_CUTOFF = datetime(2006, 6, 13).date()
     DT_PHD_TO_CUTOFF = datetime(2002, 12, 31).date()
 
     # Get the values from the request object
@@ -621,8 +635,10 @@ def phdCalc_submtdbfr_31122002(request):
 
     print(toConsider)
     if(toConsider == True):
-        # response = str(dt_elp_toDt - dt_elp_fromDt)
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # Find difference between PHD POR Date and Last Date 31.06.2006
+        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_phd_por)
 
         response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -663,6 +679,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     # TODO Move this to a config file or DB
     DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
     DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+
     DT_PHD_TO_CUTOFF = datetime(2009, 2, 4).date()
 
     # Get the values from the request object
@@ -729,7 +746,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        # Find difference between PHD POR Date and 02.04.2009
+        diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
 
         response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -772,6 +792,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
         2018, 7, 18).date()  # TODO: to be confirmed
     DT_POR_TO_CUTOFF = datetime(
         2019, 10, 4).date()  # TODO: to be confirmed
+
     DT_PHD_TO_CUTOFF = datetime(2019, 10, 4).date()
 
     # Get the values from the request object
@@ -838,7 +859,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+
+        # find difference of dates from PG_POR and 04.10.2019
+        diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
 
         response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"

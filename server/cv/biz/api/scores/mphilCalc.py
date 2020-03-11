@@ -1,5 +1,8 @@
 import logging
-import datetime
+
+from datetime import datetime
+from dateutil import relativedelta
+
 
 from pyramid.security import (
     NO_PERMISSION_REQUIRED,
@@ -270,8 +273,8 @@ def pg_validity_check_mphil_calc(dt_pg_por, str_caste, pgMarks, diffAbl, str_sub
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_TOP_POR_CUTOFF = datetime.datetime(1991, 9, 19).date()
-    DT_BTM_POR_CUTOFF = datetime.datetime(2002, 7, 30).date()
+    DT_TOP_POR_CUTOFF = datetime(1991, 9, 19).date()
+    DT_BTM_POR_CUTOFF = datetime(2002, 7, 30).date()
 
     # Entry Check Point if POR < CUT OFF DATE
     if DT_BTM_POR_CUTOFF >= dt_pg_por <= DT_TOP_POR_CUTOFF:
@@ -347,8 +350,8 @@ def pg_validity_check_sc_criteria(dt_pg_por, str_caste, float_pgMarks, bool_diff
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime.datetime(2006, 6, 14).date()
-    DT_POR_TO_CUTOFF = datetime.datetime(2010, 6, 29).date()
+    DT_POR_FROM_CUTOFF = datetime(2006, 6, 14).date()
+    DT_POR_TO_CUTOFF = datetime(2010, 6, 29).date()
 
     # Special Marks Override to be considered for SC Category
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
@@ -417,7 +420,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -457,29 +460,30 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
         subjCheck_2equivCheck = False
 
         # TODO Move this to a config file or DB
-        DT_TOP_POR_CUTOFF = datetime.datetime(1991, 9, 19).date()
-        DT_BTM_POR_CUTOFF = datetime.datetime(2002, 7, 30).date()
-        DT_GLB_POR_CUTOFF = datetime.datetime(
+        DT_TOP_POR_CUTOFF = datetime(1991, 9, 19).date()
+        DT_BTM_POR_CUTOFF = datetime(2002, 7, 30).date()
+
+        DT_GLB_POR_CUTOFF = datetime(
             1993, 12, 31).date()  # Global POR Cutoff Date
 
         # Get the rest of the POR dates from the request object
 
-        dt_mphil_por = datetime.datetime.strptime(request.POST.get(
+        dt_mphil_por = datetime.strptime(request.POST.get(
             "dt_mphil_por", 'No MHIL POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_phd_por = datetime.datetime.strptime(request.POST.get(
+        dt_phd_por = datetime.strptime(request.POST.get(
             "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_net_por = datetime.datetime.strptime(request.POST.get(
+        dt_net_por = datetime.strptime(request.POST.get(
             "dt_net_por", 'No NET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_slet_por = datetime.datetime.strptime(request.POST.get(
+        dt_slet_por = datetime.strptime(request.POST.get(
             "dt_slet_por", 'No SLET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_fromDt = datetime.strptime(request.POST.get(
             "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
 
-        dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
         str_sletNnetStatus = str(request.POST.get(
@@ -540,7 +544,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                     "Step 5.11 - Moving to SLET / NET & Subject Handled Check ")
 
             mphil_sletNetCheck = pg_sletNnet(
-                str_sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_mphil_bfr31121993_phd_bfr31121993)
+                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_mphil_bfr31121993_phd_bfr31121993)
 
         else:
             log.info("Step 5.12 - MPHIL NOT WITHIN CUTOFF DATE")
@@ -554,7 +558,18 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
         # PG + MPHIL + NET / SLET
         # All the above conditions are considered in the below statement
         if subjCheck_2equivCheck == True or mphil_sletNetCheck == True:
-            response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+
+            # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+
+            # find the smallest of the 4 dates to give the benefit to the candidate
+            dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                  dt_slet_por, dt_net_por)
+
+            diff = relativedelta.relativedelta(
+                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+
+            response = str(diff.years) + " Years and " + \
+                str(diff.months) + " Months and " + str(diff.days) + " Days"
 
         return response
 
@@ -598,7 +613,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -638,29 +653,29 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         subjCheck_2equivCheck = False
 
         # TODO Move this to a config file or DB
-        DT_TOP_POR_CUTOFF = datetime.datetime(1991, 9, 19).date()
-        DT_BTM_POR_CUTOFF = datetime.datetime(2002, 7, 30).date()
-        DT_GLB_POR_CUTOFF = datetime.datetime(
+        DT_TOP_POR_CUTOFF = datetime(2006, 6, 14).date()
+        DT_BTM_POR_CUTOFF = datetime(2010, 6, 29).date()
+        DT_GLB_POR_CUTOFF = datetime(
             1993, 12, 31).date()  # Global POR Cutoff Date
 
         # Get the rest of the POR dates from the request object
 
-        dt_mphil_por = datetime.datetime.strptime(request.POST.get(
+        dt_mphil_por = datetime.strptime(request.POST.get(
             "dt_mphil_por", 'No MHIL POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_phd_por = datetime.datetime.strptime(request.POST.get(
+        dt_phd_por = datetime.strptime(request.POST.get(
             "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_net_por = datetime.datetime.strptime(request.POST.get(
+        dt_net_por = datetime.strptime(request.POST.get(
             "dt_net_por", 'No NET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_slet_por = datetime.datetime.strptime(request.POST.get(
+        dt_slet_por = datetime.strptime(request.POST.get(
             "dt_slet_por", 'No SLET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_fromDt = datetime.strptime(request.POST.get(
             "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
 
-        dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
         str_sletNnetStatus = str(request.POST.get(
@@ -721,7 +736,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                     "Step 5.11 - Moving to SLET / NET & Subject Handled Check ")
 
             mphil_sletNetCheck = pg_sletNnet(
-                str_sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_pgNmphil_bfr14062006_aftr29062010)
+                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_pgNmphil_bfr14062006_aftr29062010)
 
         else:
             log.info("Step 5.12 - MPHIL NOT WITHIN CUTOFF DATE")
@@ -735,7 +750,16 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         # PG + MPHIL + NET / SLET
         # All the above conditions are considered in the below statement
         if subjCheck_2equivCheck == True or mphil_sletNetCheck == True:
-            response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+            # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+            # find the smallest of the 4 dates to give the benefit to the candidate
+            dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                  dt_slet_por, dt_net_por)
+
+            diff = relativedelta.relativedelta(
+                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+
+            response = str(diff.years) + " Years and " + \
+                str(diff.months) + " Months and " + str(diff.days) + " Days"
 
         return response
 
@@ -779,7 +803,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # Get the values from the request object
-    dt_pg_por = datetime.datetime.strptime(request.POST.get(
+    dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
@@ -819,29 +843,29 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
         subjCheck_2equivCheck = False
 
         # TODO Move this to a config file or DB
-        DT_TOP_POR_CUTOFF = datetime.datetime(2006, 6, 14).date()
-        DT_BTM_POR_CUTOFF = datetime.datetime(2009, 4, 2).date()
-        DT_GLB_POR_CUTOFF = datetime.datetime(
+        DT_TOP_POR_CUTOFF = datetime(2006, 6, 14).date()
+        DT_BTM_POR_CUTOFF = datetime(2009, 4, 2).date()
+        DT_GLB_POR_CUTOFF = datetime(
             1993, 12, 31).date()  # Global POR Cutoff Date
 
         # Get the rest of the POR dates from the request object
 
-        dt_mphil_por = datetime.datetime.strptime(request.POST.get(
+        dt_mphil_por = datetime.strptime(request.POST.get(
             "dt_mphil_por", 'No MHIL POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_phd_por = datetime.datetime.strptime(request.POST.get(
+        dt_phd_por = datetime.strptime(request.POST.get(
             "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_net_por = datetime.datetime.strptime(request.POST.get(
+        dt_net_por = datetime.strptime(request.POST.get(
             "dt_net_por", 'No NET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_slet_por = datetime.datetime.strptime(request.POST.get(
+        dt_slet_por = datetime.strptime(request.POST.get(
             "dt_slet_por", 'No SLET POR Date Recieved'), '%d/%m/%Y').date()
 
-        dt_elp_fromDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_fromDt = datetime.strptime(request.POST.get(
             "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
 
-        dt_elp_toDt = datetime.datetime.strptime(request.POST.get(
+        dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
         sletStatus = request.POST.get(
@@ -920,6 +944,16 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
         # PG + MPHIL + NET / SLET
         # All the above conditions are considered in the below statement
         if subjCheck_2equivCheck == True or mphil_sletNetCheck == True:
-            response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+            # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
+
+            # find the smallest of the 4 dates to give the benefit to the candidate
+            dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                  dt_slet_por, dt_net_por)
+
+            diff = relativedelta.relativedelta(
+                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+
+            response = str(diff.years) + " Years and " + \
+                str(diff.months) + " Months and " + str(diff.days) + " Days"
 
         return response
