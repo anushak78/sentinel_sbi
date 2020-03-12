@@ -18,6 +18,10 @@ from ....core import cors
 from pyramid.view import view_config
 
 from .core.const import BusinessConstants
+from ..schemas import (
+    PgCalc_50mNabove_Upto1891991,
+)
+from .utils import util
 
 
 log = logging.getLogger(__name__)
@@ -25,7 +29,6 @@ log = logging.getLogger(__name__)
 svc_pgCalc_50mNabove_Upto1891991 = Service(
     name="biz.api.scores.pgCalc_50mNabove_Upto1891991", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/pgCalc_50mNabove_Upto1891991", cors_policy=cors.POLICY)
-
 
 svc_pgCalc_55MarksforOCnGT_19091991_17072018 = Service(
     name="biz.api.scores.pgCalc_55MarksforOCnGT_19091991_17072018", permission=NO_PERMISSION_REQUIRED,
@@ -38,7 +41,6 @@ svc_pgCalc_55MarksforNonOC_18072018_04102019 = Service(
 svc_phdCalc_submtdbfr_31122002 = Service(
     name="biz.api.scores.phdCalc_submtdbfr_31122002", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/phdCalc_submtdbfr_31122002", cors_policy=cors.POLICY)
-
 
 svc_pg_phdCalc_CS_DE_OU_submtdbfr_02042009 = Service(
     name="biz.api.scores.pg_phdCalc_CS_DE_OU_submtdbfr_02042009", permission=NO_PERMISSION_REQUIRED,
@@ -217,6 +219,12 @@ Parameters :
 """
 @svc_pgCalc_50mNabove_Upto1891991.post(require_csrf=False)
 def pgCalc_50mNabove_Upto1891991(request):
+
+    # Sample code to validate the json data
+    # errors = util.validate(request.POST, PgCalc_50mNabove_Upto1891991())
+    # if len(errors) > 0:
+    #     return errors
+
     response = "Consider This Date"
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
@@ -760,12 +768,12 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     return response
 
 
-"""This method is used check the PG , PHD  with 
-    Corespondence , 
+"""This method is used check the PG , PHD  with
+    Corespondence ,
     Distance Education
     Open University
-    
-    submitted before 02.04.2009  
+
+    submitted before 02.04.2009
 for SC / SCA / ST / Diff Abled (50% marks)
 
 Name : pg_phdCalc_CS_DE_OU_submtdbfr_04102019
