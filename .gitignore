@@ -7,7 +7,7 @@ node_modules
 build
 assets/uploads
 logs
-.idea
+.idea*
 config/config.js
 config/config.prod.js
 package-lock.json
