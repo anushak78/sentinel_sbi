@@ -71,7 +71,7 @@ fnName - Function Name for Logging
 def pg_sletNnet(bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
     log.info("%s- SLET STATUS", bool_sletStatus)
     log.info("%s - NET STATUS", bool_netStatus)
-    if (bool_sletStatus):
+    if (bool_netStatus):
         log.info("%s- Step 4.2.1 - NET STATUS MATCHES", fnName)
 
         if(str(v_subjHandled) == str(v_subjNet)):
@@ -85,7 +85,7 @@ def pg_sletNnet(bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHa
             log.info("%s - Step 4.2.5 - Dont Consider this Date", fnName)
             return False
 
-    elif (bool_netStatus):
+    elif (bool_sletStatus):
         log.info("%s - Step 4.2.1 - SLET Status matches", fnName)
 
         if(str(v_subjHandled) == str(v_subjSlet)):
@@ -429,10 +429,11 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
         print(str_dt_slet_por, len(str_dt_slet_por))
         print(str_dt_net_por, len(str_dt_net_por))
 
-        if(len(str_dt_slet_por) != 0):
+        if (str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
             dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
             dt_earliestFrom = dt_slet_por
-        if(len(str_dt_net_por) != 0):
+
+        if (str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
             dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
             dt_earliestFrom = dt_net_por
 
@@ -445,11 +446,16 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
                         'Status': 'FAIL',
                         'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                         }
-        if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+        if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
             # find the smallest of the 2 dates to give the benefit to the candidate
             dt_earliestFrom = min(dt_net_por, dt_slet_por)
 
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
+
+        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -457,7 +463,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
-                    'Eligible To Date': str(DT_POR_TO_CUTOFF),
+                    'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
                     'Subject Handled ': v_subjHandled}
     else:
@@ -571,10 +577,10 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
         print(str_dt_slet_por, len(str_dt_slet_por))
         print(str_dt_net_por, len(str_dt_net_por))
 
-        if(len(str_dt_slet_por) != 0):
+        if(str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
             dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
             dt_earliestFrom = dt_slet_por
-        if(len(str_dt_net_por) != 0):
+        if(str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
             dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
             dt_earliestFrom = dt_net_por
 
@@ -587,11 +593,16 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
                         'Status': 'FAIL',
                         'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                         }
-        if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+        if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
             # find the smallest of the 2 dates to give the benefit to the candidate
             dt_earliestFrom = min(dt_net_por, dt_slet_por)
 
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
+            if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+                dt_top_date = DT_POR_TO_CUTOFF
+            else:
+                dt_top_date = dt_elp_toDt
+
+        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -599,7 +610,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
-                    'Eligible To Date': str(DT_POR_TO_CUTOFF),
+                    'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
                     'Subject Handled ': v_subjHandled}
     else:
@@ -711,7 +722,12 @@ def phdCalc_submtdbfr_31122002(request):
         # Find difference between PHD POR Date and Last Date 31.06.2006
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
 
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_phd_por)
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
+
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_phd_por)
 
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -719,7 +735,7 @@ def phdCalc_submtdbfr_31122002(request):
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
-                    'Eligible To Date': str(DT_POR_TO_CUTOFF),
+                    'Eligible To Date': str(dt_elp_toDt),
                     'Date Difference ': dt_diff_response,
                     'Subject Handled ': v_subjHandled}
 
@@ -829,9 +845,13 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        if(dt_elp_toDt > DT_PHD_TO_CUTOFF):
+            dt_top_date = DT_PHD_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
 
         # Find difference between PHD POR Date and 02.04.2009
-        diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
+        diff = relativedelta.relativedelta(dt_top_date, dt_phd_por)
 
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -839,7 +859,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
         response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
-                    'Eligible To Date': str(DT_PHD_TO_CUTOFF),
+                    'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
                     'Subject Handled ': v_subjHandled}
 
@@ -886,6 +906,12 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
     DT_PHD_TO_CUTOFF = datetime(2019, 10, 4).date()
 
+    v_subjHandled = request.POST.get(
+        "v_subjHandled", 'No Subject Handled Recieved')
+
+    v_subjApplied = request.POST.get(
+        "v_subjApplied", 'No Subject Applied Recieved')
+
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
@@ -931,12 +957,6 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                 bool_chk1 = str(request.POST.get(
                     "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
-
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
-
                 bool_equivFlag1 = request.POST.get(
                     "bool_equivFlag1", 'false')  # Equivalence Check 1
 
@@ -951,7 +971,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
-
+        if(dt_elp_toDt > DT_PHD_TO_CUTOFF):
+            dt_top_date = DT_PHD_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
         # find difference of dates from PG_POR and 04.10.2019
         diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
 
@@ -970,5 +993,6 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
         response = {'Title':  'PG with PHD ( To Date : 04.10.2019) ',
                     'Status': 'FAIL',
                     'Response': response,
+                    'Subject Handled ': v_subjHandled
                     }
     return response

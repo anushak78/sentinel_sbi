@@ -604,11 +604,11 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
             # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
 
-            if(len(str_dt_slet_por) != 0):
+            if(str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
                 dt_slet_por = datetime.strptime(
                     str_dt_slet_por, '%d/%m/%Y').date()
                 dt_earliestFrom = dt_slet_por
-            if(len(str_dt_net_por) != 0):
+            if(str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
                 dt_net_por = datetime.strptime(
                     str_dt_net_por, '%d/%m/%Y').date()
                 dt_earliestFrom = dt_net_por
@@ -623,14 +623,19 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                             'Status': 'FAIL',
                             'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                             }
-            if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+            if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
 
                 # find the smallest of the 4 dates to give the benefit to the candidate
                 dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
                                       dt_slet_por, dt_net_por)
 
+                if(dt_elp_toDt > DT_BTM_POR_CUTOFF):
+                    dt_top_date = DT_BTM_POR_CUTOFF
+                else:
+                    dt_top_date = dt_elp_toDt
+
                 diff = relativedelta.relativedelta(
-                    DT_BTM_POR_CUTOFF, dt_earliestFrom)
+                    dt_top_date, dt_earliestFrom)
 
                 dt_diff_response = str(diff.years) + " Years and " + \
                     str(diff.months) + " Months and " + \
@@ -639,7 +644,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                 response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
-                            'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                            'Eligible To Date': str(dt_top_date),
                             'Date Difference ': dt_diff_response,
                             'Subject Handled ': v_subjHandled}
 
@@ -865,11 +870,11 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         if subjCheck_2equivCheck == True or mphil_sletNetCheck == True:
             # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
 
-            if(len(str_dt_slet_por) != 0):
+            if(str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
                 dt_slet_por = datetime.strptime(
                     str_dt_slet_por, '%d/%m/%Y').date()
                 dt_earliestFrom_1 = dt_slet_por
-            if(len(str_dt_net_por) != 0):
+            if(str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
                 dt_net_por = datetime.strptime(
                     str_dt_net_por, '%d/%m/%Y').date()
                 dt_earliestFrom_1 = dt_net_por
@@ -884,7 +889,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                             'Status': 'FAIL',
                             'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                             }
-            if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+            if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
 
                 # find the smallest of the 4 dates to give the benefit to the candidate
                 dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
@@ -893,6 +898,11 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                 # find the smallest of the 4 dates to give the benefit to the candidate
                 dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
                                       dt_earliestFrom_1)
+
+                if(dt_elp_toDt > DT_BTM_POR_CUTOFF):
+                    dt_top_date = DT_BTM_POR_CUTOFF
+                else:
+                    dt_top_date = dt_elp_toDt
 
                 diff = relativedelta.relativedelta(
                     DT_BTM_POR_CUTOFF, dt_earliestFrom)
@@ -904,7 +914,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                 response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
-                            'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                            'Eligible To Date': str(dt_top_date),
                             'Date Difference ': dt_diff_response,
                             'Subject Handled ': v_subjHandled}
 
@@ -1122,8 +1132,13 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
                                   dt_slet_por, dt_net_por)
 
+            if(dt_elp_toDt > DT_BTM_POR_CUTOFF):
+                dt_top_date = DT_BTM_POR_CUTOFF
+            else:
+                dt_top_date = dt_elp_toDt
+
             diff = relativedelta.relativedelta(
-                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+                dt_top_date, dt_earliestFrom)
 
             dt_diff_response = str(diff.years) + " Years and " + \
                 str(diff.months) + " Months and " + str(diff.days) + " Days"
@@ -1131,7 +1146,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
                         'Status': 'PASS',
                         'Eligible From Date': str(dt_earliestFrom),
-                        'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                        'Eligible To Date': str(dt_top_date),
                         'Date Difference ': dt_diff_response,
                         'Subject Handled ': v_subjHandled}
 
