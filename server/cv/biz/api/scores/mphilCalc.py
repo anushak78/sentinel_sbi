@@ -267,7 +267,7 @@ Parameters :
 """
 
 
-def pg_validity_check_mphil_calc(dt_pg_por, str_caste, pgMarks, diffAbl, str_subjHandledStatus, v_subjHandled, v_subjApplied):
+def pg_validity_check_mphil_calc(bool_diffAbled, float_pgMarks, dt_pg_por, str_caste, pgMarks, diffAbl, str_subjHandledStatus, v_subjHandled, v_subjApplied):
     response = "Consider This Date"
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
@@ -449,7 +449,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
     log.info(
         "------------------------------ PG Validity Check INITIATE ------------------------------")
     toConsider, response = pg_validity_check_mphil_calc(
-        dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
+        bool_diffAbled, float_pgMarks, dt_pg_por, str_caste, float_pgMarks, bool_diffAbled, str_subjHandledStatus, v_subjHandled, v_subjApplied)
 
     print(toConsider)
     # Validate if the PG Check was True then proceed , else print status and exit here.
