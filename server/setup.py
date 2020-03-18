@@ -23,6 +23,7 @@ requires = [
     'cornice',
     'psycopg2',
     'colander',
+    'python-dateutil',
 ]
 
 tests_require = [
