@@ -983,8 +983,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
             log.info("%s: Step 1 - POR Date within CutOff Date",
                      phdCalc_submtdbfr_31122002)
 
-            bool_chk1 = str(request.POST.get(
-                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str2bool(str(request.POST.get(
+                "bool_chk1", 'False')))
 
             bool_equivFlag1 = request.POST.get(
                 "bool_equivFlag1", 'false')  # Equivalence Check 1
@@ -992,7 +992,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
             v_equiv1Sub = request.POST.get(
                 "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-            if(bool_chk1 == True):
+            if(bool_chk1):
+                print("bool check 1 ...............")
                 toConsider = pg_subjCheck(
                     str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
