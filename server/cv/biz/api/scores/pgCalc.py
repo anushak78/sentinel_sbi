@@ -286,8 +286,13 @@ def pgCalc_50mNabove_Upto1891991(request):
             log.info(toConsider)
 
             if(toConsider == True):
+                if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+                    dt_top_date = DT_POR_TO_CUTOFF
+                else:
+                    dt_top_date = dt_elp_toDt
+
                 diff = relativedelta.relativedelta(
-                    DT_POR_CUTOFF, dt_elp_fromDt)
+                    dt_top_date, dt_elp_fromDt)
 
                 dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                        " Months and " + str(diff.days) + " Days")
@@ -295,7 +300,7 @@ def pgCalc_50mNabove_Upto1891991(request):
                 response = {'Title':  'PG with 50% Marks',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_elp_fromDt),
-                            'Eligible To Date': str(DT_POR_CUTOFF),
+                            'Eligible To Date': str(dt_top_date),
                             'Date Difference ': dt_diff_response,
                             'Subject Handled ': v_subjHandled}
 
