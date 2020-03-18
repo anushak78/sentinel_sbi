@@ -508,6 +508,9 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
     DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
 
+    dt_elp_toDt = datetime.strptime(request.POST.get(
+        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
@@ -563,7 +566,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
                 "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
             toConsider = pg_subjCheck(
-                str_subjHandledStatus, v_subjHandled, v_subjApplied, false, NONE, pgCalc_55MarksforNonOC_18072018_04102019)
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, False, 'NONE', pgCalc_55MarksforNonOC_18072018_04102019)
         else:
             log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
@@ -573,14 +576,13 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
                         }
     print(toConsider)
     if(toConsider == True):
-
         str_dt_slet_por = request.POST.get(
             "dt_slet_por", '01/01/0001')
 
         str_dt_net_por = request.POST.get(
             "dt_net_por", '01/01/0001')
-        print(str_dt_slet_por, len(str_dt_slet_por))
-        print(str_dt_net_por, len(str_dt_net_por))
+        print(str_dt_slet_por, ">>>>>>>>>>>>>>>>>>>>>>", len(str_dt_slet_por))
+        print(str_dt_net_por, ">>>>>>>>>>>>>>>>>>>>>>>>>", len(str_dt_net_por))
 
         if(str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
             dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
@@ -598,14 +600,35 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
                         'Status': 'FAIL',
                         'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                         }
-        if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
-            # find the smallest of the 2 dates to give the benefit to the candidate
-            dt_earliestFrom = min(dt_net_por, dt_slet_por)
 
-            if(dt_elp_toDt > DT_POR_TO_CUTOFF):
-                dt_top_date = DT_POR_TO_CUTOFF
-            else:
-                dt_top_date = dt_elp_toDt
+        print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
+
+        if(str_dt_slet_por != '01/01/0001' and
+           str_dt_net_por != '01/01/0001'):
+
+            print(str_dt_slet_por, "1>>>>>>>>>>>>", str_dt_net_por)
+
+            dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
+            dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
+
+            if(len(str_dt_slet_por) != 0 and
+                    len(str_dt_net_por) != 0):
+                # find the smallest of the 2 dates to give the benefit to the candidate
+                dt_earliestFrom = min(dt_net_por, dt_slet_por)
+
+        elif(str_dt_slet_por != '01/01/0001' and str_dt_net_por == '01/01/0001'):
+            dt_slet_por = datetime.strptime(
+                str_dt_slet_por, '%d/%m/%Y').date()
+            dt_earliestForm = dt_slet_por
+        elif(str_dt_slet_por == '01/01/0001' and str_dt_net_por != '01/01/0001'):
+            dt_net_por = datetime.strptime(
+                str_dt_net_por, '%d/%m/%Y').date()
+            dt_earliestForm = dt_net_por
+
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
 
         diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
