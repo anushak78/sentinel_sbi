@@ -376,46 +376,46 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 pgCalc_55MarksforOCnGT_19091991_17072018)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    log.info("%s: Step 1 - POR Date within CutOff Date",
+             pgCalc_55MarksforOCnGT_19091991_17072018)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+    if str(str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            bool_sletStatus = str2bool(request.POST.get(
-                "bool_sletStatus", 'False'))
+        bool_sletStatus = str2bool(request.POST.get(
+            "bool_sletStatus", 'False'))
 
-            bool_netStatus = str2bool(request.POST.get(
-                "bool_netStatus", 'False'))
+        bool_netStatus = str2bool(request.POST.get(
+            "bool_netStatus", 'False'))
 
-            v_subjSlet = request.POST.get(
-                "v_subjSlet", 'No SLET Marks Recieved')
-            v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
-            v_subjHandled = request.POST.get(
-                "v_subjHandled", 'No Subject Handled Recieved')
+        v_subjSlet = request.POST.get(
+            "v_subjSlet", 'No SLET Marks Recieved')
+        v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        v_subjHandled = request.POST.get(
+            "v_subjHandled", 'No Subject Handled Recieved')
 
-            bool_equivFlag1 = False  # No Equivalence Check hence default Fault
-            bool_equivFlag2 = False  # No Equivalence Check hence default Fault
+        bool_equivFlag1 = False  # No Equivalence Check hence default Fault
+        bool_equivFlag2 = False  # No Equivalence Check hence default Fault
 
-            sletNetCheck = pg_sletNnet(
-                bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
+        sletNetCheck = pg_sletNnet(
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
 
-            if(sletNetCheck == True):
-                str_subjHandledStatus = request.POST.get(
-                    "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+        if(sletNetCheck == True):
+            str_subjHandledStatus = request.POST.get(
+                "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-                toConsider = pg_subjCheck(
-                    str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
+            toConsider = pg_subjCheck(
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
         else:
             log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
@@ -427,10 +427,10 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     if(toConsider == True):
 
         str_dt_slet_por = request.POST.get(
-            "dt_slet_por", 'NONE')
+            "dt_slet_por", '01/01/0001')
 
         str_dt_net_por = request.POST.get(
-            "dt_net_por", 'NONE')
+            "dt_net_por", '01/01/0001')
         print(str_dt_slet_por, len(str_dt_slet_por))
         print(str_dt_net_por, len(str_dt_net_por))
 
@@ -520,50 +520,50 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 pgCalc_55MarksforNonOC_18072018_04102019)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    log.info("%s: Step 1 - POR Date within CutOff Date",
+             pgCalc_55MarksforNonOC_18072018_04102019)
 
-        if str(str_caste) == BusinessConstants.OC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
-            percentileToBeConsidered = BusinessConstants.MARKS_55_PER
+    if str(str_caste) == BusinessConstants.OC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+        percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            bool_sletStatus = str2bool(request.POST.get(
-                "bool_sletStatus", 'False'))
+        bool_sletStatus = str2bool(request.POST.get(
+            "bool_sletStatus", 'False'))
 
-            bool_netStatus = str2bool(request.POST.get(
-                "bool_netStatus", 'False'))
-            v_subjSlet = request.POST.get(
-                "v_subjSlet", 'No SLET Marks Recieved')
-            v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        bool_netStatus = str2bool(request.POST.get(
+            "bool_netStatus", 'False'))
+        v_subjSlet = request.POST.get(
+            "v_subjSlet", 'No SLET Marks Recieved')
+        v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        v_subjHandled = request.POST.get(
+            "v_subjHandled", 'No Subject Handled Recieved')
+
+        bool_equivFlag1 = str2bool(request.POST.get(
+            "bool_equivFlag1", 'False'))  # Equivalence Check 1
+        bool_equivFlag2 = str2bool(request.POST.get(
+            "bool_equivFlag2", 'False'))  # Equivalence Check 2
+
+        sletNetCheck = pg_sletNnet(
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_18072018_04102019)
+
+        if(sletNetCheck == True):
+            str_subjHandledStatus = request.POST.get(
+                "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+
             v_subjHandled = request.POST.get(
-                "v_subjHandled", 'No Subject Handled Recieved')
+                "v_subjHandled", "No Subject Handled Applied Info Recieved")  # Name of Subject Handled from DB.
 
-            bool_equivFlag1 = str2bool(request.POST.get(
-                "bool_equivFlag1", 'False'))  # Equivalence Check 1
-            bool_equivFlag2 = str2bool(request.POST.get(
-                "bool_equivFlag2", 'False'))  # Equivalence Check 2
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-            sletNetCheck = pg_sletNnet(
-                bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_18072018_04102019)
-
-            if(sletNetCheck == True):
-                str_subjHandledStatus = request.POST.get(
-                    "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
-
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", "No Subject Handled Applied Info Recieved")  # Name of Subject Handled from DB.
-
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
-
-                toConsider = pg_subjCheck(
-                    str_subjHandledStatus, v_subjHandled, v_subjApplied, false, NONE, pgCalc_55MarksforNonOC_18072018_04102019)
+            toConsider = pg_subjCheck(
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, false, NONE, pgCalc_55MarksforNonOC_18072018_04102019)
         else:
             log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
@@ -575,10 +575,10 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     if(toConsider == True):
 
         str_dt_slet_por = request.POST.get(
-            "dt_slet_por", 'NONE')
+            "dt_slet_por", '01/01/0001')
 
         str_dt_net_por = request.POST.get(
-            "dt_net_por", 'NONE')
+            "dt_net_por", '01/01/0001')
         print(str_dt_slet_por, len(str_dt_slet_por))
         print(str_dt_net_por, len(str_dt_net_por))
 
@@ -681,48 +681,49 @@ def phdCalc_submtdbfr_31122002(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    # log.info("%s: Step 1 - POR Date within CutOff Date",
+    #  phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str(request.POST.get(
+                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
+            v_subjHandled = request.POST.get(
+                "v_subjHandled", 'No Subject Handled Recieved')
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", 'No Subject Applied Recieved')
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, phdCalc_submtdbfr_31122002)
-        else:
-            response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
-                        'Status': 'FAIL',
-                        'Response ': 'Disability Check Failed'}
+            if(bool_chk1 == True):
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, phdCalc_submtdbfr_31122002)
+    else:
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'Disability Check Failed'}
 
     print(toConsider)
+
     if(toConsider == True):
         # Find difference between PHD POR Date and Last Date 31.06.2006
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
@@ -809,42 +810,42 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    #     log.info("%s: Step 1 - POR Date within CutOff Date",
+    #              phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str(request.POST.get(
+                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
+            v_subjHandled = request.POST.get(
+                "v_subjHandled", 'No Subject Handled Recieved')
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", 'No Subject Applied Recieved')
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+            if(bool_chk1 == True):
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
     print(toConsider)
     if(toConsider == True):
@@ -941,36 +942,36 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    #     log.info("%s: Step 1 - POR Date within CutOff Date",
+    #              phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str(request.POST.get(
+                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+            if(bool_chk1 == True):
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
     print(toConsider)
     if(toConsider == True):
