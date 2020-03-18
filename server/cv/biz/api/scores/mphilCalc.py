@@ -283,7 +283,7 @@ def pg_validity_check_mphil_calc(dt_pg_por, str_caste, pgMarks, diffAbl, str_sub
         if str_caste == BusinessConstants.OC_CATEGORY:
             log.info("Step 2 - Candidate in OC Category")
 
-            if(bool_diffAbled == True):
+            if(bool_diffAbled):
                 log.info("Step 3 - Candidate in Differently Abled Category")
 
                 if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
@@ -381,6 +381,15 @@ def pg_validity_check_sc_criteria(dt_pg_por, str_caste, float_pgMarks, bool_diff
     return toConsider, response
 
 
+"""
+Function to convert True or False to Bool
+"""
+
+
+def str2bool(v):
+    return v.lower() in ("yes", "True", "true", 't', "1")
+
+
 """This method is used get the PG with 50% marks and above
 
 Name : calc_mphil_bfr31121993_phd_bfr31121993
@@ -424,7 +433,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -449,6 +458,13 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
     if(toConsider != True):
         log.info(
             "------------------------------ PG Validity Check FAILED , RETURNING RESPONSE ------------------------------")
+
+        responseJson = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
+                        'Status': 'FAIL',
+                        'Reason': response
+                        }
+        response = responseJson
+
         return response
 
     else:
@@ -468,17 +484,25 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
         # Get the rest of the POR dates from the request object
 
-        dt_mphil_por = datetime.strptime(request.POST.get(
-            "dt_mphil_por", 'No MHIL POR Date Recieved'), '%d/%m/%Y').date()
+        str_dt_mphil_por = request.POST.get(
+            "dt_mphil_por", 'NONE')
 
-        dt_phd_por = datetime.strptime(request.POST.get(
-            "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+        str_dt_phd_por = request.POST.get(
+            "dt_phd_por", 'NONE')
 
-        dt_net_por = datetime.strptime(request.POST.get(
-            "dt_net_por", 'No NET POR Date Recieved'), '%d/%m/%Y').date()
+        str_dt_slet_por = request.POST.get(
+            "dt_slet_por", 'NONE')
 
-        dt_slet_por = datetime.strptime(request.POST.get(
-            "dt_slet_por", 'No SLET POR Date Recieved'), '%d/%m/%Y').date()
+        str_dt_net_por = request.POST.get(
+            "dt_net_por", 'NONE')
+
+        if(len(str_dt_mphil_por) != 0):
+            dt_mphil_por = datetime.strptime(
+                str_dt_mphil_por, '%d/%m/%Y').date()
+
+        if(len(str_dt_phd_por) != 0):
+            dt_phd_por = datetime.strptime(
+                str_dt_phd_por, '%d/%m/%Y').date()
 
         dt_elp_fromDt = datetime.strptime(request.POST.get(
             "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
@@ -486,16 +510,20 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
         dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-        str_sletNnetStatus = str(request.POST.get(
-            "str_sletNnetStatus", 'No Caste Info Recieved'))
+        bool_sletStatus = str2bool(request.POST.get(
+            "bool_sletStatus", 'False'))
+
+        bool_netStatus = str2bool(request.POST.get(
+            "bool_netStatus", 'False'))
+
         v_subjSlet = request.POST.get(
             "v_subjSlet", 'No SLET Marks Recieved')
         v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
 
-        bool_equivFlag1 = request.POST.get(
-            "bool_equivFlag1", 'false')  # Equivalence Check 1
-        bool_equivFlag2 = request.POST.get(
-            "bool_equivFlag2", 'false')  # Equivalence Check 2
+        bool_equivFlag1 = str2bool(request.POST.get(
+            "bool_equivFlag1", 'False'))  # Equivalence Check 1
+        bool_equivFlag2 = str2bool(request.POST.get(
+            "bool_equivFlag2", 'False'))  # Equivalence Check 2
 
         v_equiv1Sub = request.POST.get(
             "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
@@ -504,9 +532,9 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
             "v_equiv2Sub", 'Equivalence 2 Subject Not Recieved')  # Equivalence Check 1
 
         # MPHIL Degree From Recognized University
-        bool_chk1 = request.POST.get("bool_chk1", 'false')
+        bool_chk1 = str2bool(request.POST.get("bool_chk1", 'False'))
         # PHD Degree From Recognized University
-        bool_chk2 = request.POST.get("bool_chk1", 'false')
+        bool_chk2 = str2bool(request.POST.get("bool_chk1", 'False'))
 
         # PHD Validatity Check
 
@@ -514,7 +542,12 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
             if bool_chk2 != True:
                 log.info("Step 5.1 - PG not from a Recognized University ")
                 log.info("Step 5.2 -  Dont Consider This Date")
-                response = "Step 5.3 - PG not from a Recognized University - Dont Consider This Date "
+
+                response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
+                            'Status': 'FAIL',
+                            'Reason': 'PG not from a Recognized University - Dont Consider This Date'
+                            }
+
             else:
                 log.info("Step 5.4 - PG Check Passed ")
                 log.info("Step 5.4 - PG from Recognized University ")
@@ -528,7 +561,10 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
             log.info("Step 5.4 - PG NOT WITHIN CUTOFF DATE")
             log.info("Step 5.5 -  Dont Consider This Date")
 
-            response = "Step 5.6 - PG NOT WITHIN CUTOFF DATE - Dont Consider This Date "
+            response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
+                        'Status': 'FAIL',
+                        'Reason': 'PG NOT WITHIN CUTOFF DATE - Dont Consider This Date '
+                        }
 
         # MPHIL VALIDITY CHECK
 
@@ -536,7 +572,11 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
             if bool_chk1 != True:
                 log.info("Step 5.7 - MPHIL NOT  FROM RECOGNIZED UNIVERSITY ")
                 log.info("Step 5.2 -  Dont Consider This Date")
-                response = "Step 5.8 - MPHIL not from a Recognized University - Dont Consider This Date "
+                response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
+                            'Status': 'FAIL',
+                            'Reason': 'MPHIL not from a Recognized University - Dont Consider This Date '
+                            }
+
             else:
                 log.info("Step 5.9 - MPHIL Check Passed ")
                 log.info("Step 5.10 - MPHIL from Recognized University ")
@@ -544,13 +584,16 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                     "Step 5.11 - Moving to SLET / NET & Subject Handled Check ")
 
             mphil_sletNetCheck = pg_sletNnet(
-                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_mphil_bfr31121993_phd_bfr31121993)
+                bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, calc_mphil_bfr31121993_phd_bfr31121993)
 
         else:
             log.info("Step 5.12 - MPHIL NOT WITHIN CUTOFF DATE")
             log.info("Step 5.13 -  Dont Consider This Date")
 
-            response = "Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date "
+            response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
+                        'Status': 'FAIL',
+                        'Reason': 'MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date '
+                        }
 
         # PG + PHD ( within PG % LIMIT & PHD DATE LIMIT CONDITION)
         # PG + PHD + MPHIL Checks
@@ -561,15 +604,44 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
             # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
 
-            # find the smallest of the 4 dates to give the benefit to the candidate
-            dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
-                                  dt_slet_por, dt_net_por)
+            if(len(str_dt_slet_por) != 0):
+                dt_slet_por = datetime.strptime(
+                    str_dt_slet_por, '%d/%m/%Y').date()
+                dt_earliestFrom = dt_slet_por
+            if(len(str_dt_net_por) != 0):
+                dt_net_por = datetime.strptime(
+                    str_dt_net_por, '%d/%m/%Y').date()
+                dt_earliestFrom = dt_net_por
 
-            diff = relativedelta.relativedelta(
-                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+            if(len(str_dt_slet_por) == 0 and len(str_dt_net_por) == 0):
+                log.info(
+                    "pgCalc_55MarksforOCnGT : Step 5 - SLET & NET DATE ARE EMPTY  ")
+                log.info(
+                    "pgCalc_55MarksforOCnGT : Step 5.1 - Dont Consider This Date")
 
-            response = str(diff.years) + " Years and " + \
-                str(diff.months) + " Months and " + str(diff.days) + " Days"
+                response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
+                            'Status': 'FAIL',
+                            'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                            }
+            if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+
+                # find the smallest of the 4 dates to give the benefit to the candidate
+                dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                      dt_slet_por, dt_net_por)
+
+                diff = relativedelta.relativedelta(
+                    DT_BTM_POR_CUTOFF, dt_earliestFrom)
+
+                dt_diff_response = str(diff.years) + " Years and " + \
+                    str(diff.months) + " Months and " + \
+                    str(diff.days) + " Days"
+
+                response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
+                            'Status': 'PASS',
+                            'Eligible From Date': str(dt_earliestFrom),
+                            'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                            'Date Difference ': dt_diff_response,
+                            'Subject Handled ': v_subjHandled}
 
         return response
 
@@ -617,7 +689,7 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -642,6 +714,11 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
     if(toConsider != True):
         log.info(
             "------------------------------ PG Validity Check FAILED , RETURNING RESPONSE ------------------------------")
+        response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                    'Status': 'FAIL',
+                    'Reason': response
+                    }
+
         return response
 
     else:
@@ -658,19 +735,36 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         DT_GLB_POR_CUTOFF = datetime(
             1993, 12, 31).date()  # Global POR Cutoff Date
 
+        str_dt_mphil_por = request.POST.get(
+            "dt_mphil_por", 'NONE')
+
+        str_dt_phd_por = request.POST.get(
+            "dt_phd_por", 'NONE')
+
+        str_dt_slet_por = request.POST.get(
+            "dt_slet_por", 'NONE')
+
+        str_dt_net_por = request.POST.get(
+            "dt_net_por", 'NONE')
+
+        if(len(str_dt_mphil_por) != 0):
+            dt_mphil_por = datetime.strptime(
+                str_dt_mphil_por, '%d/%m/%Y').date()
+
+        if(len(str_dt_phd_por) != 0):
+            dt_phd_por = datetime.strptime(
+                str_dt_phd_por, '%d/%m/%Y').date()
+
+        if(len(str_dt_slet_por) != 0):
+            dt_slet_por = datetime.strptime(
+                str_dt_slet_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_slet_por
+        if(len(str_dt_net_por) != 0):
+            dt_net_por = datetime.strptime(
+                str_dt_net_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_net_por
+
         # Get the rest of the POR dates from the request object
-
-        dt_mphil_por = datetime.strptime(request.POST.get(
-            "dt_mphil_por", 'No MHIL POR Date Recieved'), '%d/%m/%Y').date()
-
-        dt_phd_por = datetime.strptime(request.POST.get(
-            "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
-
-        dt_net_por = datetime.strptime(request.POST.get(
-            "dt_net_por", 'No NET POR Date Recieved'), '%d/%m/%Y').date()
-
-        dt_slet_por = datetime.strptime(request.POST.get(
-            "dt_slet_por", 'No SLET POR Date Recieved'), '%d/%m/%Y').date()
 
         dt_elp_fromDt = datetime.strptime(request.POST.get(
             "dt_elp_fromDt", 'From Date - Period Of Service'), '%d/%m/%Y').date()
@@ -678,16 +772,20 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-        str_sletNnetStatus = str(request.POST.get(
-            "str_sletNnetStatus", 'No Caste Info Recieved'))
+        bool_sletStatus = str2bool(str(request.POST.get(
+            "bool_sletStatus", 'False')))
+
+        bool_netStatus = str2bool(
+            str(request.POST.get("bool_netStatus", 'False')))
+
         v_subjSlet = request.POST.get(
             "v_subjSlet", 'No SLET Marks Recieved')
         v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
 
-        bool_equivFlag1 = request.POST.get(
-            "bool_equivFlag1", 'false')  # Equivalence Check 1
-        bool_equivFlag2 = request.POST.get(
-            "bool_equivFlag2", 'false')  # Equivalence Check 2
+        bool_equivFlag1 = str2bool(request.POST.get(
+            "bool_equivFlag1", 'False'))  # Equivalence Check 1
+        bool_equivFlag2 = str2bool(request.POST.get(
+            "bool_equivFlag2", 'False'))  # Equivalence Check 2
 
         v_equiv1Sub = request.POST.get(
             "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
@@ -696,9 +794,9 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             "v_equiv2Sub", 'Equivalence 2 Subject Not Recieved')  # Equivalence Check 1
 
         # MPHIL Degree From Recognized University
-        bool_chk1 = request.POST.get("bool_chk1", 'false')
+        bool_chk1 = str2bool(request.POST.get("bool_chk1", 'False'))
         # PHD Degree From Recognized University
-        bool_chk2 = request.POST.get("bool_chk1", 'false')
+        bool_chk2 = str2bool(request.POST.get("bool_chk1", 'False'))
 
         # PHD Validatity Check
 
@@ -706,7 +804,11 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             if bool_chk2 != True:
                 log.info("Step 5.1 - PG not from a Recognized University ")
                 log.info("Step 5.2 -  Dont Consider This Date")
-                response = "Step 5.3 - PG not from a Recognized University - Dont Consider This Date "
+
+                response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                            'Status': 'FAIL',
+                            'Reason': 'Step 5.3 - PG not from a Recognized University - Dont Consider This Date'
+                            }
             else:
                 log.info("Step 5.4 - PG Check Passed ")
                 log.info("Step 5.4 - PG from Recognized University ")
@@ -720,7 +822,10 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             log.info("Step 5.4 - PG NOT WITHIN CUTOFF DATE")
             log.info("Step 5.5 -  Dont Consider This Date")
 
-            response = "Step 5.6 - PG NOT WITHIN CUTOFF DATE - Dont Consider This Date "
+            response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                        'Status': 'FAIL',
+                        'Reason': 'Step 5.6 - PG NOT WITHIN CUTOFF DATE - Dont Consider This Date '
+                        }
 
         # MPHIL VALIDITY CHECK
 
@@ -728,7 +833,12 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             if bool_chk1 != True:
                 log.info("Step 5.7 - MPHIL NOT  FROM RECOGNIZED UNIVERSITY ")
                 log.info("Step 5.2 -  Dont Consider This Date")
-                response = "Step 5.8 - MPHIL not from a Recognized University - Dont Consider This Date "
+
+                response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                            'Status': 'FAIL',
+                            'Reason': 'MPHIL not from a Recognized University - Dont Consider This Date'
+                            }
+
             else:
                 log.info("Step 5.9 - MPHIL Check Passed ")
                 log.info("Step 5.10 - MPHIL from Recognized University ")
@@ -742,7 +852,10 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             log.info("Step 5.12 - MPHIL NOT WITHIN CUTOFF DATE")
             log.info("Step 5.13 -  Dont Consider This Date")
 
-            response = "Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date "
+            response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                        'Status': 'FAIL',
+                        'Reason': 'Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date'
+                        }
 
         # PG + PHD ( within PG % LIMIT & PHD DATE LIMIT CONDITION)
         # PG + PHD + MPHIL Checks
@@ -751,15 +864,49 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
         # All the above conditions are considered in the below statement
         if subjCheck_2equivCheck == True or mphil_sletNetCheck == True:
             # response = "Step 5.15 - PHD MATCHED or MPHIL MATCHED - Consider This Date "
-            # find the smallest of the 4 dates to give the benefit to the candidate
-            dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
-                                  dt_slet_por, dt_net_por)
 
-            diff = relativedelta.relativedelta(
-                DT_BTM_POR_CUTOFF, dt_earliestFrom)
+            if(len(str_dt_slet_por) != 0):
+                dt_slet_por = datetime.strptime(
+                    str_dt_slet_por, '%d/%m/%Y').date()
+                dt_earliestFrom_1 = dt_slet_por
+            if(len(str_dt_net_por) != 0):
+                dt_net_por = datetime.strptime(
+                    str_dt_net_por, '%d/%m/%Y').date()
+                dt_earliestFrom_1 = dt_net_por
 
-            response = str(diff.years) + " Years and " + \
-                str(diff.months) + " Months and " + str(diff.days) + " Days"
+            if(len(str_dt_slet_por) == 0 and len(str_dt_net_por) == 0):
+                log.info(
+                    "pgCalc_55MarksforOCnGT : Step 5 - SLET & NET DATE ARE EMPTY  ")
+                log.info(
+                    "pgCalc_55MarksforOCnGT : Step 5.1 - Dont Consider This Date")
+
+                response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                            'Status': 'FAIL',
+                            'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                            }
+            if(len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+
+                # find the smallest of the 4 dates to give the benefit to the candidate
+                dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                      dt_slet_por, dt_net_por)
+            else:
+                # find the smallest of the 4 dates to give the benefit to the candidate
+                dt_earliestFrom = min(dt_mphil_por, dt_phd_por,
+                                      dt_earliestFrom_1)
+
+                diff = relativedelta.relativedelta(
+                    DT_BTM_POR_CUTOFF, dt_earliestFrom)
+
+                dt_diff_response = str(diff.years) + " Years and " + \
+                    str(diff.months) + " Months and " + \
+                    str(diff.days) + " Days"
+
+                response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
+                            'Status': 'PASS',
+                            'Eligible From Date': str(dt_earliestFrom),
+                            'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                            'Date Difference ': dt_diff_response,
+                            'Subject Handled ': v_subjHandled}
 
         return response
 
@@ -807,7 +954,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -832,6 +979,11 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
     if(toConsider != True):
         log.info(
             "------------------------------ PG Validity Check FAILED , RETURNING RESPONSE ------------------------------")
+        response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
+                    'Status': 'FAIL',
+                    'Reason': response
+                    }
+
         return response
 
     else:
@@ -868,20 +1020,20 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
         dt_elp_toDt = datetime.strptime(request.POST.get(
             "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-        sletStatus = request.POST.get(
-            "SLET_STATUS", 'No SLET Status Recieved')
+        sletStatus = str2bool(request.POST.get(
+            "SLET_STATUS", 'False'))
 
-        netStatus = request.POST.get(
-            "NET_STATUS", 'No NET Status Recieved')
+        netStatus = str2bool(request.POST.get(
+            "NET_STATUS", 'False'))
 
         v_subjSlet = request.POST.get(
             "v_subjSlet", 'No SLET Marks Recieved')
         v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
 
-        bool_equivFlag1 = request.POST.get(
-            "bool_equivFlag1", 'false')  # Equivalence Check 1
-        bool_equivFlag2 = request.POST.get(
-            "bool_equivFlag2", 'false')  # Equivalence Check 2
+        bool_equivFlag1 = str2bool(request.POST.get(
+            "bool_equivFlag1", 'False'))  # Equivalence Check 1
+        bool_equivFlag2 = str2bool(request.POST.get(
+            "bool_equivFlag2", 'False'))  # Equivalence Check 2
 
         v_equiv1Sub = request.POST.get(
             "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
@@ -890,9 +1042,9 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             "v_equiv2Sub", 'Equivalence 2 Subject Not Recieved')  # Equivalence Check 1
 
         # MPHIL Degree From Recognized University
-        bool_chk1 = request.POST.get("bool_chk1", 'false')
+        bool_chk1 = str2bool(request.POST.get("bool_chk1", 'false'))
         # PHD Degree From Recognized University
-        bool_chk2 = request.POST.get("bool_chk1", 'false')
+        bool_chk2 = str2bool(request.POST.get("bool_chk1", 'false'))
 
         # PHD Validatity Check
 
@@ -901,6 +1053,11 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                 log.info("Step 5.1 - PG not from a Recognized University ")
                 log.info("Step 5.2 -  Dont Consider This Date")
                 response = "Step 5.3 - PG not from a Recognized University - Dont Consider This Date "
+                response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
+                            'Status': 'FAIL',
+                            'Reason': response
+                            }
+
             else:
                 log.info("Step 5.4 - PG Check Passed ")
                 log.info("Step 5.4 - PG from Recognized University ")
@@ -916,6 +1073,11 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
 
             response = "Step 5.6 - PG NOT WITHIN CUTOFF DATE - Dont Consider This Date "
 
+            response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
+                        'Status': 'FAIL',
+                        'Reason': response
+                        }
+
         # MPHIL VALIDITY CHECK
 
         if dt_mphil_por <= DT_GLB_POR_CUTOFF:
@@ -923,6 +1085,12 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                 log.info("Step 5.7 - MPHIL NOT  FROM RECOGNIZED UNIVERSITY ")
                 log.info("Step 5.2 -  Dont Consider This Date")
                 response = "Step 5.8 - MPHIL not from a Recognized University - Dont Consider This Date "
+
+                response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
+                            'Status': 'FAIL',
+                            'Reason': response
+                            }
+
             else:
                 log.info("Step 5.9 - MPHIL Check Passed ")
                 log.info("Step 5.10 - MPHIL from Recognized University ")
@@ -937,6 +1105,10 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             log.info("Step 5.13 -  Dont Consider This Date")
 
             response = "Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date "
+            response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
+                        'Status': 'FAIL',
+                        'Reason': response
+                        }
 
         # PG + PHD ( within PG % LIMIT & PHD DATE LIMIT CONDITION)
         # PG + PHD + MPHIL Checks
@@ -953,7 +1125,14 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             diff = relativedelta.relativedelta(
                 DT_BTM_POR_CUTOFF, dt_earliestFrom)
 
-            response = str(diff.years) + " Years and " + \
+            dt_diff_response = str(diff.years) + " Years and " + \
                 str(diff.months) + " Months and " + str(diff.days) + " Days"
+
+            response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
+                        'Status': 'PASS',
+                        'Eligible From Date': str(dt_earliestFrom),
+                        'Eligible To Date': str(DT_BTM_POR_CUTOFF),
+                        'Date Difference ': dt_diff_response,
+                        'Subject Handled ': v_subjHandled}
 
         return response
