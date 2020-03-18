@@ -286,8 +286,8 @@ def pgCalc_50mNabove_Upto1891991(request):
             log.info(toConsider)
 
             if(toConsider == True):
-                if(dt_elp_toDt > DT_POR_TO_CUTOFF):
-                    dt_top_date = DT_POR_TO_CUTOFF
+                if(dt_elp_toDt > DT_POR_CUTOFF):
+                    dt_top_date = DT_POR_CUTOFF
                 else:
                     dt_top_date = dt_elp_toDt
 
