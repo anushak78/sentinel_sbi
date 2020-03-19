@@ -1,5 +1,6 @@
 import logging
 
+
 from datetime import datetime
 from dateutil import relativedelta
 
@@ -26,9 +27,9 @@ from .utils import util
 
 log = logging.getLogger(__name__)
 
-svc_pgCalc_50mNabove_Upto1891991 = Service(
-    name="biz.api.scores.pgCalc_50mNabove_Upto1891991", permission=NO_PERMISSION_REQUIRED,
-    path="/biz/scores/pgCalc_50mNabove_Upto1891991", cors_policy=cors.POLICY)
+# svc_pgCalc_50mNabove_Upto1891991 = Service(
+#     name="biz.api.scores.pgCalc_50mNabove_Upto1891991", permission=NO_PERMISSION_REQUIRED,
+#     path="/biz/scores/pgCalc_50mNabove_Upto1891991", cors_policy=cors.POLICY)
 
 svc_pgCalc_55MarksforOCnGT_19091991_17072018 = Service(
     name="biz.api.scores.pgCalc_55MarksforOCnGT_19091991_17072018", permission=NO_PERMISSION_REQUIRED,
@@ -58,7 +59,7 @@ Name : pg_sletNnet
 PARAMETERS :
 -----------
 
-sletNnetStatus - Slet or Net Toggle Status
+sletNbool_netStatus - Slet or Net Toggle Status
 v_subHandled - Subject handled during Course
 v_subjSlet - Subject applied for SLET
 v_subjNet - Subject applied for NET
@@ -67,10 +68,11 @@ fnName - Function Name for Logging
 """
 
 
-def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
-
-    if (sletStatus == "True"):
-        log.info("%s - Step 4.2.1 - NET STATUS MATCHES", fnName)
+def pg_sletNnet(bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, fnName):
+    log.info("%s- SLET STATUS", bool_sletStatus)
+    log.info("%s - NET STATUS", bool_netStatus)
+    if (bool_netStatus):
+        log.info("%s- Step 4.2.1 - NET STATUS MATCHES", fnName)
 
         if(str(v_subjHandled) == str(v_subjNet)):
             log.info(
@@ -83,7 +85,7 @@ def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, boo
             log.info("%s - Step 4.2.5 - Dont Consider this Date", fnName)
             return False
 
-    elif (netStatus == "True"):
+    elif (bool_sletStatus):
         log.info("%s - Step 4.2.1 - SLET Status matches", fnName)
 
         if(str(v_subjHandled) == str(v_subjSlet)):
@@ -93,7 +95,7 @@ def pg_sletNnet(sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, boo
             return True
         else:
 
-            if(bool_equivFlag1 == True or bool_equivFlag2 == True):
+            if(bool_equivFlag1 or bool_equivFlag2):
                 log.info(
                     "%s - Step 4.2.3 - Equivalence Flag1 or Flag2 Matched  ", fnName)
                 log.info("%s - Step 4.2.4 - Consider This Date", fnName)
@@ -127,17 +129,19 @@ fnName - Function Name for Logging
 
 
 def pg_diffAbCheck(bool_diffAbled, float_pgMarks, str_caste, cutOffConsidered, fnName):
-    if(bool_diffAbled == True):
+    print(bool_diffAbled)
+    if bool_diffAbled:
         log.info("%s - Step 3 - Candidate in Differently Abled Category", fnName)
 
         if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
+            print(fnName)
             log.info("%s - Step 3.1 - >= 50% Marks Pass", fnName)
             log.info("%s - Step 3.2 - Consider this Date", fnName)
             return True
 
         else:
             log.info("%s - Step 3.3 - 50% Marks Failed", fnName)
-            log.info("%s - Step 3.4 -  Dont Consider This Date", fnName)
+            log.info("%s -Step 3.4 -  Dont Consider This Date", fnName)
             return False
     else:
         log.info("%s - Step 4 - Candidate Fit & Abled", fnName)
@@ -174,7 +178,7 @@ v_equiv1Sub - Subject for Equivalence  1
 def pg_subjCheck(str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, fnName):
 
     if (int(str_subjHandledStatus) == BusinessConstants.MATCHED):
-        log.info("%s - Step 4.2.1 - Subject Handled matches", fnName)
+        log.info("%s - Step 4.2.1 - Subject Handled Status MATCHED", fnName)
 
         if(str(v_subjHandled) == str(v_subjApplied)):
             log.info(
@@ -195,13 +199,22 @@ def pg_subjCheck(str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equiv
                     return False
             else:
                 log.info(
-                    "%s - Step 4.2.4 - Equivalence Check Failed &  does not match", fnName)
+                    "%s - Step 4.2.4 - Subject Handled & Subject Applied Dont Match ", fnName)
                 log.info("%s - Step 4.2.5 - Dont Consider this Date", fnName)
                 return False
     else:
-        log.info("%s - Step 4.2.6 - Subject Handled does not match", fnName)
+        log.info("%s - Step 4.2.6 - Subject Handled status NOT MATCHED", fnName)
         log.info("%s - Step 4.2.7 - Dont Consider this date", fnName)
         return False
+
+
+"""
+Function to convert True or False to Bool
+"""
+
+
+def str2bool(v):
+    return v.lower() in ("yes", "True", "true", 't', "1")
 
 
 """This method is used get the PG with 50% marks and above
@@ -217,20 +230,24 @@ Parameters :
    str_subjHandled - Name of Subject Handled
    str_postApplied - Name of Post Applied
 """
-@svc_pgCalc_50mNabove_Upto1891991.post(require_csrf=False)
+# @svc_pgCalc_50mNabove_Upto1891991.post(require_csrf=False)
+
+
 def pgCalc_50mNabove_Upto1891991(request):
+    response = " What To do"
+    log.info("Step 0 - Inside pgCalc_50mNabove_Upto1891991")
 
     # Sample code to validate the json data
     # errors = util.validate(request.POST, PgCalc_50mNabove_Upto1891991())
     # if len(errors) > 0:
     #     return errors
-
-    response = "Consider This Date"
-
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
     DT_POR_CUTOFF = datetime(1991, 9, 18).date()
+
+    # Get the pg Marks from Request
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
@@ -242,9 +259,9 @@ def pgCalc_50mNabove_Upto1891991(request):
     dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-    str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
+    # str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
+    # bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    # float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
@@ -255,65 +272,60 @@ def pgCalc_50mNabove_Upto1891991(request):
     v_subjectApplied = request.POST.get(
         "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-    # Entry Check Point if POR < CUT OFF DATE
-    if dt_pg_por <= DT_POR_CUTOFF:
-        log.info("Step 1 - POR Date within CutOff Date")
+    if(BusinessConstants.MARKS_50_PER <= float(float_pgMarks) <= BusinessConstants.MARKS_55_PER):
 
-        if str_caste == BusinessConstants.OC_CATEGORY:
-            log.info("Step 2 - Candidate in OC Category")
+        log.info("Step1 : Check 1 Pass : pgMarks > 50% < 55% ")
 
-            if(bool_diffAbled == True):
-                log.info("Step 3 - Candidate in Differently Abled Category")
+        # Entry Check Point if POR < CUT OFF DATE
+        if dt_pg_por <= DT_POR_CUTOFF:
+            log.info("Step 1 - POR Date within CutOff Date")
 
-                if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
-                    log.info("Step 3.1 - >= 50% Marks Pass")
-                    log.info("Step 3.2 - Consider this Date")
-                    toConsider = pg_subjCheck(str_subjHandledStatus,
-                                              v_subjHandled, v_subjectApplied, false, NONE, pgCalc_50mNabove_Upto1891991)
+            toConsider = pg_subjCheck(str_subjHandledStatus,
+                                      v_subjHandled, v_subjectApplied, False, 'NONE', pgCalc_50mNabove_Upto1891991)
+
+            log.info(toConsider)
+
+            if(toConsider == True):
+                if(dt_elp_toDt > DT_POR_CUTOFF):
+                    dt_top_date = DT_POR_CUTOFF
                 else:
-                    log.info("Step 3.3 - 50% Marks Failed")
-                    log.info("Step 3.4 -  Dont Consider This Date")
+                    dt_top_date = dt_elp_toDt
 
-                    response = "Step 3.3 - 50% Marks Failed - Dont Consider This Date "
+                diff = relativedelta.relativedelta(
+                    dt_top_date, dt_elp_fromDt)
+
+                dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                                       " Months and " + str(diff.days) + " Days")
+
+                response = {'Title':  'PG with 50% Marks',
+                            'Status': 'PASS',
+                            'Eligible From Date': str(dt_elp_fromDt),
+                            'Eligible To Date': str(dt_top_date),
+                            'Date Difference ': dt_diff_response,
+                            'Subject Handled ': v_subjHandled}
+
+                # response = response_json
 
             else:
-                log.info("Step 4 - Candidate Fit & Abled")
+                log.info("Step 4.2.6: Subject Checks Failed")
+                response = {'Title':  'PG with 50% Marks',
+                            'Status': 'FAIL',
+                            'Reason': 'Subject Handled & Subject Applied Check FAILED'
+                            }
+        else:
+            log.info("Step 4.2.7: PG POR Date Not under 18.09.1991")
 
-                if(float(float_pgMarks) >= BusinessConstants.MARKS_55_PER):
-                    log.info("Step 4.1 - >= 55% Marks Pass")
-                    log.info("Step 4.2 -  Consider this Date")
-                    toConsider = pg_subjCheck(str_subjHandledStatus,
-                                              v_subjHandled, v_subjectApplied, false, NONE, pgCalc_50mNabove_Upto1891991)
-
-                    if(toConsider != True):
-                        response = " Step 4.3 - All Checks Failed - Dont Consider This Date"
-
-                else:
-                    log.info("Step 4.4 - 55% Marks Failed ")
-                    log.info("Step 4.5 -  Dont Consider This Date")
-                    response = "Step 4.6 - 55% Marks Failed - Dont Consider This Date"
-
-        elif str_caste == BusinessConstants.OC_OTHER_STATE:
-            log.info("Step 4.7 - Candidate in OC Other State Category")
-            toConsider = pg_subjCheck(str_subjHandledStatus,
-                                      v_subjHandled, v_subjectApplied, false, NONE, pgCalc_50mNabove_Upto1891991)
-            if(toConsider != True):
-                response = " Step 4.8 - All Checks Failed - Dont Consider This Date"
-
+            response = {'Title':  'PG with 50% Marks',
+                        'Status': 'FAIL',
+                        'Reason': 'PG POR Date Not Under 18.09.1991'
+                        }
     else:
-        log.info("Step 4.9 - All Checks Failed ")
-        log.info("Step 4.10 - Dont Consider This Date")
-        response = " Step 4.11 - All Checks Failed - Dont Consider This Date "
+        log.info("Step 4.2.8: PG Marks NOT IN RANGE ( >50% -- < 55%) ")
 
-    print(toConsider)
-    if(toConsider == True):
-
-        # Find the difference in date from eligibility from date upto 18.09.1991
-
-        diff = relativedelta.relativedelta(DT_POR_CUTOFF, dt_elp_fromDt)
-
-        response = str(diff.years + " Years and " + diff.months +
-                       " Months and " + diff.days + " Days")
+        response = {'Title':  'PG with 50% Marks',
+                    'Status': 'FAIL',
+                    'Reason': 'PG Marks NOT IN RANGE ( >50% -- < 55%)'
+                    }
 
     return response
 
@@ -348,12 +360,6 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_slet_por = datetime.strptime(request.POST.get(
-        "dt_slet_por", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
-
-    dt_net_por = datetime.strptime(request.POST.get(
-        "dt_net_por", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
-
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
@@ -361,76 +367,118 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
+
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     # Special Marks Override to be considered for SC Category
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 pgCalc_55MarksforOCnGT_19091991_17072018)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    log.info("%s: Step 1 - POR Date within CutOff Date",
+             pgCalc_55MarksforOCnGT_19091991_17072018)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+    if str(str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            sletStatus = request.POST.get(
-                "SLET_STATUS", 'No SLET NET STATUS Info Recieved')
+        bool_sletStatus = str2bool(request.POST.get(
+            "bool_sletStatus", 'False'))
 
-            netStatus = request.POST.get(
-                "NET_STATUS", 'No SLET NET STATUS Info Recieved')
+        bool_netStatus = str2bool(request.POST.get(
+            "bool_netStatus", 'False'))
 
-            v_subjSlet = request.POST.get(
-                "v_subjSlet", 'No SLET Marks Recieved')
-            v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
-            v_subjHandled = request.POST.get(
-                "v_subjHandled", 'No Subject Handled Recieved')
+        v_subjSlet = request.POST.get(
+            "v_subjSlet", 'No SLET Marks Recieved')
+        v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        v_subjHandled = request.POST.get(
+            "v_subjHandled", 'No Subject Handled Recieved')
 
-            bool_equivFlag1 = False  # No Equivalence Check hence default Fault
-            bool_equivFlag2 = False  # No Equivalence Check hence default Fault
+        bool_equivFlag1 = False  # No Equivalence Check hence default Fault
+        bool_equivFlag2 = False  # No Equivalence Check hence default Fault
 
-            sletNetCheck = pg_sletNnet(
-                sletStatus, netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
+        sletNetCheck = pg_sletNnet(
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
 
-            if(sletNetCheck == True):
-                str_subjHandledStatus = request.POST.get(
-                    "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+        if(sletNetCheck == True):
+            str_subjHandledStatus = request.POST.get(
+                "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", "No Subject Handled Applied Info Recieved")  # Name of Subject Handled from DB.
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
+            toConsider = pg_subjCheck(
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
+        else:
+            log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
-                toConsider = pg_subjCheck(
-                    str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
-
-    if(toConsider == False):
-        response = "pgCalc_55MarksforOCnGT : Step 3 - All Checks Failed - Dont Consider This Date "
-
-    else:
-        log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
-        log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
-        response = "pgCalc_55MarksforOCnGT : Step 4.2 - All Checks Failed - Dont Consider This Date "
-
+            response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
+                        'Status': 'FAIL',
+                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date'
+                        }
     print(toConsider)
     if(toConsider == True):
 
-        # find the smallest of the 2 dates to give the benefit to the candidate
-        dt_earliestFrom = min(dt_net_por, dt_slet_por)
+        str_dt_slet_por = request.POST.get(
+            "dt_slet_por", '01/01/0001')
 
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
+        str_dt_net_por = request.POST.get(
+            "dt_net_por", '01/01/0001')
+        print(str_dt_slet_por, len(str_dt_slet_por))
+        print(str_dt_net_por, len(str_dt_net_por))
 
-        response = str(diff.years) + " Years and " + \
+        if (str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
+            dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_slet_por
+
+        if (str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
+            dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_net_por
+
+        if(len(str_dt_slet_por) == 0 and len(str_dt_net_por) == 0):
+            log.info(
+                "pgCalc_55MarksforOCnGT : Step 5 - SLET & NET DATE ARE EMPTY  ")
+            log.info("pgCalc_55MarksforOCnGT : Step 5.1 - Dont Consider This Date")
+
+            response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
+                        'Status': 'FAIL',
+                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                        }
+        if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
+            # find the smallest of the 2 dates to give the benefit to the candidate
+            dt_earliestFrom = min(dt_net_por, dt_slet_por)
+
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
+
+        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
+
+        dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
+                    'Status': 'PASS',
+                    'Eligible From Date': str(dt_earliestFrom),
+                    'Eligible To Date': str(dt_top_date),
+                    'Date Difference ': dt_diff_response,
+                    'Subject Handled ': v_subjHandled}
+    else:
+        log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
+        log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
+
+        response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
+                    'Status': 'FAIL',
+                    'Reason': 'All Checks Failed - Dont Consider This Date'
+                    }
     return response
 
 
@@ -460,95 +508,147 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
     DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
 
+    dt_elp_toDt = datetime.strptime(request.POST.get(
+        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_slet_por = datetime.strptime(request.POST.get(
-        "dt_slet_por", 'No POR SLET Date Recieved'), '%d/%m/%Y').date()
-
-    dt_net_por = datetime.strptime(request.POST.get(
-        "dt_net_por", 'No POR  NET Date Recieved'), '%d/%m/%Y').date()
-
-    dt_elp_fromDt = datetime.strptime(request.POST.get(
-        "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
-
-    dt_elp_toDt = datetime.strptime(request.POST.get(
-        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
-
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     # Special Marks Override to be considered for SC Category
-    percentileToBeConsidered = BusinessConstants.MARKS_55_PER
+    percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 pgCalc_55MarksforNonOC_18072018_04102019)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    log.info("%s: Step 1 - POR Date within CutOff Date",
+             pgCalc_55MarksforNonOC_18072018_04102019)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+    if str(str_caste) == BusinessConstants.OC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+        percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            str_sletNnetStatus = str(request.POST.get(
-                "str_sletNnetStatus", 'No Caste Info Recieved'))
-            v_subjSlet = request.POST.get(
-                "v_subjSlet", 'No SLET Marks Recieved')
-            v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        bool_sletStatus = str2bool(request.POST.get(
+            "bool_sletStatus", 'False'))
+
+        bool_netStatus = str2bool(request.POST.get(
+            "bool_netStatus", 'False'))
+        v_subjSlet = request.POST.get(
+            "v_subjSlet", 'No SLET Marks Recieved')
+        v_subjNet = request.POST.get("v_subjNet", 'No NET Marks Recieved')
+        v_subjHandled = request.POST.get(
+            "v_subjHandled", 'No Subject Handled Recieved')
+
+        bool_equivFlag1 = str2bool(request.POST.get(
+            "bool_equivFlag1", 'False'))  # Equivalence Check 1
+        bool_equivFlag2 = str2bool(request.POST.get(
+            "bool_equivFlag2", 'False'))  # Equivalence Check 2
+
+        sletNetCheck = pg_sletNnet(
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_18072018_04102019)
+
+        if(sletNetCheck == True):
+            str_subjHandledStatus = request.POST.get(
+                "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+
             v_subjHandled = request.POST.get(
-                "v_subjHandled", 'No Subject Handled Recieved')
+                "v_subjHandled", "No Subject Handled Applied Info Recieved")  # Name of Subject Handled from DB.
 
-            bool_equivFlag1 = request.POST.get(
-                "bool_equivFlag1", 'false')  # Equivalence Check 1
-            bool_equivFlag2 = request.POST.get(
-                "bool_equivFlag2", 'false')  # Equivalence Check 2
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-            sletNetCheck = pg_sletNnet(
-                str_sletNnetStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_18072018_04102019)
+            toConsider = pg_subjCheck(
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, False, 'NONE', pgCalc_55MarksforNonOC_18072018_04102019)
+        else:
+            log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
-            if(sletNetCheck == True):
-                str_subjHandledStatus = request.POST.get(
-                    "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
+            response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
+                        'Status': 'FAIL',
+                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date'
+                        }
+    print(toConsider)
+    if(toConsider == True):
+        str_dt_slet_por = request.POST.get(
+            "dt_slet_por", '01/01/0001')
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", "No Subject Handled Applied Info Recieved")  # Name of Subject Handled from DB.
+        str_dt_net_por = request.POST.get(
+            "dt_net_por", '01/01/0001')
+        print(str_dt_slet_por, ">>>>>>>>>>>>>>>>>>>>>>", len(str_dt_slet_por))
+        print(str_dt_net_por, ">>>>>>>>>>>>>>>>>>>>>>>>>", len(str_dt_net_por))
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
+        if(str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0):
+            dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_slet_por
+        if(str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0):
+            dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
+            dt_earliestFrom = dt_net_por
 
-                toConsider = pg_subjCheck(
-                    str_subjHandledStatus, v_subjHandled, v_subjApplied, false, NONE, pgCalc_55MarksforNonOC_18072018_04102019)
+        if(len(str_dt_slet_por) == 0 and len(str_dt_net_por) == 0):
+            log.info(
+                "pgCalc_55MarksforOCnGT : Step 5 - SLET & NET DATE ARE EMPTY  ")
+            log.info("pgCalc_55MarksforOCnGT : Step 5.1 - Dont Consider This Date")
 
-    if(toConsider == False):
-        response = "pgCalc_55MarksforOCnGT : Step 3 - All Checks Failed - Dont Consider This Date "
+            response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019)',
+                        'Status': 'FAIL',
+                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                        }
 
+        print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
+
+        if(str_dt_slet_por != '01/01/0001' and
+           str_dt_net_por != '01/01/0001'):
+
+            print(str_dt_slet_por, "1>>>>>>>>>>>>", str_dt_net_por)
+
+            dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date()
+            dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date()
+
+            if(len(str_dt_slet_por) != 0 and
+                    len(str_dt_net_por) != 0):
+                # find the smallest of the 2 dates to give the benefit to the candidate
+                dt_earliestFrom = min(dt_net_por, dt_slet_por)
+
+        elif(str_dt_slet_por != '01/01/0001' and str_dt_net_por == '01/01/0001'):
+            dt_slet_por = datetime.strptime(
+                str_dt_slet_por, '%d/%m/%Y').date()
+            dt_earliestForm = dt_slet_por
+        elif(str_dt_slet_por == '01/01/0001' and str_dt_net_por != '01/01/0001'):
+            dt_net_por = datetime.strptime(
+                str_dt_net_por, '%d/%m/%Y').date()
+            dt_earliestForm = dt_net_por
+
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
+
+        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
+
+        dt_diff_response = str(diff.years) + " Years and " + \
+            str(diff.months) + " Months and " + str(diff.days) + " Days"
+
+        response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
+                    'Status': 'PASS',
+                    'Eligible From Date': str(dt_earliestFrom),
+                    'Eligible To Date': str(dt_top_date),
+                    'Date Difference ': dt_diff_response,
+                    'Subject Handled ': v_subjHandled}
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
         log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
-        response = "pgCalc_55MarksforOCnGT : Step 4.2 - All Checks Failed - Dont Consider This Date "
 
-    print(toConsider)
-    if(toConsider == True):
-        # response = str(dt_elp_toDt - dt_elp_fromDt)
-        # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
-
-        # response = str(diff.years) + " Years and " + \
-        #     str(diff.months) + " Months and " + str(diff.days) + " Days"
-
-        #             # find the smallest of the 2 dates to give the benefit to the candidate
-        dt_earliestFrom = min(dt_net_por, dt_slet_por)
-
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_earliestFrom)
-
-        response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
+                    'Status': 'FAIL',
+                    'Reason': 'All Checks Failed - Dont Consider This Date'
+                    }
 
     return response
 
@@ -594,7 +694,7 @@ def phdCalc_submtdbfr_31122002(request):
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -604,55 +704,74 @@ def phdCalc_submtdbfr_31122002(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    # log.info("%s: Step 1 - POR Date within CutOff Date",
+    #  phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str(request.POST.get(
+                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
+            v_subjHandled = request.POST.get(
+                "v_subjHandled", 'No Subject Handled Recieved')
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", 'No Subject Applied Recieved')
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, phdCalc_submtdbfr_31122002)
+            if(bool_chk1 == True):
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, phdCalc_submtdbfr_31122002)
+    else:
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'Disability Check Failed'}
 
     print(toConsider)
+
     if(toConsider == True):
         # Find difference between PHD POR Date and Last Date 31.06.2006
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
 
-        diff = relativedelta.relativedelta(DT_POR_TO_CUTOFF, dt_phd_por)
+        if(dt_elp_toDt > DT_POR_TO_CUTOFF):
+            dt_top_date = DT_POR_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
 
-        response = str(diff.years) + " Years and " + \
+        diff = relativedelta.relativedelta(dt_elp_toDt, dt_phd_por)
+
+        dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'PASS',
+                    'Eligible From Date': str(dt_phd_por),
+                    'Eligible To Date': str(dt_elp_toDt),
+                    'Date Difference ': dt_diff_response,
+                    'Subject Handled ': v_subjHandled}
+
     else:
-        response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'phdCalc_submtdbfr_31122002: Step 3 - All Checks Failed - Dont Consider This Date'}
 
     return response
 
@@ -704,7 +823,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -714,57 +833,70 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    #     log.info("%s: Step 1 - POR Date within CutOff Date",
+    #              phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str(request.POST.get(
+                "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
+            v_subjHandled = request.POST.get(
+                "v_subjHandled", 'No Subject Handled Recieved')
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
+            v_subjApplied = request.POST.get(
+                "v_subjApplied", 'No Subject Applied Recieved')
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+            if(bool_chk1 == True):
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
+        if(dt_elp_toDt > DT_PHD_TO_CUTOFF):
+            dt_top_date = DT_PHD_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
 
         # Find difference between PHD POR Date and 02.04.2009
-        diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
+        diff = relativedelta.relativedelta(dt_top_date, dt_phd_por)
 
-        response = str(diff.years) + " Years and " + \
+        dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
-    else:
-        response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
+        response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
+                    'Status': 'PASS',
+                    'Eligible From Date': str(dt_phd_por),
+                    'Eligible To Date': str(dt_top_date),
+                    'Date Difference ': dt_diff_response,
+                    'Subject Handled ': v_subjHandled}
 
+    else:
+        response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
+                    'Status': 'FAIL',
+                    'Response': 'Step 3 - All Checks Failed - Dont Consider This Date',
+                    }
     return response
 
 
@@ -803,6 +935,12 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
     DT_PHD_TO_CUTOFF = datetime(2019, 10, 4).date()
 
+    v_subjHandled = request.POST.get(
+        "v_subjHandled", 'No Subject Handled Recieved')
+
+    v_subjApplied = request.POST.get(
+        "v_subjApplied", 'No Subject Applied Recieved')
+
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
@@ -817,7 +955,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
     float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
 
     str_subjHandledStatus = request.POST.get(
@@ -827,55 +965,64 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
-    if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
-        log.info("%s: Step 1 - POR Date within CutOff Date",
-                 phdCalc_submtdbfr_31122002)
+    # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
+    #     log.info("%s: Step 1 - POR Date within CutOff Date",
+    #              phdCalc_submtdbfr_31122002)
 
-        if str(str_caste) == BusinessConstants.SC_CATEGORY:
-            log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
+    if str(str_caste) == BusinessConstants.SC_CATEGORY:
+        log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
 
-            percentileToBeConsidered = BusinessConstants.MARKS_50_PER
+        percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-        diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                        str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
+                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
-        if (diffAbledCheck == True):
+    if (diffAbledCheck == True):
 
-            if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
-                log.info("%s: Step 1 - POR Date within CutOff Date",
-                         phdCalc_submtdbfr_31122002)
+        if dt_pg_por <= DT_PHD_TO_CUTOFF:  # PHD Cutoff Check
+            log.info("%s: Step 1 - POR Date within CutOff Date",
+                     phdCalc_submtdbfr_31122002)
 
-                bool_chk1 = str(request.POST.get(
-                    "bool_chk1", 'Boolean Chk1  Info Not Recieved'))
+            bool_chk1 = str2bool(str(request.POST.get(
+                "bool_chk1", 'False')))
 
-                v_subjHandled = request.POST.get(
-                    "v_subjHandled", 'No Subject Handled Recieved')
+            bool_equivFlag1 = request.POST.get(
+                "bool_equivFlag1", 'false')  # Equivalence Check 1
 
-                v_subjApplied = request.POST.get(
-                    "v_subjApplied", 'No Subject Applied Recieved')
+            v_equiv1Sub = request.POST.get(
+                "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
 
-                bool_equivFlag1 = request.POST.get(
-                    "bool_equivFlag1", 'false')  # Equivalence Check 1
-
-                v_equiv1Sub = request.POST.get(
-                    "v_equiv1Sub", 'Equivalence 1 Subject Not Recieved')  # Equivalence Check 1
-
-                if(bool_chk1 == True):
-                    toConsider = pg_subjCheck(
-                        str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+            if(bool_chk1):
+                print("bool check 1 ...............")
+                toConsider = pg_subjCheck(
+                    str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
     print(toConsider)
     if(toConsider == True):
         # response = str(dt_elp_toDt - dt_elp_fromDt)
         # diff = relativedelta.relativedelta(dt_elp_toDt, dt_elp_fromDt)
-
+        if(dt_elp_toDt > DT_PHD_TO_CUTOFF):
+            dt_top_date = DT_PHD_TO_CUTOFF
+        else:
+            dt_top_date = dt_elp_toDt
         # find difference of dates from PG_POR and 04.10.2019
         diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
 
-        response = str(diff.years) + " Years and " + \
+        dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
+
+        response = {'Title':  'PG with PHD ( To Date : 04.10.2019) ',
+                    'Status': 'PASS',
+                    'Eligible From Date': str(dt_phd_por),
+                    'Eligible To Date': str(DT_POR_TO_CUTOFF),
+                    'Date Difference ': dt_diff_response,
+                    'Subject Handled ': v_subjHandled}
 
     else:
         response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
-
+        response = {'Title':  'PG with PHD ( To Date : 04.10.2019) ',
+                    'Status': 'FAIL',
+                    'Response': response,
+                    'Subject Handled ': v_subjHandled
+                    }
     return response
