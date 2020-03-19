@@ -148,6 +148,7 @@
       vm.doc255 = '';
       vm.doc259 = '';
       vm.doc2510 = '';
+      vm.doc2511 = '';
       vm.doc2525 = '';
       vm.doc252 = '';
       vm.doc2513 = '';
@@ -622,6 +623,7 @@
       vm.radio_values.init_doc255 = "";
       vm.radio_values.init_doc259 = "";
       vm.radio_values.init_doc2510 = "";
+      vm.radio_values.init_doc2511 = "";
       vm.radio_values.init_doc2525 = "";
       vm.radio_values.init_doc257 = "";
       vm.radio_values.init_doc252 = "";
@@ -1093,6 +1095,7 @@
       '25c3': 'New Degree Certificate Number',
       '25c9': 'Name of subject',
       '25c10': 'Pg Degree Government Order',
+      '25c11': 'Government order not matched',
       '25c13': 'Name of university',
       '25c15': 'New Month & Year of Passing',
       '25c25': 'UGC Recognised University',
