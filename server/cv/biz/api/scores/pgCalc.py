@@ -30,13 +30,13 @@ log = logging.getLogger(__name__)
 #     name="biz.api.scores.pgCalc_50mNabove_Upto1891991", permission=NO_PERMISSION_REQUIRED,
 #     path="/biz/scores/pgCalc_50mNabove_Upto1891991", cors_policy=cors.POLICY)
 
-svc_pgCalc_55MarksforOCnGT_19091991_17072018 = Service(
-    name="biz.api.scores.pgCalc_55MarksforOCnGT_19091991_17072018", permission=NO_PERMISSION_REQUIRED,
-    path="/biz/scores/pgCalc_55MarksforOCnGT_19091991_17072018", cors_policy=cors.POLICY)
+svc_pgCalc_55MarksforOCnGT_19091991_10072016 = Service(
+    name="biz.api.scores.pgCalc_55MarksforOCnGT_19091991_10072016", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/pgCalc_55MarksforOCnGT_19091991_10072016", cors_policy=cors.POLICY)
 
-svc_pgCalc_55MarksforNonOC_18072018_04102019 = Service(
-    name="biz.api.scores.pgCalc_55MarksforNonOC_18072018_04102019", permission=NO_PERMISSION_REQUIRED,
-    path="/biz/scores/pgCalc_55MarksforNonOC_18072018_04102019", cors_policy=cors.POLICY)
+svc_pgCalc_55MarksforNonOC_11072016_04102019 = Service(
+    name="biz.api.scores.pgCalc_55MarksforNonOC_11072016_04102019", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/pgCalc_55MarksforNonOC_11072016_04102019", cors_policy=cors.POLICY)
 
 svc_phdCalc_submtdbfr_31122002 = Service(
     name="biz.api.scores.phdCalc_submtdbfr_31122002", permission=NO_PERMISSION_REQUIRED,
@@ -333,7 +333,7 @@ def pgCalc_50mNabove_Upto1891991(request):
 """This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR)
 for SC / SCA / ST / Diff Abled (50% marks)
 
-Name : pgCalc_55MarksforOCnGT_19091991_17072018
+Name : pgCalc_55MarksforOCnGT_19091991_10072016
 Parameters :
 -----------
 
@@ -346,15 +346,15 @@ Parameters :
 """
 
 
-@svc_pgCalc_55MarksforOCnGT_19091991_17072018.post(require_csrf=False)
-def pgCalc_55MarksforOCnGT_19091991_17072018(request):
+@svc_pgCalc_55MarksforOCnGT_19091991_10072016.post(require_csrf=False)
+def pgCalc_55MarksforOCnGT_19091991_10072016(request):
     response = "Hello 55 Marks for OC /GT "
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
     DT_POR_FROM_CUTOFF = datetime(1991, 9, 19).date()
-    DT_POR_TO_CUTOFF = datetime(2018, 7, 17).date()
+    DT_POR_TO_CUTOFF = datetime(2016, 7, 10).date()
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
@@ -378,14 +378,14 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
     # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
     log.info("%s: Step 1 - POR Date within CutOff Date",
-             pgCalc_55MarksforOCnGT_19091991_17072018)
+             pgCalc_55MarksforOCnGT_19091991_10072016)
 
     if str(str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
         log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_17072018)
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_10072016)
 
     if (diffAbledCheck == True):
 
@@ -405,7 +405,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
         bool_equivFlag2 = False  # No Equivalence Check hence default Fault
 
         sletNetCheck = pg_sletNnet(
-            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_17072018)
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag1, pgCalc_55MarksforOCnGT_19091991_10072016)
 
         if(sletNetCheck == True):
             str_subjHandledStatus = request.POST.get(
@@ -415,7 +415,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
                 "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
             toConsider = pg_subjCheck(
-                str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_17072018)
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, 'False', 'NONE', pgCalc_55MarksforOCnGT_19091991_10072016)
         else:
             log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 
@@ -485,7 +485,7 @@ def pgCalc_55MarksforOCnGT_19091991_17072018(request):
 """This method is used get the PG with 55% marks for GC / GT (NET/SLET/ CISR)
 for SC / SCA / ST / Diff Abled (50% marks)
 
-Name : pgCalc_55MarksforNonOC_18072018_04102019
+Name : pgCalc_55MarksforNonOC_11072016_04102019
 Parameters :
 -----------
 
@@ -498,14 +498,14 @@ Parameters :
 """
 
 
-@svc_pgCalc_55MarksforNonOC_18072018_04102019.post(require_csrf=False)
-def pgCalc_55MarksforNonOC_18072018_04102019(request):
+@svc_pgCalc_55MarksforNonOC_11072016_04102019.post(require_csrf=False)
+def pgCalc_55MarksforNonOC_11072016_04102019(request):
     response = "Hello 55 Marks for OC /GT "
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
+    DT_POR_FROM_CUTOFF = datetime(2016, 7, 11).date()
     DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
 
     dt_elp_toDt = datetime.strptime(request.POST.get(
@@ -525,14 +525,14 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
     # Entry Check Point if DT_POR_FROM_CUTOFF <= dt_por <= DT_POR_TO_CUTOFF
     # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
     log.info("%s: Step 1 - POR Date within CutOff Date",
-             pgCalc_55MarksforNonOC_18072018_04102019)
+             pgCalc_55MarksforNonOC_11072016_04102019)
 
     if str(str_caste) == BusinessConstants.OC_CATEGORY:
         log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
         percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_18072018_04102019)
+                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_11072016_04102019)
 
     if (diffAbledCheck == True):
 
@@ -553,7 +553,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
             "bool_equivFlag2", 'False'))  # Equivalence Check 2
 
         sletNetCheck = pg_sletNnet(
-            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_18072018_04102019)
+            bool_sletStatus, bool_netStatus, v_subjSlet, v_subjNet, v_subjHandled, bool_equivFlag1, bool_equivFlag2, pgCalc_55MarksforNonOC_11072016_04102019)
 
         if(sletNetCheck == True):
             str_subjHandledStatus = request.POST.get(
@@ -566,7 +566,7 @@ def pgCalc_55MarksforNonOC_18072018_04102019(request):
                 "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
             toConsider = pg_subjCheck(
-                str_subjHandledStatus, v_subjHandled, v_subjApplied, False, 'NONE', pgCalc_55MarksforNonOC_18072018_04102019)
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, False, 'NONE', pgCalc_55MarksforNonOC_11072016_04102019)
         else:
             log.info("pgCalc_55MarksforOCnGT : Step 4 - Disability Check Failed ")
 

@@ -58,12 +58,12 @@ def orchEntry(request):
 
     # Call PG with 55% Marks & NET / SLET / CISR ( For SC / SCA / ST / Diff Abled - 50% Marks) (Dt_To : 19.09.1991 - 17.07.2018)
 
-    response_pgCalc_55MarksforOCnGT_19091991_17072018 = pgCalc.pgCalc_55MarksforOCnGT_19091991_17072018(
+    response_pgCalc_55MarksforOCnGT_19091991_10072016 = pgCalc.pgCalc_55MarksforOCnGT_19091991_10072016(
         request)
 
     # Call PG with 55% Marks & NET / SLET / CISR ( For Other than OC- 50% Marks) (Dt_To : 18.07.2018 - 04.10.2019)
 
-    response_pgCalc_55MarksforNonOC_18072018_04102019 = pgCalc.pgCalc_55MarksforNonOC_18072018_04102019(
+    response_pgCalc_55MarksforNonOC_11072016_04102019 = pgCalc.pgCalc_55MarksforNonOC_11072016_04102019(
         request)
 
     # Call Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)
@@ -96,6 +96,6 @@ def orchEntry(request):
     response_pg_phdCalc_CS_DE_OU_submtdbfr_04102019 = pgCalc.pg_phdCalc_CS_DE_OU_submtdbfr_04102019(
         request)
 
-    response = response_pgCalc_50mNabove_Upto1891991, response_pgCalc_55MarksforOCnGT_19091991_17072018, response_pgCalc_55MarksforNonOC_18072018_04102019, response_calc_mphil_bfr31121993_phd_bfr31121993, response_phdCalc_submtdbfr_31122002, response_calc_pgNmphil_bfr14062006_aftr29062010, response_pg_phdCalc_CS_DE_OU_submtdbfr_02042009, response_calc_pgNmphil_CROUDE_bfr14062006_aftr242009, response_pg_phdCalc_CS_DE_OU_submtdbfr_04102019
+    response = response_pgCalc_50mNabove_Upto1891991, response_pgCalc_55MarksforOCnGT_19091991_10072016, response_pgCalc_55MarksforNonOC_11072016_04102019, response_calc_mphil_bfr31121993_phd_bfr31121993, response_phdCalc_submtdbfr_31122002, response_calc_pgNmphil_bfr14062006_aftr29062010, response_pg_phdCalc_CS_DE_OU_submtdbfr_02042009, response_calc_pgNmphil_CROUDE_bfr14062006_aftr242009, response_pg_phdCalc_CS_DE_OU_submtdbfr_04102019
 
     return response
