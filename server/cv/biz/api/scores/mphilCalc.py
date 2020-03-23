@@ -160,13 +160,14 @@ v_equiv1Sub - Subject for Equivalence  1
 
 def pg_subjCheck(str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, fnName):
 
+    print(">>>>>>>>>>>>>>>>>>>+++++++++", str_subjHandledStatus)
+
     if (int(str_subjHandledStatus) == BusinessConstants.MATCHED):
-        log.info("%s - Step 4.2.1 - Subject Handled matches", fnName)
+        log.info("Step 4.2.1 - Subject Handled matches")
 
         if(str(v_subjHandled) == str(v_subjApplied)):
-            log.info(
-                "%s - Step 4.2.2 - Subject Handled Matches Subject Applied ", fnName)
-            log.info("%s - Step 4.2.3 - Consider This Date", fnName)
+            log.info("Step 4.2.2 - Subject Handled Matches Subject Applied ")
+            log.info("Step 4.2.3 - Consider This Date")
             return True
         else:
             if (bool_equivFlag1 == True):
@@ -272,6 +273,8 @@ def pg_validity_check_mphil_calc(bool_diffAbled, float_pgMarks, dt_pg_por, str_c
 
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
+    print(">>>>>>>>>>>>>>>>>>>>>>>>", str_subjHandledStatus)
+
     # TODO Move this to a config file or DB
     DT_TOP_POR_CUTOFF = datetime(1991, 9, 19).date()
     DT_BTM_POR_CUTOFF = datetime(2002, 7, 30).date()
@@ -290,7 +293,7 @@ def pg_validity_check_mphil_calc(bool_diffAbled, float_pgMarks, dt_pg_por, str_c
                     log.info("Step 3.1 - >= 50% Marks Pass")
                     log.info("Step 3.2 - Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
-                                              v_subjHandled, v_subjApplied, false, NONE, pg_validity_check_mphil_calc)
+                                              v_subjHandled, v_subjApplied, False, 'NONE', 'pg_validity_check_mphil_calc')
                 else:
                     log.info("Step 3.3 - 50% Marks Failed")
                     log.info("Step 3.4 -  Dont Consider This Date")
@@ -304,7 +307,7 @@ def pg_validity_check_mphil_calc(bool_diffAbled, float_pgMarks, dt_pg_por, str_c
                     log.info("Step 4.1 - >= 55% Marks Pass")
                     log.info("Step 4.2 -  Consider this Date")
                     toConsider = pg_subjCheck(str_subjHandledStatus,
-                                              v_subjHandled, v_subjApplied, false, NONE, pg_validity_check_mphil_calc)
+                                              v_subjHandled, v_subjApplied, False, 'NONE', 'pg_validity_check_mphil_calc')
 
                     if(toConsider != True):
                         response = " Step 4.3 - All Checks Failed - Dont Consider This Date"
@@ -317,7 +320,7 @@ def pg_validity_check_mphil_calc(bool_diffAbled, float_pgMarks, dt_pg_por, str_c
         elif str_caste == BusinessConstants.OC_OTHER_STATE:
             log.info("Step 4.7 - Candidate in OC Other State Category")
             toConsider = pg_subjCheck(str_subjHandledStatus,
-                                      v_subjHandled, v_subjApplied, False, 'NONE', pg_validity_check_mphil_calc)
+                                      v_subjHandled, v_subjApplied, False, 'NONE', 'pg_validity_check_mphil_calc')
             if(toConsider != True):
                 response = " Step 4.8 - All Checks Failed - Dont Consider This Date"
 
@@ -555,7 +558,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                     "Step 5.5 - Moving to 2 Equivalence Check ")
 
             subjCheck_2equivCheck = pg_subjCheck_2equiv(
-                str_subjHandledStatus, v_subjHandled, bool_equivFlag1, v_equiv1Sub, bool_equivFlag2, v_equiv2Sub, calc_mphil_bfr31121993_phd_bfr31121993)
+                str_subjHandledStatus, v_subjHandled, v_subjApplied, bool_equivFlag1, v_equiv1Sub, bool_equivFlag2, v_equiv2Sub, calc_mphil_bfr31121993_phd_bfr31121993)
 
         else:
             log.info("Step 5.4 - PG NOT WITHIN CUTOFF DATE")

@@ -1,6 +1,5 @@
 import logging
 
-
 from datetime import datetime
 from dateutil import relativedelta
 
@@ -130,13 +129,14 @@ fnName - Function Name for Logging
 
 def pg_diffAbCheck(bool_diffAbled, float_pgMarks, str_caste, cutOffConsidered, fnName):
     print(bool_diffAbled)
+    print(float_pgMarks)
     if bool_diffAbled:
         log.info("%s - Step 3 - Candidate in Differently Abled Category", fnName)
+        print(float(float_pgMarks))
 
-        if(float(float_pgMarks) >= BusinessConstants.MARKS_50_PER):
-            print(fnName)
-            log.info("%s - Step 3.1 - >= 50% Marks Pass", fnName)
-            log.info("%s - Step 3.2 - Consider this Date", fnName)
+        if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+            log.info("Step 3.1 - >= 50% Marks Pass")
+            log.info("Step 3.2 - Consider this Date")
             return True
 
         else:
@@ -287,9 +287,9 @@ def pgCalc_50mNabove_Upto1891991(request):
 
             if(toConsider == True):
                 if(dt_elp_toDt > DT_POR_CUTOFF):
-                    dt_top_date = DT_POR_CUTOFF
-                else:
                     dt_top_date = dt_elp_toDt
+                else:
+                    dt_top_date = DT_POR_CUTOFF
 
                 diff = relativedelta.relativedelta(
                     dt_top_date, dt_elp_fromDt)
