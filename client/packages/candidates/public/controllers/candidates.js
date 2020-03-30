@@ -6,6 +6,7 @@
   function CandidatesController($scope, $stateParams, $rootScope, $ocLazyLoad, Http, Message) {
     var vm = this;
     $scope.urlPath = window.location.origin;
+    $scope.orchEntry = {};
     $scope.packages = {
       name: 'candidates',
       finalAction: false,
@@ -126,7 +127,6 @@
       vm.doc1407 = '';
       vm.doc1408 = '';
       vm.doc1409 = '';
-
 
 
       vm.doc84 = '';
@@ -1482,146 +1482,146 @@
     };
 
     $scope.titles =
-      {
-        "10th / SSLC Certificate": 'SSLC Certificate',
-        "12th / HSC Certificate": 'HSC Certificate',
-        "Community Certificate": 'Community Certificate',
-        "Diploma Certificate": 'Diploma Certificate',
-        "Graduation Degree Certificate": 'UG Degree Certificate',
-        "PSTM Certificate": 'PSTM Certificate',
-        "PSTM Certificate for PG Degree": 'PSTM Certificate for PG Degree',
-        "PSTM Certificate for Ph.D Degree": 'PSTM Certificate for Ph.D Degree',
-        "PSTM Certificate for B.Ed Degree": 'PSTM Certificate for B.Ed Degree',
-        "PSTM Certificate for M.Ed Degree": 'PSTM Certificate for M.Ed Degree',
-        "General Information": 'General Information',
-        "Order of Qualification": 'Order of Qualification',
-        "Discharged / to be discharged certificate": 'EX-SERVICEMEN',
-        "Highest Certificate For NSS": 'NSS CERTIFICATE',
-        "Highest Certificate For NCC": 'NCC CERTIFICATE',
-        "Medal Certificate (For Department)": 'MEDAL',
-        "NOC (For Department)": 'No Objection Certificate',
-        "Highest Sports Certificate": 'SPORTS SPECIAL MARK CERTIFICATE',
-        "Additional Mark": 'Additional Mark',
-        "Gender Certificate(Transgender)": 'Gender Certificate(Transgender)',
-        "Photo": 'PHOTO',
-        "Sign": 'SIGNATURE',
-        "MCA - 3 years": 'MCA - 3 years',
-        "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years": 'M.E. or M.Tech. degree in Computer Science or I.T. - 2 years',
-        "M.E or M.Tech degree in Communication Systems - 2 years": 'M.E or M.Tech degree in Communication Systems - 2 years',
-        "Post Graduate Diploma in Computer application - 1 year": 'Post Graduate Diploma in Computer application - 1 year',
-        "B.E or B.Tech degree in Computer Science or I.T - 4 years": 'B.E or B.Tech degree in Computer Science or I.T - 4 years',
-        "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years": 'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years',
-        "B.E. degree in Electronics and Communication Engineering - 4 years": 'B.E. degree in Electronics and Communication Engineering - 4 years',
-        "PG Degree Certificate": 'PG Degree Certificate',
-        "Noc (Other Department)": 'NOC (OTHER DEPARTMENT)',
-        "M.Phil Certificate": 'M.Phil Certificate',
-        "M.Phil Marksheet": 'M.Phil Marksheet',
-        "SLET/NET Certificate": 'SLET / NET Certificate',
-        "Phd Certificate": 'PHD Certificate',
-        "Birth Certificate": 'Birth Certificate',
-        "PWD Certificate": 'Special Category',
-        "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment',
-        "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment)',
-        "B.Ed Certificate": 'B.Ed.',
-        "M.Ed Certificate": 'M.Ed.',
-        "Conduct certificate from head of institution last studied": 'Conduct Certificate',
-        "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
-        "UG Degree / Equivalent Consolidated Marksheet": 'UG Degree Consolidated Marksheet',
-        "Work Experience 1": 'Work Experience 1',
-        "Work Experience 2": 'Work Experience 2',
-        "Work Experience 3": 'Work Experience 3',
-        "Work Experience 4": 'Work Experience 4',
-        "Work Experience 5": 'Work Experience 5',
-        "Work Experience 6": 'Work Experience 6',
-        "Work Experience 7": 'Work Experience 7',
-        "Work Experience 8": 'Work Experience 8',
-        "Work Experience 9": 'Work Experience 9',
-        "Work Experience 10": 'Work Experience 10',
-        "Work Experience 11": 'Work Experience 11',
-        "Work Experience 12": 'Work Experience 12',
-        "Work Experience 13": 'Work Experience 13',
-        "Work Experience 14": 'Work Experience 14',
-        "Work Experience 15": 'Work Experience 15',
-        "Work Experience 16": 'Work Experience 16',
-        "Work Experience 17": 'Work Experience 17',
-        "Work Experience 18": 'Work Experience 18',
-        "Work Experience 19": 'Work Experience 19',
-        "Work Experience 20": 'Work Experience 20',
-        "Work Experience 21": 'Work Experience 21',
-        "Work Experience 22": 'Work Experience 22',
-        "Work Experience 23": 'Work Experience 23',
-        "Work Experience 24": 'Work Experience 24',
-        "Work Experience 25": 'Work Experience 25',
-        "Work Experience 26": 'Work Experience 26',
-        "Work Experience 27": 'Work Experience 27',
-        "Work Experience 28": 'Work Experience 28',
-        "Work Experience 29": 'Work Experience 29',
-        "Work Experience 30": 'Work Experience 30',
-        "Work Experience 31": 'Work Experience 31',
-        "Work Experience 32": 'Work Experience 32',
-        "Work Experience 33": 'Work Experience 33',
-        "Work Experience 34": 'Work Experience 34',
-        "Work Experience 35": 'Work Experience 35',
-        "Work Experience 36": 'Work Experience 36',
-        "Work Experience 37": 'Work Experience 37',
-        "Work Experience 38": 'Work Experience 38',
-        "Work Experience 39": 'Work Experience 39',
-        "Work Experience 40": 'Work Experience 40',
-        "Work Experience 41": 'Work Experience 41',
-        "Work Experience 42": 'Work Experience 42',
-        "Work Experience 43": 'Work Experience 43',
-        "Work Experience 44": 'Work Experience 44',
-        "Work Experience 45": 'Work Experience 45',
-        "Work Experience 46": 'Work Experience 46',
-        "Work Experience 47": 'Work Experience 47',
-        "Work Experience 48": 'Work Experience 48',
-        "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
-        "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
-        "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
-        "UG Degree / Equivalent Marksheet 4": 'UG Degree / Equivalent Marksheet 4',
-        "UG Degree / Equivalent Marksheet 5": 'UG Degree / Equivalent Marksheet 5',
-        "UG Degree / Equivalent Marksheet 6": 'UG Degree / Equivalent Marksheet 6',
-        "UG Degree / Equivalent Marksheet 7": 'UG Degree / Equivalent Marksheet 7',
-        "UG Degree / Equivalent Marksheet 8": 'UG Degree / Equivalent Marksheet 8',
-        "UG Degree / Equivalent Marksheet 9": 'UG Degree / Equivalent Marksheet 9',
-        "UG Degree / Equivalent Marksheet 10": 'UG Degree / Equivalent Marksheet 10',
-        "UG Degree / Equivalent Marksheet 11": 'UG Degree / Equivalent Marksheet 11',
-        "UG Degree / Equivalent Marksheet 12": 'UG Degree / Equivalent Marksheet 12',
-        "UG Degree / Equivalent Marksheet 13": 'UG Degree / Equivalent Marksheet 13',
-        "UG Degree / Equivalent Marksheet 14": 'UG Degree / Equivalent Marksheet 14',
-        "B.Ed Degree / Equivalent Marksheet": 'B.Ed Degree / Equivalent Consolidated Marksheet',
-        "B.Ed Degree / Equivalent Marksheet 1": 'B.Ed Degree / Equivalent Marksheet 1',
-        "B.Ed Degree / Equivalent Marksheet 2": 'B.Ed Degree / Equivalent Marksheet 2',
-        "B.Ed Degree / Equivalent Marksheet 3": 'B.Ed Degree / Equivalent Marksheet 3',
-        "B.Ed Degree / Equivalent Marksheet 4": 'B.Ed Degree / Equivalent Marksheet 4',
-        "B.Ed Degree / Equivalent Marksheet 5": 'B.Ed Degree / Equivalent Marksheet 5',
-        "B.Ed Degree / Equivalent Marksheet 6": 'B.Ed Degree / Equivalent Marksheet 6',
-        "B.Ed Degree / Equivalent Marksheet 7": 'B.Ed Degree / Equivalent Marksheet 7',
-        "B.Ed Degree / Equivalent Marksheet 8": 'B.Ed Degree / Equivalent Marksheet 8',
-        "M.Ed Degree / Equivalent Marksheet": 'M.Ed Degree / Equivalent Consolidated Marksheet',
-        "M.Ed Degree / Equivalent Marksheet 1": 'M.Ed Degree / Equivalent Marksheet 1',
-        "M.Ed Degree / Equivalent Marksheet 2": 'M.Ed Degree / Equivalent Marksheet 2',
-        "M.Ed Degree / Equivalent Marksheet 3": 'M.Ed Degree / Equivalent Marksheet 3',
-        "M.Ed Degree / Equivalent Marksheet 4": 'M.Ed Degree / Equivalent Marksheet 4',
-        "M.Ed Degree / Equivalent Marksheet 5": 'M.Ed Degree / Equivalent Marksheet 5',
-        "M.Ed Degree / Equivalent Marksheet 6": 'M.Ed Degree / Equivalent Marksheet 6',
-        "PG Degree / Equivalent Consolidated Marksheet": 'PG Degree / Equivalent Consolidated Marksheet',
-        "PG Degree / Equivalent Marksheet 1": 'PG Degree / Equivalent Marksheet 1',
-        "PG Degree / Equivalent Marksheet 2": 'PG Degree / Equivalent Marksheet 2',
-        "PG Degree / Equivalent Marksheet 3": 'PG Degree / Equivalent Marksheet 3',
-        "PG Degree / Equivalent Marksheet 4": 'PG Degree / Equivalent Marksheet 4',
-        "PG Degree / Equivalent Marksheet 5": 'PG Degree / Equivalent Marksheet 5',
-        "PG Degree / Equivalent Marksheet 6": 'PG Degree / Equivalent Marksheet 6',
-        "PG Degree / Equivalent Marksheet 7": 'PG Degree / Equivalent Marksheet 7',
-        "PG Degree / Equivalent Marksheet 8": 'PG Degree / Equivalent Marksheet 8',
-        "PG Degree / Equivalent Marksheet 9": 'PG Degree / Equivalent Marksheet 9',
-        "PG Degree / Equivalent Marksheet 10": 'PG Degree / Equivalent Marksheet 10',
-        "PG Degree / Equivalent Marksheet 11": 'PG Degree / Equivalent Marksheet 11',
-        "PG Degree / Equivalent Marksheet 12": 'PG Degree / Equivalent Marksheet 12',
-        "PG Degree / Equivalent Marksheet 13": 'PG Degree / Equivalent Marksheet 13',
-        "PG Degree / Equivalent Marksheet 14": 'PG Degree / Equivalent Marksheet 14',
-        "SLET / NET Exemption certificate": 'SLET / NET Exemption certificate'
-      };
+        {
+          "10th / SSLC Certificate": 'SSLC Certificate',
+          "12th / HSC Certificate": 'HSC Certificate',
+          "Community Certificate": 'Community Certificate',
+          "Diploma Certificate": 'Diploma Certificate',
+          "Graduation Degree Certificate": 'UG Degree Certificate',
+          "PSTM Certificate": 'PSTM Certificate',
+          "PSTM Certificate for PG Degree": 'PSTM Certificate for PG Degree',
+          "PSTM Certificate for Ph.D Degree": 'PSTM Certificate for Ph.D Degree',
+          "PSTM Certificate for B.Ed Degree": 'PSTM Certificate for B.Ed Degree',
+          "PSTM Certificate for M.Ed Degree": 'PSTM Certificate for M.Ed Degree',
+          "General Information": 'General Information',
+          "Order of Qualification": 'Order of Qualification',
+          "Discharged / to be discharged certificate": 'EX-SERVICEMEN',
+          "Highest Certificate For NSS": 'NSS CERTIFICATE',
+          "Highest Certificate For NCC": 'NCC CERTIFICATE',
+          "Medal Certificate (For Department)": 'MEDAL',
+          "NOC (For Department)": 'No Objection Certificate',
+          "Highest Sports Certificate": 'SPORTS SPECIAL MARK CERTIFICATE',
+          "Additional Mark": 'Additional Mark',
+          "Gender Certificate(Transgender)": 'Gender Certificate(Transgender)',
+          "Photo": 'PHOTO',
+          "Sign": 'SIGNATURE',
+          "MCA - 3 years": 'MCA - 3 years',
+          "M.E. or M.Tech. degree in Computer Science or I.T. - 2 years": 'M.E. or M.Tech. degree in Computer Science or I.T. - 2 years',
+          "M.E or M.Tech degree in Communication Systems - 2 years": 'M.E or M.Tech degree in Communication Systems - 2 years',
+          "Post Graduate Diploma in Computer application - 1 year": 'Post Graduate Diploma in Computer application - 1 year',
+          "B.E or B.Tech degree in Computer Science or I.T - 4 years": 'B.E or B.Tech degree in Computer Science or I.T - 4 years',
+          "BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years": 'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years',
+          "B.E. degree in Electronics and Communication Engineering - 4 years": 'B.E. degree in Electronics and Communication Engineering - 4 years',
+          "PG Degree Certificate": 'PG Degree Certificate',
+          "Noc (Other Department)": 'NOC (OTHER DEPARTMENT)',
+          "M.Phil Certificate": 'M.Phil Certificate',
+          "M.Phil Marksheet": 'M.Phil Marksheet',
+          "SLET/NET Certificate": 'SLET / NET Certificate',
+          "Phd Certificate": 'PHD Certificate',
+          "Birth Certificate": 'Birth Certificate',
+          "PWD Certificate": 'Special Category',
+          "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment',
+          "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment)',
+          "B.Ed Certificate": 'B.Ed.',
+          "M.Ed Certificate": 'M.Ed.',
+          "Conduct certificate from head of institution last studied": 'Conduct Certificate',
+          "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
+          "UG Degree / Equivalent Consolidated Marksheet": 'UG Degree Consolidated Marksheet',
+          "Work Experience 1": 'Work Experience 1',
+          "Work Experience 2": 'Work Experience 2',
+          "Work Experience 3": 'Work Experience 3',
+          "Work Experience 4": 'Work Experience 4',
+          "Work Experience 5": 'Work Experience 5',
+          "Work Experience 6": 'Work Experience 6',
+          "Work Experience 7": 'Work Experience 7',
+          "Work Experience 8": 'Work Experience 8',
+          "Work Experience 9": 'Work Experience 9',
+          "Work Experience 10": 'Work Experience 10',
+          "Work Experience 11": 'Work Experience 11',
+          "Work Experience 12": 'Work Experience 12',
+          "Work Experience 13": 'Work Experience 13',
+          "Work Experience 14": 'Work Experience 14',
+          "Work Experience 15": 'Work Experience 15',
+          "Work Experience 16": 'Work Experience 16',
+          "Work Experience 17": 'Work Experience 17',
+          "Work Experience 18": 'Work Experience 18',
+          "Work Experience 19": 'Work Experience 19',
+          "Work Experience 20": 'Work Experience 20',
+          "Work Experience 21": 'Work Experience 21',
+          "Work Experience 22": 'Work Experience 22',
+          "Work Experience 23": 'Work Experience 23',
+          "Work Experience 24": 'Work Experience 24',
+          "Work Experience 25": 'Work Experience 25',
+          "Work Experience 26": 'Work Experience 26',
+          "Work Experience 27": 'Work Experience 27',
+          "Work Experience 28": 'Work Experience 28',
+          "Work Experience 29": 'Work Experience 29',
+          "Work Experience 30": 'Work Experience 30',
+          "Work Experience 31": 'Work Experience 31',
+          "Work Experience 32": 'Work Experience 32',
+          "Work Experience 33": 'Work Experience 33',
+          "Work Experience 34": 'Work Experience 34',
+          "Work Experience 35": 'Work Experience 35',
+          "Work Experience 36": 'Work Experience 36',
+          "Work Experience 37": 'Work Experience 37',
+          "Work Experience 38": 'Work Experience 38',
+          "Work Experience 39": 'Work Experience 39',
+          "Work Experience 40": 'Work Experience 40',
+          "Work Experience 41": 'Work Experience 41',
+          "Work Experience 42": 'Work Experience 42',
+          "Work Experience 43": 'Work Experience 43',
+          "Work Experience 44": 'Work Experience 44',
+          "Work Experience 45": 'Work Experience 45',
+          "Work Experience 46": 'Work Experience 46',
+          "Work Experience 47": 'Work Experience 47',
+          "Work Experience 48": 'Work Experience 48',
+          "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
+          "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
+          "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
+          "UG Degree / Equivalent Marksheet 4": 'UG Degree / Equivalent Marksheet 4',
+          "UG Degree / Equivalent Marksheet 5": 'UG Degree / Equivalent Marksheet 5',
+          "UG Degree / Equivalent Marksheet 6": 'UG Degree / Equivalent Marksheet 6',
+          "UG Degree / Equivalent Marksheet 7": 'UG Degree / Equivalent Marksheet 7',
+          "UG Degree / Equivalent Marksheet 8": 'UG Degree / Equivalent Marksheet 8',
+          "UG Degree / Equivalent Marksheet 9": 'UG Degree / Equivalent Marksheet 9',
+          "UG Degree / Equivalent Marksheet 10": 'UG Degree / Equivalent Marksheet 10',
+          "UG Degree / Equivalent Marksheet 11": 'UG Degree / Equivalent Marksheet 11',
+          "UG Degree / Equivalent Marksheet 12": 'UG Degree / Equivalent Marksheet 12',
+          "UG Degree / Equivalent Marksheet 13": 'UG Degree / Equivalent Marksheet 13',
+          "UG Degree / Equivalent Marksheet 14": 'UG Degree / Equivalent Marksheet 14',
+          "B.Ed Degree / Equivalent Marksheet": 'B.Ed Degree / Equivalent Consolidated Marksheet',
+          "B.Ed Degree / Equivalent Marksheet 1": 'B.Ed Degree / Equivalent Marksheet 1',
+          "B.Ed Degree / Equivalent Marksheet 2": 'B.Ed Degree / Equivalent Marksheet 2',
+          "B.Ed Degree / Equivalent Marksheet 3": 'B.Ed Degree / Equivalent Marksheet 3',
+          "B.Ed Degree / Equivalent Marksheet 4": 'B.Ed Degree / Equivalent Marksheet 4',
+          "B.Ed Degree / Equivalent Marksheet 5": 'B.Ed Degree / Equivalent Marksheet 5',
+          "B.Ed Degree / Equivalent Marksheet 6": 'B.Ed Degree / Equivalent Marksheet 6',
+          "B.Ed Degree / Equivalent Marksheet 7": 'B.Ed Degree / Equivalent Marksheet 7',
+          "B.Ed Degree / Equivalent Marksheet 8": 'B.Ed Degree / Equivalent Marksheet 8',
+          "M.Ed Degree / Equivalent Marksheet": 'M.Ed Degree / Equivalent Consolidated Marksheet',
+          "M.Ed Degree / Equivalent Marksheet 1": 'M.Ed Degree / Equivalent Marksheet 1',
+          "M.Ed Degree / Equivalent Marksheet 2": 'M.Ed Degree / Equivalent Marksheet 2',
+          "M.Ed Degree / Equivalent Marksheet 3": 'M.Ed Degree / Equivalent Marksheet 3',
+          "M.Ed Degree / Equivalent Marksheet 4": 'M.Ed Degree / Equivalent Marksheet 4',
+          "M.Ed Degree / Equivalent Marksheet 5": 'M.Ed Degree / Equivalent Marksheet 5',
+          "M.Ed Degree / Equivalent Marksheet 6": 'M.Ed Degree / Equivalent Marksheet 6',
+          "PG Degree / Equivalent Consolidated Marksheet": 'PG Degree / Equivalent Consolidated Marksheet',
+          "PG Degree / Equivalent Marksheet 1": 'PG Degree / Equivalent Marksheet 1',
+          "PG Degree / Equivalent Marksheet 2": 'PG Degree / Equivalent Marksheet 2',
+          "PG Degree / Equivalent Marksheet 3": 'PG Degree / Equivalent Marksheet 3',
+          "PG Degree / Equivalent Marksheet 4": 'PG Degree / Equivalent Marksheet 4',
+          "PG Degree / Equivalent Marksheet 5": 'PG Degree / Equivalent Marksheet 5',
+          "PG Degree / Equivalent Marksheet 6": 'PG Degree / Equivalent Marksheet 6',
+          "PG Degree / Equivalent Marksheet 7": 'PG Degree / Equivalent Marksheet 7',
+          "PG Degree / Equivalent Marksheet 8": 'PG Degree / Equivalent Marksheet 8',
+          "PG Degree / Equivalent Marksheet 9": 'PG Degree / Equivalent Marksheet 9',
+          "PG Degree / Equivalent Marksheet 10": 'PG Degree / Equivalent Marksheet 10',
+          "PG Degree / Equivalent Marksheet 11": 'PG Degree / Equivalent Marksheet 11',
+          "PG Degree / Equivalent Marksheet 12": 'PG Degree / Equivalent Marksheet 12',
+          "PG Degree / Equivalent Marksheet 13": 'PG Degree / Equivalent Marksheet 13',
+          "PG Degree / Equivalent Marksheet 14": 'PG Degree / Equivalent Marksheet 14',
+          "SLET / NET Exemption certificate": 'SLET / NET Exemption certificate'
+        };
 
     $scope.object = Object;
 
@@ -1862,7 +1862,7 @@
 
       for (var i in $scope.documentWithQuestions[$scope.selectedDocType]) {
         var radioName = 'radio' + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] +
-          $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'];
+            $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'];
         if ($('input[name=' + radioName + ']').length > 0) {
           if (!$('input[name=' + radioName + ']:checked').val()) {
             alert('Please give all the answers');
@@ -1927,7 +1927,7 @@
         setTimeout(function () {
           for (var x = 0; x < $scope.finalJsonData[$scope.selectedDocType].answers.length; x++) {
             var radioName = 'radio' + $scope.finalJsonData[$scope.selectedDocType]['doc_id'] +
-              $scope.finalJsonData[$scope.selectedDocType].answers[x]['qn_id'];
+                $scope.finalJsonData[$scope.selectedDocType].answers[x]['qn_id'];
             if ($("input[name=" + radioName + "]").length > 0) {
               $("input[name=" + radioName + "]").val([parseInt($scope.finalJsonData[$scope.selectedDocType].answers[x]['ans_id'])]);
               vm.radio_values['init_doc' + $scope.finalJsonData[$scope.selectedDocType]['doc_id'] + $scope.finalJsonData[$scope.selectedDocType].answers[x]['qn_id']] = $scope.finalJsonData[$scope.selectedDocType].answers[x]['ans_id'].toString();
@@ -2195,7 +2195,34 @@
     };
 
     $scope.showExperienceModal = function () {
-      $('#modal-exp').modal('toggle');
+      Http.post("/biz/scores/orchEntry", {
+        'float_pgMarks': 56,
+        'dt_pg_por': '15/05/1998',
+        'str_subjHandledStatus': 1,
+        'v_subjHandled': 'Home Science',
+        'v_subjApplied': 'Home Science',
+        'dt_elp_fromDt': '14/11/2003',
+        'dt_elp_toDt': '02/04/2018',
+        'dt_slet_por': '01/02/2001',
+        'dt_net_por': '01/01/0001',
+        'str_caste': 'OC_CATEGORY',
+        'bool_diffAbled': 'False',
+        'bool_sletStatus': 'True',
+        'bool_netStatus': 'False',
+        'v_subjSlet': 'Home Science',
+        'v_subjNet': '',
+        'bool_equivFlag1': '',
+        'bool_equivFlag2': '',
+        'dt_mphil_por': '01/01/0001',
+        'dt_phd_por': '01/01/0001',
+        'bool_chk1': 'False',
+        'bool_chk2': 'False'
+      }).then(function (object) {
+        console.log(object);
+        $scope.orchEntry = object;
+        $('#modal-exp').modal('toggle');
+      })
+
     };
 
 
@@ -2223,21 +2250,21 @@
       var element = document.getElementById("invoice");
       // Choose the element and save the PDF for our user.
       html2pdf()
-        .from(element)
-        .save();
+          .from(element)
+          .save();
     }
 
   }
 
   angular
-    .module('app.candidates').config(['$compileProvider', function ($compileProvider) {
+      .module('app.candidates').config(['$compileProvider', function ($compileProvider) {
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|local|data|chrome-extension):/);
   }])
-    .controller('CandidatesController', CandidatesController);
+      .controller('CandidatesController', CandidatesController);
 
   CandidatesController.$inject = ['$scope', '$stateParams', '$rootScope', '$ocLazyLoad', 'Http', 'Message'];
   angular
-    .module('app.candidates').directive('tenthSslcCertificate', function () {
+      .module('app.candidates').directive('tenthSslcCertificate', function () {
     return {
       templateUrl: "/candidates/view/templates/10th_SSLC_Certificate.html"
     };

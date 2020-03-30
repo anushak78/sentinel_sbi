@@ -885,130 +885,133 @@
                                 <td>To</td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td>PG with 50% Marks</td>
-                                <td></td>
-                                <td>18.09.1991</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                            <tr ng-repeat="o in orchEntry">
+                                <td>{{o['Title'].split('(')[0]}}</td>
+                                <td>{{o['From Date']}}</td>
+                                <td>{{o['To Date']}}</td>
+                                <td>{{o['Eligible From Date']}}</td>
+                                <td>{{o['Eligible To Date']}}</td>
+                                <td>{{o['Date Difference '].split('and')
+                                    [0]}}</td>
+                                <td>{{o['Date Difference '].split('and')
+                                    [1]}}</td>
+                                <td>{{o['Date Difference '].split('and')
+                                    [2]}}</td>
+                                <td>{{o['Subject Handled ']}}</td>
                             </tr>
-                            <tr>
-                                <td>PG with 55% Marks and NET/SLET/CISR (For
-                                    SC/SCA/ST/Diff.abled - 50% Marks)
-                                </td>
-                                <td>19.09.1991</td>
-                                <td>17.07.2018</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PG with 55% marks and NET/SLET/CSIR (for
-                                    other than OC 50%
-                                    marks)
-                                </td>
-                                <td>18.07.2018</td>
-                                <td>04.10.2019</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>M.Phil Completed before 31.12.1993/
-                                    SUBMITTED Ph.D BEFORE
-                                    31.12.1993
-                                </td>
-                                <td>19.09.1991</td>
-                                <td>30.07.2002</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>SUBMITTED Ph.D BEFORE 31.12.2002</td>
-                                <td>31.07.2002</td>
-                                <td>13.06.2006</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PG WITH M.Phil</td>
-                                <td>14.06.2006</td>
-                                <td>29.06.2010</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PG with Ph.D through Correspondence /
-                                    Distance Edn / Open
-                                    University System
-                                </td>
-                                <td></td>
-                                <td>02.04.2009</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PG with M.Phil through Correspondence /
-                                    Distance Edn./ Open
-                                    University System
-                                </td>
-                                <td>14.06.2006</td>
-                                <td>02.04.2009</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>PG with Ph.D</td>
-                                <td></td>
-                                <td>04.10.2019</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">Grand Total (cutoff date before
-                                    04.10.2019)
-                                </td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>5</td>
-                            </tr>
+<!--                            <tr>-->
+<!--                                <td>PG with 55% Marks and NET/SLET/CISR (For-->
+<!--                                    SC/SCA/ST/Diff.abled - 50% Marks)-->
+<!--                                </td>-->
+<!--                                <td>19.09.1991</td>-->
+<!--                                <td>17.07.2018</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>PG with 55% marks and NET/SLET/CSIR (for-->
+<!--                                    other than OC 50%-->
+<!--                                    marks)-->
+<!--                                </td>-->
+<!--                                <td>18.07.2018</td>-->
+<!--                                <td>04.10.2019</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>M.Phil Completed before 31.12.1993/-->
+<!--                                    SUBMITTED Ph.D BEFORE-->
+<!--                                    31.12.1993-->
+<!--                                </td>-->
+<!--                                <td>19.09.1991</td>-->
+<!--                                <td>30.07.2002</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>SUBMITTED Ph.D BEFORE 31.12.2002</td>-->
+<!--                                <td>31.07.2002</td>-->
+<!--                                <td>13.06.2006</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>PG WITH M.Phil</td>-->
+<!--                                <td>14.06.2006</td>-->
+<!--                                <td>29.06.2010</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>PG with Ph.D through Correspondence /-->
+<!--                                    Distance Edn / Open-->
+<!--                                    University System-->
+<!--                                </td>-->
+<!--                                <td></td>-->
+<!--                                <td>02.04.2009</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>PG with M.Phil through Correspondence /-->
+<!--                                    Distance Edn./ Open-->
+<!--                                    University System-->
+<!--                                </td>-->
+<!--                                <td>14.06.2006</td>-->
+<!--                                <td>02.04.2009</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>PG with Ph.D</td>-->
+<!--                                <td></td>-->
+<!--                                <td>04.10.2019</td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                                <td></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td colspan="3">Grand Total (cutoff date before-->
+<!--                                    04.10.2019)-->
+<!--                                </td>-->
+<!--                                <td>5</td>-->
+<!--                                <td>5</td>-->
+<!--                                <td>5</td>-->
+<!--                                <td>5</td>-->
+<!--                                <td>5</td>-->
+<!--                                <td>5</td>-->
+<!--                            </tr>-->
                             </tbody>
                         </table>
                     </div>

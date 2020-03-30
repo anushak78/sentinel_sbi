@@ -464,6 +464,8 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
         responseJson = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
                         'Status': 'FAIL',
+                        'From Date': '19.09.1991',
+                        'To Date': '30.07.2002',
                         'Reason': response
                         }
         response = responseJson
@@ -548,7 +550,9 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
                 response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
                             'Status': 'FAIL',
-                            'Reason': 'PG not from a Recognized University - Dont Consider This Date'
+                            'From Date': '19.09.1991',
+                            'To Date': '30.07.2002',
+                            'Reason': 'PG not from a Recognized University - Dont Consider This Date',
                             }
 
             else:
@@ -566,7 +570,9 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
             response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
                         'Status': 'FAIL',
-                        'Reason': 'PG NOT WITHIN CUTOFF DATE - Dont Consider This Date '
+                        'From Date': '19.09.1991',
+                        'To Date': '30.07.2002',
+                        'Reason': 'PG NOT WITHIN CUTOFF DATE - Dont Consider This Date ',
                         }
 
         # MPHIL VALIDITY CHECK
@@ -577,7 +583,9 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                 log.info("Step 5.2 -  Dont Consider This Date")
                 response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
                             'Status': 'FAIL',
-                            'Reason': 'MPHIL not from a Recognized University - Dont Consider This Date '
+                            'Reason': 'MPHIL not from a Recognized University - Dont Consider This Date ',
+                            'From Date': '19.09.1991',
+                            'To Date': '30.07.2002'
                             }
 
             else:
@@ -595,7 +603,9 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
             response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002) ',
                         'Status': 'FAIL',
-                        'Reason': 'MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date '
+                        'Reason': 'MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date ',
+                        'From Date': '19.09.1991',
+                        'To Date': '30.07.2002'
                         }
 
         # PG + PHD ( within PG % LIMIT & PHD DATE LIMIT CONDITION)
@@ -624,6 +634,8 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
                 response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
                             'Status': 'FAIL',
+                            'From Date': '19.09.1991',
+                            'To Date': '30.07.2002',
                             'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                             }
             if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
@@ -649,7 +661,10 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                             'Eligible From Date': str(dt_earliestFrom),
                             'Eligible To Date': str(dt_top_date),
                             'Date Difference ': dt_diff_response,
-                            'Subject Handled ': v_subjHandled}
+                            'Subject Handled ': v_subjHandled,
+                            'From Date': '19.09.1991',
+                            'To Date': '30.07.2002'
+                            }
 
         return response
 
@@ -724,6 +739,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
             "------------------------------ PG Validity Check FAILED , RETURNING RESPONSE ------------------------------")
         response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                     'Status': 'FAIL',
+                    'From Date': '14.06.2006',
+                    'To Date': '29.06.2010',
                     'Reason': response
                     }
 
@@ -815,6 +832,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
                 response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                             'Status': 'FAIL',
+                            'From Date': '14.06.2006',
+                            'To Date': '29.06.2010',
                             'Reason': 'Step 5.3 - PG not from a Recognized University - Dont Consider This Date'
                             }
             else:
@@ -832,6 +851,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
             response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                         'Status': 'FAIL',
+                        'From Date': '14.06.2006',
+                        'To Date': '29.06.2010',
                         'Reason': 'Step 5.6 - PG NOT WITHIN CUTOFF DATE - Dont Consider This Date '
                         }
 
@@ -844,6 +865,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
                 response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                             'Status': 'FAIL',
+                            'From Date': '14.06.2006',
+                            'To Date': '29.06.2010',
                             'Reason': 'MPHIL not from a Recognized University - Dont Consider This Date'
                             }
 
@@ -862,6 +885,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
             response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                         'Status': 'FAIL',
+                        'From Date': '14.06.2006',
+                        'To Date': '29.06.2010',
                         'Reason': 'Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date'
                         }
 
@@ -890,6 +915,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
 
                 response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                             'Status': 'FAIL',
+                            'From Date': '14.06.2006',
+                            'To Date': '29.06.2010',
                             'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
                             }
             if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
@@ -919,7 +946,9 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                             'Eligible From Date': str(dt_earliestFrom),
                             'Eligible To Date': str(dt_top_date),
                             'Date Difference ': dt_diff_response,
-                            'Subject Handled ': v_subjHandled}
+                            'Subject Handled ': v_subjHandled,
+                            'From Date': '14.06.2006',
+                            'To Date': '29.06.2010'}
 
         return response
 
@@ -994,6 +1023,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             "------------------------------ PG Validity Check FAILED , RETURNING RESPONSE ------------------------------")
         response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
                     'Status': 'FAIL',
+                    'From Date': '14.06.2006',
+                    'To Date': '02.04.2009',
                     'Reason': response
                     }
 
@@ -1068,6 +1099,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                 response = "Step 5.3 - PG not from a Recognized University - Dont Consider This Date "
                 response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
                             'Status': 'FAIL',
+                            'From Date': '14.06.2006',
+                            'To Date': '02.04.2009',
                             'Reason': response
                             }
 
@@ -1088,6 +1121,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
 
             response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
                         'Status': 'FAIL',
+                        'From Date': '14.06.2006',
+                        'To Date': '02.04.2009',
                         'Reason': response
                         }
 
@@ -1101,6 +1136,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
 
                 response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
                             'Status': 'FAIL',
+                            'From Date': '14.06.2006',
+                            'To Date': '02.04.2009',
                             'Reason': response
                             }
 
@@ -1120,6 +1157,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             response = "Step 5.14 - MPHIL NOT WITHIN CUTOFF DATE - Dont Consider This Date "
             response = {'Title':  'PG with MPHIL thru CR/DE/OU ( From Dt :14.06.2006 - To Date : 02.04.2009)',
                         'Status': 'FAIL',
+                        'From Date': '14.06.2006',
+                        'To Date': '02.04.2009',
                         'Reason': response
                         }
 
@@ -1151,6 +1190,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                         'Eligible From Date': str(dt_earliestFrom),
                         'Eligible To Date': str(dt_top_date),
                         'Date Difference ': dt_diff_response,
-                        'Subject Handled ': v_subjHandled}
+                        'Subject Handled ': v_subjHandled,
+                        'From Date': '19.09.1991',
+                        'To Date': '30.07.2002'}
 
         return response
