@@ -301,14 +301,19 @@ def pgCalc_50mNabove_Upto1891991(request):
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_elp_fromDt),
                             'Eligible To Date': str(dt_top_date),
-                            'Date Difference ': dt_diff_response,
-                            'Subject Handled ': v_subjHandled}
+                            'Date Difference': dt_diff_response,
+                            'Subject Handled': v_subjHandled,
+                            'From Date':'',
+                            'To Date':'18.09.1991'
+                            }
 
                 # response = response_json
 
             else:
                 log.info("Step 4.2.6: Subject Checks Failed")
                 response = {'Title':  'PG with 50% Marks',
+                            'From Date':'18.09.1991',
+                            'To Date':'18.09.1991',
                             'Status': 'FAIL',
                             'Reason': 'Subject Handled & Subject Applied Check FAILED'
                             }
@@ -317,6 +322,8 @@ def pgCalc_50mNabove_Upto1891991(request):
 
             response = {'Title':  'PG with 50% Marks',
                         'Status': 'FAIL',
+                        'From Date':'',
+                        'To Date':'18.09.1991',
                         'Reason': 'PG POR Date Not Under 18.09.1991'
                         }
     else:
@@ -324,6 +331,8 @@ def pgCalc_50mNabove_Upto1891991(request):
 
         response = {'Title':  'PG with 50% Marks',
                     'Status': 'FAIL',
+                    'From Date':'',
+                    'To Date':'18.09.1991',
                     'Reason': 'PG Marks NOT IN RANGE ( >50% -- < 55%)'
                     }
 
@@ -421,7 +430,9 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
 
             response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
                         'Status': 'FAIL',
-                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date'
+                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date',
+                        'From Date': '19.09.1991',
+                        'To Date': '17.07.2018'
                         }
     print(toConsider)
     if(toConsider == True):
@@ -449,7 +460,9 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
 
             response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
                         'Status': 'FAIL',
-                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date',
+                        'From Date': '19.09.1991',
+                        'To Date': '17.07.2018'
                         }
         if(str_dt_slet_por != '01/01/0001' and str_dt_net_por != '01/01/0001' and len(str_dt_slet_por) != 0 and len(str_dt_net_por) != 0):
             # find the smallest of the 2 dates to give the benefit to the candidate
@@ -470,14 +483,18 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled}
+                    'Subject Handled ': v_subjHandled,
+                    'From Date': '19.09.1991',
+                    'To Date': '17.07.2018'}
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
         log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
 
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
                     'Status': 'FAIL',
-                    'Reason': 'All Checks Failed - Dont Consider This Date'
+                    'Reason': 'All Checks Failed - Dont Consider This Date',
+                    'From Date': '19.09.1991',
+                    'To Date': '17.07.2018'
                     }
     return response
 
@@ -572,7 +589,9 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
 
             response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
                         'Status': 'FAIL',
-                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date'
+                        'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date',
+                        'From Date': '18.07.2018',
+                        'To Date': '04.10.2019'
                         }
     print(toConsider)
     if(toConsider == True):
@@ -598,7 +617,9 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
 
             response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019)',
                         'Status': 'FAIL',
-                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date'
+                        'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date',
+                        'From Date': '18.07.2018',
+                        'To Date': '04.10.2019'
                         }
 
         print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
@@ -640,14 +661,18 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled}
+                    'Subject Handled ': v_subjHandled,
+                                                                             'From Date': '18.07.2018',
+                                                                             'To Date': '04.10.2019'}
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
         log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
 
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
                     'Status': 'FAIL',
-                    'Reason': 'All Checks Failed - Dont Consider This Date'
+                    'Reason': 'All Checks Failed - Dont Consider This Date',
+                    'From Date': '18.07.2018',
+                    'To Date': '04.10.2019'
                     }
 
     return response
@@ -743,7 +768,10 @@ def phdCalc_submtdbfr_31122002(request):
     else:
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
                     'Status': 'FAIL',
-                    'Response ': 'Disability Check Failed'}
+                    'Response ': 'Disability Check Failed',
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'
+                    }
 
     print(toConsider)
 
@@ -766,12 +794,16 @@ def phdCalc_submtdbfr_31122002(request):
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_elp_toDt),
                     'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled}
+                    'Subject Handled ': v_subjHandled,
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'}
 
     else:
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
                     'Status': 'FAIL',
-                    'Response ': 'phdCalc_submtdbfr_31122002: Step 3 - All Checks Failed - Dont Consider This Date'}
+                    'Response ': 'phdCalc_submtdbfr_31122002: Step 3 - All Checks Failed - Dont Consider This Date',
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'}
 
     return response
 
@@ -890,12 +922,16 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_top_date),
                     'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled}
+                    'Subject Handled ': v_subjHandled,
+                    'From Date': '',
+                    'To Date': '02.04.2009'}
 
     else:
         response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
                     'Status': 'FAIL',
                     'Response': 'Step 3 - All Checks Failed - Dont Consider This Date',
+                    'From Date': '',
+                    'To Date': '02.04.2009'
                     }
     return response
 
@@ -1016,13 +1052,18 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(DT_POR_TO_CUTOFF),
                     'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled}
+                    'Subject Handled ': v_subjHandled,
+                    'From Date': '',
+                    'To Date': '04.10.2019'
+                    }
 
     else:
         response = "phdCalc_submtdbfr_31122002 : Step 3 - All Checks Failed - Dont Consider This Date "
         response = {'Title':  'PG with PHD ( To Date : 04.10.2019) ',
                     'Status': 'FAIL',
                     'Response': response,
-                    'Subject Handled ': v_subjHandled
+                    'Subject Handled ': v_subjHandled,
+                    'From Date': '',
+                    'To Date': '04.10.2019'
                     }
     return response
