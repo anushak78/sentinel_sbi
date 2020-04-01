@@ -482,8 +482,8 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled,
+                    'Date Difference': dt_diff_response,
+                    'Subject Handled': v_subjHandled,
                     'From Date': '19.09.1991',
                     'To Date': '17.07.2018'}
     else:
@@ -660,8 +660,8 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled,
+                    'Date Difference': dt_diff_response,
+                    'Subject Handled': v_subjHandled,
                                                                              'From Date': '18.07.2018',
                                                                              'To Date': '04.10.2019'}
     else:
@@ -793,8 +793,8 @@ def phdCalc_submtdbfr_31122002(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_elp_toDt),
-                    'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled,
+                    'Date Difference': dt_diff_response,
+                    'Subject Handled': v_subjHandled,
                     'From Date': '31.07.2002',
                     'To Date': '13.06.2006'}
 
@@ -921,8 +921,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled,
+                    'Date Difference': dt_diff_response,
+                    'Subject Handled': v_subjHandled,
                     'From Date': '',
                     'To Date': '02.04.2009'}
 
@@ -1051,8 +1051,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(DT_POR_TO_CUTOFF),
-                    'Date Difference ': dt_diff_response,
-                    'Subject Handled ': v_subjHandled,
+                    'Date Difference': dt_diff_response,
+                    'Subject Handled': v_subjHandled,
                     'From Date': '',
                     'To Date': '04.10.2019'
                     }
