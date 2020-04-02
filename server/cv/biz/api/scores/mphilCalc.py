@@ -660,8 +660,8 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
                             'Eligible To Date': str(dt_top_date),
-                            'Date Difference ': dt_diff_response,
-                            'Subject Handled ': v_subjHandled,
+                            'Date Difference': dt_diff_response,
+                            'Subject Handled': v_subjHandled,
                             'From Date': '19.09.1991',
                             'To Date': '30.07.2002'
                             }
@@ -945,8 +945,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
                             'Eligible To Date': str(dt_top_date),
-                            'Date Difference ': dt_diff_response,
-                            'Subject Handled ': v_subjHandled,
+                            'Date Difference': dt_diff_response,
+                            'Subject Handled': v_subjHandled,
                             'From Date': '14.06.2006',
                             'To Date': '29.06.2010'}
 
@@ -1189,8 +1189,8 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                         'Status': 'PASS',
                         'Eligible From Date': str(dt_earliestFrom),
                         'Eligible To Date': str(dt_top_date),
-                        'Date Difference ': dt_diff_response,
-                        'Subject Handled ': v_subjHandled,
+                        'Date Difference': dt_diff_response,
+                        'Subject Handled': v_subjHandled,
                         'From Date': '19.09.1991',
                         'To Date': '30.07.2002'}
 
