@@ -1,8 +1,8 @@
 (function () {
 
   function Http($q, $http, $state, Message, $rootScope) {
-    let serverPath = 'http://' + window.location.hostname + ':9102';
-    let localPath = 'http://' + window.location.hostname + ':6379';
+    let serverPath = 'http://' + window.location.hostname + ':6544';
+    let localPath = 'http://' + window.location.hostname + ':3009';
 
     function logout() {
       return $http.post(serverPath + "/api/sign-out", {}).then(function (response) {
