@@ -1,7 +1,7 @@
 (function () {
 
     function Http($q, $http, $state, Message, $rootScope) {
-        let serverPath = 'http://localhost:6544';
+        let serverPath = 'http://' + window.location.hostname + ':6544';
         let localPath = 'http://' + window.location.hostname + ':3009';
 
         function logout() {
