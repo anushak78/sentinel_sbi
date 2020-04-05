@@ -272,6 +272,16 @@ def pgCalc_50mNabove_Upto1891991(request):
     v_subjectApplied = request.POST.get(
         "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
+    META_DATA = {'POR Cut Off Date': DT_POR_CUTOFF,
+                 'PG MARKS': float_pgMarks,
+                 'PG POR Date ': dt_pg_por,
+                 'From Date - Period Of Service ': dt_elp_fromDt,
+                 'To Date - Period Of Service': dt_elp_toDt,
+                 'Subject Handled Status ': str_subjHandledStatus,
+                 'Subject Handled ': v_subjHandled,
+                 'Subject Applied ': v_subjectApplied
+                 }
+
     if(BusinessConstants.MARKS_50_PER <= float(float_pgMarks) <= BusinessConstants.MARKS_55_PER):
 
         log.info("Step1 : Check 1 Pass : pgMarks > 50% < 55% ")
@@ -303,8 +313,9 @@ def pgCalc_50mNabove_Upto1891991(request):
                             'Eligible To Date': str(dt_top_date),
                             'Date Difference': dt_diff_response,
                             'Subject Handled': v_subjHandled,
-                            'From Date':'',
-                            'To Date':'18.09.1991'
+                            'From Date': '',
+                            'To Date': '18.09.1991',
+                            'META-DATA': META_DATA
                             }
 
                 # response = response_json
@@ -312,8 +323,8 @@ def pgCalc_50mNabove_Upto1891991(request):
             else:
                 log.info("Step 4.2.6: Subject Checks Failed")
                 response = {'Title':  'PG with 50% Marks',
-                            'From Date':'18.09.1991',
-                            'To Date':'18.09.1991',
+                            'From Date': '18.09.1991',
+                            'To Date': '18.09.1991',
                             'Status': 'FAIL',
                             'Reason': 'Subject Handled & Subject Applied Check FAILED'
                             }
@@ -322,8 +333,8 @@ def pgCalc_50mNabove_Upto1891991(request):
 
             response = {'Title':  'PG with 50% Marks',
                         'Status': 'FAIL',
-                        'From Date':'',
-                        'To Date':'18.09.1991',
+                        'From Date': '',
+                        'To Date': '18.09.1991',
                         'Reason': 'PG POR Date Not Under 18.09.1991'
                         }
     else:
@@ -331,8 +342,8 @@ def pgCalc_50mNabove_Upto1891991(request):
 
         response = {'Title':  'PG with 50% Marks',
                     'Status': 'FAIL',
-                    'From Date':'',
-                    'To Date':'18.09.1991',
+                    'From Date': '',
+                    'To Date': '18.09.1991',
                     'Reason': 'PG Marks NOT IN RANGE ( >50% -- < 55%)'
                     }
 
@@ -478,6 +489,21 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'From Date - Period Of Service ': str(dt_elp_fromDt),
+                     'To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled Status ': str_subjHandledStatus,
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': bool_diffAbled,
+                     'SLET POR DATE': str_dt_slet_por,
+                     'NET POR DATE': str_dt_net_por
+                     }
+
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {SC/SCA/ST/DA-50%} (19.09.1991 - 17.07.2018) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
@@ -485,7 +511,9 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
                     'Date Difference': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '19.09.1991',
-                    'To Date': '17.07.2018'}
+                    'To Date': '17.07.2018',
+                    'META_DATA': META_DATA
+                    }
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
         log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
@@ -656,14 +684,28 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled Status ': str_subjHandledStatus,
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': bool_diffAbled,
+                     'SLET POR DATE': str_dt_slet_por,
+                     'NET POR DATE': str_dt_net_por
+                     }
         response = {'Title':  'PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%} (18.07.2018 - 04.10.2019) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
                     'Date Difference': dt_diff_response,
                     'Subject Handled': v_subjHandled,
-                                                                             'From Date': '18.07.2018',
-                                                                             'To Date': '04.10.2019'}
+                    'From Date': '18.07.2018',
+                    'To Date': '04.10.2019',
+                    'META_DATA': META_DATA}
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
         log.info("pgCalc_55MarksforOCnGT : Step 4.1 - Dont Consider This Date")
@@ -789,6 +831,19 @@ def phdCalc_submtdbfr_31122002(request):
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'From Date - Period Of Service ': str(dt_elp_fromDt),
+                     'To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled Status ': str_subjHandledStatus,
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': bool_diffAbled
+                     }
+
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
@@ -796,7 +851,8 @@ def phdCalc_submtdbfr_31122002(request):
                     'Date Difference': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '31.07.2002',
-                    'To Date': '13.06.2006'}
+                    'To Date': '13.06.2006',
+                    'META_DATA': META_DATA}
 
     else:
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
@@ -917,6 +973,19 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'From Date - Period Of Service ': str(dt_elp_fromDt),
+                     'To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled Status ': str_subjHandledStatus,
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': bool_diffAbled
+                     }
+
         response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
@@ -924,7 +993,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
                     'Date Difference': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '',
-                    'To Date': '02.04.2009'}
+                    'To Date': '02.04.2009',
+                    'META_DATA': META_DATA}
 
     else:
         response = {'Title':  'PG with PHD thru CR/DE/OU ( To Date : 02.04.2009)',
@@ -1047,6 +1117,19 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
         dt_diff_response = str(diff.years) + " Years and " + \
             str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'From Date - Period Of Service ': str(dt_elp_fromDt),
+                     'To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled Status ': str_subjHandledStatus,
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': bool_diffAbled
+                     }
+
         response = {'Title':  'PG with PHD ( To Date : 04.10.2019) ',
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
@@ -1054,7 +1137,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                     'Date Difference': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '',
-                    'To Date': '04.10.2019'
+                    'To Date': '04.10.2019',
+                    'META_DATA': META_DATA
                     }
 
     else:

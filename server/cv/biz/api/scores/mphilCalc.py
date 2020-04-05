@@ -656,6 +656,21 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                     str(diff.months) + " Months and " + \
                     str(diff.days) + " Days"
 
+                META_DATA = {'POR Cut Off From Date': DT_BTM_POR_CUTOFF,
+                             'POR Cut Off To Date': DT_TOP_POR_CUTOFF,
+                             'PG MARKS': float_pgMarks,
+                             'PG POR Date ': dt_pg_por,
+                             'From Date - Period Of Service ': dt_elp_fromDt,
+                             'To Date - Period Of Service': dt_elp_toDt,
+                             'Subject Handled Status ': str_subjHandledStatus,
+                             'Subject Handled ': v_subjHandled,
+                             'Subject Applied ': v_subjApplied,
+                             'Caste': str_caste,
+                             'Differently Abled': bool_diffAbled,
+                             'SLET POR DATE': str_dt_slet_por,
+                             'NET POR DATE': str_dt_net_por
+                             }
+
                 response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
@@ -663,7 +678,8 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
                             'Date Difference': dt_diff_response,
                             'Subject Handled': v_subjHandled,
                             'From Date': '19.09.1991',
-                            'To Date': '30.07.2002'
+                            'To Date': '30.07.2002',
+                            'META_DATA': META_DATA
                             }
 
         return response
@@ -941,6 +957,21 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                     str(diff.months) + " Months and " + \
                     str(diff.days) + " Days"
 
+                META_DATA = {'POR Cut Off From Date': str(DT_BTM_POR_CUTOFF),
+                             'POR Cut Off To Date': str(DT_TOP_POR_CUTOFF),
+                             'PG MARKS': float_pgMarks,
+                             'PG POR Date ': str(dt_pg_por),
+                             'From Date - Period Of Service ': str(dt_elp_fromDt),
+                             'To Date - Period Of Service': str(dt_elp_toDt),
+                             'Subject Handled Status ': str_subjHandledStatus,
+                             'Subject Handled ': v_subjHandled,
+                             'Subject Applied ': v_subjApplied,
+                             'Caste': str_caste,
+                             'Differently Abled': bool_diffAbled,
+                             'SLET POR DATE': str_dt_slet_por,
+                             'NET POR DATE': str_dt_net_por
+                             }
+
                 response = {'Title':  'PG with MPHIL ( From Dt :14.06.2006 - To Date : 29.06.2010)',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_earliestFrom),
@@ -948,7 +979,8 @@ def calc_pgNmphil_bfr14062006_aftr29062010(request):
                             'Date Difference': dt_diff_response,
                             'Subject Handled': v_subjHandled,
                             'From Date': '14.06.2006',
-                            'To Date': '29.06.2010'}
+                            'To Date': '29.06.2010',
+                            'META_DATA': META_DATA}
 
         return response
 
@@ -1185,6 +1217,19 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
             dt_diff_response = str(diff.years) + " Years and " + \
                 str(diff.months) + " Months and " + str(diff.days) + " Days"
 
+            META_DATA = {'POR Cut Off From Date': str(DT_BTM_POR_CUTOFF),
+                         'POR Cut Off To Date': str(DT_TOP_POR_CUTOFF),
+                         'PG MARKS': float_pgMarks,
+                         'PG POR Date ': str(dt_pg_por),
+                         'From Date - Period Of Service ': str(dt_elp_fromDt),
+                         'To Date - Period Of Service': str(dt_elp_toDt),
+                         'Subject Handled Status ': str_subjHandledStatus,
+                         'Subject Handled ': v_subjHandled,
+                         'Subject Applied ': v_subjApplied,
+                         'Caste': str_caste,
+                         'Differently Abled': bool_diffAbled,
+                         }
+
             response = {'Title':  'Mphil Completed Before 31.12.1993 / Submitted PHD before 31/12/1993 ( From Dt :19.09.1991 - To Date : 30.07.2002)',
                         'Status': 'PASS',
                         'Eligible From Date': str(dt_earliestFrom),
@@ -1192,6 +1237,7 @@ def calc_pgNmphil_CROUDE_bfr14062006_aftr242009(request):
                         'Date Difference': dt_diff_response,
                         'Subject Handled': v_subjHandled,
                         'From Date': '19.09.1991',
-                        'To Date': '30.07.2002'}
+                        'To Date': '30.07.2002',
+                        'META_DATA': META_DATA}
 
         return response
