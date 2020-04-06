@@ -2194,6 +2194,15 @@
       });
     };
 
+    $scope.educationIndex = '';
+    $scope.openEducationModel = function (index) {
+      $scope.educationIndex = index;
+      $('#modal-education').modal('toggle');
+    };
+    $scope.closeEducationModel = function () {
+      $('#modal-education').modal('toggle');
+    };
+
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
         'float_pgMarks': 56,
@@ -2229,6 +2238,7 @@
     $(document).on('click', '.showModalExp', function () {
       $scope.showExperienceModal();
     });
+
 
     vm.calculateAge = function (value) {
       if (value != '') {

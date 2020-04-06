@@ -1,3 +1,7 @@
 .candidates-example span {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.container-experience:last-child {
+  clear: both
 }
