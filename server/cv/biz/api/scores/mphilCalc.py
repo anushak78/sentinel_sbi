@@ -542,8 +542,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
         bool_chk2 = str2bool(request.POST.get("bool_chk1", 'False'))
 
         # PHD Validatity Check
-
-        if dt_phd_por <= DT_GLB_POR_CUTOFF:
+        if (len(str_dt_mphil_por) != 0) and (dt_phd_por <= DT_GLB_POR_CUTOFF):
             if bool_chk2 != True:
                 log.info("Step 5.1 - PG not from a Recognized University ")
                 log.info("Step 5.2 -  Dont Consider This Date")
@@ -577,7 +576,7 @@ def calc_mphil_bfr31121993_phd_bfr31121993(request):
 
         # MPHIL VALIDITY CHECK
 
-        if dt_mphil_por <= DT_GLB_POR_CUTOFF:
+        if (len(str_dt_mphil_por) != 0) and (dt_mphil_por <= DT_GLB_POR_CUTOFF):
             if bool_chk1 != True:
                 log.info("Step 5.7 - MPHIL NOT  FROM RECOGNIZED UNIVERSITY ")
                 log.info("Step 5.2 -  Dont Consider This Date")

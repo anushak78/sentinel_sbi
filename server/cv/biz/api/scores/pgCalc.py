@@ -272,11 +272,11 @@ def pgCalc_50mNabove_Upto1891991(request):
     v_subjectApplied = request.POST.get(
         "v_subjApplied", "No Subject Applied Info Recieved")  # Name of Post Applied  from DB.
 
-    META_DATA = {'POR Cut Off Date': DT_POR_CUTOFF,
+    META_DATA = {'POR Cut Off Date': str(DT_POR_CUTOFF),
                  'PG MARKS': float_pgMarks,
-                 'PG POR Date ': dt_pg_por,
-                 'From Date - Period Of Service ': dt_elp_fromDt,
-                 'To Date - Period Of Service': dt_elp_toDt,
+                 'PG POR Date ': str(dt_pg_por),
+                 'From Date - Period Of Service ': str(dt_elp_fromDt),
+                 'To Date - Period Of Service': str(dt_elp_toDt),
                  'Subject Handled Status ': str_subjHandledStatus,
                  'Subject Handled ': v_subjHandled,
                  'Subject Applied ': v_subjectApplied
