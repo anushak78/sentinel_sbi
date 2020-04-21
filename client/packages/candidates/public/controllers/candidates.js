@@ -127,6 +127,7 @@
       vm.doc1407 = '';
       vm.doc1408 = '';
       vm.doc1409 = '';
+      vm.doc14021 = '';
 
 
       vm.doc84 = '';
@@ -604,6 +605,7 @@
       vm.radio_values.init_doc13913 = "";
       vm.radio_values.init_doc13914 = "";
       vm.radio_values.init_doc1402 = "";
+      vm.radio_values.init_doc14021 = "";
       vm.radio_values.init_doc1403 = "";
       vm.radio_values.init_doc1405 = "";
       vm.radio_values.init_doc1406 = "";
@@ -1085,6 +1087,7 @@
       '140c6': 'New admission date',
       '140c7': 'Rejoining date',
       '140c8': 'Cut off date 04.10.2019',
+      '140c21': 'If Educational qualification order selected Others',
       '12c2': 'Relevant reason',
       '16c2': 'New Gender',
       '16c3': 'Not relevant reason',

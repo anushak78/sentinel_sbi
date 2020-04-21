@@ -35,10 +35,13 @@
           <option value="10+2+3+1/2+2/3+2/1 or 2/4 years">
             10+2+3+1/2+2/3+2/1 or 2/4 years
           </option>
-          <option value="Others (when others selected text box with 100 numeric char with all special symbols must be allowed)">
-            Others (when others selected text box with 100 numeric char with all special symbols must be allowed)
+          <option value="Others">
+            Others
           </option>
         </select>
+      </label>
+      <label ng-if="$ctrl.doc1402 == 'Others'">
+        <input type="text"  style="margin-top: 10px" maxlength="100" class="form-control" ng-model="$ctrl.doc14021"/>
       </label>
     </div>
   </div>
