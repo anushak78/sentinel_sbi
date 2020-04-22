@@ -126,6 +126,18 @@ def serialize(self):
     return {c: getattr(self, c) for c in inspect(self).attrs.keys()}
 
 
+def _fix_document_urls_work_experience(request, document_list, candidate_id):
+    new_document_list = []
+    for doc in document_list:
+        doc['ocd_doc_file_name'] = request.route_url(
+            'docs.view', candidate_id=candidate_id,
+            file_name=doc['ocd_flag_2'] + '_' + doc['ocd_doc_file_name']
+            # file_name=doc['ocd_doc_file_name']
+        )
+        new_document_list.append(doc)
+    return new_document_list
+
+
 def _fix_document_urls(request, document_list, candidate_id):
     new_document_list = []
     for doc in document_list:
@@ -498,6 +510,7 @@ def get_candidate_details(request):
     work_experience_query = text("""
         select
 	ocd_user_fk,
+	ocd_flag as ocd_flag_2,
 	'Work Experience '|| row_number() over(partition by ocd_user_fk order by ocd_user_fk) as ocd_flag,
 	ocd_doc_file_name
 from oes_candidate_doc
@@ -508,12 +521,14 @@ AND length(trim(ocd_wrkdoc_id))>0 AND oes_candidate_doc.ocd_created_by =  :candi
         "candidate_id": candidate_id
     }).fetchall()
     work_experience = _key_column_generator(work_experience)
-    work_experience = _fix_document_urls(
+    work_experience = _fix_document_urls_work_experience(
         request, work_experience, candidate_id)
+    print('_____________________________')
     print(work_experience)
 
     for d in work_experience:
         print('+++++++++++++++++++')
+        print(d['ocd_doc_file_name'])
         document_list.insert(1, {
             "ocd_doc_file_name": d['ocd_doc_file_name'],
             "ocd_flag": d['ocd_flag'],
