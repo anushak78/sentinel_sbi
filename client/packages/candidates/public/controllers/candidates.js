@@ -2181,20 +2181,25 @@
 
     $scope.showApplicationForm = function () {
       let user_id = $scope.rows[$scope.selectedIndex]['oum_user_id'];
-      // window.open($scope.urlPath+'/assets/uploads/'+user_id+'.pdf');
-      Http.getLocal("/api/get-pdf", {
-        user_id: user_id
-      }).then(function (response) {
-        if (response.code == 1) {
-          $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
-          $("#download")[0].click();
-          setTimeout(function () {
-            $("#download").remove();
-          })
-        } else {
-          alert(response.message)
-        }
-      });
+      // // window.open($scope.urlPath+'/assets/uploads/'+user_id+'.pdf');
+      // Http.getLocal("/api/get-pdf", {
+      //   user_id: user_id
+      // }).then(function (response) {
+      //   if (response.code == 1) {
+      //     $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
+      //     $("#download")[0].click();
+      //     setTimeout(function () {
+      //       $("#download").remove();
+      //     })
+      //   } else {
+      //     alert(response.message)
+      //   }
+      // });
+      $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
+      $("#download")[0].click();
+      setTimeout(function () {
+        $("#download").remove();
+      })
     };
 
     $scope.educationIndex = '';
@@ -2291,7 +2296,7 @@
     };
   }).directive('diplomaCertificate', function () {
     return {
-      templateUrl: "/candidates/view/templates/Diploma_Certificate.html"
+      templateUrl: "/candidates/view/templawork_experiencetes/Diploma_Certificate.html"
     };
   }).directive('degreeCertificate', function () {
     return {
