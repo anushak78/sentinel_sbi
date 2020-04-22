@@ -2181,7 +2181,7 @@
 
     $scope.showApplicationForm = function () {
       let user_id = $scope.rows[$scope.selectedIndex]['oum_user_id'];
-      // // window.open($scope.urlPath+'/assets/uploads/'+user_id+'.pdf');
+      window.open($scope.urlPath+'/assets/uploads/'+user_id+'.pdf');
       // Http.getLocal("/api/get-pdf", {
       //   user_id: user_id
       // }).then(function (response) {
@@ -2195,11 +2195,6 @@
       //     alert(response.message)
       //   }
       // });
-      $("body").append('<a target="_blank" id="download" href="/assets/uploads/' + user_id + '/' + user_id + '.pdf"></a>');
-      $("#download")[0].click();
-      setTimeout(function () {
-        $("#download").remove();
-      })
     };
 
     $scope.educationIndex = '';
