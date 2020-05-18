@@ -166,17 +166,17 @@ def get_candidate_list(request):
                  "limit": limit}
 
     pending_list_query = """
-    SELECT
-    ocd.ocd_first_name,
+    select  DISTINCT ocd.ocd_user_fk,
+    oes_candidate_details.ocd_first_name,
     oum.oum_candidate_name,
     oum.oum_user_id,
     oum.oum_user_pk,
     oum.oum_mobile_no,
     oum.oum_email_id
-    FROM oes_payment_details opd
-    INNER JOIN oes_user_master oum ON opd.opd_user_fk = oum.oum_user_pk
-    INNER JOIN oes_candidate_details ocd ON ocd.ocd_user_fk = oum.oum_user_pk
-    WHERE opd.opd_validated_status = 'A'
+    from oes_candidate_doc ocd
+    INNER JOIN oes_user_master oum ON ocd.ocd_created_by = oum.oum_user_id
+    INNER JOIN oes_candidate_details ON ocd.ocd_user_fk = oes_candidate_details.ocd_user_fk
+    where ocd.ocd_declare_flag='true1'
    """
     if (candidate_id != None and candidate_id != ''):
         pending_list_query += "AND oum.oum_candidate_name LIKE '%" + candidate_id + "%' "
@@ -232,21 +232,24 @@ def get_candidate_list(request):
     count_query = """select count(*) as total_count
     from (""" + pending_list_query + """) abcd"""
 
-    pending_list_query += """ ORDER BY  case when  oum.oum_user_pk=42179 then 1
-                  when  oum.oum_user_pk=38588 then 2
-                  when  oum.oum_user_pk=9655 then 3
-                  when  oum.oum_user_pk=36308 then 4
-                  when  oum.oum_user_pk=29414 then 5
-                  when  oum.oum_user_pk=28917 then 6
-                  when  oum.oum_user_pk=40651 then 7
-                  when  oum.oum_user_pk=16139 then 8
-                  when  oum.oum_user_pk=32272 then 9
-                  when  oum.oum_user_pk=13641 then 10
-              else oum_user_pk
-                  end
-                              offset :offset limit :limit
-                              """
+#     pending_list_query += """ ORDER BY  case when  oum.oum_user_pk=42179 then 1
+#                   when  oum.oum_user_pk=38588 then 2
+#                   when  oum.oum_user_pk=9655 then 3
+#                   when  oum.oum_user_pk=36308 then 4
+#                   when  oum.oum_user_pk=29414 then 5
+#                   when  oum.oum_user_pk=28917 then 6
+#                   when  oum.oum_user_pk=40651 then 7
+#                   when  oum.oum_user_pk=16139 then 8
+#                   when  oum.oum_user_pk=32272 then 9
+#                   when  oum.oum_user_pk=13641 then 10
+#               else oum_user_pk
+#                   end
+#                               offset :offset limit :limit
+#                               """
 
+
+    pending_list_query += """ offset :offset limit :limit
+                              """
     data = request.dbsession.execute(
         text(pending_list_query), condition
     )
@@ -758,3 +761,120 @@ def _execute_raw_query(dbsession, candidate_id):
 # Local Variables:
 # mode: python
 # End:
+
+
+# @svc_candidate_list.get()
+# def get_candidate_list(request):
+#     print("HIIIII")
+#     candidate_id = request.GET.get('candidate_id', None)
+#     status = request.GET.get('status', '')
+#     # status = ''
+#     offset = request.GET.get('offset', 0)
+#     limit = request.GET.get('limit', 10)
+#     level = request.session['level']
+#     category = request.session['category']
+#
+#     condition = {"candidate_id": candidate_id,
+#                  "offset": offset,
+#                  "limit": limit}
+#
+#     pending_list_query = """
+#     SELECT
+#     ocd.ocd_first_name,
+#     oum.oum_candidate_name,
+#     oum.oum_user_id,
+#     oum.oum_user_pk,
+#     oum.oum_mobile_no,
+#     oum.oum_email_id
+#     FROM oes_payment_details opd
+#     INNER JOIN oes_user_master oum ON opd.opd_user_fk = oum.oum_user_pk
+#     INNER JOIN oes_candidate_details ocd ON ocd.ocd_user_fk = oum.oum_user_pk
+#     WHERE opd.opd_validated_status = 'A'
+#    """
+#     if (candidate_id != None and candidate_id != ''):
+#         pending_list_query += "AND oum.oum_candidate_name LIKE '%" + candidate_id + "%' "
+#
+#     if level == 2:
+#         pending_list_query += """
+#         and oum.oum_user_id in (select distinct (candidate_id)
+#         from cv.cv_candidate_document_status
+#         where status = 2 and doc_id not in (10, 9, 6, 25, 13) and level =
+#         :level)"""
+#         condition['level'] = str(level - 1)
+#
+#     if level == 3:
+#         pending_list_query += """
+#         and oum.oum_user_id in (select distinct (candidate_id)
+#         from cv.cv_candidate_document_status
+#         where status = 2 and level = :level
+#         and doc_id not in (10, 9, 6, 25, 13)
+#         and oum.oum_user_id in (select candidate_id from
+#         cv.cv_user_comments where  (level = 2 AND status = 2) or (level =
+#         3)))"""
+#         condition['level'] = str(level - 1)
+#
+#     if (status == "A"):
+#         pending_list_query += """and oum.oum_user_id in
+#         (SELECT DISTINCT(candidate_id) from cv.cv_candidate_document_status
+#         WHERE candidate_id NOT IN(
+#         select candidate_id from cv.cv_candidate_document_status
+#         where status = 2 and level = :level and doc_id not in (10, 9, 6, 25, 13)
+#         group by candidate_id, level having count(*) > 0))"""
+#         condition['level'] = str(level)
+#
+#     if (status == "R"):
+#         pending_list_query += """and oum.oum_user_id in
+#         (select candidate_id from cv.cv_candidate_document_status
+#         where status = 2 and level = :level and doc_id not in (10, 9, 6, 25, 13) group by candidate_id)"""
+#         condition['level'] = str(level)
+#
+#     if (status == "P"):
+#         pending_list_query += """and oum.oum_user_id not in
+#         (select candidate_id from cv.cv_candidate_document_status
+#         where level = :level group by candidate_id)"""
+#         condition['level'] = str(level)
+#
+#     if category == 1:
+#         pending_list_query += "and ocd.ocd_agequotaradiocheck in ('1','4')"
+#     elif category == 2:
+#         pending_list_query += "and ocd.ocd_agequotaradiocheck = '3'"
+#     elif category == 3:
+#         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
+#
+#     print(pending_list_query)
+#     count_query = """select count(*) as total_count
+#     from (""" + pending_list_query + """) abcd"""
+#
+#     pending_list_query += """ ORDER BY  case when  oum.oum_user_pk=42179 then 1
+#                   when  oum.oum_user_pk=38588 then 2
+#                   when  oum.oum_user_pk=9655 then 3
+#                   when  oum.oum_user_pk=36308 then 4
+#                   when  oum.oum_user_pk=29414 then 5
+#                   when  oum.oum_user_pk=28917 then 6
+#                   when  oum.oum_user_pk=40651 then 7
+#                   when  oum.oum_user_pk=16139 then 8
+#                   when  oum.oum_user_pk=32272 then 9
+#                   when  oum.oum_user_pk=13641 then 10
+#               else oum_user_pk
+#                   end
+#                               offset :offset limit :limit
+#                               """
+#
+#     data = request.dbsession.execute(
+#         text(pending_list_query), condition
+#     )
+#
+#     total_count = request.dbsession.execute(
+#         text(count_query), condition
+#     ).first()
+#
+#     candidate_list = _get_candidate_state(request.dbsession,
+#                                           _key_column_generator(data), level)
+#     return {
+#         "code": 1,
+#         "message": "success",
+#         "data": {
+#             "list": candidate_list,
+#             "total_count": total_count[0]
+#         }
+#     }
