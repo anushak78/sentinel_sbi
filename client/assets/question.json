@@ -2255,7 +2255,8 @@
       "question": "Place of Birth",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Given"
       },
       "approved": "1",
       "doc_id": 30,

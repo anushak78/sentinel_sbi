@@ -2181,7 +2181,7 @@
 
     $scope.showApplicationForm = function () {
       let user_id = $scope.rows[$scope.selectedIndex]['oum_user_id'];
-      window.open($scope.urlPath+'/assets/uploads/'+user_id+'/'+user_id+'.pdf');
+      window.open($scope.urlPath + '/assets/uploads/pdf1/' + user_id + '/' + user_id + '.pdf');
       // Http.getLocal("/api/get-pdf", {
       //   user_id: user_id
       // }).then(function (response) {
@@ -2257,6 +2257,19 @@
         var days = a.diff(b, 'days');
         return years + ' years ' + months + ' months ' + days + ' days';
       }
+    };
+    vm.autoCalculateAge = function (value) {
+      value = $scope.candidateDetails['candidate_details'][0]['ocd_date_of_birth'];
+      var a = moment([2019, 7, 1]);
+      var b = moment([value.split('-')[0], value.split('-')[1], value.split('-')[2]]);
+      var years = a.diff(b, 'year');
+      b.add(years, 'years');
+
+      var months = a.diff(b, 'months');
+      b.add(months, 'months');
+
+      var days = a.diff(b, 'days');
+      return years + ' years ' + months + ' months ' + days + ' days';
     };
     $scope.generatePDF = function () {
       // Choose the element that our invoice is rendered in.
