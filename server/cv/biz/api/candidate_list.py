@@ -425,7 +425,8 @@ def get_candidate_details(request):
              oacd4.oacd_duration as pg_duration,
    (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_recognised_university) as pg_recognised_university,
    (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd4.oacd_regular_part_distance) as pg_regular_part_distance,
-   (select osgm_sub_grp_desc from OES_SUBJECT_GRP_MASTER where osgm_sub_grp_pk::varchar=oacd4.oacd_subject_group )as pg_subject_group
+   (select osgm_sub_grp_desc from OES_SUBJECT_GRP_MASTER where osgm_sub_grp_pk::varchar=oacd4.oacd_subject_group )as pg_subject_group,
+    (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd7.oacd_university) as mphill_university
     from oes_candidate_details ocd
     inner join oes_state_master o
     on ocd.ocd_comm_state_fk = o.osm_state_pk
@@ -443,6 +444,7 @@ def get_candidate_details(request):
     left join oes_acdm_cand_details  oacd2 on (oacd2.oacd_user_fk=oum_user_pk and oacd2.oacd_acdm_fk=2)
     left join oes_acdm_cand_details  oacd3 on (oacd3.oacd_user_fk=oum_user_pk and oacd3.oacd_acdm_fk=3)
     left join oes_acdm_cand_details  oacd4 on (oacd4.oacd_user_fk=oum_user_pk and oacd4.oacd_acdm_fk=4)
+    left join oes_acdm_cand_details  oacd7 on (oacd7.oacd_user_fk=oum_user_pk and oacd7.oacd_acdm_fk=7)
     left join oes_cand_additional_details ocad on oum.oum_user_pk = ocad.ocad_user_fk
     left join oes_additional_education_details oaed on oum.oum_user_pk = oaed.oaed_user_fk
     where ocd.ocd_created_by = :candidate_id

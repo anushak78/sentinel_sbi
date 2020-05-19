@@ -1064,6 +1064,13 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['osm_state_name']}}</span>
                       </section>
                     </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Religion.:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
+                      </section>
+                    </div>
                     <div class="clearfix"></div>
                   </div>
 
@@ -1126,6 +1133,13 @@
                                style="font-size: 12px">
                         Date of publication of result:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        M.Phill University:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['mphill_university']}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>
@@ -1260,14 +1274,6 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_subcaste']}}</span>
                       </section>
                     </div>
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        Religion.:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
-                      </section>
-                    </div>
-
                   </div>
 
                   <div ng-if="selectedDocType=='10th / SSLC Certificate'">

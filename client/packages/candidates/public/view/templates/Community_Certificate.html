@@ -46,8 +46,22 @@
                     <input type="radio"
                            ng-model="$ctrl.radio_values.init_doc32"
                            class="q_radio radio32" name="radio32"
-                           value="1">
+                           value="1" ng-change="$ctrl.doc32=''">
                     Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc32=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc32">
+                        <option value="">--Select--</option>
+                        <option value="OC">OC</option>
+                        <option value="OC - Other State">OC - Other State
+                        </option>
+                        <option value="BC">BC</option>
+                        <option value="BC-MUSLIM">BC-MUSLIM</option>
+                        <option value="SC">SC</option>
+                        <option value="SC(A)">SC(A)</option>
+                        <option value="ST">ST</option>
+                        <option value="MBC / DNC">MBC / DNC</option>
+                    </select>
                 </label>
             </div>
             <div class="radio">
@@ -55,7 +69,7 @@
                     <input type="radio"
                            ng-model="$ctrl.radio_values.init_doc32"
                            class="q_radio radio32" name="radio32"
-                           value="2">
+                           value="2" ng-change="$ctrl.doc32=''">
                     Not Matched
                 </label>
                 <label style="{{ $ctrl.radio_values.init_doc32=='2' ? 'display:block':'display:none'}}">
@@ -78,8 +92,8 @@
                     <input type="radio"
                            ng-model="$ctrl.radio_values.init_doc32"
                            class="q_radio radio32" name="radio32"
-                           value="3">
-                    Not Clear
+                           value="3" ng-change="$ctrl.doc32=''">
+                    Not Applicable – OC as per application
                 </label>
             </div>
         </div>
@@ -105,6 +119,14 @@
                     No, not issued in Tamil Nadu
                 </label>
             </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio33" name="radio33"
+                           value="3">
+                    Not Applicable – OC as per application
+                </label>
+            </div>
         </div>
         <div class="clearfix"></div>
         <div class="questions">
@@ -118,6 +140,13 @@
                            value="1" ng-model="$ctrl.radio_values.init_doc39"
                            ng-change="$ctrl.doc39=''">
                     Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc39=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39">
+                        <option value="">--Select--</option>
+                        <option value="Issued with Father’s Name">Issued with Father’s Name</option>
+                        <option value="Issued with Mother’s Name">Issued with Mother’s Name</option>
+                    </select>
                 </label>
             </div>
             <div class="radio">
@@ -142,6 +171,15 @@
                            value="3" ng-model="$ctrl.radio_values.init_doc39"
                            ng-change="$ctrl.doc39=''">
                     Not Clear
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio39" name="radio39"
+                           value="4" ng-model="$ctrl.radio_values.init_doc39"
+                           ng-change="$ctrl.doc39=''">
+                    Not Applicable – OC as per application
                 </label>
             </div>
         </div>
@@ -181,6 +219,15 @@
                     Not Clear
                 </label>
             </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio35" name="radio35"
+                           value="4" ng-model="$ctrl.radio_values.init_doc35"
+                           ng-change="$ctrl.doc35=''">
+                    Not Applicable – OC as per application
+                </label>
+            </div>
         </div>
         <div class="clearfix"></div>
         <div class="questions">
@@ -218,10 +265,19 @@
                     Not Clear
                 </label>
             </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio36" name="radio36"
+                           value="4" ng-model="$ctrl.radio_values.init_doc36"
+                           ng-change="$ctrl.doc36=''">
+                   Not Applicable – OC as per application
+                </label>
+            </div>
         </div>
         <div class="clearfix"></div>
         <div class="questions">
-            Community Certificate Issuing Authority
+            Community Certificate Issued by Competent Authority
         </div>
         <div class="col-sm-12">
             <div class="radio">
@@ -230,7 +286,23 @@
                            class="q_radio radio37" name="radio37"
                            value="1" ng-model="$ctrl.radio_values.init_doc37"
                            ng-change="$ctrl.doc37=''">
-                    Matched
+                    Yes
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc37=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc37">
+                        <option value="">--Select--</option>
+                        <option value="ST - Revenue Divisional Officer / Sub collector / Assistant collector (if the certificate is issued after 11.11.1989)">
+                            ST - Revenue Divisional Officer / Sub collector / Assistant collector (if the certificate is
+                            issued after 11.11.1989)
+                        </option>
+                        <option value="SC/SCA - Tahsildar of native taluk of the candidate">SC/SCA - Tahsildar of native
+                            taluk of the candidate
+                        </option>
+                        <option value="BC /BCM/MBC / DNC – Headquarters / Special / Zonal Deputy Tahsildar">BC /BCM/MBC
+                            / DNC – Headquarters / Special / Zonal Deputy Tahsildar
+                        </option>
+                        <option value="Other state issuing Authority">Other state issuing Authority</option>
+                    </select>
                 </label>
             </div>
             <div class="radio">
@@ -239,7 +311,7 @@
                            class="q_radio radio37" name="radio37"
                            value="2" ng-model="$ctrl.radio_values.init_doc37"
                            ng-change="$ctrl.doc37=''">
-                    Not Matched
+                    No
                 </label>
                 <label style="{{ $ctrl.radio_values.init_doc37=='2' ? 'display:block':'display:none'}}">
                     <select class="form-control" ng-model="$ctrl.doc37">
@@ -265,6 +337,15 @@
                            value="3" ng-model="$ctrl.radio_values.init_doc37"
                            ng-change="$ctrl.doc37=''">
                     Not Clear
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           class="q_radio radio37" name="radio37"
+                           value="4" ng-model="$ctrl.radio_values.init_doc37"
+                           ng-change="$ctrl.doc37=''">
+                    Not Applicable – OC as per application
                 </label>
             </div>
         </div>
@@ -1507,6 +1588,15 @@
                         Not Clear
                     </label>
                 </div>
+                <div class="radio">
+                    <label class="radio-custom">
+                        <input type="radio"
+                               ng-model="$ctrl.radio_values.init_doc38"
+                               class="q_radio radio38" name="radio38"
+                               value="4">
+                        Not Applicable – OC as per application
+                    </label>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -1548,6 +1638,15 @@
                     </option>
                 </select>
             </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio"
+                           ng-model="$ctrl.radio_values.init_doc310"
+                           class="q_radio radio310" name="radio310"
+                           value="4">
+                    Not Clear
+                </label>
             </div>
         </div>
         <div class="clearfix"></div>

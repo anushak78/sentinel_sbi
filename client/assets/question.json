@@ -209,7 +209,7 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -219,7 +219,8 @@
       "question": "Is Community certificate issued by Tamil Nadu Government?",
       "options": {
         "option1": "Yes, issued in Tamil Nadu",
-        "option2": "No, not issued in Tamil Nadu"
+        "option2": "No, not issued in Tamil Nadu",
+        "option3": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -240,7 +241,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -251,18 +253,20 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
       "q_id": 6
     },
     {
-      "question": "Community Certificate Issuing Authority",
+      "question": "Community Certificate Issued by Competent Authority",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -273,7 +277,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -284,7 +289,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable – OC as per application"
       },
       "approved": "1",
       "doc_id": 3,
@@ -294,7 +300,8 @@
       "question": "Religion?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 3,
