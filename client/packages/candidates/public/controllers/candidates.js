@@ -1811,6 +1811,7 @@
         $('#modal-form').modal();
       }
     };
+    //General Information changed
 
     $scope.openDocFile = function (path) {
       window.open(path);
