@@ -2327,7 +2327,8 @@
       "options": {
         "option1": "Matching",
         "option2": "Not matching",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 31,
@@ -2337,7 +2338,8 @@
       "question": "Issuing Authority of Disability Certificate",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 31,
@@ -2347,7 +2349,8 @@
       "question": "Category of Disability",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 31,
@@ -2357,7 +2360,9 @@
       "question": "Percentage of Disability",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 31,

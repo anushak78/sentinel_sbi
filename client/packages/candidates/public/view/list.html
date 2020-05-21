@@ -199,7 +199,8 @@
           <div class="clearfix"></div>
           <div class="col-md-4">
             <section class="panel-body" style="font-size: 12px">
-              Name:<br/><span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
+              Name:<br/><span
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
             </section>
           </div>
           <div class="col-md-4">
@@ -1109,6 +1110,14 @@
                       </section>
                     </div>
                     <div class="clearfix"></div>
+
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Age as on 01.07.2019 (Years, Months, Days) :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_age']}}</span>
+                      </section>
+                    </div>
                   </div>
                   <div ng-if="selectedDocType.indexOf('M.Phil') > -1">
                     <div class="col-md-6">
@@ -1457,14 +1466,6 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_recognised_university']}}</span>
                       </section>
                     </div>
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        UG
-                        Ragular/Part/Distance:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_regular_part_distance']}}</span>
-                      </section>
-                    </div>
                     <div class="clearfix"></div>
                     <div class="col-md-6">
                       <section class="panel-body"
@@ -1537,7 +1538,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Mode of study:<br/><span
+                       UG Mode of study:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</span>
                       </section>
                     </div>
@@ -1547,6 +1548,30 @@
                                style="font-size: 12px">
                         UG Consolidated Marksheet:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_consolidated_marksheet']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Name of institution studied in UG Degree:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_uginstitname']}}</span>
+                      </section>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Is Tamil Part I Language in UG Degree? :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_consolidated_marksheet']}}</span>
+                      </section>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Whether the subject in UG Degree (or) Equivalent subject and the subject for which the candidate
+                        applied for is the same:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_subject_same']}}</span>
                       </section>
                     </div>
                   </div>
@@ -1604,14 +1629,6 @@
                         PG Recognised
                         University:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_recognised_university']}}</span>
-                      </section>
-                    </div>
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        PG
-                        Ragular/Part/Distance:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_regular_part_distance']}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>
@@ -1703,7 +1720,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Mode of study:<br/><span
+                        PG Mode of study:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_mode_of_study']}}</span>
                       </section>
                     </div>
