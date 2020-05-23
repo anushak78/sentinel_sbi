@@ -43,14 +43,14 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio533" name="radio533"
                value="1">
-        Matched
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio533" name="radio533"
                value="2">
-        Not Matched
+        No
       </label>
     </div>
     <div class="radio">
@@ -58,6 +58,47 @@
         <input type="radio" class="q_radio radio533" name="radio533"
                value="3">
         Not Clear
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio533" name="radio533"
+               value="4">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Number of Mark Sheet in B.Ed Degree
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio5310" name="radio5310"
+               value="1"  ng-model="$ctrl.radio_values.init_doc5310"
+               ng-change="$ctrl.doc5310=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio5310" name="radio5310"
+               value="2"  ng-model="$ctrl.radio_values.init_doc5310">
+        Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc5310=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc5310"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio5610" name="radio5310"
+               value="3"  ng-model="$ctrl.radio_values.init_doc5310"
+               ng-change="$ctrl.doc5310=''">
+        Not applicable for Consolidated Mark Sheet
       </label>
     </div>
   </div>
@@ -219,20 +260,13 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio538" name="radio538"
                value="1">
-        Matched
+        Yes – January to December
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio538" name="radio538"
                value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio538" name="radio538"
-               value="3">
         Not Applicable
       </label>
     </div>
@@ -246,20 +280,13 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio539" name="radio539"
                value="1">
-        Matched
+        Yes – June to May
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio539" name="radio539"
                value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio539" name="radio539"
-               value="3">
         Not Applicable
       </label>
     </div>

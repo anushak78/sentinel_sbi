@@ -453,7 +453,8 @@
       "question": "Whether studied PG Degree in Tamil Medium",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -473,7 +474,8 @@
       "question": "Whether studied Ph.D Degree in Tamil Medium",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
@@ -1777,8 +1779,9 @@
     {
       "question": "Whether PG Degree obtained from Foreign Universities ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 25,
@@ -1788,7 +1791,8 @@
       "question": "If Foreign PG Degree, Equivalence Certificate obtained from Association of Indian Universities, New Delhi",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 25,
@@ -1807,8 +1811,8 @@
     {
       "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 25,
@@ -1975,7 +1979,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -1985,7 +1990,8 @@
       "question": "Name of the subject in which the candidate appeared and qualified in SLET",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "NotApplicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -1996,7 +2002,7 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2007,7 +2013,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2017,7 +2024,8 @@
       "question": "Name of the University that conducted SLET?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2038,7 +2046,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2048,7 +2057,8 @@
       "question": "Name of the subject in which the candidate appeared and qualified in NET / CSIR / JRF",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2059,7 +2069,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2070,7 +2081,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 28,
@@ -2967,7 +2979,8 @@
       "question": "Whether the subject in UG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 37,
@@ -5628,8 +5641,8 @@
     {
       "question": "Consolidated Mark sheet for UG Course ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Yes",
+        "option2": "No",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -6236,13 +6249,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 49,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 49,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6294,9 +6319,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 49,
@@ -6305,9 +6329,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 49,
@@ -6338,13 +6361,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 50,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 50,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6396,9 +6431,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 50,
@@ -6407,9 +6441,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 50,
@@ -6440,13 +6473,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 51,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 51,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6498,9 +6543,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 51,
@@ -6509,9 +6553,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 51,
@@ -6542,13 +6585,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 52,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 52,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6600,9 +6655,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 52,
@@ -6611,9 +6665,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 52,
@@ -6644,13 +6697,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 53,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 53,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6702,9 +6767,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 53,
@@ -6713,9 +6777,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 53,
@@ -6746,13 +6809,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 54,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 54,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6804,9 +6879,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 54,
@@ -6815,9 +6889,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 54,
@@ -6848,13 +6921,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 90,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 90,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -6906,9 +6991,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 90,
@@ -6917,9 +7001,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 90,
@@ -6950,13 +7033,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 91,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 91,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -7008,9 +7103,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 91,
@@ -7019,9 +7113,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 91,
@@ -7052,13 +7145,25 @@
     {
       "question": "Consolidated Mark sheet for B.Ed Degree",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 92,
       "q_id": 3
+    },
+    {
+      "question": "Number of Mark Sheet in B.Ed Degree",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
+      },
+      "approved": "1",
+      "doc_id": 92,
+      "q_id": 10
     },
     {
       "question": "Percentage of Marks in B.Ed?",
@@ -7110,9 +7215,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 92,
@@ -7121,9 +7225,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 92,
@@ -7154,9 +7257,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7166,7 +7270,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7184,6 +7289,16 @@
       "approved": "1",
       "doc_id": 55,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7222,9 +7337,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7233,9 +7347,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7266,9 +7379,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 56,
@@ -7278,7 +7392,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 56,
@@ -7296,6 +7411,16 @@
       "approved": "1",
       "doc_id": 56,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7334,9 +7459,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 56,
@@ -7345,9 +7469,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 56,
@@ -7378,9 +7501,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 57,
@@ -7390,7 +7514,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 57,
@@ -7408,6 +7533,16 @@
       "approved": "1",
       "doc_id": 57,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 57,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7446,9 +7581,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 57,
@@ -7457,9 +7591,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 57,
@@ -7490,9 +7623,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 58,
@@ -7502,7 +7636,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 58,
@@ -7520,6 +7655,16 @@
       "approved": "1",
       "doc_id": 58,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 58,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7558,9 +7703,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 58,
@@ -7569,9 +7713,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 58,
@@ -7602,9 +7745,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 59,
@@ -7614,7 +7758,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 59,
@@ -7632,6 +7777,16 @@
       "approved": "1",
       "doc_id": 59,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 59,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7670,9 +7825,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 59,
@@ -7681,9 +7835,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 59,
@@ -7714,9 +7867,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 60,
@@ -7726,7 +7880,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 60,
@@ -7744,6 +7899,16 @@
       "approved": "1",
       "doc_id": 60,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 60,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7782,9 +7947,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 60,
@@ -7793,9 +7957,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 60,
@@ -7826,9 +7989,10 @@
     {
       "question": "Consolidated Mark sheet for M.Ed Degree ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 61,
@@ -7838,7 +8002,8 @@
       "question": "Number of Mark Sheet in M.Ed Degree ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 61,
@@ -7856,6 +8021,16 @@
       "approved": "1",
       "doc_id": 61,
       "q_id": 12
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 16
     },
     {
       "question": "Date of Publications of Results in M.Ed Mark Sheet",
@@ -7894,9 +8069,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 61,
@@ -7905,9 +8079,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 61,
@@ -7950,9 +8123,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -8016,9 +8190,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -8027,9 +8200,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 62,
@@ -8106,9 +8278,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -8172,9 +8345,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -8183,9 +8355,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -8262,9 +8433,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -8328,9 +8500,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -8339,9 +8510,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 64,
@@ -8418,9 +8588,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -8484,9 +8655,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -8495,9 +8665,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 65,
@@ -8574,9 +8743,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -8640,9 +8810,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -8651,9 +8820,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 66,
@@ -8730,9 +8898,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -8796,9 +8965,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -8807,9 +8975,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 67,
@@ -8886,9 +9053,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 80,
@@ -8952,9 +9120,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 80,
@@ -8963,9 +9130,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 80,
@@ -9042,9 +9208,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 81,
@@ -9108,9 +9275,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 81,
@@ -9119,9 +9285,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 81,
@@ -9198,9 +9363,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 82,
@@ -9264,9 +9430,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 82,
@@ -9275,9 +9440,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 82,
@@ -9354,9 +9518,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 83,
@@ -9420,9 +9585,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 83,
@@ -9431,9 +9595,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 83,
@@ -9510,9 +9673,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 84,
@@ -9576,9 +9740,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 84,
@@ -9587,9 +9750,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 84,
@@ -9666,9 +9828,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 85,
@@ -9732,9 +9895,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 85,
@@ -9743,9 +9905,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 85,
@@ -9822,9 +9983,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 86,
@@ -9888,9 +10050,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 86,
@@ -9899,9 +10060,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 86,
@@ -9978,9 +10138,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 87,
@@ -10044,9 +10205,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 87,
@@ -10055,9 +10215,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 87,
@@ -10134,9 +10293,10 @@
     {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 88,
@@ -10200,9 +10360,8 @@
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – January to December",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 88,
@@ -10211,9 +10370,8 @@
     {
       "question": "Studied the Course in Academic Year pattern ( June to May)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes – June to May",
+        "option2": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 88,
@@ -10298,6 +10456,27 @@
       "q_id": 11
     },
     {
+      "question": "Name of Institution studied",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 68,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 68,
+      "q_id": 10
+    },
+    {
       "question": "Percentage of Marks in M.Phil?",
       "options": {
         "option1": "Percentage of Marks is 40 and above but less than 50",
@@ -10308,6 +10487,16 @@
       "approved": "1",
       "doc_id": 68,
       "q_id": 13
+    },
+    {
+      "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Open University/ Correspondence / Distance Education",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 68,
+      "q_id": 14
     }
   ],
   "SLET / NET Exemption certificate": [
@@ -10340,6 +10529,17 @@
       "approved": "1",
       "doc_id": 69,
       "q_id": 3
+    },
+    {
+      "question": " Whether the post applied for Subject is not within the purview of NET and SLET",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 69,
+      "q_id": 4
     }
   ],
   "UG Degree / Equivalent Marksheet 6": [

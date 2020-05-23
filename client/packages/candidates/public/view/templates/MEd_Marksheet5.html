@@ -42,14 +42,14 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio603" name="radio603"
                value="1">
-        Matched
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio603" name="radio603"
                value="2">
-        Not Matched
+        No
       </label>
     </div>
     <div class="radio">
@@ -57,6 +57,13 @@
         <input type="radio" class="q_radio radio603" name="radio603"
                value="3">
         Not Clear
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio603" name="radio603"
+               value="4">
+        Not Applicable
       </label>
     </div>
   </div>
@@ -77,6 +84,13 @@
         <input type="radio" class="q_radio radio604" name="radio604"
                value="2">
         Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio604" name="radio604"
+               value="3">
+        Not Applicable for Consolidated Mark Sheet
       </label>
     </div>
   </div>
@@ -112,6 +126,41 @@
                class="q_radio radio6012" name="radio6012"
                value="2">
         Not Matched
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether the candidate has the required percentage of marks of atleast
+    50% with Ph.D Degree and have obtained their Master’s Degree prior to
+    19 th September 1991 for “General Category” or its equivalent grade from
+    Recognized University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc6016"
+               class="q_radio radio6016" name="radio6016"
+               value="1" ng-change="$ctrl.doc6016 = ''">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc6016"
+               class="q_radio radio6016" name="radio6016"
+               value="2" ng-change="$ctrl.doc6016 = ''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc6016=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6016">
+          <option value="">--Select--</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree </option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
   </div>
@@ -223,24 +272,16 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6014" name="radio6014"
                value="1">
-        Matched
+        Yes – January to December
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6014" name="radio6014"
                value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio6014" name="radio6014"
-               value="3">
         Not Applicable
       </label>
     </div>
-
   </div>
   <div class="clearfix"></div>
   <div class="questions">
@@ -251,20 +292,13 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6015" name="radio6015"
                value="1">
-        Matched
+        Yes – June to May
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6015" name="radio6015"
                value="2">
-        Not Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio6015" name="radio6015"
-               value="3">
         Not Applicable
       </label>
     </div>

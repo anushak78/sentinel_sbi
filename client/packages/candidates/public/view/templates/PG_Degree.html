@@ -363,12 +363,9 @@
           style="{{ $ctrl.radio_values.init_doc2525=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc2525">
           <option value="">--Select--</option>
-          <option value="Initial Missing">University not recognized
-            by UGC
-          </option>
-          <option ng-repeat="u in $ctrl.ugcUniversity" value="{{u}}">
-            {{u}}
-          </option>
+          <option value="Studied in Recognized University">Studied in Recognized University</option>
+          <option value="Studied in Fake University">Studied in Fake University</option>
+          <option value="Studied in Unrecognized University">Studied in Unrecognized University</option>
         </select>
       </label>
     </div>
@@ -382,14 +379,21 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2526" name="radio2526"
                value="1">
-        Matched
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2526" name="radio2526"
                value="2">
-        Not Matched
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio2526" name="radio2526"
+               value="3">
+        Not Applicable
       </label>
     </div>
   </div>
@@ -414,6 +418,14 @@
                ng-model="radio[2527]"
                value="2">
         No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio2527" name="radio2527"
+               ng-model="radio[2527]"
+               value="3">
+        Not Applicable
       </label>
     </div>
   </div>
@@ -465,14 +477,14 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2529" name="radio2529"
                value="1">
-        Matched
+        Yes
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2529" name="radio2529"
                value="2">
-        Not Matched
+        No
       </label>
     </div>
   </div>

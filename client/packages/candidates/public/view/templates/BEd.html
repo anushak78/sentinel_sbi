@@ -197,6 +197,8 @@
                 <label class="radio-custom">
                     <input type="radio" class="q_radio radio3417"
                            name="radio3417"
+                           ng-model="$ctrl.radio_values.init_doc3417"
+                           ng-change="$ctrl.doc3417=''"
                            value="1">
                     Matched
                 </label>
@@ -205,8 +207,16 @@
                 <label class="radio-custom">
                     <input type="radio" class="q_radio radio3417"
                            name="radio3417"
+                           ng-model="$ctrl.radio_values.init_doc3417"
+                           ng-change="$ctrl.doc3417=''"
                            value="2">
                     Not Matched
+                </label>
+                <label style="{{ $ctrl.radio_values.init_doc3417=='2' ? 'display:block':'display:none'}}">
+                    <input type="text" id="doc3417"
+                           ng-model="$ctrl.doc3417"
+                           maxlength="50"
+                           class="form-control">
                 </label>
             </div>
         </div>

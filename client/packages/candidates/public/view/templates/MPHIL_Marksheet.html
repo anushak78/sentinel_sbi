@@ -135,4 +135,93 @@
         </div>
     </div>
     <div class="clearfix"></div>
+    <div class="questions">
+        Name of Institution studied
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio689" name="radio689"
+                       value="1" ng-model="$ctrl.radio_values.init_doc689"
+                       ng-change="$ctrl.doc689=''">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio689" name="radio689"
+                       value="2" ng-model="$ctrl.radio_values.init_doc689"
+                       ng-change="$ctrl.doc689=''">
+                Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc689=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="50" class="form-control"
+                       ng-model="$ctrl.doc689"/>
+            </label>
+        </div><div class="radio">
+        <label class="radio-custom">
+            <input type="radio" class="q_radio radio689" name="radio689"
+                   value="3" ng-model="$ctrl.radio_values.init_doc689"
+                   ng-change="$ctrl.doc689=''">
+            Not Clear
+        </label>
+    </div>
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Mode of Study
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6810" name="radio6810"
+                       value="1">
+                Matched
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6810" name="radio6810"
+                       value="2" ng-model="$ctrl.radio_values.init_doc6810"
+                       ng-change="$ctrl.doc6810=''">
+                Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc6810=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc6810">
+                    <option value="">--Select--</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Distance">Distance</option>
+                    <option value="Part time">Part time</option>
+                    <option value="Correspondence">Correspondence</option>
+                    <option value="Open University">Open University</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Whether obtained M.Phil Degree on or after 03.04.2009 through Open
+        University/ Correspondence / Distance Education
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6814" name="radio6814"
+                       value="1">
+                Yes
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio6814" name="radio6814"
+                       value="2">
+                No
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
 </div>
