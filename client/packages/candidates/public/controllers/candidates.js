@@ -1851,16 +1851,21 @@
       $scope.showSubmit = false;
       $scope.showModalData();
     };
-    $scope.showModalData = function () {
-      $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
-      $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+
+    $scope.setIframe = function () {
       if ($scope.selectedDocType == 'General Information') {
-        $('#docFrame').attr("src", '../assets/uploads/pdf1/'+$scope.rows[$scope.selectedIndex]['oum_user_id']+'/'+$scope.rows[$scope.selectedIndex]['oum_user_id']+'.pdf');
+        $('#docFrame').attr("src", '../assets/uploads/pdf1/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '.pdf');
       } else if ($scope.selectedDocType == 'Order of Qualification') {
         $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
       } else {
         $('#docFrame').attr("src", $scope.selectedDocPath);
       }
+    };
+    $scope.showModalData = function () {
+      console.log('in iframe');
+      $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
+      $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+      $scope.setIframe();
 
       if ($scope.selectedDocNo == 0) {
         $('#modal-form').modal();
@@ -1880,14 +1885,7 @@
         $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
         $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
         console.log('selected doc type');
-        console.log($scope.selectedDocType);
-        if ($scope.selectedDocType == 'General Information') {
-          $('#docFrame').attr("src", '../assets/uploads/pdf1/'+$scope.rows[$scope.selectedIndex]['oum_user_id']+'/'+$scope.rows[$scope.selectedIndex]['oum_user_id']+'.pdf');
-        } else if ($scope.selectedDocType == 'Order of Qualification') {
-          $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
-        } else {
-          $('#docFrame').attr("src", $scope.selectedDocPath);
-        }
+        $scope.setIframe();
         $('#modal-form').modal();
       }
     };
@@ -1897,7 +1895,7 @@
       $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
       $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
       $scope.selectedInnerDoc = 0;
-      $('#docFrame').attr("src", $scope.selectedDocPath);
+      $scope.setIframe();
     };
 
 
