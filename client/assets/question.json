@@ -5616,7 +5616,7 @@
       "q_id": 5
     }
   ],
-  "UG Degree / Equivalent Marksheet 1": [
+  "UG Degree / Equivalent Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {
@@ -5702,7 +5702,7 @@
       },
       "approved": "1",
       "doc_id": 44,
-      "q_id": 21
+      "q_id": 8
     },
     {
       "question": "Period of Study in the UG Degree?",
@@ -8242,7 +8242,7 @@
       "q_id": 16
     }
   ],
-  "PG Degree / Equivalent Marksheet 1": [
+  "PG Degree / Equivalent Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {

@@ -982,11 +982,8 @@
       <div class="modal-content" style="height: 100% !important;">
         <div class="modal-body" style="height: 100% !important;">
           <div class="row" style="height: 100% !important;">
-            <div class="col-sm-7" style="height: 100% !important;">
-              <iframe id="docFrame"
-                      style="height: 100% !important;width: 100%">
+            <div class="col-sm-7" id="iframeContainer" style="height: 100% !important;overflow-y: scroll">
 
-              </iframe>
             </div>
             <div class="col-sm-5" style="height: 100% !important;">
               <section class="panel-default"
@@ -2236,7 +2233,7 @@
                       <work48></work48>
                     </div>
                     <div id="44"
-                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 1'">
+                         ng-if="selectedDocType=='UG Degree / Equivalent Marksheet'">
                       <ug-marksheet1></ug-marksheet1>
                     </div>
                     <div id="45"
@@ -2324,7 +2321,7 @@
                       <pg-marksheet-consolidated></pg-marksheet-consolidated>
                     </div>
                     <div id="63"
-                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet 1'">
+                         ng-if="selectedDocType=='PG Degree / Equivalent Marksheet'">
                       <pg-marksheet1></pg-marksheet1>
                     </div>
                     <div id="64"

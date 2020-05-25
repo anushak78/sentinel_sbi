@@ -1633,7 +1633,7 @@
           "Work Experience 46": 'Work Experience 46',
           "Work Experience 47": 'Work Experience 47',
           "Work Experience 48": 'Work Experience 48',
-          "UG Degree / Equivalent Marksheet 1": 'UG Degree / Equivalent Marksheet 1',
+          "UG Degree / Equivalent Marksheet": 'UG Degree / Equivalent Marksheet',
           "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
           "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
           "UG Degree / Equivalent Marksheet 4": 'UG Degree / Equivalent Marksheet 4',
@@ -1664,7 +1664,7 @@
           "M.Ed Degree / Equivalent Marksheet 5": 'M.Ed Degree / Equivalent Marksheet 5',
           "M.Ed Degree / Equivalent Marksheet 6": 'M.Ed Degree / Equivalent Marksheet 6',
           "PG Degree / Equivalent Consolidated Marksheet": 'PG Degree / Equivalent Consolidated Marksheet',
-          "PG Degree / Equivalent Marksheet 1": 'PG Degree / Equivalent Marksheet 1',
+          "PG Degree / Equivalent Marksheet": 'PG Degree / Equivalent Marksheet',
           "PG Degree / Equivalent Marksheet 2": 'PG Degree / Equivalent Marksheet 2',
           "PG Degree / Equivalent Marksheet 3": 'PG Degree / Equivalent Marksheet 3',
           "PG Degree / Equivalent Marksheet 4": 'PG Degree / Equivalent Marksheet 4',
@@ -1744,6 +1744,15 @@
       }
     };
 
+    $scope.checkArray = function (value) {
+      for (var i in $scope.newDocumentList) {
+        if ($scope.newDocumentList[i]['odm_name'].includes(value)) {
+          return true;
+          break;
+        }
+      }
+      return false;
+    };
     $scope.pageChangeHandler($scope.currentPage);
     $scope.showVerify = true;
     $scope.getDocumentData = function (candidate_id) {
@@ -1753,6 +1762,20 @@
         console.log(object);
         if (object['code'] == 1) {
           $scope.candidateDetails = object['data'];
+          $scope.newDocumentList = [];
+          $scope.allDocumentList = $scope.candidateDetails['document_list'];
+          for (var i in $scope.candidateDetails['document_list']) {
+            var name = $scope.candidateDetails['document_list'][i]['odm_name'];
+            name = name.substring(0, name.length - 2);
+            if (!$scope.checkArray(name)) {
+              console.log(name);
+              if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet') {
+                $scope.candidateDetails['document_list'][i]['odm_name'] = name;
+              }
+              $scope.newDocumentList.push($scope.candidateDetails['document_list'][i]);
+            }
+          }
+          $scope.candidateDetails['document_list'] = $scope.newDocumentList;
           $scope.finalJsonData = {};
           $scope.workExperience = [];
           $scope.resetValues();
@@ -1763,15 +1786,11 @@
             $scope.showVerify = false;
             //Document is submitted and to view the questions make the final json data object as it is
             for (var i in $scope.candidateDetails['document_list']) {
-              // console.log($scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']]);
               $scope.finalJsonData[$scope.candidateDetails['document_list'][i]['odm_name']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0];
               if ($scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level].length > 0) {
                 $scope.radio[$scope.documentWithQuestions[$scope.candidateDetails['document_list'][i]['odm_name']][0]['doc_id']] = $scope.candidateDetails['document_list'][i]['status']['level' + $rootScope.userData.level][0]['answers'][0]['ans_id']
               }
             }
-
-            console.log('final json data');
-            console.log($scope.finalJsonData);
             $scope.selectedInnerDoc = 0;
           }
           $('#sideNav').animate({'right': '0%'}, 300);
@@ -1789,7 +1808,10 @@
                 }
                 var startDate = moment(object['data']['work_experience'][i]['owe_yoe_from'], "DD-MMM-YYYY");
               }
-              $scope.noOfDays += endDate.diff(startDate, 'days');
+              if (typeof startDate !== 'undefined' && typeof endDate !== 'undefined') {
+                $scope.noOfDays += endDate.diff(startDate, 'days');
+              }
+
             }
             console.log($scope.noOfDays);
             $scope.totalExperience = Math.floor($scope.noOfDays / 365) + ' Years ' + Math.floor(($scope.noOfDays % 365) / 30) + ' Months ' + Math.floor((306 % 365) % 30) + ' Days';
@@ -1853,12 +1875,44 @@
     };
 
     $scope.setIframe = function () {
-      if ($scope.selectedDocType == 'General Information') {
-        $('#docFrame').attr("src", '../assets/uploads/pdf1/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '.pdf');
-      } else if ($scope.selectedDocType == 'Order of Qualification') {
-        $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
+      console.log('$scope.selectedDocType');
+      console.log($scope.selectedDocType);
+      document.getElementById('iframeContainer').innerHTML = '';
+      if ($scope.selectedDocType === 'UG Degree / Equivalent Marksheet') {
+        console.log($scope.allDocumentList);
+        for (var j in $scope.allDocumentList) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('UGMARK')) {
+            var iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            document.getElementById('iframeContainer').append(iframe);
+          }
+        }
+      } else if ($scope.selectedDocType === 'PG Degree / Equivalent Marksheet') {
+        console.log($scope.allDocumentList);
+        for (var j in $scope.allDocumentList) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('PGMRK')) {
+            var iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            document.getElementById('iframeContainer').append(iframe);
+          }
+        }
       } else {
-        $('#docFrame').attr("src", $scope.selectedDocPath);
+        var iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        if ($scope.selectedDocType == 'General Information') {
+          iframe.src = '../assets/uploads/pdf1/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '/' + $scope.rows[$scope.selectedIndex]['oum_user_id'] + '.pdf';
+        } else if ($scope.selectedDocType == 'Order of Qualification') {
+          $('#docFrame').attr("src", '../assets/src/images/order_of_edu.svg');
+          iframe.src = '../assets/src/images/order_of_edu.svg';
+        } else {
+          iframe.src = $scope.selectedDocPath;
+        }
+        document.getElementById('iframeContainer').append(iframe);
       }
     };
     $scope.showModalData = function () {
