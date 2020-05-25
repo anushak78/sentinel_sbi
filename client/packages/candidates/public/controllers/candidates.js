@@ -1903,7 +1903,7 @@
       }  else if ($scope.selectedDocType === 'Work Experience') {
         console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
-          if ($scope.allDocumentList[j]['ocd_flag'].includes('WORK')) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('Work Experience')) {
             var iframe = document.createElement('iframe');
             iframe.width = '100%';
             iframe.height = '100%';
