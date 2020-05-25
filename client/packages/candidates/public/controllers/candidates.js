@@ -1585,7 +1585,7 @@
           "Conduct certificate from head of institution last studied": 'Conduct Certificate',
           "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
           "UG Degree / Equivalent Consolidated Marksheet": 'UG Degree Consolidated Marksheet',
-          "Work Experience 1": 'Work Experience 1',
+          "Work Experience": 'Work Experience',
           "Work Experience 2": 'Work Experience 2',
           "Work Experience 3": 'Work Experience 3',
           "Work Experience 4": 'Work Experience 4',
@@ -1769,7 +1769,7 @@
             name = name.substring(0, name.length - 2);
             if (!$scope.checkArray(name)) {
               console.log(name);
-              if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet') {
+              if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet' || name == 'Work Experience') {
                 $scope.candidateDetails['document_list'][i]['odm_name'] = name;
               }
               $scope.newDocumentList.push($scope.candidateDetails['document_list'][i]);
