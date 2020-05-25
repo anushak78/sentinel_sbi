@@ -1900,6 +1900,17 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
+      }  else if ($scope.selectedDocType === 'Work Experience') {
+        console.log($scope.allDocumentList);
+        for (var j in $scope.allDocumentList) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('WORK')) {
+            var iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            document.getElementById('iframeContainer').append(iframe);
+          }
+        }
       } else {
         var iframe = document.createElement('iframe');
         iframe.width = '100%';
