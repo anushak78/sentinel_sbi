@@ -77,21 +77,28 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio347" name="radio347"
-                       value="1">
+                       value="1"  ng-model="$ctrl.radio_values.init_doc347"
+                       ng-change="$ctrl.doc347=''">
                 Matched
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio347" name="radio347"
-                       value="2">
+                       value="2"  ng-model="$ctrl.radio_values.init_doc347"
+                       ng-change="$ctrl.doc347=''">
                 Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc347=='2' ? 'display:block':'display:none'}}">
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc347"/>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio347" name="radio347"
-                       value="3">
+                       value="3" ng-model="$ctrl.radio_values.init_doc347"
+                       ng-change="$ctrl.doc347=''">
                 Not Clear
             </label>
         </div>
@@ -202,6 +209,12 @@
                            value="1">
                     Matched
                 </label>
+                <label style="{{ $ctrl.radio_values.init_doc3417=='1' ? 'display:block':'display:none'}}">
+                    <input type="text"
+                           ng-model="$ctrl.doc3417"
+                           maxlength="50"
+                           class="form-control">
+                </label>
             </div>
             <div class="radio">
                 <label class="radio-custom">
@@ -213,7 +226,7 @@
                     Not Matched
                 </label>
                 <label style="{{ $ctrl.radio_values.init_doc3417=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" id="doc3417"
+                    <input type="text"
                            ng-model="$ctrl.doc3417"
                            maxlength="50"
                            class="form-control">

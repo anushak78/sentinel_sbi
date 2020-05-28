@@ -23,7 +23,7 @@
         Not Relevant
       </label>
       <label
-        style="{{ $ctrl.radio_values.init_doc552=='2' ? 'display:block':'display:none'}}">
+          style="{{ $ctrl.radio_values.init_doc552=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc552">
           <option value="">--Select--</option>
           <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
@@ -96,36 +96,83 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Percentage of Marks in M.Ed?
+    Whether the candidate has the required percentage of marks of atleast 55% for “General Category” or its equivalent
+    grade from Recognized University
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio"
-               ng-model="$ctrl.radio_values.init_doc5512"
-               class="q_radio radio5512" name="radio5512"
-               value="1">
-        Matched
+               ng-model="$ctrl.radio_values.init_doc5517"
+               class="q_radio radio5517" name="radio5517"
+               value="1" ng-change="$ctrl.doc5517 = ''">
+        Yes
       </label>
-      <label style="{{ $ctrl.radio_values.init_doc5512=='1' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc5512">
+      <label style="{{ $ctrl.radio_values.init_doc5517=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5517">
           <option value="">--Select--</option>
-          <option value="Percentage of Marks is 55 and above but less than 40 ">Percentage of Marks is 55 and above but less than 40 </option>
-          <option value="Percentage of Marks is 40 and above but less than 50">Percentage of Marks is 40 and above but less than 50
-          </option>
-          <option value="Percentage of Marks is 50 and above but less than 55">Percentage of Marks is 50 and above but less than 55</option>
-          <option value="Percentage of Marks is 55 and above but less than 60">Percentage of Marks is 55 and above but less than 60</option>
-          <option value="Percentage of Marks is 60 and above">Percentage of Marks is 60 and above</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
         </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio"
-               ng-model="$ctrl.radio_values.init_doc5512"
-               class="q_radio radio5512" name="radio5512"
-               value="2">
-        Not Matched
+               ng-model="$ctrl.radio_values.init_doc5517"
+               class="q_radio radio5517" name="radio5517"
+               value="2" ng-change="$ctrl.doc5516 = ''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc5517=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5517">
+          <option value="">--Select--</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether the candidate has the required percentage of marks of atleast 50% for “BC / BCM / MBC & DNC / SC / SCA / ST
+    and PWD Candidates or its equivalent grade from Recognized University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc5518"
+               class="q_radio radio5518" name="radio5518"
+               value="1" ng-change="$ctrl.doc5518 = ''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc5518=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5518">
+          <option value="">--Select--</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio"
+               ng-model="$ctrl.radio_values.init_doc5518"
+               class="q_radio radio5518" name="radio5518"
+               value="2" ng-change="$ctrl.doc5518= ''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc5518=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5518">
+          <option value="">--Select--</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
   </div>
@@ -145,6 +192,14 @@
                value="1" ng-change="$ctrl.doc5516 = ''">
         Yes
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc5516=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5516">
+          <option value="">--Select--</option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
+          <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
+          <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
+        </select>
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -157,7 +212,7 @@
       <label style="{{ $ctrl.radio_values.init_doc5516=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc5516">
           <option value="">--Select--</option>
-          <option value="First Class as per PG Degree ">First Class as per PG Degree </option>
+          <option value="First Class as per PG Degree ">First Class as per PG Degree</option>
           <option value="Mark Sheet based on Grade">Mark Sheet based on Grade</option>
           <option value="Mark Sheet based on Percentage">Mark Sheet based on Percentage</option>
         </select>
@@ -176,6 +231,11 @@
                ng-change="$ctrl.doc5513=''">
         Matched
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc5513=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc5513"
+               class="doc5513 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -184,16 +244,16 @@
                ng-change="$ctrl.doc5513=''">
         Not Matched
       </label>
-       <label style="{{ $ctrl.radio_values.init_doc5513=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc5513" data-date-format="YYYY-MM-DD"
-                       ng-model="$ctrl.doc5513"
-                       class="modified_date input-sm input-s datepicker-input form-control">
-            </label>
+      <label style="{{ $ctrl.radio_values.init_doc5513=='2' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc5513"
+               class="doc5513 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio5513" name="radio5513"
-               value="3">
+               value="3" ng-model="$ctrl.radio_values.init_doc5513" ng-change="$ctrl.doc5513=''">
         Not Clear
       </label>
     </div>
@@ -207,7 +267,7 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio559" name="radio559"
                value="1" ng-model="$ctrl.radio_values.init_doc559"
-                       ng-change="$ctrl.doc559=''">
+               ng-change="$ctrl.doc559=''">
         Matched
       </label>
     </div>
@@ -215,13 +275,21 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio559" name="radio559"
                value="2" ng-model="$ctrl.radio_values.init_doc559"
-                       ng-change="$ctrl.doc559=''">
+               ng-change="$ctrl.doc559=''">
         Not Matched
       </label>
-        <label
-              style="{{ $ctrl.radio_values.init_doc559=='2' ? 'display:block':'display:none'}}">
-                <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc559"/>
-            </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc559=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc559"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio559" name="radio5513"
+               value="3" ng-model="$ctrl.radio_values.init_doc559"
+               ng-change="$ctrl.doc559=''">
+        Not Clear
+      </label>
     </div>
   </div>
   <div class="clearfix"></div>
@@ -230,36 +298,41 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio5510" name="radio5510"
-               value="1">
-        Regular
+               value="1" ng-model="$ctrl.radio_values.init_doc5510"
+               ng-change="$ctrl.doc5510=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc5510=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5510">
+          <option value="">--Select--</option>
+          <option value="Regular">Regular</option>
+          <option value="Distance">Distance</option>
+          <option value="Part time">Part time</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio5510" name="radio5510"
-               value="2">
-        Distance
+               value="2" ng-model="$ctrl.radio_values.init_doc5510"
+               ng-change="$ctrl.doc5510=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc5510=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc5510">
+          <option value="">--Select--</option>
+          <option value="Regular">Regular</option>
+          <option value="Distance">Distance</option>
+          <option value="Part time">Part time</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio5510" name="radio5510"
-               value="3">
-        Part time
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio5510" name="radio5510"
-               value="4">
-        Correspondence
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio5510" name="radio5510"
-               value="5">
-        Open University
+               value="3" ng-model="$ctrl.radio_values.init_doc5510"
+               ng-change="$ctrl.doc5510=''">
+        Not Clear
       </label>
     </div>
   </div>

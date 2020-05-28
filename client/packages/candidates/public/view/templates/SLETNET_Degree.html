@@ -88,15 +88,25 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio283" name="radio283"
-                       value="1">
+                       value="1" ng-model="$ctrl.radio_values.init_doc283"
+                       ng-change="$ctrl.doc283=''" >
                 Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc283=='1' ? 'display:block':'display:none'}}">
+                <input type="text" ng-model="$ctrl.doc283"
+                       class="form-control">
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio283" name="radio283"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc283"
+                       ng-change="$ctrl.doc283=''" >
                 Not Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc283=='2' ? 'display:block':'display:none'}}">
+                <input type="text" ng-model="$ctrl.doc283"
+                       class="form-control">
             </label>
         </div>
         <div class="radio">
@@ -115,15 +125,33 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio285" name="radio285"
-                       value="1">
+                       value="1" ng-model="$ctrl.radio_values.init_doc285"
+                       ng-change="$ctrl.doc285=''" >
                 Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc285=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc285">
+                    <option value="">--Select--</option>
+                    <option value="Passed SLET">Passed SLET</option>
+                    <option value="Not Passed SLET">Not Passed SLET</option>
+                </select>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio285" name="radio285"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc285"
+                       ng-change="$ctrl.doc285=''">
                 Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc285=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc285">
+                    <option value="">--Select--</option>
+                    <option value="Passed SLET">Passed SLET</option>
+                    <option value="Not Passed SLET">Not Passed SLET</option>
+                </select>
             </label>
         </div>
         <div class="radio">
@@ -292,22 +320,25 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2810" name="radio2810"
-                       value="1">
+                       value="1"  ng-model="$ctrl.radio_values.init_doc2810"
+                       ng-change="$ctrl.doc2810=''" >
                 Matched
             </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2810" name="radio2810"
-                       value="2">
-                Not Matched
+            <label style="{{ $ctrl.radio_values.init_doc2810=='1' ? 'display:block':'display:none'}}">
+                <input type="text" ng-model="$ctrl.doc2810"
+                       class="form-control">
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2810" name="radio2810"
-                       value="3">
-                Not Clear
+                       value="2"   ng-model="$ctrl.radio_values.init_doc2810"
+                       ng-change="$ctrl.doc2810=''">
+                Not Matched
+            </label>
+            <label style="{{ $ctrl.radio_values.init_doc2810=='2' ? 'display:block':'display:none'}}">
+                <input type="text" ng-model="$ctrl.doc2810"
+                       class="form-control">
             </label>
         </div>
         <div class="radio">
@@ -326,15 +357,34 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2811" name="radio2811"
-                       value="1">
+                       value="1"  ng-model="$ctrl.radio_values.init_doc2811"
+                       ng-change="$ctrl.doc2811=''">
                 Matched
             </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc2811=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc2811">
+                    <option value="">--Select--</option>
+                    <option value="Passed NET / CSIR / JRF">Passed NET / CSIR / JRF</option>
+                    <option value="Not Passed NET / CSIR / JRF">Not Passed NET / CSIR / JRF</option>
+                </select>
+            </label>
+
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2811" name="radio2811"
-                       value="2">
+                       value="2"  ng-model="$ctrl.radio_values.init_doc2811"
+                       ng-change="$ctrl.doc2811=''">
                 Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc2811=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc2811">
+                    <option value="">--Select--</option>
+                    <option value="Passed SLET">Passed NET / CSIR / JRF</option>
+                    <option value="Not Passed SLET">Not Passed NET / CSIR / JRF</option>
+                </select>
             </label>
         </div>
         <div class="radio">

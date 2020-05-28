@@ -103,54 +103,6 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Percentage of Marks in B.Ed?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="1">
-        Percentage of Marks is 35 and above but less than 40
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="2">
-        Percentage of Marks is 40 and above but less than 50
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="3">
-        Percentage of Marks is 50 and above but less than 55
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="4">
-        Percentage of Marks is 55 and above but less than 60
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="5">
-        Percentage of Marks is 60 and above
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio504" name="radio504"
-               value="6">
-        Percentage of Marks is less than 35
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
     Date of Publications of Results in B.Ed Mark Sheet
   </div>
   <div class="col-sm-12">
@@ -161,6 +113,11 @@
                ng-change="$ctrl.doc505=''">
         Matched
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc505=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc505"
+               class="doc505 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -170,9 +127,9 @@
         Not Matched
       </label>
        <label style="{{ $ctrl.radio_values.init_doc505=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc505" data-date-format="YYYY-MM-DD"
+                <input type="text" data-date-format="YYYY-MM-DD"
                        ng-model="$ctrl.doc505"
-                       class="modified_date input-sm input-s datepicker-input form-control">
+                       class="doc505 modified_date input-sm input-s datepicker-input form-control">
             </label>
     </div>
     <div class="radio">
@@ -217,36 +174,46 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio507" name="radio507"
-               value="1">
-        Regular
+               value="1" ng-model="$ctrl.radio_values.init_doc507"
+               ng-change="$ctrl.doc507=''">
+        Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc507=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc507">
+          <option value="">--Select--</option>
+          <option value="Regular">Regular</option>
+          <option value="Distance">Distance</option>
+          <option value="Part time">Part time</option>
+          <option value="Correspondence">Correspondence</option>
+          <option value="Open University">Open University</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio507" name="radio507"
-               value="2">
-        Distance
+               value="2" ng-model="$ctrl.radio_values.init_doc507"
+               ng-change="$ctrl.doc507=''">
+        Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc507=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc507">
+          <option value="">--Select--</option>
+          <option value="Regular">Regular</option>
+          <option value="Distance">Distance</option>
+          <option value="Part time">Part time</option>
+          <option value="Correspondence">Correspondence</option>
+          <option value="Open University">Open University</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio507" name="radio507"
                value="3">
-        Part time
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio507" name="radio507"
-               value="4">
-        Correspondence
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio507" name="radio507"
-               value="5">
-        Open University
+        Not Clear
       </label>
     </div>
   </div>

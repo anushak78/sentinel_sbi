@@ -127,6 +127,13 @@
                 Not Matching
             </label>
         </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio298" name="radio298"
+                       value="3">
+                Not Clear
+            </label>
+        </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
@@ -164,73 +171,6 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Name of Institution studied
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio299" name="radio299"
-                       value="1" ng-model="$ctrl.radio_values.init_doc299"
-                       ng-change="$ctrl.doc299=''">
-                Matching
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio299" name="radio299"
-                       value="2" ng-model="$ctrl.radio_values.init_doc299"
-                       ng-change="$ctrl.doc299=''">
-                Not Matching
-            </label>
-            <label
-                    style="{{ $ctrl.radio_values.init_doc299=='2' ? 'display:block':'display:none'}}">
-                <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc299"/>
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
-        Mode of Study
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2910" name="radio2910"
-                       value="1">
-                Regular
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2910" name="radio2910"
-                       value="2">
-                Distance
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2910" name="radio2910"
-                       value="3">
-                Part time
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2910" name="radio2910"
-                       value="4">
-                Correspondence
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio2910" name="radio2910"
-                       value="5">
-                Open University
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
         Month & Year of Passing in the PHD Certificate?
     </div>
     <div class="col-sm-12">
@@ -241,6 +181,10 @@
                        value="1">
                 Matching
             </label>
+            <label style="{{ $ctrl.radio_values.init_doc294=='1' ? 'display:block':'display:none'}}">
+                <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc294"
+                       class="doc294 modified_date input-sm input-s datepicker-input form-control">
+            </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
@@ -249,8 +193,8 @@
                 Not matching
             </label>
             <label style="{{ $ctrl.radio_values.init_doc294=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc294" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc294"
-                       class="modified_date input-sm input-s datepicker-input form-control">
+                <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc294"
+                       class="doc294 modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
         <div class="radio">
@@ -297,14 +241,21 @@
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2913" name="radio2913"
                        value="1">
-                Matched
+                Yes
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio2913" name="radio2913"
                        value="2">
-                Not Matched
+                No
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2913" name="radio2913"
+                       value="3">
+                Not Applicable
             </label>
         </div>
     </div>
@@ -326,6 +277,14 @@
                        ng-model="radio[2914]"
                        value="2">
                 No
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio2914" name="radio2914"
+                       ng-model="radio[2914]"
+                       value="3">
+                Not Applicable
             </label>
         </div>
     </div>
@@ -362,39 +321,6 @@
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>
-
-    <div class="questions">
-        Date of Publications of Results in Viva-voce of Ph.D Degree
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc2916" class="q_radio radio2916"
-                       ng-change="$ctrl.doc2916=''" name="radio2916"
-                       value="1">
-                Matching
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc2916" class="q_radio radio2916"
-                       name="radio2916" value="2">
-                Not matching
-            </label>
-            <label style="{{ $ctrl.radio_values.init_doc2916=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc2916" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc2916"
-                       class="modified_date input-sm input-s datepicker-input form-control">
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" ng-model="$ctrl.radio_values.init_doc2916" class="q_radio radio2916"
-                       ng-change="$ctrl.doc2916=''" name="radio2916"
-                       value="3">
-                Not Clear
-            </label>
-        </div>
     </div>
     <div class="clearfix"></div>
 </div>

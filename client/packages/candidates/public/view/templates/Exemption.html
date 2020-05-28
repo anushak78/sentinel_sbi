@@ -10,15 +10,33 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio692" name="radio692"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc692"
+               ng-change="$ctrl.doc692=''">
         Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc692=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc692">
+          <option value="">--Select--</option>
+          <option value="Yes – Claimed exemption from NET / SLET">Yes – Claimed exemption from NET / SLET</option>
+          <option value="No – No Claimed exemption from NET / SLET">No – No Claimed exemption from NET / SLET</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio692" name="radio692"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc692"
+               ng-change="$ctrl.doc692=''">
         Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc692=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc692">
+          <option value="">--Select--</option>
+          <option value="Yes – Claimed exemption from NET / SLET">Yes – Claimed exemption from NET / SLET</option>
+          <option value="No – No Claimed exemption from NET / SLET">No – No Claimed exemption from NET / SLET</option>
+        </select>
       </label>
     </div>
   </div>
@@ -55,21 +73,23 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Whether the post applied for Subject is not within the purview of NET and SLET
+    Whether the post applied for Subject is not within the purview of NET and
+    SLET (List of NET and SLET not conducted subjects to be displayed – Check
+    the details of application form for the post applied for subject)
   </div>
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio694" name="radio694"
                value="1">
-        Yes
+        Yes – The post applied for subject is not within the purview of NET and SLET
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio694" name="radio694"
                value="2">
-        No
+        No - The post applied for subject is within the purview of NET and SLET
       </label>
     </div>
     <div class="radio">

@@ -163,11 +163,6 @@
                ng-change="$ctrl.doc2510=''">
         No
       </label>
-      <label
-          style="{{ $ctrl.radio_values.init_doc2510 == '2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="50" class="form-control"
-               ng-model="$ctrl.doc2510"/>
-      </label>
     </div>
   </div>
   <div class="clearfix"></div>
@@ -182,6 +177,11 @@
                  name="radio2511" ng-model="$ctrl.radio_values.init_doc2511"
                  value="1">
           Matched
+        </label>
+        <label
+            style="{{ $ctrl.radio_values.init_doc2511 == '1' ? 'display:block':'display:none'}}">
+          <input type="text" maxlength="20" class="form-control"
+                 ng-model="$ctrl.doc2511"/>
         </label>
       </div>
       <div class="radio">
@@ -208,7 +208,7 @@
     </div>
   </div>
   <div class="clearfix"></div>
-  <div ng-if="$ctrl.radio_values.init_doc2511 == 1">
+  <div>
     <div class="questions">
       Is the document relevant to the claim of equivalence of PG Degree?
     </div>
@@ -294,6 +294,12 @@
                value="1">
         Matched
       </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc2515=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc2515"
+               class="doc2515 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -304,9 +310,9 @@
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc2515=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc2515" data-date-format="YYYY-MM-DD"
+        <input type="text" data-date-format="YYYY-MM-DD"
                ng-model="$ctrl.doc2515"
-               class="modified_date input-sm input-s datepicker-input form-control">
+               class="doc2515 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
@@ -327,15 +333,33 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2524" name="radio2524"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc2524"
+               ng-change="$ctrl.doc2524=''">
         Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc2524=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc2524">
+          <option value="">--Select--</option>
+          <option value="Studied PG Degree in Tamil Medium">Studied PG Degree in Tamil Medium</option>
+          <option value="Not studied PG Degree in Tamil Medium">Not studied PG Degree in Tamil Medium</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio2524" name="radio2524"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc2524"
+               ng-change="$ctrl.doc2524=''">
         Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc2524=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc2524">
+          <option value="">--Select--</option>
+          <option value="Studied PG Degree in Tamil Medium">Studied PG Degree in Tamil Medium</option>
+          <option value="Not studied PG Degree in Tamil Medium">Not studied PG Degree in Tamil Medium</option>
+        </select>
       </label>
     </div>
   </div>
@@ -350,6 +374,15 @@
                value="1" ng-model="$ctrl.radio_values.init_doc2525"
                ng-change="$ctrl.doc2525=''">
         Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc2525=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc2525">
+          <option value="">--Select--</option>
+          <option value="Studied in Recognized University">Studied in Recognized University</option>
+          <option value="Studied in Fake University">Studied in Fake University</option>
+          <option value="Studied in Unrecognized University">Studied in Unrecognized University</option>
+        </select>
       </label>
     </div>
     <div class="radio">

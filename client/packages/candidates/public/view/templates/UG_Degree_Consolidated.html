@@ -42,14 +42,14 @@
         <label class="radio-custom">
             <input type="radio" class="q_radio radio386" name="radio386"
                    value="1">
-            Matched
+            Yes
         </label>
     </div>
     <div class="radio">
         <label class="radio-custom">
             <input type="radio" class="q_radio radio386" name="radio386"
                    value="2">
-            Not Matched
+            No
         </label>
     </div>
     <div class="radio">
@@ -57,6 +57,13 @@
             <input type="radio" class="q_radio radio386" name="radio386"
                    value="3">
             Not Clear
+        </label>
+    </div>
+    <div class="radio">
+        <label class="radio-custom">
+            <input type="radio" class="q_radio radio386" name="radio386"
+                   value="4">
+            Not Applicable
         </label>
     </div>
 </div>
@@ -90,7 +97,7 @@
             <input type="radio" class="q_radio radio387" name="radio387"
                    value="3" ng-model="$ctrl.radio_values.init_doc387"
                    ng-change="$ctrl.doc387=''">
-            Not Applicable
+            Not Applicable for Consolidated Mark Sheet
         </label>
     </div>
 </div>
@@ -198,40 +205,6 @@
 </div>
 <div class="clearfix"></div>
 <div class="questions">
-    Percentage of Marks in UG?
-</div>
-<div class="col-sm-12">
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3821" name="radio3821"
-                   value="1">
-            Percentage of Marks is between 35 to 40
-        </label>
-    </div>
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3821" name="radio3821"
-                   value="2">
-            Percentage of Marks is greater than 40
-        </label>
-    </div>
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3821" name="radio3821"
-                   value="3">
-            Percentage of Marks is less than 35
-        </label>
-    </div>
-    <div class="radio">
-        <label class="radio-custom">
-            <input type="radio" class="q_radio radio3821" name="radio3821"
-                   value="4">
-            Not Clear
-        </label>
-    </div>
-</div>
-<div class="clearfix"></div>
-<div class="questions">
     Period of Study in the UG Degree
 </div>
 <div class="col-sm-12">
@@ -278,12 +251,29 @@
                    value="1">
             Matched
         </label>
+        <label
+            style="{{ $ctrl.radio_values.init_doc3820=='1' ? 'display:block':'display:none'}}">
+            <select class="form-control" ng-model="$ctrl.doc3820">
+                <option value="">--Select--</option>
+                <option value="Regular">Regular
+                </option>
+                <option value="Distance">Distance
+                </option>
+                <option value="Part time">Part time
+                </option>
+                <option value="Correspondence">Correspondence
+                </option>
+                <option value="Correspondence">Open University
+                </option>
+            </select>
+        </label>
     </div>
     <div class="radio">
         <label class="radio-custom">
             <input type="radio" ng-model="$ctrl.radio_values.init_doc3820"
                    class="q_radio radio3820" name="radio3820"
-                   value="2">
+                   value="2"
+                   ng-change="$ctrl.doc3820=''">
             Not Matched
         </label>
         <label

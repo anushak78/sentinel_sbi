@@ -36,46 +36,6 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Name in the PG Degree certificate?
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio635" name="radio635"
-               value="1" ng-model="$ctrl.radio_values.init_doc635"
-               ng-change="$ctrl.doc635=''">
-        Matched
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio635" name="radio635"
-               value="2" ng-model="$ctrl.radio_values.init_doc635"
-               ng-change="$ctrl.doc635=''">
-        Not Matched
-      </label>
-      <label
-              style="{{ $ctrl.radio_values.init_doc635=='2' ? 'display:block':'display:none'}}">
-        <select class="form-control" ng-model="$ctrl.doc635">
-          <option value="">--Select--</option>
-          <option value="Initial Missing">Initial Missing</option>
-          <option value="Incorrect Spelling">Incorrect Spelling</option>
-          <option value="A letter / few letters missing">A letter / few letters missing</option>
-          <option value="Change in name as per Gazette">Change in name as per Gazette</option>
-        </select>
-      </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio635" name="radio635"
-               value="3" ng-model="$ctrl.radio_values.init_doc635"
-               ng-change="$ctrl.doc635=''">
-        Not Clear
-      </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
     Consolidated Mark sheet for PG Course?
   </div>
   <div class="col-sm-12">
@@ -139,6 +99,46 @@
                value="3" ng-model="$ctrl.radio_values.init_doc637"
                ng-change="$ctrl.doc637=''">
         Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name in the PG Degree certificate?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio635" name="radio635"
+               value="1" ng-model="$ctrl.radio_values.init_doc635"
+               ng-change="$ctrl.doc635=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio635" name="radio635"
+               value="2" ng-model="$ctrl.radio_values.init_doc635"
+               ng-change="$ctrl.doc635=''">
+        Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc635=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc635">
+          <option value="">--Select--</option>
+          <option value="Initial Missing">Initial Missing</option>
+          <option value="Incorrect Spelling">Incorrect Spelling</option>
+          <option value="A letter / few letters missing">A letter / few letters missing</option>
+          <option value="Change in name as per Gazette">Change in name as per Gazette</option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio635" name="radio635"
+               value="3" ng-model="$ctrl.radio_values.init_doc635"
+               ng-change="$ctrl.doc635=''">
+        Not Clear
       </label>
     </div>
   </div>
@@ -216,55 +216,121 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    PG with at least 55% marks for "General Category" (or its equivalent grade) from Recognized University
+    Whether the candidate has the required percentage of marks of atleast 55% for
+    "General Category" or its equivalent grade from Recognized University
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6310" name="radio6310"
-               value="1">
-        Matched
+               value="1"  ng-change="$ctrl.doc6310=''" ng-model="$ctrl.radio_values.init_doc6310" >
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6310=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6310">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6310" name="radio6310"
-               value="2">
-        Not Matched
+               value="2" ng-change="$ctrl.doc6310=''" ng-model="$ctrl.radio_values.init_doc6310" >
+        No
       </label>
-    </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio6310" name="radio6310"
-               value="3">
-        Not Applicable
+      <label
+          style="{{ $ctrl.radio_values.init_doc6310=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6310">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University
+    Whether the candidate has the required percentage of marks of atleast 50% for
+    BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent
+    grade from Recognized University
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6311" name="radio6311"
-               value="1">
-        Matched
+               value="1"  ng-change="$ctrl.doc6311=''" ng-model="$ctrl.radio_values.init_doc6311" >
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6311=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6311">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio6311" name="radio6311"
-               value="2">
-        Not Matched
+               value="2" ng-change="$ctrl.doc6311 = ''" ng-model="$ctrl.radio_values.init_doc6311" >
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6311=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6311">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether the candidate has the required percentage of marks of atleast 50%
+    with Ph.D Degree and have obtained their Master’s Degree prior to 19 th
+    September 1991 for "General Category" or its equivalent grade from
+    Recognized University
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio6317" name="radio6317"
+               value="1" ng-change="$ctrl.doc6317=''" ng-model="$ctrl.radio_values.init_doc6317" >
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6317=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6317">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio6311" name="radio6311"
-               value="3">
-        Not Applicable
+        <input type="radio" class="q_radio radio6317" name="radio6317"
+               value="2" ng-change="$ctrl.doc6317=''" ng-model="$ctrl.radio_values.init_doc6317">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6317=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6317">
+          <option value="">--Select--</option>
+          <option value="Source of Percentage of marks – First Class as per PG Degree">Source of Percentage of marks – First Class as per PG Degree</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Grade">Source of Percentage of marks – Mark Sheet based on Grade</option>
+          <option value="Source of Percentage of marks – Mark Sheet based on Percentage">Source of Percentage of marks – Mark Sheet based on Percentage</option>
+        </select>
       </label>
     </div>
   </div>
@@ -356,6 +422,17 @@
                ng-change="$ctrl.doc6315=''">
         Matched
       </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc6315=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc6315">
+          <option value="">--Select--</option>
+          <option value="Regular">Regular</option>
+          <option value="Distance">Distance</option>
+          <option value="Part time">Part time</option>
+          <option value="Correspondence">Correspondence</option>
+          <option value="Open University">Open University</option>
+        </select>
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -383,42 +460,6 @@
                ng-change="$ctrl.doc6315=''">
         Not Clear
       </label>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div>
-    <div class="questions">
-      Percentage of Marks in PG?
-    </div>
-    <div class="col-sm-12">
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio6316" name="radio6316"
-                 value="1">
-          Percentage of Marks is between 35 to 40
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio6316" name="radio6316"
-                 value="2">
-          Percentage of Marks is greater than 40
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio6316" name="radio6316"
-                 value="3">
-          Percentage of Marks is less than 35
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio6316" name="radio6316"
-                 value="4">
-          Not Clear
-        </label>
-      </div>
     </div>
   </div>
   <div class="clearfix"></div>

@@ -2135,7 +2135,8 @@
       "question": "Name of the subject?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 29,
@@ -2151,29 +2152,6 @@
       "approved": "1",
       "doc_id": 29,
       "q_id": 3
-    },
-    {
-      "question": "Name of Institution studied ?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 29,
-      "q_id": 9
-    },
-    {
-      "question": "Mode of Study ?",
-      "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
-      },
-      "approved": "1",
-      "doc_id": 29,
-      "q_id": 10
     },
     {
       "question": "Month & Year of Passing in the PHD Certificate?",
@@ -2199,8 +2177,9 @@
     {
       "question": "Whether Ph.D Degree obtained from Foreign Universities",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 29,
@@ -2210,7 +2189,8 @@
       "question": "If Foreign Ph.D Degree, Equivalence Certificate obtained from Association Universities, New Delhi",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 29,
@@ -2225,17 +2205,6 @@
       "approved": "1",
       "doc_id": 29,
       "q_id": 15
-    },
-    {
-      "question": "Date of Publications of Results in Viva-voce of Ph.D Degree?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 29,
-      "q_id": 16
     }
   ],
   "Birth Certificate": [
@@ -3023,9 +2992,10 @@
     {
       "question": "Consolidated Mark sheet for UG Course ",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 38,
@@ -3036,7 +3006,7 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 38,
@@ -5643,7 +5613,8 @@
       "options": {
         "option1": "Yes",
         "option2": "No",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 44,
@@ -5654,7 +5625,7 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option3": "Not Applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 44,
@@ -5675,7 +5646,8 @@
       "question": "Date of Publications of Results in UG Mark Sheet",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 44,
@@ -6225,7 +6197,7 @@
       "q_id": 3
     }
   ],
-  "B.Ed Degree / Equivalent Marksheet": [
+  "B.Ed Degree / Equivalent Consolidated Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {
@@ -6270,20 +6242,6 @@
       "q_id": 10
     },
     {
-      "question": "Percentage of Marks in B.Ed?",
-      "options": {
-        "option1": "Percentage of Marks is 35 and above but less than 40",
-        "option2": "Percentage of Marks is 40 and above but less than 50",
-        "option3": "Percentage of Marks is 50 and above but less than 55",
-        "option4": "Percentage of Marks is 55 and above but less than 60",
-        "option5": "Percentage of Marks is 60 and above",
-        "option6": "Percentage of Marks is less than 35"
-      },
-      "approved": "1",
-      "doc_id": 49,
-      "q_id": 4
-    },
-    {
       "question": "Date of Publications of Results in B.Ed Mark Sheet?",
       "options": {
         "option1": "Matched",
@@ -6306,11 +6264,9 @@
     {
       "question": "Mode of Study",
       "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 49,
@@ -6337,7 +6293,7 @@
       "q_id": 9
     }
   ],
-  "B.Ed Degree / Equivalent Marksheet 1": [
+  "B.Ed Degree / Equivalent Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {
@@ -6382,20 +6338,6 @@
       "q_id": 10
     },
     {
-      "question": "Percentage of Marks in B.Ed?",
-      "options": {
-        "option1": "Percentage of Marks is 35 and above but less than 40",
-        "option2": "Percentage of Marks is 40 and above but less than 50",
-        "option3": "Percentage of Marks is 50 and above but less than 55",
-        "option4": "Percentage of Marks is 55 and above but less than 60",
-        "option5": "Percentage of Marks is 60 and above",
-        "option6": "Percentage of Marks is less than 35"
-      },
-      "approved": "1",
-      "doc_id": 50,
-      "q_id": 4
-    },
-    {
       "question": "Date of Publications of Results in B.Ed Mark Sheet?",
       "options": {
         "option1": "Matched",
@@ -6418,11 +6360,9 @@
     {
       "question": "Mode of Study",
       "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 50,
@@ -7233,7 +7173,7 @@
       "q_id": 9
     }
   ],
-  "M.Ed Degree / Equivalent Marksheet": [
+  "M.Ed Degree / Equivalent Consolidated Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {
@@ -7278,20 +7218,27 @@
       "q_id": 4
     },
     {
-      "question": "Percentage of Marks in M.Ed? ",
+      "question": "Whether the candidate has the required percentage of marks of atleast 55% for “General Category” or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Percentage of Marks is 35 and above but less than 40",
-        "option2": "Percentage of Marks is 40 and above but less than 50",
-        "option3": "Percentage of Marks is 50 and above but less than 55",
-        "option4": "Percentage of Marks is 55 and above but less than 60",
-        "option5": "Percentage of Marks is 60 and above"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 55,
-      "q_id": 12
+      "q_id": 17
     },
     {
-      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% for “BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 55,
+      "q_id": 18
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% with Ph.D Degree and have obtained their Master’s Degree prior to 19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -7315,7 +7262,8 @@
       "question": "Name of Institution studied ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7324,11 +7272,9 @@
     {
       "question": "Mode of Study",
       "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 55,
@@ -7355,7 +7301,7 @@
       "q_id": 15
     }
   ],
-  "M.Ed Degree / Equivalent Marksheet 1": [
+  "M.Ed Degree / Equivalent Marksheet": [
     {
       "question": "Is the document Visible / Clear?",
       "options": {
@@ -7400,20 +7346,27 @@
       "q_id": 4
     },
     {
-      "question": "Percentage of Marks in M.Ed? ",
+      "question": "Whether the candidate has the required percentage of marks of atleast 55% for “General Category” or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Percentage of Marks is 35 and above but less than 40",
-        "option2": "Percentage of Marks is 40 and above but less than 50",
-        "option3": "Percentage of Marks is 50 and above but less than 55",
-        "option4": "Percentage of Marks is 55 and above but less than 60",
-        "option5": "Percentage of Marks is 60 and above"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 56,
-      "q_id": 12
+      "q_id": 17
     },
     {
-      "question": "Whether the candidate has the required percentage of marks of atleast\n50% with Ph.D Degree and have obtained their Master’s Degree prior to\n19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% for “BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 56,
+      "q_id": 18
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% with Ph.D Degree and have obtained their Master’s Degree prior to 19 th September 1991 for “General Category” or its equivalent grade from Recognized University",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -7437,7 +7390,8 @@
       "question": "Name of Institution studied ",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 56,
@@ -7446,11 +7400,9 @@
     {
       "question": "Mode of Study",
       "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 56,
@@ -8110,17 +8062,6 @@
       "q_id": 2
     },
     {
-      "question": "Name in the PG Degree certificate?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 62,
-      "q_id": 5
-    },
-    {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
         "option1": "Yes",
@@ -8142,6 +8083,17 @@
       "approved": "1",
       "doc_id": 62,
       "q_id": 7
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 5
     },
     {
       "question": "Date of Publications of Results in PG Mark Sheet?",
@@ -8166,26 +8118,34 @@
       "q_id": 9
     },
     {
-      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "question": "Whether the candidate has the required percentage of marks of atleast 55% for 'General Category' or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 62,
       "q_id": 10
     },
     {
-      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% for 'BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 62,
       "q_id": 11
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% with Ph.D Degree and have obtained their Master’s Degree prior to 19 th September 1991 for 'General Category' or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 62,
+      "q_id": 17
     },
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
@@ -8228,18 +8188,6 @@
       "approved": "1",
       "doc_id": 62,
       "q_id": 15
-    },
-    {
-      "question": "Percentage of Marks in UG?",
-      "options": {
-        "option1": "Percentage of Marks is between 35 to 40 ",
-        "option2": "Percentage of Marks is greater than 40",
-        "option3": "Percentage of Marks is less than 35",
-        "option4": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 62,
-      "q_id": 16
     }
   ],
   "PG Degree / Equivalent Marksheet": [
@@ -8265,17 +8213,6 @@
       "q_id": 2
     },
     {
-      "question": "Name in the PG Degree certificate?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 63,
-      "q_id": 5
-    },
-    {
       "question": "Consolidated Mark sheet for PG Course?",
       "options": {
         "option1": "Yes",
@@ -8297,6 +8234,17 @@
       "approved": "1",
       "doc_id": 63,
       "q_id": 7
+    },
+    {
+      "question": "Name in the PG Degree certificate?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 5
     },
     {
       "question": "Date of Publications of Results in PG Mark Sheet?",
@@ -8321,26 +8269,34 @@
       "q_id": 9
     },
     {
-      "question": "PG with at least 55% marks for `General Category` (or its equivalent grade) from Recognized University?",
+      "question": "Whether the candidate has the required percentage of marks of atleast 55% for 'General Category' or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 63,
       "q_id": 10
     },
     {
-      "question": "PG with at least 50% marks for “BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates” (or its equivalent grade) from Recognized University",
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% for 'BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent grade from Recognized University",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option1": "Yes",
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 63,
       "q_id": 11
+    },
+    {
+      "question": "Whether the candidate has the required percentage of marks of atleast 50% with Ph.D Degree and have obtained their Master’s Degree prior to 19 th September 1991 for 'General Category' or its equivalent grade from Recognized University",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 63,
+      "q_id": 17
     },
     {
       "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
@@ -8383,18 +8339,6 @@
       "approved": "1",
       "doc_id": 63,
       "q_id": 15
-    },
-    {
-      "question": "Percentage of Marks in UG?",
-      "options": {
-        "option1": "Percentage of Marks is between 35 to 40 ",
-        "option2": "Percentage of Marks is greater than 40",
-        "option3": "Percentage of Marks is less than 35",
-        "option4": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 62,
-      "q_id": 16
     }
   ],
   "PG Degree / Equivalent Marksheet 2": [
@@ -10431,7 +10375,7 @@
       },
       "approved": "1",
       "doc_id": 68,
-      "q_id": 6
+      "q_id": 7
     },
     {
       "question": "Month & Year of Passing in the M.Phil Degree??",
@@ -10470,23 +10414,12 @@
       "question": "Mode of Study",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 68,
       "q_id": 10
-    },
-    {
-      "question": "Percentage of Marks in M.Phil?",
-      "options": {
-        "option1": "Percentage of Marks is 40 and above but less than 50",
-        "option2": "Percentage of Marks is 50 and above but less than 55",
-        "option3": "Percentage of Marks is 55 and above but less than 60",
-        "option4": "Percentage of Marks is 60 and above"
-      },
-      "approved": "1",
-      "doc_id": 68,
-      "q_id": 13
     },
     {
       "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Open University/ Correspondence / Distance Education",

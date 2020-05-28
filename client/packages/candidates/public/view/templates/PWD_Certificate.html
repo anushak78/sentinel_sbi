@@ -121,6 +121,19 @@
                        ng-change="$ctrl.doc315=''">
                 Matching
             </label>
+            <label style="{{ $ctrl.radio_values.init_doc315=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc315">
+                    <option value="">--Select--</option>
+                    <option value="Correct Category - Blindness & Low vision">Correct Category - Blindness & Low vision</option>
+                    <option value="Correct Category - Deaf and hard of hearing">Correct Category - Deaf and hard of hearing</option>
+                    <option value="Correct Category - Locomotor disability including cerebral palsy, leprosycured, Dwarfism , Acid attack victims & Muscular dystrophy">
+                        Correct Category - Locomotor disability including cerebral palsy, leprosycured, Dwarfism , Acid attack victims & Muscular dystrophy
+                    </option>
+                    <option value="Correct Category - Autism, Intellectual disability, Specific learning disability and mental illness/ multiple disabilities">
+                        Correct Category - Autism, Intellectual disability, Specific learning disability and mental illness/ multiple disabilities
+                    </option>
+                </select>
+            </label>
         </div>
         <div class="radio">
             <label class="radio-custom">

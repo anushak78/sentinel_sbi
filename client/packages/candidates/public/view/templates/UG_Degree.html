@@ -221,6 +221,15 @@
                ng-change="$ctrl.doc3725=''">
         Matched
       </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc3725=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3725">
+          <option value="">--Select--</option>
+          <option value="Studied in Recognized University">Studied in Recognized University</option>
+          <option value="Studied in Fake University">Studied in Fake University</option>
+          <option value="Studied in Unrecognized University">Studied in Unrecognized University</option>
+        </select>
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -236,9 +245,6 @@
           <option value="Studied in Recognized University">Studied in Recognized University</option>
           <option value="Studied in Fake University">Studied in Fake University</option>
           <option value="Studied in Unrecognized University">Studied in Unrecognized University</option>
-<!--            <option ng-repeat="u in $ctrl.ugcUniversity" value="{{u}}">-->
-<!--            {{u}}-->
-<!--          </option>-->
         </select>
       </label>
     </div>
