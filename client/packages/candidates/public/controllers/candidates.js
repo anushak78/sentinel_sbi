@@ -185,6 +185,7 @@
       vm.doc304 = '';
       vm.doc307 = '';
       vm.doc305 = '';
+      vm.doc306 = '';
       vm.doc312 = '';
       vm.doc313 = '';
       vm.doc314 = '';
@@ -370,7 +371,7 @@
       vm.doc5613 = '';
       vm.doc5616 = '';
       vm.doc5617 = '';
-      vm.doc5618= '';
+      vm.doc5618 = '';
       vm.doc572 = '';
       vm.doc579 = '';
       vm.doc5712 = '';
@@ -704,6 +705,7 @@
       vm.radio_values.init_doc304 = "";
       vm.radio_values.init_doc307 = "";
       vm.radio_values.init_doc305 = "";
+      vm.radio_values.init_doc306 = "";
       vm.radio_values.init_doc312 = "";
       vm.radio_values.init_doc313 = "";
       vm.radio_values.init_doc314 = "";
@@ -929,7 +931,7 @@
       vm.radio_values.init_doc638 = "";
       vm.radio_values.init_doc639 = "";
       vm.radio_values.init_doc6310 = "";
-      vm.radio_values.init_doc6311= "";
+      vm.radio_values.init_doc6311 = "";
       vm.radio_values.init_doc6314 = "";
       vm.radio_values.init_doc6315 = "";
       vm.radio_values.init_doc6317 = "";
@@ -1215,6 +1217,7 @@
       '29c9': 'Name of institute',
       '30c2': 'New Certificate Number',
       '30c4': 'New Place of Birth',
+      '30c6': 'New DOB for Age as on 01.07.2019',
       '30c7': 'Not relevant reason',
       '30c5': 'New Date of Birth',
       '31c2': 'New relevant reason',
@@ -1834,10 +1837,10 @@
           $scope.newDocumentList = [];
           $scope.allDocumentList = $scope.candidateDetails['document_list'];
           for (var i in $scope.candidateDetails['document_list']) {
-            if($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'BEDMARK'){
+            if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'BEDMARK') {
               $scope.candidateDetails['document_list'][i]['odm_name'] = 'B.Ed Degree / Equivalent Consolidated Marksheet';
             }
-            if($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'MEDMARK'){
+            if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'MEDMARK') {
               $scope.candidateDetails['document_list'][i]['odm_name'] = 'M.Ed Degree / Equivalent Consolidated Marksheet';
             }
             var name = $scope.candidateDetails['document_list'][i]['odm_name'];
@@ -1979,7 +1982,7 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
-      }  else if ($scope.selectedDocType === 'B.Ed Degree / Equivalent Marksheet') {
+      } else if ($scope.selectedDocType === 'B.Ed Degree / Equivalent Marksheet') {
         console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('BEDMARKN')) {
@@ -1990,7 +1993,7 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
-      }   else if ($scope.selectedDocType === 'M.Ed Degree / Equivalent Marksheet') {
+      } else if ($scope.selectedDocType === 'M.Ed Degree / Equivalent Marksheet') {
         console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('MEDMARKN')) {
@@ -2001,7 +2004,7 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
-      }  else if ($scope.selectedDocType === 'Work Experience') {
+      } else if ($scope.selectedDocType === 'Work Experience') {
         console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('Work Experience')) {
@@ -2179,7 +2182,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc305, #doc3211, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {

@@ -140,11 +140,11 @@
         Not Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc305=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc305" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
-               class="modified_date input-sm input-s datepicker-input form-control">
-        <label id="doc305_age" style="margin-top: 5px">
-          Age (as on 01.07.2019) - {{$ctrl.calculateAge($ctrl.doc305)}}
-        </label>
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
+               class="doc305 modified_date input-sm input-s datepicker-input form-control">
+<!--        <label id="doc305_age" style="margin-top: 5px">-->
+<!--          Age (as on 01.07.2019) - {{$ctrl.calculateAge($ctrl.doc305)}}-->
+<!--        </label>-->
       </label>
     </div>
     <div class="radio">
@@ -158,21 +158,38 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Age as on 01.07.2019 (Years, Months, Days) - {{$ctrl.autoCalculateAge()}}
+    Age as on 01.07.2019 (Years, Months, Days)
+<!--    - {{$ctrl.autoCalculateAge()}}-->
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio306" name="radio306"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc306"
+               ng-change="$ctrl.doc306=''"  >
         Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc306=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+               class="doc306 modified_date input-sm input-s datepicker-input form-control">
+        <label style="margin-top: 5px">
+          Age (as on 01.07.2019) - {{$ctrl.calculateAge($ctrl.doc306)}}
+        </label>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio306" name="radio306"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc306"
+               ng-change="$ctrl.doc306=''" >
         Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc306=='2' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+               class="doc306 modified_date input-sm input-s datepicker-input form-control">
+        <label style="margin-top: 5px">
+          Age (as on 01.07.2019) - <span id="calculatedAge">{{$ctrl.calculateAge($ctrl.doc306)}}</span>
+        </label>
       </label>
     </div>
   </div>
