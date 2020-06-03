@@ -1137,7 +1137,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Date of publication of result:<br/><span
+                        Date of publication of result M.Phill:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
                       </section>
                     </div>
@@ -1149,6 +1149,13 @@
                       </section>
                     </div>
                     <div class="clearfix"></div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        M.Phill Degree Type:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['mphil_degree_type']}}</span>
+                      </section>
+                    </div>
                   </div>
                   <div ng-if="selectedDocType.indexOf('SLET') > -1">
                     <div
@@ -1730,35 +1737,6 @@
                       </section>
                     </div>
                   </div>
-
-                  <div ng-if="selectedDocType.indexOf('M.Phil') > -1">
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        M.Phill Certificate Number
-                        :<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilcertno']}}</span>
-                      </section>
-                    </div>
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        M.Phill Institute Name
-                        :<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilinstitname']}}</span>
-                      </section>
-                    </div>
-                    <div class="clearfix"></div>
-
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        M.Phill Degree Type:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphildegtype']}}</span>
-                      </section>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
                   <div ng-if="selectedDocType.indexOf('M.Ed') > -1">
                     <div class="col-md-6">
                       <section class="panel-body"
@@ -1846,6 +1824,17 @@
                         PHD: Registration Date
                         :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_phd_reg_date']}}</span>
+                      </section>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1">
+                    <div class="col-md-12">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Order of educational qualification
+                        :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['order_of_education']}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>

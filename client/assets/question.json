@@ -1308,9 +1308,9 @@
     {
       "question": "Whether working in any Govt. Organization",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
-        "option3": "Not Clear"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 12,
@@ -1320,7 +1320,8 @@
       "question": "Number of Years completed as Government Servant",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 12,
@@ -1332,11 +1333,23 @@
         "option1": "Initiated",
         "option2": "Pending",
         "option3": "Punishment Awarded",
-        "option4": "Not available"
+        "option4": "Not Available",
+        "option5": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 12,
       "q_id": 5
+    },
+    {
+      "question": "Whether submitted No Objection Certificate",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 12,
+      "q_id": 6
     }
   ],
   "Highest Sports Certificate": [
@@ -11577,7 +11590,8 @@
       "question": "Whether Educational Qualification in the order 10+2+3+2+1 or 2 / 4 + Years (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or) 10+2+3+1/2+2/3+2/1 or 2/4 years or others - (Mandatory)",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 140,
@@ -11587,11 +11601,22 @@
       "question": "Any Course completed after discontinuing",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 140,
       "q_id": 3
+    },
+    {
+      "question": "Completed course after discontinuing",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 34
     },
     {
       "question": "Name of the Course",
@@ -11644,6 +11669,16 @@
       "q_id": 8
     },
     {
+      "question": "Has prescribed educational qualification before 04.10.2019",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 35
+    },
+    {
       "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent as prescribed in the notification.",
       "options": {
         "option1": "Matched",
@@ -11652,166 +11687,6 @@
       "approved": "1",
       "doc_id": 140,
       "q_id": 9
-    },
-    {
-      "question": "Name of the subject in PG Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 15
-    },
-    {
-      "question": "Name of the subject in Ph.D Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 16
-    },
-    {
-      "question": "Whether studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject or its equivalent as prescribed in the notification.",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 10
-    },
-    {
-      "question": "Name of the subject in PG Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 17
-    },
-    {
-      "question": "Name of the subject in Ph.D Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 18
-    },
-    {
-      "question": "Name of the subject in M.Ed. Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 19
-    },
-    {
-      "question": "Whether studied PG Degree and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education in the prescribed subject or its equivalent as prescribed in the notification",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 11
-    },
-    {
-      "question": "Name of the subject in PG Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 20
-    },
-    {
-      "question": "Name of the subject in Ph.D Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 21
-    },
-    {
-      "question": "Name of the subject in M.Ed. Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 22
-    },
-    {
-      "question": "Name of the subject in NET/SLET",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 23
-    },
-    {
-      "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification.",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 12
-    },
-    {
-      "question": "Name of the subject in PG Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 24
-    },
-    {
-      "question": "Name of the subject in Ph.D Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 25
-    },
-    {
-      "question": "Name of the Special B.Ed in Teaching the Hearing Impairment",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 26
-    },
-    {
-      "question": "Name of the Senior Diploma in Teaching Deaf (Hearing Impairment)",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 27
     },
     {
       "question": "Whether studied PG Degree and passed NET/SLET in the same subject or its equivalent as prescribed in the notification",
@@ -11824,24 +11699,34 @@
       "q_id": 13
     },
     {
-      "question": "Name of the subject in PG Degree",
+      "question": "Whether studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject or its equivalent as prescribed in the notification.",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 140,
-      "q_id": 28
+      "q_id": 10
     },
     {
-      "question": "Name of the subject in NET/SLET Passed subject",
+      "question": "Whether studied PG Degree and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education in the prescribed subject or its equivalent as prescribed in the notification",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 140,
-      "q_id": 29
+      "q_id": 11
+    },
+    {
+      "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification.",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 12
     },
     {
       "question": "Whether studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification",
@@ -11852,46 +11737,6 @@
       "approved": "1",
       "doc_id": 140,
       "q_id": 14
-    },
-    {
-      "question": "Name of the subject in PG Degree",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 30
-    },
-    {
-      "question": "Name of the subject in NET/SLET Passed subject",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 31
-    },
-    {
-      "question": "Name of the Special B.Ed in Teaching the Hearing Impairment",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 32
-    },
-    {
-      "question": "Name of the Senior Diploma in Teaching Deaf (Hearing Impairment)",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 33
     }
   ]
 }

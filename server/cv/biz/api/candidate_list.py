@@ -389,6 +389,7 @@ def get_candidate_details(request):
       (select octm_category_desc from oes_category_master where octm_category_pk::varchar=ocd.ocd_community) as community,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_passedslet) as passed_in_relevent_slet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_orderedu) as order_of_education,
       oacd1.oacd_university_other as ssc_university_other,
       oacd1.oacd_percentage as scc_percentage,
        (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_part_full_time) as ssc_part_full_time,

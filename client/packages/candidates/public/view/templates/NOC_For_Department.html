@@ -11,22 +11,31 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio123" name="radio123"
-               value="1">
-        Matching
+               value="1" ng-model="$ctrl.radio_values.init_doc123"
+               ng-change="$ctrl.doc123=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc123=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc123"/>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio123" name="radio123"
-               value="2">
-        Not matching
+               value="2" ng-model="$ctrl.radio_values.init_doc123"
+               ng-change="$ctrl.doc123=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc123=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc123"/>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio123" name="radio123"
-               value="3">
-        Not Clear
+               value="3" ng-model="$ctrl.radio_values.init_doc123"
+               ng-change="$ctrl.doc123=''">
+        Not Applicable
       </label>
     </div>
   </div>
@@ -69,15 +78,31 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio124" name="radio124"
-               value="1">
-        Yes
+               value="1"  ng-model="$ctrl.radio_values.init_doc124"
+               ng-change="$ctrl.doc124=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc124=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc124"/>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio124" name="radio124"
-               value="2">
-        No
+               value="2" ng-model="$ctrl.radio_values.init_doc124"
+               ng-change="$ctrl.doc124=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc124=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="form-control" ng-model="$ctrl.doc124"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio124" name="radio124"
+               value="3"  ng-model="$ctrl.radio_values.init_doc124"
+               ng-change="$ctrl.doc124=''">
+        Not Applicable
       </label>
     </div>
   </div>
@@ -90,21 +115,62 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio125" name="radio125"
                value="1">
-        Yes
+        Initiated
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio125" name="radio125"
                value="2">
-        No
+        Pending
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio125" name="radio125"
+               value="3">
+        Punishment Awarded
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio125" name="radio125"
+               value="4">
+        Not Available
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio125" name="radio125"
+               value="5">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether submitted No Objection Certificate
+  </div>
+  <div class="col-sm-6">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio126" name="radio126"
+               value="1">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio126" name="radio126"
                value="2">
-        Not Clear
+        Not Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio126" name="radio126"
+               value="3">
+        Not Applicable
       </label>
     </div>
   </div>

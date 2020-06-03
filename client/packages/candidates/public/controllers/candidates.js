@@ -55,6 +55,7 @@
       $scope.radio = {};
       vm.doc13 = '';
       vm.doc12 = '';
+      vm.doc12 = '';
       vm.doc14 = '';
       vm.doc16 = '';
       vm.doc17 = '';
@@ -127,13 +128,21 @@
       vm.doc1407 = '';
       vm.doc1408 = '';
       vm.doc1409 = '';
+      vm.doc14010 = '';
+      vm.doc14011 = '';
+      vm.doc14012 = '';
+      vm.doc14013 = '';
+      vm.doc14014 = '';
       vm.doc14021 = '';
+      vm.doc14034 = '';
+      vm.doc14035 = '';
 
 
       vm.doc84 = '';
       vm.doc162 = '';
       vm.doc123 = '';
       vm.doc122 = '';
+      vm.doc124 = '';
       vm.doc162 = '';
       vm.doc163 = '';
       vm.doc172 = '';
@@ -215,6 +224,7 @@
       vm.doc3517 = '';
       vm.doc362 = '';
       vm.doc364 = '';
+      vm.doc365 = '';
       vm.doc372 = '';
       vm.doc373 = '';
       vm.doc374 = '';
@@ -648,12 +658,20 @@
       vm.radio_values.init_doc13913 = "";
       vm.radio_values.init_doc13914 = "";
       vm.radio_values.init_doc1402 = "";
-      vm.radio_values.init_doc14021 = "";
       vm.radio_values.init_doc1403 = "";
       vm.radio_values.init_doc1405 = "";
       vm.radio_values.init_doc1406 = "";
       vm.radio_values.init_doc1407 = "";
       vm.radio_values.init_doc1408 = "";
+      vm.radio_values.init_doc1409 = "";
+      vm.radio_values.init_doc14010 = "";
+      vm.radio_values.init_doc14011 = "";
+      vm.radio_values.init_doc14012 = "";
+      vm.radio_values.init_doc14013 = "";
+      vm.radio_values.init_doc14014 = "";
+      vm.radio_values.init_doc14021 = "";
+      vm.radio_values.init_doc14034 = "";
+      vm.radio_values.init_doc14035 = "";
       vm.radio_values.init_doc162 = "";
       vm.radio_values.init_doc124 = "";
       vm.radio_values.init_doc162 = "";
@@ -662,6 +680,7 @@
       vm.radio_values.init_doc84 = "";
       vm.radio_values.init_doc123 = "";
       vm.radio_values.init_doc122 = "";
+      vm.radio_values.init_doc124 = "";
       vm.radio_values.init_doc53 = "";
       vm.radio_values.init_doc253 = "";
       vm.radio_values.init_doc254 = "";
@@ -735,6 +754,7 @@
       vm.radio_values.init_doc3512 = "";
       vm.radio_values.init_doc362 = "";
       vm.radio_values.init_doc364 = "";
+      vm.radio_values.init_doc365 = "";
       vm.radio_values.init_doc372 = "";
       vm.radio_values.init_doc373 = "";
       vm.radio_values.init_doc374 = "";
@@ -1173,8 +1193,18 @@
       '140c6': 'New admission date',
       '140c7': 'Rejoining date',
       '140c8': 'Cut off date 04.10.2019',
+      '140c9': 'studied PG Degree and Ph.D Degree in the same subject or its equivalent as prescribed in the notification',
+      '140c10': 'studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject or its equivalent as prescribed in the notification.',
+      '140c11': 'studied PG Degree and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education in the prescribed subject or its equivalent as prescribed in the notification',
+      '140c12': 'studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification.',
+      '140c13': 'studied PG Degree and passed NET/SLET in the same subject or its equivalent as prescribed in the notification',
+      '140c14': 'studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the notification',
       '140c21': 'If Educational qualification order selected Others',
+      '140c34': 'Completed course after discontinuing date',
+      '140c35': 'Date of obtaining prescribed educational qualification',
       '12c2': 'Relevant reason',
+      '12c3': 'Working in any Govt. Organization',
+      '12c4': 'Number of Years completed as Government Servant',
       '16c2': 'New Gender',
       '16c3': 'Not relevant reason',
       '17c2': 'Not relevant reason',
@@ -1249,6 +1279,7 @@
       '35c17': 'Correct G.O. No with date',
       '36c2': 'Last studied conduct relevant',
       '36c4': 'Latest Conduct Certificate relevant reason',
+      '36c5': 'Whether submitted Latest Conduct Certificate',
       '37c2': 'Name in the M.Phill Certificate',
       '37c3': 'Certificate Number',
       '37c4': 'Name in the certificate',
@@ -2182,7 +2213,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408, #doc14034, #doc14035").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {

@@ -94,15 +94,41 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio365" name="radio365"
-               value="1">
+               value="1" ng-model="$ctrl.radio_values.init_doc365"
+               ng-change="$ctrl.doc365=''">
         Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc365=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc365">
+          <option value="">--Select--</option>
+          <option value="Yes Submitted">
+            Yes Submitted
+          </option>
+          <option value="No Not Submitted">
+            No Not Submitted
+          </option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio365" name="radio365"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc365"
+               ng-change="$ctrl.doc365=''">
         Not Matched
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc365=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc365">
+          <option value="">--Select--</option>
+          <option value="Yes Submitted">
+            Yes Submitted
+          </option>
+          <option value="No Not Submitted">
+            No Not Submitted
+          </option>
+        </select>
       </label>
     </div>
   </div>
