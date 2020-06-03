@@ -152,7 +152,7 @@ def _fix_document_urls(request, document_list, candidate_id):
 
 @svc_candidate_list.get()
 def get_candidate_list(request):
-    print("HIIIII")
+    print("HIIIIIYYYYY")
     candidate_id = request.GET.get('candidate_id', None)
     status = request.GET.get('status', '')
     # status = ''
@@ -258,13 +258,13 @@ def get_candidate_list(request):
         text(count_query), condition
     ).first()
 
-    candidate_list = _get_candidate_state(request.dbsession,
-                                          _key_column_generator(data), level)
+    candidate_list = _get_candidate_state(request.dbsession,_key_column_generator(data), level)
+    print(candidate_list)
     return {
         "code": 1,
         "message": "success",
         "data": {
-            "list": candidate_list,
+            "list": clean_object(candidate_list),
             "total_count": total_count[0]
         }
     }
