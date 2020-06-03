@@ -1879,9 +1879,14 @@
             if (!$scope.checkArray(name)) {
               console.log(name);
               if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet'
-                  || name == 'Work Experience' || name == 'B.Ed Degree / Equivalent Marksheet'
+                  || name.includes('Work Experience') || name == 'B.Ed Degree / Equivalent Marksheet'
                   || name == 'M.Ed Degree / Equivalent Marksheet') {
-                $scope.candidateDetails['document_list'][i]['odm_name'] = name;
+                if(name.includes('Work Experience')){
+                  $scope.candidateDetails['document_list'][i]['odm_name'] = 'Work Experience';
+                }else{
+                  $scope.candidateDetails['document_list'][i]['odm_name'] = name;
+                }
+
               }
               $scope.newDocumentList.push($scope.candidateDetails['document_list'][i]);
             }
