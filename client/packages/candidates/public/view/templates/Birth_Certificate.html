@@ -142,9 +142,6 @@
       <label style="{{ $ctrl.radio_values.init_doc305=='2' ? 'display:block':'display:none'}}">
         <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
                class="doc305 modified_date input-sm input-s datepicker-input form-control">
-<!--        <label id="doc305_age" style="margin-top: 5px">-->
-<!--          Age (as on 01.07.2019) - {{$ctrl.calculateAge($ctrl.doc305)}}-->
-<!--        </label>-->
       </label>
     </div>
     <div class="radio">
@@ -158,8 +155,52 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
+    Is DOB Matching?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc308" class="q_radio radio308"
+               ng-change="$ctrl.doc308=''" name="radio308"
+               value="1">
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc308=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc308">
+          <option value="">--Select--</option>
+          <option value="Correct Date of Birth and corroborated with application data">
+            Correct Date of Birth and corroborated with application data
+          </option>
+          <option value="Correct Date of Birth and Corroborated with additional upload data">
+            Correct Date of Birth and Corroborated with additional upload data
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc308"  ng-change="$ctrl.doc308=''"
+               class="q_radio radio308" name="radio308" value="2">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc308=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc308">
+          <option value="">--Select--</option>
+          <option value="Correct Date of Birth and corroborated with application data">
+            Correct Date of Birth and corroborated with application data
+          </option>
+          <option value="Correct Date of Birth and Corroborated with additional upload data">
+            Correct Date of Birth and Corroborated with additional upload data
+          </option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
     Age as on 01.07.2019 (Years, Months, Days)
-<!--    - {{$ctrl.autoCalculateAge()}}-->
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -190,6 +231,51 @@
         <label style="margin-top: 5px">
           Age (as on 01.07.2019) - <span id="calculatedAge">{{$ctrl.calculateAge($ctrl.doc306)}}</span>
         </label>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is Age as on 01.07.2019 Matching
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc309" class="q_radio radio309"
+               ng-change="$ctrl.doc309=''" name="radio309"
+               value="1">
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc309=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc309">
+          <option value="">--Select--</option>
+          <option value="Correct age based on correct date of birth and corroborated with application data">
+            Correct age based on correct date of birth and corroborated with application data
+          </option>
+          <option value="Correct age based on correct date of birth and Corroborated with additional upload data">
+            Correct age based on correct date of birth and Corroborated with additional upload data
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc309"  ng-change="$ctrl.doc309=''"
+               class="q_radio radio308" name="radio309" value="2">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc309=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc309">
+          <option value="">--Select--</option>
+          <option value="Correct Date of Birth and corroborated with application data">
+            Correct Date of Birth and corroborated with application data
+          </option>
+          <option value="Correct Date of Birth and Corroborated with additional upload data">
+            Correct Date of Birth and Corroborated with additional upload data
+          </option>
+        </select>
       </label>
     </div>
   </div>

@@ -198,6 +198,11 @@
                        value="1">
                 Matched
             </label>
+            <label style="{{ $ctrl.radio_values.init_doc274=='1' ? 'display:block':'display:none'}}">
+                <input type="text" data-date-format="YYYY-MM-DD"
+                       ng-model="$ctrl.doc274"
+                       class="doc274 modified_date input-sm input-s datepicker-input form-control">
+            </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
@@ -207,9 +212,9 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc274=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc274" data-date-format="YYYY-MM-DD"
+                <input type="text" data-date-format="YYYY-MM-DD"
                        ng-model="$ctrl.doc274"
-                       class="modified_date input-sm input-s datepicker-input form-control">
+                       class="doc274 modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
         <div class="radio">

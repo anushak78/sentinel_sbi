@@ -419,17 +419,7 @@
       "q_id": 1
     },
     {
-      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 6,
-      "q_id": 2
-    },
-    {
-      "question": "Claim for PSTM reservation ",
+      "question": "Claimed for PSTM Reservation",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -450,7 +440,7 @@
       "q_id": 4
     },
     {
-      "question": "Whether studied PG Degree in Tamil Medium",
+      "question": "Whether submitted PSTM Certificate from competent authority for Post Graduate Degree / Equivalent",
       "options": {
         "option1": "Yes",
         "option2": "No",
@@ -458,10 +448,21 @@
       },
       "approved": "1",
       "doc_id": 6,
+      "q_id": 2
+    },
+    {
+      "question": "Whether studied PG Degree in Tamil Medium",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 6,
       "q_id": 5
     },
     {
-      "question": "Is the document relevant to the Claim of PG Degree in Tamil Medium?",
+      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -482,7 +483,18 @@
       "q_id": 7
     },
     {
-      "question": "Is the document relevant to the Claim of Ph.D in Tamil Medium?",
+      "question": "Whether submitted PSTM Certificate from competent authority for Ph.D Degree / Equivalent",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 7,
+      "q_id": 16
+    },
+    {
+      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -494,28 +506,31 @@
     {
       "question": "Whether studied M.Ed in Tamil Medium",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
       "q_id": 9
     },
     {
-      "question": "Is the document relevant to the Claim of M.Ed in Tamil Medium?",
+      "question": "Whether submitted PSTM Certificate from competent authority for M.Ed Degree / Equivalent",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 6,
-      "q_id": 10
+      "q_id": 15
     },
     {
       "question": "Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 6,
@@ -524,8 +539,9 @@
     {
       "question": "Submitted PSTM Certificate only for PG Degree (with (or) without Ph.D but NET/SLET qualified)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 6,
@@ -534,8 +550,9 @@
     {
       "question": "Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 6,
@@ -544,8 +561,9 @@
     {
       "question": "Whether submitted the PSTM Certificate for both PG and M.Ed (with (or) without Ph.D but qualified in NET/SLET in Education)",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 6,
@@ -1792,8 +1810,8 @@
     {
       "question": "Whether PG Degree obtained from Foreign Universities ",
       "options": {
-        "option1": "Yes",
-        "option2": "No",
+        "option1": "Yes – Obtained from Foreign University",
+        "option2": "No – Not obtained from Foreign University",
         "option3": "Not Applicable"
       },
       "approved": "1",
@@ -1803,7 +1821,7 @@
     {
       "question": "If Foreign PG Degree, Equivalence Certificate obtained from Association of Indian Universities, New Delhi",
       "options": {
-        "option1": "Yes",
+        "option1": "Yes - Equivalence Certificate obtained from Association of Indian Universities, New Delhi",
         "option2": "No",
         "option3": "Not Applicable"
       },
@@ -1824,8 +1842,8 @@
     {
       "question": "Whether the subject in PG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
       "options": {
-        "option1": "Yes",
-        "option2": "No"
+        "option1": "Yes – Subject Applied For and the PG Degree / Equivalent Degree is same",
+        "option2": "No - Subject Applied For and the PG Degree / Equivalent Degree is not same"
       },
       "approved": "1",
       "doc_id": 25,
@@ -2022,7 +2040,7 @@
       "q_id": 5
     },
     {
-      "question": "Month & Year of Passing in the SLET Certificate?",
+      "question": "Month & Year of Passing in the SLET?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -2190,8 +2208,8 @@
     {
       "question": "Whether Ph.D Degree obtained from Foreign Universities",
       "options": {
-        "option1": "Yes",
-        "option2": "No",
+        "option1": "Yes – Obtained from Foreign University",
+        "option2": "No – Not obtained from Foreign University",
         "option3": "Not Applicable"
       },
       "approved": "1",
@@ -2275,6 +2293,16 @@
       "q_id": 5
     },
     {
+      "question": "Is DOB Matching?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 8
+    },
+    {
       "question": "Age as on 01.07.2019 (Years, Months, Days)",
       "options": {
         "option1": "Matched",
@@ -2283,6 +2311,16 @@
       "approved": "1",
       "doc_id": 30,
       "q_id": 6
+    },
+    {
+      "question": "Is Age as on 01.07.2019 Matching",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 30,
+      "q_id": 9
     },
     {
       "question": "Is the document relevant to claim of Date of Birth?",
@@ -2385,32 +2423,12 @@
       "q_id": 2
     },
     {
-      "question": "Special B.Ed in Teaching the Hearing Impairment Degree Certificate Number ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 3
-    },
-    {
-      "question": "Is the document relevant to the claim of Special B.Ed in Teaching the Hearing Impairment Degree Mark Sheets",
-      "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 4
-    },
-    {
       "question": "Consolidated Mark sheet for Special B.Ed in Teaching the Hearing Impairment Degree?",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 32,
@@ -2420,75 +2438,12 @@
       "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not applicable for Consolidated Mark Sheet"
       },
       "approved": "1",
       "doc_id": 32,
       "q_id": 6
-    },
-    {
-      "question": "Name of the subject",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 7
-    },
-    {
-      "question": "Name of the University",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 8
-    },
-    {
-      "question": "Name of Institution studied ",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 9
-    },
-    {
-      "question": "Mode of Study",
-      "options": {
-        "option1": "Regular",
-        "option2": "Distance",
-        "option3": "Part time",
-        "option4": "Correspondence",
-        "option5": "Open University"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 10
-    },
-    {
-      "question": "Month & Year of Passing in the Special B.Ed in Teaching the Hearing Impairment?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 11
-    },
-    {
-      "question": "Percentage of Marks in Special B.Ed in Teaching the Hearing Impairment?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 32,
-      "q_id": 12
     },
     {
       "question": "Date of Publications of Results in Special B.Ed in Teaching the Hearing Impairment Mark Sheet",
@@ -2500,6 +2455,28 @@
       "approved": "1",
       "doc_id": 32,
       "q_id": 13
+    },
+    {
+      "question": "Name of Institution studied in Special B.Ed Degree in Teaching the Hearing Impairment",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 9
+    },
+    {
+      "question": "Mode of Study",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 32,
+      "q_id": 10
     }
   ],
   "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": [
@@ -2524,7 +2501,7 @@
       "q_id": 2
     },
     {
-      "question": "Senior Diploma in Teaching Deaf (Hearing Impairment)Certificate Number ",
+      "question": "Date of Publications of Results in Special B.Ed in Teaching the Hearing Impairment Mark Sheet",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -2532,58 +2509,7 @@
       },
       "approved": "1",
       "doc_id": 33,
-      "q_id": 3
-    },
-    {
-      "question": "Is the document relevant to the claim of Senior Diploma in Teaching Deaf (Hearing Impairment) Mark Sheets",
-      "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 4
-    },
-    {
-      "question": "Consolidated Mark sheet for Special B.Ed in Teaching the Hearing Impairment Degree?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 5
-    },
-    {
-      "question": "Number of Mark Sheet in Special B.Ed in Teaching the Hearing Impairment Degree",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 6
-    },
-    {
-      "question": "Name of the subject",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 7
-    },
-    {
-      "question": "Name of the University",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 8
+      "q_id": 13
     },
     {
       "question": "Name of Institution studied ",
@@ -2607,48 +2533,6 @@
       "approved": "1",
       "doc_id": 33,
       "q_id": 10
-    },
-    {
-      "question": "Month & Year of Passing in the Special B.Ed in Teaching the Hearing Impairment?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 11
-    },
-    {
-      "question": "Percentage of Marks in Special B.Ed in Teaching the Hearing Impairment?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 12
-    },
-    {
-      "question": "Date of Publications of Results in Special B.Ed in Teaching the Hearing Impairment Mark Sheet",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
-        "option3": "Not Clear"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 13
-    },
-    {
-      "question": "Whether submitted certificate issued is recognized by Rehabilitation Council of India",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 33,
-      "q_id": 14
     }
   ],
   "B.Ed Certificate": [
@@ -10413,7 +10297,7 @@
       "q_id": 11
     },
     {
-      "question": "Name of Institution studied",
+      "question": "Name of Institution studied in the M.Phil Degree?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",

@@ -110,7 +110,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Name of Institution studied
+        Name of Institution studied in the M.Phil Degree?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -205,15 +205,33 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio6814" name="radio6814"
-                       value="1">
+                       value="1" ng-model="$ctrl.radio_values.init_doc6814"
+                       ng-change="$ctrl.doc6814=''">
                 Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc6814=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc6814">
+                    <option value="">--Select--</option>
+                    <option value="Obtained M.Phil Degree on or after 03.04.2009 through Open University/ Correspondence / Distance Education">Obtained M.Phil Degree on or after 03.04.2009 through Open
+                        University/ Correspondence / Distance Education</option>
+                </select>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio6814" name="radio6814"
-                       value="2">
+                       value="2" ng-model="$ctrl.radio_values.init_doc6814"
+                       ng-change="$ctrl.doc6814=''">
                 No
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc6814=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc6814">
+                    <option value="">--Select--</option>
+                    <option value="Obtained M.Phil Degree on or before 03.04.2009 through Open University/ Correspondence / Distance Education">Obtained M.Phil Degree on or before 03.04.2009 through Open
+                        University/ Correspondence / Distance Education</option>
+                </select>
             </label>
         </div>
     </div>

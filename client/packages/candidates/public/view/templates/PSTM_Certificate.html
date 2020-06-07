@@ -5,28 +5,78 @@
 
 <div>
     <div class="questions">
-        Claim for PSTM reservation
+        Claimed for PSTM Reservation?
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio63" name="radio63"
-                       value="1">
+                       value="1"  ng-model="$ctrl.radio_values.init_doc63"
+                       ng-change="$ctrl.doc63=''">
                 Matched
             </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio63" name="radio63"
-                       value="2">
-                Not Matched
+            <label
+                style="{{ $ctrl.radio_values.init_doc63=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc63">
+                    <option value="">--Select--</option>
+                    <option value="Yes – Claims PSTM Reservation">Yes – Claims PSTM Reservation</option>
+                    <option value="No – No Claim for PSTM Reservation">No – No Claim for PSTM Reservation</option>
+                </select>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio63" name="radio63"
-                       value="3">
+                       value="2"  ng-model="$ctrl.radio_values.init_doc63"
+                       ng-change="$ctrl.doc63=''">
+                Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc63=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc63">
+                    <option value="">--Select--</option>
+                    <option value="Yes – Claims PSTM Reservation">Yes – Claims PSTM Reservation</option>
+                    <option value="No – No Claim for PSTM Reservation">No – No Claim for PSTM Reservation</option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio63" name="radio63"
+                       value="3"  ng-model="$ctrl.radio_values.init_doc63"
+                       ng-change="$ctrl.doc63=''">
                 Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
+        Is the document relevant to the Claim of PG Degree in Tamil Medium?
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="1" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Relevant
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio66" name="radio66"
+                       value="2" ng-model="$ctrl.radio_values.init_doc66"
+                       ng-change="$ctrl.doc66=''">
+                Not Relevant
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc66=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc66">
+                    <option value="">--Select--</option>
+                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
+                        {{r}}
+                    </option>
+                </select>
             </label>
         </div>
     </div>
@@ -61,6 +111,17 @@
                        value="2">
                 No
             </label>
+            <label style="{{ $ctrl.radio_values.init_doc62=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc62">
+                    <option value="">--Select--</option>
+                    <option value="Not issued by Principal">Not issued by Principal
+                    </option>
+                    <option value="Not issued by Registrar">Not issued by Registrar
+                    </option>
+                    <option value="Not issued by Head of Institution">Not issued by Head of Institution
+                    </option>
+                </select>
+            </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
@@ -74,85 +135,47 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Whether studied PG Degree in Tamil Medium
+        Whether studied PG Degree in Tamil Medium (Please verify
+        Application Form PDF)
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio65" name="radio65"
-                       value="1">
+                       value="1"  ng-model="$ctrl.radio_values.init_doc65"
+                       ng-change="$ctrl.doc65=''">
                 Yes
             </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio65" name="radio65"
-                       value="2">
-                No
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio65" name="radio65"
-                       value="2">
-                Not Clear
-            </label>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
-        Is the document relevant to the Claim of PG Degree in Tamil Medium?
-    </div>
-    <div class="col-sm-12">
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
-                       value="1" ng-model="$ctrl.radio_values.init_doc66"
-                       ng-change="$ctrl.doc66=''">
-                Relevant
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio66" name="radio66"
-                       value="2" ng-model="$ctrl.radio_values.init_doc66"
-                       ng-change="$ctrl.doc66=''">
-                Not Relevant
-            </label>
             <label
-                    style="{{ $ctrl.radio_values.init_doc66=='2' ? 'display:block':'display:none'}}">
-                <select class="form-control" ng-model="$ctrl.doc66">
+                style="{{ $ctrl.radio_values.init_doc65=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc65">
                     <option value="">--Select--</option>
-                    <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
-                        {{r}}
-                    </option>
+                    <option value="Studied PG Degree in Tamil Medium">Studied PG Degree in Tamil Medium</option>
+                    <option value="Not studied PG Degree in Tamil Medium">Not studied PG Degree in Tamil Medium</option>
                 </select>
             </label>
         </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="questions">
-        Whether studied Ph.D Degree in Tamil Medium
-    </div>
-    <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
-                       value="1">
-                Yes
-            </label>
-        </div>
-        <div class="radio">
-            <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
-                       value="2">
+                <input type="radio" class="q_radio radio65" name="radio65"
+                       value="2"  ng-model="$ctrl.radio_values.init_doc65"
+                       ng-change="$ctrl.doc65=''">
                 No
             </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc65=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc65">
+                    <option value="">--Select--</option>
+                    <option value="Studied PG Degree in Tamil Medium">Studied PG Degree in Tamil Medium</option>
+                    <option value="Not studied PG Degree in Tamil Medium">Not studied PG Degree in Tamil Medium</option>
+                </select>
+            </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio67" name="radio67"
-                       value="2">
+                <input type="radio" class="q_radio radio65" name="radio65"
+                       value="3"  ng-model="$ctrl.radio_values.init_doc65"
+                       ng-change="$ctrl.doc65=''">
                 Not Clear
             </label>
         </div>
@@ -178,7 +201,7 @@
                 Not Relevant
             </label>
             <label
-              style="{{ $ctrl.radio_values.init_doc68=='2' ? 'display:block':'display:none'}}">
+                style="{{ $ctrl.radio_values.init_doc68=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc68">
                     <option value="">--Select--</option>
                     <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
@@ -190,21 +213,109 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether studied M.Ed in Tamil Medium
+        Whether studied Ph.D Degree in Tamil Medium
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio69" name="radio69"
-                       value="1">
+                <input type="radio" class="q_radio radio67" name="radio67"
+                       value="1"  ng-model="$ctrl.radio_values.init_doc67"
+                       ng-change="$ctrl.doc67=''">
                 Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc67=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc67">
+                    <option value="">--Select--</option>
+                    <option value="Studied Ph.D Degree in Tamil Medium">Studied Ph.D Degree in Tamil Medium</option>
+                    <option value="Not studied Ph.D Degree in Tamil Medium">Not studied Ph.D Degree in Tamil Medium</option>
+                </select>
             </label>
         </div>
         <div class="radio">
             <label class="radio-custom">
-                <input type="radio" class="q_radio radio69" name="radio69"
-                       value="2">
+                <input type="radio" class="q_radio radio67" name="radio67"
+                       value="2"  ng-model="$ctrl.radio_values.init_doc67"
+                       ng-change="$ctrl.doc67=''">
                 No
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc67=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc67">
+                    <option value="">--Select--</option>
+                    <option value="Studied Ph.D Degree in Tamil Medium">Studied Ph.D Degree in Tamil Medium</option>
+                    <option value="Not studied Ph.D Degree in Tamil Medium">Not studied Ph.D Degree in Tamil Medium</option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio67" name="radio67"
+                       value="3"   ng-model="$ctrl.radio_values.init_doc67"
+                       ng-change="$ctrl.doc67=''">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Whether submitted PSTM Certificate from competent authority for Ph.D
+        Degree / Equivalent
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio616" name="radio616"
+                       value="1" ng-model="$ctrl.radio_values.init_doc616"
+                       ng-change="$ctrl.doc616=''">
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc616=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc616">
+                    <option value="">--Select--</option>
+                    <option value="Yes issued by Principal">
+                        Yes issued by Principal
+                    </option>
+                    <option value="Yes issued by Registrar">
+                        Yes issued by Registrar
+                    </option>
+                    <option value="Yes issued by Head of Institution">
+                        Yes issued by Head of Institution
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio616" name="radio616"
+                       value="2" ng-model="$ctrl.radio_values.init_doc616"
+                       ng-change="$ctrl.doc616=''">
+                No
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc616=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc616">
+                    <option value="">--Select--</option>
+                    <option value="Not issued by Principal">
+                        Not issued by Principal
+                    </option>
+                    <option value="Not issued by Registrar">
+                        Not issued by Registrar
+                    </option>
+                    <option value="Not issued by Head of Institution">
+                        Not issued by Head of Institution
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio616" name="radio616"
+                       value="3" ng-model="$ctrl.radio_values.init_doc616"
+                       ng-change="$ctrl.doc616=''">
+                Not Clear
             </label>
         </div>
     </div>
@@ -229,7 +340,7 @@
                 Not Relevant
             </label>
             <label
-              style="{{ $ctrl.radio_values.init_doc610=='2' ? 'display:block':'display:none'}}">
+                style="{{ $ctrl.radio_values.init_doc610=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc610">
                     <option value="">--Select--</option>
                     <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
@@ -241,14 +352,130 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
+        Whether studied M.Ed in Tamil Medium
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio69" name="radio69"
+                       value="1"  ng-model="$ctrl.radio_values.init_doc69"
+                       ng-change="$ctrl.doc69=''">
+                Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc69=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc69">
+                    <option value="">--Select--</option>
+                    <option value="Studied M.Ed Degree in Tamil Medium">Studied M.Ed Degree in Tamil Medium</option>
+                    <option value="Not studied M.Ed Degree in Tamil Medium">Not studied M.Ed Degree in Tamil Medium</option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio69" name="radio69"
+                       value="2"  ng-model="$ctrl.radio_values.init_doc69"
+                       ng-change="$ctrl.doc69=''">
+                Not Matched
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc69=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc69">
+                    <option value="">--Select--</option>
+                    <option value="Studied M.Ed Degree in Tamil Medium">Studied M.Ed Degree in Tamil Medium</option>
+                    <option value="Not studied M.Ed Degree in Tamil Medium">Not studied M.Ed Degree in Tamil Medium</option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio69" name="radio69"
+                       value="3"  ng-model="$ctrl.radio_values.init_doc69"
+                       ng-change="$ctrl.doc69=''">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="questions">
+        Whether submitted PSTM Certificate from competent authority for M.Ed
+        Degree / Equivalent
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio615" name="radio615"
+                       value="1" ng-model="$ctrl.radio_values.init_doc615"
+                       ng-change="$ctrl.doc615=''">
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc615=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc615">
+                    <option value="">--Select--</option>
+                    <option value="Yes issued by Principal">
+                        Yes issued by Principal
+                    </option>
+                    <option value="Yes issued by Registrar">
+                        Yes issued by Registrar
+                    </option>
+                    <option value="Yes issued by Head of Institution">
+                        Yes issued by Head of Institution
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio615" name="radio615"
+                       value="2" ng-model="$ctrl.radio_values.init_doc615"
+                       ng-change="$ctrl.doc615=''">
+                No
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc615=='2' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc615">
+                    <option value="">--Select--</option>
+                    <option value="Not issued by Principal">
+                        Not issued by Principal
+                    </option>
+                    <option value="Not issued by Registrar">
+                        Not issued by Registrar
+                    </option>
+                    <option value="Not issued by Head of Institution">
+                        Not issued by Head of Institution
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio615" name="radio615"
+                       value="3" ng-model="$ctrl.radio_values.init_doc615"
+                       ng-change="$ctrl.doc615=''">
+                Not Clear
+            </label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="questions">
         Whether submitted the PSTM Certificate for both PG and Ph.D degree in Tamil Medium
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio611" name="radio611"
-                       value="1">
-                Matched
+                       value="1" ng-model="$ctrl.radio_values.init_doc611"
+                       ng-change="$ctrl.doc611=''">
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc611=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc611">
+                    <option value="">--Select--</option>
+                    <option value="Submitted PSTM Certificate for both PG and Ph.D">Submitted PSTM Certificate for both PG and Ph.D</option>
+                </select>
             </label>
         </div>
         <div class="radio">
@@ -256,16 +483,24 @@
                 <input type="radio" class="q_radio radio611" name="radio611"
                        value="2" ng-model="$ctrl.radio_values.init_doc611"
                        ng-change="$ctrl.doc611=''">
-                Not Matched
+                No
             </label>
             <label
               style="{{ $ctrl.radio_values.init_doc611=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc611">
                     <option value="">--Select--</option>
-                    <option value="Not matched for PG">Not matched for PG</option>
-                    <option value="Not matched for Ph.D">Not matched for Ph.D</option>
-                    <option value="Not matched for both PG and Ph.D">Not matched for both PG and Ph.D</option>
+                    <option value="Not Submitted PSTM Certificate for PG">Not Submitted PSTM Certificate for PG</option>
+                    <option value="Not Submitted PSTM Certificate for Ph.D">Not Submitted PSTM Certificate for Ph.D</option>
+                    <option value="Not Submitted PSTM Certificate for both PG and Ph.D">Not Submitted PSTM Certificate for both PG and Ph.D</option>
                 </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio611" name="radio611"
+                       value="3" ng-model="$ctrl.radio_values.init_doc611"
+                       ng-change="$ctrl.doc611=''">
+                Not Applicable
             </label>
         </div>
     </div>
@@ -277,8 +512,18 @@
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio612" name="radio612"
-                       value="1">
-                Matched
+                       value="1"  ng-model="$ctrl.radio_values.init_doc612"
+                       ng-change="$ctrl.doc612=''">
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc612=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc612">
+                    <option value="">--Select--</option>
+                    <option value="Submitted PSTM Certificate for PG (with (or) without Ph.D but NET/SLET qualified)">
+                        Submitted PSTM Certificate for PG (with (or) without Ph.D but NET/SLET qualified)
+                    </option>
+                </select>
             </label>
         </div>
         <div class="radio">
@@ -286,27 +531,43 @@
                 <input type="radio" class="q_radio radio612" name="radio612"
                        value="2" ng-model="$ctrl.radio_values.init_doc612"
                        ng-change="$ctrl.doc612=''">
-                Not Matched
+                 No
             </label>
             <label
               style="{{ $ctrl.radio_values.init_doc612=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc612">
                     <option value="">--Select--</option>
-                    <option value="Not matched for PG">Not matched for PG</option>
+                    <option value="Not Submitted PSTM Certificate for PG">Not Submitted PSTM Certificate for PG</option>
                 </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio612" name="radio612"
+                       value="3" ng-model="$ctrl.radio_values.init_doc612"
+                       ng-change="$ctrl.doc612=''">
+                 Not Applicable
             </label>
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether submitted the PSTM Certificate for  both PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium
+        Whether submitted the PSTM Certificate for  PG and M.Ed degree and Ph.D in case of Colleges of Education related posts in Tamil Medium
     </div>
     <div class="col-sm-12">
         <div class="radio">
             <label class="radio-custom">
                 <input type="radio" class="q_radio radio613" name="radio613"
-                       value="1">
-                Matched
+                       value="1" ng-model="$ctrl.radio_values.init_doc613"
+                       ng-change="$ctrl.doc613=''">
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc613=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc613">
+                    <option value="">--Select--</option>
+                    <option value="Submitted PSTM Certificate for PG, M.Ed Degree and Ph.D">Submitted PSTM Certificate for PG, M.Ed Degree and Ph.D</option>
+                </select>
             </label>
         </div>
         <div class="radio">
@@ -314,19 +575,27 @@
                 <input type="radio" class="q_radio radio613" name="radio613"
                        value="2" ng-model="$ctrl.radio_values.init_doc613"
                        ng-change="$ctrl.doc613=''">
-                Not Matched
+                No
             </label>
             <label
               style="{{ $ctrl.radio_values.init_doc613=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc613">
                     <option value="">--Select--</option>
-                    <option value="Not matched for PG">Not matched for PG</option>
-                    <option value="Not matched for M.Ed">Not matched for M.Ed</option>
-                    <option value="Not matched for Ph.D">Not matched for Ph.D</option>
-                    <option value="Not matched for PG & M.Ed">Not matched for PG & M.Ed</option>
-                    <option value="Not matched for M.Ed & Ph.D">Not matched for M.Ed & Ph.D</option>
-                    <option value="Not matched for PG, M.Ed & Ph.D">Not matched for PG, M.Ed & Ph.D</option>
+                    <option value="Not Submitted PSTM Certificate for PG">Not Submitted PSTM Certificate for PG</option>
+                    <option value="Not Submitted PSTM Certificate for M.Ed">Not Submitted PSTM Certificate for M.Ed</option>
+                    <option value="Not Submitted PSTM Certificate for Ph.D">Not Submitted PSTM Certificate for Ph.D</option>
+                    <option value="Not Submitted PSTM Certificate for PG and M.Ed">Not Submitted PSTM Certificate for PG and M.Ed</option>
+                    <option value="Not Submitted PSTM Certificate for PG and Ph.D">Not Submitted PSTM Certificate for PG and Ph.D</option>
+                    <option value="Not Submitted PSTM Certificate for M.Ed and Ph.D">Not Submitted PSTM Certificate for M.Ed and Ph.D</option>
                 </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio613" name="radio613"
+                       value="3" ng-model="$ctrl.radio_values.init_doc613"
+                       ng-change="$ctrl.doc613=''">
+                Not Applicable
             </label>
         </div>
     </div>
@@ -340,7 +609,16 @@
                 <input type="radio" class="q_radio radio614" name="radio614"
                        value="1" ng-model="$ctrl.radio_values.init_doc614"
                        ng-change="$ctrl.doc614=''">
-                Matched
+                Yes
+            </label>
+            <label
+                style="{{ $ctrl.radio_values.init_doc614=='1' ? 'display:block':'display:none'}}">
+                <select class="form-control" ng-model="$ctrl.doc614">
+                    <option value="">--Select--</option>
+                    <option value="Submitted PSTM Certificate for PG and M.Ed (with (or) without Ph.D but NET/SLET qualified)">
+                        Submitted PSTM Certificate for PG and M.Ed (with (or) without Ph.D but NET/SLET qualified)
+                    </option>
+                </select>
             </label>
         </div>
         <div class="radio">
@@ -348,16 +626,24 @@
                 <input type="radio" class="q_radio radio614" name="radio614"
                        value="2" ng-model="$ctrl.radio_values.init_doc614"
                        ng-change="$ctrl.doc614=''">
-                Not Matched
+                No
             </label>
             <label
               style="{{ $ctrl.radio_values.init_doc614=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc614">
                     <option value="">--Select--</option>
-                    <option value="Not matched for PG">Not matched for PG</option>
-                    <option value="Not matched for M.Ed">Not matched for M.Ed</option>
-                    <option value="Not matched for PG & M.Ed">Not matched for PG & M.Ed</option>
+                    <option value="Not Submitted PSTM Certificate for PG">Not Submitted PSTM Certificate for PG</option>
+                    <option value="Not Submitted PSTM Certificate for M.Ed">Not Submitted PSTM Certificate for M.Ed</option>
+                    <option value="Not Submitted PSTM Certificate for both PG and M.Ed">Not Submitted PSTM Certificate for both PG and M.Ed</option>
                 </select>
+            </label>
+        </div>
+        <div class="radio">
+            <label class="radio-custom">
+                <input type="radio" class="q_radio radio614" name="radio614"
+                       value="3" ng-model="$ctrl.radio_values.init_doc614"
+                       ng-change="$ctrl.doc614=''">
+                Not Applicable
             </label>
         </div>
     </div>

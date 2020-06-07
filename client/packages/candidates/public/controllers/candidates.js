@@ -73,14 +73,20 @@
       vm.doc39 = '';
       vm.doc310 = '';
       vm.doc62 = '';
+      vm.doc63 = '';
       vm.doc64 = '';
+      vm.doc65 = '';
       vm.doc66 = '';
+      vm.doc67 = '';
       vm.doc68 = '';
+      vm.doc69 = '';
       vm.doc610 = '';
       vm.doc611 = '';
       vm.doc612 = '';
       vm.doc613 = '';
       vm.doc614 = '';
+      vm.doc615 = '';
+      vm.doc616 = '';
       //136 PSTM PG
 
       vm.doc1362 = '';
@@ -193,6 +199,8 @@
       vm.doc302 = '';
       vm.doc304 = '';
       vm.doc307 = '';
+      vm.doc308 = '';
+      vm.doc309 = '';
       vm.doc305 = '';
       vm.doc306 = '';
       vm.doc312 = '';
@@ -203,12 +211,19 @@
       vm.doc322 = '';
       vm.doc323 = '';
       vm.doc324 = '';
+      vm.doc326 = '';
+      vm.doc329 = '';
+      vm.doc3210 = '';
       vm.doc3211 = '';
       vm.doc3212 = '';
+      vm.doc3213 = '';
       vm.doc332 = '';
       vm.doc334 = '';
+      vm.doc339 = '';
+      vm.doc3310 = '';
       vm.doc3311 = '';
       vm.doc3312 = '';
+      vm.doc3313 = '';
       vm.doc342 = '';
       vm.doc343 = '';
       vm.doc347 = '';
@@ -460,6 +475,7 @@
       vm.doc689 = '';
       vm.doc6810 = '';
       vm.doc6811 = '';
+      vm.doc6814 = '';
       vm.doc692 = '';
       vm.doc693 = '';
 
@@ -611,14 +627,20 @@
       vm.radio_values.init_doc39 = "";
       vm.radio_values.init_doc310 = "";
       vm.radio_values.init_doc62 = "";
+      vm.radio_values.init_doc63 = "";
       vm.radio_values.init_doc64 = "";
+      vm.radio_values.init_doc65 = "";
       vm.radio_values.init_doc66 = "";
+      vm.radio_values.init_doc67 = "";
       vm.radio_values.init_doc68 = "";
+      vm.radio_values.init_doc69 = "";
       vm.radio_values.init_doc610 = "";
       vm.radio_values.init_doc611 = "";
       vm.radio_values.init_doc612 = "";
       vm.radio_values.init_doc613 = "";
       vm.radio_values.init_doc614 = "";
+      vm.radio_values.init_doc615 = "";
+      vm.radio_values.init_doc616 = "";
       //136
 
       vm.radio_values.init_doc1362 = "";
@@ -723,6 +745,8 @@
       vm.radio_values.init_doc302 = "";
       vm.radio_values.init_doc304 = "";
       vm.radio_values.init_doc307 = "";
+      vm.radio_values.init_doc308 = "";
+      vm.radio_values.init_doc309 = "";
       vm.radio_values.init_doc305 = "";
       vm.radio_values.init_doc306 = "";
       vm.radio_values.init_doc312 = "";
@@ -733,12 +757,19 @@
       vm.radio_values.init_doc322 = "";
       vm.radio_values.init_doc323 = "";
       vm.radio_values.init_doc324 = "";
+      vm.radio_values.init_doc326 = "";
+      vm.radio_values.init_doc329 = "";
+      vm.radio_values.init_doc3210 = "";
       vm.radio_values.init_doc3211 = "";
       vm.radio_values.init_doc3212 = "";
+      vm.radio_values.init_doc3213 = "";
       vm.radio_values.init_doc332 = "";
       vm.radio_values.init_doc334 = "";
+      vm.radio_values.init_doc339 = "";
+      vm.radio_values.init_doc3310 = "";
       vm.radio_values.init_doc3311 = "";
       vm.radio_values.init_doc3312 = "";
+      vm.radio_values.init_doc3313 = "";
       vm.radio_values.init_doc342 = "";
       vm.radio_values.init_doc343 = "";
       vm.radio_values.init_doc347 = "";
@@ -988,6 +1019,7 @@
       vm.radio_values.init_doc689 = "";
       vm.radio_values.init_doc6810 = "";
       vm.radio_values.init_doc6811 = "";
+      vm.radio_values.init_doc6814 = "";
       vm.radio_values.init_doc692 = "";
       vm.radio_values.init_doc693 = "";
 
@@ -1143,14 +1175,19 @@
       '2c6': 'Not relevant reason',
       '2c7': 'New certificate number',
       '6c2': 'New Authority',
-      '6c4': 'Relevant PG Degree Reason',
+      '6c3': 'Claimed for PSTM Reservation',
+      '6c5': 'studied PG Degree in Tamil Medium',
       '6c6': 'Relevant PG Degree in Tamil Reason',
+      '6c7': 'studied Ph.D Degree in Tamil Medium',
       '6c8': 'Relevant PHD Degree in Tamil Reason',
+      '6c9': 'studied M.Ed Degree in Tamil Medium',
       '6c10': 'Relevant MEd Degree in Tamil Reason',
-      '6c11': 'PG & PHD Degree not matched',
+      '6c11': 'Submitted PG & PHD Degree in Tamil Medium',
       '6c12': 'Only (PG / PHD) / SLET / NET Degree not matched',
       '6c13': 'PG and M.Ed degree and Ph.D not matched',
-      '6c14': 'both PG and M.Ed (with (or) without Ph.D not matched',
+      '6c14': 'PG and M.Ed (with (or) without Ph.D',
+      '6c15': 'competent authority for M.Ed Degree / Equivalent',
+      '6c16': 'competent authority for Ph.D Degree / Equivalent',
       '136c2': 'New Authority',
       '136c4': 'Relevant PG Degree Reason',
       '136c6': 'Relevant PG Degree in Tamil Reason',
@@ -1249,6 +1286,8 @@
       '30c4': 'New Place of Birth',
       '30c6': 'New DOB for Age as on 01.07.2019',
       '30c7': 'Not relevant reason',
+      '30c8': 'DOB Matching',
+      '30c9': 'Age on 01.07.2019 Matching',
       '30c5': 'New Date of Birth',
       '31c2': 'New relevant reason',
       '31c3': 'New Certificate Number',
@@ -1258,12 +1297,19 @@
       '32c2': 'New relevant reason',
       '32c3': 'New Certificate number',
       '32c4': 'New Degree Mark Sheets relevant reason',
+      '32c6': 'Number of marksheet',
+      '32c9': 'Name of institute',
+      '32c10': 'Mode of study',
       '32c11': 'New Date of Passing',
       '32c12': 'New Percentage of marks',
+      '32c13': 'Date of publications of results',
       '33c2': 'Relevant document resaon',
       '33c4': 'Relevant Marksheet reason',
+      '33c9': 'Name of institute',
+      '33c10': 'Mode of study',
       '33c11': 'New Year of passing',
       '33c12': 'New Percentage of marks',
+      '33c13': 'Date of publications of result',
       '34c2': 'New Relevant reason',
       '34c3': 'Certificate Number',
       '34c7': 'Name of Subject',
@@ -1512,6 +1558,7 @@
       '68c9': 'Name of institute',
       '68c10': 'Mode of study',
       '68c11': 'Date of publication of result',
+      '68c14': 'Obtained M.Phil Degree on',
       '69c2': 'Claimed exception',
       '69c3': 'Not relevant reason',
       '70c2': 'Relevant document reason',
@@ -1681,8 +1728,8 @@
           "Phd Certificate": 'PHD Certificate',
           "Birth Certificate": 'Birth Certificate',
           "PWD Certificate": 'Special Category',
-          "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment',
-          "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment)',
+          "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment - Marksheet',
+          "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment) - Marksheet',
           "B.Ed Certificate": 'B.Ed.',
           "M.Ed Certificate": 'M.Ed.',
           "Conduct certificate from head of institution last studied": 'Conduct Certificate',
@@ -1874,13 +1921,16 @@
             if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'MEDMARK') {
               $scope.candidateDetails['document_list'][i]['odm_name'] = 'M.Ed Degree / Equivalent Consolidated Marksheet';
             }
+            if ($scope.candidateDetails['document_list'][i]['ocd_flag'].includes('PSTM')) {
+              $scope.candidateDetails['document_list'][i]['odm_name'] = 'PSTM Certificate';
+            }
             var name = $scope.candidateDetails['document_list'][i]['odm_name'];
             name = name.substring(0, name.length - 2);
             if (!$scope.checkArray(name)) {
               console.log(name);
               if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet'
                   || name.includes('Work Experience') || name == 'B.Ed Degree / Equivalent Marksheet'
-                  || name == 'M.Ed Degree / Equivalent Marksheet') {
+                  || name == 'M.Ed Degree / Equivalent Marksheet' || name == 'PSTM Certificate') {
                 if(name.includes('Work Experience')){
                   $scope.candidateDetails['document_list'][i]['odm_name'] = 'Work Experience';
                 }else{
@@ -2044,6 +2094,17 @@
         console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('Work Experience')) {
+            var iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            document.getElementById('iframeContainer').append(iframe);
+          }
+        }
+      } else if ($scope.selectedDocType === 'PSTM Certificate') {
+        console.log($scope.allDocumentList);
+        for (var j in $scope.allDocumentList) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('PSTM')) {
             var iframe = document.createElement('iframe');
             iframe.width = '100%';
             iframe.height = '100%';
@@ -2218,14 +2279,14 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408, #doc14034, #doc14035").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3213, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408, #doc14034, #doc14035").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, #doc274, .doc684, #doc284, #doc2812, .doc294,  .doc2515, #doc3411").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, #doc284, #doc2812, .doc294,  .doc2515, #doc3411").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
