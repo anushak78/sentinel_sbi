@@ -8,7 +8,7 @@
 
 <div>
   <div class="questions">
-    Is the document relevant to claim ?
+    Is the document/documents relevant to the claim 1. of Teaching Experience Certificate?
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -39,19 +39,109 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Number of Teaching Experience Certificate ?
+    No. of Claims made by the applicant as per the application form and uploaded details ?
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio393" name="radio393"
+               value="1" ng-model="$ctrl.radio_values.init_doc393"
+               ng-change="$ctrl.doc393=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc393=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc393"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio393" name="radio393"
+               value="2" ng-model="$ctrl.radio_values.init_doc393"
+               ng-change="$ctrl.doc393=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc393=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc393"
+               class="form-control">
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    No. of Claims of period of Experience?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio394" name="radio394"
+               value="1"  ng-model="$ctrl.radio_values.init_doc394"
+               ng-change="$ctrl.doc394=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc394=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc394"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio394" name="radio394"
+               value="2"  ng-model="$ctrl.radio_values.init_doc394"
+               ng-change="$ctrl.doc394=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc394=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc394"
+               class="form-control">
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    No. of Experience Certificate uploaded by the candidate along with the application
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio395" name="radio395"
+               value="1" ng-model="$ctrl.radio_values.init_doc395"
+               ng-change="$ctrl.doc395=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc395=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc395"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio395" name="radio395"
+               value="2" ng-model="$ctrl.radio_values.init_doc395"
+               ng-change="$ctrl.doc395=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc395=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc395"
+               class="form-control">
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate submitted
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio396" name="radio396"
                value="1">
         Matched
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio393" name="radio393"
+        <input type="radio" class="q_radio radio396" name="radio396"
                value="2">
         Not Matched
       </label>
@@ -59,41 +149,58 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Consolidated Teaching Experience?
+    Consolidated Teaching Experience
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio394" name="radio394"
-               value="1">
+        <input type="radio" class="q_radio radio397" name="radio397"
+               value="1"  ng-model="$ctrl.radio_values.init_doc397"
+               ng-change="$ctrl.doc397=''">
         Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc397=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc397"
+               class="doc397 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio394" name="radio394"
-               value="2">
+        <input type="radio" class="q_radio radio397" name="radio397"
+               value="2"  ng-model="$ctrl.radio_values.init_doc397"
+               ng-change="$ctrl.doc397=''">
         Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc397=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc397"
+               class="doc397 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Total Weightage marks for Teaching Experience
+    NET Teaching Experience period to be considered
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio395" name="radio395"
-               value="1">
-        Matched
+        <input type="radio" class="q_radio radio398" name="radio398"
+               value="1"  ng-model="$ctrl.radio_values.init_doc398"
+               ng-change="$ctrl.doc398=''">
+        Date of obtaining prescribed qualification
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc398=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc398"
+               class="doc398 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio395" name="radio395"
+        <input type="radio" class="q_radio radio398" name="radio398"
                value="2">
-        Not Matched
+        NET Teaching Experience Period : Date of obtaining prescribed
+        qualification – from to experience period total after the date of
+        obtaining prescribed qualification till 15.11.2019
       </label>
     </div>
   </div>

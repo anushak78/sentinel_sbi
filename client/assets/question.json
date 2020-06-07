@@ -2999,7 +2999,7 @@
       "q_id": 1
     },
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document/documents relevant to the claim 1. of Teaching Experience Certificate?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -3009,7 +3009,7 @@
       "q_id": 2
     },
     {
-      "question": "Number of Teaching Experience Certificate ?",
+      "question": "No. of Claims made by the applicant as per the application form and uploaded details ?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3019,7 +3019,7 @@
       "q_id": 3
     },
     {
-      "question": "Consolidated Teaching Experience?",
+      "question": "No. of Claims of period of Experience?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3029,7 +3029,7 @@
       "q_id": 4
     },
     {
-      "question": "Total Weightage marks for Teaching Experience",
+      "question": "No. of Experience Certificate uploaded by the candidate along with the application",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3037,6 +3037,36 @@
       "approved": "1",
       "doc_id": 39,
       "q_id": 5
+    },
+    {
+      "question": "Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 6
+    },
+    {
+      "question": "Consolidated Teaching Experience",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 7
+    },
+    {
+      "question": "NET Teaching Experience period to be considered",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 8
     }
   ],
   "Work Experience 2": [
@@ -11561,6 +11591,18 @@
       "approved": "1",
       "doc_id": 140,
       "q_id": 35
+    },
+    {
+      "question": "Eligible Category of Qualification (cutoff date before 04.10.2019)",
+      "options": {
+        "option1": "PG and Phd in Concerned Subject (Ph.D through Correspondence / Distance / Open University not permitted after 03.04.2009)",
+        "option2": "PG with M.Phil and SLET / NET / SET (M.Phil through Correspondence / Distance / Open University not permitted after 03.04.2009)",
+        "option3": "For PG & SLET / NET / SET",
+        "option4": "Not Eligible"
+      },
+      "approved": "1",
+      "doc_id": 140,
+      "q_id": 36
     },
     {
       "question": "Whether studied PG Degree and Ph.D Degree in the same subject or its equivalent as prescribed in the notification.",

@@ -190,6 +190,7 @@
       vm.doc293 = '';
       vm.doc294 = '';
       vm.doc295 = '';
+      vm.doc298 = '';
       vm.doc2912 = '';
       vm.doc2915 = '';
       vm.doc2916 = '';
@@ -238,6 +239,7 @@
       vm.doc3512 = '';
       vm.doc3517 = '';
       vm.doc362 = '';
+      vm.doc363 = '';
       vm.doc364 = '';
       vm.doc365 = '';
       vm.doc372 = '';
@@ -260,6 +262,11 @@
       vm.doc3819 = '';
       vm.doc3820 = '';
       vm.doc392 = '';
+      vm.doc393 = '';
+      vm.doc394 = '';
+      vm.doc395 = '';
+      vm.doc397 = '';
+      vm.doc398 = '';
       vm.doc402 = '';
       vm.doc412 = '';
       vm.doc422 = '';
@@ -736,6 +743,7 @@
       vm.radio_values.init_doc293 = "";
       vm.radio_values.init_doc294 = "";
       vm.radio_values.init_doc295 = "";
+      vm.radio_values.init_doc298 = "";
       vm.radio_values.init_doc2912 = "";
       vm.radio_values.init_doc2915 = "";
       vm.radio_values.init_doc2916 = "";
@@ -784,6 +792,7 @@
       vm.radio_values.init_doc3511 = "";
       vm.radio_values.init_doc3512 = "";
       vm.radio_values.init_doc362 = "";
+      vm.radio_values.init_doc363 = "";
       vm.radio_values.init_doc364 = "";
       vm.radio_values.init_doc365 = "";
       vm.radio_values.init_doc372 = "";
@@ -805,6 +814,11 @@
       vm.radio_values.init_doc3819 = "";
       vm.radio_values.init_doc3820 = "";
       vm.radio_values.init_doc392 = "";
+      vm.radio_values.init_doc393 = "";
+      vm.radio_values.init_doc394 = "";
+      vm.radio_values.init_doc395 = "";
+      vm.radio_values.init_doc397 = "";
+      vm.radio_values.init_doc398 = "";
       vm.radio_values.init_doc402 = "";
       vm.radio_values.init_doc412 = "";
       vm.radio_values.init_doc422 = "";
@@ -1281,6 +1295,7 @@
       '29c16': 'Date of publication of result',
       '29c6': 'New Mode of study',
       '29c7': 'Not relevant reason',
+      '29c8': 'Name of the subject',
       '29c9': 'Name of institute',
       '30c2': 'New Certificate Number',
       '30c4': 'New Place of Birth',
@@ -1325,6 +1340,7 @@
       '35c17': 'Correct G.O. No with date',
       '36c2': 'Last studied conduct relevant',
       '36c4': 'Latest Conduct Certificate relevant reason',
+      '36c3': 'Whether submitted last Studied Conduct Certificate',
       '36c5': 'Whether submitted Latest Conduct Certificate',
       '37c2': 'Name in the M.Phill Certificate',
       '37c3': 'Certificate Number',
@@ -1346,6 +1362,11 @@
       '38c19': 'Period of study',
       '38c20': 'Mode of study',
       '39c2': 'Relevant document reason',
+      '39c3': 'No. of Claims made by the applicant',
+      '39c4': 'No. of Claims of period of Experience',
+      '39c5': 'No. of experience certificate',
+      '39c7': 'Teaching Experience From To',
+      '39c8': 'NET Teaching Experience period',
       '40c2': 'Relevant document reason',
       '41c2': 'Relevant document reason',
       '42c2': 'Relevant document reason',
@@ -1931,9 +1952,9 @@
               if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet'
                   || name.includes('Work Experience') || name == 'B.Ed Degree / Equivalent Marksheet'
                   || name == 'M.Ed Degree / Equivalent Marksheet' || name == 'PSTM Certificate') {
-                if(name.includes('Work Experience')){
+                if (name.includes('Work Experience')) {
                   $scope.candidateDetails['document_list'][i]['odm_name'] = 'Work Experience';
-                }else{
+                } else {
                   $scope.candidateDetails['document_list'][i]['odm_name'] = name;
                 }
 
@@ -2295,7 +2316,7 @@
         }).on('changeDate', function (value) {
           // vm.doc23 = moment(value.date).format("MM-YYYY")
         });
-        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889').datepicker({
+        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc397, .doc398').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2563,6 +2584,26 @@
     });
 
 
+    vm.findData = function (docName, qId) {
+      console.log(docName);
+      if (Object.keys($scope.finalJsonData).length > 0) {
+        if (typeof $scope.finalJsonData[docName] !== 'undefined') {
+          console.log($scope.finalJsonData[docName]);
+          for (var i in $scope.finalJsonData[docName]['answers']) {
+            console.log(i);
+            if ($scope.finalJsonData[docName]['answers'][i]['qn_id'] == qId
+                && $scope.finalJsonData[docName]['answers'][i]['ans_id'] == 2) {
+              return $scope.finalJsonData[docName]['answers'][i]['additional_info'];
+            }
+          }
+        } else {
+          return 'N.A.';
+        }
+      } else {
+        return 'N.A.';
+      }
+    };
+
     vm.calculateAge = function (value) {
       if (value != '') {
         console.log(value);
@@ -2598,7 +2639,7 @@
       html2pdf()
           .from(element)
           .save();
-    }
+    };
 
   }
 
