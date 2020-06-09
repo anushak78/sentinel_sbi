@@ -378,6 +378,7 @@ def get_candidate_details(request):
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_religion_belief) as religion,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_isgovtservice) as is_government_service,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_ugeqpresc) as ug_subject_same,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgeqpresc) as pg_subject_same,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgmode) as pg_mode_of_study,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_pgforeignuni) as pg_foreign_university,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_ugmarksheet) as ug_consolidated_marksheet,
