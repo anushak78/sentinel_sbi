@@ -218,6 +218,15 @@
       vm.doc3211 = '';
       vm.doc3212 = '';
       vm.doc3213 = '';
+      vm.doc1462 = '';
+      vm.doc1463 = '';
+      vm.doc1464 = '';
+      vm.doc1466 = '';
+      vm.doc1469 = '';
+      vm.doc14610 = '';
+      vm.doc14611 = '';
+      vm.doc14612 = '';
+      vm.doc14613 = '';
       vm.doc332 = '';
       vm.doc334 = '';
       vm.doc339 = '';
@@ -771,6 +780,15 @@
       vm.radio_values.init_doc3211 = "";
       vm.radio_values.init_doc3212 = "";
       vm.radio_values.init_doc3213 = "";
+      vm.radio_values.init_doc1462 = "";
+      vm.radio_values.init_doc1463 = "";
+      vm.radio_values.init_doc1464 = "";
+      vm.radio_values.init_doc1466 = "";
+      vm.radio_values.init_doc1469 = "";
+      vm.radio_values.init_doc14610 = "";
+      vm.radio_values.init_doc14611 = "";
+      vm.radio_values.init_doc14612 = "";
+      vm.radio_values.init_doc14613 = "";
       vm.radio_values.init_doc332 = "";
       vm.radio_values.init_doc334 = "";
       vm.radio_values.init_doc339 = "";
@@ -1318,6 +1336,15 @@
       '32c11': 'New Date of Passing',
       '32c12': 'New Percentage of marks',
       '32c13': 'Date of publications of results',
+      '146c2': 'New relevant reason',
+      '146c3': 'New Certificate number',
+      '146c4': 'New Degree Mark Sheets relevant reason',
+      '146c6': 'Number of marksheet',
+      '146c9': 'Name of institute',
+      '146c10': 'Mode of study',
+      '146c11': 'New Date of Passing',
+      '146c12': 'New Percentage of marks',
+      '146c13': 'Date of publications of results',
       '33c2': 'Relevant document resaon',
       '33c4': 'Relevant Marksheet reason',
       '33c9': 'Name of institute',
@@ -1750,6 +1777,7 @@
           "Birth Certificate": 'Birth Certificate',
           "PWD Certificate": 'Special Category',
           "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment - Marksheet',
+          "Special B.Ed Marksheet": 'Special B.Ed Marksheet',
           "Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet": 'Senior Diploma in Teaching Deaf (Hearing Impairment) - Marksheet',
           "B.Ed Certificate": 'B.Ed.',
           "M.Ed Certificate": 'M.Ed.',
@@ -1950,6 +1978,7 @@
             if (!$scope.checkArray(name)) {
               console.log(name);
               if (name == 'UG Degree / Equivalent Marksheet' || name == 'PG Degree / Equivalent Marksheet'
+                  || name == 'Special B.Ed Marksheet'
                   || name.includes('Work Experience') || name == 'B.Ed Degree / Equivalent Marksheet'
                   || name == 'M.Ed Degree / Equivalent Marksheet' || name == 'PSTM Certificate') {
                 if (name.includes('Work Experience')) {
@@ -2068,7 +2097,6 @@
       console.log($scope.selectedDocType);
       document.getElementById('iframeContainer').innerHTML = '';
       if ($scope.selectedDocType === 'UG Degree / Equivalent Marksheet') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('UGMARK')) {
             var iframe = document.createElement('iframe');
@@ -2079,7 +2107,6 @@
           }
         }
       } else if ($scope.selectedDocType === 'PG Degree / Equivalent Marksheet') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('PGMRK')) {
             var iframe = document.createElement('iframe');
@@ -2089,8 +2116,17 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
+      }  else if ($scope.selectedDocType === 'Special B.Ed Marksheet') {
+        for (var j in $scope.allDocumentList) {
+          if ($scope.allDocumentList[j]['ocd_flag'].includes('SPECIALDEG')) {
+            var iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            document.getElementById('iframeContainer').append(iframe);
+          }
+        }
       } else if ($scope.selectedDocType === 'B.Ed Degree / Equivalent Marksheet') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('BEDMARKN')) {
             var iframe = document.createElement('iframe');
@@ -2101,7 +2137,6 @@
           }
         }
       } else if ($scope.selectedDocType === 'M.Ed Degree / Equivalent Marksheet') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('MEDMARKN')) {
             var iframe = document.createElement('iframe');
@@ -2112,7 +2147,6 @@
           }
         }
       } else if ($scope.selectedDocType === 'Work Experience') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('Work Experience')) {
             var iframe = document.createElement('iframe');
@@ -2123,7 +2157,6 @@
           }
         }
       } else if ($scope.selectedDocType === 'PSTM Certificate') {
-        console.log($scope.allDocumentList);
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('PSTM')) {
             var iframe = document.createElement('iframe');
@@ -2300,7 +2333,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3213, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, #doc1408, #doc14034, #doc14035").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -2858,6 +2891,10 @@
   }).directive('specialBed', function () {
     return {
       templateUrl: "/candidates/view/templates/Special_BED.html"
+    };
+  }).directive('specialBed1', function () {
+    return {
+      templateUrl: "/candidates/view/templates/Special_BED1.html"
     };
   }).directive('seniorDiploma', function () {
     return {

@@ -132,6 +132,10 @@
                value="1">
         Matched
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc305=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
+               class="doc305 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -167,6 +171,25 @@
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc308=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc308">
+          <option value="">--Select--</option>
+          <option value="Correct Date of Birth and corroborated with application data">
+            Correct Date of Birth and corroborated with application data
+          </option>
+          <option value="Correct Date of Birth and Corroborated with additional upload data">
+            Correct Date of Birth and Corroborated with additional upload data
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" ng-model="$ctrl.radio_values.init_doc308"  ng-change="$ctrl.doc308=''"
+               class="q_radio radio308" name="radio308" value="2">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc308=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc308">
           <option value="">--Select--</option>
           <option value="Correct Date of Birth and corroborated with application data">
