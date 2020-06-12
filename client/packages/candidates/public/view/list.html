@@ -199,6 +199,45 @@
             <!--<img src="/assets/src/images/avatar.jpg" height="100">-->
           </div>
           <div class="clearfix"></div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Are you differently Abled?:<br/><span
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_handicapped']}}</span>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Are you already in Government Service?:<br/><span
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_government_service']}}</span>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Do you claim PSTM?:<br/><span
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['claimed_for_pstm']}}</span>
+            </section>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Specialization in Hearing Impaired?:<br/><span
+                style="font-size: 14px"></span>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Have you possess Senior Diploma in Teaching Deaf Students?:<br/><span
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['possess_senior_diploma']}}</span>
+            </section>
+          </div>
+          <div class="col-md-4">
+            <section class="panel-body" style="font-size: 12px">
+              Do you have Work Experience?:<br/><span
+                style="font-size: 14px">
+              {{candidateDetails['work_experience'].length>0?'Yes':'No'}}</span>
+            </section>
+          </div>
+          <div class="clearfix"></div>
           <!--          <div class="col-md-4">-->
           <!--            <section class="panel-body" style="font-size: 12px">-->
           <!--              Name:<br/><span-->
@@ -1090,6 +1129,25 @@
                                style="font-size: 12px">
                         Total no. of Work Experience :<br/><span
                           style="font-size: 14px">{{candidateDetails['work_experience'].length}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Total Work Experience :<br/><span
+                          style="font-size: 14px">
+                        {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}</span>
+                      </section>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Relevant Experience :<br/><span
+                          style="font-size: 14px">
+                        {{candidateDetails['candidate_details'][0]['relevant_work_experience']}}</span>
                       </section>
                     </div>
                   </div>
@@ -2255,7 +2313,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1">
+                  <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1"TN>
                     <div class="col-md-12">
                       <section class="panel-body"
                                style="font-size: 12px">
@@ -2310,7 +2368,8 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Whether completed all the prescribed educational qualification before the cut-off date 04-10-2019
+                        Whether completed all the prescribed educational qualification before the cut-off date
+                        04-10-2019
                         :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['education_cutoff']}}</span>
                       </section>
@@ -2491,7 +2550,7 @@
                         Claimed exemption from NET/SLET
                         :<br/><span
                           style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['ocad_claimexemp']}}</span>
+                        {{candidateDetails['candidate_details'][0]['claimed_exemption']}}</span>
                       </section>
                     </div>
                     <div
@@ -2503,7 +2562,7 @@
                           Passed SLET in the relevant Subject
                           :<br/><span
                             style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['ocad_passedslet']}}</span>
+                        {{candidateDetails['candidate_details'][0]['passed_slet']}}</span>
                         </section>
                       </div>
                       <div class="col-md-6">
@@ -2512,7 +2571,7 @@
                           Completed SLET or NET or Ph.D
                           :<br/><span
                             style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['oum_pan_no']}}</span>
+                        {{candidateDetails['candidate_details'][0]['claimed_slet_net_phd']}}</span>
                         </section>
                       </div>
                       <div class="clearfix"></div>
@@ -2541,7 +2600,7 @@
                           SLET- Agency Conducted
                           :<br/><span
                             style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['oaed_slet_agency_conducted']}}</span>
+                        {{candidateDetails['candidate_details'][0]['agency_conducted_slet']}}</span>
                         </section>
                       </div>
                       <div class="col-md-6">
@@ -2565,6 +2624,7 @@
                       </div>
                       <div class="clearfix"></div>
                     </div>
+                    <div class="clearfix"></div>
                     <div
                         ng-if="candidateDetails['candidate_details'][0]['oaed_is_net_checked'] =='true'">
                       <div class="col-md-6">
@@ -2592,7 +2652,7 @@
                           NET AGENCY CONDUCTED
                           :<br/><span
                             style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['oaed_net_agency_conducted']}}</span>
+                        {{candidateDetails['candidate_details'][0]['agency_conducted_net']}}</span>
                         </section>
                       </div>
                       <div class="col-md-6">
@@ -2610,7 +2670,7 @@
                           Passed in the NET / CSIR/JRF as per UGC Norms in the relevant Subject?
                           :<br/><span
                             style="font-size: 14px">
-                        {{candidateDetails['candidate_details'][0]['ocad_passedugcnorms']}}</span>
+                        {{candidateDetails['candidate_details'][0]['ugc_norms_net']}}</span>
                         </section>
                       </div>
                     </div>

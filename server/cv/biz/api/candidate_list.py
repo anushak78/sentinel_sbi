@@ -369,7 +369,9 @@ def get_candidate_details(request):
     oum.*,
     ocad.*,
     oaed.*,
+    owead.*,
     oacd1.oacd_created_by,oacd1.oacd_year_of_passing as ssc_year_of_passing,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=owead.owead_relevant_work_exp) as relevant_work_experience,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_pg_eduqst3) as possess_senior_diploma,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_is_handicaped) as is_handicapped,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_disability_type) as disability_type,
@@ -396,6 +398,12 @@ def get_candidate_details(request):
       (select octm_category_desc from oes_category_master where octm_category_pk::varchar=ocd.ocd_community) as community,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oacd1.oacd_university) as ssc_university,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_passedslet) as passed_in_relevent_slet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_claimexemp) as claimed_exemption,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_passedslet) as passed_slet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oum.oum_pan_no) as claimed_slet_net_phd,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_slet_agency_conducted) as agency_conducted_slet,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_net_agency_conducted) as agency_conducted_net,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_passedugcnorms) as ugc_norms_net,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_orderedu) as order_of_education,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_educutoff) as education_cutoff,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_anycoursecomp) as course_completed_after_discontinuing,
@@ -521,6 +529,7 @@ def get_candidate_details(request):
     left join oes_acdm_cand_details  oacd7 on (oacd7.oacd_user_fk=oum_user_pk and oacd7.oacd_acdm_fk=7)
     left join oes_cand_additional_details ocad on oum.oum_user_pk = ocad.ocad_user_fk
     left join oes_additional_education_details oaed on oum.oum_user_pk = oaed.oaed_user_fk
+    left join oes_work_exp_add_details owead on oum.oum_user_pk = owead.owead_user_fk
     where ocd.ocd_created_by = :candidate_id
                           """)
     data = request.dbsession.execute(details_query, {
