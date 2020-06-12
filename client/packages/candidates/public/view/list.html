@@ -199,19 +199,19 @@
             <!--<img src="/assets/src/images/avatar.jpg" height="100">-->
           </div>
           <div class="clearfix"></div>
-          <div class="col-md-4">
+          <div class="col-md-4" ng-if="candidateDetails['candidate_details'][0]['is_handicapped']=='No'">
             <section class="panel-body" style="font-size: 12px">
               Are you differently Abled?:<br/><span
                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_handicapped']}}</span>
             </section>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" ng-if="candidateDetails['candidate_details'][0]['is_government_service']=='No'">
             <section class="panel-body" style="font-size: 12px">
               Are you already in Government Service?:<br/><span
                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_government_service']}}</span>
             </section>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" ng-if="candidateDetails['candidate_details'][0]['claimed_for_pstm']=='No'">
             <section class="panel-body" style="font-size: 12px">
               Do you claim PSTM?:<br/><span
                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['claimed_for_pstm']}}</span>
@@ -230,7 +230,7 @@
                 style="font-size: 14px">{{candidateDetails['candidate_details'][0]['possess_senior_diploma']}}</span>
             </section>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" ng-if="candidateDetails['work_experience'].length<=0">
             <section class="panel-body" style="font-size: 12px">
               Do you have Work Experience?:<br/><span
                 style="font-size: 14px">
@@ -2313,7 +2313,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1"TN>
+                  <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1" TN>
                     <div class="col-md-12">
                       <section class="panel-body"
                                style="font-size: 12px">
@@ -2942,6 +2942,14 @@
                     <div id="146"
                          ng-if="selectedDocType=='Special B.Ed Marksheet'">
                       <special-bed1></special-bed1>
+                    </div>
+                    <div id="141"
+                         ng-if="selectedDocType=='Special B.Ed Certificate'">
+                      <special-bed-certificate></special-bed-certificate>
+                    </div>
+                    <div id="142"
+                         ng-if="selectedDocType=='Senior Diploma Certificate'">
+                      <senior-diploma-certificate></senior-diploma-certificate>
                     </div>
                     <div id="33"
                          ng-if="selectedDocType=='Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet'">

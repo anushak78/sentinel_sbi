@@ -1,0 +1,149 @@
+<div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
+  <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+</div>
+
+<div>
+  <div class="questions">
+    Special B.Ed Degree in Teaching the Hearing Impairment Degree Certificate Number
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1412" name="radio1412"
+               value="1" ng-model="$ctrl.radio_values.init_doc1412"
+               ng-change="$ctrl.doc1412=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1412" name="radio1412"
+               value="2" ng-model="$ctrl.radio_values.init_doc1412"
+               ng-change="$ctrl.doc1412=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc1412=='2' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc1412"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1412" name="radio1412"
+               value="3" ng-model="$ctrl.radio_values.init_doc1412"
+               ng-change="$ctrl.doc1412=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Name of the subject in Special B.Ed Degree in Teaching the Hearing Impairment
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1413" name="radio1413"
+               value="1" ng-model="$ctrl.radio_values.init_doc1413"
+               ng-change="$ctrl.doc1413=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1413" name="radio1413"
+               value="2" ng-model="$ctrl.radio_values.init_doc1413"
+               ng-change="$ctrl.doc1413=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc1413=='2' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc1413"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1413" name="radio1413"
+               value="3" ng-model="$ctrl.radio_values.init_doc1413"
+               ng-change="$ctrl.doc1413=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Name of the University in Special B.Ed Degree in Teaching the Hearing Impairment
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1413" name="radio1414"
+               value="1" ng-model="$ctrl.radio_values.init_doc1414"
+               ng-change="$ctrl.doc1414=''">
+        Matched
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1414" name="radio1414"
+               value="2" ng-model="$ctrl.radio_values.init_doc1414"
+               ng-change="$ctrl.doc1414=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc1414=='2' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc1414"
+               class="form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1414" name="radio1414"
+               value="3" ng-model="$ctrl.radio_values.init_doc1414"
+               ng-change="$ctrl.doc1414=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Month & Year of Passing in the Special B.Ed Degree in Teaching the Hearing Impairment?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1415" name="radio1415"
+               value="1" ng-model="$ctrl.radio_values.init_doc1415"
+               ng-change="$ctrl.doc1415=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc1415=='1' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc1415" maxlength="50"
+               class="doc1415 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1415" name="radio1415"
+               value="2" ng-model="$ctrl.radio_values.init_doc1415"
+               ng-change="$ctrl.doc1415=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc1415=='2' ? 'display:block':'display:none'}}">
+        <input type="text" data-date-format="YYYY-MM-DD"
+               ng-model="$ctrl.doc1415" maxlength="50"
+               class="doc1415 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio1415" name="radio1415"
+               value="3" ng-model="$ctrl.radio_values.init_doc1415"
+               ng-change="$ctrl.doc1415=''">
+        Not Clear
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

@@ -142,6 +142,15 @@
       vm.doc14021 = '';
       vm.doc14034 = '';
       vm.doc14035 = '';
+      vm.doc1412 = '';
+      vm.doc1413 = '';
+      vm.doc1414 = '';
+      vm.doc1415 = '';
+      vm.doc1422 = '';
+      vm.doc1423 = '';
+      vm.doc1424 = '';
+      vm.doc1425 = '';
+      vm.doc1426 = '';
 
 
       vm.doc84 = '';
@@ -710,6 +719,15 @@
       vm.radio_values.init_doc14021 = "";
       vm.radio_values.init_doc14034 = "";
       vm.radio_values.init_doc14035 = "";
+      vm.radio_values.init_doc1412 = "";
+      vm.radio_values.init_doc1413 = "";
+      vm.radio_values.init_doc1414 = "";
+      vm.radio_values.init_doc1415 = "";
+      vm.radio_values.init_doc1422 = "";
+      vm.radio_values.init_doc1423 = "";
+      vm.radio_values.init_doc1424 = "";
+      vm.radio_values.init_doc1425 = "";
+      vm.radio_values.init_doc1426 = "";
       vm.radio_values.init_doc162 = "";
       vm.radio_values.init_doc124 = "";
       vm.radio_values.init_doc162 = "";
@@ -1271,6 +1289,15 @@
       '140c21': 'If Educational qualification order selected Others',
       '140c34': 'Completed course after discontinuing date',
       '140c35': 'Date of obtaining prescribed educational qualification',
+      '141c2': 'Special Certificate Number',
+      '141c3': 'Name of subject',
+      '141c4': 'Name of university',
+      '141c5': 'Month & Year of passing',
+      '142c2': 'Senior Diploma Certificate Number',
+      '142c3': 'Name of subject',
+      '142c4': 'Name of university',
+      '142c5': 'Month & Year of passing',
+      '142c6': 'Issued by',
       '12c2': 'Relevant reason',
       '12c3': 'Working in any Govt. Organization',
       '12c4': 'Number of Years completed as Government Servant',
@@ -1877,7 +1904,9 @@
           "PG Degree / Equivalent Marksheet 12": 'PG Degree / Equivalent Marksheet 12',
           "PG Degree / Equivalent Marksheet 13": 'PG Degree / Equivalent Marksheet 13',
           "PG Degree / Equivalent Marksheet 14": 'PG Degree / Equivalent Marksheet 14',
-          "SLET / NET Exemption certificate": 'SLET / NET Exemption certificate'
+          "SLET / NET Exemption certificate": 'SLET / NET Exemption certificate',
+          "Special B.Ed Certificate": 'Special B.Ed Certificate',
+          "Senior Diploma Certificate": 'Senior Diploma Certificate'
         };
 
     $scope.object = Object;
@@ -2340,7 +2369,7 @@
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, #doc284, #doc2812, .doc294,  .doc2515, #doc3411").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, #doc284, #doc2812, .doc294,  .doc2515, #doc3411, .doc1415, .doc1425").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2896,9 +2925,17 @@
     return {
       templateUrl: "/candidates/view/templates/Special_BED1.html"
     };
+  }).directive('specialBedCertificate', function () {
+    return {
+      templateUrl: "/candidates/view/templates/Special_BED_Certificate.html"
+    };
   }).directive('seniorDiploma', function () {
     return {
       templateUrl: "/candidates/view/templates/Senior_Diploma.html"
+    };
+  }).directive('seniorDiplomaCertificate', function () {
+    return {
+      templateUrl: "/candidates/view/templates/Senior_Diploma_Certificate.html"
     };
   }).directive('bed', function () {
     return {

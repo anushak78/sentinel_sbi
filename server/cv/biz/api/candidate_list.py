@@ -582,6 +582,16 @@ def get_candidate_details(request):
         "odm_name": "General Information"
     })
     document_list.insert(len(document_list), {
+        "ocd_doc_file_name": '',
+        "ocd_flag": "SBC",
+        "odm_name": "Special B.Ed Certificate"
+    })
+    document_list.insert(len(document_list), {
+        "ocd_doc_file_name": '',
+        "ocd_flag": "SDC",
+        "odm_name": "Senior Diploma Certificate"
+    })
+    document_list.insert(len(document_list), {
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "OQ",
         "odm_name": "Order of Qualification"

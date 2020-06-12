@@ -11742,6 +11742,128 @@
       "doc_id": 140,
       "q_id": 14
     }
+  ],
+  "Special B.Ed Certificate" : [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 141,
+      "q_id": 1
+    },
+    {
+      "question": "Special B.Ed Degree in Teaching the Hearing Impairment Degree Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 141,
+      "q_id": 2
+    },
+    {
+      "question": "Name of the subject in Special B.Ed Degree in Teaching the Hearing Impairment",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 141,
+      "q_id": 3
+    },
+    {
+      "question": "Name of the University in Special B.Ed Degree in Teaching the Hearing Impairment",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 141,
+      "q_id": 4
+    },
+    {
+      "question": "Month & Year of Passing in the Special B.Ed Degree in Teaching the Hearing Impairment?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 141,
+      "q_id": 5
+    }
+  ],
+  "Senior Diploma Certificate" : [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 1
+    },
+    {
+      "question": "Senior Diploma in Teaching Deaf (Hearing Impairment)Certificate Number",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 2
+    },
+    {
+      "question": "Name of the subject in Senior Diploma in Teaching Deaf (Hearing Impairment)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 3
+    },
+    {
+      "question": "Name of the University / Organization in Senior Diploma in Teaching Deaf (Hearing Impairment) (Rehabilitation Council of India approved)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 4
+    },
+    {
+      "question": "Month & Year of Passing in the Senior Diploma in Teaching Deaf (Hearing Impairment)?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 5
+    },
+    {
+      "question": "Whether submitted certificate issued is recognized by Rehabilitation Council of India",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 142,
+      "q_id": 6
+    }
   ]
 }
 
