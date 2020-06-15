@@ -1994,6 +1994,7 @@
         if (object['code'] == 1) {
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
+          $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
           $scope.allDocumentList = $scope.candidateDetails['document_list'];
           for (var i in $scope.candidateDetails['document_list']) {
             if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'BEDMARK') {
@@ -2404,9 +2405,6 @@
         $('#select2-dd').select2();
       }, 500);
     };
-    $scope.initializeSelect2 = function () {
-      $('#select2-dd').select2();
-    };
 
     $scope.$watch('selectedDocNo', function () {
       if ($scope.selectedDocNo >= 0 && $scope.candidateDetails) {
@@ -2615,6 +2613,10 @@
     };
     $scope.closeEducationModel = function () {
       $('#modal-education').modal('toggle');
+    };
+
+    $scope.displayShowTable = function() {
+      return vm.radio_values.init_doc399 == '2'
     };
 
     $scope.showExperienceModal = function () {
