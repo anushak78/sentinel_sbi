@@ -285,6 +285,7 @@
       vm.doc395 = '';
       vm.doc397 = '';
       vm.doc398 = '';
+      vm.doc399 = '';
       vm.doc402 = '';
       vm.doc412 = '';
       vm.doc422 = '';
@@ -855,6 +856,7 @@
       vm.radio_values.init_doc395 = "";
       vm.radio_values.init_doc397 = "";
       vm.radio_values.init_doc398 = "";
+      vm.radio_values.init_doc399 = "";
       vm.radio_values.init_doc402 = "";
       vm.radio_values.init_doc412 = "";
       vm.radio_values.init_doc422 = "";
@@ -1421,6 +1423,7 @@
       '39c5': 'No. of experience certificate',
       '39c7': 'Teaching Experience From To',
       '39c8': 'NET Teaching Experience period',
+      '39c9': 'Serial No of document mismatched',
       '40c2': 'Relevant document reason',
       '41c2': 'Relevant document reason',
       '42c2': 'Relevant document reason',
@@ -2145,7 +2148,7 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
-      }  else if ($scope.selectedDocType === 'Special B.Ed Marksheet') {
+      } else if ($scope.selectedDocType === 'Special B.Ed Marksheet') {
         for (var j in $scope.allDocumentList) {
           if ($scope.allDocumentList[j]['ocd_flag'].includes('SPECIALDEG')) {
             var iframe = document.createElement('iframe');
@@ -2397,7 +2400,12 @@
         });
 
         $('#selectDoc38').select2();
+        console.log('initialize');
+        $('#select2-dd').select2();
       }, 500);
+    };
+    $scope.initializeSelect2 = function () {
+      $('#select2-dd').select2();
     };
 
     $scope.$watch('selectedDocNo', function () {

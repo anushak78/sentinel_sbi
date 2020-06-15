@@ -3,7 +3,7 @@
 </div>
 <div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
   <div
-    ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
+      ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
 
 <div>
@@ -27,11 +27,11 @@
         Not Relevant
       </label>
       <label
-        style="{{ $ctrl.radio_values.init_doc392=='2' ? 'display:block':'display:none'}}">
+          style="{{ $ctrl.radio_values.init_doc392=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc392">
           <option value="">--Select--</option>
           <option ng-repeat="r in $ctrl.notRelevantReasone" value="{{r}}">
-              {{r}}
+            {{r}}
           </option>
         </select>
       </label>
@@ -75,7 +75,7 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio394" name="radio394"
-               value="1"  ng-model="$ctrl.radio_values.init_doc394"
+               value="1" ng-model="$ctrl.radio_values.init_doc394"
                ng-change="$ctrl.doc394=''">
         Matched
       </label>
@@ -87,7 +87,7 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio394" name="radio394"
-               value="2"  ng-model="$ctrl.radio_values.init_doc394"
+               value="2" ng-model="$ctrl.radio_values.init_doc394"
                ng-change="$ctrl.doc394=''">
         Not Matched
       </label>
@@ -155,7 +155,7 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio397" name="radio397"
-               value="1"  ng-model="$ctrl.radio_values.init_doc397"
+               value="1" ng-model="$ctrl.radio_values.init_doc397"
                ng-change="$ctrl.doc397=''">
         Matched
       </label>
@@ -167,7 +167,7 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio397" name="radio397"
-               value="2"  ng-model="$ctrl.radio_values.init_doc397"
+               value="2" ng-model="$ctrl.radio_values.init_doc397"
                ng-change="$ctrl.doc397=''">
         Not Matched
       </label>
@@ -185,7 +185,7 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio398" name="radio398"
-               value="1"  ng-model="$ctrl.radio_values.init_doc398"
+               value="1" ng-model="$ctrl.radio_values.init_doc398"
                ng-change="$ctrl.doc398=''">
         Date of obtaining prescribed qualification
       </label>
@@ -204,4 +204,41 @@
       </label>
     </div>
   </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is all the document is correct ?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="1" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="2" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''; initializeSelect2()">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc399=='2' ? 'display:block':'display:none'}}">
+        <select multiple="multiple"
+                id="select2-dd" ng-model="$ctrl.doc399">
+          <optgroup label="--Select Serial no of document mis-matched--">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
 </div>
