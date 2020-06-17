@@ -172,7 +172,8 @@ def get_candidate_list(request):
     oum.oum_user_id,
     oum.oum_user_pk,
     oum.oum_mobile_no,
-    oum.oum_email_id
+    oum.oum_email_id,
+    oum.oum_subject
     from oes_candidate_doc ocd
     INNER JOIN oes_user_master oum ON ocd.ocd_created_by = oum.oum_user_id
     INNER JOIN oes_candidate_details ON ocd.ocd_user_fk = oes_candidate_details.ocd_user_fk

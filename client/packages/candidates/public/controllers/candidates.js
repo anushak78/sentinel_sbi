@@ -2618,28 +2618,51 @@
     $scope.displayShowTable = function() {
       return vm.radio_values.init_doc399 == '2'
     };
-
+    //
+    // {
+    //   'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
+    //     'dt_pg_por': '15/05/1998',
+    //     'str_subjHandledStatus': 1,
+    //     'v_subjHandled': 'Home Science',
+    //     'v_subjApplied': 'Home Science',
+    //     'dt_elp_fromDt': '14/11/2003',
+    //     'dt_elp_toDt': '02/04/2018',
+    //     'dt_slet_por': '01/02/2001',
+    //     'dt_net_por': '01/01/0001',
+    //     'str_caste': 'OC_CATEGORY',
+    //     'bool_diffAbled': 'False',
+    //     'bool_sletStatus': 'True',
+    //     'bool_netStatus': 'False',
+    //     'v_subjSlet': 'Home Science',
+    //     'v_subjNet': '',
+    //     'bool_equivFlag1': '',
+    //     'bool_equivFlag2': '',
+    //     'dt_mphil_por': '01/01/0001',
+    //     'dt_phd_por': '01/01/0001',
+    //     'bool_chk1': 'False',
+    //     'bool_chk2': 'False'
+    // }
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
-        'float_pgMarks': 56,
-        'dt_pg_por': '15/05/1998',
-        'str_subjHandledStatus': 1,
-        'v_subjHandled': 'Home Science',
-        'v_subjApplied': 'Home Science',
+        'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
+        'dt_pg_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltpg'],
+        'str_subjHandledStatus': $scope.finalJsonData['Work Experience']['answers'][9]['ans_id']==1?$scope.candidateDetails['candidate_details'][0]['ug_main_subject']:'',
+        'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
+        'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'dt_elp_fromDt': '14/11/2003',
         'dt_elp_toDt': '02/04/2018',
-        'dt_slet_por': '01/02/2001',
-        'dt_net_por': '01/01/0001',
-        'str_caste': 'OC_CATEGORY',
-        'bool_diffAbled': 'False',
+        'dt_slet_por': $scope.candidateDetails['candidate_details'][0]['oaed_year_of_passing'],
+        'dt_net_por': $scope.candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'],
+        'str_caste': $scope.candidateDetails['candidate_details'][0]['ocad_subcaste'],
+        'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'],
         'bool_sletStatus': 'True',
         'bool_netStatus': 'False',
-        'v_subjSlet': 'Home Science',
-        'v_subjNet': '',
-        'bool_equivFlag1': '',
-        'bool_equivFlag2': '',
-        'dt_mphil_por': '01/01/0001',
-        'dt_phd_por': '01/01/0001',
+        'v_subjSlet': $scope.candidateDetails['candidate_details'][0]['oaed_slet_subject_name'],
+        'v_subjNet': $scope.candidateDetails['candidate_details'][0]['oaed_net_subject_name'],
+        'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1? 'True': 'False',
+        'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1? 'True': 'False',
+        'dt_mphil_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil'],
+        'dt_phd_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltphd'],
         'bool_chk1': 'False',
         'bool_chk2': 'False'
       }).then(function (object) {
