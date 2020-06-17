@@ -2616,7 +2616,7 @@
     };
 
     $scope.displayShowTable = function() {
-      return vm.radio_values.init_doc399 == '2'
+      return (vm.radio_values.init_doc399 == '2' || vm.radio_values.init_doc399 == '1')
     };
     //
     // {
