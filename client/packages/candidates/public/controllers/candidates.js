@@ -2646,7 +2646,7 @@
       Http.post("/biz/scores/orchEntry", {
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
         'dt_pg_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltpg'],
-        'str_subjHandledStatus': $scope.finalJsonData['Work Experience']['answers'][9]['ans_id']==1?$scope.candidateDetails['candidate_details'][0]['ug_main_subject']:'',
+        'str_subjHandledStatus': vm.radio_values.init_doc399==1?$scope.candidateDetails['candidate_details'][0]['ug_main_subject']:'',
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'dt_elp_fromDt': '14/11/2003',
