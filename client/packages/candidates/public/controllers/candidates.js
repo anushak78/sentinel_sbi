@@ -2629,6 +2629,17 @@
       var newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
       return newDate;
     };
+    $scope.changeCastName = function (name) {
+      var casteName = '';
+      if (name == 'Schedule Caste') {
+        casteName = 'SC_CATEGORY'
+      }
+      if (name == 'Backward Class') {
+        casteName = 'BC_CATEGORY'
+      }
+      return casteName;
+    };
+
     //
     // {
     //   'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
@@ -2658,16 +2669,16 @@
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
         'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
         'str_subjHandledStatus': 1,
-        'v_subjHandled': vm.radio_values.init_doc399 == 1 ? $scope.candidateDetails['candidate_details'][0]['ug_main_subject'] : '',
+        'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'dt_elp_fromDt': '14/11/2003',
         'dt_elp_toDt': '02/04/2018',
         // 'dt_slet_por': $scope.candidateDetails['candidate_details'][0]['oaed_year_of_passing'],
         // 'dt_net_por': $scope.candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'],
         'dt_slet_por': '14/11/2003',
-        'dt_net_por':  '02/04/2018',
-        'str_caste': $scope.candidateDetails['candidate_details'][0]['ocad_subcaste'],
-        'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'],
+        'dt_net_por': '02/04/2018',
+        'str_caste': $scope.changeCastName($scope.candidateDetails['candidate_details'][0]['octm_category_desc']),
+        'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'] == 'No' ? 'False' : 'True',
         'bool_sletStatus': 'True',
         'bool_netStatus': 'False',
         'v_subjSlet': $scope.candidateDetails['candidate_details'][0]['oaed_slet_subject_name'],
@@ -2675,7 +2686,7 @@
         'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False',
         'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False',
         'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
-        'dt_phd_por':$scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
+        'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
         'bool_chk1': 'False',
         'bool_chk2': 'False'
       }).then(function (object) {
