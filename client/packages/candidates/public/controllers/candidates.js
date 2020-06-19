@@ -2366,14 +2366,14 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, #doc284, #doc2812, .doc294,  .doc2515, #doc3411, .doc1415, .doc1425").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, .doc1415, .doc1425").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2615,8 +2615,19 @@
       $('#modal-education').modal('toggle');
     };
 
-    $scope.displayShowTable = function() {
-      return (vm.radio_values.init_doc399 == '2' || vm.radio_values.init_doc399 == '1')
+    $scope.displayShowTable = function () {
+      console.log($('#select2-dd').val());
+      if (vm.radio_values.init_doc399 == 1) {
+        return true;
+      } else if (vm.radio_values.init_doc399 == 2) {
+        return false;
+      } else if (vm.radio_values.init_doc399 == 3 && $('#select2-dd').val() !== null) {
+        return true;
+      }
+    };
+    $scope.converDateToSlash = function (date) {
+      var newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
+      return newDate;
     };
     //
     // {
@@ -2645,24 +2656,26 @@
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
-        'dt_pg_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltpg'],
-        'str_subjHandledStatus': vm.radio_values.init_doc399==1?$scope.candidateDetails['candidate_details'][0]['ug_main_subject']:'',
-        'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
+        'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
+        'str_subjHandledStatus': 1,
+        'v_subjHandled': vm.radio_values.init_doc399 == 1 ? $scope.candidateDetails['candidate_details'][0]['ug_main_subject'] : '',
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'dt_elp_fromDt': '14/11/2003',
         'dt_elp_toDt': '02/04/2018',
-        'dt_slet_por': $scope.candidateDetails['candidate_details'][0]['oaed_year_of_passing'],
-        'dt_net_por': $scope.candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'],
+        // 'dt_slet_por': $scope.candidateDetails['candidate_details'][0]['oaed_year_of_passing'],
+        // 'dt_net_por': $scope.candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'],
+        'dt_slet_por': '14/11/2003',
+        'dt_net_por':  '02/04/2018',
         'str_caste': $scope.candidateDetails['candidate_details'][0]['ocad_subcaste'],
         'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'],
         'bool_sletStatus': 'True',
         'bool_netStatus': 'False',
         'v_subjSlet': $scope.candidateDetails['candidate_details'][0]['oaed_slet_subject_name'],
         'v_subjNet': $scope.candidateDetails['candidate_details'][0]['oaed_net_subject_name'],
-        'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1? 'True': 'False',
-        'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1? 'True': 'False',
-        'dt_mphil_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil'],
-        'dt_phd_por': $scope.candidateDetails['candidate_details'][0]['ocad_publresltphd'],
+        'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False',
+        'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False',
+        'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
+        'dt_phd_por':$scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
         'bool_chk1': 'False',
         'bool_chk2': 'False'
       }).then(function (object) {

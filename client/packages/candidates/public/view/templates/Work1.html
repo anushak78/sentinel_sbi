@@ -194,7 +194,8 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio398" name="radio398"
-               value="2">
+               value="2" ng-model="$ctrl.radio_values.init_doc398"
+               ng-change="$ctrl.doc398=''">
         NET Teaching Experience Period : Date of obtaining prescribed
         qualification – from to experience period total after the date of
         obtaining prescribed qualification till 15.11.2019
@@ -219,11 +220,19 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio399" name="radio399"
                value="2" ng-model="$ctrl.radio_values.init_doc399"
-               ng-change="$ctrl.doc399='';">
+               ng-change="$ctrl.doc399=''">
         No
       </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="3" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399='';">
+        Partially Correct
+      </label>
       <label
-          style="{{ $ctrl.radio_values.init_doc399=='2' ? 'display:block':'display:none'}}">
+          style="{{ $ctrl.radio_values.init_doc399=='3' ? 'display:block':'display:none'}}">
         <select multiple="multiple"
                 id="select2-dd" ng-model="$ctrl.doc399">
           <optgroup label="--Select Serial no of document mis-matched--">
