@@ -2629,6 +2629,10 @@
       var newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
       return newDate;
     };
+    $scope.converDateToSlashRealTimeDate = function (date) {
+      var newDate = date.split('-')[0] + '/' + date.split('-')[1] + '/' + date.split('-')[2];
+      return newDate;
+    };
     $scope.changeCastName = function (name) {
       var casteName = '';
       if (name == 'Schedule Caste') {
@@ -2636,6 +2640,21 @@
       }
       if (name == 'Backward Class') {
         casteName = 'BC_CATEGORY'
+      }
+      if (name == 'SCHEDULED TRIBES') {
+        casteName = 'ST_CATEGORY'
+      }
+      if (name == 'Most Backward Class & DENOTIFIED COMMUNITIES') {
+        casteName = 'MBC_DNC_CATEGORY'
+      }
+      if (name == 'Backward Class Muslim') {
+        casteName = 'BCM_CATEGORY'
+      }
+      if (name == 'Schedule Caste - ARUNTHATIYAR') {
+        casteName = 'SCA_CATEGORY'
+      }
+      if (name == 'General') {
+        casteName = 'OC_CATEGORY'
       }
       return casteName;
     };
@@ -2664,6 +2683,27 @@
     //     'bool_chk1': 'False',
     //     'bool_chk2': 'False'
     // }
+    $scope.calculateSletNetDate = function (type) {
+      if ($scope.candidateDetails['candidate_details'][0][type]) {
+        if($scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id']==2){
+          return $scope.converDateToSlashRealTimeDate(
+              $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['additional_info']
+          );
+        }
+      }
+      return '';
+    };
+    $scope.checkEligibilityFromDate = function () {
+        if($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked']){
+          return $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']);
+        }
+        if($scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked']){
+          return $scope.calculateSletNetDate('oaed_is_slet_checked');
+        }
+        if($scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked']){
+          return $scope.calculateSletNetDate('oaed_is_net_checked');
+        }
+    };
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
@@ -2671,12 +2711,10 @@
         'str_subjHandledStatus': 1,
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
-        'dt_elp_fromDt': '14/11/2003',
-        'dt_elp_toDt': '02/04/2018',
-        // 'dt_slet_por': $scope.candidateDetails['candidate_details'][0]['oaed_year_of_passing'],
-        // 'dt_net_por': $scope.candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'],
-        'dt_slet_por': '14/11/2003',
-        'dt_net_por': '02/04/2018',
+        'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
+        'dt_elp_toDt': '15/11/2019',
+        'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
+        'dt_net_por': $scope.calculateSletNetDate('oaed_is_net_checked'),
         'str_caste': $scope.changeCastName($scope.candidateDetails['candidate_details'][0]['octm_category_desc']),
         'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'] == 'No' ? 'False' : 'True',
         'bool_sletStatus': 'True',
@@ -2694,7 +2732,6 @@
         $scope.orchEntry = object;
         $('#modal-exp').modal('toggle');
       })
-
     };
 
 

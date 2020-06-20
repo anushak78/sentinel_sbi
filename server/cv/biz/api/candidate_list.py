@@ -608,13 +608,15 @@ def get_candidate_details(request):
     #     })
     work_experience_query = text("""
         select
-	ocd_user_fk,
-	ocd_flag as ocd_flag_2,
-	'Work Experience '|| row_number() over(partition by ocd_user_fk order by ocd_user_fk) as ocd_flag,
-	ocd_doc_file_name
-from oes_candidate_doc
-WHERE ocd_wrkdoc_id IS NOT NULL
-AND length(trim(ocd_wrkdoc_id))>0 AND oes_candidate_doc.ocd_created_by =  :candidate_id
+	ocd.ocd_user_fk,
+	ocd.ocd_flag as ocd_flag_2,
+	'Work Experience '|| row_number() over(partition by ocd.ocd_user_fk order by ocd.ocd_user_fk) as ocd_flag,
+	ocd.ocd_doc_file_name,
+	owe.*
+from oes_candidate_doc ocd
+left join oes_work_experience owe on owe.owe_wrkexp_doc_id = ocd.ocd_wrkdoc_id
+WHERE ocd.ocd_wrkdoc_id IS NOT NULL
+AND length(trim(ocd.ocd_wrkdoc_id))>0 AND ocd.ocd_created_by =  :candidate_id
     """)
     work_experience = request.dbsession.execute(work_experience_query, {
         "candidate_id": candidate_id
