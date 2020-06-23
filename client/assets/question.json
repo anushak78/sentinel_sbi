@@ -11874,6 +11874,61 @@
       "doc_id": 142,
       "q_id": 6
     }
+  ],
+  "Phd Marksheet" : [
+    {
+      "question": "Is the document Visible / Clear?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 143,
+      "q_id": 1
+    },
+    {
+      "question": "Is the document relevant to the claim of Ph.D Degree Mark sheet / Course Certificate / Provisional Certificate?",
+      "options": {
+        "option1": "Relevant",
+        "option2": "Not Relevant"
+      },
+      "approved": "1",
+      "doc_id": 143,
+      "q_id": 2
+    },
+    {
+      "question": "Date of Viva-voce of Ph.D Degree – Pre-populate (verify with upload data and application data)",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 143,
+      "q_id": 3
+    },
+    {
+      "question": "Name of Institution studied in the Ph.D Degree?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 143,
+      "q_id": 4
+    },
+    {
+      "question": "What is the Mode of Study in Ph.D Degree ?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched",
+        "option3": "Not Clear"
+      },
+      "approved": "1",
+      "doc_id": 143,
+      "q_id": 5
+    }
   ]
 }
 

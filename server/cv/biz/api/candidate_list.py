@@ -597,6 +597,11 @@ def get_candidate_details(request):
         "ocd_flag": "OQ",
         "odm_name": "Order of Qualification"
     })
+    document_list.insert(len(document_list), {
+        "ocd_doc_file_name": '',
+        "ocd_flag": "PM",
+        "odm_name": "Phd Marksheet"
+    })
 
     # additional_documents = _get_additional_document(request, candidate_id)
     # if len(additional_documents) > 0:

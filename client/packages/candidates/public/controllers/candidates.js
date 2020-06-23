@@ -151,6 +151,10 @@
       vm.doc1424 = '';
       vm.doc1425 = '';
       vm.doc1426 = '';
+      vm.doc1432 = '';
+      vm.doc1433 = '';
+      vm.doc1434 = '';
+      vm.doc1435 = '';
 
 
       vm.doc84 = '';
@@ -1204,6 +1208,10 @@
       vm.radio_values.init_doc889 = "";
       vm.radio_values.init_doc8814 = "";
       vm.radio_values.init_doc8815 = "";
+      vm.radio_values.init_doc1432 = "";
+      vm.radio_values.init_doc1433 = "";
+      vm.radio_values.init_doc1434 = "";
+      vm.radio_values.init_doc1435 = "";
     };
     $scope.initializeVariables();
 
@@ -1300,6 +1308,10 @@
       '142c4': 'Name of university',
       '142c5': 'Month & Year of passing',
       '142c6': 'Issued by',
+      '143c2': 'Not Relevant Reason',
+      '143c3': 'Date of Viva-voce',
+      '143c4': 'Name of Institution',
+      '143c5': 'Mode of Study',
       '12c2': 'Relevant reason',
       '12c3': 'Working in any Govt. Organization',
       '12c4': 'Number of Years completed as Government Servant',
@@ -1804,6 +1816,7 @@
           "M.Phil Marksheet": 'M.Phil Marksheet',
           "SLET/NET Certificate": 'SLET / NET Certificate',
           "Phd Certificate": 'PHD Certificate',
+          "Phd Marksheet": 'PHD Marksheet',
           "Birth Certificate": 'Birth Certificate',
           "PWD Certificate": 'Special Category',
           "Special B.Ed in Teaching the Hearing Impairment – Marksheet": 'Special B.Ed in Teaching the Hearing Impairment - Marksheet',
@@ -2366,7 +2379,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -3002,6 +3015,10 @@
   }).directive('phdDegreeCertificate', function () {
     return {
       templateUrl: "/candidates/view/templates/Phd_Degree.html"
+    };
+  }).directive('phdDegreeMarksheet', function () {
+    return {
+      templateUrl: "/candidates/view/templates/Phd_Marksheet.html"
     };
   }).directive('birthCertificate', function () {
     return {
