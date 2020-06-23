@@ -582,26 +582,29 @@ def get_candidate_details(request):
         "ocd_flag": "GI",
         "odm_name": "General Information"
     })
-    document_list.insert(len(document_list), {
-        "ocd_doc_file_name": '',
-        "ocd_flag": "SBC",
-        "odm_name": "Special B.Ed Certificate"
-    })
-    document_list.insert(len(document_list), {
-        "ocd_doc_file_name": '',
-        "ocd_flag": "SDC",
-        "odm_name": "Senior Diploma Certificate"
-    })
+    if candidate_details[0]['ocad_bedhearimpcertno'] != '' :
+        document_list.insert(len(document_list), {
+            "ocd_doc_file_name": '',
+            "ocd_flag": "SBC",
+            "odm_name": "Special B.Ed Certificate"
+        })
+    if candidate_details[0]['ocad_seniordipcertno'] != '' :
+        document_list.insert(len(document_list), {
+            "ocd_doc_file_name": '',
+            "ocd_flag": "SDC",
+            "odm_name": "Senior Diploma Certificate"
+        })
     document_list.insert(len(document_list), {
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "OQ",
         "odm_name": "Order of Qualification"
     })
-    document_list.insert(len(document_list), {
-        "ocd_doc_file_name": '',
-        "ocd_flag": "PM",
-        "odm_name": "Phd Marksheet"
-    })
+    if candidate_details[0]['oaed_is_phd_checked'] == 'true' :
+        document_list.insert(len(document_list), {
+            "ocd_doc_file_name": '',
+            "ocd_flag": "PM",
+            "odm_name": "Phd Marksheet"
+        })
 
     # additional_documents = _get_additional_document(request, candidate_id)
     # if len(additional_documents) > 0:
