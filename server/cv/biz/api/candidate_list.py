@@ -152,12 +152,20 @@ def _fix_document_urls(request, document_list, candidate_id):
 
 @svc_candidate_list.get()
 def get_candidate_list(request):
-    print("HIIIIIYYYYY")
+    
+    print("GET INTO ITHIIIIIYYYYY")
     candidate_id = request.GET.get('candidate_id', None)
+    user_id = request.GET.get('user_id', None)
     status = request.GET.get('status', '')
+    print("****************************************************")
+    print(request.GET.get('user_id', None))
+    print("****************************************************")
+
+    
     # status = ''
     offset = request.GET.get('offset', 0)
     limit = request.GET.get('limit', 10)
+    print("-----------------------------------------------")
     level = request.session['level']
     category = request.session['category']
 
@@ -230,8 +238,8 @@ def get_candidate_list(request):
         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
 
     print(pending_list_query)
-    count_query = """select count(*) as total_count
-    from (""" + pending_list_query + """) abcd"""
+    #count_query = """select count(*) as total_count
+    #from (""" + pending_list_query + """) abcd"""
 
 #     pending_list_query += """ ORDER BY  case when  oum.oum_user_pk=42179 then 1
 #                   when  oum.oum_user_pk=38588 then 2
@@ -247,10 +255,43 @@ def get_candidate_list(request):
 #                   end
 #                               offset :offset limit :limit
 #                               """
+    print("***************************************************************************!@#!@#@!#!@#!@#!@!@#!@#!@#!@*")
+    print(offset)
+    print("*!@#!@#@!#!@#!@#!@!@#!@#!@#!@*")
+    print(user_id)
+    limit = 50
 
-
-    pending_list_query += """ offset :offset limit :limit
+    if int(user_id) == 1:
+     pending_list_query += """ offset :offset rows fetch first 50 rows only
                               """
+    else:
+     limit = limit*int(user_id)
+     print(limit)
+     if int(offset) == 0:
+       offset = (limit-50)+1
+       pending_list_query += """ offset """ + str(offset) + """  limit  50 """  
+  
+  
+    #else: 
+     #   limit_rows = limit_rows * int(user_id)
+      #  if offset == 0:
+       #     offset = limit_rows - 50
+       # print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+       # print(offset)
+       # pending_list_query += """ offset :offset rows fetch next :limit rows only
+       #                       """
+    
+    #if int(offset) > 0 :
+    # pending_list_query += """ offset :offset  rows fetch first 50 rows only
+    #                          """
+    #else : 
+    #    pending_list_query += """ offset :offset ROWS FETCH FIRST 50  ROWS ONLY
+    #                         """
+   
+    count_query = """select count(*) as total_count
+    from (""" + pending_list_query + """) abcd"""
+    
+    
     data = request.dbsession.execute(
         text(pending_list_query), condition
     )
