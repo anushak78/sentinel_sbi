@@ -2004,7 +2004,7 @@
         offset: parseInt(($scope.currentPage - 1) * $scope.pageSize),
         candidate_id: $scope.packages.searchByCandidateID,
         status: $scope.packages.filterDD,
-        user_id:$rootScope.userData['user_id']
+        user_id: $rootScope.userData['user_id']
       }).then(function (object) {
         if (object['code'] == 1) {
           $scope.rows = object.data.list;
@@ -2759,7 +2759,7 @@
     // }
     $scope.calculateSletNetDate = function (type) {
       if ($scope.candidateDetails['candidate_details'][0][type]) {
-        if($scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id']==2){
+        if ($scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id'] == 2) {
           return $scope.converDateToSlashRealTimeDate(
               $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['additional_info']
           );
@@ -2768,15 +2768,15 @@
       return '';
     };
     $scope.checkEligibilityFromDate = function () {
-        if($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked']){
-          return $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']);
-        }
-        if($scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked']){
-          return $scope.calculateSletNetDate('oaed_is_slet_checked');
-        }
-        if($scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked']){
-          return $scope.calculateSletNetDate('oaed_is_net_checked');
-        }
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked']) {
+        return $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']);
+      }
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked']) {
+        return $scope.calculateSletNetDate('oaed_is_slet_checked');
+      }
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked']) {
+        return $scope.calculateSletNetDate('oaed_is_net_checked');
+      }
     };
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
@@ -2813,6 +2813,12 @@
       $scope.showExperienceModal();
     });
 
+    $scope.checkPartialCertificate = function (number) {
+      if ($('#select2-dd').val() == [] || $('#select2-dd').val() == null) {
+        return false;
+      }
+      return $('#select2-dd').val().includes(number.toString())
+    };
 
     vm.findData = function (docName, qId) {
       console.log(docName);

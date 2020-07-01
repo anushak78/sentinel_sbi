@@ -39,7 +39,8 @@
           <optgroup label="--Select Serial no of document mis-matched--">
             <option value="{{ $index+1 }}"
                     ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
-              {{ $index+1 }}</option>
+              {{ $index+1 }}
+            </option>
           </optgroup>
         </select>
       </label>
@@ -47,100 +48,106 @@
   </div>
   <div class="clearfix"></div>
 
-  <div class="questions">
-    Period of the Subject handled in the Experience Certificate 1
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3918" name="radio3918"
-               value="1" ng-model="$ctrl.radio_values.init_doc3918"
-               ng-change="$ctrl.doc3918=''">
-        Yes
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3918=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3918"
-               class="doc3918 modified_date input-sm input-s datepicker-input form-control">
-      </label>
+  <div style="{{ checkPartialCertificate(1) ? 'display:block':'display:none'}}">
+    <div class="questions">
+      Period of the Subject handled in the Experience Certificate 1
     </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Period of the Subject handled in the Experience Certificate 2
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3919" name="radio3919"
-               value="1" ng-model="$ctrl.radio_values.init_doc3919"
-               ng-change="$ctrl.doc3919=''">
-        Yes
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3919=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3919"
-               class="doc3919 modified_date input-sm input-s datepicker-input form-control">
-      </label>
+    <div class="col-sm-12">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio3918" name="radio3918"
+                 value="1" ng-model="$ctrl.radio_values.init_doc3918"
+                 ng-change="$ctrl.doc3918=''">
+          Yes
+        </label>
+        <label style="{{ $ctrl.radio_values.init_doc3918=='1' ? 'display:block':'display:none'}}">
+          <input type="text" ng-model="$ctrl.doc3918"
+                 class="doc3918 modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
     </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
-
-  <div class="questions">
-    Period of the Subject handled in the Experience Certificate 3
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3920" name="radio3920"
-               value="1" ng-model="$ctrl.radio_values.init_doc3920"
-               ng-change="$ctrl.doc3920=''">
-        Yes
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3920=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3920"
-               class="doc3920 modified_date input-sm input-s datepicker-input form-control">
-      </label>
+  <div ng-if="checkPartialCertificate(2)">
+    <div class="questions">
+      Period of the Subject handled in the Experience Certificate 2
     </div>
-  </div>
-  <div class="clearfix"></div>
-
-  <div class="questions">
-    Period of the Subject handled in the Experience Certificate 4
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3921" name="radio3921"
-               value="1" ng-model="$ctrl.radio_values.init_doc3921"
-               ng-change="$ctrl.doc3921=''">
-        Yes
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3921=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3921"
-               class="doc3921 modified_date input-sm input-s datepicker-input form-control">
-      </label>
+    <div class="col-sm-12">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio3919" name="radio3919"
+                 value="1" ng-model="$ctrl.radio_values.init_doc3919"
+                 ng-change="$ctrl.doc3919=''">
+          Yes
+        </label>
+        <label style="{{ $ctrl.radio_values.init_doc3919=='1' ? 'display:block':'display:none'}}">
+          <input type="text" ng-model="$ctrl.doc3919"
+                 class="doc3919 modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
     </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
-
-  <div class="questions">
-    Period of the Subject handled in the Experience Certificate 5
-  </div>
-  <div class="col-sm-12">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio3922" name="radio3922"
-               value="1" ng-model="$ctrl.radio_values.init_doc3922"
-               ng-change="$ctrl.doc3922=''">
-        Yes
-      </label>
-      <label style="{{ $ctrl.radio_values.init_doc3922=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3922"
-               class="doc3922 modified_date input-sm input-s datepicker-input form-control">
-      </label>
+  <div  ng-if="checkPartialCertificate(3)">
+    <div class="questions">
+      Period of the Subject handled in the Experience Certificate 3
     </div>
+    <div class="col-sm-12">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio3920" name="radio3920"
+                 value="1" ng-model="$ctrl.radio_values.init_doc3920"
+                 ng-change="$ctrl.doc3920=''">
+          Yes
+        </label>
+        <label style="{{ $ctrl.radio_values.init_doc3920=='1' ? 'display:block':'display:none'}}">
+          <input type="text" ng-model="$ctrl.doc3920"
+                 class="doc3920 modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
-
+  <div ng-if="checkPartialCertificate(4)">
+    <div class="questions">
+      Period of the Subject handled in the Experience Certificate 4
+    </div>
+    <div class="col-sm-12">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio3921" name="radio3921"
+                 value="1" ng-model="$ctrl.radio_values.init_doc3921"
+                 ng-change="$ctrl.doc3921=''">
+          Yes
+        </label>
+        <label style="{{ $ctrl.radio_values.init_doc3921=='1' ? 'display:block':'display:none'}}">
+          <input type="text" ng-model="$ctrl.doc3921"
+                 class="doc3921 modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div ng-if="checkPartialCertificate(5)">
+    <div class="questions">
+      Period of the Subject handled in the Experience Certificate 5
+    </div>
+    <div class="col-sm-12">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio3922" name="radio3922"
+                 value="1" ng-model="$ctrl.radio_values.init_doc3922"
+                 ng-change="$ctrl.doc3922=''">
+          Yes
+        </label>
+        <label style="{{ $ctrl.radio_values.init_doc3922=='1' ? 'display:block':'display:none'}}">
+          <input type="text" ng-model="$ctrl.doc3922"
+                 class="doc3922 modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <div class="questions">
     Is the document/documents relevant to the claim 1. of Teaching Experience Certificate?
   </div>
@@ -286,7 +293,7 @@
                ng-change="$ctrl.doc396=''">
         No
       </label>
-      <label style="{{ $ctrl.radio_values.init_doc396=='1' ? 'display:block':'display:none'}}">
+      <label style="{{ $ctrl.radio_values.init_doc396=='2' ? 'display:block':'display:none'}}">
         <input type="text" maxlength="3" ng-model="$ctrl.doc396"
                class="form-control">
       </label>
@@ -366,10 +373,13 @@
           style="{{ $ctrl.radio_values.init_doc3910=='1' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc3910">
           <option value="">--Select--</option>
-          <option value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
-            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          <option
+              value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed.
+            Colleges - Regional Joint Director of Collegiate Education
           </option>
-          <option value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
+          <option
+              value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
             Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education
           </option>
           <option value="Competent Authority for Universities and Deemed Universities - Registrars">
@@ -389,10 +399,13 @@
           style="{{ $ctrl.radio_values.init_doc3910=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc3910">
           <option value="">--Select--</option>
-          <option value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
-            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          <option
+              value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed.
+            Colleges - Regional Joint Director of Collegiate Education
           </option>
-          <option value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
+          <option
+              value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
             Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education
           </option>
           <option value="Competent Authority for Universities and Deemed Universities - Registrars">
@@ -482,7 +495,8 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Does the Experience certificate have any  Experience in schools / institutions other than Arts and Science, Engineering, Medical, Agriculture, Law Colleges / Universities
+    Does the Experience certificate have any Experience in schools / institutions other than Arts and Science,
+    Engineering, Medical, Agriculture, Law Colleges / Universities
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -585,7 +599,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Is there any Experience period before completion of  prescribed qualification
+    Is there any Experience period before completion of prescribed qualification
   </div>
   <div class="col-sm-12">
     <div class="radio">
