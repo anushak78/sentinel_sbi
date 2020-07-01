@@ -4,6 +4,48 @@
 </div>
 
 <div>
+
+  <div class="questions">
+    Is the Claim Subject Applied for and Subject Handled are Same?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="1" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="2" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="3" ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399='';">
+        Partially Correct
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc399=='3' ? 'display:block':'display:none'}}">
+        <select multiple="multiple"
+                id="select2-dd" ng-model="$ctrl.doc399">
+          <optgroup label="--Select Serial no of document mis-matched--">
+            <option value="{{ $index+1 }}"
+                    ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
+              {{ $index+1 }}</option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
   <div class="questions">
     Is the document/documents relevant to the claim 1. of Teaching Experience Certificate?
   </div>
@@ -132,15 +174,26 @@
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio396" name="radio396"
-               value="1">
-        Matched
+               value="1" ng-model="$ctrl.radio_values.init_doc396"
+               ng-change="$ctrl.doc396=''">
+        Yes
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc396=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc396"
+               class="form-control">
+      </label>
+
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio396" name="radio396"
-               value="2">
-        Not Matched
+               value="2" ng-model="$ctrl.radio_values.init_doc396"
+               ng-change="$ctrl.doc396=''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc396=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="3" ng-model="$ctrl.doc396"
+               class="form-control">
       </label>
     </div>
   </div>
@@ -203,44 +256,303 @@
     </div>
   </div>
   <div class="clearfix"></div>
-
   <div class="questions">
-    Is all the document is correct ?
+    Whether the Experience Certificate issued by Competent Authority
   </div>
   <div class="col-sm-12">
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio399" name="radio399"
-               value="1" ng-model="$ctrl.radio_values.init_doc399"
-               ng-change="$ctrl.doc399=''">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="1" ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
         Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc3910=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3910">
+          <option value="">--Select--</option>
+          <option value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          </option>
+          <option value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
+            Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education
+          </option>
+          <option value="Competent Authority for Universities and Deemed Universities - Registrars">
+            Competent Authority for Universities and Deemed Universities - Registrars
+          </option>
+        </select>
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio399" name="radio399"
-               value="2" ng-model="$ctrl.radio_values.init_doc399"
-               ng-change="$ctrl.doc399=''">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="2" ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
+        No
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc3910=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3910">
+          <option value="">--Select--</option>
+          <option value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          </option>
+          <option value="Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education">
+            Competent Authority for Engineering Colleges - Director / Joint Director of Technical Education
+          </option>
+          <option value="Competent Authority for Universities and Deemed Universities - Registrars">
+            Competent Authority for Universities and Deemed Universities - Registrars
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="3" ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Does the Experience certificate have any experience claim period in Polytechnic Institutions
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="1" ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3911=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3911"
+               class="doc3911 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="2" ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
         No
       </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
-        <input type="radio" class="q_radio radio399" name="radio399"
-               value="3" ng-model="$ctrl.radio_values.init_doc399"
-               ng-change="$ctrl.doc399='';">
-        Partially Correct
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="3" ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
+        Not Applicable
       </label>
-      <label
-          style="{{ $ctrl.radio_values.init_doc399=='3' ? 'display:block':'display:none'}}">
-        <select multiple="multiple"
-                id="select2-dd" ng-model="$ctrl.doc399">
-          <optgroup label="--Select Serial no of document mis-matched--">
-            <option value="{{ $index+1 }}"
-                    ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
-              {{ $index+1 }}</option>
-          </optgroup>
-        </select>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Does the Experience certificate have any PTA Experience
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="1" ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3912=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3912"
+               class="doc3912 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="2" ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="3" ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Does the Experience certificate have any  Experience in schools / institutions other than Arts and Science, Engineering, Medical, Agriculture, Law Colleges / Universities
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3913" name="radio3913"
+               value="1" ng-model="$ctrl.radio_values.init_doc3913"
+               ng-change="$ctrl.doc3913=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3913=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3913"
+               class="doc3913 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3913" name="radio3913"
+               value="2" ng-model="$ctrl.radio_values.init_doc3913"
+               ng-change="$ctrl.doc3913=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3913" name="radio3913"
+               value="3" ng-model="$ctrl.radio_values.init_doc3913"
+               ng-change="$ctrl.doc3913=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is the Date of issue of experience certificate between 04-10-2019 to 15.11.2019
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3914" name="radio3914"
+               value="1" ng-model="$ctrl.radio_values.init_doc3914"
+               ng-change="$ctrl.doc3914=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3914=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3914"
+               class="doc3914 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3914" name="radio3914"
+               value="2" ng-model="$ctrl.radio_values.init_doc3914"
+               ng-change="$ctrl.doc3914=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3914" name="radio3914"
+               value="3" ng-model="$ctrl.radio_values.init_doc3914"
+               ng-change="$ctrl.doc3914=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is the Date of countersigning authority between 04-10-2019 to 15.11.2019
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3915" name="radio3915"
+               value="1" ng-model="$ctrl.radio_values.init_doc3915"
+               ng-change="$ctrl.doc3915=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3915=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3915"
+               class="doc3915 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3915" name="radio3915"
+               value="2" ng-model="$ctrl.radio_values.init_doc3915"
+               ng-change="$ctrl.doc3915=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3915" name="radio3915"
+               value="3" ng-model="$ctrl.radio_values.init_doc3915"
+               ng-change="$ctrl.doc3915=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is there any Experience period before completion of  prescribed qualification
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3916" name="radio3916"
+               value="1" ng-model="$ctrl.radio_values.init_doc3916"
+               ng-change="$ctrl.doc3916=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3916=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3916"
+               class="doc3916 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3916" name="radio3916"
+               value="2" ng-model="$ctrl.radio_values.init_doc3916"
+               ng-change="$ctrl.doc3916=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3916" name="radio3916"
+               value="3" ng-model="$ctrl.radio_values.init_doc3916"
+               ng-change="$ctrl.doc3916=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is the Experiencee Certificate Without the signature of countersigning authority as per Notification
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3917" name="radio3917"
+               value="1" ng-model="$ctrl.radio_values.init_doc3917"
+               ng-change="$ctrl.doc3917=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3917=='1' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3917"
+               class="doc3917 modified_date input-sm input-s datepicker-input form-control">
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3917" name="radio3917"
+               value="2" ng-model="$ctrl.radio_values.init_doc3917"
+               ng-change="$ctrl.doc3917=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3917" name="radio3917"
+               value="3" ng-model="$ctrl.radio_values.init_doc3917"
+               ng-change="$ctrl.doc3917=''">
+        Not Applicable
       </label>
     </div>
   </div>

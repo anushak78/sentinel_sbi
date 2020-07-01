@@ -287,9 +287,18 @@
       vm.doc393 = '';
       vm.doc394 = '';
       vm.doc395 = '';
+      vm.doc396 = '';
       vm.doc397 = '';
       vm.doc398 = '';
       vm.doc399 = '';
+      vm.doc3910 = '';
+      vm.doc3911 = '';
+      vm.doc3912 = '';
+      vm.doc3913 = '';
+      vm.doc3914 = '';
+      vm.doc3915 = '';
+      vm.doc3916 = '';
+      vm.doc3917 = '';
       vm.doc402 = '';
       vm.doc412 = '';
       vm.doc422 = '';
@@ -858,9 +867,18 @@
       vm.radio_values.init_doc393 = "";
       vm.radio_values.init_doc394 = "";
       vm.radio_values.init_doc395 = "";
+      vm.radio_values.init_doc396 = "";
       vm.radio_values.init_doc397 = "";
       vm.radio_values.init_doc398 = "";
       vm.radio_values.init_doc399 = "";
+      vm.radio_values.init_doc3910 = "";
+      vm.radio_values.init_doc3911 = "";
+      vm.radio_values.init_doc3912 = "";
+      vm.radio_values.init_doc3913 = "";
+      vm.radio_values.init_doc3914 = "";
+      vm.radio_values.init_doc3915 = "";
+      vm.radio_values.init_doc3916 = "";
+      vm.radio_values.init_doc3917 = "";
       vm.radio_values.init_doc402 = "";
       vm.radio_values.init_doc412 = "";
       vm.radio_values.init_doc422 = "";
@@ -1433,9 +1451,18 @@
       '39c3': 'No. of Claims made by the applicant',
       '39c4': 'No. of Claims of period of Experience',
       '39c5': 'No. of experience certificate',
+      '39c6': 'Whether claim No. 1 is relevant to the period mentioned',
       '39c7': 'Teaching Experience From To',
       '39c8': 'NET Teaching Experience period',
       '39c9': 'Serial No of document mismatched',
+      '39c10': 'Competent Authority',
+      '39c11': 'Claim period in Polytechnic Institutions',
+      '39c12': 'Certificate have any PTA Experience',
+      '39c13': 'Experience certificate have any  Experience in schools',
+      '39c14': 'Experience certificate between 04-10-2019 to 15.11.2019',
+      '39c15': 'Countersigning authority between 04-10-2019 to 15.11.2019',
+      '39c16': 'Period before completion of  prescribed qualification',
+      '39c17': 'Certificate Without the signature of countersigning authority as per Notification',
       '40c2': 'Relevant document reason',
       '41c2': 'Relevant document reason',
       '42c2': 'Relevant document reason',
@@ -1961,7 +1988,8 @@
         limit: $scope.pageSize,
         offset: parseInt(($scope.currentPage - 1) * $scope.pageSize),
         candidate_id: $scope.packages.searchByCandidateID,
-        status: $scope.packages.filterDD
+        status: $scope.packages.filterDD,
+        user_id:$rootScope.userData['user_id']
       }).then(function (object) {
         if (object['code'] == 1) {
           $scope.rows = object.data.list;
@@ -2379,7 +2407,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, #doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3715, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3914, .doc3915").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -2405,6 +2433,24 @@
           autoClose: true
         }).on("changeDate", function (event) {
           var dates = event.dates, elem = $(this);
+          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+          if (dates.length > 2) dates = dates.splice(dates.length - 1);
+          dates.sort(function (a, b) {
+            return new Date(a).getTime() - new Date(b).getTime()
+          });
+          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+        });
+        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917').datepicker({
+          format: "M yyyy",
+          startView: 1,
+          minViewMode: 1,
+          maxViewMode: 2,
+          multidate: true,
+          multidateSeparator: "-",
+          autoClose: true
+        }).on("changeDate", function (event) {
+          var dates = event.dates, elem = $(this);
+          console.log(dates);
           if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
           if (dates.length > 2) dates = dates.splice(dates.length - 1);
           dates.sort(function (a, b) {
