@@ -299,6 +299,11 @@
       vm.doc3915 = '';
       vm.doc3916 = '';
       vm.doc3917 = '';
+      vm.doc3918 = '';
+      vm.doc3919 = '';
+      vm.doc3920 = '';
+      vm.doc3921 = '';
+      vm.doc3922 = '';
       vm.doc402 = '';
       vm.doc412 = '';
       vm.doc422 = '';
@@ -879,6 +884,11 @@
       vm.radio_values.init_doc3915 = "";
       vm.radio_values.init_doc3916 = "";
       vm.radio_values.init_doc3917 = "";
+      vm.radio_values.init_doc3918 = "";
+      vm.radio_values.init_doc3919 = "";
+      vm.radio_values.init_doc3920 = "";
+      vm.radio_values.init_doc3921 = "";
+      vm.radio_values.init_doc3922 = "";
       vm.radio_values.init_doc402 = "";
       vm.radio_values.init_doc412 = "";
       vm.radio_values.init_doc422 = "";
@@ -1463,6 +1473,11 @@
       '39c15': 'Countersigning authority between 04-10-2019 to 15.11.2019',
       '39c16': 'Period before completion of  prescribed qualification',
       '39c17': 'Certificate Without the signature of countersigning authority as per Notification',
+      '39c18': 'Period of the Subject handled in the Experience Certificate 1',
+      '39c19': 'Period of the Subject handled in the Experience Certificate 2',
+      '39c20': 'Period of the Subject handled in the Experience Certificate 3',
+      '39c21': 'Period of the Subject handled in the Experience Certificate 4',
+      '39c22': 'Period of the Subject handled in the Experience Certificate 5',
       '40c2': 'Relevant document reason',
       '41c2': 'Relevant document reason',
       '42c2': 'Relevant document reason',
@@ -2440,7 +2455,7 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
-        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917').datepicker({
+        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
