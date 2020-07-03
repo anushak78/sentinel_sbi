@@ -48,7 +48,7 @@
   </div>
   <div class="clearfix"></div>
 
-  <div style="{{ checkPartialCertificate(1) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(1)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 1
     </div>
@@ -57,7 +57,7 @@
         <label class="radio-custom">
           <input type="radio" class="q_radio radio3918" name="radio3918"
                  value="1" ng-model="$ctrl.radio_values.init_doc3918"
-                 ng-change="$ctrl.doc3918=''">
+                 ng-change="$ctrl.doc3918='';">
           Period
         </label>
         <label style="{{ $ctrl.radio_values.init_doc3918=='1' ? 'display:block':'display:none'}}">
@@ -68,7 +68,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(2) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(2)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 2
     </div>
@@ -88,7 +88,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(3) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(3)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 3
     </div>
@@ -108,7 +108,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(4) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(4)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 4
     </div>
@@ -128,7 +128,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(5) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(5)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 5
     </div>
@@ -148,7 +148,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(6) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(6)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 6
     </div>
@@ -168,7 +168,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(7) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(7)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 7
     </div>
@@ -188,7 +188,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(8) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(8)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 8
     </div>
@@ -208,7 +208,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(9) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(9)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 9
     </div>
@@ -228,7 +228,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(10) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(10)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 10
     </div>
@@ -248,7 +248,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(11) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(11)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 11
     </div>
@@ -268,7 +268,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(12) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(12)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 12
     </div>
@@ -288,7 +288,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(13) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(13)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 13
     </div>
@@ -308,7 +308,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(14) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(14)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 14
     </div>
@@ -328,7 +328,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(15) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(15)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 15
     </div>
@@ -348,7 +348,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(16) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(16)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 16
     </div>
@@ -368,7 +368,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(17) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(17)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 17
     </div>
@@ -388,7 +388,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(18) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(18)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 18
     </div>
@@ -408,7 +408,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(19) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(19)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 19
     </div>
@@ -428,7 +428,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(20) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(20)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 20
     </div>
@@ -448,7 +448,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(21) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(21)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 21
     </div>
@@ -468,7 +468,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div  style="{{ checkPartialCertificate(22) ? 'display:block':'display:none'}}">
+  <div  ng-if="checkPartialCertificate(22)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 22
     </div>
@@ -488,7 +488,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(23) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(23)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 23
     </div>
@@ -508,7 +508,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(24) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(24)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 24
     </div>
@@ -528,7 +528,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(25) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(25)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 25
     </div>
@@ -548,7 +548,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(26) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(26)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 26
     </div>
@@ -568,7 +568,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(27) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(27)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 27
     </div>
@@ -588,7 +588,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(28) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(28)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 28
     </div>
@@ -608,7 +608,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(29) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(29)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 29
     </div>
@@ -628,7 +628,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(30) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(30)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 30
     </div>
@@ -648,7 +648,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(31) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(31)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 31
     </div>
@@ -668,7 +668,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(32) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(32)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 32
     </div>
@@ -688,7 +688,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(33) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(33)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 33
     </div>
@@ -708,7 +708,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(34) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(34)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 34
     </div>
@@ -728,7 +728,7 @@
     </div>
     <div class="clearfix"></div>
   </div>
-  <div style="{{ checkPartialCertificate(35) ? 'display:block':'display:none'}}">
+  <div ng-if="checkPartialCertificate(35)">
     <div class="questions">
       Period of the Subject handled in the Experience Certificate 35
     </div>

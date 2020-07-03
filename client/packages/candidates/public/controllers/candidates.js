@@ -2420,7 +2420,11 @@
         var radioName = 'radio' + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] +
             $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'];
         if ($('input[name=' + radioName + ']').length > 0) {
-          if (!$('input[name=' + radioName + ']:checked').val()) {
+          console.log($('input[name=' + radioName + ']').length);
+          console.log(i);
+          console.log($scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']);
+          console.log(radioName);
+          if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
             alert('Please give all the answers');
             return false;
           } else {
@@ -2545,21 +2549,7 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
-        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
-          format: "dd/mm/yyyy",
-          startView: 1,
-          multidate: true,
-          multidateSeparator: "-",
-          autoClose: true
-        }).on("changeDate", function (event) {
-          var dates = event.dates, elem = $(this);
-          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
-          if (dates.length > 2) dates = dates.splice(dates.length - 1);
-          dates.sort(function (a, b) {
-            return new Date(a).getTime() - new Date(b).getTime()
-          });
-          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
-        });
+
 
         $('#selectDoc38').select2();
         console.log('initialize');
@@ -2777,7 +2767,6 @@
     };
 
     $scope.displayShowTable = function () {
-      console.log($('#select2-dd').val());
       if (vm.radio_values.init_doc399 == 1) {
         return true;
       } else if (vm.radio_values.init_doc399 == 2) {
@@ -2904,6 +2893,23 @@
       if ($('#select2-dd').val() == [] || $('#select2-dd').val() == null) {
         return false;
       }
+      setTimeout(function() {
+        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
+          format: "dd/mm/yyyy",
+          startView: 1,
+          multidate: true,
+          multidateSeparator: "-",
+          autoClose: true
+        }).on("changeDate", function (event) {
+          var dates = event.dates, elem = $(this);
+          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+          if (dates.length > 2) dates = dates.splice(dates.length - 1);
+          dates.sort(function (a, b) {
+            return new Date(a).getTime() - new Date(b).getTime()
+          });
+          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+        });
+      },1000);
       return $('#select2-dd').val().includes(number.toString())
     };
 
