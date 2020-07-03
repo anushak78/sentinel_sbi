@@ -304,6 +304,36 @@
       vm.doc3920 = '';
       vm.doc3921 = '';
       vm.doc3922 = '';
+      vm.doc3923 = '';
+      vm.doc3924 = '';
+      vm.doc3925 = '';
+      vm.doc3926 = '';
+      vm.doc3927 = '';
+      vm.doc3928 = '';
+      vm.doc3929 = '';
+      vm.doc3930 = '';
+      vm.doc3931 = '';
+      vm.doc3932 = '';
+      vm.doc3933 = '';
+      vm.doc3934 = '';
+      vm.doc3935 = '';
+      vm.doc3936 = '';
+      vm.doc3937 = '';
+      vm.doc3938 = '';
+      vm.doc3939 = '';
+      vm.doc3940 = '';
+      vm.doc3941= '';
+      vm.doc3942 = '';
+      vm.doc3943 = '';
+      vm.doc3944 = '';
+      vm.doc3945 = '';
+      vm.doc3946 = '';
+      vm.doc3947 = '';
+      vm.doc3948 = '';
+      vm.doc3949 = '';
+      vm.doc3950 = '';
+      vm.doc3951 = '';
+      vm.doc3952 = '';
       vm.doc402 = '';
       vm.doc412 = '';
       vm.doc422 = '';
@@ -889,6 +919,36 @@
       vm.radio_values.init_doc3920 = "";
       vm.radio_values.init_doc3921 = "";
       vm.radio_values.init_doc3922 = "";
+      vm.radio_values.init_doc3923 = "";
+      vm.radio_values.init_doc3924 = "";
+      vm.radio_values.init_doc3925 = "";
+      vm.radio_values.init_doc3926 = "";
+      vm.radio_values.init_doc3927 = "";
+      vm.radio_values.init_doc3928 = "";
+      vm.radio_values.init_doc3929 = "";
+      vm.radio_values.init_doc3930 = "";
+      vm.radio_values.init_doc3931 = "";
+      vm.radio_values.init_doc3932 = "";
+      vm.radio_values.init_doc3933 = "";
+      vm.radio_values.init_doc3934 = "";
+      vm.radio_values.init_doc3935 = "";
+      vm.radio_values.init_doc3936 = "";
+      vm.radio_values.init_doc3937 = "";
+      vm.radio_values.init_doc3938 = "";
+      vm.radio_values.init_doc3939 = "";
+      vm.radio_values.init_doc3940 = "";
+      vm.radio_values.init_doc3941 = "";
+      vm.radio_values.init_doc3942 = "";
+      vm.radio_values.init_doc3943 = "";
+      vm.radio_values.init_doc3944 = "";
+      vm.radio_values.init_doc3945 = "";
+      vm.radio_values.init_doc3946 = "";
+      vm.radio_values.init_doc3947 = "";
+      vm.radio_values.init_doc3948 = "";
+      vm.radio_values.init_doc3949 = "";
+      vm.radio_values.init_doc3950 = "";
+      vm.radio_values.init_doc3951 = "";
+      vm.radio_values.init_doc3952 = "";
       vm.radio_values.init_doc402 = "";
       vm.radio_values.init_doc412 = "";
       vm.radio_values.init_doc422 = "";
@@ -1478,6 +1538,36 @@
       '39c20': 'Period of the Subject handled in the Experience Certificate 3',
       '39c21': 'Period of the Subject handled in the Experience Certificate 4',
       '39c22': 'Period of the Subject handled in the Experience Certificate 5',
+      '39c23': 'Period of the Subject handled in the Experience Certificate 6',
+      '39c24': 'Period of the Subject handled in the Experience Certificate 7',
+      '39c25': 'Period of the Subject handled in the Experience Certificate 8',
+      '39c26': 'Period of the Subject handled in the Experience Certificate 9',
+      '39c27': 'Period of the Subject handled in the Experience Certificate 10',
+      '39c28': 'Period of the Subject handled in the Experience Certificate 11',
+      '39c29': 'Period of the Subject handled in the Experience Certificate 12',
+      '39c30': 'Period of the Subject handled in the Experience Certificate 13',
+      '39c31': 'Period of the Subject handled in the Experience Certificate 14',
+      '39c32': 'Period of the Subject handled in the Experience Certificate 15',
+      '39c33': 'Period of the Subject handled in the Experience Certificate 16',
+      '39c34': 'Period of the Subject handled in the Experience Certificate 17',
+      '39c35': 'Period of the Subject handled in the Experience Certificate 18',
+      '39c36': 'Period of the Subject handled in the Experience Certificate 19',
+      '39c37': 'Period of the Subject handled in the Experience Certificate 20',
+      '39c38': 'Period of the Subject handled in the Experience Certificate 21',
+      '39c39': 'Period of the Subject handled in the Experience Certificate 22',
+      '39c40': 'Period of the Subject handled in the Experience Certificate 23',
+      '39c41': 'Period of the Subject handled in the Experience Certificate 24',
+      '39c42': 'Period of the Subject handled in the Experience Certificate 25',
+      '39c43': 'Period of the Subject handled in the Experience Certificate 26',
+      '39c44': 'Period of the Subject handled in the Experience Certificate 27',
+      '39c45': 'Period of the Subject handled in the Experience Certificate 28',
+      '39c46': 'Period of the Subject handled in the Experience Certificate 29',
+      '39c47': 'Period of the Subject handled in the Experience Certificate 30',
+      '39c48': 'Period of the Subject handled in the Experience Certificate 31',
+      '39c49': 'Period of the Subject handled in the Experience Certificate 32',
+      '39c50': 'Period of the Subject handled in the Experience Certificate 33',
+      '39c51': 'Period of the Subject handled in the Experience Certificate 34',
+      '39c52': 'Period of the Subject handled in the Experience Certificate 35',
       '40c2': 'Relevant document reason',
       '41c2': 'Relevant document reason',
       '42c2': 'Relevant document reason',
@@ -2455,17 +2545,14 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
-        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922').datepicker({
-          format: "M yyyy",
+        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
+          format: "dd/mm/yyyy",
           startView: 1,
-          minViewMode: 1,
-          maxViewMode: 2,
           multidate: true,
           multidateSeparator: "-",
           autoClose: true
         }).on("changeDate", function (event) {
           var dates = event.dates, elem = $(this);
-          console.log(dates);
           if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
           if (dates.length > 2) dates = dates.splice(dates.length - 1);
           dates.sort(function (a, b) {
