@@ -8690,7 +8690,8 @@
       "question": "Whether the candidate has the required percentage of marks of atleast 55% for 'General Category' or its equivalent grade from Recognized University",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -8700,7 +8701,8 @@
       "question": "Whether the candidate has the required percentage of marks of atleast 50% for 'BC / BCM / MBC & DNC / SC / SCA / ST and PWD Candidates or its equivalent grade from Recognized University",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -8710,7 +8712,8 @@
       "question": "Whether the candidate has the required percentage of marks of atleast 50% with Ph.D Degree and have obtained their Master’s Degree prior to 19 th September 1991 for 'General Category' or its equivalent grade from Recognized University",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 63,
@@ -12293,7 +12296,8 @@
       "question": "Is the document relevant to the claim of Ph.D Degree Mark sheet / Course Certificate / Provisional Certificate?",
       "options": {
         "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option2": "Not Relevant",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 143,
@@ -12304,7 +12308,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 143,
@@ -12315,7 +12320,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 143,
@@ -12326,7 +12332,8 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Clear"
+        "option3": "Not Clear",
+        "option4": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 143,

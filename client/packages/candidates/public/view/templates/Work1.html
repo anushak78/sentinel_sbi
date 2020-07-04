@@ -36,7 +36,7 @@
           style="{{ $ctrl.radio_values.init_doc399=='3' ? 'display:block':'display:none'}}">
         <select multiple="multiple"
                 id="select2-dd" ng-model="$ctrl.doc399">
-          <optgroup label="--Select Serial no of document mis-matched--">
+          <optgroup label="--Select Serial no of documeauthoritynt mis-matched--">
             <option value="{{ $index+1 }}"
                     ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
               {{ $index+1 }}
@@ -1152,6 +1152,10 @@
                ng-change="$ctrl.doc3914=''">
         No
       </label>
+      <label style="{{ $ctrl.radio_values.init_doc3914=='2' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3914"
+               class="doc3914 modified_date input-sm input-s datepicker-input form-control">
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -1186,6 +1190,10 @@
                value="2" ng-model="$ctrl.radio_values.init_doc3915"
                ng-change="$ctrl.doc3915=''">
         No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3915=='2' ? 'display:block':'display:none'}}">
+        <input type="text" ng-model="$ctrl.doc3915"
+               class="doc3915 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
     <div class="radio">
@@ -1243,9 +1251,21 @@
                ng-change="$ctrl.doc3917=''">
         Yes
       </label>
-      <label style="{{ $ctrl.radio_values.init_doc3917=='1' ? 'display:block':'display:none'}}">
-        <input type="text" ng-model="$ctrl.doc3917"
-               class="doc3917 modified_date input-sm input-s datepicker-input form-control">
+<!--      <label style="{{ $ctrl.radio_values.init_doc3917=='1' ? 'display:block':'display:none'}}">-->
+<!--        <input type="text" ng-model="$ctrl.doc3917"-->
+<!--               class="doc3917 modified_date input-sm input-s datepicker-input form-control">-->
+<!--      </label>-->
+      <label
+          style="{{ $ctrl.radio_values.init_doc3917=='1' ? 'display:block':'display:none'}}">
+        <select multiple="multiple"
+                id="select2-dd2" ng-model="$ctrl.doc399">
+          <optgroup label="--Select Serial no of documeauthoritynt mis-matched--">
+            <option value="{{ $index+1 }}"
+                    ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
+              {{ $index+1 }}
+            </option>
+          </optgroup>
+        </select>
       </label>
     </div>
     <div class="radio">
