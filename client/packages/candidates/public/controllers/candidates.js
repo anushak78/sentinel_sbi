@@ -288,6 +288,40 @@
       vm.doc394 = '';
       vm.doc395 = '';
       vm.doc396 = '';
+      vm.doc3953 = '';
+      vm.doc3954 = '';
+      vm.doc3955 = '';
+      vm.doc3956 = '';
+      vm.doc3957 = '';
+      vm.doc3958 = '';
+      vm.doc3959 = '';
+      vm.doc3960 = '';
+      vm.doc3961 = '';
+      vm.doc3962 = '';
+      vm.doc3963 = '';
+      vm.doc3964 = '';
+      vm.doc3965 = '';
+      vm.doc3966 = '';
+      vm.doc3967 = '';
+      vm.doc3968 = '';
+      vm.doc3969 = '';
+      vm.doc3970 = '';
+      vm.doc3971 = '';
+      vm.doc3972 = '';
+      vm.doc3973 = '';
+      vm.doc3974 = '';
+      vm.doc3975 = '';
+      vm.doc3976 = '';
+      vm.doc3977 = '';
+      vm.doc3978 = '';
+      vm.doc3979 = '';
+      vm.doc3980 = '';
+      vm.doc3981 = '';
+      vm.doc3982 = '';
+      vm.doc3983 = '';
+      vm.doc3984 = '';
+      vm.doc3985 = '';
+      vm.doc3986 = '';
       vm.doc397 = '';
       vm.doc398 = '';
       vm.doc399 = '';
@@ -903,6 +937,40 @@
       vm.radio_values.init_doc394 = "";
       vm.radio_values.init_doc395 = "";
       vm.radio_values.init_doc396 = "";
+      vm.radio_values.init_doc3953 = "";
+      vm.radio_values.init_doc3954 = "";
+      vm.radio_values.init_doc3955 = "";
+      vm.radio_values.init_doc3956 = "";
+      vm.radio_values.init_doc3957 = "";
+      vm.radio_values.init_doc3958 = "";
+      vm.radio_values.init_doc3959 = "";
+      vm.radio_values.init_doc3960 = "";
+      vm.radio_values.init_doc3961 = "";
+      vm.radio_values.init_doc3962 = "";
+      vm.radio_values.init_doc3963 = "";
+      vm.radio_values.init_doc3964 = "";
+      vm.radio_values.init_doc3965 = "";
+      vm.radio_values.init_doc3966 = "";
+      vm.radio_values.init_doc3967 = "";
+      vm.radio_values.init_doc3968 = "";
+      vm.radio_values.init_doc3969 = "";
+      vm.radio_values.init_doc3970 = "";
+      vm.radio_values.init_doc3971 = "";
+      vm.radio_values.init_doc3972 = "";
+      vm.radio_values.init_doc3973 = "";
+      vm.radio_values.init_doc3974 = "";
+      vm.radio_values.init_doc3975 = "";
+      vm.radio_values.init_doc3976 = "";
+      vm.radio_values.init_doc3977 = "";
+      vm.radio_values.init_doc3978 = "";
+      vm.radio_values.init_doc3979 = "";
+      vm.radio_values.init_doc3980 = "";
+      vm.radio_values.init_doc3981 = "";
+      vm.radio_values.init_doc3982 = "";
+      vm.radio_values.init_doc3983 = "";
+      vm.radio_values.init_doc3984 = "";
+      vm.radio_values.init_doc3985 = "";
+      vm.radio_values.init_doc3986 = "";
       vm.radio_values.init_doc397 = "";
       vm.radio_values.init_doc398 = "";
       vm.radio_values.init_doc399 = "";
@@ -1522,6 +1590,40 @@
       '39c4': 'No. of Claims of period of Experience',
       '39c5': 'No. of experience certificate',
       '39c6': 'Whether claim No. 1 is relevant to the period mentioned',
+      '39c53': 'Whether claim No. 2 is relevant to the period mentioned',
+      '39c54': 'Whether claim No. 3 is relevant to the period mentioned',
+      '39c55': 'Whether claim No. 4 is relevant to the period mentioned',
+      '39c56': 'Whether claim No. 5 is relevant to the period mentioned',
+      '39c57': 'Whether claim No. 6 is relevant to the period mentioned',
+      '39c58': 'Whether claim No. 7 is relevant to the period mentioned',
+      '39c59': 'Whether claim No. 8 is relevant to the period mentioned',
+      '39c60': 'Whether claim No. 9 is relevant to the period mentioned',
+      '39c61': 'Whether claim No. 10 is relevant to the period mentioned',
+      '39c62': 'Whether claim No. 11 is relevant to the period mentioned',
+      '39c63': 'Whether claim No. 12 is relevant to the period mentioned',
+      '39c64': 'Whether claim No. 13 is relevant to the period mentioned',
+      '39c65': 'Whether claim No. 14 is relevant to the period mentioned',
+      '39c66': 'Whether claim No. 15 is relevant to the period mentioned',
+      '39c67': 'Whether claim No. 16 is relevant to the period mentioned',
+      '39c68': 'Whether claim No. 17 is relevant to the period mentioned',
+      '39c69': 'Whether claim No. 18 is relevant to the period mentioned',
+      '39c70': 'Whether claim No. 19 is relevant to the period mentioned',
+      '39c71': 'Whether claim No. 20 is relevant to the period mentioned',
+      '39c72': 'Whether claim No. 21 is relevant to the period mentioned',
+      '39c73': 'Whether claim No. 22 is relevant to the period mentioned',
+      '39c74': 'Whether claim No. 23 is relevant to the period mentioned',
+      '39c75': 'Whether claim No. 24 is relevant to the period mentioned',
+      '39c76': 'Whether claim No. 25 is relevant to the period mentioned',
+      '39c77': 'Whether claim No. 26 is relevant to the period mentioned',
+      '39c78': 'Whether claim No. 27 is relevant to the period mentioned',
+      '39c79': 'Whether claim No. 28 is relevant to the period mentioned',
+      '39c80': 'Whether claim No. 29 is relevant to the period mentioned',
+      '39c81': 'Whether claim No. 30 is relevant to the period mentioned',
+      '39c82': 'Whether claim No. 31 is relevant to the period mentioned',
+      '39c83': 'Whether claim No. 32 is relevant to the period mentioned',
+      '39c84': 'Whether claim No. 33 is relevant to the period mentioned',
+      '39c85': 'Whether claim No. 34 is relevant to the period mentioned',
+      '39c86': 'Whether claim No. 35 is relevant to the period mentioned',
       '39c7': 'Teaching Experience From To',
       '39c8': 'NET Teaching Experience period',
       '39c9': 'Serial No of document mismatched',
