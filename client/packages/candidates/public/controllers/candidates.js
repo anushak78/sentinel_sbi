@@ -2682,7 +2682,7 @@
 
 
     $scope.submitQuestion = function (status) {
-      if (Object.keys($scope.finalJsonData).length == $scope.candidateDetails['document_list'].length) {
+      if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length) {
         if ($scope.packages.comment == "" && parseInt($scope.userData.level) > 1) {
           alert("Please select comment");
           return false;
