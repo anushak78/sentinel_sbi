@@ -934,6 +934,7 @@
                  class="form-control">
         </label>
       </div>
+    </div>
       <div class="clearfix"></div>
     </div>
     <div ng-if="candidateDetails['work_experience'].length > 2">
@@ -946,7 +947,7 @@
           <label class="radio-custom">
             <input type="radio" class="q_radio radio3954" name="radio3954"
                    value="1" ng-model="$ctrl.radio_values.init_doc3954"
-                   ng-change="$ctrl.doc3954''">
+                   ng-change="$ctrl.doc3954=''">
             Yes
           </label>
           <label style="{{ $ctrl.radio_values.init_doc3954=='1' ? 'display:block':'display:none'}}">

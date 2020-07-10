@@ -356,7 +356,7 @@
       vm.doc3938 = '';
       vm.doc3939 = '';
       vm.doc3940 = '';
-      vm.doc3941= '';
+      vm.doc3941 = '';
       vm.doc3942 = '';
       vm.doc3943 = '';
       vm.doc3944 = '';
@@ -2227,7 +2227,6 @@
       for (var i in $scope.newDocumentList) {
         if ($scope.newDocumentList[i]['odm_name'].includes(value)) {
           return true;
-          break;
         }
       }
       return false;
@@ -2488,9 +2487,9 @@
         console.log('selected doc type');
         $scope.setIframe();
         $('#modal-form').modal();
-        setTimeout(function(){
+        setTimeout(function () {
           $('.slimScrollDiv').scrollTop(0);
-        },500)
+        }, 500)
       }
     };
 
@@ -2873,6 +2872,7 @@
     };
 
     $scope.displayShowTable = function () {
+      return true;
       if (vm.radio_values.init_doc399 == 1) {
         return true;
       } else if (vm.radio_values.init_doc399 == 2) {
@@ -2960,6 +2960,22 @@
         return $scope.calculateSletNetDate('oaed_is_net_checked');
       }
     };
+    $scope.checkDatePeriod = function () {
+      var datesArray = [];
+      var number = 17;
+      if ($('#select2-dd').val() != null) {
+        var array = $('#select2-dd').val();
+        for (var i in array) {
+          var a = {};
+          a.number = array[i];
+          a.dateRange = $('.doc39' + (eval(number) + eval(array[i]))).val();
+          datesArray.push(a);
+        }
+      }
+      return datesArray;
+    };
+
+
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
@@ -2982,7 +2998,8 @@
         'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
         'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
         'bool_chk1': 'False',
-        'bool_chk2': 'False'
+        'bool_chk2': 'False',
+        'dt_omit_range': $scope.checkDatePeriod()
       }).then(function (object) {
         console.log(object);
         $scope.orchEntry = object;
@@ -2999,7 +3016,7 @@
       if ($('#select2-dd').val() == [] || $('#select2-dd').val() == null) {
         return false;
       }
-      setTimeout(function() {
+      setTimeout(function () {
         $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
           format: "dd/mm/yyyy",
           startView: 1,
@@ -3015,7 +3032,7 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
-      },1000);
+      }, 1000);
       return $('#select2-dd').val().includes(number.toString())
     };
 
