@@ -2872,7 +2872,6 @@
     };
 
     $scope.displayShowTable = function () {
-      return true;
       if (vm.radio_values.init_doc399 == 1) {
         return true;
       } else if (vm.radio_values.init_doc399 == 2) {
