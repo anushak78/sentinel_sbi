@@ -833,7 +833,7 @@
   </div>
 
   <div class="modal fade" id="modal-exp"
-       style="z-index: 99999999999; color: black;display: block;">
+       style="z-index: 99999999999; color: black;display: none;">
     <div class="modal-dialog" style="height: 100%;width: 100%">
       <div class="modal-content" style="height: 100%;width: 100%">
         <div class="">
@@ -910,6 +910,8 @@
                 </th>
                 <th>Eligible To Date
                 </th>
+                <th>Date Ranges To Omit
+                </th>
               </tr>
               </thead>
               <tbody>
@@ -972,6 +974,11 @@
                 <td>{{o['Eligible From Date']}}
                 </td>
                 <td>{{o['Eligible To Date']}}
+                </td>
+                <td>
+                  <p ng-repeat="r in o['Dates Ranges To Omit']">
+                    Start Date - {{r['Start Date']}} , End Date - {{r['End Date']}} <br/>
+                  </p>
                 </td>
               </tr>
               </tbody>
