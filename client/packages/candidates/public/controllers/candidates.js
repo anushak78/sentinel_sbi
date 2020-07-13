@@ -3002,7 +3002,7 @@
         'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
         'bool_chk1': 'False',
         'bool_chk2': 'False',
-        'dt_omit_ranges': $scope.checkDatePeriod()
+        'dt_omit_ranges': JSON.stringify($scope.checkDatePeriod())
       }).then(function (object) {
         console.log(object);
         $scope.orchEntry = object;
