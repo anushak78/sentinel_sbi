@@ -2966,7 +2966,7 @@
         var array = $('#select2-dd').val();
         for (var i in array) {
           var a = {};
-          a.number = array[i];
+          a.number = Number(array[i]);
           a.dateRange = {};
           a.dateRange.dt_range_start = $('.doc39' + (eval(number) + eval(array[i]))).val().split('-')[0];
           a.dateRange.dt_range_end = $('.doc39' + (eval(number) + eval(array[i]))).val().split('-')[1];
