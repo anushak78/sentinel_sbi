@@ -2,6 +2,7 @@ import logging
 
 from datetime import datetime
 from dateutil import relativedelta
+from datetimerange import DateTimeRange
 
 from pyramid.security import (
     NO_PERMISSION_REQUIRED,
@@ -14,6 +15,8 @@ from pyramid.csrf import new_csrf_token
 from cornice import Service
 
 from ....core import cors
+
+import json
 
 from pyramid.view import view_config
 
@@ -259,10 +262,6 @@ def pgCalc_50mNabove_Upto1891991(request):
     dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'To Date - Period Of Service'), '%d/%m/%Y').date()
 
-    # str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
-    # bool_diffAbled = request.POST.get("bool_diffAbled", 'false')
-    # float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
-
     str_subjHandledStatus = request.POST.get(
         "str_subjHandledStatus", "No Subject Handled  Status Info Recieved")
 
@@ -296,22 +295,62 @@ def pgCalc_50mNabove_Upto1891991(request):
             log.info(toConsider)
 
             if(toConsider == True):
+
+                # Eligibility Period Cut Off Check
                 if(dt_elp_toDt > DT_POR_CUTOFF):
                     dt_top_date = dt_elp_toDt
                 else:
                     dt_top_date = DT_POR_CUTOFF
 
-                diff = relativedelta.relativedelta(
+                main_diff = relativedelta.relativedelta(
                     dt_top_date, dt_elp_fromDt)
+
+                master_time_range = DateTimeRange(dt_elp_fromDt, dt_top_date)
+
+                dt_omit_dt_range_list = request.POST.get(
+                    "dt_omit_ranges", "No List Present")
+
+                res = json.loads(dt_omit_dt_range_list)
+                dt_range_end_list = [0, 0]
+                sub_diff = relativedelta.relativedelta(
+                    years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+                dt_omit_dt_range_list_to_consider = []
+
+                for r in res:
+                    dt_start_date = datetime.strptime(
+                        r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+                    dt_end_date = datetime.strptime(
+                        r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+                    sub_range = DateTimeRange(dt_start_date, dt_end_date)
+                    print(sub_range)
+
+                    if(sub_range in master_time_range):
+                        sub_diff = sub_diff + relativedelta.relativedelta(
+                            dt_end_date, dt_start_date)
+                        dt_range_str = "Start Date : " + \
+                            str(dt_start_date), "End Date : "+str(dt_end_date)
+                        dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+                diff = main_diff - sub_diff
 
                 dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                        " Months and " + str(diff.days) + " Days")
+
+                dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                                " Months and " + str(main_diff.days) + " Days")
+
+                dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                               " Months and " + str(sub_diff.days) + " Days")
 
                 response = {'Title':  'PG with 50% Marks',
                             'Status': 'PASS',
                             'Eligible From Date': str(dt_elp_fromDt),
                             'Eligible To Date': str(dt_top_date),
-                            'Date Difference': dt_diff_response,
+                            'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                            'Date Difference Original ': dt_diff_original_response,
+                            'Date Difference Omitted': dt_diff_omitted_response,
+                            'Date Difference To Consider': dt_diff_response,
                             'Subject Handled': v_subjHandled,
                             'From Date': '',
                             'To Date': '18.09.1991',
@@ -484,10 +523,49 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
         else:
             dt_top_date = dt_elp_toDt
 
-        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
+        main_diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
-        dt_diff_response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        # Omission Date Range Calculation Starts Here
+
+        master_time_range = DateTimeRange(dt_earliestFrom, dt_top_date)
+
+        dt_omit_dt_range_list = request.POST.get(
+            "dt_omit_ranges", "No List Present")
+
+        res = json.loads(dt_omit_dt_range_list)
+        dt_range_end_list = [0, 0]
+        sub_diff = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_omit_dt_range_list_to_consider = []
+
+        for r in res:
+            dt_start_date = datetime.strptime(
+                r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(
+                r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+            sub_range = DateTimeRange(dt_start_date, dt_end_date)
+            print(sub_range)
+
+            if(sub_range in master_time_range):
+                sub_diff = sub_diff + relativedelta.relativedelta(
+                    dt_end_date, dt_start_date)
+                dt_range_str = "Start Date : " + \
+                    str(dt_start_date), "End Date : "+str(dt_end_date)
+                dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+        diff = main_diff - sub_diff
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                        " Months and " + str(main_diff.days) + " Days")
+
+        dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                       " Months and " + str(sub_diff.days) + " Days")
+
+        # Omission Date Range Calculation Ends Here
 
         META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
                      'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
@@ -508,7 +586,10 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference': dt_diff_response,
+                    'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                    'Date Difference Original ': dt_diff_original_response,
+                    'Date Difference Omitted': dt_diff_omitted_response,
+                    'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '19.09.1991',
                     'To Date': '17.07.2018',
@@ -679,10 +760,48 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
         else:
             dt_top_date = dt_elp_toDt
 
-        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
+        # Omission Date Range Calculation Starts Here
+        main_diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
-        dt_diff_response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        master_time_range = DateTimeRange(dt_earliestFrom, dt_top_date)
+
+        dt_omit_dt_range_list = request.POST.get(
+            "dt_omit_ranges", "No List Present")
+
+        res = json.loads(dt_omit_dt_range_list)
+        dt_range_end_list = [0, 0]
+        sub_diff = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_omit_dt_range_list_to_consider = []
+
+        for r in res:
+            dt_start_date = datetime.strptime(
+                r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(
+                r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+            sub_range = DateTimeRange(dt_start_date, dt_end_date)
+            print(sub_range)
+
+            if(sub_range in master_time_range):
+                sub_diff = sub_diff + relativedelta.relativedelta(
+                    dt_end_date, dt_start_date)
+                dt_range_str = "Start Date : " + \
+                    str(dt_start_date), "End Date : "+str(dt_end_date)
+                dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+        diff = main_diff - sub_diff
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                        " Months and " + str(main_diff.days) + " Days")
+
+        dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                       " Months and " + str(sub_diff.days) + " Days")
+
+        # Omission Date Range Calculation Ends Here
 
         META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
                      'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
@@ -701,7 +820,10 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_earliestFrom),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference': dt_diff_response,
+                    'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                    'Date Difference Original ': dt_diff_original_response,
+                    'Date Difference Omitted': dt_diff_omitted_response,
+                    'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '18.07.2018',
                     'To Date': '04.10.2019',
@@ -826,10 +948,48 @@ def phdCalc_submtdbfr_31122002(request):
         else:
             dt_top_date = dt_elp_toDt
 
-        diff = relativedelta.relativedelta(dt_elp_toDt, dt_phd_por)
+        main_diff = relativedelta.relativedelta(dt_elp_toDt, dt_phd_por)
 
-        dt_diff_response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        # Omission Date Range Calculation Starts Here
+        master_time_range = DateTimeRange(dt_phd_por, dt_elp_toDt)
+
+        dt_omit_dt_range_list = request.POST.get(
+            "dt_omit_ranges", "No List Present")
+
+        res = json.loads(dt_omit_dt_range_list)
+        dt_range_end_list = [0, 0]
+        sub_diff = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_omit_dt_range_list_to_consider = []
+
+        for r in res:
+            dt_start_date = datetime.strptime(
+                r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(
+                r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+            sub_range = DateTimeRange(dt_start_date, dt_end_date)
+            print(sub_range)
+
+            if(sub_range in master_time_range):
+                sub_diff = sub_diff + relativedelta.relativedelta(
+                    dt_end_date, dt_start_date)
+                dt_range_str = "Start Date : " + \
+                    str(dt_start_date), "End Date : "+str(dt_end_date)
+                dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+        diff = main_diff - sub_diff
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                        " Months and " + str(main_diff.days) + " Days")
+
+        dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                       " Months and " + str(sub_diff.days) + " Days")
+
+        # Omission Date Range Calculation Ends Here
 
         META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
                      'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
@@ -848,7 +1008,10 @@ def phdCalc_submtdbfr_31122002(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_elp_toDt),
-                    'Date Difference': dt_diff_response,
+                    'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                    'Date Difference Original ': dt_diff_original_response,
+                    'Date Difference Omitted': dt_diff_omitted_response,
+                    'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '31.07.2002',
                     'To Date': '13.06.2006',
@@ -968,10 +1131,48 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
             dt_top_date = dt_elp_toDt
 
         # Find difference between PHD POR Date and 02.04.2009
-        diff = relativedelta.relativedelta(dt_top_date, dt_phd_por)
+        main_diff = relativedelta.relativedelta(dt_top_date, dt_phd_por)
 
-        dt_diff_response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        # Omission Date Range Calculation Starts Here
+        master_time_range = DateTimeRange(dt_phd_por, dt_top_date)
+
+        dt_omit_dt_range_list = request.POST.get(
+            "dt_omit_ranges", "No List Present")
+
+        res = json.loads(dt_omit_dt_range_list)
+        dt_range_end_list = [0, 0]
+        sub_diff = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_omit_dt_range_list_to_consider = []
+
+        for r in res:
+            dt_start_date = datetime.strptime(
+                r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(
+                r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+            sub_range = DateTimeRange(dt_start_date, dt_end_date)
+            print(sub_range)
+
+            if(sub_range in master_time_range):
+                sub_diff = sub_diff + relativedelta.relativedelta(
+                    dt_end_date, dt_start_date)
+                dt_range_str = "Start Date : " + \
+                    str(dt_start_date), "End Date : "+str(dt_end_date)
+                dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+        diff = main_diff - sub_diff
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                        " Months and " + str(main_diff.days) + " Days")
+
+        dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                       " Months and " + str(sub_diff.days) + " Days")
+
+        # Omission Date Range Calculation Ends Here
 
         META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
                      'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
@@ -990,7 +1191,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(dt_top_date),
-                    'Date Difference': dt_diff_response,
+                    'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                    'Date Difference Original ': dt_diff_original_response,
+                    'Date Difference Omitted': dt_diff_omitted_response,
+                    'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '',
                     'To Date': '02.04.2009',
@@ -1112,10 +1316,48 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
         else:
             dt_top_date = dt_elp_toDt
         # find difference of dates from PG_POR and 04.10.2019
-        diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
+        main_diff = relativedelta.relativedelta(DT_PHD_TO_CUTOFF, dt_phd_por)
 
-        dt_diff_response = str(diff.years) + " Years and " + \
-            str(diff.months) + " Months and " + str(diff.days) + " Days"
+        # Omission Date Range Calculation Starts Here
+        master_time_range = DateTimeRange(dt_phd_por, DT_PHD_TO_CUTOFF)
+
+        dt_omit_dt_range_list = request.POST.get(
+            "dt_omit_ranges", "No List Present")
+
+        res = json.loads(dt_omit_dt_range_list)
+        dt_range_end_list = [0, 0]
+        sub_diff = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_omit_dt_range_list_to_consider = []
+
+        for r in res:
+            dt_start_date = datetime.strptime(
+                r["dateRange"]["dt_range_start"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(
+                r["dateRange"]["dt_range_end"], '%d/%m/%Y').date()
+            sub_range = DateTimeRange(dt_start_date, dt_end_date)
+            print(sub_range)
+
+            if(sub_range in master_time_range):
+                sub_diff = sub_diff + relativedelta.relativedelta(
+                    dt_end_date, dt_start_date)
+                dt_range_str = "Start Date : " + \
+                    str(dt_start_date), "End Date : "+str(dt_end_date)
+                dt_omit_dt_range_list_to_consider.append(dt_range_str)
+
+        diff = main_diff - sub_diff
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        dt_diff_original_response = str(str(main_diff.years) + " Years and " + str(main_diff.months) +
+                                        " Months and " + str(main_diff.days) + " Days")
+
+        dt_diff_omitted_response = str(str(sub_diff.years) + " Years and " + str(sub_diff.months) +
+                                       " Months and " + str(sub_diff.days) + " Days")
+
+        # Omission Date Range Calculation Ends Here
 
         META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
                      'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
@@ -1134,7 +1376,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                     'Status': 'PASS',
                     'Eligible From Date': str(dt_phd_por),
                     'Eligible To Date': str(DT_POR_TO_CUTOFF),
-                    'Date Difference': dt_diff_response,
+                    'Dates Ranges To Omit': dt_omit_dt_range_list_to_consider,
+                    'Date Difference Original ': dt_diff_original_response,
+                    'Date Difference Omitted': dt_diff_omitted_response,
+                    'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '',
                     'To Date': '04.10.2019',
