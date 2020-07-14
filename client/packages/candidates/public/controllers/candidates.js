@@ -2981,8 +2981,8 @@
 
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
-        // 'float_pgMarks': $scope.candidateDetails["candidate_details"][0]["pg_percentage"],
-        // 'dt_pg_por': "15/05/1998",
+        // 'float_pgMarks': 53,
+        // 'dt_pg_por': "15/05/1991",
         // 'str_subjHandledStatus': 1,
         // 'v_subjHandled': "Home Science",
         // 'v_subjApplied': "Home Science",
