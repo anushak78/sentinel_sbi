@@ -438,8 +438,8 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
     # if DT_POR_FROM_CUTOFF <= dt_pg_por <= DT_POR_TO_CUTOFF:
     log.info("%s: Step 1 - POR Date within CutOff Date",
              pgCalc_55MarksforOCnGT_19091991_10072016)
-
-    if str(str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
+    log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+str_caste)
+    if str_caste == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY:
         log.info("pgCalc_55MarksforOCnGT : Step 2 - SC Category Check")
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
@@ -632,7 +632,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
 
     # TODO Move this to a config file or DB
     DT_POR_FROM_CUTOFF = datetime(2016, 7, 11).date()
-    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date() # Notification mentioned on 14 July 2020 by TRB SASI mme
 
     dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -700,7 +700,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                         'Status': 'FAIL',
                         'Reason': 'Disability Check Cut Off Marks Check Failed - Dont Consider This Date',
                         'From Date': '18.07.2018',
-                        'To Date': '04.10.2019'
+                        'To Date': '15.11.2019'
                         }
     print(toConsider)
     if(toConsider == True):
@@ -728,7 +728,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                         'Status': 'FAIL',
                         'Reason': 'POR SLET & POR NET DATES ARE EMPTY - Dont Consider This Date',
                         'From Date': '18.07.2018',
-                        'To Date': '04.10.2019'
+                        'To Date': '15.11.2019'
                         }
 
         print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
@@ -826,7 +826,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                     'Date Difference To Consider': dt_diff_response,
                     'Subject Handled': v_subjHandled,
                     'From Date': '18.07.2018',
-                    'To Date': '04.10.2019',
+                    'To Date': '15.11.2019',
                     'META_DATA': META_DATA}
     else:
         log.info("pgCalc_55MarksforOCnGT : Step 4 - All Checks Failed ")
@@ -836,7 +836,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                     'Status': 'FAIL',
                     'Reason': 'All Checks Failed - Dont Consider This Date',
                     'From Date': '18.07.2018',
-                    'To Date': '04.10.2019'
+                    'To Date': '15.11.2019'
                     }
 
     return response
@@ -1055,10 +1055,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()
-    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_POR_FROM_CUTOFF = " NO RESTRICTION " # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
+    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date() # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
 
-    DT_PHD_TO_CUTOFF = datetime(2009, 2, 4).date()
+    DT_PHD_TO_CUTOFF = datetime(2009, 4, 2).date()
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
