@@ -2975,12 +2975,33 @@
           datesArray.push(a);
         }
       }
-      return datesArray;
+      return JSON.stringify(datesArray);
     };
 
 
     $scope.showExperienceModal = function () {
       Http.post("/biz/scores/orchEntry", {
+        // 'float_pgMarks': $scope.candidateDetails["candidate_details"][0]["pg_percentage"],
+        // 'dt_pg_por': "15/05/1998",
+        // 'str_subjHandledStatus': 1,
+        // 'v_subjHandled': "Home Science",
+        // 'v_subjApplied': "Home Science",
+        // 'dt_elp_fromDt': "14/11/2003",
+        // 'dt_elp_toDt': "02/04/2018",
+        // 'dt_slet_por': "01/02/2001",
+        // 'dt_net_por': "01/01/0001",
+        // 'str_caste': "OC_CATEGORY",
+        // 'bool_diffAbled': "False",
+        // 'bool_sletStatus': "True",
+        // 'bool_netStatus': "False",
+        // 'v_subjSlet': "Home Science",
+        // 'v_subjNet': "",
+        // 'bool_equivFlag1': "",
+        // 'bool_equivFlag2': "",
+        // 'dt_mphil_por': "01/01/0001",
+        // 'dt_phd_por': "01/01/0001",
+        // 'bool_chk1': "False",
+        // 'bool_chk2': "False",
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
         'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
         'str_subjHandledStatus': 1,
@@ -3002,7 +3023,7 @@
         'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
         'bool_chk1': 'False',
         'bool_chk2': 'False',
-        'dt_omit_ranges': JSON.stringify($scope.checkDatePeriod())
+        'dt_omit_ranges': $scope.checkDatePeriod()
       }).then(function (object) {
         console.log(object);
         $scope.orchEntry = object;
