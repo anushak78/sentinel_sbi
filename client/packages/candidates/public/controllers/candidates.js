@@ -2253,6 +2253,9 @@
             if ($scope.candidateDetails['document_list'][i]['ocd_flag'].includes('PSTM')) {
               $scope.candidateDetails['document_list'][i]['odm_name'] = 'PSTM Certificate';
             }
+            if ($scope.candidateDetails['document_list'][i]['ocd_flag'].includes('Work Experience')) {
+              $scope.candidateDetails['document_list'][i]['odm_name'] = 'Work Experience';
+            }
             var name = $scope.candidateDetails['document_list'][i]['odm_name'];
             name = name.substring(0, name.length - 2);
             if (!$scope.checkArray(name)) {
