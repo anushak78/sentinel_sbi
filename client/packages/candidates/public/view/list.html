@@ -948,24 +948,24 @@
                   undefined?o['Eligible To Date']:'-'}}
                 </td>
                 <td>
-                  <div ng-if="o['Date Difference']!=
+                  <div ng-if="o['Date Difference To Consider']!=
                     undefined">
                     <a ng-click="openEducationModel($index)"
                        style="cursor:pointer;text-decoration:
                   underline">
-                      {{o['Date Difference'].split('and')[0]}}
+                      {{o['Date Difference To Consider'].split('and')[0]}}
                     </a>
                   </div>
-                  <div ng-if="o['Date Difference']==
+                  <div ng-if="o['Date Difference To Consider']==
                     undefined">
                     -
                   </div>
                 </td>
-                <td>{{o['Date Difference']!=
-                  undefined?o['Date Difference'].split('and')[1]:'-'}}
+                <td>{{o['Date Difference To Consider']!=
+                  undefined?o['Date Difference To Consider'].split('and')[1]:'-'}}
                 </td>
-                <td>{{o['Date Difference']!=
-                  undefined?o['Date Difference'].split('and')[2]:'-'}}
+                <td>{{o['Date Difference To Consider']!=
+                  undefined?o['Date Difference To Consider'].split('and')[2]:'-'}}
                 </td>
                 <td>{{o['Subject Handled']!=
                   undefined?o['Subject Handled']:'-'}}
@@ -989,7 +989,7 @@
   </div>
 
   <div class="modal fade" id="modal-education"
-       style="z-index: 9999999; color: black;display: none;">
+       style="z-index: 999999999999; color: black;display: none;">
     <div class="modal-dialog" style="height: 100%;width: 100%">
       <div class="modal-content" style="height: 100%;width: 100%">
         <div class="">
