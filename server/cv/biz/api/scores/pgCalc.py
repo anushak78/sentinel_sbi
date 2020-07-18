@@ -632,7 +632,8 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
 
     # TODO Move this to a config file or DB
     DT_POR_FROM_CUTOFF = datetime(2016, 7, 11).date()
-    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date() # Notification mentioned on 14 July 2020 by TRB SASI mme
+    # Notification mentioned on 14 July 2020 by TRB SASI mme
+    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date()
 
     dt_elp_toDt = datetime.strptime(request.POST.get(
         "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -873,8 +874,17 @@ def phdCalc_submtdbfr_31122002(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.strptime(request.POST.get(
-        "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+    dt_phd_por_str = request.POST.get(("dt_phd_por", ''), '%d/%m/%Y')
+    dt_phd_por = ''
+    if(dt_phd_por_str != ''):
+        dt_phd_por = datetime.strptime(dt_phd_por_str).date()
+    else:
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'No PHD Date Present',
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'
+                    }
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -1055,8 +1065,10 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # TODO Move this to a config file or DB
-    DT_POR_FROM_CUTOFF = " NO RESTRICTION " # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
-    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date() # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
+    # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
+    DT_POR_FROM_CUTOFF = " NO RESTRICTION "
+    # Corrected by TRB Sasi Mme as per GO. on 14 July 2020
+    DT_POR_TO_CUTOFF = datetime(2019, 11, 15).date()
 
     DT_PHD_TO_CUTOFF = datetime(2009, 4, 2).date()
 
