@@ -2316,6 +2316,7 @@
             }
             console.log($scope.noOfDays);
             $scope.totalExperience = Math.floor($scope.noOfDays / 365) + ' Years ' + Math.floor(($scope.noOfDays % 365) / 30) + ' Months ' + Math.floor((306 % 365) % 30) + ' Days';
+
           }
         } else {
           Message.error(object['message']);
@@ -2959,13 +2960,13 @@
       return '';
     };
     $scope.checkEligibilityFromDate = function () {
-      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked']) {
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'true') {
         return $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']);
       }
-      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked']) {
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked'] == 'true') {
         return $scope.calculateSletNetDate('oaed_is_slet_checked');
       }
-      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked']) {
+      if ($scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked'] == 'true') {
         return $scope.calculateSletNetDate('oaed_is_net_checked');
       }
     };
