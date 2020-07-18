@@ -2490,8 +2490,8 @@
         $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
         $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
         console.log('selected doc type');
-        if($scope.selectedDocType == 'Work Experience'){
-          if(typeof $scope.finalJsonData['PG Degree Certificate']=='undefined'){
+        if ($scope.selectedDocType == 'Work Experience') {
+          if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
             alert('Please enter PG Degree Certificate Data');
             return false;
           }
@@ -2892,11 +2892,17 @@
       }
     };
     $scope.converDateToSlash = function (date) {
-      var newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
+      var newDate = '';
+      if (date !== '') {
+        newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
+      }
       return newDate;
     };
     $scope.converDateToSlashRealTimeDate = function (date) {
-      var newDate = date.split('-')[0] + '/' + date.split('-')[1] + '/' + date.split('-')[2];
+      var newDate = '';
+      if(date != ''){
+        newDate = date.split('-')[0] + '/' + date.split('-')[1] + '/' + date.split('-')[2];
+      };
       return newDate;
     };
     $scope.changeCastName = function (name) {
@@ -3044,7 +3050,7 @@
 
 
     $(document).on('click', '.showModalExp', function () {
-      if(typeof $scope.finalJsonData['PG Degree Certificate']=='undefined'){
+      if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
         alert('Please enter PG Degree Certificate Data');
         return false;
       }
