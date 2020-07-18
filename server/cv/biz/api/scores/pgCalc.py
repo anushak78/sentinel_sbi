@@ -874,10 +874,10 @@ def phdCalc_submtdbfr_31122002(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por_str = request.POST.get(("dt_phd_por", ''), '%d/%m/%Y')
+    dt_phd_por_str = request.POST.get("dt_phd_por", 'NULL')
     dt_phd_por = ''
-    if(dt_phd_por_str != ''):
-        dt_phd_por = datetime.strptime(dt_phd_por_str).date()
+    if(dt_phd_por_str != 'NULL'):
+        dt_phd_por = datetime.strptime(dt_phd_por_str, '%d/%m/%Y').date()
     else:
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
                     'Status': 'FAIL',
