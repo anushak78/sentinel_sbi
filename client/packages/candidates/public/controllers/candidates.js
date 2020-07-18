@@ -2484,10 +2484,17 @@
       if (level < $rootScope.userData.level) {
         return false;
       } else {
+        console.log($scope.selectedDocType);
         $scope.selectedDocNo = index;
         $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
         $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
         console.log('selected doc type');
+        if($scope.selectedDocType == 'Work Experience'){
+          if(typeof $scope.finalJsonData['PG Degree Certificate']=='undefined'){
+            alert('Please enter PG Degree Certificate Data');
+            return false;
+          }
+        }
         $scope.setIframe();
         $('#modal-form').modal();
         setTimeout(function () {
@@ -3036,6 +3043,10 @@
 
 
     $(document).on('click', '.showModalExp', function () {
+      if(typeof $scope.finalJsonData['PG Degree Certificate']=='undefined'){
+        alert('Please enter PG Degree Certificate Data');
+        return false;
+      }
       $scope.showExperienceModal();
     });
 
