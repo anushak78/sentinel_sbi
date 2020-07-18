@@ -876,7 +876,8 @@ def phdCalc_submtdbfr_31122002(request):
 
     dt_phd_por_str = request.POST.get("dt_phd_por", 'NULL')
     dt_phd_por = ''
-    if(dt_phd_por_str != 'NULL'):
+
+    if(len(dt_phd_por_str) != 0):
         dt_phd_por = datetime.strptime(dt_phd_por_str, '%d/%m/%Y').date()
     else:
         response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
@@ -1076,8 +1077,21 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.strptime(request.POST.get(
-        "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+    # dt_phd_por = datetime.strptime(request.POST.get(
+    #     "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+
+    dt_phd_por_str = request.POST.get("dt_phd_por", 'NULL')
+    dt_phd_por = ''
+
+    if(len(dt_phd_por_str) != 0):
+        dt_phd_por = datetime.strptime(dt_phd_por_str, '%d/%m/%Y').date()
+    else:
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'No PHD Date Present',
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'
+                    }
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -1267,8 +1281,21 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
     dt_pg_por = datetime.strptime(request.POST.get(
         "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
 
-    dt_phd_por = datetime.strptime(request.POST.get(
-        "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
+    dt_phd_por_str = request.POST.get("dt_phd_por", 'NULL')
+    dt_phd_por = ''
+
+    if(len(dt_phd_por_str) != 0):
+        dt_phd_por = datetime.strptime(dt_phd_por_str, '%d/%m/%Y').date()
+    else:
+        response = {'Title':  'Submitted PHD before 31.12.2002 ( From Date : 31.07.2002 - To Date : 13.06.2006) ',
+                    'Status': 'FAIL',
+                    'Response ': 'No PHD Date Present',
+                    'From Date': '31.07.2002',
+                    'To Date': '13.06.2006'
+                    }
+
+    # dt_phd_por = datetime.strptime(request.POST.get(
+    #     "dt_phd_por", 'No PHD POR Date Recieved'), '%d/%m/%Y').date()
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
