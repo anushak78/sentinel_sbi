@@ -3032,7 +3032,7 @@
         'str_subjHandledStatus': 1,
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
-        'using angula rjs ': $scope.checkEligibilityFromDate(),
+        'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
         'dt_elp_toDt': '15/11/2019',
         'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
         'dt_net_por': $scope.calculateSletNetDate('oaed_is_net_checked'),
