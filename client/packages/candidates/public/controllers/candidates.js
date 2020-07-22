@@ -2957,12 +2957,18 @@
     // }
     $scope.calculateSletNetDate = function (type) {
       if ($scope.candidateDetails['candidate_details'][0][type]) {
-        if ($scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id'] == 2 || $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id'] == 1) {
-          return $scope.converDateToSlashRealTimeDate(
-              $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['additional_info']
-          );
-        } else {
-          return '01/01/0001'
+        console.log($scope.finalJsonData);
+        console.log(typeof $scope.finalJsonData['SLET/NET Certificate']);
+        if(typeof $scope.finalJsonData['SLET/NET Certificate'] !== 'undefined'){
+          if ($scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id'] == 2 || $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['ans_id'] == 1) {
+            return $scope.converDateToSlashRealTimeDate(
+                $scope.finalJsonData['SLET/NET Certificate']['answers'][5]['additional_info']
+            );
+          } else {
+            return '01/01/0001';
+          }
+        } else{
+          return '01/01/0001';
         }
       }
       return '';
@@ -3026,7 +3032,7 @@
         'str_subjHandledStatus': 1,
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
-        'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
+        'using angula rjs ': $scope.checkEligibilityFromDate(),
         'dt_elp_toDt': '15/11/2019',
         'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
         'dt_net_por': $scope.calculateSletNetDate('oaed_is_net_checked'),
@@ -3054,6 +3060,11 @@
     $(document).on('click', '.showModalExp', function () {
       if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
         alert('Please enter PG Degree Certificate Data');
+        return false;
+      }
+      if (typeof $scope.finalJsonData['SLET/NET Certificate'] == 'undefined'
+          && $scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'false') {
+        alert('Please enter SLET/NET Certificate data');
         return false;
       }
       $scope.showExperienceModal();
