@@ -322,6 +322,8 @@
       vm.doc3984 = '';
       vm.doc3985 = '';
       vm.doc3986 = '';
+      vm.doc3987 = '';
+      vm.doc3988 = '';
       vm.doc397 = '';
       vm.doc398 = '';
       vm.doc399 = '';
@@ -971,6 +973,8 @@
       vm.radio_values.init_doc3984 = "";
       vm.radio_values.init_doc3985 = "";
       vm.radio_values.init_doc3986 = "";
+      vm.radio_values.init_doc3987 = "";
+      vm.radio_values.init_doc3988 = "";
       vm.radio_values.init_doc397 = "";
       vm.radio_values.init_doc398 = "";
       vm.radio_values.init_doc399 = "";
@@ -1624,6 +1628,7 @@
       '39c84': 'Whether claim No. 33 is relevant to the period mentioned',
       '39c85': 'Whether claim No. 34 is relevant to the period mentioned',
       '39c86': 'Whether claim No. 35 is relevant to the period mentioned',
+      '39c88': 'Certificate is in appropriate Institution',
       '39c7': 'Teaching Experience From To',
       '39c8': 'NET Teaching Experience period',
       '39c9': 'Serial No of document mismatched',
@@ -2490,12 +2495,17 @@
         $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
         $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
         console.log('selected doc type');
-        if ($scope.selectedDocType == 'Work Experience') {
-          if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
-            alert('Please enter PG Degree Certificate Data');
-            return false;
-          }
-        }
+        // if ($scope.selectedDocType == 'Work Experience') {
+        //   if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
+        //     alert('Please enter PG Degree Certificate Data');
+        //     return false;
+        //   }
+        //   if (typeof $scope.finalJsonData['SLET/NET Certificate'] == 'undefined'
+        //       && $scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'false') {
+        //     alert('Please enter SLET/NET Certificate data');
+        //     return false;
+        //   }
+        // }
         $scope.setIframe();
         $('#modal-form').modal();
         setTimeout(function () {
@@ -3058,15 +3068,15 @@
 
 
     $(document).on('click', '.showModalExp', function () {
-      if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
-        alert('Please enter PG Degree Certificate Data');
-        return false;
-      }
-      if (typeof $scope.finalJsonData['SLET/NET Certificate'] == 'undefined'
-          && $scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'false') {
-        alert('Please enter SLET/NET Certificate data');
-        return false;
-      }
+      // if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
+      //   alert('Please enter PG Degree Certificate Data');
+      //   return false;
+      // }
+      // if (typeof $scope.finalJsonData['SLET/NET Certificate'] == 'undefined'
+      //     && $scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'false') {
+      //   alert('Please enter SLET/NET Certificate data');
+      //   return false;
+      // }
       $scope.showExperienceModal();
     });
 

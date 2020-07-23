@@ -418,6 +418,7 @@ def get_candidate_details(request):
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_is_handicaped) as is_handicapped,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_disability_type) as disability_type,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_pstm_claim) as claimed_for_pstm,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_main_subject_list) as subject_applied_for,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_phd_evaluated) as phd_evaluated,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_phddegtype) as phd_degree_type,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocad.ocad_mphildegtype) as mphil_degree_type,
