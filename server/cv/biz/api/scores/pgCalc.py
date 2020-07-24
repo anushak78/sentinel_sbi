@@ -736,7 +736,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
 
         print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
         
-        dt_earliestForm = DT_POR_FROM_CUTOFF
+        dt_earliestFrom = DT_POR_FROM_CUTOFF
 
         if(str_dt_slet_por != '01/01/0001' and
            str_dt_net_por != '01/01/0001'):
@@ -764,6 +764,9 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
             dt_top_date = DT_POR_TO_CUTOFF
         else:
             dt_top_date = dt_elp_toDt
+
+        print("MMMMMMMMMMMMMM<<<<<<<<<<<<<<<<<<<<<<<<<<,")
+        print(dt_earliestFrom)
 
         # Omission Date Range Calculation Starts Here
         main_diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
