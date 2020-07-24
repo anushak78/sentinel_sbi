@@ -417,7 +417,7 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
-        "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
+        "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()    
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -755,6 +755,9 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
             dt_net_por = datetime.strptime(
                 str_dt_net_por, '%d/%m/%Y').date()
             dt_earliestForm = dt_net_por
+        else:
+           dt_earliestForm = DT_POR_FROM_CUTOFF
+
 
         if(dt_elp_toDt > DT_POR_TO_CUTOFF):
             dt_top_date = DT_POR_TO_CUTOFF
