@@ -1064,12 +1064,14 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
                       </section>
                     </div>
+                    <div ng-if="selectedDocType.indexOf('SSLC') < 0">
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
                         Father Name :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
                       </section>
+                    </div>
                     </div>
                     <div class="clearfix"></div>
                     <!--                    <div class="col-md-6">-->
@@ -1141,7 +1143,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Total no. of Work Experience :<br/><span
+                        Total no. of certificates attached :<br/><span
                           style="font-size: 14px">{{candidateDetails['work_experience'].length}}</span>
                       </section>
                     </div>
@@ -1234,14 +1236,6 @@
                         M.Phil Certificate Number
                         :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilcertno']}}</span>
-                      </section>
-                    </div>
-
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        M.Phill Institute Name:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_mphilinstitname']}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>
@@ -2254,14 +2248,14 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['last_conduct_certificate']}}</span>
                       </section>
                     </div>
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        Conduct: Whether submitted latest conduct certificate
-                        :<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['latest_conduct_certificate']}}</span>
-                      </section>
-                    </div>
+<!--                    <div class="col-md-6">-->
+<!--                      <section class="panel-body"-->
+<!--                               style="font-size: 12px">-->
+<!--                        Conduct: Whether submitted latest conduct certificate-->
+<!--                        :<br/><span-->
+<!--                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['latest_conduct_certificate']}}</span>-->
+<!--                      </section>-->
+<!--                    </div>-->
                     <div class="clearfix"></div>
                   </div>
                   <div ng-if="selectedDocType.indexOf('Phd') > -1">

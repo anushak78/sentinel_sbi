@@ -12369,8 +12369,8 @@
     {
       "question": "Any Course completed after discontinuing",
       "options": {
-        "option1": "Matched",
-        "option2": "Not Matched",
+        "option1": "Yes",
+        "option2": "No",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -12391,7 +12391,8 @@
       "question": "Name of the Course",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 140,
@@ -12436,16 +12437,6 @@
       "approved": "1",
       "doc_id": 140,
       "q_id": 8
-    },
-    {
-      "question": "Has prescribed educational qualification before 04.10.2019",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 140,
-      "q_id": 35
     },
     {
       "question": "Eligible Category of Qualification (cutoff date before 04.10.2019)",

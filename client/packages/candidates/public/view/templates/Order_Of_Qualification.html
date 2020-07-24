@@ -82,7 +82,7 @@
         <input type="radio" class="q_radio radio1403" name="radio1403"
                value="1" ng-model="$ctrl.radio_values.init_doc1403"
                ng-change="$ctrl.doc1403=''">
-        Matched
+        Yes
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc1403=='1' ? 'display:block':'display:none'}}">
@@ -96,7 +96,7 @@
         <input type="radio" class="q_radio radio1403" name="radio1403"
                value="2" ng-model="$ctrl.radio_values.init_doc1403"
                ng-change="$ctrl.doc1403=''">
-        Not Matched
+        No
       </label>
     </div>
     <div class="radio">
@@ -160,93 +160,106 @@
           Not Matched
         </label>
       </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1404" name="radio1404"
+                 value="3">
+          Not Clear
+        </label>
+      </div>
     </div>
     <div class="clearfix"></div>
   </div>
-  <div class="questions">
-    Discontinued Date
-  </div>
-  <div class="col-sm-6">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1405" name="radio1405"
-               value="1" ng-model="$ctrl.radio_values.init_doc1405"
-               ng-change="$ctrl.doc1405=''">
-        Matched
-      </label>
+  <div ng-if="radio[14034] == 1">
+    <div class="questions">
+      Discontinued Date
     </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1405" name="radio1405"
-               value="2" ng-model="$ctrl.radio_values.init_doc1405"
-               ng-change="$ctrl.doc1405=''">
-        Not Matched
-      </label>
-      <label
-          style="{{ $ctrl.radio_values.init_doc1405=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc1405" data-date-format="YYYY-MM-DD"
-               ng-model="$ctrl.doc1405"
-               class="modified_date input-sm input-s datepicker-input form-control">
-      </label>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1405" name="radio1405"
+                 value="1" ng-model="$ctrl.radio_values.init_doc1405"
+                 ng-change="$ctrl.doc1405=''">
+          Matched
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1405" name="radio1405"
+                 value="2" ng-model="$ctrl.radio_values.init_doc1405"
+                 ng-change="$ctrl.doc1405=''">
+          Not Matched
+        </label>
+        <label
+            style="{{ $ctrl.radio_values.init_doc1405=='2' ? 'display:block':'display:none'}}">
+          <input type="text" id="doc1405" data-date-format="YYYY-MM-DD"
+                 ng-model="$ctrl.doc1405"
+                 class="modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
     </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Admission Date (New Course)
-  </div>
-  <div class="col-sm-6">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1406" name="radio1406"
-               value="1" ng-model="$ctrl.radio_values.init_doc1406"
-               ng-change="$ctrl.doc1406=''">
-        Matched
-      </label>
+  <div ng-if="radio[14034] == 1">
+    <div class="questions">
+      Admission Date (New Course)
     </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1406" name="radio1406"
-               value="2" ng-model="$ctrl.radio_values.init_doc1406"
-               ng-change="$ctrl.doc1406=''">
-        Not Matched
-      </label>
-      <label
-          style="{{ $ctrl.radio_values.init_doc1406=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc1406" data-date-format="YYYY-MM-DD"
-               ng-model="$ctrl.doc1406"
-               class="modified_date input-sm input-s datepicker-input form-control">
-      </label>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1406" name="radio1406"
+                 value="1" ng-model="$ctrl.radio_values.init_doc1406"
+                 ng-change="$ctrl.doc1406=''">
+          Matched
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1406" name="radio1406"
+                 value="2" ng-model="$ctrl.radio_values.init_doc1406"
+                 ng-change="$ctrl.doc1406=''">
+          Not Matched
+        </label>
+        <label
+            style="{{ $ctrl.radio_values.init_doc1406=='2' ? 'display:block':'display:none'}}">
+          <input type="text" id="doc1406" data-date-format="YYYY-MM-DD"
+                 ng-model="$ctrl.doc1406"
+                 class="modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
     </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
-  <div class="questions">
-    Rejoining date in the old Course
-  </div>
-  <div class="col-sm-6">
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1407" name="radio1407"
-               value="1" ng-model="$ctrl.radio_values.init_doc1407"
-               ng-change="$ctrl.doc1407=''">
-        Matched
-      </label>
+  <div ng-if="radio[14034] == 1">
+    <div class="questions">
+      Rejoining date in the old Course
     </div>
-    <div class="radio">
-      <label class="radio-custom">
-        <input type="radio" class="q_radio radio1407" name="radio1407"
-               value="2" ng-model="$ctrl.radio_values.init_doc1407"
-               ng-change="$ctrl.doc1407=''">
-        Not Matched
-      </label>
-      <label
-          style="{{ $ctrl.radio_values.init_doc1407=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc1407" data-date-format="YYYY-MM-DD"
-               ng-model="$ctrl.doc1407"
-               class="modified_date input-sm input-s datepicker-input form-control">
-      </label>
+    <div class="col-sm-6">
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1407" name="radio1407"
+                 value="1" ng-model="$ctrl.radio_values.init_doc1407"
+                 ng-change="$ctrl.doc1407=''">
+          Matched
+        </label>
+      </div>
+      <div class="radio">
+        <label class="radio-custom">
+          <input type="radio" class="q_radio radio1407" name="radio1407"
+                 value="2" ng-model="$ctrl.radio_values.init_doc1407"
+                 ng-change="$ctrl.doc1407=''">
+          Not Matched
+        </label>
+        <label
+            style="{{ $ctrl.radio_values.init_doc1407=='2' ? 'display:block':'display:none'}}">
+          <input type="text" id="doc1407" data-date-format="YYYY-MM-DD"
+                 ng-model="$ctrl.doc1407"
+                 class="modified_date input-sm input-s datepicker-input form-control">
+        </label>
+      </div>
     </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="clearfix"></div>
   <div class="questions">
     Whether the candidate possesses prescribed educational qualification before
     the cutoff date 04.10.2019
@@ -282,47 +295,48 @@
     </div>
   </div>
   <div class="clearfix"></div>
-  <div>
-    <div class="questions">
-      Has prescribed educational qualification before 04.10.2019
-    </div>
-    <div class="col-sm-6">
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio14035" name="radio14035"
-                 value="1" ng-model="$ctrl.radio_values.init_doc14035"
-                 ng-change="$ctrl.doc14035=''">
-          Yes
-        </label>
-        <label
-            style="{{ $ctrl.radio_values.init_doc14035=='1' ? 'display:block':'display:none'}}">
-          <input type="text" id="doc14035" data-date-format="YYYY-MM-DD"
-                 ng-model="$ctrl.doc14035"
-                 class="modified_date input-sm input-s datepicker-input form-control">
-        </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio14035" name="radio14035"
-                 value="2" ng-model="$ctrl.radio_values.init_doc14035"
-                 ng-change="$ctrl.doc14035=''">
-          No
-        </label>
-      </div>
-    </div>
-  </div>
-  <div class="clearfix"></div>
+<!--  <div>-->
+<!--    <div class="questions">-->
+<!--      Has prescribed educational qualification before 04.10.2019-->
+<!--    </div>-->
+<!--    <div class="col-sm-6">-->
+<!--      <div class="radio">-->
+<!--        <label class="radio-custom">-->
+<!--          <input type="radio" class="q_radio radio14035" name="radio14035"-->
+<!--                 value="1" ng-model="$ctrl.radio_values.init_doc14035"-->
+<!--                 ng-change="$ctrl.doc14035=''">-->
+<!--          Yes-->
+<!--        </label>-->
+<!--        <label-->
+<!--            style="{{ $ctrl.radio_values.init_doc14035=='1' ? 'display:block':'display:none'}}">-->
+<!--          <input type="text" id="doc14035" data-date-format="YYYY-MM-DD"-->
+<!--                 ng-model="$ctrl.doc14035"-->
+<!--                 class="modified_date input-sm input-s datepicker-input form-control">-->
+<!--        </label>-->
+<!--      </div>-->
+<!--      <div class="radio">-->
+<!--        <label class="radio-custom">-->
+<!--          <input type="radio" class="q_radio radio14035" name="radio14035"-->
+<!--                 value="2" ng-model="$ctrl.radio_values.init_doc14035"-->
+<!--                 ng-change="$ctrl.doc14035=''">-->
+<!--          No-->
+<!--        </label>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="clearfix"></div>-->
   <div class="questions">
     Whether studied PG Degree and Ph.D Degree in the same subject or its
     equivalent as prescribed in the notification.
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the Ph.D Degree : </div>
+  <div class="col-sm-6">Name of the Ph.D Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('Phd Certificate',8)}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
@@ -365,14 +379,15 @@
   <div class="questions">
     Whether studied PG Degree and passed NET/SLET in the same subject or its
     equivalent as prescribed in the notification
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the NET/SLET Passed subject : </div>
+  <div class="col-sm-6">Name of the NET/SLET Passed subject :</div>
   <div class="col-sm-6">{{$ctrl.findData('SLET/NET Certificate',10)}} {{$ctrl.findData('SLET/NET Certificate',3)}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
@@ -415,17 +430,18 @@
   <div class="questions">
     Whether studied PG Degree, M.Ed., and Ph.D Degree in the prescribed subject
     or its equivalent as prescribed in the notification.
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the Ph.D Degree : </div>
+  <div class="col-sm-6">Name of the Ph.D Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('Phd Certificate',8)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the M.Ed. Degree : </div>
+  <div class="col-sm-6">Name of the M.Ed. Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('M.Ed Certificate',7)}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
@@ -469,20 +485,21 @@
     Whether studied PG Degree and M.Ed., with or without Ph.D Degree but
     qualified in NET/SLET in Education in the prescribed subject or its
     equivalent as prescribed in the notification
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the Ph.D Degree : </div>
+  <div class="col-sm-6">Name of the Ph.D Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('Phd Certificate',8)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the M.Ed. Degree : </div>
+  <div class="col-sm-6">Name of the M.Ed. Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('M.Ed Certificate',7)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the NET/SLET in Education: : </div>
+  <div class="col-sm-6">Name of the NET/SLET in Education: :</div>
   <div class="col-sm-6">{{$ctrl.findData('SLET/NET Certificate',10)}} {{$ctrl.findData('SLET/NET Certificate',3)}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
@@ -497,7 +514,8 @@
           style="{{ $ctrl.radio_values.init_doc14011=='1' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14011">
           <option value="">--Select--</option>
-          <option value="Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education">
+          <option
+              value="Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education">
             Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education
           </option>
         </select>
@@ -514,8 +532,10 @@
           style="{{ $ctrl.radio_values.init_doc14011=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14011">
           <option value="">--Select--</option>
-          <option value="Not Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education">
-            Not Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education
+          <option
+              value="Not Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in Education">
+            Not Studied PG Degree / Equivalent and M.Ed., with or without Ph.D Degree but qualified in NET/SLET in
+            Education
           </option>
         </select>
       </label>
@@ -527,22 +547,23 @@
     equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior
     Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the
     notification.
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the Ph.D Degree : </div>
+  <div class="col-sm-6">Name of the Ph.D Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('Phd Certificate',8)}}</div>
   <div class="clearfix"></div>
-<!--  <div class="col-sm-6">Name of the Special B.Ed in Teaching the Hearing Impairment : </div>-->
-<!--  <div class="col-sm-6">{{$ctrl.findData('Special B.Ed in Teaching the Hearing Impairment – Marksheet',7)}}</div>-->
-<!--  <div class="clearfix"></div>-->
-<!--  <div class="col-sm-6">Name of the Senior Diploma in Teaching Deaf (Hearing Impairment) : </div>-->
-<!--  <div class="col-sm-6">{{$ctrl.findData('Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet',10)}}</div>-->
-<!--  <div class="clearfix"></div>-->
+  <!--  <div class="col-sm-6">Name of the Special B.Ed in Teaching the Hearing Impairment : </div>-->
+  <!--  <div class="col-sm-6">{{$ctrl.findData('Special B.Ed in Teaching the Hearing Impairment – Marksheet',7)}}</div>-->
+  <!--  <div class="clearfix"></div>-->
+  <!--  <div class="col-sm-6">Name of the Senior Diploma in Teaching Deaf (Hearing Impairment) : </div>-->
+  <!--  <div class="col-sm-6">{{$ctrl.findData('Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet',10)}}</div>-->
+  <!--  <div class="clearfix"></div>-->
   <div class="col-sm-6">
     <div class="radio">
       <label class="radio-custom">
@@ -555,7 +576,8 @@
           style="{{ $ctrl.radio_values.init_doc14012=='1' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14012">
           <option value="">--Select--</option>
-          <option value="Studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
+          <option
+              value="Studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
             Studied PG Degree and Ph.D Degree in the same subject or its
             equivalent and Special B.Ed in Teaching the Hearing Impairment
             / Senior Diploma in Teaching Deaf (Hearing Impairment)
@@ -575,7 +597,8 @@
           style="{{ $ctrl.radio_values.init_doc14012=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14012">
           <option value="">--Select--</option>
-          <option value="Not Studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
+          <option
+              value="Not Studied PG Degree and Ph.D Degree in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
             Not Studied PG Degree and Ph.D Degree in the same subject or
             its equivalent and Special B.Ed in Teaching the Hearing
             Impairment / Senior Diploma in Teaching Deaf (Hearing
@@ -591,14 +614,15 @@
     equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior
     Diploma in Teaching Deaf (Hearing Impairment) as prescribed in the
     notification
-  </div><br/>
-  <div class="col-sm-6">Name of the Subject Applied for : </div>
+  </div>
+  <br/>
+  <div class="col-sm-6">Name of the Subject Applied for :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',29)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree : </div>
+  <div class="col-sm-6">Name of the PG Degree / Equivalent Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('PG Degree Certificate',9)}}</div>
   <div class="clearfix"></div>
-  <div class="col-sm-6">Name of the NET/SLET Passed subject : </div>
+  <div class="col-sm-6">Name of the NET/SLET Passed subject :</div>
   <div class="col-sm-6">{{$ctrl.findData('SLET/NET Certificate',10)}} {{$ctrl.findData('SLET/NET Certificate',3)}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
@@ -614,7 +638,8 @@
           style="{{ $ctrl.radio_values.init_doc14014=='1' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14014">
           <option value="">--Select--</option>
-          <option value="Studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
+          <option
+              value="Studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
             Studied PG Degree and passed NET/SLET in the same subject or
             its equivalent and Special B.Ed in Teaching the Hearing
             Impairment / Senior Diploma in Teaching Deaf (Hearing
@@ -635,7 +660,8 @@
           style="{{ $ctrl.radio_values.init_doc14014=='2' ? 'display:block':'display:none'}}">
         <select class="form-control" ng-model="$ctrl.doc14014">
           <option value="">--Select--</option>
-          <option value="Not Studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
+          <option
+              value="Not Studied PG Degree and passed NET/SLET in the same subject or its equivalent and Special B.Ed in Teaching the Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing Impairment)">
             Not Studied PG Degree and passed NET/SLET in the same
             subject or its equivalent and Special B.Ed in Teaching the
             Hearing Impairment / Senior Diploma in Teaching Deaf (Hearing
