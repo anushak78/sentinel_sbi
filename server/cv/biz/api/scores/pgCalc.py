@@ -485,6 +485,8 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
                         'To Date': '17.07.2018'
                         }
     print(toConsider)
+    dt_earliestFrom = dt_elp_fromDt
+
     if(toConsider == True):
 
         str_dt_slet_por = request.POST.get(
@@ -758,8 +760,6 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                 str_dt_net_por, '%d/%m/%Y').date()
             dt_earliestForm = dt_net_por
                    
-
-
         if(dt_elp_toDt > DT_POR_TO_CUTOFF):
             dt_top_date = DT_POR_TO_CUTOFF
         else:
