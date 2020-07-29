@@ -704,6 +704,7 @@ AND length(trim(ocd.ocd_wrkdoc_id))>0 AND ocd.ocd_created_by =  :candidate_id
             doc_status = CandidateDocumentStatus.get_document_status(
                 request.dbsession, candidate_id, list['doc_id'], (i + 1))
             for docs in doc_status:
+                print(docs['doc_id'])
                 answers = VerificationAnswers.get_verification_answers(
                     request.dbsession, candidate_id, docs['doc_id'], (i + 1))
                 docs['answers'] = answers
