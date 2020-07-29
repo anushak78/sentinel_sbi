@@ -112,13 +112,13 @@ class CandidateDocumentStatus(Base):
         self.user_id = user_id
 
     @classmethod
-    def get_document_status(cls, dbsession, candidate_id, doc_type, level):
-        doc_status = dbsession.query(cls).join(
-            DocumentTypes, cls.doc_id == DocumentTypes.doc_id).filter(
+    def get_document_status(cls, dbsession, candidate_id, doc_id, level):
+        doc_status = dbsession.query(cls).filter(
             cls.candidate_id == candidate_id).filter(
-            DocumentTypes.doc_type == doc_type).filter(
+            cls.doc_id == doc_id).filter(
             cls.level == level).all()
-
+        print('+++++++++++++doc_status++++++++++++++')
+        print(doc_status)
         docs = []
         for doc in doc_status:
             docs.append({

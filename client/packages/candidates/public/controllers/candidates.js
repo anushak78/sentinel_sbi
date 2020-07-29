@@ -2966,7 +2966,7 @@
     //     "bool_chk2": "False"
     // }
     $scope.calculateSletNetDate = function (type) {
-      if ($scope.candidateDetails['candidate_details'][0][type]) {
+      if ($scope.candidateDetails['candidate_details'][0][type] == 'true') {
         console.log($scope.finalJsonData);
         console.log(typeof $scope.finalJsonData['SLET/NET Certificate']);
         if(typeof $scope.finalJsonData['SLET/NET Certificate'] !== 'undefined'){
@@ -2981,7 +2981,7 @@
           return '01/01/0001';
         }
       }
-      return '';
+      return '01/01/0001';
     };
     $scope.checkEligibilityFromDate = function () {
       if ($scope.candidateDetails['candidate_details'][0]['oaed_is_phd_checked'] == 'true') {
@@ -3012,9 +3012,14 @@
       }
       return JSON.stringify(datesArray);
     };
+    $scope.findInObject = function () {
+
+    };
 
 
     $scope.showExperienceModal = function () {
+      console.log($scope.finalJsonData['PG Degree Certificate']);
+      console.log($scope.finalJsonData['PG Degree Certificate']['answers']);
       Http.post("/biz/scores/orchEntry", {
         // 'float_pgMarks': 53,
         // 'dt_pg_por': "15/05/1991",
@@ -3037,6 +3042,8 @@
         // 'dt_phd_por': "01/01/0001",
         // 'bool_chk1': "False",
         // 'bool_chk2': "False",
+        // $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False'
+        // $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False'
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
         'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
         'str_subjHandledStatus': 1,
@@ -3128,7 +3135,7 @@
       if (value != '') {
         console.log(value);
         var a = moment([2019, 7, 1]);
-        var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]);
+        var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]).subtract(1, 'days');
         var years = a.diff(b, 'year');
         b.add(years, 'years');
 

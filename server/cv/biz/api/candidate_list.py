@@ -592,7 +592,8 @@ def get_candidate_details(request):
         select distinct * from (SELECT
         ocd_flag,
         ocd_doc_file_name,
-        odm_name
+        odm_name,
+        doc_id
       FROM oes_user_master
         LEFT JOIN oes_candidate_doc
           ON oum_user_id = ocd_created_by
@@ -607,45 +608,55 @@ def get_candidate_details(request):
     document_list = request.dbsession.execute(document_list_query, {
         "candidate_id": candidate_id
     }).fetchall()
+#     document_list = []
     document_list = _key_column_generator(document_list)
     document_list = _fix_document_urls(request, document_list, candidate_id)
+    print('+++++++++++document_list++++++++')
+    print(document_list)
     document_list.insert(0, {
         "ocd_doc_file_name": candidate_details[0]['oci_photo_image_path'],
         "ocd_flag": "Photo",
-        "odm_name": "Photo"
+        "odm_name": "Photo",
+        "doc_id": 16
     })
     document_list.insert(1, {
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "Sign",
-        "odm_name": "Sign"
+        "odm_name": "Sign",
+        "doc_id": 17
     })
     document_list.insert(2, {
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "GI",
-        "odm_name": "General Information"
+        "odm_name": "General Information",
+        "doc_id": 10
     })
     if candidate_details[0]['ocad_bedhearimpcertno'] != '' :
         document_list.insert(len(document_list), {
             "ocd_doc_file_name": '',
             "ocd_flag": "SBC",
-            "odm_name": "Special B.Ed Certificate"
+            "odm_name": "Special B.Ed Certificate",
+            "doc_id": 141
         })
     if candidate_details[0]['ocad_seniordipcertno'] != '' :
         document_list.insert(len(document_list), {
             "ocd_doc_file_name": '',
             "ocd_flag": "SDC",
-            "odm_name": "Senior Diploma Certificate"
+            "odm_name": "Senior Diploma Certificate",
+            "doc_id": 142
         })
     document_list.insert(len(document_list), {
         "ocd_doc_file_name": candidate_details[0]['oci_sign_image_path'],
         "ocd_flag": "OQ",
-        "odm_name": "Order of Qualification"
+        "odm_name": "Order of Qualification",
+        "doc_id": 140
     })
     if candidate_details[0]['oaed_is_phd_checked'] == 'true' :
         document_list.insert(len(document_list), {
             "ocd_doc_file_name": '',
             "ocd_flag": "PM",
-            "odm_name": "Phd Marksheet"
+            "odm_name": "Phd Marksheet",
+            "doc_id": 143
         })
 
     # additional_documents = _get_additional_document(request, candidate_id)
@@ -684,18 +695,18 @@ AND length(trim(ocd.ocd_wrkdoc_id))>0 AND ocd.ocd_created_by =  :candidate_id
             "ocd_doc_file_name": d['ocd_doc_file_name'],
             "ocd_flag": d['ocd_flag'],
             "odm_name": d['ocd_flag'],
+            "doc_id": 39
         })
 
     for list in document_list:
         list['status'] = {}
         for i in range(int(level)):
             doc_status = CandidateDocumentStatus.get_document_status(
-                request.dbsession, candidate_id, list['odm_name'], (i + 1))
+                request.dbsession, candidate_id, list['doc_id'], (i + 1))
             for docs in doc_status:
                 answers = VerificationAnswers.get_verification_answers(
                     request.dbsession, candidate_id, docs['doc_id'], (i + 1))
                 docs['answers'] = answers
-
             list['status']['level' + str(i + 1)] = doc_status
     comments = UserComments.get_comment(request.dbsession, candidate_id, level)
     return {
@@ -714,6 +725,7 @@ AND length(trim(ocd.ocd_wrkdoc_id))>0 AND ocd.ocd_created_by =  :candidate_id
 def verify_documents(request):
     candidate_id = request.params['candidate_id']
     document_status = json.loads(request.params['document_status'])
+    print(document_status)
     level = request.session['level']
     user_id = request.session['user_id']
     comment = ""
@@ -732,6 +744,8 @@ def verify_documents(request):
             "data": {}
         }
     for doc in document_status:
+        print(doc['doc_id'])
+        print(doc['answers'])
         doc_id = doc['doc_id']
         status = doc['status']
         _insert_answers(
