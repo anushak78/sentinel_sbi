@@ -118,16 +118,14 @@ def add_masters(DBSession):
         os.path.join(__file__, "../../../../client/assets/question.json"))
     with open(master) as f:
         data = json.load(f, object_pairs_hook=OrderedDict)
-    print(data)
-    doc_id = 1
     for doc, doc_data in data.items():
-        doc_query = models.DocumentTypes(doc, doc_id)
+        doc_query = models.DocumentTypes(doc, doc_data[0]['doc_id'])
         DBSession.add(doc_query)
-        add_question(DBSession, doc_id, doc_data)
-        doc_id += 1
+        add_question(DBSession, doc_data[0]['doc_id'], doc_data)
 
 
 def add_question(DBSession, doc_id, data):
+    print(data)
     for qn_id, question in enumerate(data):
         quest_query = models.QuestionTypes(question['question'], qn_id + 1,
                                            doc_id)

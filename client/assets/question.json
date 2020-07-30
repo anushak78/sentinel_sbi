@@ -1717,9 +1717,9 @@
       "question": "Name of the Subject in the PG ?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
-      "option3": "Not Clear",
       "approved": "1",
       "doc_id": 25,
       "q_id": 9
@@ -1922,7 +1922,8 @@
       "question": "Name of the subject?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 27,
@@ -1943,7 +1944,8 @@
       "question": "Name of Institution studied",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 27,
@@ -2144,8 +2146,9 @@
     {
       "question": "Ph.D Certificate Number",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Matching",
+        "option2": "Not Matching",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 29,
@@ -2880,9 +2883,9 @@
       "question": "Name of the Subject in the UG?",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
-      "option3": "Not Clear",
       "approved": "1",
       "doc_id": 37,
       "q_id": 9
@@ -2917,7 +2920,7 @@
       },
       "approved": "1",
       "doc_id": 37,
-      "q_id": 37
+      "q_id": 25
     },
     {
       "question": "Whether the subject in UG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same",
@@ -3002,7 +3005,8 @@
       "question": "Date of Publications of Results in UG Mark Sheet",
       "options": {
         "option1": "Matched",
-        "option2": "Not Matched"
+        "option2": "Not Matched",
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 38,

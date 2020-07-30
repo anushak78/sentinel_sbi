@@ -593,7 +593,7 @@ def get_candidate_details(request):
         ocd_flag,
         ocd_doc_file_name,
         odm_name,
-        doc_id
+        cdtm.doc_id
       FROM oes_user_master
         LEFT JOIN oes_candidate_doc
           ON oum_user_id = ocd_created_by
@@ -700,10 +700,21 @@ AND length(trim(ocd.ocd_wrkdoc_id))>0 AND ocd.ocd_created_by =  :candidate_id
 
     for list in document_list:
         list['status'] = {}
+#         doc_id = ''
         for i in range(int(level)):
+            print(list['odm_name'], list['doc_id'])
+#             doc_id_query = text("""select doc_id from cv_document_types_master where doc_type==  :doc_name""")
+#             doc_id = request.dbsession.execute(doc_id_query, {
+#                     "doc_type": list['odm_name']
+#                 }).fetchall()
+#             print('$$$$$$New Doc ID $$$$$$$$$')
+#             print(doc_id)
             doc_status = CandidateDocumentStatus.get_document_status(
                 request.dbsession, candidate_id, list['doc_id'], (i + 1))
+            print('###########doc_status########')
+            print(doc_status)
             for docs in doc_status:
+                print('@@@@@@@@@@@@@@@')
                 print(docs['doc_id'])
                 answers = VerificationAnswers.get_verification_answers(
                     request.dbsession, candidate_id, docs['doc_id'], (i + 1))

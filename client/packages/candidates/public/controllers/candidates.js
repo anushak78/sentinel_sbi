@@ -1570,7 +1570,7 @@
       '36c4': 'Latest Conduct Certificate relevant reason',
       '36c3': 'Whether submitted last Studied Conduct Certificate',
       '36c5': 'Whether submitted Latest Conduct Certificate',
-      '37c2': 'Name in the M.Phill Certificate',
+      '37c2': 'Document relevant to the claim of UG Degree',
       '37c3': 'Certificate Number',
       '37c4': 'Name in the certificate',
       '37c5': 'UG Marksheet relevant reason',

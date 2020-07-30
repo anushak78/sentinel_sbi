@@ -117,8 +117,6 @@ class CandidateDocumentStatus(Base):
             cls.candidate_id == candidate_id).filter(
             cls.doc_id == doc_id).filter(
             cls.level == level).all()
-        print('+++++++++++++doc_status++++++++++++++')
-        print(doc_status)
         docs = []
         for doc in doc_status:
             docs.append({
