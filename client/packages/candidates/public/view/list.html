@@ -1020,7 +1020,7 @@
                   {{key}}
                 </div>
                 <div class="col-lg-6">
-                  : {{value}}
+                  : {{value=='false'?'No':(value=='true'?'Yes':value)}}
                 </div>
               </div>
               <div ng-if="$index%2 != 0" style="clear: both"></div>
