@@ -3081,85 +3081,15 @@
       "q_id": 1
     },
     {
-      "question": "Is the document/documents relevant to the claim 1. of Teaching Experience Certificate?",
+      "question": "Whether the subject handled is relevant to the subject applied for as per the experience certificate?",
       "options": {
-        "option1": "Relevant",
-        "option2": "Not Relevant"
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Partially Correct"
       },
       "approved": "1",
       "doc_id": 39,
       "q_id": 2
-    },
-    {
-      "question": "No. of Claims made by the applicant as per the application form and uploaded details ?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 3
-    },
-    {
-      "question": "No. of Claims of period of Experience?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 4
-    },
-    {
-      "question": "No. of Experience Certificate uploaded by the candidate along with the application",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 5
-    },
-    {
-      "question": "Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate submitted",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 6
-    },
-    {
-      "question": "Consolidated Teaching Experience",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 7
-    },
-    {
-      "question": "NET Teaching Experience period to be considered",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 8
-    },
-    {
-      "question": "Whether the Experience Certificate issued by Competent Authority",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 10
     },
     {
       "question": "Does the Experience certificate have any experience claim period in Polytechnic Institutions",
@@ -3170,7 +3100,7 @@
       },
       "approved": "1",
       "doc_id": 39,
-      "q_id": 11
+      "q_id": 3
     },
     {
       "question": "Does the Experience certificate have any PTA Experience",
@@ -3181,7 +3111,7 @@
       },
       "approved": "1",
       "doc_id": 39,
-      "q_id": 12
+      "q_id": 4
     },
     {
       "question": "Does the Experience certificate have any  Experience in schools / institutions other than Arts and Science, Engineering, Medical, Agriculture, Law Colleges / Universities",
@@ -3192,61 +3122,27 @@
       },
       "approved": "1",
       "doc_id": 39,
-      "q_id": 13
+      "q_id": 5
     },
     {
-      "question": "Is the Date of issue of experience certificate between 04-10-2019 to 30.11.2019",
+      "question": "Whether the no. of Claims made by the applicant as per the application form and no. of experience documents uploaded matches?",
       "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 39,
-      "q_id": 14
+      "q_id": 6
     },
     {
-      "question": "Is the Date of countersigning authority between 04-10-2019 to 15.11.2019",
+      "question": "Whether no. of experience certificate uploaded by the candidate along with the application?",
       "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option1": "Matched",
+        "option2": "Not Matched"
       },
       "approved": "1",
       "doc_id": 39,
-      "q_id": 15
-    },
-    {
-      "question": "Is there any Experience period before completion of  prescribed qualification",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 16
-    },
-    {
-      "question": "Is the Experiencee Certificate Without the signature of countersigning authority as per Notification.",
-      "options": {
-        "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 17
-    },
-    {
-      "question": "Is all the document is correct ?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 9
+      "q_id": 7
     },
     {
       "question": "Period of the Subject handled in the Experience Certificate 1",
@@ -3562,6 +3458,16 @@
       "approved": "1",
       "doc_id": 39,
       "q_id": 52
+    },
+    {
+      "question": "Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 87
     },
     {
       "question": "Whether claim No. 2 is relevant to the period mentioned and subject handled in the experience certificate submitted",
@@ -3904,25 +3810,354 @@
       "q_id": 86
     },
     {
-      "question": "The experience certificate attached or claimed is relevant subject",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 87
-    },
-    {
-      "question": "The experience certificate attached or claimed is in appropriate Institution",
+      "question": "Whether claim 1 mentioned as per application is relevant to the period mentioned in the experience certificate?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 39,
       "q_id": 88
+    },
+    {
+      "question": "Whether claim 2 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 89
+    },
+    {
+      "question": "Whether claim 3 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 90
+    },
+    {
+      "question": "Whether claim 4 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 91
+    },
+    {
+      "question": "Whether claim 5 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 92
+    },
+    {
+      "question": "Whether claim 6 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 93
+    },
+    {
+      "question": "Whether claim 7 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 94
+    },
+    {
+      "question": "Whether claim 8 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 95
+    },
+    {
+      "question": "Whether claim 9 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 96
+    },
+    {
+      "question": "Whether claim 10 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 97
+    },
+    {
+      "question": "Whether claim 11 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 98
+    },
+    {
+      "question": "Whether claim 12 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 99
+    },
+    {
+      "question": "Whether claim 13 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 100
+    },
+    {
+      "question": "Whether claim 14 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 101
+    },
+    {
+      "question": "Whether claim 15 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 102
+    },
+    {
+      "question": "Whether claim 16 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 103
+    },
+    {
+      "question": "Whether claim 17 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 104
+    },
+    {
+      "question": "Whether claim 18 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 105
+    },
+    {
+      "question": "Whether claim 19 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 106
+    },
+    {
+      "question": "Whether claim 20 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 107
+    },
+    {
+      "question": "Whether claim 21 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 108
+    },
+    {
+      "question": "Whether claim 22 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 109
+    },
+    {
+      "question": "Whether claim 23 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 110
+    },
+    {
+      "question": "Whether claim 24 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 111
+    },
+    {
+      "question": "Whether claim 25 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 112
+    },
+    {
+      "question": "Whether claim 26 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 113
+    },
+    {
+      "question": "Whether claim 27 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 114
+    },
+    {
+      "question": "Whether claim 28 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 115
+    },
+    {
+      "question": "Whether claim 29 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 116
+    },
+    {
+      "question": "Whether claim 30 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 117
+    },
+    {
+      "question": "Whether claim 31 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 118
+    },
+    {
+      "question": "Whether claim 32 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 119
+    },
+    {
+      "question": "Whether claim 33 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 120
+    },
+    {
+      "question": "Whether claim 34 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 121
+    },
+    {
+      "question": "Whether claim 35 mentioned as per application is relevant to the period mentioned in the experience certificate?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 122
     }
   ],
   "Work Experience 2": [

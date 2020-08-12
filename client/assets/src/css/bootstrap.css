@@ -7359,3 +7359,66 @@ td.visible-print {
     height: 100%;
     z-index: 99;
 }
+
+.panel-heading {
+    position: relative;
+}
+.panel-heading[data-toggle="collapse"]:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e072"; /* "play" icon */
+    position: absolute;
+    color: #b0c5d8;
+    font-size: 18px;
+    line-height: 22px;
+    right: 20px;
+    top: calc(50% - 10px);
+
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform:    rotate(-90deg);
+    -ms-transform:     rotate(-90deg);
+    -o-transform:      rotate(-90deg);
+    transform:         rotate(-90deg);
+}
+.panel-heading[data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+    transform:         rotate(90deg);
+}
+.activeClass{
+    background: #8ec165 !important;
+}
+
+/* plus glyph for showing collapsible panels */
+.panel-heading .accordion-plus-toggle:before {
+  font-family: FontAwesome;
+  content: "\f068";
+  float: right;
+  color: silver;
+}
+
+.panel-heading .accordion-plus-toggle.collapsed:before {
+  content: "\f067";
+  color: silver;
+}
+
+/* arrow glyph for showing collapsible panels */
+.panel-heading .accordion-arrow-toggle:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  float: right;
+  color: silver;
+}
+
+.panel-heading .accordion-arrow-toggle.collapsed:before {
+  content: "\f054";
+  color: silver;
+}
+
+/* sets the link to the width of the entire panel title */
+.panel-title > a {
+  display: block;
+}

@@ -324,17 +324,40 @@
       vm.doc3986 = '';
       vm.doc3987 = '';
       vm.doc3988 = '';
-      vm.doc397 = '';
-      vm.doc398 = '';
-      vm.doc399 = '';
-      vm.doc3910 = '';
-      vm.doc3911 = '';
-      vm.doc3912 = '';
-      vm.doc3913 = '';
-      vm.doc3914 = '';
-      vm.doc3915 = '';
-      vm.doc3916 = '';
-      vm.doc3917 = '';
+      vm.doc3989 = '';
+      vm.doc3990 = '';
+      vm.doc3991 = '';
+      vm.doc3992 = '';
+      vm.doc3993 = '';
+      vm.doc3994 = '';
+      vm.doc3995 = '';
+      vm.doc3996 = '';
+      vm.doc3997 = '';
+      vm.doc3998 = '';
+      vm.doc3999 = '';
+      vm.doc39100 = '';
+      vm.doc39101 = '';
+      vm.doc39102 = '';
+      vm.doc39103 = '';
+      vm.doc39104 = '';
+      vm.doc39105 = '';
+      vm.doc39106 = '';
+      vm.doc39107 = '';
+      vm.doc39108 = '';
+      vm.doc39109 = '';
+      vm.doc39110 = '';
+      vm.doc39111 = '';
+      vm.doc39112 = '';
+      vm.doc39113 = '';
+      vm.doc39114 = '';
+      vm.doc39115 = '';
+      vm.doc39116 = '';
+      vm.doc39117 = '';
+      vm.doc39118 = '';
+      vm.doc39119 = '';
+      vm.doc39120 = '';
+      vm.doc39121 = '';
+      vm.doc39122 = '';
       vm.doc3918 = '';
       vm.doc3919 = '';
       vm.doc3920 = '';
@@ -972,20 +995,43 @@
       vm.radio_values.init_doc3983 = "";
       vm.radio_values.init_doc3984 = "";
       vm.radio_values.init_doc3985 = "";
-      vm.radio_values.init_doc3986 = "";
-      vm.radio_values.init_doc3987 = "";
-      vm.radio_values.init_doc3988 = "";
-      vm.radio_values.init_doc397 = "";
-      vm.radio_values.init_doc398 = "";
-      vm.radio_values.init_doc399 = "";
-      vm.radio_values.init_doc3910 = "";
-      vm.radio_values.init_doc3911 = "";
-      vm.radio_values.init_doc3912 = "";
-      vm.radio_values.init_doc3913 = "";
-      vm.radio_values.init_doc3914 = "";
-      vm.radio_values.init_doc3915 = "";
-      vm.radio_values.init_doc3916 = "";
-      vm.radio_values.init_doc3917 = "";
+      vm.radio_values.init_doc3986  = "";
+      vm.radio_values.init_doc3987  = "";
+      vm.radio_values.init_doc3988  = "";
+      vm.radio_values.init_doc3989  = "";
+      vm.radio_values.init_doc3990  = "";
+      vm.radio_values.init_doc3991  = "";
+      vm.radio_values.init_doc3992  = "";
+      vm.radio_values.init_doc3993  = "";
+      vm.radio_values.init_doc3994  = "";
+      vm.radio_values.init_doc3995  = "";
+      vm.radio_values.init_doc3996  = "";
+      vm.radio_values.init_doc3997  = "";
+      vm.radio_values.init_doc3998  = "";
+      vm.radio_values.init_doc3999  = "";
+      vm.radio_values.init_doc39100 = "";
+      vm.radio_values.init_doc39101 = "";
+      vm.radio_values.init_doc39102 = "";
+      vm.radio_values.init_doc39103 = "";
+      vm.radio_values.init_doc39104 = "";
+      vm.radio_values.init_doc39105 = "";
+      vm.radio_values.init_doc39106 = "";
+      vm.radio_values.init_doc39107 = "";
+      vm.radio_values.init_doc39108 = "";
+      vm.radio_values.init_doc39109 = "";
+      vm.radio_values.init_doc39110 = "";
+      vm.radio_values.init_doc39111 = "";
+      vm.radio_values.init_doc39112 = "";
+      vm.radio_values.init_doc39113 = "";
+      vm.radio_values.init_doc39114 = "";
+      vm.radio_values.init_doc39115 = "";
+      vm.radio_values.init_doc39116 = "";
+      vm.radio_values.init_doc39117 = "";
+      vm.radio_values.init_doc39118 = "";
+      vm.radio_values.init_doc39119 = "";
+      vm.radio_values.init_doc39120 = "";
+      vm.radio_values.init_doc39121 = "";
+      vm.radio_values.init_doc39122 = "";
       vm.radio_values.init_doc3918 = "";
       vm.radio_values.init_doc3919 = "";
       vm.radio_values.init_doc3920 = "";
@@ -1589,11 +1635,11 @@
       '38c18': 'New Date of publications',
       '38c19': 'Period of study',
       '38c20': 'Mode of study',
-      '39c2': 'Relevant document reason',
-      '39c3': 'No. of Claims made by the applicant',
-      '39c4': 'No. of Claims of period of Experience',
+      '39c2': 'Serial No of document mismatched',
+      '39c3': 'Claim period in Polytechnic Institutions',
+      '39c4': 'Certificate have any PTA Experience',
       '39c5': 'No. of experience certificate',
-      '39c6': 'Whether claim No. 1 is relevant to the period mentioned',
+      '39c6': 'Claims and experience documents uploaded matches',
       '39c53': 'Whether claim No. 2 is relevant to the period mentioned',
       '39c54': 'Whether claim No. 3 is relevant to the period mentioned',
       '39c55': 'Whether claim No. 4 is relevant to the period mentioned',
@@ -1628,18 +1674,42 @@
       '39c84': 'Whether claim No. 33 is relevant to the period mentioned',
       '39c85': 'Whether claim No. 34 is relevant to the period mentioned',
       '39c86': 'Whether claim No. 35 is relevant to the period mentioned',
-      '39c88': 'Certificate is in appropriate Institution',
-      '39c7': 'Teaching Experience From To',
-      '39c8': 'NET Teaching Experience period',
-      '39c9': 'Serial No of document mismatched',
-      '39c10': 'Competent Authority',
-      '39c11': 'Claim period in Polytechnic Institutions',
-      '39c12': 'Certificate have any PTA Experience',
-      '39c13': 'Experience certificate have any  Experience in schools',
-      '39c14': 'Experience certificate between 04-10-2019 to 15.11.2019',
-      '39c15': 'Countersigning authority between 04-10-2019 to 15.11.2019',
-      '39c16': 'Period before completion of  prescribed qualification',
-      '39c17': 'Certificate Without the signature of countersigning authority as per Notification',
+      '39c87': 'Whether claim No. 1 is relevant to the period mentioned',
+      '39c88': 'claim 1 is relevant to the period mentioned in the experience certificate',
+      '39c89': 'claim 2 is relevant to the period mentioned in the experience certificate',
+      '39c90': 'claim 3 is relevant to the period mentioned in the experience certificate',
+      '39c91': 'claim 4 is relevant to the period mentioned in the experience certificate',
+      '39c92': 'claim 5 is relevant to the period mentioned in the experience certificate',
+      '39c93': 'claim 6 is relevant to the period mentioned in the experience certificate',
+      '39c94': 'claim 7 is relevant to the period mentioned in the experience certificate',
+      '39c95': 'claim 8 is relevant to the period mentioned in the experience certificate',
+      '39c96': 'claim 9 is relevant to the period mentioned in the experience certificate',
+      '39c97': 'claim 10 is relevant to the period mentioned in the experience certificate',
+      '39c98': 'claim 11 is relevant to the period mentioned in the experience certificate',
+      '39c99': 'claim 12 is relevant to the period mentioned in the experience certificate',
+      '39c100': 'claim 13 is relevant to the period mentioned in the experience certificate',
+      '39c101': 'claim 14 is relevant to the period mentioned in the experience certificate',
+      '39c102': 'claim 15 is relevant to the period mentioned in the experience certificate',
+      '39c103': 'claim 16 is relevant to the period mentioned in the experience certificate',
+      '39c104': 'claim 17 is relevant to the period mentioned in the experience certificate',
+      '39c105': 'claim 18 is relevant to the period mentioned in the experience certificate',
+      '39c106': 'claim 19 is relevant to the period mentioned in the experience certificate',
+      '39c107': 'claim 20 is relevant to the period mentioned in the experience certificate',
+      '39c108': 'claim 21 is relevant to the period mentioned in the experience certificate',
+      '39c109': 'claim 22 is relevant to the period mentioned in the experience certificate',
+      '39c110': 'claim 23 is relevant to the period mentioned in the experience certificate',
+      '39c111': 'claim 24 is relevant to the period mentioned in the experience certificate',
+      '39c112': 'claim 25 is relevant to the period mentioned in the experience certificate',
+      '39c113': 'claim 26 is relevant to the period mentioned in the experience certificate',
+      '39c114': 'claim 27 is relevant to the period mentioned in the experience certificate',
+      '39c115': 'claim 28 is relevant to the period mentioned in the experience certificate',
+      '39c116': 'claim 29 is relevant to the period mentioned in the experience certificate',
+      '39c117': 'claim 30 is relevant to the period mentioned in the experience certificate',
+      '39c118': 'claim 31 is relevant to the period mentioned in the experience certificate',
+      '39c119': 'claim 32 is relevant to the period mentioned in the experience certificate',
+      '39c120': 'claim 33 is relevant to the period mentioned in the experience certificate',
+      '39c121': 'claim 34 is relevant to the period mentioned in the experience certificate',
+      '39c122': 'claim 35 is relevant to the period mentioned in the experience certificate',
       '39c18': 'Period of the Subject handled in the Experience Certificate 1',
       '39c19': 'Period of the Subject handled in the Experience Certificate 2',
       '39c20': 'Period of the Subject handled in the Experience Certificate 3',
@@ -2549,6 +2619,8 @@
           console.log(i);
           console.log($scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']);
           console.log(radioName);
+          console.log($('input[name=' + radioName + ']').is(":visible"));
+          console.log($('input[name=' + radioName + ']:checked').val());
           if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
             alert('Please give all the answers');
             return false;
@@ -2641,7 +2713,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3914, .doc3915").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -2657,7 +2729,7 @@
         }).on('changeDate', function (value) {
           // vm.doc23 = moment(value.date).format("MM-YYYY")
         });
-        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc397, .doc398').datepicker({
+        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc3988, .doc3989, .doc3990, .doc3991, .doc3992, .doc3993, .doc3994, .doc3995, .doc3996, .doc3997, .doc3998, .doc3999, .doc39100, .doc39101, .doc39102, .doc39103, .doc39104, .doc39105, .doc39106, .doc39107, .doc39108, .doc39109, .doc39110, .doc39111, .doc39112, .doc39113, .doc39114, .doc39115, .doc39116, .doc39117, .doc39118, .doc39119, .doc39120, .doc39121, .doc39122').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2893,11 +2965,11 @@
     };
 
     $scope.displayShowTable = function () {
-      if (vm.radio_values.init_doc399 == 1) {
+      if (vm.radio_values.init_doc392 == 1) {
         return true;
-      } else if (vm.radio_values.init_doc399 == 2) {
+      } else if (vm.radio_values.init_doc392 == 2) {
         return false;
-      } else if (vm.radio_values.init_doc399 == 3 && $('#select2-dd').val() !== null) {
+      } else if (vm.radio_values.init_doc392 == 3 && $('#select2-dd').val() !== null) {
         return true;
       }
     };
@@ -3087,12 +3159,19 @@
       $scope.showExperienceModal();
     });
 
+    $scope.countPartialCertificate = function() {
+      if($('#select2-dd').val() !== null){
+       return $('#select2-dd').val().length;
+      }
+      return 0;
+    };
+
     $scope.checkPartialCertificate = function (number) {
       if ($('#select2-dd').val() == [] || $('#select2-dd').val() == null) {
         return false;
       }
       setTimeout(function () {
-        $('.doc3911,.doc3912,.doc3913,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
+        $('.doc393,.doc394,.doc395,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
           format: "dd/mm/yyyy",
           startView: 1,
           multidate: true,
