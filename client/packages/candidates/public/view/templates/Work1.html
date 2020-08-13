@@ -3261,6 +3261,1561 @@
           </div>
         </div>
       </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
+             data-parent="#accordion4" href="#collapseFour">
+            <h6 class="panel-title">
+              Application is relevant to the period mentioned in the experience certificate
+              (Total Qn : {{candidateDetails['work_experience'].length}})
+            </h6>
+          </a>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
+          <div class="panel-body text-sm" style="color: black">
+            <div ng-if="candidateDetails['work_experience'].length > 0">
+              <div class="questions">
+                Whether the teaching experience certificate 1 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39123" name="radio39123"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39123"
+                           ng-change="$ctrl.doc39123=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39123=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39123">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39123" name="radio39123"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39123"
+                           ng-change="$ctrl.doc39123=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39123" name="radio39123"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39123"
+                           ng-change="$ctrl.doc39123=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 1">
+              <div class="questions">
+                Whether the teaching experience certificate 2 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39124" name="radio39124"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39124"
+                           ng-change="$ctrl.doc39124=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39124=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39124">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39124" name="radio39124"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39124"
+                           ng-change="$ctrl.doc39124=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39124" name="radio39124"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39124"
+                           ng-change="$ctrl.doc39124=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 2">
+              <div class="questions">
+                Whether the teaching experience certificate 3 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39125" name="radio39125"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39125"
+                           ng-change="$ctrl.doc39125=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39125=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39125">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39125" name="radio39125"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39125"
+                           ng-change="$ctrl.doc39125=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39125" name="radio39125"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39125"
+                           ng-change="$ctrl.doc39125=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 3">
+              <div class="questions">
+                Whether the teaching experience certificate 4 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39126" name="radio39126"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39126"
+                           ng-change="$ctrl.doc39126=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39126=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39126">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39126" name="radio39126"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39126"
+                           ng-change="$ctrl.doc39126=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39126" name="radio39126"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39126"
+                           ng-change="$ctrl.doc39126=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 4">
+              <div class="questions">
+                Whether the teaching experience certificate 5 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39127" name="radio39127"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39127"
+                           ng-change="$ctrl.doc39127=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39127=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39127">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39127" name="radio39127"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39127"
+                           ng-change="$ctrl.doc39127=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39127" name="radio39127"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39127"
+                           ng-change="$ctrl.doc39127=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 5">
+              <div class="questions">
+                Whether the teaching experience certificate 6 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39128" name="radio39128"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39128"
+                           ng-change="$ctrl.doc39128=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39128=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39128">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39128" name="radio39128"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39128"
+                           ng-change="$ctrl.doc39128=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39128" name="radio39128"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39128"
+                           ng-change="$ctrl.doc39128=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 6">
+              <div class="questions">
+                Whether the teaching experience certificate 7 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39129" name="radio39129"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39129"
+                           ng-change="$ctrl.doc39129=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39129=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39129">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39129" name="radio39129"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39129"
+                           ng-change="$ctrl.doc39129=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39129" name="radio39129"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39129"
+                           ng-change="$ctrl.doc39129=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 7">
+              <div class="questions">
+                Whether the teaching experience certificate 8 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39130" name="radio39130"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39130"
+                           ng-change="$ctrl.doc39130=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39130=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39130">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39130" name="radio39130"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39130"
+                           ng-change="$ctrl.doc39130=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39130" name="radio39130"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39130"
+                           ng-change="$ctrl.doc39130=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 8">
+              <div class="questions">
+                Whether the teaching experience certificate 9 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39131" name="radio39131"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39131"
+                           ng-change="$ctrl.doc39131=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39131=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39131">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39131" name="radio39131"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39131"
+                           ng-change="$ctrl.doc39131=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39131" name="radio39131"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39131"
+                           ng-change="$ctrl.doc39131=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 9">
+              <div class="questions">
+                Whether the teaching experience certificate 10 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39132" name="radio39132"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39132"
+                           ng-change="$ctrl.doc39132=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39132=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39132">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39132" name="radio39132"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39132"
+                           ng-change="$ctrl.doc39132=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39132" name="radio39132"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39132"
+                           ng-change="$ctrl.doc39132=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 10">
+              <div class="questions">
+                Whether the teaching experience certificate 11 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39133" name="radio39133"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39133"
+                           ng-change="$ctrl.doc39133=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39133=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39133">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39133" name="radio39133"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39133"
+                           ng-change="$ctrl.doc39133=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39133" name="radio39133"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39133"
+                           ng-change="$ctrl.doc39133=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 11">
+              <div class="questions">
+                Whether the teaching experience certificate 12 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39134" name="radio39134"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39134"
+                           ng-change="$ctrl.doc39134=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39134=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39134">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39134" name="radio39134"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39134"
+                           ng-change="$ctrl.doc39134=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39134" name="radio39134"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39134"
+                           ng-change="$ctrl.doc39134=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 12">
+              <div class="questions">
+                Whether the teaching experience certificate 13 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39135" name="radio39135"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39135"
+                           ng-change="$ctrl.doc39135=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39135=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39135">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39135" name="radio39135"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39135"
+                           ng-change="$ctrl.doc39135=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39135" name="radio39135"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39135"
+                           ng-change="$ctrl.doc39135=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 13">
+              <div class="questions">
+                Whether the teaching experience certificate 14 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39136" name="radio39136"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39136"
+                           ng-change="$ctrl.doc39136=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39136=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39136">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39136" name="radio39136"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39136"
+                           ng-change="$ctrl.doc39136=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39136" name="radio39136"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39136"
+                           ng-change="$ctrl.doc39136=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 14">
+              <div class="questions">
+                Whether the teaching experience certificate 15 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39137" name="radio39137"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39137"
+                           ng-change="$ctrl.doc39137=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39137=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39137">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39137" name="radio39137"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39137"
+                           ng-change="$ctrl.doc39137=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39137" name="radio39137"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39137"
+                           ng-change="$ctrl.doc39137=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 15">
+              <div class="questions">
+                Whether the teaching experience certificate 16 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39138" name="radio39138"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39138"
+                           ng-change="$ctrl.doc39138=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39138=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39138">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39138" name="radio39138"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39138"
+                           ng-change="$ctrl.doc39138=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39138" name="radio39138"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39138"
+                           ng-change="$ctrl.doc39138=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 16">
+              <div class="questions">
+                Whether the teaching experience certificate 17 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39139" name="radio39139"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39139"
+                           ng-change="$ctrl.doc39139=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39139=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39139">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39139" name="radio39139"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39139"
+                           ng-change="$ctrl.doc39139=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39139" name="radio39139"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39139"
+                           ng-change="$ctrl.doc39139=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 17">
+              <div class="questions">
+                Whether the teaching experience certificate 18 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39140" name="radio39140"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39140"
+                           ng-change="$ctrl.doc39140=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39140=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39140">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39140" name="radio39140"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39140"
+                           ng-change="$ctrl.doc39140=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39140" name="radio39140"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39140"
+                           ng-change="$ctrl.doc39140=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 18">
+              <div class="questions">
+                Whether the teaching experience certificate 19 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39141" name="radio39141"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39141"
+                           ng-change="$ctrl.doc39141=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39141=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39141">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39141" name="radio39141"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39141"
+                           ng-change="$ctrl.doc39141=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39141" name="radio39141"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39141"
+                           ng-change="$ctrl.doc39141=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 19">
+              <div class="questions">
+                Whether the teaching experience certificate 20 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39142" name="radio39142"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39142"
+                           ng-change="$ctrl.doc39142=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39142=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39142">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39142" name="radio39142"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39142"
+                           ng-change="$ctrl.doc39142=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39142" name="radio39142"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39142"
+                           ng-change="$ctrl.doc39142=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 20">
+              <div class="questions">
+                Whether the teaching experience certificate 21 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39143" name="radio39143"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39143"
+                           ng-change="$ctrl.doc39143=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39143=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39143">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39143" name="radio39143"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39143"
+                           ng-change="$ctrl.doc39143=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39143" name="radio39143"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39143"
+                           ng-change="$ctrl.doc39143=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 21">
+              <div class="questions">
+                Whether the teaching experience certificate 22 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39144" name="radio39144"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39144"
+                           ng-change="$ctrl.doc39144=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39144=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39144">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39144" name="radio39144"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39144"
+                           ng-change="$ctrl.doc39144=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39144" name="radio39144"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39144"
+                           ng-change="$ctrl.doc39144=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 22">
+              <div class="questions">
+                Whether the teaching experience certificate 23 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39145" name="radio39145"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39145"
+                           ng-change="$ctrl.doc39145=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39145=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39145">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39145" name="radio39145"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39145"
+                           ng-change="$ctrl.doc39145=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39145" name="radio39145"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39145"
+                           ng-change="$ctrl.doc39145=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 23">
+              <div class="questions">
+                Whether the teaching experience certificate 24 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39146" name="radio39146"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39146"
+                           ng-change="$ctrl.doc39146=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39146=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39146">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39146" name="radio39146"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39146"
+                           ng-change="$ctrl.doc39146=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39146" name="radio39146"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39146"
+                           ng-change="$ctrl.doc39146=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 24">
+              <div class="questions">
+                Whether the teaching experience certificate 25 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39147" name="radio39147"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39147"
+                           ng-change="$ctrl.doc39147=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39147=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39147">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39147" name="radio39147"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39147"
+                           ng-change="$ctrl.doc39147=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39147" name="radio39147"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39147"
+                           ng-change="$ctrl.doc39147=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 25">
+              <div class="questions">
+                Whether the teaching experience certificate 26 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39148" name="radio39148"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39148"
+                           ng-change="$ctrl.doc39148=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39148=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39148">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39148" name="radio39148"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39148"
+                           ng-change="$ctrl.doc39148=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39148" name="radio39148"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39148"
+                           ng-change="$ctrl.doc39148=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 26">
+              <div class="questions">
+                Whether the teaching experience certificate 27 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39149" name="radio39149"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39149"
+                           ng-change="$ctrl.doc39149=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39149=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39149">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39149" name="radio39149"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39149"
+                           ng-change="$ctrl.doc39149=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39149" name="radio39149"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39149"
+                           ng-change="$ctrl.doc39149=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 27">
+              <div class="questions">
+                Whether the teaching experience certificate 28 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39150" name="radio39150"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39150"
+                           ng-change="$ctrl.doc39150=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39150=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39150">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39150" name="radio39150"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39150"
+                           ng-change="$ctrl.doc39150=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39150" name="radio39150"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39150"
+                           ng-change="$ctrl.doc39150=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 28">
+              <div class="questions">
+                Whether the teaching experience certificate 29 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39151" name="radio39151"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39151"
+                           ng-change="$ctrl.doc39151=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39151=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39151">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39151" name="radio39151"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39151"
+                           ng-change="$ctrl.doc39151=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39151" name="radio39151"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39151"
+                           ng-change="$ctrl.doc39151=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 29">
+              <div class="questions">
+                Whether the teaching experience certificate 30 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39152" name="radio39152"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39152"
+                           ng-change="$ctrl.doc39152=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39152=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39152">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39152" name="radio39152"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39152"
+                           ng-change="$ctrl.doc39152=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39152" name="radio39152"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39152"
+                           ng-change="$ctrl.doc39152=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 30">
+              <div class="questions">
+                Whether the teaching experience certificate 31 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39153" name="radio39153"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39153"
+                           ng-change="$ctrl.doc39153=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39153=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39153">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39153" name="radio39153"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39153"
+                           ng-change="$ctrl.doc39153=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39153" name="radio39153"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39153"
+                           ng-change="$ctrl.doc39153=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 31">
+              <div class="questions">
+                Whether the teaching experience certificate 32 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39154" name="radio39154"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39154"
+                           ng-change="$ctrl.doc39154=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39154=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39154">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39154" name="radio39154"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39154"
+                           ng-change="$ctrl.doc39154=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39154" name="radio39154"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39154"
+                           ng-change="$ctrl.doc39154=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 32">
+              <div class="questions">
+                Whether the teaching experience certificate 33 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39155" name="radio39155"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39155"
+                           ng-change="$ctrl.doc39155=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39155=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39155">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39155" name="radio39155"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39155"
+                           ng-change="$ctrl.doc39155=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39155" name="radio39155"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39155"
+                           ng-change="$ctrl.doc39155=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 33">
+              <div class="questions">
+                Whether the teaching experience certificate 34 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39156" name="radio39156"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39156"
+                           ng-change="$ctrl.doc39156=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39156=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39156">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39156" name="radio39156"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39156"
+                           ng-change="$ctrl.doc39156=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39156" name="radio39156"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39156"
+                           ng-change="$ctrl.doc39156=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-if="candidateDetails['work_experience'].length > 34">
+              <div class="questions">
+                Whether the teaching experience certificate 35 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?
+              </div>
+              <div class="col-sm-12">
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39157" name="radio39157"
+                           value="1" ng-model="$ctrl.radio_values.init_doc39157"
+                           ng-change="$ctrl.doc39157=''">
+                    Yes
+                  </label>
+                  <label
+                      style="{{ $ctrl.radio_values.init_doc39157=='1' ? 'display:block':'display:none'}}">
+                    <select class="form-control" ng-model="$ctrl.doc39157">
+                      <option value="">--Select--</option>
+                      <option value="Counter signed by the competent authority of Indian Embassy">
+                        Counter signed by the competent authority of Indian Embassy
+                      </option>
+                      <option value="Not counter signed by the competent authority of Indian Embassy">
+                        Not counter signed by the competent authority of Indian Embassy
+                      </option>
+                    </select>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39157" name="radio39157"
+                           value="2" ng-model="$ctrl.radio_values.init_doc39157"
+                           ng-change="$ctrl.doc39157=''">
+                    No
+                  </label>
+                </div>
+                <div class="radio">
+                  <label class="radio-custom">
+                    <input type="radio" class="q_radio radio39157" name="radio39157"
+                           value="3" ng-model="$ctrl.radio_values.init_doc39157"
+                           ng-change="$ctrl.doc39157=''">
+                    Not Applicable
+                  </label>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div> <!-- / .accordion --> <!-- .nav-justified -->
   </div>
   <div class="clearfix"></div>

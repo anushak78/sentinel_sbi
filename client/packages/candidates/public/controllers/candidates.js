@@ -358,6 +358,40 @@
       vm.doc39120 = '';
       vm.doc39121 = '';
       vm.doc39122 = '';
+      vm.doc39123 = '';
+      vm.doc39124 = '';
+      vm.doc39125 = '';
+      vm.doc39126 = '';
+      vm.doc39127 = '';
+      vm.doc39128 = '';
+      vm.doc39129 = '';
+      vm.doc39130 = '';
+      vm.doc39131 = '';
+      vm.doc39132 = '';
+      vm.doc39133 = '';
+      vm.doc39134 = '';
+      vm.doc39135 = '';
+      vm.doc39136 = '';
+      vm.doc39138 = '';
+      vm.doc39139 = '';
+      vm.doc39140 = '';
+      vm.doc39141 = '';
+      vm.doc39142 = '';
+      vm.doc39143 = '';
+      vm.doc39144 = '';
+      vm.doc39145 = '';
+      vm.doc39146 = '';
+      vm.doc39147 = '';
+      vm.doc39148 = '';
+      vm.doc39149 = '';
+      vm.doc39150 = '';
+      vm.doc39151 = '';
+      vm.doc39152 = '';
+      vm.doc39153 = '';
+      vm.doc39154 = '';
+      vm.doc39155 = '';
+      vm.doc39156 = '';
+      vm.doc39157 = '';
       vm.doc3918 = '';
       vm.doc3919 = '';
       vm.doc3920 = '';
@@ -1032,6 +1066,40 @@
       vm.radio_values.init_doc39120 = "";
       vm.radio_values.init_doc39121 = "";
       vm.radio_values.init_doc39122 = "";
+      vm.radio_values.init_doc39123 = "";
+      vm.radio_values.init_doc39124 = "";
+      vm.radio_values.init_doc39125 = "";
+      vm.radio_values.init_doc39126 = "";
+      vm.radio_values.init_doc39127 = "";
+      vm.radio_values.init_doc39128 = "";
+      vm.radio_values.init_doc39129 = "";
+      vm.radio_values.init_doc39130 = "";
+      vm.radio_values.init_doc39131 = "";
+      vm.radio_values.init_doc39132 = "";
+      vm.radio_values.init_doc39133 = "";
+      vm.radio_values.init_doc39134 = "";
+      vm.radio_values.init_doc39135 = "";
+      vm.radio_values.init_doc39136 = "";
+      vm.radio_values.init_doc39138 = "";
+      vm.radio_values.init_doc39139 = "";
+      vm.radio_values.init_doc39140 = "";
+      vm.radio_values.init_doc39141 = "";
+      vm.radio_values.init_doc39142 = "";
+      vm.radio_values.init_doc39143 = "";
+      vm.radio_values.init_doc39144 = "";
+      vm.radio_values.init_doc39145 = "";
+      vm.radio_values.init_doc39146 = "";
+      vm.radio_values.init_doc39147 = "";
+      vm.radio_values.init_doc39148 = "";
+      vm.radio_values.init_doc39149 = "";
+      vm.radio_values.init_doc39150 = "";
+      vm.radio_values.init_doc39151 = "";
+      vm.radio_values.init_doc39152 = "";
+      vm.radio_values.init_doc39153 = "";
+      vm.radio_values.init_doc39154 = "";
+      vm.radio_values.init_doc39155 = "";
+      vm.radio_values.init_doc39156 = "";
+      vm.radio_values.init_doc39157 = "";
       vm.radio_values.init_doc3918 = "";
       vm.radio_values.init_doc3919 = "";
       vm.radio_values.init_doc3920 = "";
@@ -1710,6 +1778,41 @@
       '39c120': 'claim 33 is relevant to the period mentioned in the experience certificate',
       '39c121': 'claim 34 is relevant to the period mentioned in the experience certificate',
       '39c122': 'claim 35 is relevant to the period mentioned in the experience certificate',
+      '39c123': 'Certificate 1 is issued by the foreign university/foreign authority',
+      '39c124': 'Certificate 2 is issued by the foreign university/foreign authority',
+      '39c125': 'Certificate 3 is issued by the foreign university/foreign authority',
+      '39c126': 'Certificate 4 is issued by the foreign university/foreign authority',
+      '39c127': 'Certificate 5 is issued by the foreign university/foreign authority',
+      '39c128': 'Certificate 6 is issued by the foreign university/foreign authority',
+      '39c129': 'Certificate 7 is issued by the foreign university/foreign authority',
+      '39c130': 'Certificate 8 is issued by the foreign university/foreign authority',
+      '39c131': 'Certificate 9 is issued by the foreign university/foreign authority',
+      '39c132': 'Certificate 10 is issued by the foreign university/foreign authority',
+      '39c133': 'Certificate 11 is issued by the foreign university/foreign authority',
+      '39c134': 'Certificate 12 is issued by the foreign university/foreign authority',
+      '39c135': 'Certificate 13 is issued by the foreign university/foreign authority',
+      '39c136': 'Certificate 14 is issued by the foreign university/foreign authority',
+      '39c137': 'Certificate 15 is issued by the foreign university/foreign authority',
+      '39c138': 'Certificate 16 is issued by the foreign university/foreign authority',
+      '39c139': 'Certificate 17 is issued by the foreign university/foreign authority',
+      '39c140': 'Certificate 18 is issued by the foreign university/foreign authority',
+      '39c141': 'Certificate 19 is issued by the foreign university/foreign authority',
+      '39c142': 'Certificate 20 is issued by the foreign university/foreign authority',
+      '39c143': 'Certificate 21 is issued by the foreign university/foreign authority',
+      '39c144': 'Certificate 22 is issued by the foreign university/foreign authority',
+      '39c145': 'Certificate 23 is issued by the foreign university/foreign authority',
+      '39c146': 'Certificate 24 is issued by the foreign university/foreign authority',
+      '39c147': 'Certificate 25 is issued by the foreign university/foreign authority',
+      '39c148': 'Certificate 26 is issued by the foreign university/foreign authority',
+      '39c149': 'Certificate 27 is issued by the foreign university/foreign authority',
+      '39c150': 'Certificate 28 is issued by the foreign university/foreign authority',
+      '39c151': 'Certificate 29 is issued by the foreign university/foreign authority',
+      '39c152': 'Certificate 30 is issued by the foreign university/foreign authority',
+      '39c153': 'Certificate 31 is issued by the foreign university/foreign authority',
+      '39c154': 'Certificate 32 is issued by the foreign university/foreign authority',
+      '39c155': 'Certificate 33 is issued by the foreign university/foreign authority',
+      '39c156': 'Certificate 34 is issued by the foreign university/foreign authority',
+      '39c157': 'Certificate 35 is issued by the foreign university/foreign authority',
       '39c18': 'Period of the Subject handled in the Experience Certificate 1',
       '39c19': 'Period of the Subject handled in the Experience Certificate 2',
       '39c20': 'Period of the Subject handled in the Experience Certificate 3',

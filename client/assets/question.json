@@ -4158,6 +4158,391 @@
       "approved": "1",
       "doc_id": 39,
       "q_id": 122
+    },
+    {
+      "question": "Whether the teaching experience certificate 1 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 123
+    },
+    {
+      "question": "Whether the teaching experience certificate 2 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 124
+    },
+    {
+      "question": "Whether the teaching experience certificate 3 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 125
+    },
+    {
+      "question": "Whether the teaching experience certificate 4 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 126
+    },
+    {
+      "question": "Whether the teaching experience certificate 5 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 127
+    },
+    {
+      "question": "Whether the teaching experience certificate 6 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 128
+    },
+    {
+      "question": "Whether the teaching experience certificate 7 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 129
+    },
+    {
+      "question": "Whether the teaching experience certificate 8 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 130
+    },
+    {
+      "question": "Whether the teaching experience certificate 9 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 131
+    },
+    {
+      "question": "Whether the teaching experience certificate 10 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 132
+    },
+    {
+      "question": "Whether the teaching experience certificate 11 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 133
+    },
+    {
+      "question": "Whether the teaching experience certificate 12 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 134
+    },
+    {
+      "question": "Whether the teaching experience certificate 13 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 135
+    },
+    {
+      "question": "Whether the teaching experience certificate 14 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 136
+    },
+    {
+      "question": "Whether the teaching experience certificate 15 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 137
+    },
+    {
+      "question": "Whether the teaching experience certificate 16 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 138
+    },
+    {
+      "question": "Whether the teaching experience certificate 17 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 139
+    },
+    {
+      "question": "Whether the teaching experience certificate 18 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 140
+    },
+    {
+      "question": "Whether the teaching experience certificate 19 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 141
+    },
+    {
+      "question": "Whether the teaching experience certificate 20 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 142
+    },
+    {
+      "question": "Whether the teaching experience certificate 21 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 143
+    },
+    {
+      "question": "Whether the teaching experience certificate 22 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 144
+    },
+    {
+      "question": "Whether the teaching experience certificate 23 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 145
+    },
+    {
+      "question": "Whether the teaching experience certificate 24 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 146
+    },
+    {
+      "question": "Whether the teaching experience certificate 25 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 147
+    },
+    {
+      "question": "Whether the teaching experience certificate 26 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 148
+    },
+    {
+      "question": "Whether the teaching experience certificate 27 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 149
+    },
+    {
+      "question": "Whether the teaching experience certificate 28 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 150
+    },
+    {
+      "question": "Whether the teaching experience certificate 29 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 151
+    },
+    {
+      "question": "Whether the teaching experience certificate 30 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 152
+    },
+    {
+      "question": "Whether the teaching experience certificate 31 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 153
+    },
+    {
+      "question": "Whether the teaching experience certificate 32 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 154
+    },
+    {
+      "question": "Whether the teaching experience certificate 33 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 155
+    },
+    {
+      "question": "Whether the teaching experience certificate 34 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 156
+    },
+    {
+      "question": "Whether the teaching experience certificate 35 is issued by the foreign university/foreign authority and counter signed by the competent authority of Indian Embassy?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 157
     }
   ],
   "Work Experience 2": [
