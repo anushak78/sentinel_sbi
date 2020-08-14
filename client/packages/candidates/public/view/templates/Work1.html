@@ -17,6 +17,10 @@
                ng-change="$ctrl.doc392=''">
         Yes
       </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc392=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc392"/>
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
@@ -25,12 +29,16 @@
                ng-change="$ctrl.doc392=''">
         No
       </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc392=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc392"/>
+      </label>
     </div>
     <div class="radio">
       <label class="radio-custom">
         <input type="radio" class="q_radio radio392" name="radio392"
                value="3" ng-model="$ctrl.radio_values.init_doc392"
-               ng-change="$ctrl.doc392='';">
+               ng-change="$ctrl.doc392=''">
         Partially Correct
       </label>
       <label
@@ -215,7 +223,7 @@
         Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc398=='1' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="2" class="doc398 modified_date input-sm input-s datepicker-input form-control"
+        <input type="text" maxlength="50" class="form-control"
                ng-model="$ctrl.doc398"/>
       </label>
     </div>
@@ -227,7 +235,7 @@
         Not Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc398=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="2" class="doc398 modified_date input-sm input-s datepicker-input form-control"
+        <input type="text" maxlength="50" class="form-control"
                ng-model="$ctrl.doc398"/>
       </label>
     </div>
