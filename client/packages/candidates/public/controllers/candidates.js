@@ -2832,7 +2832,7 @@
         }).on('changeDate', function (value) {
           // vm.doc23 = moment(value.date).format("MM-YYYY")
         });
-        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc3988, .doc3989, .doc3990, .doc3991, .doc3992, .doc3993, .doc3994, .doc3995, .doc3996, .doc3997, .doc3998, .doc3999, .doc39100, .doc39101, .doc39102, .doc39103, .doc39104, .doc39105, .doc39106, .doc39107, .doc39108, .doc39109, .doc39110, .doc39111, .doc39112, .doc39113, .doc39114, .doc39115, .doc39116, .doc39117, .doc39118, .doc39119, .doc39120, .doc39121, .doc39122').datepicker({
+        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,

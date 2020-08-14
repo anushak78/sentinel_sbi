@@ -2129,7 +2129,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
              data-parent="#accordion3" href="#collapseThree">
             <h6 class="panel-title">
-              Application is relevant to the period mentioned in the experience certificate
+              Application is relevant to claim
               (Total Qn : {{candidateDetails['work_experience'].length}})
             </h6>
           </a>
@@ -2138,7 +2138,7 @@
           <div class="panel-body text-sm" style="color: black">
             <div ng-if="candidateDetails['work_experience'].length > 0">
               <div class="questions">
-                Whether claim 1 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 1 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2146,11 +2146,15 @@
                     <input type="radio" class="q_radio radio3988" name="radio3988"
                            value="1" ng-model="$ctrl.radio_values.init_doc3988"
                            ng-change="$ctrl.doc3988='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3988=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3988"
-                           class="doc3988 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3988">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2158,11 +2162,15 @@
                     <input type="radio" class="q_radio radio3988" name="radio3988"
                            value="2" ng-model="$ctrl.radio_values.init_doc3988"
                            ng-change="$ctrl.doc3988='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3988=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3988"
-                           class="doc3988 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3988">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2170,7 +2178,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 1">
               <div class="questions">
-                Whether claim 2 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 2 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2178,11 +2186,15 @@
                     <input type="radio" class="q_radio radio3989" name="radio3989"
                            value="1" ng-model="$ctrl.radio_values.init_doc3989"
                            ng-change="$ctrl.doc3989='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3989=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3989"
-                           class="doc3989 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3989">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2190,11 +2202,15 @@
                     <input type="radio" class="q_radio radio3989" name="radio3989"
                            value="2" ng-model="$ctrl.radio_values.init_doc3989"
                            ng-change="$ctrl.doc3989='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3989=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3989"
-                           class="doc3989 modified_date input-sm input-s datepicker-input form-control">
+                  <select class="form-control" ng-model="$ctrl.doc3989">
+                    <option value="">--Select--</option>
+                    <option value="Not clear">Not clear</option>
+                    <option value="No document">No document</option>
+                    <option value="Incorrect document">Incorrect document</option>
+                  </select>
                   </label>
                 </div>
               </div>
@@ -2202,7 +2218,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 2">
               <div class="questions">
-                Whether claim 3 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 3 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2210,11 +2226,15 @@
                     <input type="radio" class="q_radio radio3990" name="radio3990"
                            value="1" ng-model="$ctrl.radio_values.init_doc3990"
                            ng-change="$ctrl.doc3990='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3990=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3990"
-                           class="doc3990 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3990">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2222,11 +2242,15 @@
                     <input type="radio" class="q_radio radio3990" name="radio3990"
                            value="2" ng-model="$ctrl.radio_values.init_doc3990"
                            ng-change="$ctrl.doc3990='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3990=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3990"
-                           class="doc3990 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3990">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2234,7 +2258,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 3">
               <div class="questions">
-                Whether claim 4 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 4 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2242,11 +2266,15 @@
                     <input type="radio" class="q_radio radio3991" name="radio3991"
                            value="1" ng-model="$ctrl.radio_values.init_doc3991"
                            ng-change="$ctrl.doc3991='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3991=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3991"
-                           class="doc3991 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3991">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2254,11 +2282,15 @@
                     <input type="radio" class="q_radio radio3991" name="radio3991"
                            value="2" ng-model="$ctrl.radio_values.init_doc3991"
                            ng-change="$ctrl.doc3991='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3991=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3991"
-                           class="doc3991 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3991">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2266,7 +2298,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 4">
               <div class="questions">
-                Whether claim 5 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 5 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2274,11 +2306,15 @@
                     <input type="radio" class="q_radio radio3992" name="radio3992"
                            value="1" ng-model="$ctrl.radio_values.init_doc3992"
                            ng-change="$ctrl.doc3992='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3992=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3992"
-                           class="doc3992 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3992">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2286,11 +2322,15 @@
                     <input type="radio" class="q_radio radio3992" name="radio3992"
                            value="2" ng-model="$ctrl.radio_values.init_doc3992"
                            ng-change="$ctrl.doc3992='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3992=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3992"
-                           class="doc3992 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3992">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2298,7 +2338,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 5">
               <div class="questions">
-                Whether claim 6 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 6 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2306,11 +2346,15 @@
                     <input type="radio" class="q_radio radio3993" name="radio3993"
                            value="1" ng-model="$ctrl.radio_values.init_doc3993"
                            ng-change="$ctrl.doc3993='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3993=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3993"
-                           class="doc3993 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3993">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2318,11 +2362,15 @@
                     <input type="radio" class="q_radio radio3993" name="radio3993"
                            value="2" ng-model="$ctrl.radio_values.init_doc3993"
                            ng-change="$ctrl.doc3993='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3993=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3993"
-                           class="doc3993 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3993">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2330,7 +2378,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 6">
               <div class="questions">
-                Whether claim 7 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 7 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2338,11 +2386,15 @@
                     <input type="radio" class="q_radio radio3994" name="radio3994"
                            value="1" ng-model="$ctrl.radio_values.init_doc3994"
                            ng-change="$ctrl.doc3994='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3994=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3994"
-                           class="doc3994 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3994">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2350,11 +2402,15 @@
                     <input type="radio" class="q_radio radio3994" name="radio3994"
                            value="2" ng-model="$ctrl.radio_values.init_doc3994"
                            ng-change="$ctrl.doc3994='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3994=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3994"
-                           class="doc3994 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3994">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2362,7 +2418,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 7">
               <div class="questions">
-                Whether claim 8 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 8 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2370,11 +2426,15 @@
                     <input type="radio" class="q_radio radio3995" name="radio3995"
                            value="1" ng-model="$ctrl.radio_values.init_doc3995"
                            ng-change="$ctrl.doc3995='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3995=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3995"
-                           class="doc3995 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3995">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2382,11 +2442,15 @@
                     <input type="radio" class="q_radio radio3995" name="radio3995"
                            value="2" ng-model="$ctrl.radio_values.init_doc3995"
                            ng-change="$ctrl.doc3995='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3995=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3995"
-                           class="doc3995 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3995">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2394,7 +2458,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 8">
               <div class="questions">
-                Whether claim 9 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 9 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2402,11 +2466,15 @@
                     <input type="radio" class="q_radio radio3996" name="radio3996"
                            value="1" ng-model="$ctrl.radio_values.init_doc3996"
                            ng-change="$ctrl.doc3996='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3996=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3996"
-                           class="doc3996 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3996">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2414,11 +2482,15 @@
                     <input type="radio" class="q_radio radio3996" name="radio3996"
                            value="2" ng-model="$ctrl.radio_values.init_doc3996"
                            ng-change="$ctrl.doc3996='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3996=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3996"
-                           class="doc3996 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3996">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2426,7 +2498,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 9">
               <div class="questions">
-                Whether claim 10 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 10 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2434,11 +2506,15 @@
                     <input type="radio" class="q_radio radio3997" name="radio3997"
                            value="1" ng-model="$ctrl.radio_values.init_doc3997"
                            ng-change="$ctrl.doc3997='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3997=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3997"
-                           class="doc3997 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3997">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2446,11 +2522,15 @@
                     <input type="radio" class="q_radio radio3997" name="radio3997"
                            value="2" ng-model="$ctrl.radio_values.init_doc3997"
                            ng-change="$ctrl.doc3997='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3997=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3997"
-                           class="doc3997 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3997">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2458,7 +2538,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 10">
               <div class="questions">
-                Whether claim 11 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 11 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2466,11 +2546,15 @@
                     <input type="radio" class="q_radio radio3998" name="radio3998"
                            value="1" ng-model="$ctrl.radio_values.init_doc3998"
                            ng-change="$ctrl.doc3998='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3998=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3998"
-                           class="doc3998 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3998">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2478,11 +2562,15 @@
                     <input type="radio" class="q_radio radio3998" name="radio3998"
                            value="2" ng-model="$ctrl.radio_values.init_doc3998"
                            ng-change="$ctrl.doc3998='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3998=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3998"
-                           class="doc3998 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3998">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2490,7 +2578,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 11">
               <div class="questions">
-                Whether claim 12 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 12 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2498,11 +2586,15 @@
                     <input type="radio" class="q_radio radio3999" name="radio3999"
                            value="1" ng-model="$ctrl.radio_values.init_doc3999"
                            ng-change="$ctrl.doc3999='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3999=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3999"
-                           class="doc3999 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3999">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2510,11 +2602,15 @@
                     <input type="radio" class="q_radio radio3999" name="radio3999"
                            value="2" ng-model="$ctrl.radio_values.init_doc3999"
                            ng-change="$ctrl.doc3999='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3999=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc3999"
-                           class="doc3999 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc3999">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2522,7 +2618,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 12">
               <div class="questions">
-                Whether claim 13 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 13 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2530,11 +2626,15 @@
                     <input type="radio" class="q_radio radio39100" name="radio39100"
                            value="1" ng-model="$ctrl.radio_values.init_doc39100"
                            ng-change="$ctrl.doc39100='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39100=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39100"
-                           class="doc39100 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39100">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2542,11 +2642,15 @@
                     <input type="radio" class="q_radio radio39100" name="radio39100"
                            value="2" ng-model="$ctrl.radio_values.init_doc39100"
                            ng-change="$ctrl.doc39100='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39100=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39100"
-                           class="doc39100 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39100">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2554,7 +2658,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 13">
               <div class="questions">
-                Whether claim 14 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 14 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2562,11 +2666,15 @@
                     <input type="radio" class="q_radio radio39101" name="radio39101"
                            value="1" ng-model="$ctrl.radio_values.init_doc39101"
                            ng-change="$ctrl.doc39101='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39101=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39101"
-                           class="doc39101 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39101">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2574,11 +2682,15 @@
                     <input type="radio" class="q_radio radio39101" name="radio39101"
                            value="2" ng-model="$ctrl.radio_values.init_doc39101"
                            ng-change="$ctrl.doc39101='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39101=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39101"
-                           class="doc39101 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39101">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2586,7 +2698,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 14">
               <div class="questions">
-                Whether claim 15 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 15 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2594,11 +2706,15 @@
                     <input type="radio" class="q_radio radio39102" name="radio39102"
                            value="1" ng-model="$ctrl.radio_values.init_doc39102"
                            ng-change="$ctrl.doc39102='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39102=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39102"
-                           class="doc39102 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39102">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2606,11 +2722,15 @@
                     <input type="radio" class="q_radio radio39102" name="radio39102"
                            value="2" ng-model="$ctrl.radio_values.init_doc39102"
                            ng-change="$ctrl.doc39102='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39102=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39102"
-                           class="doc39102 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39102">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2618,7 +2738,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 15">
               <div class="questions">
-                Whether claim 16 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 16 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2626,11 +2746,15 @@
                     <input type="radio" class="q_radio radio39103" name="radio39103"
                            value="1" ng-model="$ctrl.radio_values.init_doc39103"
                            ng-change="$ctrl.doc39103='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39103=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39103"
-                           class="doc39103 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39103">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2638,11 +2762,15 @@
                     <input type="radio" class="q_radio radio39103" name="radio39103"
                            value="2" ng-model="$ctrl.radio_values.init_doc39103"
                            ng-change="$ctrl.doc39103='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39103=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39103"
-                           class="doc39103 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39103">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2650,7 +2778,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 16">
               <div class="questions">
-                Whether claim 17 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 17 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2658,11 +2786,15 @@
                     <input type="radio" class="q_radio radio39104" name="radio39104"
                            value="1" ng-model="$ctrl.radio_values.init_doc39104"
                            ng-change="$ctrl.doc39104='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39104=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39104"
-                           class="doc39104 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39104">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2670,11 +2802,15 @@
                     <input type="radio" class="q_radio radio39104" name="radio39104"
                            value="2" ng-model="$ctrl.radio_values.init_doc39104"
                            ng-change="$ctrl.doc39104='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39104=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39104"
-                           class="doc39104 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39104">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2682,7 +2818,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 17">
               <div class="questions">
-                Whether claim 18 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 18 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2690,11 +2826,15 @@
                     <input type="radio" class="q_radio radio39105" name="radio39105"
                            value="1" ng-model="$ctrl.radio_values.init_doc39105"
                            ng-change="$ctrl.doc39105='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39105=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39105"
-                           class="doc39105 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39105">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2702,11 +2842,15 @@
                     <input type="radio" class="q_radio radio39105" name="radio39105"
                            value="2" ng-model="$ctrl.radio_values.init_doc39105"
                            ng-change="$ctrl.doc39105='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39105=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39105"
-                           class="doc39105 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39105">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2714,7 +2858,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 18">
               <div class="questions">
-                Whether claim 19 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 19 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2722,11 +2866,15 @@
                     <input type="radio" class="q_radio radio39106" name="radio39106"
                            value="1" ng-model="$ctrl.radio_values.init_doc39106"
                            ng-change="$ctrl.doc39106='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39106=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39106"
-                           class="doc39106 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39106">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2734,11 +2882,15 @@
                     <input type="radio" class="q_radio radio39106" name="radio39106"
                            value="2" ng-model="$ctrl.radio_values.init_doc39106"
                            ng-change="$ctrl.doc39106='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39106=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39106"
-                           class="doc39106 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39106">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2746,7 +2898,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 19">
               <div class="questions">
-                Whether claim 20 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 20 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2754,11 +2906,15 @@
                     <input type="radio" class="q_radio radio39107" name="radio39107"
                            value="1" ng-model="$ctrl.radio_values.init_doc39107"
                            ng-change="$ctrl.doc39107='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39107=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39107"
-                           class="doc39107 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39107">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2766,11 +2922,15 @@
                     <input type="radio" class="q_radio radio39107" name="radio39107"
                            value="2" ng-model="$ctrl.radio_values.init_doc39107"
                            ng-change="$ctrl.doc39107='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39107=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39107"
-                           class="doc39107 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39107">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2778,7 +2938,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 20">
               <div class="questions">
-                Whether claim 21 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 21 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2786,11 +2946,15 @@
                     <input type="radio" class="q_radio radio39108" name="radio39108"
                            value="1" ng-model="$ctrl.radio_values.init_doc39108"
                            ng-change="$ctrl.doc39108='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39108=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39108"
-                           class="doc39108 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39108">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2798,11 +2962,15 @@
                     <input type="radio" class="q_radio radio39108" name="radio39108"
                            value="2" ng-model="$ctrl.radio_values.init_doc39108"
                            ng-change="$ctrl.doc39108='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39108=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39108"
-                           class="doc39108 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39108">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2810,7 +2978,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 21">
               <div class="questions">
-                Whether claim 22 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 22 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2818,11 +2986,15 @@
                     <input type="radio" class="q_radio radio39109" name="radio39109"
                            value="1" ng-model="$ctrl.radio_values.init_doc39109"
                            ng-change="$ctrl.doc39109='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39109=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39109"
-                           class="doc39109 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39109">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2830,11 +3002,15 @@
                     <input type="radio" class="q_radio radio39109" name="radio39109"
                            value="2" ng-model="$ctrl.radio_values.init_doc39109"
                            ng-change="$ctrl.doc39109='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39109=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39109"
-                           class="doc39109 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39109">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2842,7 +3018,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 22">
               <div class="questions">
-                Whether claim 23 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 23 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2850,11 +3026,15 @@
                     <input type="radio" class="q_radio radio39110" name="radio39110"
                            value="1" ng-model="$ctrl.radio_values.init_doc39110"
                            ng-change="$ctrl.doc39110='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39110=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39110"
-                           class="doc39110 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39110">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2862,11 +3042,15 @@
                     <input type="radio" class="q_radio radio39110" name="radio39110"
                            value="2" ng-model="$ctrl.radio_values.init_doc39110"
                            ng-change="$ctrl.doc39110='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39110=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39110"
-                           class="doc39110 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39110">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2874,7 +3058,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 23">
               <div class="questions">
-                Whether claim 24 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 24 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2882,11 +3066,15 @@
                     <input type="radio" class="q_radio radio39111" name="radio39111"
                            value="1" ng-model="$ctrl.radio_values.init_doc39111"
                            ng-change="$ctrl.doc39111='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39111=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39111"
-                           class="doc39111 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39111">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2894,11 +3082,15 @@
                     <input type="radio" class="q_radio radio39111" name="radio39111"
                            value="2" ng-model="$ctrl.radio_values.init_doc39111"
                            ng-change="$ctrl.doc39111='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39111=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39111"
-                           class="doc39111 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39111">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2906,7 +3098,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 24">
               <div class="questions">
-                Whether claim 25 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 25 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2914,11 +3106,15 @@
                     <input type="radio" class="q_radio radio39112" name="radio39112"
                            value="1" ng-model="$ctrl.radio_values.init_doc39112"
                            ng-change="$ctrl.doc39112='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39112=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39112"
-                           class="doc39112 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39112">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2926,11 +3122,15 @@
                     <input type="radio" class="q_radio radio39112" name="radio39112"
                            value="2" ng-model="$ctrl.radio_values.init_doc39112"
                            ng-change="$ctrl.doc39112='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39112=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39112"
-                           class="doc39112 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39112">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2938,7 +3138,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 25">
               <div class="questions">
-                Whether claim 26 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 26 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2946,11 +3146,15 @@
                     <input type="radio" class="q_radio radio39113" name="radio39113"
                            value="1" ng-model="$ctrl.radio_values.init_doc39113"
                            ng-change="$ctrl.doc39113='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39113=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39113"
-                           class="doc39113 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39113">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2958,11 +3162,15 @@
                     <input type="radio" class="q_radio radio39113" name="radio39113"
                            value="2" ng-model="$ctrl.radio_values.init_doc39113"
                            ng-change="$ctrl.doc39113='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39113=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39113"
-                           class="doc39113 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39113">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -2970,7 +3178,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 26">
               <div class="questions">
-                Whether claim 27 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 27 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -2978,11 +3186,15 @@
                     <input type="radio" class="q_radio radio39114" name="radio39114"
                            value="1" ng-model="$ctrl.radio_values.init_doc39114"
                            ng-change="$ctrl.doc39114='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39114=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39114"
-                           class="doc39114 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39114">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -2990,11 +3202,15 @@
                     <input type="radio" class="q_radio radio39114" name="radio39114"
                            value="2" ng-model="$ctrl.radio_values.init_doc39114"
                            ng-change="$ctrl.doc39114='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39114=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39114"
-                           class="doc39114 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39114">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3002,7 +3218,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 27">
               <div class="questions">
-                Whether claim 28 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 28 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3010,11 +3226,15 @@
                     <input type="radio" class="q_radio radio39115" name="radio39115"
                            value="1" ng-model="$ctrl.radio_values.init_doc39115"
                            ng-change="$ctrl.doc39115='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39115=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39115"
-                           class="doc39115 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39115">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3022,11 +3242,15 @@
                     <input type="radio" class="q_radio radio39115" name="radio39115"
                            value="2" ng-model="$ctrl.radio_values.init_doc39115"
                            ng-change="$ctrl.doc39115='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39115=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39115"
-                           class="doc39115 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39115">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3034,7 +3258,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 28">
               <div class="questions">
-                Whether claim 29 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 29 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3042,11 +3266,15 @@
                     <input type="radio" class="q_radio radio39116" name="radio39116"
                            value="1" ng-model="$ctrl.radio_values.init_doc39116"
                            ng-change="$ctrl.doc39116='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39116=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39116"
-                           class="doc39116 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39116">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3054,11 +3282,15 @@
                     <input type="radio" class="q_radio radio39116" name="radio39116"
                            value="2" ng-model="$ctrl.radio_values.init_doc39116"
                            ng-change="$ctrl.doc39116='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39116=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39116"
-                           class="doc39116 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39116">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3066,7 +3298,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 29">
               <div class="questions">
-                Whether claim 30 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 30 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3074,11 +3306,15 @@
                     <input type="radio" class="q_radio radio39117" name="radio39117"
                            value="1" ng-model="$ctrl.radio_values.init_doc39117"
                            ng-change="$ctrl.doc39117='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39117=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39117"
-                           class="doc39117 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39117">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3086,11 +3322,15 @@
                     <input type="radio" class="q_radio radio39117" name="radio39117"
                            value="2" ng-model="$ctrl.radio_values.init_doc39117"
                            ng-change="$ctrl.doc39117='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39117=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39117"
-                           class="doc39117 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39117">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3098,7 +3338,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 30">
               <div class="questions">
-                Whether claim 31 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 31 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3106,11 +3346,15 @@
                     <input type="radio" class="q_radio radio39118" name="radio39118"
                            value="1" ng-model="$ctrl.radio_values.init_doc39118"
                            ng-change="$ctrl.doc39118='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39118=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39118"
-                           class="doc39118 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39118">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3118,11 +3362,15 @@
                     <input type="radio" class="q_radio radio39118" name="radio39118"
                            value="2" ng-model="$ctrl.radio_values.init_doc39118"
                            ng-change="$ctrl.doc39118='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39118=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39118"
-                           class="doc39118 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39118">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3130,7 +3378,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 31">
               <div class="questions">
-                Whether claim 32 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 32 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3138,11 +3386,15 @@
                     <input type="radio" class="q_radio radio39119" name="radio39119"
                            value="1" ng-model="$ctrl.radio_values.init_doc39119"
                            ng-change="$ctrl.doc39119='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39119=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39119"
-                           class="doc39119 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39119">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3150,11 +3402,15 @@
                     <input type="radio" class="q_radio radio39119" name="radio39119"
                            value="2" ng-model="$ctrl.radio_values.init_doc39119"
                            ng-change="$ctrl.doc39119='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39119=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39119"
-                           class="doc39119 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39119">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3162,7 +3418,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 32">
               <div class="questions">
-                Whether claim 33 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 33 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3170,11 +3426,15 @@
                     <input type="radio" class="q_radio radio39120" name="radio39120"
                            value="1" ng-model="$ctrl.radio_values.init_doc39120"
                            ng-change="$ctrl.doc39120='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39120=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39120"
-                           class="doc39120 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39120">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3182,11 +3442,15 @@
                     <input type="radio" class="q_radio radio39120" name="radio39120"
                            value="2" ng-model="$ctrl.radio_values.init_doc39120"
                            ng-change="$ctrl.doc39120='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39120=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39120"
-                           class="doc39120 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39120">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3194,7 +3458,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 33">
               <div class="questions">
-                Whether claim 34 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 34 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3202,11 +3466,15 @@
                     <input type="radio" class="q_radio radio39121" name="radio39121"
                            value="1" ng-model="$ctrl.radio_values.init_doc39121"
                            ng-change="$ctrl.doc39121='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39121=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39121"
-                           class="doc39121 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39121">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3214,11 +3482,15 @@
                     <input type="radio" class="q_radio radio39121" name="radio39121"
                            value="2" ng-model="$ctrl.radio_values.init_doc39121"
                            ng-change="$ctrl.doc39121='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39121=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39121"
-                           class="doc39121 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39121">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3226,7 +3498,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 34">
               <div class="questions">
-                Whether claim 35 mentioned as per application is relevant to the period mentioned in the experience certificate?
+                Is the document/s relevant to the claim 35 of the teaching experience certificate as per application?
               </div>
               <div class="col-sm-12">
                 <div class="radio">
@@ -3234,11 +3506,15 @@
                     <input type="radio" class="q_radio radio39122" name="radio39122"
                            value="1" ng-model="$ctrl.radio_values.init_doc39122"
                            ng-change="$ctrl.doc39122='';">
-                    Yes
+                    Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39122=='1' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39122"
-                           class="doc39122 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39122">
+                      <option value="">--Select--</option>
+                      <option value="Issued in Tamil Nadu">Issued in Tamil Nadu</option>
+                      <option value="Issued in other States of India">Issued in other States of India</option>
+                      <option value="Issued in Foreign country">Issued in Foreign country</option>
+                    </select>
                   </label>
                 </div>
                 <div class="radio">
@@ -3246,11 +3522,15 @@
                     <input type="radio" class="q_radio radio39122" name="radio39122"
                            value="2" ng-model="$ctrl.radio_values.init_doc39122"
                            ng-change="$ctrl.doc39122='';">
-                    No
+                    Not Relevant
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc39122=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" ng-model="$ctrl.doc39122"
-                           class="doc39122 modified_date input-sm input-s datepicker-input form-control">
+                    <select class="form-control" ng-model="$ctrl.doc39122">
+                      <option value="">--Select--</option>
+                      <option value="Not clear">Not clear</option>
+                      <option value="No document">No document</option>
+                      <option value="Incorrect document">Incorrect document</option>
+                    </select>
                   </label>
                 </div>
               </div>
@@ -3266,7 +3546,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
              data-parent="#accordion4" href="#collapseFour">
             <h6 class="panel-title">
-              Application is relevant to the period mentioned in the experience certificate
+              Teaching experience certificate issued by the foreign university/foreign authority
               (Total Qn : {{candidateDetails['work_experience'].length}})
             </h6>
           </a>
