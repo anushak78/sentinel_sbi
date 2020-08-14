@@ -3145,6 +3145,60 @@
       "q_id": 7
     },
     {
+      "question": "Whether the consolidated teaching experience matched with the claimed experience as per the application?",
+      "options": {
+        "option1": "Matched",
+        "option2": "Not Matched"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 8
+    },
+    {
+      "question": "Is there any period of teaching experience claimed from foreign university?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 9
+    },
+    {
+      "question": "Whether the Experience Certificate issued by Competent Authority?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 10
+    },
+    {
+      "question": "Is the Date of countersigning authority between 04-10-2019 to  30.11.2019?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 11
+    },
+    {
+      "question": "Is the experience certificate without the signature of countersigning authority as per Notification?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "Not Applicable"
+      },
+      "approved": "1",
+      "doc_id": 39,
+      "q_id": 12
+    },
+    {
       "question": "Period of the Subject handled in the Experience Certificate 1",
       "options": {
         "option1": "Period"
@@ -3460,7 +3514,7 @@
       "q_id": 52
     },
     {
-      "question": "Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 1 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3470,7 +3524,7 @@
       "q_id": 87
     },
     {
-      "question": "Whether claim No. 2 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 2 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3480,7 +3534,7 @@
       "q_id": 53
     },
     {
-      "question": "Whether claim No. 3 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 3 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3490,7 +3544,7 @@
       "q_id": 54
     },
     {
-      "question": "Whether claim No. 4 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 4 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3500,7 +3554,7 @@
       "q_id": 55
     },
     {
-      "question": "Whether claim No. 5 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 5 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3510,7 +3564,7 @@
       "q_id": 56
     },
     {
-      "question": "Whether claim No. 6 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 6 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3520,7 +3574,7 @@
       "q_id": 57
     },
     {
-      "question": "Whether claim No. 7 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 7 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3530,7 +3584,7 @@
       "q_id": 58
     },
     {
-      "question": "Whether claim No. 8 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 8 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3540,7 +3594,7 @@
       "q_id": 59
     },
     {
-      "question": "Whether claim No. 9 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 9 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3550,7 +3604,7 @@
       "q_id": 60
     },
     {
-      "question": "Whether claim No. 10 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 10 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3560,7 +3614,7 @@
       "q_id": 61
     },
     {
-      "question": "Whether claim No. 11 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 11 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3570,7 +3624,7 @@
       "q_id": 62
     },
     {
-      "question": "Whether claim No. 12 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 12 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3580,7 +3634,7 @@
       "q_id": 63
     },
     {
-      "question": "Whether claim No. 13 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 13 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3590,7 +3644,7 @@
       "q_id": 64
     },
     {
-      "question": "Whether claim No. 14 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 14 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3600,7 +3654,7 @@
       "q_id": 65
     },
     {
-      "question": "Whether claim No. 15 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 15 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3610,7 +3664,7 @@
       "q_id": 66
     },
     {
-      "question": "Whether claim No. 16 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 16 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3620,7 +3674,7 @@
       "q_id": 67
     },
     {
-      "question": "Whether claim No. 17 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 17 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3630,7 +3684,7 @@
       "q_id": 68
     },
     {
-      "question": "Whether claim No. 18 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 18 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3640,7 +3694,7 @@
       "q_id": 69
     },
     {
-      "question": "Whether claim No. 19 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 19 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3650,7 +3704,7 @@
       "q_id": 70
     },
     {
-      "question": "Whether claim No. 20 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 20 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3660,7 +3714,7 @@
       "q_id": 71
     },
     {
-      "question": "Whether claim No. 21 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 21 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3670,7 +3724,7 @@
       "q_id": 72
     },
     {
-      "question": "Whether claim No. 22 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 22 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3680,7 +3734,7 @@
       "q_id": 73
     },
     {
-      "question": "Whether claim No. 23 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 23 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3690,7 +3744,7 @@
       "q_id": 74
     },
     {
-      "question": "Whether claim No. 24 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 24 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3700,7 +3754,7 @@
       "q_id": 75
     },
     {
-      "question": "Whether claim No. 25 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 25 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3710,7 +3764,7 @@
       "q_id": 76
     },
     {
-      "question": "Whether claim No. 26 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 26 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3720,7 +3774,7 @@
       "q_id": 77
     },
     {
-      "question": "Whether claim No. 27 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 27 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3730,7 +3784,7 @@
       "q_id": 78
     },
     {
-      "question": "Whether claim No. 28 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 28 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3740,7 +3794,7 @@
       "q_id": 79
     },
     {
-      "question": "Whether claim No. 29 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 29 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3750,7 +3804,7 @@
       "q_id": 80
     },
     {
-      "question": "Whether claim No. 30 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 30 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3760,7 +3814,7 @@
       "q_id": 81
     },
     {
-      "question": "Whether claim No. 31 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 31 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3770,7 +3824,7 @@
       "q_id": 82
     },
     {
-      "question": "Whether claim No. 32 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 32 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3780,7 +3834,7 @@
       "q_id": 83
     },
     {
-      "question": "Whether claim No. 33 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 33 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3790,7 +3844,7 @@
       "q_id": 84
     },
     {
-      "question": "Whether claim No. 34 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 34 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3800,7 +3854,7 @@
       "q_id": 85
     },
     {
-      "question": "Whether claim No. 35 is relevant to the period mentioned and subject handled in the experience certificate submitted",
+      "question": "Whether claim No. 35 is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"

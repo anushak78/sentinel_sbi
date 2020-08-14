@@ -203,6 +203,210 @@
     </div>
   </div>
   <div class="clearfix"></div>
+  <div class="questions">
+    Whether the consolidated teaching experience matched with the claimed experience as per the application?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio398" name="radio398"
+               value="1"  ng-model="$ctrl.radio_values.init_doc398"
+               ng-change="$ctrl.doc398=''">
+        Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc398=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="doc398 modified_date input-sm input-s datepicker-input form-control"
+               ng-model="$ctrl.doc398"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio398" name="radio398"
+               value="2"  ng-model="$ctrl.radio_values.init_doc398"
+               ng-change="$ctrl.doc398=''">
+        Not Matched
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc398=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="doc398 modified_date input-sm input-s datepicker-input form-control"
+               ng-model="$ctrl.doc398"/>
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Is there any period of teaching experience claimed from foreign university?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="1"  ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc399=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="doc399 modified_date input-sm input-s datepicker-input form-control"
+               ng-model="$ctrl.doc399"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="2"  ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio399" name="radio399"
+               value="3"  ng-model="$ctrl.radio_values.init_doc399"
+               ng-change="$ctrl.doc399=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="questions">
+    Whether the Experience Certificate issued by Competent Authority?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="1"  ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3910=='1' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3910">
+          <option value="">--Select--</option>
+          <option value="Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          </option>
+          <option value="Competent Authority for Engineering Colleges – Joint Director / Director/Directorate of Technical Education">
+            Competent Authority for Engineering Colleges – Joint Director / Director/Directorate of Technical Education
+          </option>
+          <option value="Competent Authority for Universities and Deemed Universities - Registrars">
+            Competent Authority for Universities and Deemed Universities - Registrars
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="2"  ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3910=='2' ? 'display:block':'display:none'}}">
+        <select class="form-control" ng-model="$ctrl.doc3910">
+          <option value="">--Select--</option>
+          <option value="Not issued by competent Authority for Government Arts & Science Colleges / Aided / Self Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education">
+            Not issued by competent Authority for Government Arts & Science Colleges / Aided / Self Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
+          </option>
+          <option value="Not issued by competent Authority for Engineering Colleges - Joint Director / Director/Directorate of Technical Education">
+            Not issued by competent Authority for Engineering Colleges - Joint Director / Director/Directorate of Technical Education
+          </option>
+          <option value="Not issued by competent Authority for Universities and Deemed Universities - Registrars">
+            Not issued by competent Authority for Universities and Deemed Universities - Registrars
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3910" name="radio3910"
+               value="3"  ng-model="$ctrl.radio_values.init_doc3910"
+               ng-change="$ctrl.doc3910=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is the Date of countersigning authority between 04-10-2019 to  30.11.2019?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="1"  ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
+        Yes
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3911=='1' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="doc3911 modified_date input-sm input-s datepicker-input form-control"
+               ng-model="$ctrl.doc3911"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="2"  ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
+        No
+      </label>
+      <label style="{{ $ctrl.radio_values.init_doc3911=='2' ? 'display:block':'display:none'}}">
+        <input type="text" maxlength="2" class="doc3911 modified_date input-sm input-s datepicker-input form-control"
+               ng-model="$ctrl.doc3911"/>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3911" name="radio3911"
+               value="3"  ng-model="$ctrl.radio_values.init_doc3911"
+               ng-change="$ctrl.doc3911=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="questions">
+    Is the experience certificate without the signature of countersigning authority as per Notification?
+  </div>
+  <div class="col-sm-12">
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="1"  ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        Yes
+      </label>
+      <label
+          style="{{ $ctrl.radio_values.init_doc3912=='1' ? 'display:block':'display:none'}}">
+        <select multiple="multiple"
+                id="select2-dd12" ng-model="$ctrl.doc392">
+          <optgroup label="--Select Serial no of mis-matched document--">
+            <option value="{{ $index+1 }}"
+                    ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
+              {{ $index+1 }}
+            </option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="2"  ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label class="radio-custom">
+        <input type="radio" class="q_radio radio3912" name="radio3912"
+               value="3"  ng-model="$ctrl.radio_values.init_doc3912"
+               ng-change="$ctrl.doc3912=''">
+        Not Applicable
+      </label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
   <hr/>
 
   <div class="col-sm-12" style="padding-left: 0;padding-right: 0"> <!-- .accordion -->
@@ -933,7 +1137,7 @@
           <div class="panel-body text-sm" style="color: black">
             <div ng-if="candidateDetails['work_experience'].length > 0">
               <div class="questions">
-                Whether claim No. 1 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 1 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -967,7 +1171,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 1">
               <div class="questions">
-                Whether claim No. 2 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 2 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1001,7 +1205,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 2">
               <div class="questions">
-                Whether claim No. 3 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 3 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1035,7 +1239,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 3">
               <div class="questions">
-                Whether claim No. 4 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 4 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1069,7 +1273,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 4">
               <div class="questions">
-                Whether claim No. 5 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 5 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1103,7 +1307,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 5">
               <div class="questions">
-                Whether claim No. 6 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 6 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1137,7 +1341,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 6">
               <div class="questions">
-                Whether claim No. 7 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 7 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1171,7 +1375,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 7">
               <div class="questions">
-                Whether claim No. 8 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 8 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1205,7 +1409,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 8">
               <div class="questions">
-                Whether claim No. 9 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 9 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1239,7 +1443,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 9">
               <div class="questions">
-                Whether claim No. 10 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 10 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1273,7 +1477,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 10">
               <div class="questions">
-                Whether claim No. 11 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 11 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1307,7 +1511,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 11">
               <div class="questions">
-                Whether claim No. 12 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 12 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1341,7 +1545,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 12">
               <div class="questions">
-                Whether claim No. 13 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 13 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1375,7 +1579,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 13">
               <div class="questions">
-                Whether claim No. 14 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 14 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1409,7 +1613,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 14">
               <div class="questions">
-                Whether claim No. 15 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 15 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1443,7 +1647,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 15">
               <div class="questions">
-                Whether claim No. 16 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 16 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1477,7 +1681,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 16">
               <div class="questions">
-                Whether claim No. 17 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 17 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1511,7 +1715,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 17">
               <div class="questions">
-                Whether claim No. 18 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 18 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1545,7 +1749,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 18">
               <div class="questions">
-                Whether claim No. 19 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 19 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1579,7 +1783,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 19">
               <div class="questions">
-                Whether claim No. 20 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 20 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1613,7 +1817,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 20">
               <div class="questions">
-                Whether claim No. 21 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 21 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1647,7 +1851,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 21">
               <div class="questions">
-                Whether claim No. 22 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 22 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1681,7 +1885,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 22">
               <div class="questions">
-                Whether claim No. 23 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 23 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1715,7 +1919,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 23">
               <div class="questions">
-                Whether claim No. 24 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 24 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1749,7 +1953,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 24">
               <div class="questions">
-                Whether claim No. 25 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 25 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1783,7 +1987,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 25">
               <div class="questions">
-                Whether claim No. 26 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 26 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1817,7 +2021,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 26">
               <div class="questions">
-                Whether claim No. 27 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 27 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1851,7 +2055,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 27">
               <div class="questions">
-                Whether claim No. 28 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 28 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1885,7 +2089,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 28">
               <div class="questions">
-                Whether claim No. 29 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 29 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1919,7 +2123,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 29">
               <div class="questions">
-                Whether claim No. 30 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 30 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1953,7 +2157,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 30">
               <div class="questions">
-                Whether claim No. 31 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 31 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -1987,7 +2191,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 31">
               <div class="questions">
-                Whether claim No. 32 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 32 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -2021,7 +2225,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 32">
               <div class="questions">
-                Whether claim No. 33 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 33 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -2055,7 +2259,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 33">
               <div class="questions">
-                Whether claim No. 34 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 34 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">
@@ -2089,7 +2293,7 @@
             </div>
             <div ng-if="candidateDetails['work_experience'].length > 34">
               <div class="questions">
-                Whether claim No. 35 is relevant to the period mentioned and subject handled in the experience certificate
+                Whether claim No. 35 is relevant to the period mentioned in the experience certificate
                 submitted
               </div>
               <div class="col-sm-12">

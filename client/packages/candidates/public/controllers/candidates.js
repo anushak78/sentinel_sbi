@@ -288,6 +288,11 @@
       vm.doc394 = '';
       vm.doc395 = '';
       vm.doc396 = '';
+      vm.doc398 = '';
+      vm.doc399 = '';
+      vm.doc3910 = '';
+      vm.doc3911 = '';
+      vm.doc3912 = '';
       vm.doc3953 = '';
       vm.doc3954 = '';
       vm.doc3955 = '';
@@ -996,6 +1001,11 @@
       vm.radio_values.init_doc394 = "";
       vm.radio_values.init_doc395 = "";
       vm.radio_values.init_doc396 = "";
+      vm.radio_values.init_doc398 = "";
+      vm.radio_values.init_doc399 = "";
+      vm.radio_values.init_doc3910 = "";
+      vm.radio_values.init_doc3911 = "";
+      vm.radio_values.init_doc3912 = "";
       vm.radio_values.init_doc3953 = "";
       vm.radio_values.init_doc3954 = "";
       vm.radio_values.init_doc3955 = "";
@@ -1708,6 +1718,11 @@
       '39c4': 'Certificate have any PTA Experience',
       '39c5': 'No. of experience certificate',
       '39c6': 'Claims and experience documents uploaded matches',
+      '39c8': 'Consolidated teaching experience matched with the claimed experience as per the application',
+      '39c9': 'Period of teaching experience claimed from foreign university',
+      '39c10': 'Experience Certificate issued by Competent Authority',
+      '39c11': 'Date of countersigning authority between 04-10-2019 to  30.11.2019',
+      '39c12': 'Document with countersigning authority as per Notification',
       '39c53': 'Whether claim No. 2 is relevant to the period mentioned',
       '39c54': 'Whether claim No. 3 is relevant to the period mentioned',
       '39c55': 'Whether claim No. 4 is relevant to the period mentioned',
@@ -2816,14 +2831,14 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425, .doc398").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2832,7 +2847,7 @@
         }).on('changeDate', function (value) {
           // vm.doc23 = moment(value.date).format("MM-YYYY")
         });
-        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889').datepicker({
+        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc399').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -2854,6 +2869,7 @@
         $('#selectDoc38').select2();
         console.log('initialize');
         $('#select2-dd').select2();
+        $('#select2-dd12').select2();
         $('#select2-dd2').select2();
       }, 500);
     };
