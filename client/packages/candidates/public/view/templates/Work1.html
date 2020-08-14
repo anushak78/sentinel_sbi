@@ -14,7 +14,7 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio392" name="radio392"
                value="1" ng-model="$ctrl.radio_values.init_doc392"
-               ng-change="$ctrl.doc392=''">
+               ng-change="$ctrl.doc392='';emptyDD()">
         Yes
       </label>
       <label
@@ -26,7 +26,7 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio392" name="radio392"
                value="2" ng-model="$ctrl.radio_values.init_doc392"
-               ng-change="$ctrl.doc392=''">
+               ng-change="$ctrl.doc392='';">
         No
       </label>
       <label
@@ -38,14 +38,14 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio392" name="radio392"
                value="3" ng-model="$ctrl.radio_values.init_doc392"
-               ng-change="$ctrl.doc392=''">
+               ng-change="$ctrl.doc392='';">
         Partially Correct
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc392=='3' ? 'display:block':'display:none'}}">
         <select multiple="multiple"
                 id="select2-dd" ng-model="$ctrl.doc392">
-          <optgroup label="--Select Serial no of documeauthoritynt mis-matched--">
+          <optgroup label="--Select Serial no of mis-matched--">
             <option value="{{ $index+1 }}"
                     ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
               {{ $index+1 }}
@@ -293,7 +293,7 @@
             Competent Authority for Government Arts & Science Colleges / Aided / Self –Financing Colleges / B.Ed. Colleges - Regional Joint Director of Collegiate Education
           </option>
           <option value="Competent Authority for Engineering Colleges – Joint Director / Director/Directorate of Technical Education">
-            Competent Authority for Engineering Colleges – Joint Director / Director/Directorate of Technical Education
+            Competent Authority for Engineering Colleges – Joint Director / Director, Directorate of Technical Education
           </option>
           <option value="Competent Authority for Universities and Deemed Universities - Registrars">
             Competent Authority for Universities and Deemed Universities - Registrars
@@ -437,7 +437,7 @@
                   <label class="radio-custom">
                     <input type="radio" class="q_radio radio3918" name="radio3918"
                            value="1" ng-model="$ctrl.radio_values.init_doc3918"
-                           ng-change="$ctrl.doc3918='';checkAllAnswersCollapse1()">
+                           ng-change="$ctrl.doc3918='';">
                     Period
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3918=='1' ? 'display:block':'display:none'}}">
@@ -1158,7 +1158,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3987=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3987"
-                           class="form-control">
+                           class="doc3987 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1171,7 +1171,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3987=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3987"
-                           class="form-control">
+                           class="doc3987 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1192,7 +1192,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3953=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3953"
-                           class="form-control">
+                           class="doc3953 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1205,7 +1205,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3953=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3953"
-                           class="form-control">
+                           class="doc3953 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1226,7 +1226,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3954=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3954"
-                           class="form-control">
+                           class="doc3954 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1239,7 +1239,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3954=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3954"
-                           class="form-control">
+                           class="doc3954 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1260,7 +1260,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3955=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3955"
-                           class="form-control">
+                           class="doc3955 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1273,7 +1273,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3955=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3955"
-                           class="form-control">
+                           class="doc3955 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1294,7 +1294,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3956=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3956"
-                           class="form-control">
+                           class="doc3956 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1307,7 +1307,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3956=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3956"
-                           class="form-control">
+                           class="doc3956 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1328,7 +1328,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3957=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3957"
-                           class="form-control">
+                           class="doc3957 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1341,7 +1341,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3957=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3957"
-                           class="form-control">
+                           class="doc3957 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1362,7 +1362,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3958=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3958"
-                           class="form-control">
+                           class="doc3958 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1375,7 +1375,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3958=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3958"
-                           class="form-control">
+                           class="doc3958 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1396,7 +1396,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3959=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3959"
-                           class="form-control">
+                           class="doc3959 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1409,7 +1409,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3959=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3959"
-                           class="form-control">
+                           class="doc3959 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1430,7 +1430,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3960=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3960"
-                           class="form-control">
+                           class="doc3960 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1443,7 +1443,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3960=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3960"
-                           class="form-control">
+                           class="doc3960 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1464,7 +1464,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3961=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3961"
-                           class="form-control">
+                           class="doc3961 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1477,7 +1477,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3961=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3961"
-                           class="form-control">
+                           class="doc3961 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1498,7 +1498,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3962=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3962"
-                           class="form-control">
+                           class="doc3962 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1511,7 +1511,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3962=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3962"
-                           class="form-control">
+                           class="doc3962 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1532,7 +1532,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3963=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3963"
-                           class="form-control">
+                           class="doc3963 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1545,7 +1545,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3963=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3963"
-                           class="form-control">
+                           class="doc3963 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1566,7 +1566,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3964=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3964"
-                           class="form-control">
+                           class="doc3964 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1579,7 +1579,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3964=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3964"
-                           class="form-control">
+                           class="doc3964 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1600,7 +1600,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3965=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3965"
-                           class="form-control">
+                           class="doc3965 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1613,7 +1613,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3965=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3965"
-                           class="form-control">
+                           class="doc3965 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1634,7 +1634,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3966=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3966"
-                           class="form-control">
+                           class="doc3966 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1647,7 +1647,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3966=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3966"
-                           class="form-control">
+                           class="doc3966 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1668,7 +1668,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3967=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3967"
-                           class="form-control">
+                           class="doc3967 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1681,7 +1681,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3967=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3967"
-                           class="form-control">
+                           class="doc3967 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1702,7 +1702,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3968=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3968"
-                           class="form-control">
+                           class="doc3968 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1715,7 +1715,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3968=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3968"
-                           class="form-control">
+                           class="doc3968 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1736,7 +1736,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3969=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3969"
-                           class="form-control">
+                           class="doc3969 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1749,7 +1749,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3969=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3969"
-                           class="form-control">
+                           class="doc3969 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1770,7 +1770,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3970=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3970"
-                           class="form-control">
+                           class="doc3970 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1783,7 +1783,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3970=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3970"
-                           class="form-control">
+                           class="doc3970 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1804,7 +1804,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3971=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3971"
-                           class="form-control">
+                           class="doc3971 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1817,7 +1817,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3971=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3971"
-                           class="form-control">
+                           class="doc3971 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1838,7 +1838,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3972=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3972"
-                           class="form-control">
+                           class="doc3972 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1851,7 +1851,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3972=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3972"
-                           class="form-control">
+                           class="doc3972 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1872,7 +1872,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3973=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3973"
-                           class="form-control">
+                           class="doc3973 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1885,7 +1885,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3973=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3973"
-                           class="form-control">
+                           class="doc3973 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1906,7 +1906,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3974=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3974"
-                           class="form-control">
+                           class="doc3974 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1919,7 +1919,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3974=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3974"
-                           class="form-control">
+                           class="doc3974 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1940,7 +1940,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3975=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3975"
-                           class="form-control">
+                           class="doc3975 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1953,7 +1953,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3975=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3975"
-                           class="form-control">
+                           class="doc3975 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -1974,7 +1974,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3976=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3976"
-                           class="form-control">
+                           class="doc3976 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -1987,7 +1987,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3976=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3976"
-                           class="form-control">
+                           class="doc3976 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2008,7 +2008,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3977=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3977"
-                           class="form-control">
+                           class="doc3977 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2021,7 +2021,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3977=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3977"
-                           class="form-control">
+                           class="doc3977 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2042,7 +2042,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3978=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3978"
-                           class="form-control">
+                           class="doc3978 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2055,7 +2055,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3978=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3978"
-                           class="form-control">
+                           class="doc3978 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2076,7 +2076,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3979=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3979"
-                           class="form-control">
+                           class="doc3979 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2089,7 +2089,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3979=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3979"
-                           class="form-control">
+                           class="doc3979 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2110,7 +2110,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3980=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3980"
-                           class="form-control">
+                           class="doc3980 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2123,7 +2123,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3980=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3980"
-                           class="form-control">
+                           class="doc3980 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2144,7 +2144,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3981=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3981"
-                           class="form-control">
+                           class="doc3981 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2157,7 +2157,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3981=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3981"
-                           class="form-control">
+                           class="doc3981 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2178,7 +2178,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3982=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3982"
-                           class="form-control">
+                           class="doc3982 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2191,7 +2191,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3982=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3982"
-                           class="form-control">
+                           class="doc3982 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2212,7 +2212,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3983=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3983"
-                           class="form-control">
+                           class="doc3983 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2225,7 +2225,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3983=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3983"
-                           class="form-control">
+                           class="doc3983 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2246,7 +2246,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3984=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3984"
-                           class="form-control">
+                           class="doc3984 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2259,7 +2259,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3984=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3984"
-                           class="form-control">
+                           class="doc3984 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2280,7 +2280,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3985=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3985"
-                           class="form-control">
+                           class="doc3985 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2293,7 +2293,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3985=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3985"
-                           class="form-control">
+                           class="doc3985 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>
@@ -2314,7 +2314,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3986=='1' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3986"
-                           class="form-control">
+                           class="doc3986 modified_date input-sm input-s datepicker-input form-control">
                   </label>
 
                 </div>
@@ -2327,7 +2327,7 @@
                   </label>
                   <label style="{{ $ctrl.radio_values.init_doc3986=='2' ? 'display:block':'display:none'}}">
                     <input type="text" maxlength="3" ng-model="$ctrl.doc3986"
-                           class="form-control">
+                           class="doc3986 modified_date input-sm input-s datepicker-input form-control">
                   </label>
                 </div>
               </div>

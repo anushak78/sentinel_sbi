@@ -3203,10 +3203,6 @@
       }
       return JSON.stringify(datesArray);
     };
-    $scope.findInObject = function () {
-
-    };
-
 
     $scope.showExperienceModal = function () {
       console.log($scope.finalJsonData['PG Degree Certificate']);
@@ -3290,7 +3286,7 @@
         return false;
       }
       setTimeout(function () {
-        $('.doc393,.doc394,.doc395,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952').datepicker({
+        $('.doc393,.doc394,.doc395,.doc3916,.doc3917,.doc3918,.doc3919,.doc3920,.doc3921,.doc3922,.doc3923,.doc3924,.doc3925,.doc3926,.doc3927,.doc3928,.doc3929,.doc3930,.doc3931,.doc3932,.doc3933,.doc3934,.doc3935,.doc3936,.doc3937,.doc3938,.doc3939,.doc3940,.doc3941,.doc3942,.doc3943,.doc3944,.doc3945,.doc3946,.doc3947,.doc3948,.doc3949,.doc3950,.doc3951,.doc3952,.doc3953,.doc3954,.doc3955,.doc3956,.doc3957,.doc3958,.doc3959,.doc3960,.doc3961,.doc3962,.doc3963,.doc3964,.doc3965,.doc3966,.doc3967,.doc3968,.doc3969,.doc3970,.doc3971,.doc3972,.doc3973,.doc3974,.doc3975,.doc3976,.doc3977,.doc3978,.doc3979,.doc3980,.doc3981,.doc3982,.doc3983,.doc3984,.doc3985,.doc3986,.doc3987').datepicker({
           format: "dd/mm/yyyy",
           startView: 1,
           multidate: true,
