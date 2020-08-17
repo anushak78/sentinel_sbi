@@ -397,6 +397,41 @@
       vm.doc39155 = '';
       vm.doc39156 = '';
       vm.doc39157 = '';
+      vm.doc39160 = '';
+      vm.doc39161 = '';
+      vm.doc39162 = '';
+      vm.doc39163 = '';
+      vm.doc39164 = '';
+      vm.doc39165 = '';
+      vm.doc39166 = '';
+      vm.doc39167 = '';
+      vm.doc39168 = '';
+      vm.doc39169 = '';
+      vm.doc39170 = '';
+      vm.doc39171 = '';
+      vm.doc39172 = '';
+      vm.doc39173 = '';
+      vm.doc39174 = '';
+      vm.doc39175 = '';
+      vm.doc39176 = '';
+      vm.doc39177 = '';
+      vm.doc39178 = '';
+      vm.doc39179 = '';
+      vm.doc39180 = '';
+      vm.doc39181 = '';
+      vm.doc39182 = '';
+      vm.doc39183 = '';
+      vm.doc39184 = '';
+      vm.doc39185 = '';
+      vm.doc39186 = '';
+      vm.doc39187 = '';
+      vm.doc39188 = '';
+      vm.doc39189 = '';
+      vm.doc39190 = '';
+      vm.doc39191 = '';
+      vm.doc39192 = '';
+      vm.doc39193 = '';
+      vm.doc39194 = '';
       vm.doc3918 = '';
       vm.doc3919 = '';
       vm.doc3920 = '';
@@ -1110,6 +1145,41 @@
       vm.radio_values.init_doc39155 = "";
       vm.radio_values.init_doc39156 = "";
       vm.radio_values.init_doc39157 = "";
+      vm.radio_values.init_doc39160 = "";
+      vm.radio_values.init_doc39161 = "";
+      vm.radio_values.init_doc39162 = "";
+      vm.radio_values.init_doc39163 = "";
+      vm.radio_values.init_doc39164 = "";
+      vm.radio_values.init_doc39165 = "";
+      vm.radio_values.init_doc39166 = "";
+      vm.radio_values.init_doc39167 = "";
+      vm.radio_values.init_doc39168 = "";
+      vm.radio_values.init_doc39169 = "";
+      vm.radio_values.init_doc39170 = "";
+      vm.radio_values.init_doc39171 = "";
+      vm.radio_values.init_doc39172 = "";
+      vm.radio_values.init_doc39173 = "";
+      vm.radio_values.init_doc39174 = "";
+      vm.radio_values.init_doc39175 = "";
+      vm.radio_values.init_doc39176 = "";
+      vm.radio_values.init_doc39177 = "";
+      vm.radio_values.init_doc39178 = "";
+      vm.radio_values.init_doc39179 = "";
+      vm.radio_values.init_doc39180 = "";
+      vm.radio_values.init_doc39181 = "";
+      vm.radio_values.init_doc39182 = "";
+      vm.radio_values.init_doc39183 = "";
+      vm.radio_values.init_doc39184 = "";
+      vm.radio_values.init_doc39185 = "";
+      vm.radio_values.init_doc39186 = "";
+      vm.radio_values.init_doc39187 = "";
+      vm.radio_values.init_doc39188 = "";
+      vm.radio_values.init_doc39189 = "";
+      vm.radio_values.init_doc39190 = "";
+      vm.radio_values.init_doc39191 = "";
+      vm.radio_values.init_doc39192 = "";
+      vm.radio_values.init_doc39193 = "";
+      vm.radio_values.init_doc39194 = "";
       vm.radio_values.init_doc3918 = "";
       vm.radio_values.init_doc3919 = "";
       vm.radio_values.init_doc3920 = "";
@@ -1828,6 +1898,41 @@
       '39c155': 'Certificate 33 is issued by the foreign university/foreign authority',
       '39c156': 'Certificate 34 is issued by the foreign university/foreign authority',
       '39c157': 'Certificate 35 is issued by the foreign university/foreign authority',
+      '39c160': 'Certificate 1 is  between 04-10-2019 to  30.11.2019',
+      '39c161': 'Certificate 2 is  between 04-10-2019 to  30.11.2019',
+      '39c162': 'Certificate 3 is  between 04-10-2019 to  30.11.2019',
+      '39c163': 'Certificate 4 is  between 04-10-2019 to  30.11.2019',
+      '39c164': 'Certificate 5 is  between 04-10-2019 to  30.11.2019',
+      '39c165': 'Certificate 6 is  between 04-10-2019 to  30.11.2019',
+      '39c166': 'Certificate 7 is  between 04-10-2019 to  30.11.2019',
+      '39c167': 'Certificate 8 is  between 04-10-2019 to  30.11.2019',
+      '39c168': 'Certificate 9 is  between 04-10-2019 to  30.11.2019',
+      '39c169': 'Certificate 10 is  between 04-10-2019 to  30.11.2019',
+      '39c170': 'Certificate 11 is  between 04-10-2019 to  30.11.2019',
+      '39c171': 'Certificate 12 is  between 04-10-2019 to  30.11.2019',
+      '39c172': 'Certificate 13 is  between 04-10-2019 to  30.11.2019',
+      '39c173': 'Certificate 14 is  between 04-10-2019 to  30.11.2019',
+      '39c174': 'Certificate 15 is  between 04-10-2019 to  30.11.2019',
+      '39c175': 'Certificate 16 is  between 04-10-2019 to  30.11.2019',
+      '39c176': 'Certificate 17 is  between 04-10-2019 to  30.11.2019',
+      '39c177': 'Certificate 18 is  between 04-10-2019 to  30.11.2019',
+      '39c178': 'Certificate 19 is  between 04-10-2019 to  30.11.2019',
+      '39c179': 'Certificate 20 is  between 04-10-2019 to  30.11.2019',
+      '39c180': 'Certificate 21 is  between 04-10-2019 to  30.11.2019',
+      '39c181': 'Certificate 22 is  between 04-10-2019 to  30.11.2019',
+      '39c182': 'Certificate 23 is  between 04-10-2019 to  30.11.2019',
+      '39c183': 'Certificate 24 is  between 04-10-2019 to  30.11.2019',
+      '39c184': 'Certificate 25 is  between 04-10-2019 to  30.11.2019',
+      '39c185': 'Certificate 26 is  between 04-10-2019 to  30.11.2019',
+      '39c186': 'Certificate 27 is  between 04-10-2019 to  30.11.2019',
+      '39c187': 'Certificate 28 is  between 04-10-2019 to  30.11.2019',
+      '39c188': 'Certificate 29 is  between 04-10-2019 to  30.11.2019',
+      '39c189': 'Certificate 30 is  between 04-10-2019 to  30.11.2019',
+      '39c190': 'Certificate 31 is  between 04-10-2019 to  30.11.2019',
+      '39c191': 'Certificate 32 is  between 04-10-2019 to  30.11.2019',
+      '39c192': 'Certificate 33 is  between 04-10-2019 to  30.11.2019',
+      '39c193': 'Certificate 34 is  between 04-10-2019 to  30.11.2019',
+      '39c194': 'Certificate 35 is  between 04-10-2019 to  30.11.2019',
       '39c18': 'Period of the Subject handled in the Experience Certificate 1',
       '39c19': 'Period of the Subject handled in the Experience Certificate 2',
       '39c20': 'Period of the Subject handled in the Experience Certificate 3',
@@ -2831,7 +2936,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc398").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc398, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
