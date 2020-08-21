@@ -1512,11 +1512,11 @@ def allInOne(request):
     v_subjApplied = str(request.POST.get(
         "v_subjApplied", 'No PG Subject Applied Recieved'))
 
-    v_pg_equiv_subjHandled = str(request.POST.get(
-        "v_pg_equiv_subjHandled", 'No PG Equivalence Subject Handled Recieved'))
+    v_phd_equiv_subjHandled = str(request.POST.get(
+        "v_phd_equiv_subjHandled", ''))
 
     v_phd_subjHandled = str(request.POST.get(
-        "v_phd_subjHandled", 'No PHD Subject Handled Recieved'))
+        "v_phd_subjHandled", ''))
 
     # Date Of Birth
     dt_dob = datetime.strptime(request.POST.get(
@@ -1658,7 +1658,7 @@ def allInOne(request):
     # ------------------------------------------------------------------------
     # End Get all Values from Input
     # -----------------------------------------------------------------------
-    toConsider = False  # The Eligible / Ineligible Toggle
+    toConsider = True  # The Eligible / Ineligible Toggle
 
     # Start of Disability Check
     # ------------------------------------------------------------------------
@@ -1719,6 +1719,12 @@ def allInOne(request):
     if(len(str_dt_phd_por) != 0):
         if(dt_pg_por > dt_phd_por):
             toConsider = False
+            response = {'Title':  'All in One Dates',
+                        'Status': 'INELIGIBLE',
+                        'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
+                        }
+            return response
+
         else:
             if(dt_phd_vivo_por != ''):
                 if(dt_phd_vivo_por > DT_OC_CUTOFF_TO_PERIOD):
@@ -1728,9 +1734,13 @@ def allInOne(request):
                                 'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
                                 }
                     return response
-
                 else:
-                    if(v_subjApplied != v_phd_subjHandled or v_subjApplied != v_pg_equiv_subjHandled):
+                    # phdSubjToVerify  = v_phd_subjHandled if(v_phd_subjHandled != '') else ''
+                    # phdEquivSubjToVerify =  v_pg_equiv_subjHandled if(v_pg_equiv_subjHandled != '') else ''
+                    print(v_subjApplied)
+                    print(v_phd_subjHandled)
+                    print(v_phd_equiv_subjHandled)
+                    if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
                         toConsider = False
                         response = {'Title':  'All in One Dates',
                                     'Status': 'INELIGIBLE',
@@ -1803,10 +1813,10 @@ def allInOne(request):
             strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
             strTitle.append(strTitle_PG_WITH_PHD)
 
-            if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+            if(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                     toConsider = True
-            elif(diffAbledCheck == True or str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+            elif(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
 
@@ -1815,7 +1825,7 @@ def allInOne(request):
             strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
             strTitle.append(strTitle_PG_WITH_PHD)
 
-            if(diffAbledCheck == True or str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+            if(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
             elif(str_caste == BusinessConstants.OC_CATEGORY):
@@ -1845,13 +1855,13 @@ def allInOne(request):
                 strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
             if(diffAbledCheck == True):
-                if(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                if(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                     if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                         toConsider = True
-            elif(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+            elif(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                     toConsider = True
-            elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+            elif(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
 
@@ -1859,7 +1869,7 @@ def allInOne(request):
 
     if(toConsider == True):
 
-        diff = dt_top_date - dt_earliestFrom
+        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
@@ -1887,6 +1897,6 @@ def allInOne(request):
             if(len(response) == 0):
                 response = finalResponse
             else:
-                response = response+","+finalResponse
+                response = response, finalResponse
 
     return response
