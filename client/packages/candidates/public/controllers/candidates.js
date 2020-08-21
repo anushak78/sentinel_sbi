@@ -2482,6 +2482,18 @@
         console.log($rootScope.documentWithQuestions)
       })
     };
+    $scope.addMoreRanges = function(index, arrayLength) {
+      console.log(index);
+      if(arrayLength<5){
+        $rootScope.documentWithQuestions['Work Experience'][index]['ranges'].push((arrayLength+1))
+      };
+      $scope.initializeRanges();
+    };
+    $scope.removeMoreRanges = function(parentIndex, index) {
+      console.log(parentIndex);
+      console.log(index);
+      $rootScope.documentWithQuestions['Work Experience'][parentIndex]['ranges'].splice(index,1)
+    };
 
     if ($rootScope.documentWithQuestions == undefined) {
       $scope.getQuestions();
@@ -2537,6 +2549,10 @@
       }).then(function (object) {
         console.log(object);
         if (object['code'] == 1) {
+          //to reinitialize ranges of work experience
+          for(var i=0; i< 35; i++){
+            $rootScope.documentWithQuestions['Work Experience'][i+187]['ranges'] = [1];
+          }
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
           $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
@@ -2838,12 +2854,6 @@
         var radioName = 'radio' + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] +
             $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'];
         if ($('input[name=' + radioName + ']').length > 0) {
-          console.log($('input[name=' + radioName + ']').length);
-          console.log(i);
-          console.log($scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']);
-          console.log(radioName);
-          console.log($('input[name=' + radioName + ']').is(":visible"));
-          console.log($('input[name=' + radioName + ']:checked').val());
           if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
             alert('Please give all the answers');
             return false;
@@ -2869,6 +2879,10 @@
             // }
           }
         }
+      }
+
+      if($scope.selectedDocType == 'Work Experience'){
+        var answers = [];
       }
 
 
@@ -2969,6 +2983,7 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
+
 
 
         $('#selectDoc38').select2();
@@ -3290,6 +3305,34 @@
         return $scope.calculateSletNetDate('oaed_is_net_checked');
       }
     };
+    $scope.elpStartDate = '';
+    $scope.elpEndDate = '';
+    $scope.checkEligibiltyDateRange = function() {
+      $scope.elpStartDate = '';
+      $scope.elpEndDate = '';
+      var jsonExperience = {};
+
+      $('.panel-experience').each(function(i, obj) {
+        jsonExperience['Claim '+(i+1)] = [];
+        $(this).find('.doc39D').each(function(j, obj) {
+          if($(this).val() != ''){
+            if(i==0){
+              $scope.elpStartDate = $(this).val().split(',')[0];
+              $scope.elpEndDate = $(this).val().split(',')[1];
+            }
+            var a = {};
+            a.from_date = $(this).val().split(',')[0];
+            a.to_date = $(this).val().split(',')[1];
+            jsonExperience['Claim '+(i+1)].push(a);
+          }
+          console.log($(this).val())
+        });
+      });
+
+      console.log(jsonExperience);
+      return JSON.stringify(jsonExperience);
+
+    };
     $scope.checkDatePeriod = function () {
       var datesArray = [];
       var number = 17;
@@ -3309,9 +3352,40 @@
       return JSON.stringify(datesArray);
     };
 
+    $scope.initializeRanges = function() {
+      setTimeout(function () {
+        $('.doc39D').datepicker({
+          format: "dd-mm-yyyy",
+          startView: 1,
+          minViewMode: 1,
+          maxViewMode: 2,
+          multidate: true,
+          multidateSeparator: ",",
+          autoClose: true
+        }).on("changeDate", function (event) {
+          var dates = event.dates, elem = $(this);
+          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+          if (dates.length > 2) dates = dates.splice(dates.length - 1);
+          dates.sort(function (a, b) {
+            return new Date(a).getTime() +','+ new Date(b).getTime()
+          });
+          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+        });
+      },500)
+    };
+
+    $scope.calculateExperienceModal = function() {
+      $('#modal-calculate-exp').modal('toggle');
+      $scope.initializeRanges();
+    };
+
+    $scope.CloseCalculateExperienceModal = function() {
+      $('#modal-calculate-exp').modal('toggle');
+    };
+
     $scope.showExperienceModal = function () {
-      console.log($scope.finalJsonData['PG Degree Certificate']);
-      console.log($scope.finalJsonData['PG Degree Certificate']['answers']);
+      $scope.checkEligibiltyDateRange();
+      console.log($scope.finalJsonData['Work Experience']);
       Http.post("/biz/scores/orchEntry", {
         // 'float_pgMarks': 53,
         // 'dt_pg_por': "15/05/1991",
@@ -3336,28 +3410,38 @@
         // 'bool_chk2': "False",
         // $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False'
         // $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False'
-        'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
-        'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
-        'str_subjHandledStatus': 1,
+
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
-        'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
-        'dt_elp_toDt': '15/11/2019',
-        'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
-        'dt_net_por': $scope.calculateSletNetDate('oaed_is_net_checked'),
+        'v_pg_equiv_subjHandled': '',
+        'v_phd_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
+        'dt_dob':  $scope.candidateDetails['candidate_details'][0]['ocd_date_of_birth'],
+        'dt_retirement': '',
+        'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
+        'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
+        'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
+        'dt_phd_vivo_por': '',
+        'dt_ou_phd_por': '',
+        'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
+        'dt_ou_mphil_por': '',
+        // 'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
+        // 'dt_elp_toDt': '15/11/2019',
+        'dt_elp_fromDt': $scope.converDateToSlash($scope.elpStartDate),
+        'dt_elp_toDt': $scope.converDateToSlash($scope.elpEndDate),
         'str_caste': $scope.changeCastName($scope.candidateDetails['candidate_details'][0]['octm_category_desc']),
         'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'] == 'No' ? 'False' : 'True',
-        'bool_sletStatus': 'True',
-        'bool_netStatus': 'False',
+        'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
+        'dt_net_por': $scope.calculateSletNetDate('oaed_is_net_checked'),
         'v_subjSlet': $scope.candidateDetails['candidate_details'][0]['oaed_is_slet_checked'] == 'true' ? $scope.candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] : '',
         'v_subjNet': $scope.candidateDetails['candidate_details'][0]['oaed_is_net_checked'] == 'true'  ? $scope.candidateDetails['candidate_details'][0]['oaed_net_subject_name'] : '',
-        'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False',
-        'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False',
-        'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
-        'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
-        'bool_chk1': 'False',
-        'bool_chk2': 'False',
-        'dt_omit_ranges': $scope.checkDatePeriod()
+        // 'str_subjHandledStatus': 1,
+        // 'bool_sletStatus': 'True',
+        // 'bool_netStatus': 'False',
+        // 'bool_equivFlag1': $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False',
+        // 'bool_equivFlag2': $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False',
+        // 'bool_chk1': 'False',
+        // 'bool_chk2': 'False',
+        // 'dt_omit_ranges': $scope.checkDatePeriod()
       }).then(function (object) {
         console.log(object);
         $scope.orchEntry = object;
@@ -3376,7 +3460,7 @@
       //   alert('Please enter SLET/NET Certificate data');
       //   return false;
       // }
-      $scope.showExperienceModal();
+      $scope.calculateExperienceModal();
     });
 
     $scope.countPartialCertificate = function() {

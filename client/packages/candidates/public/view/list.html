@@ -218,12 +218,12 @@
             </section>
           </div>
           <div class="clearfix"></div>
-<!--          <div class="col-md-4">-->
-<!--            <section class="panel-body" style="font-size: 12px">-->
-<!--              Specialization in Hearing Impaired?:<br/><span-->
-<!--                style="font-size: 14px"></span>-->
-<!--            </section>-->
-<!--          </div>-->
+          <!--          <div class="col-md-4">-->
+          <!--            <section class="panel-body" style="font-size: 12px">-->
+          <!--              Specialization in Hearing Impaired?:<br/><span-->
+          <!--                style="font-size: 14px"></span>-->
+          <!--            </section>-->
+          <!--          </div>-->
           <div class="col-md-4">
             <section class="panel-body" style="font-size: 12px">
               Have you possess Senior Diploma in Teaching Deaf Students?:<br/><span
@@ -832,7 +832,7 @@
     </div>
   </div>
   <div class="modal fade" id="modal-exp"
-       style="z-index: 99999999999; color: black;display: none;">
+       style="z-index: 99999; color: black;display: none;">
     <div class="modal-dialog" style="height: 100%;width: 100%">
       <div class="modal-content" style="height: 100%;width: 100%">
         <div class="">
@@ -988,42 +988,112 @@
     </div>
   </div>
 
-  <div class="modal fade" id="modal-education"
-       style="z-index: 999999999999; color: black;display: none;">
+  <div class="modal fade" id="modal-calculate-exp"
+       style="z-index: 9999; color: black;display: none;">
     <div class="modal-dialog" style="height: 100%;width: 100%">
       <div class="modal-content" style="height: 100%;width: 100%">
         <div class="">
           <button class="btn btn-success"
-                  style="position:absolute;bottom: 15px;right: 170px;">
+                  style="position:absolute;bottom: 15px;right: 170px;" ng-click="showExperienceModal()">
             Confirm
           </button>
           <button class="btn btn-success"
-                  ng-click="closeEducationModel()"
+                  ng-click="CloseCalculateExperienceModal()"
                   style="position:absolute;bottom: 15px;right: 70px;">
             Close
           </button>
         </div>
         <div class="modal-body"
-             style="width: 60%;height:95%;margin: 0 auto;overflow-y: scroll;
-                    color: black">
-          <div class="panel panel-body">
-            <div class="col-lg-12 text-center">
-              <h4>Date Difference:
-                {{orchEntry[educationIndex]['Date Difference']}}</h4>
-            </div>
-            <div class="col-lg-12"
-                 ng-repeat="(key, value) in orchEntry[educationIndex]['META_DATA']">
-              <div class="col-lg-6 padder padder-v"
-                   ng-class="{'border-right':$index%2 == 0}"
-                   style="">
-                <div class="col-lg-6">
-                  {{key}}
+             style="width: 75%;height:85%;margin: 0 auto;overflow-y: scroll">
+          <div class="col-sm-12" style="padding-left: 0;padding-right: 0"> <!-- .accordion -->
+            <div class="panel-group m-b" id="accordionCalculate">
+              <div class="panel panel-default panel-experience"
+                   ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index"
+              ng-init="parentIndex=$index">
+                <div class="panel-heading">
+                  <a class="accordion-toggle collapsed accordion-plus-toggle"
+                     data-toggle="collapse"
+                     data-parent="#accordionCalculate" href="#collapseA{{parentIndex}}">
+                    <h6 class="panel-title">Claim {{parentIndex+1}}</h6>
+                  </a>
                 </div>
-                <div class="col-lg-6">
-                  : {{value=='false'?'No':(value=='true'?'Yes':value)}}
+                <div id="collapseA{{parentIndex}}" class="panel-collapse collapse" style="height: 0px;">
+                  <div class="panel-body text-sm" style="color: black">
+                    <div>
+                      <div class="questions">
+                        Period of experience as per the experience certificate {{parentIndex+1}}
+                      </div>
+                      <div class="col-sm-12" style="margin-top: 5px; padding-left:0"
+                           ng-repeat="y in [].constructor(documentWithQuestions['Work Experience'][parentIndex+187]['ranges'].length) track by $index"
+                      ng-init="innerIndex = $index">
+                        <div class="col-sm-4" style="padding-left: 0">
+                          <div style="padding-left: 0">
+                            <label style="display: block">
+                              <input type="text"
+                                     class="doc39D modified_date input-sm input-s datepicker-input form-control">
+                            </label>
+                          </div>
+                        </div>
+                        <div ng-if="$index == 0 && documentWithQuestions['Work Experience'][parentIndex+187]['ranges'].length<5" class="col-sm-4">
+                          <button class="btn btn-success"
+                                  ng-click="addMoreRanges(parentIndex+187 , documentWithQuestions['Work Experience'][parentIndex+187]['ranges'].length)">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                        <div ng-if="$index > 0" class="col-sm-4">
+                          <button class="btn btn-danger"
+                                  ng-click="removeMoreRanges(parentIndex+187 , $index)">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div ng-if="$index%2 != 0" style="clear: both"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-education"
+           style="z-index: 999999999999; color: black;display: none;">
+        <div class="modal-dialog" style="height: 100%;width: 100%">
+          <div class="modal-content" style="height: 100%;width: 100%">
+            <div class="">
+              <button class="btn btn-success"
+                      style="position:absolute;bottom: 15px;right: 170px;">
+                Confirm
+              </button>
+              <button class="btn btn-success"
+                      ng-click="closeEducationModel()"
+                      style="position:absolute;bottom: 15px;right: 70px;">
+                Close
+              </button>
+            </div>
+            <div class="modal-body"
+                 style="width: 60%;height:95%;margin: 0 auto;overflow-y: scroll;
+                    color: black">
+              <div class="panel panel-body">
+                <div class="col-lg-12 text-center">
+                  <h4>Date Difference:
+                    {{orchEntry[educationIndex]['Date Difference']}}</h4>
+                </div>
+                <div class="col-lg-12"
+                     ng-repeat="(key, value) in orchEntry[educationIndex]['META_DATA']">
+                  <div class="col-lg-6 padder padder-v"
+                       ng-class="{'border-right':$index%2 == 0}"
+                       style="">
+                    <div class="col-lg-6">
+                      {{key}}
+                    </div>
+                    <div class="col-lg-6">
+                      : {{value=='false'?'No':(value=='true'?'Yes':value)}}
+                    </div>
+                  </div>
+                  <div ng-if="$index%2 != 0" style="clear: both"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1065,13 +1135,13 @@
                       </section>
                     </div>
                     <div ng-if="selectedDocType.indexOf('SSLC') < 0">
-                    <div class="col-md-6">
-                      <section class="panel-body"
-                               style="font-size: 12px">
-                        Father Name :<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
-                      </section>
-                    </div>
+                      <div class="col-md-6">
+                        <section class="panel-body"
+                                 style="font-size: 12px">
+                          Father Name :<br/><span
+                            style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
+                        </section>
+                      </div>
                     </div>
                     <div class="clearfix"></div>
                     <!--                    <div class="col-md-6">-->
@@ -1702,7 +1772,8 @@
                     <div class="col-md-12">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Subject in UG degree (or) Equivalent subject and the subject applied for is the same:<br/><span
+                        Subject in UG degree (or) Equivalent subject and the subject applied for is the
+                        same:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_subject_same']}}</span>
                       </section>
                     </div>
@@ -1899,7 +1970,8 @@
                     <div class="col-md-12">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Subject in PG degree (or) Equivalent subject and the subject applied for is the same:<br/><span
+                        Subject in PG degree (or) Equivalent subject and the subject applied for is the
+                        same:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_subject_same']}}</span>
                       </section>
                     </div>
@@ -1916,7 +1988,8 @@
                     <div class="col-md-12">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Post Graduate with at least 50% marks(or its equivalent grade) from Recognized Institution:<br/><span
+                        Post Graduate with at least 50% marks(or its equivalent grade) from Recognized
+                        Institution:<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_pgbedncte'] == 'category2'?'Yes':'No'}}</span>
                       </section>
                     </div>
@@ -2248,14 +2321,14 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['last_conduct_certificate']}}</span>
                       </section>
                     </div>
-<!--                    <div class="col-md-6">-->
-<!--                      <section class="panel-body"-->
-<!--                               style="font-size: 12px">-->
-<!--                        Conduct: Whether submitted latest conduct certificate-->
-<!--                        :<br/><span-->
-<!--                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['latest_conduct_certificate']}}</span>-->
-<!--                      </section>-->
-<!--                    </div>-->
+                    <!--                    <div class="col-md-6">-->
+                    <!--                      <section class="panel-body"-->
+                    <!--                               style="font-size: 12px">-->
+                    <!--                        Conduct: Whether submitted latest conduct certificate-->
+                    <!--                        :<br/><span-->
+                    <!--                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['latest_conduct_certificate']}}</span>-->
+                    <!--                      </section>-->
+                    <!--                    </div>-->
                     <div class="clearfix"></div>
                   </div>
                   <div ng-if="selectedDocType.indexOf('Phd') > -1">

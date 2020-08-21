@@ -421,9 +421,11 @@
     <div class="panel-group m-b" id="accordion2">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
+          <a class="accordion-toggle collapsed"
+             ng-class="{'accordion-plus-toggle': countPartialCertificate()>0}"
+             data-toggle="{{countPartialCertificate()>0?'collapse':''}}"
                                       data-parent="#accordion2" href="#collapseOne">
-            <h6 class="panel-title">Partial Certificates (Total Qn : {{countPartialCertificate()}})</h6>
+            <h6 class="panel-title">1. Partial Certificates (Total Qn : {{countPartialCertificate()}})</h6>
           </a>
         </div>
         <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
@@ -1136,7 +1138,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
                                       data-parent="#accordion2" href="#collapseTwo">
           <h6 class="panel-title">
-            Subject handled in the experience certificate submitted
+            2. Subject handled in the experience certificate submitted
             (Total Qn : {{candidateDetails['work_experience'].length}})
           </h6>
           </a>
@@ -2341,7 +2343,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
              data-parent="#accordion3" href="#collapseThree">
             <h6 class="panel-title">
-              Application is relevant to claim
+              3. Application is relevant to claim
               (Total Qn : {{candidateDetails['work_experience'].length}})
             </h6>
           </a>
@@ -3758,7 +3760,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
              data-parent="#accordion4" href="#collapseFour">
             <h6 class="panel-title">
-              Teaching experience certificate issued by the foreign university/foreign authority
+              4. Teaching experience certificate issued by the foreign university/foreign authority
               (Total Qn : {{candidateDetails['work_experience'].length}})
             </h6>
           </a>
@@ -5313,7 +5315,7 @@
           <a class="accordion-toggle collapsed accordion-plus-toggle" data-toggle="collapse"
              data-parent="#accordion5" href="#collapseFive">
             <h6 class="panel-title">
-              Date of issue of experience certificate between 04-10-2019 to  30.11.2019
+              5. Date of issue of experience certificate between 04-10-2019 to  30.11.2019
               (Total Qn : {{candidateDetails['work_experience'].length}})
             </h6>
           </a>
@@ -6763,7 +6765,7 @@
   <div class="clearfix"></div>
   <div class="col-sm-12" style="padding-left: 0" ng-if="displayShowTable()">
     <div class="showModalExp">
-      <button class="btn btn-info btn-s-xs">Show Table</button>
+      <button class="btn btn-info btn-s-xs">Calculate Experience</button>
     </div>
   </div>
 </div>
