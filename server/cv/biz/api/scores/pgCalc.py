@@ -1679,7 +1679,23 @@ def allInOne(request):
     print(" dt_net_por >>>>" + str(dt_net_por))
     print(" dt_slet_por >>>>" + str(dt_slet_por))
 
-    if(dt_pg_por > DT_OC_CUTOFF_TO_PERIOD or dt_phd_por > DT_OC_CUTOFF_TO_PERIOD or dt_net_por > DT_OC_CUTOFF_TO_PERIOD or dt_slet_por > DT_OC_CUTOFF_TO_PERIOD):
+    # Date CutOff Voilation Check Here
+    pg_por_voilation = True if(dt_pg_por > DT_OC_CUTOFF_TO_PERIOD) else False
+    phd_por_voilation = False
+    net_por_voilation = False
+    slet_por_voilation = False
+
+    if(dt_phd_por != ''):
+        phd_por_voilation = True if(
+            dt_phd_por > DT_OC_CUTOFF_TO_PERIOD) else False
+    if(dt_net_por != ''):
+        net_por_voilation = True if(
+            dt_net_por > DT_OC_CUTOFF_TO_PERIOD) else False
+    if(dt_slet_por != ''):
+        slet_por_voilation = True if (
+            dt_slet_por > DT_OC_CUTOFF_TO_PERIOD) else False
+
+    if(pg_por_voilation == True or phd_por_voilation == True or net_por_voilation == True or slet_por_voilation == True):
         log.info("allinOne : Step 2 - PG PHD NET SLET POR DATE > 04.10.2019  ")
         log.info("allinOne: Step 2.1 - Dont Consider This Date")
 
