@@ -9,6 +9,7 @@ class BusinessConstants:
     SC_CATEGORY = "SC_CATEGORY"
     SCA_CATEGORY = "SCA_CATEGORY"
     ST_CATEGORY = "ST_CATEGORY"
+    STA_CATEGORY = "STA_CATEGORY"
 
     DIFF_ABLED = True
     MARKS_50_PER = 50

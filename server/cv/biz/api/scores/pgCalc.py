@@ -1,4 +1,5 @@
 import logging
+import sys
 
 from datetime import datetime
 from dateutil import relativedelta
@@ -53,6 +54,9 @@ svc_pg_phdCalc_CS_DE_OU_submtdbfr_04102019 = Service(
     name="biz.api.scores.pg_phdCalc_CS_DE_OU_submtdbfr_04102019", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/pg_phdCalc_CS_DE_OU_submtdbfr_04102019", cors_policy=cors.POLICY)
 
+svc_allInOne = Service(
+    name="biz.api.scores.allInOne", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/allInOne", cors_policy=cors.POLICY)
 
 """
 This method is to check for SLET / NET Check
@@ -130,9 +134,10 @@ fnName - Function Name for Logging
 """
 
 
-def pg_diffAbCheck(bool_diffAbled, float_pgMarks, str_caste, cutOffConsidered, fnName):
-    print(bool_diffAbled)
-    print(float_pgMarks)
+def pg_diffAbCheck(bool_diffAbled, float_pgMarks, cutOffConsidered, fnName):
+    # print(bool_diffAbled)
+    # print(float_pgMarks)
+
     if bool_diffAbled:
         log.info("%s - Step 3 - Candidate in Differently Abled Category", fnName)
         print(float(float_pgMarks))
@@ -250,7 +255,8 @@ def pgCalc_50mNabove_Upto1891991(request):
     DT_POR_CUTOFF = datetime(1991, 9, 18).date()
 
     # Get the pg Marks from Request
-    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
+    float_pgMarks = str(request.POST.get(
+        "float_pgMarks", 'No PG Marks Recieved'))
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
@@ -295,6 +301,8 @@ def pgCalc_50mNabove_Upto1891991(request):
             log.info(toConsider)
 
             if(toConsider == True):
+
+                # Getting the data  for slet / net here
 
                 # Eligibility Period Cut Off Check
                 if(dt_elp_toDt > DT_POR_CUTOFF):
@@ -417,7 +425,7 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
 
     # Get the values from the request object
     dt_pg_por = datetime.strptime(request.POST.get(
-        "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()    
+        "dt_pg_por", 'No POR Date Recieved'), '%d/%m/%Y').date()
 
     dt_elp_fromDt = datetime.strptime(request.POST.get(
         "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
@@ -444,7 +452,7 @@ def pgCalc_55MarksforOCnGT_19091991_10072016(request):
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_10072016)
+                                    percentileToBeConsidered, pgCalc_55MarksforOCnGT_19091991_10072016)
 
     if (diffAbledCheck == True):
 
@@ -661,7 +669,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
         percentileToBeConsidered = BusinessConstants.MARKS_55_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pgCalc_55MarksforNonOC_11072016_04102019)
+                                    percentileToBeConsidered, pgCalc_55MarksforNonOC_11072016_04102019)
 
     if (diffAbledCheck == True):
 
@@ -735,7 +743,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
                         }
 
         print(str_dt_slet_por, ">>>>>>>>>>>>", str_dt_net_por)
-        
+
         dt_earliestFrom = DT_POR_FROM_CUTOFF
 
         if(str_dt_slet_por != '01/01/0001' and
@@ -759,7 +767,7 @@ def pgCalc_55MarksforNonOC_11072016_04102019(request):
             dt_net_por = datetime.strptime(
                 str_dt_net_por, '%d/%m/%Y').date()
             dt_earliestForm = dt_net_por
-                   
+
         if(dt_elp_toDt > DT_POR_TO_CUTOFF):
             dt_top_date = DT_POR_TO_CUTOFF
         else:
@@ -921,7 +929,7 @@ def phdCalc_submtdbfr_31122002(request):
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, phdCalc_submtdbfr_31122002)
+                                    percentileToBeConsidered, phdCalc_submtdbfr_31122002)
 
     if (diffAbledCheck == True):
 
@@ -1127,7 +1135,7 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_02042009(request):
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
     diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
+                                    percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_02042009)
 
     if (diffAbledCheck == True):
 
@@ -1330,8 +1338,8 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
 
         percentileToBeConsidered = BusinessConstants.MARKS_50_PER
 
-    diffAbledCheck = pg_diffAbCheck(bool_diffAbled, float_pgMarks,
-                                    str_caste, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
+    diffAbledCheck = pg_diffAbCheck(
+        bool_diffAbled, float_pgMarks, percentileToBeConsidered, pg_phdCalc_CS_DE_OU_submtdbfr_04102019)
 
     if (diffAbledCheck == True):
 
@@ -1441,4 +1449,428 @@ def pg_phdCalc_CS_DE_OU_submtdbfr_04102019(request):
                     'From Date': '',
                     'To Date': '04.10.2019'
                     }
+    return response
+
+
+"""All the above functions have similar funcitonalites now
+due to the new requirements that have come forward , hence no point in
+handling 9 functions , bringing them all into one.
+Name : allInOne
+Parameters :
+-----------
+   dt_por - date of publication of results
+   str_caste - Caste Category
+   float_pgMarks - PG marks
+   bool_diffAbl - Differently Abled Category
+   str_subjHandled - Name of Subject Handled
+   str_postApplied - Name of Post Applied
+"""
+
+
+@svc_allInOne.post(require_csrf=False)
+def allInOne(request):
+    response = ""
+    toConsider = False  # Toggle Flag to calculate the Date Difference
+
+    # -----------------------------------------------------------------------
+    # Get All the values from the input .
+    # ------------------------------------------------------------------------
+
+    # TODO Move this to a config file or DB
+    DT_POR_FROM_CUTOFF = datetime(2018, 7, 18).date()  # TODO: to be confirmed
+    DT_POR_TO_CUTOFF = datetime(2019, 10, 4).date()    # TODO: to be confirmed
+    DT_PHD_TO_CUTOFF = datetime(2019, 10, 4).date()
+    DT_DOB_CUTOFF = datetime(2019, 7, 1).date()
+    DT_OC_CUTOFF_FROM_PERIOD = datetime(1991, 9, 19).date()
+    DT_OC_CUTOFF_TO_PERIOD = datetime(2019, 10, 4).date()
+    DT_TURN_CUTOFF_FIRST_CUT_FROM_PERIOD = datetime(1991, 9, 19).date()
+    DT_TURN_CUTOFF_FIRST_CUT_TO_PERIOD = datetime(2016, 7, 10).date()
+    DT_TURN_CUTOFF_SECOND_CUT_FROM_PERIOD = datetime(2016, 7, 11).date()
+    DT_TURN_CUTOFF_SECOND_CUT_TO_PERIOD = datetime(2019, 10, 4).date()
+    DT_OU_MPHIL_CUTOFF_TO_PERIOD = datetime(2009, 4, 3).date()
+    DT_OU_PHD_CUTOFF_TO_PERIOD = datetime(2009, 4, 3).date()
+    DT_30072002_CUTOFF_TO_PERIOD = datetime(2002, 7, 30).date()
+    DT_17072018_CUTOFF_TO_PERIOD = datetime(2018, 7, 17).date()
+    DT_18072018_CUTOFF_FROM_PERIOD = datetime(2018, 7, 18).date()
+    DT_31052019_CUTOFF_FROM_PERIOD = datetime(
+        2019, 5, 31).date()  # TODO : Confirm with TRB Sasi Mme
+    DT_15112019_CUTOFF_TO_PERIOD = datetime(
+        2019, 11, 15).date()  # TODO : Confirm with Sujitha
+    DT_31072002_CUTOFF_FROM_PERIOD = datetime(2002, 7, 31).date()
+    DT_13062006_CUTOFF_TO_PERIOD = datetime(2002, 7, 31).date()
+    DT_14062006_CUTOFF_FROM_PERIOD = datetime(2006, 6, 14).date()
+    DT_03042009_CUTOFF_FROM_PERIOD = datetime(2009, 3, 3).date()
+    DT_29062010_CUTOFF_TO_PERIOD = datetime(2010, 6, 29).date()
+    DT_02042009_CUTOFF_TO_PERIOD = datetime(2009, 4, 2).date()
+
+    # DT_30062010_CUTOFF_FROM_PERIOD = datetime(2010, 6, 30).date()
+    # DT_02042009_CUTOFF_TO_PERIOD = datetime(2018, 7, 17).date()
+
+    # Subject Details
+    v_subjHandled = str(request.POST.get(
+        "v_subjHandled", 'No PG Subject Handled Recieved'))
+    v_subjApplied = str(request.POST.get(
+        "v_subjApplied", 'No PG Subject Applied Recieved'))
+
+    v_pg_equiv_subjHandled = str(request.POST.get(
+        "v_pg_equiv_subjHandled", 'No PG Equivalence Subject Handled Recieved'))
+
+    v_phd_subjHandled = str(request.POST.get(
+        "v_phd_subjHandled", 'No PHD Subject Handled Recieved'))
+
+    # Date Of Birth
+    dt_dob = datetime.strptime(request.POST.get(
+        "dt_dob", 'No Date Of Birth Recieved'), '%d/%m/%Y').date()
+
+    dt_retirement = datetime.strptime(request.POST.get(
+        "dt_retirement", 'No Date Of Retirement Recieved'), '%d/%m/%Y').date()
+
+    age_diff = relativedelta.relativedelta(DT_DOB_CUTOFF, dt_dob)
+
+    # Return Title Start -------------------------------------
+    strTitle = []
+    strTitle_PG_50_ONLY = "PG with 50% Marks"
+    strTitle_PG_55_NETSLET_SCST_DA_50 = "PG with 55% Marks and NET/SLET/CISR {FOR SC/SCA/ST/DA-50%}"
+    strTitle_PG_55_NETSLET_OC_DA_50 = "PG with 55% Marks and NET/SLET/CISR {OTHER THAN OC-50%}"
+    strTitle_MPHIL_BFR_31121993_PHD_BFR_31121993 = "MPHIL Completed Before 31.12.1993 / Submitted PHD before 31/12/1993"
+    strTitle_PHD_BFR_31122002 = "Submitted PHD before 31.12.2002"
+    strTitle_PG_WITH_MPHIL = "PG with MPHIL"
+    strTitle_PG_WITH_PHD_CORR_OU = "PG with PHD thru CR/DE/OU"
+    strTitle_PG_MPHIL_CORR_OU = "PG & MPHIL thru CR / OU / DE"
+    strTitle_PG_WITH_PHD = "PG with PHD"
+    # Return Title End -------------------------------------
+    # Age Check
+
+    if(age_diff.years > 57):
+        log.info("allinOne : Step 1 - Age Greater than 57   ")
+        log.info("allinOne: Step 1.1 - Dont Consider This Date")
+
+        response = {'Title':  'All in One Dates',
+                    'Status': 'FAIL',
+                    'CandidateStatus': 'INELIGIBLE',
+                    'Reason': 'Age Greater than 57  - Ineligible',
+                    }
+        return response
+    elif(55 <= age_diff.years > 57):
+        if (dt_retirement == "No Date Of Retirement Recieved"):
+            log.info(
+                "allinOne : Step 1.2 - Age Greater than & Equal To 55 And Less than 57 & No Retirement Date")
+            log.info("allinOne: Step 1.2.1 - Dont Consider This Date")
+
+            response = {'Title':  'All in One Dates',
+                        'Status': 'FAIL',
+                        'CandidateStatus': 'INELIGIBLE',
+                        'Reason': 'Age Greater than & Equal To 55 And Less than 57 & No Retirement Date  - Ineligible',
+                        }
+            return response
+# TODO : What if the date is present , confirm with TRB Sasi Mme.
+    # PG Details
+
+    dt_pg_por = datetime.strptime(request.POST.get(
+        "dt_pg_por", 'No PG POR Date Recieved'), '%d/%m/%Y').date()
+    float_pgMarks = request.POST.get("float_pgMarks", 'No PG Marks Recieved')
+
+    # PHD Details
+    str_dt_phd_por = request.POST.get("dt_phd_por", '01/01/0001')
+
+    dt_phd_por = datetime.strptime(str_dt_phd_por, '%d/%m/%Y').date() if(
+        str_dt_phd_por != '01/01/0001' and len(str_dt_phd_por) != 0) else ''
+
+    str_dt_phd_vivo_por = request.POST.get("dt_phd_vivo_por", '01/01/0001')
+
+    dt_phd_vivo_por = datetime.strptime(str_dt_phd_vivo_por, '%d/%m/%Y').date() if(
+        str_dt_phd_vivo_por != '01/01/0001' and len(str_dt_phd_vivo_por) != 0) else ''
+
+    str_dt_ou_phd_por = request.POST.get("dt_ou_phd_por", '01/01/0001')
+
+    dt_ou_phd_por = datetime.strptime(str_dt_ou_phd_por, '%d/%m/%Y').date() if(
+        str_dt_ou_phd_por != '01/01/0001' and len(str_dt_ou_phd_por) != 0) else ''
+
+    # MPHIL Details
+    str_dt_mphil_por = request.POST.get("dt_mphil_por", '01/01/0001')
+
+    dt_mphil_por = datetime.strptime(str_dt_mphil_por, '%d/%m/%Y').date() if(
+        str_dt_mphil_por != '01/01/0001' and len(str_dt_mphil_por) != 0) else ''
+
+    str_dt_ou_mphil_por = request.POST.get("dt_ou_mphil_por", '01/01/0001')
+
+    dt_ou_mphil_por = datetime.strptime(str_dt_ou_mphil_por, '%d/%m/%Y').date() if(
+        str_dt_ou_mphil_por != '01/01/0001' and len(str_dt_ou_mphil_por) != 0) else ''
+
+    # Eligibility Details
+    dt_elp_fromDt = datetime.strptime(request.POST.get(
+        "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+    dt_elp_toDt = datetime.strptime(request.POST.get(
+        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+
+    # Caste and Differently Abled
+
+    str_caste = str(request.POST.get("str_caste", 'No Caste Info Recieved'))
+    bool_diffAbled = str2bool(request.POST.get("bool_diffAbled", 'False'))
+
+    # Slet / NET Drama Starts Here
+    str_dt_slet_por = request.POST.get("dt_slet_por", '01/01/0001')
+    str_dt_net_por = request.POST.get("dt_net_por", '01/01/0001')
+
+    # Either PHD or NET or SLET Date is mandatory , cannot be empty without them
+    if(len(str_dt_slet_por) == 0 and len(str_dt_net_por) == 0 and len(str_dt_phd_por) == 0):
+        log.info("allinOne : Step 1 - PHD &  SLET & NET DATE ARE EMPTY  ")
+        log.info("allinOne: Step 1.1 - Dont Consider This Date")
+
+        response = {'Title':  'All in One Dates',
+                    'Status': 'FAIL',
+                    'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
+                    }
+        return response
+
+    dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date() if(
+        str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0) else ''
+
+    dt_net_por = datetime.strptime(str_dt_net_por, '%d/%m/%Y').date() if(
+        str_dt_net_por != '01/01/0001' and len(str_dt_net_por) != 0) else ''
+
+    # Earliest/Min of PHD / SLET / NET Date to be considered as start date.
+    dt_sort_list = []
+
+    if dt_slet_por != '':
+        dt_sort_list.append(dt_slet_por)
+
+    if dt_net_por != '':
+        dt_sort_list.append(dt_net_por)
+
+    if dt_phd_por != '':
+        dt_sort_list.append(dt_phd_por)
+
+    dt_earliest_2_consider = min(dt_sort_list)
+
+    if (dt_elp_fromDt < dt_earliest_2_consider):
+        dt_elp_fromDt = dt_earliest_2_consider
+
+    dt_top_date = DT_POR_TO_CUTOFF if(
+        dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
+
+    dt_earliestFrom = dt_elp_fromDt
+    print("From Date & To Date >>>>>>>>>>>>>>>>>>>>>>>")
+    print(dt_earliestFrom)
+    print(dt_top_date)
+    print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+
+    # ------------------------------------------------------------------------
+    # End Get all Values from Input
+    # -----------------------------------------------------------------------
+    toConsider = False  # The Eligible / Ineligible Toggle
+
+    # Start of Disability Check
+    # ------------------------------------------------------------------------
+    # Special Marks Override to be considered for SC Category
+    percentileToBeConsidered = BusinessConstants.MARKS_55_PER if str(
+        str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY else BusinessConstants.MARKS_50_PER
+
+    diffAbledCheck = pg_diffAbCheck(
+        bool_diffAbled, float_pgMarks, percentileToBeConsidered, 'allinOne')
+    # End of Disability Check
+    # ------------------------------------------------------------------------
+    # Validations Start Here
+
+    # Bare Basic Mandatory Validations Start Here -----------------------------------------------
+    # all possible por dates pg phd net slet
+    print(" dt_pg_por >>>>" + str(dt_pg_por))
+    print(" dt_phd_por >>>>" + str(dt_phd_por))
+    print(" dt_net_por >>>>" + str(dt_net_por))
+    print(" dt_slet_por >>>>" + str(dt_slet_por))
+
+    if(dt_pg_por > DT_OC_CUTOFF_TO_PERIOD or dt_phd_por > DT_OC_CUTOFF_TO_PERIOD or dt_net_por > DT_OC_CUTOFF_TO_PERIOD or dt_slet_por > DT_OC_CUTOFF_TO_PERIOD):
+        log.info("allinOne : Step 2 - PG PHD NET SLET POR DATE > 04.10.2019  ")
+        log.info("allinOne: Step 2.1 - Dont Consider This Date")
+
+        response = {'Title':  'All in One Dates',
+                    'Status': 'INELIGIBLE',
+                    'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
+                    }
+        return response
+    elif(v_subjApplied != v_subjHandled and v_subjApplied != v_pg_equiv_subjHandled):
+        log.info(
+            "allinOne : Step 3 - PG Subject Handled and Subject Applied For Are not Matching  ")
+        log.info("allinOne: Step 3.1 - Dont Consider This Date")
+
+        response = {'Title':  'All in One Dates',
+                    'Status': 'INELIGIBLE',
+                    'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
+                    }
+        return response
+
+    # PG PHD COMBO Checks Start Here
+    if(len(str_dt_phd_por) != 0):
+        if(dt_pg_por > dt_phd_por):
+            toConsider = False
+        else:
+            if(dt_phd_vivo_por != ''):
+                if(dt_phd_vivo_por > DT_OC_CUTOFF_TO_PERIOD):
+                    toConsider = False
+                    response = {'Title':  'All in One Dates',
+                                'Status': 'INELIGIBLE',
+                                'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
+                                }
+                    return response
+
+                else:
+                    if(v_subjApplied != v_phd_subjHandled or v_subjApplied != v_pg_equiv_subjHandled):
+                        toConsider = False
+                        response = {'Title':  'All in One Dates',
+                                    'Status': 'INELIGIBLE',
+                                    'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
+                                    }
+                        return response
+
+            else:
+                toConsider = False
+                response = {'Title':  'All in One Dates',
+                            'Status': 'INELIGIBLE',
+                            'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
+                            }
+                return response
+
+    if(dt_ou_phd_por != ''):
+        if(dt_ou_phd_por > DT_OU_PHD_CUTOFF_TO_PERIOD):
+            toConsider = False
+            response = {'Title':  'All in One Dates',
+                        'Status': 'INELIGIBLE',
+                        'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
+                        }
+            return response
+
+    if(dt_mphil_por != ''):
+        if(dt_mphil_por > DT_OC_CUTOFF_TO_PERIOD):
+            toConsider = False
+            response = {'Title':  'All in One Dates',
+                        'Status': 'INELIGIBLE',
+                        'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
+                        }
+            return response
+
+        if(dt_ou_mphil_por != ''):
+            if(dt_ou_mphil_por > DT_OU_MPHIL_CUTOFF_TO_PERIOD):
+                toConsider = False
+                response = {'Title':  'All in One Dates',
+                            'Status': 'INELIGIBLE',
+                            'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
+                            }
+
+    # Bare Basic Mandatory Validations End Here -----------------------------------------------
+    else:
+        if(dt_top_date < DT_OC_CUTOFF_FROM_PERIOD):
+            strTitle.append(strTitle_PG_50_ONLY)
+            strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+            strTitle.append(strTitle_PG_WITH_PHD)
+
+            if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                toConsider = True
+
+        if(dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_30072002_CUTOFF_TO_PERIOD):
+            strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+            strTitle.append(strTitle_PG_WITH_PHD)
+            strTitle.append(strTitle_MPHIL_BFR_31121993_PHD_BFR_31121993)
+            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+            if(diffAbledCheck == True):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+            else:
+                if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                        toConsider = True
+                elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                        toConsider = True
+
+        if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD):
+            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+            strTitle.append(strTitle_PG_WITH_PHD)
+
+            if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                    toConsider = True
+            elif(diffAbledCheck == True or str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+
+        # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
+        if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date < DT_31052019_CUTOFF_FROM_PERIOD):
+            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+            strTitle.append(strTitle_PG_WITH_PHD)
+
+            if(diffAbledCheck == True or str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+            elif(str_caste == BusinessConstants.OC_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                    toConsider = True
+
+                    toConsider = True
+
+        if ((dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD) or
+            (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD) or
+                (dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD)):
+
+            strTitle.append(strTitle_PG_WITH_PHD)
+
+            if (dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD):
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+                # TODO: Confirm with Sujitha and TRB Sasi Mme
+                strTitle.append(strTitle_PHD_BFR_31122002)
+            elif (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD):
+                strTitle.append(strTitle_PG_WITH_MPHIL)
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+                strTitle.append(strTitle_PG_MPHIL_CORR_OU)
+            elif(dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD):
+                strTitle.append(strTitle_PG_WITH_MPHIL)
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+            if(diffAbledCheck == True):
+                if(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                        toConsider = True
+            elif(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                    toConsider = True
+            elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+
+    print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
+
+    if(toConsider == True):
+
+        diff = dt_top_date - dt_earliestFrom
+
+        dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
+                               " Months and " + str(diff.days) + " Days")
+
+        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
+                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
+                     'PG MARKS': float_pgMarks,
+                     'PG POR Date ': str(dt_pg_por),
+                     'Claim From Date - Period Of Service ': str(dt_elp_fromDt),
+                     'Claim To Date - Period Of Service': str(dt_elp_toDt),
+                     'Subject Handled ': v_subjHandled,
+                     'Subject Applied ': v_subjApplied,
+                     'Caste': str_caste,
+                     'Differently Abled': diffAbledCheck
+                     }
+        finalResponse = ''
+        for str_title in strTitle:
+            finalResponse = {'Title':  str_title,
+                             'Status': 'ELIGIBLE',
+                             'Eligible From Date': str(dt_earliestFrom),
+                             'Eligible To Date': str(dt_top_date),
+                             'Date Difference To Consider': dt_diff_response,
+                             'META_DATA': META_DATA
+                             }
+            if(len(response) == 0):
+                response = finalResponse
+            else:
+                response = response+","+finalResponse
+
     return response
