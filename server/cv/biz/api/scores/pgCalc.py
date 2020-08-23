@@ -1878,17 +1878,16 @@ def allInOne(request):
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
 
-        META_DATA = {'POR Cut Off From Date': str(DT_POR_FROM_CUTOFF),
-                     'POR Cut Off To Date': str(DT_POR_TO_CUTOFF),
-                     'PG MARKS': float_pgMarks,
-                     'PG POR Date ': str(dt_pg_por),
-                     'Claim From Date - Period Of Service ': str(dt_elp_fromDt),
-                     'Claim To Date - Period Of Service': str(dt_elp_toDt),
-                     'Subject Handled ': v_subjHandled,
-                     'Subject Applied ': v_subjApplied,
-                     'Caste': str_caste,
-                     'Differently Abled': diffAbledCheck
-                     }
+        META_DATA = {
+            'PG MARKS': float_pgMarks,
+            'PG POR Date ': str(dt_pg_por),
+            'Claim From Date - Period Of Service ': str(dt_elp_fromDt),
+            'Claim To Date - Period Of Service': str(dt_elp_toDt),
+            'Subject Handled ': v_subjHandled,
+            'Subject Applied ': v_subjApplied,
+            'Caste': str_caste,
+            'Differently Abled': diffAbledCheck
+        }
         finalResponse = ''
         print(strTitle)
         for str_title in strTitle:
