@@ -1716,7 +1716,11 @@ def allInOne(request):
         return response
 
     # PG PHD COMBO Checks Start Here
-    if(len(str_dt_phd_por) != 0):
+    print(str_dt_phd_por)
+    print(dt_pg_por)
+    print(dt_phd_por)
+
+    if(len(str_dt_phd_por) != 0 and dt_phd_por != ''):
         if(dt_pg_por > dt_phd_por):
             toConsider = False
             response = {'Title':  'All in One Dates',
@@ -1886,6 +1890,7 @@ def allInOne(request):
                      'Differently Abled': diffAbledCheck
                      }
         finalResponse = ''
+        print(strTitle)
         for str_title in strTitle:
             finalResponse = {'Title':  str_title,
                              'Status': 'ELIGIBLE',
