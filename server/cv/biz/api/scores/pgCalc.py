@@ -1999,7 +1999,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                     'Reason': ineligible_reason,
                     }
 
-    return response
+    return response, diff
 
 
 @svc_allInOne.post(require_csrf=False)
@@ -2014,17 +2014,42 @@ def allInOne(request):
     dt_range_end_list = [0, 0]
     dt_elp_dt_range_list_to_consider = []
     response = ''
+    # netTotal = datetime(0000, 00, 00).date()
+    grandTotal = relativedelta.relativedelta(
+        years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+    netTotalResponse = ""
+
     for r in dt_rg_json:
         claim_str = str(r["claimNo"])
+        print(claim_str)
+
+        netTotal = relativedelta.relativedelta(
+            years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
         print(claim_str + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
         for dtr in r["dateRange"]:
-            print(dtr["dt_from"])
-            print(dtr["dt_to"])
+            # print(dtr["dt_from"])
+            # print(dtr["dt_to"])
             dt_start_date = datetime.strptime(
                 dtr["dt_from"], '%d/%m/%Y').date()
             dt_end_date = datetime.strptime(dtr["dt_to"], '%d/%m/%Y').date()
-            demoresponse = mainEntry(
+            demoresponse, date_diff = mainEntry(
                 request, claim_str, dt_start_date, dt_end_date)
             response = response, demoresponse
+
+            netTotal = date_diff+netTotal
+
+            totalResponse = {'ClaimID': claim_str,
+                             'Net Total': str(netTotal)
+                             }
+
+        netTotalResponse = netTotalResponse, totalResponse
+        grandTotal = grandTotal+netTotal
+
+    # netTotalResponse = netTotalResponse, netTotalResponse
+    # print(netTotalResponse)
+    grantTotalResponse = {'GrandTotal': str(grandTotal)
+                          }
+    response = grantTotalResponse, netTotalResponse, response
 
     return response
