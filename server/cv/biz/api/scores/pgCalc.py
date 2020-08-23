@@ -1814,8 +1814,10 @@ def allInOne(request):
                         toConsider = True
 
         if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD):
-            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
             strTitle.append(strTitle_PG_WITH_PHD)
+            if(dt_slet_por != '' or dt_net_por != ""):
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
             if(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
