@@ -1745,14 +1745,18 @@ def allInOne(request):
                     print(v_subjApplied)
                     print(v_phd_subjHandled)
                     print(v_phd_equiv_subjHandled)
-                    if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
+                    print("HURRRRRRRRRRRRRRR")
+
+                    if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or
+                            (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
                         toConsider = False
                         response = {'Title':  'All in One Dates',
                                     'Status': 'INELIGIBLE',
                                     'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
                                     }
                         return response
-
+                    else:
+                        toConsider = True
             else:
                 toConsider = False
                 response = {'Title':  'All in One Dates',
@@ -1788,111 +1792,111 @@ def allInOne(request):
                             }
 
     # Bare Basic Mandatory Validations End Here -----------------------------------------------
-    else:
-        print("dt_eligible_from : "+str(dt_earliestFrom))
-        print("dt_eligible_to : "+str(dt_top_date))
+    # else:
+    print("dt_eligible_from : "+str(dt_earliestFrom))
+    print("dt_eligible_to : "+str(dt_top_date))
 
-        if(dt_top_date < DT_OC_CUTOFF_FROM_PERIOD):
-            strTitle.append(strTitle_PG_50_ONLY)
+    if(dt_top_date < DT_OC_CUTOFF_FROM_PERIOD):
+        strTitle.append(strTitle_PG_50_ONLY)
 
-            if(dt_phd_por != ''):
-                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
-                strTitle.append(strTitle_PG_WITH_PHD)
+        if(dt_phd_por != ''):
+            strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+            strTitle.append(strTitle_PG_WITH_PHD)
 
+        if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+            toConsider = True
+
+    if(dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_30072002_CUTOFF_TO_PERIOD):
+        if(dt_phd_por != ''):
+            strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+            strTitle.append(strTitle_PG_WITH_PHD)
+        if(dt_mphil_por != ''):
+            strTitle.append(strTitle_MPHIL_BFR_31121993_PHD_BFR_31121993)
+
+        if(dt_slet_por != '' or dt_net_por != ''):
+            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+        if(diffAbledCheck == True):
+            if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                toConsider = True
+        else:
+            if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                    toConsider = True
+            elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+
+    # if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD): # Open condition combining both
+    if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):
+
+        if(dt_phd_por != ''):
+            strTitle.append(strTitle_PG_WITH_PHD)
+        if(dt_slet_por != '' or dt_net_por != ""):
+            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+        if(str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
+            if(dt_pg_por >= DT_11072016_BC_50_CUTOFF):
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                    toConsider = True
+                elif(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                    toConsider = True
+
+        if(str_caste == BusinessConstants.OC_CATEGORY):
+            if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                toConsider = True
+        elif(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                 toConsider = True
 
-        if(dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_30072002_CUTOFF_TO_PERIOD):
-            if(dt_phd_por != ''):
-                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
-                strTitle.append(strTitle_PG_WITH_PHD)
-            if(dt_mphil_por != ''):
-                strTitle.append(strTitle_MPHIL_BFR_31121993_PHD_BFR_31121993)
+    # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
+    # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):  # As confirmed by Sujitha
 
-            if(dt_slet_por != '' or dt_net_por != ''):
-                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+    if ((dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD) or
+        (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD) or
+            (dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD)):
 
-            if(diffAbledCheck == True):
-                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
-                    toConsider = True
-            else:
-                if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
-                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
-                        toConsider = True
-                elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
-                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
-                        toConsider = True
+        if(dt_phd_por != ''):
+            strTitle.append(strTitle_PG_WITH_PHD)
 
-        # if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD): # Open condition combining both
-        if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):
+        if (dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD):
 
-            if(dt_phd_por != ''):
-                strTitle.append(strTitle_PG_WITH_PHD)
             if(dt_slet_por != '' or dt_net_por != ""):
                 strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
-            if(str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
-                if(dt_pg_por >= DT_11072016_BC_50_CUTOFF):
-                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
-                        toConsider = True
-                    elif(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
-                        toConsider = True
+            if(dt_phd_por != ''):
+                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
+                # TODO: Confirm with Sujitha and TRB Sasi Mme
+                strTitle.append(strTitle_PHD_BFR_31122002)
+        elif (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD):
 
-            if(str_caste == BusinessConstants.OC_CATEGORY):
-                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
-                    toConsider = True
-            elif(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
-                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
-                    toConsider = True
+            if(dt_mphil_por != ''):
+                strTitle.append(strTitle_PG_WITH_MPHIL)
+                strTitle.append(strTitle_PG_MPHIL_CORR_OU)
 
-        # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
-        # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):  # As confirmed by Sujitha
-
-        if ((dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD) or
-            (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD) or
-                (dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD)):
+            if(dt_slet_por != '' or dt_net_por != ""):
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
             if(dt_phd_por != ''):
-                strTitle.append(strTitle_PG_WITH_PHD)
+                strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
 
-            if (dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD):
+        elif(dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD):
 
-                if(dt_slet_por != '' or dt_net_por != ""):
-                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+            if(dt_mphil_por != ''):
+                strTitle.append(strTitle_PG_WITH_MPHIL)
+            if(dt_slet_por != '' or dt_net_por != ""):
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
-                if(dt_phd_por != ''):
-                    strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
-                    # TODO: Confirm with Sujitha and TRB Sasi Mme
-                    strTitle.append(strTitle_PHD_BFR_31122002)
-            elif (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD):
-
-                if(dt_mphil_por != ''):
-                    strTitle.append(strTitle_PG_WITH_MPHIL)
-                    strTitle.append(strTitle_PG_MPHIL_CORR_OU)
-
-                if(dt_slet_por != '' or dt_net_por != ""):
-                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
-
-                if(dt_phd_por != ''):
-                    strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
-
-            elif(dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD):
-
-                if(dt_mphil_por != ''):
-                    strTitle.append(strTitle_PG_WITH_MPHIL)
-                if(dt_slet_por != '' or dt_net_por != ""):
-                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
-
-            if(diffAbledCheck == True):
-                if(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
-                    if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
-                        toConsider = True
-            elif(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
-                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
-                    toConsider = True
-            elif(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
+        if(diffAbledCheck == True):
+            if(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
+        elif(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
+            if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                toConsider = True
+        elif(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
+            if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
+                toConsider = True
 
     print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
 
