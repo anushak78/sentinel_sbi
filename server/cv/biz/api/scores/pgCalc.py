@@ -1745,7 +1745,6 @@ def allInOne(request):
                     print(v_subjApplied)
                     print(v_phd_subjHandled)
                     print(v_phd_equiv_subjHandled)
-                    print("HURRRRRRRRRRRRRRR")
 
                     if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or
                             (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
@@ -1755,8 +1754,6 @@ def allInOne(request):
                                     'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
                                     }
                         return response
-                    else:
-                        toConsider = True
             else:
                 toConsider = False
                 response = {'Title':  'All in One Dates',
@@ -1793,6 +1790,7 @@ def allInOne(request):
 
     # Bare Basic Mandatory Validations End Here -----------------------------------------------
     # else:
+    toConsider = False  # After this this will be set by the validations
     print("dt_eligible_from : "+str(dt_earliestFrom))
     print("dt_eligible_to : "+str(dt_top_date))
 
@@ -1841,8 +1839,9 @@ def allInOne(request):
                     toConsider = True
                 elif(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                     toConsider = True
-
         if(str_caste == BusinessConstants.OC_CATEGORY):
+            print("ISNDIERERE"+float_pgMarks)
+            print(toConsider)
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                 toConsider = True
         elif(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
@@ -1931,5 +1930,10 @@ def allInOne(request):
                 response = finalResponse
             else:
                 response = response, finalResponse
+    else:
+        response = {'Title':  'All in One Dates',
+                    'Status': 'INELIGIBLE',
+                    'Reason': 'A Million Things',
+                    }
 
     return response
