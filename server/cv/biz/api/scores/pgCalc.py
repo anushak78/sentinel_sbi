@@ -58,6 +58,11 @@ svc_allInOne = Service(
     name="biz.api.scores.allInOne", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/allInOne", cors_policy=cors.POLICY)
 
+svc_allInOne222 = Service(
+    name="biz.api.scores.allInOne222", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/allInOne222", cors_policy=cors.POLICY)
+
+
 """
 This method is to check for SLET / NET Check
 
@@ -1467,8 +1472,9 @@ Parameters :
 """
 
 
-@svc_allInOne.post(require_csrf=False)
-def allInOne(request):
+# @svc_allInOne.post(require_csrf=False)
+def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
+
     response = ""
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
@@ -1599,10 +1605,10 @@ def allInOne(request):
         str_dt_ou_mphil_por != '01/01/0001' and len(str_dt_ou_mphil_por) != 0) else ''
 
     # Eligibility Details
-    dt_elp_fromDt = datetime.strptime(request.POST.get(
-        "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
-    dt_elp_toDt = datetime.strptime(request.POST.get(
-        "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+    # dt_elp_fromDt = datetime.strptime(request.POST.get(
+    #     "dt_elp_fromDt", 'No From Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
+    # dt_elp_toDt = datetime.strptime(request.POST.get(
+    #     "dt_elp_toDt", 'No To Date - Eligible Period Of Service Recieved'), '%d/%m/%Y').date()
 
     # Caste and Differently Abled
 
@@ -1619,6 +1625,7 @@ def allInOne(request):
         log.info("allinOne: Step 1.1 - Dont Consider This Date")
 
         response = {'Title':  'All in One Dates',
+                    'ClaimID': claimID,
                     'Status': 'FAIL',
                     'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
                     }
@@ -1701,6 +1708,7 @@ def allInOne(request):
         log.info("allinOne: Step 2.1 - Dont Consider This Date")
 
         response = {'Title':  'All in One Dates',
+                    'ClaimID': claimID,
                     'Status': 'INELIGIBLE',
                     'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
                     }
@@ -1711,6 +1719,7 @@ def allInOne(request):
         log.info("allinOne: Step 3.1 - Dont Consider This Date")
 
         response = {'Title':  'All in One Dates',
+                    'ClaimID': claimID,
                     'Status': 'INELIGIBLE',
                     'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
                     }
@@ -1725,6 +1734,7 @@ def allInOne(request):
         if(dt_pg_por > dt_phd_por):
             toConsider = False
             response = {'Title':  'All in One Dates',
+                        'ClaimID': claimID,
                         'Status': 'INELIGIBLE',
                         'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
                         }
@@ -1735,6 +1745,7 @@ def allInOne(request):
                 if(dt_phd_vivo_por > DT_OC_CUTOFF_TO_PERIOD):
                     toConsider = False
                     response = {'Title':  'All in One Dates',
+                                'ClaimID': claimID,
                                 'Status': 'INELIGIBLE',
                                 'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
                                 }
@@ -1750,6 +1761,7 @@ def allInOne(request):
                             (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
                         toConsider = False
                         response = {'Title':  'All in One Dates',
+                                    'ClaimID': claimID,
                                     'Status': 'INELIGIBLE',
                                     'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
                                     }
@@ -1757,6 +1769,7 @@ def allInOne(request):
             else:
                 toConsider = False
                 response = {'Title':  'All in One Dates',
+                            'ClaimID': claimID,
                             'Status': 'INELIGIBLE',
                             'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
                             }
@@ -1766,6 +1779,7 @@ def allInOne(request):
         if(dt_ou_phd_por > DT_OU_PHD_CUTOFF_TO_PERIOD):
             toConsider = False
             response = {'Title':  'All in One Dates',
+                        'ClaimID': claimID,
                         'Status': 'INELIGIBLE',
                         'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
                         }
@@ -1775,6 +1789,7 @@ def allInOne(request):
         if(dt_mphil_por > DT_OC_CUTOFF_TO_PERIOD):
             toConsider = False
             response = {'Title':  'All in One Dates',
+                        'ClaimID': claimID,
                         'Status': 'INELIGIBLE',
                         'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
                         }
@@ -1784,6 +1799,7 @@ def allInOne(request):
             if(dt_ou_mphil_por > DT_OU_MPHIL_CUTOFF_TO_PERIOD):
                 toConsider = False
                 response = {'Title':  'All in One Dates',
+                            'ClaimID': claimID,
                             'Status': 'INELIGIBLE',
                             'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
                             }
@@ -1965,6 +1981,7 @@ def allInOne(request):
         print(strTitle)
         for str_title in strTitle:
             finalResponse = {'Title':  str_title,
+                             'ClaimID': claimID,
                              'Status': 'ELIGIBLE',
                              'Eligible From Date': str(dt_earliestFrom),
                              'Eligible To Date': str(dt_top_date),
@@ -1977,8 +1994,37 @@ def allInOne(request):
                 response = response, finalResponse
     else:
         response = {'Title':  'All in One Dates',
+                    'ClaimID': claimID,
                     'Status': 'INELIGIBLE',
                     'Reason': ineligible_reason,
                     }
+
+    return response
+
+
+@svc_allInOne.post(require_csrf=False)
+def allInOne(request):
+    print("INSIDEEEEEEEE")
+    dt_elp_dt_range_list = request.POST.get(
+        "dt_elp_dt_ranges", "No List Present")
+
+    print(dt_elp_dt_range_list)
+
+    dt_rg_json = json.loads(dt_elp_dt_range_list)
+    dt_range_end_list = [0, 0]
+    dt_elp_dt_range_list_to_consider = []
+    response = ''
+    for r in dt_rg_json:
+        claim_str = str(r["claimNo"])
+        print(claim_str + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        for dtr in r["dateRange"]:
+            print(dtr["dt_from"])
+            print(dtr["dt_to"])
+            dt_start_date = datetime.strptime(
+                dtr["dt_from"], '%d/%m/%Y').date()
+            dt_end_date = datetime.strptime(dtr["dt_to"], '%d/%m/%Y').date()
+            demoresponse = mainEntry(
+                request, claim_str, dt_start_date, dt_end_date)
+            response = response, demoresponse
 
     return response
