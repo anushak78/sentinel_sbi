@@ -1791,6 +1791,7 @@ def allInOne(request):
     # Bare Basic Mandatory Validations End Here -----------------------------------------------
     # else:
     toConsider = False  # After this this will be set by the validations
+    ineligible_reason = "A Million Things"
     print("dt_eligible_from : "+str(dt_earliestFrom))
     print("dt_eligible_to : "+str(dt_top_date))
 
@@ -1803,6 +1804,9 @@ def allInOne(request):
 
         if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
             toConsider = True
+        else:
+            toConsider = False
+            ineligible_reason = "PG < 19/9/1991 - MARKS < 50 %"
 
     if(dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_30072002_CUTOFF_TO_PERIOD):
         if(dt_phd_por != ''):
@@ -1817,13 +1821,24 @@ def allInOne(request):
         if(diffAbledCheck == True):
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                 toConsider = True
+            else:
+                toConsider = False
+                ineligible_reason = " 19/9/1991 < PG > 30/07/2002 & Disabled &  MARKS < 50 %"
+
         else:
             if(str_caste == BusinessConstants.OC_CATEGORY or BusinessConstants.BC or BusinessConstants.BCM_CATEGORY or BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                     toConsider = True
+                else:
+                    toConsider = False
+                    ineligible_reason = " 19/9/1991 < PG > 30/07/2002 & OC/BC/BCM/MBC &  MARKS < 55 %"
+
             elif(str_caste == BusinessConstants.SC or BusinessConstants.ST_CATEGORY or BusinessConstants.STA_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
+                else:
+                    toConsider = False
+                    ineligible_reason = " 19/9/1991 < PG > 30/07/2002 & SC/ST/STA &  MARKS < 50%"
 
     # if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD): # Open condition combining both
     if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):
@@ -1837,16 +1852,32 @@ def allInOne(request):
             if(dt_pg_por >= DT_11072016_BC_50_CUTOFF):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
-                elif(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
+                else:
+                    toConsider = False
+                    ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & BC/BCM/MBC & PGR >11/07/2016 &  MARKS < 50%"
+
+            else:
+                if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                     toConsider = True
+                else:
+                    toConsider = False
+                    ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & BC/BCM/MBC & PGR < 11/07/2016 &  MARKS < 55%"
+
         if(str_caste == BusinessConstants.OC_CATEGORY):
             print("ISNDIERERE"+float_pgMarks)
             print(toConsider)
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                 toConsider = True
+            else:
+                toConsider = False
+                ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & OC &  MARKS < 55%"
+
         elif(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                 toConsider = True
+            else:
+                toConsider = False
+                ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & DIFF ABLED or SC/ST/STA &  MARKS < 50%"
 
     # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
     # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):  # As confirmed by Sujitha
@@ -1890,12 +1921,26 @@ def allInOne(request):
             if(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
                 if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                     toConsider = True
+                else:
+                    toConsider = False
+                    ineligible_reason = str(dt_earliestFrom) + "< PG >" + str(
+                        dt_top_date) + " & SC/ST/STA &  MARKS < 50%"
+
         elif(str_caste == BusinessConstants.OC_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                 toConsider = True
+            else:
+                toConsider = False
+                ineligible_reason = str(dt_earliestFrom) + "< PG >" + str(
+                    dt_top_date) + " & OC/BC/BCM/MBC &  MARKS < 55%"
+
         elif(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY):
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_50_PER)):
                 toConsider = True
+            else:
+                toConsider = False
+                ineligible_reason = str(dt_earliestFrom) + "< PG >" + str(
+                    dt_top_date) + " & SC/ST/STA &  MARKS < 50%"
 
     print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
 
@@ -1933,7 +1978,7 @@ def allInOne(request):
     else:
         response = {'Title':  'All in One Dates',
                     'Status': 'INELIGIBLE',
-                    'Reason': 'A Million Things',
+                    'Reason': ineligible_reason,
                     }
 
     return response
