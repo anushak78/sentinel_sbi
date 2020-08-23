@@ -1828,7 +1828,9 @@ def allInOne(request):
 
         # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
         if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date < DT_31052019_CUTOFF_FROM_PERIOD):
-            strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+            if(dt_slet_por != '' or dt_net_por != ""):
+                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
             strTitle.append(strTitle_PG_WITH_PHD)
 
             if(diffAbledCheck == True or str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
@@ -1847,18 +1849,25 @@ def allInOne(request):
             strTitle.append(strTitle_PG_WITH_PHD)
 
             if (dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD):
-                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+                if(dt_slet_por != '' or dt_net_por != ""):
+                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
                 strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
                 # TODO: Confirm with Sujitha and TRB Sasi Mme
                 strTitle.append(strTitle_PHD_BFR_31122002)
             elif (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD):
                 strTitle.append(strTitle_PG_WITH_MPHIL)
-                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
+                if(dt_slet_por != '' or dt_net_por != ""):
+                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+
                 strTitle.append(strTitle_PG_WITH_PHD_CORR_OU)
                 strTitle.append(strTitle_PG_MPHIL_CORR_OU)
             elif(dt_earliestFrom > DT_03042009_CUTOFF_FROM_PERIOD and dt_top_date < DT_29062010_CUTOFF_TO_PERIOD):
                 strTitle.append(strTitle_PG_WITH_MPHIL)
-                strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
+                if(dt_slet_por != '' or dt_net_por != ""):
+                    strTitle.append(strTitle_PG_55_NETSLET_OC_DA_50)
 
             if(diffAbledCheck == True):
                 if(str_caste == BusinessConstants.SC_CATEGORY or str_caste == BusinessConstants.ST_CATEGORY or str_caste == BusinessConstants.STA_CATEGORY or str_caste == BusinessConstants.BC_CATEGORY or str_caste == BusinessConstants.BCM_CATEGORY or str_caste == BusinessConstants.MBC_DNC_CATEGORY):
