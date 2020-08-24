@@ -1779,8 +1779,8 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                          'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
                          })
         return response, noDateDiff
-    else:
-        dt_elp_fromDt = dt_earliest_2_consider
+    # else:
+    #     dt_elp_fromDt = dt_earliest_2_consider
 
     dt_top_date = DT_POR_TO_CUTOFF if(
         dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
@@ -2397,8 +2397,8 @@ def singleEntry(request):
                          'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
                          })
         return response
-    else:
-        dt_elp_fromDt = dt_earliest_2_consider
+    # else:
+        #dt_elp_fromDt = dt_earliest_2_consider
 
     dt_top_date = DT_POR_TO_CUTOFF if(
         dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
