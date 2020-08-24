@@ -1473,7 +1473,7 @@ Parameters :
 
 
 # @svc_allInOne.post(require_csrf=False)
-def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
+def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
 
     response = []
     toConsider = False  # Toggle Flag to calculate the Date Difference
@@ -1557,6 +1557,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
         response.append({'Title':  'All in One Dates',
                          'Status': 'FAIL',
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'CandidateStatus': 'INELIGIBLE',
                          'Reason': 'Age Greater than 57  - Ineligible',
                          })
@@ -1569,6 +1572,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
             response = {'Title':  'All in One Dates',
                         'Status': 'FAIL',
+                        'Date Range Count ': cnt_dt_rng,
+                        'Claim From Date': str(dt_elp_fromDt),
+                        'Claim To Date': str(dt_elp_toDt),
                         'CandidateStatus': 'INELIGIBLE',
                         'Reason': 'Age Greater than & Equal To 55 And Less than 57 & No Retirement Date  - Ineligible',
                         }
@@ -1629,6 +1635,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
         response.append({'Title':  'All in One Dates',
                          'ClaimID': claimID,
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'Status': 'FAIL',
                          'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
                          })
@@ -1695,6 +1704,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
         response.append({'Title':  'All in One Dates',
                          'ClaimID': claimID,
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'Status': 'INELIGIBLE',
                          'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
                          })
@@ -1706,6 +1718,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
         response.append({'Title':  'All in One Dates',
                          'ClaimID': claimID,
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'Status': 'INELIGIBLE',
                          'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
                          })
@@ -1721,6 +1736,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
             toConsider = False
             response.append({'Title':  'All in One Dates',
                              'ClaimID': claimID,
+                             'Date Range Count ': cnt_dt_rng,
+                             'Claim From Date': str(dt_elp_fromDt),
+                             'Claim To Date': str(dt_elp_toDt),
                              'Status': 'INELIGIBLE',
                              'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
                              })
@@ -1732,6 +1750,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                     toConsider = False
                     response.append({'Title':  'All in One Dates',
                                      'ClaimID': claimID,
+                                     'Date Range Count ': cnt_dt_rng,
+                                     'Claim From Date': str(dt_elp_fromDt),
+                                     'Claim To Date': str(dt_elp_toDt),
                                      'Status': 'INELIGIBLE',
                                      'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
                                      })
@@ -1749,6 +1770,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                         toConsider = False
                         response.append({'Title':  'All in One Dates',
                                          'ClaimID': claimID,
+                                         'Date Range Count ': cnt_dt_rng,
+                                         'Claim From Date': str(dt_elp_fromDt),
+                                         'Claim To Date': str(dt_elp_toDt),
                                          'Status': 'INELIGIBLE',
                                          'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
                                          })
@@ -1757,6 +1781,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                 toConsider = False
                 response.append({'Title':  'All in One Dates',
                                  'ClaimID': claimID,
+                                 'Date Range Count ': cnt_dt_rng,
+                                 'Claim From Date': str(dt_elp_fromDt),
+                                 'Claim To Date': str(dt_elp_toDt),
                                  'Status': 'INELIGIBLE',
                                  'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
                                  })
@@ -1774,7 +1801,10 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
         print("Inside the loop")
         toConsider = False
         response.append({'Title':  'All in One Dates',
-                         #  'ClaimID': claimID,
+                         'ClaimID': claimID,
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'Status': 'INELIGIBLE',
                          'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
                          })
@@ -1796,6 +1826,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
             toConsider = False
             response.append({'Title':  'All in One Dates',
                              'ClaimID': claimID,
+                             'Date Range Count ': cnt_dt_rng,
+                             'Claim From Date': str(dt_elp_fromDt),
+                             'Claim To Date': str(dt_elp_toDt),
                              'Status': 'INELIGIBLE',
                              'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
                              })
@@ -1806,6 +1839,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
             toConsider = False
             response.append({'Title':  'All in One Dates',
                              'ClaimID': claimID,
+                             'Date Range Count ': cnt_dt_rng,
+                             'Claim From Date': str(dt_elp_fromDt),
+                             'Claim To Date': str(dt_elp_toDt),
                              'Status': 'INELIGIBLE',
                              'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
                              })
@@ -1816,6 +1852,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                 toConsider = False
                 response.append({'Title':  'All in One Dates',
                                  'ClaimID': claimID,
+                                 'Date Range Count ': cnt_dt_rng,
+                                 'Claim From Date': str(dt_elp_fromDt),
+                                 'Claim To Date': str(dt_elp_toDt),
                                  'Status': 'INELIGIBLE',
                                  'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
                                  })
@@ -1998,6 +2037,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
         for str_title in strTitle:
             finalResponse = {'Title':  str_title,
                              'ClaimID': claimID,
+                             'Date Range Count ': cnt_dt_rng,
+                             'Claim From Date': str(dt_elp_fromDt),
+                             'Claim To Date': str(dt_elp_toDt),
                              'Status': 'ELIGIBLE',
                              'Eligible From Date': str(dt_earliestFrom),
                              'Eligible To Date': str(dt_top_date),
@@ -2008,6 +2050,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
     else:
         response.append({'Title':  'All in One Dates',
                          'ClaimID': claimID,
+                         'Date Range Count ': cnt_dt_rng,
+                         'Claim From Date': str(dt_elp_fromDt),
+                         'Claim To Date': str(dt_elp_toDt),
                          'Status': 'INELIGIBLE',
                          'Reason': ineligible_reason,
                          })
@@ -2036,32 +2081,28 @@ def allInOne(request):
 
     for r in dt_rg_json:
         claim_str = str(r["claimNo"])
-        print(claim_str)
 
         netTotal = relativedelta.relativedelta(
             years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
 
         totalResponse = ''
         localresponse = []
-        print(claim_str + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        print("total Response >>>>>>>>>"+totalResponse)
+        cnt_dt_rng = 0
         for dtr in r["dateRange"]:
-            # print(dtr["dt_from"])
-            # print(dtr["dt_to"])
+            demoresponse = ''
+            cnt_dt_rng += 1
             dt_start_date = datetime.strptime(
                 dtr["dt_from"], '%d/%m/%Y').date()
             dt_end_date = datetime.strptime(dtr["dt_to"], '%d/%m/%Y').date()
-            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..")
-            print(claim_str)
-            print(dt_start_date)
-            print(dt_end_date)
-            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..")
 
             demoresponse, date_diff = mainEntry(
-                request, claim_str, dt_start_date, dt_end_date)
+                request, cnt_dt_rng, claim_str, dt_start_date, dt_end_date)
 
+            print("Dennis..")
+            print(demoresponse)
+            print("Dennis ..")
             localresponse.append(demoresponse)
-            demoresponse = ''
+
             netTotal = date_diff+netTotal
 
             str_net_total = str(str(netTotal.years) + " Years and " + str(netTotal.months) +
@@ -2071,9 +2112,10 @@ def allInOne(request):
                              'Net Total': str_net_total,
                              'claims': localresponse
                              }
+            # localresponse = []
             # localresponse.append(totalResponse)
-            netTotalResponse.append(totalResponse)
-            # netTotalResponse.append(localresponse)
+        netTotalResponse.append(totalResponse)
+        # netTotalResponse.append(localresponse)
         grandTotal = grandTotal+netTotal
 
     # netTotalResponse = netTotalResponse, netTotalResponse
