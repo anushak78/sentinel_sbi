@@ -1646,9 +1646,6 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
     if dt_net_por != '':
         dt_sort_list.append(dt_net_por)
 
-    if dt_phd_por != '':
-        dt_sort_list.append(dt_phd_por)
-
     # ------------------------------------------------------------------------
     # End Get all Values from Input
     # -----------------------------------------------------------------------
@@ -1761,6 +1758,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                  'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
                                  })
                 return response
+
+    if dt_phd_por != '':
+        dt_sort_list.append(dt_phd_por)
 
     dt_earliest_2_consider = min(dt_sort_list)
 
