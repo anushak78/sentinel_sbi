@@ -2367,7 +2367,21 @@ def singleEntry(request):
 
     dt_earliest_2_consider = min(dt_sort_list)
 
+    print("Dennis is a good boy")
+    print("dt_elp_fromDt" + str(dt_elp_fromDt))
+    print("dt_earliest_2_consider" + str(dt_earliest_2_consider))
+    print("Dennis is a good boy")
+
     if (dt_elp_fromDt < dt_earliest_2_consider):
+        print("Inside the loop")
+        toConsider = False
+        response.append({'Title':  'All in One Dates',
+                         #  'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
+                         })
+        return response
+    else:
         dt_elp_fromDt = dt_earliest_2_consider
 
     dt_top_date = DT_POR_TO_CUTOFF if(
