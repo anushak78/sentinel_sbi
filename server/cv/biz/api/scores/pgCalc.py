@@ -1964,7 +1964,6 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
     diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
     if(toConsider == True):
 
-
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
 
@@ -2046,7 +2045,7 @@ def allInOne(request):
                 request, claim_str, dt_start_date, dt_end_date)
 
             localresponse.append(demoresponse)
-
+            demoresponse = ''
             netTotal = date_diff+netTotal
 
             str_net_total = str(str(netTotal.years) + " Years and " + str(netTotal.months) +
