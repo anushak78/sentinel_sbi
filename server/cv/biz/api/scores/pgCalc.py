@@ -2578,20 +2578,20 @@ def singleEntry(request):
         finalResponse = ''
         print(strTitle)
         for str_title in strTitle:
+            print("inside the ging")
             finalResponse = {'Title':  str_title,
-                             'ClaimID': claimID,
                              'Status': 'ELIGIBLE',
                              'Eligible From Date': str(dt_earliestFrom),
                              'Eligible To Date': str(dt_top_date),
-                             'Date Difference To Consider': dt_diff_response,
+                             'Date Difference To Consider': str(dt_diff_response),
                              'META_DATA': META_DATA
                              }
+            print("outside the gang")
             response.append(finalResponse)
     else:
         response.append({'Title':  'All in One Dates',
-                         'ClaimID': claimID,
                          'Status': 'INELIGIBLE',
                          'Reason': ineligible_reason,
                          })
 
-    return response, diff
+    return response
