@@ -1475,7 +1475,7 @@ Parameters :
 # @svc_allInOne.post(require_csrf=False)
 def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
-    response = ""
+    response = []
     toConsider = False  # Toggle Flag to calculate the Date Difference
 
     # -----------------------------------------------------------------------
@@ -1552,11 +1552,11 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
         log.info("allinOne : Step 1 - Age Greater than 57   ")
         log.info("allinOne: Step 1.1 - Dont Consider This Date")
 
-        response = {'Title':  'All in One Dates',
-                    'Status': 'FAIL',
-                    'CandidateStatus': 'INELIGIBLE',
-                    'Reason': 'Age Greater than 57  - Ineligible',
-                    }
+        response.append({'Title':  'All in One Dates',
+                         'Status': 'FAIL',
+                         'CandidateStatus': 'INELIGIBLE',
+                         'Reason': 'Age Greater than 57  - Ineligible',
+                         })
         return response
     elif(55 <= age_diff.years > 57):
         if (dt_retirement == "No Date Of Retirement Recieved"):
@@ -1624,11 +1624,11 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
         log.info("allinOne : Step 1 - PHD &  SLET & NET DATE ARE EMPTY  ")
         log.info("allinOne: Step 1.1 - Dont Consider This Date")
 
-        response = {'Title':  'All in One Dates',
-                    'ClaimID': claimID,
-                    'Status': 'FAIL',
-                    'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
-                    }
+        response.append({'Title':  'All in One Dates',
+                         'ClaimID': claimID,
+                         'Status': 'FAIL',
+                         'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
+                         })
         return response
 
     dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date() if(
@@ -1707,22 +1707,22 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
         log.info("allinOne : Step 2 - PG PHD NET SLET POR DATE > 04.10.2019  ")
         log.info("allinOne: Step 2.1 - Dont Consider This Date")
 
-        response = {'Title':  'All in One Dates',
-                    'ClaimID': claimID,
-                    'Status': 'INELIGIBLE',
-                    'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
-                    }
+        response.append({'Title':  'All in One Dates',
+                         'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
+                         })
         return response
     elif(v_subjApplied != v_subjHandled and v_subjApplied != v_pg_equiv_subjHandled):
         log.info(
             "allinOne : Step 3 - PG Subject Handled and Subject Applied For Are not Matching  ")
         log.info("allinOne: Step 3.1 - Dont Consider This Date")
 
-        response = {'Title':  'All in One Dates',
-                    'ClaimID': claimID,
-                    'Status': 'INELIGIBLE',
-                    'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
-                    }
+        response.append({'Title':  'All in One Dates',
+                         'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
+                         })
         return response
 
     # PG PHD COMBO Checks Start Here
@@ -1733,22 +1733,22 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
     if(len(str_dt_phd_por) != 0 and dt_phd_por != ''):
         if(dt_pg_por > dt_phd_por):
             toConsider = False
-            response = {'Title':  'All in One Dates',
-                        'ClaimID': claimID,
-                        'Status': 'INELIGIBLE',
-                        'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
-                        }
+            response.append({'Title':  'All in One Dates',
+                             'ClaimID': claimID,
+                             'Status': 'INELIGIBLE',
+                             'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
+                             })
             return response
 
         else:
             if(dt_phd_vivo_por != ''):
                 if(dt_phd_vivo_por > DT_OC_CUTOFF_TO_PERIOD):
                     toConsider = False
-                    response = {'Title':  'All in One Dates',
-                                'ClaimID': claimID,
-                                'Status': 'INELIGIBLE',
-                                'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
-                                }
+                    response.append({'Title':  'All in One Dates',
+                                     'ClaimID': claimID,
+                                     'Status': 'INELIGIBLE',
+                                     'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
+                                     })
                     return response
                 else:
                     # phdSubjToVerify  = v_phd_subjHandled if(v_phd_subjHandled != '') else ''
@@ -1760,49 +1760,49 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                     if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or
                             (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
                         toConsider = False
-                        response = {'Title':  'All in One Dates',
-                                    'ClaimID': claimID,
-                                    'Status': 'INELIGIBLE',
-                                    'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
-                                    }
+                        response.append({'Title':  'All in One Dates',
+                                         'ClaimID': claimID,
+                                         'Status': 'INELIGIBLE',
+                                         'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
+                                         })
                         return response
             else:
                 toConsider = False
-                response = {'Title':  'All in One Dates',
-                            'ClaimID': claimID,
-                            'Status': 'INELIGIBLE',
-                            'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
-                            }
+                response.append({'Title':  'All in One Dates',
+                                 'ClaimID': claimID,
+                                 'Status': 'INELIGIBLE',
+                                 'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
+                                 })
                 return response
 
     if(dt_ou_phd_por != ''):
         if(dt_ou_phd_por > DT_OU_PHD_CUTOFF_TO_PERIOD):
             toConsider = False
-            response = {'Title':  'All in One Dates',
-                        'ClaimID': claimID,
-                        'Status': 'INELIGIBLE',
-                        'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
-                        }
+            response.append({'Title':  'All in One Dates',
+                             'ClaimID': claimID,
+                             'Status': 'INELIGIBLE',
+                             'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
+                             })
             return response
 
     if(dt_mphil_por != ''):
         if(dt_mphil_por > DT_OC_CUTOFF_TO_PERIOD):
             toConsider = False
-            response = {'Title':  'All in One Dates',
-                        'ClaimID': claimID,
-                        'Status': 'INELIGIBLE',
-                        'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
-                        }
+            response.append({'Title':  'All in One Dates',
+                             'ClaimID': claimID,
+                             'Status': 'INELIGIBLE',
+                             'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
+                             })
             return response
 
         if(dt_ou_mphil_por != ''):
             if(dt_ou_mphil_por > DT_OU_MPHIL_CUTOFF_TO_PERIOD):
                 toConsider = False
-                response = {'Title':  'All in One Dates',
-                            'ClaimID': claimID,
-                            'Status': 'INELIGIBLE',
-                            'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
-                            }
+                response.append({'Title':  'All in One Dates',
+                                 'ClaimID': claimID,
+                                 'Status': 'INELIGIBLE',
+                                 'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
+                                 })
 
     # Bare Basic Mandatory Validations End Here -----------------------------------------------
     # else:
@@ -1988,16 +1988,13 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                              'Date Difference To Consider': dt_diff_response,
                              'META_DATA': META_DATA
                              }
-            if(len(response) == 0):
-                response = finalResponse
-            else:
-                response = response, finalResponse
+            response.append(finalResponse)
     else:
-        response = {'Title':  'All in One Dates',
-                    'ClaimID': claimID,
-                    'Status': 'INELIGIBLE',
-                    'Reason': ineligible_reason,
-                    }
+        response.append({'Title':  'All in One Dates',
+                         'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': ineligible_reason,
+                         })
 
     return response, diff
 
@@ -2013,12 +2010,13 @@ def allInOne(request):
     dt_rg_json = json.loads(dt_elp_dt_range_list)
     dt_range_end_list = [0, 0]
     dt_elp_dt_range_list_to_consider = []
-    response = ''
+
+    response = []
     # netTotal = datetime(0000, 00, 00).date()
     grandTotal = relativedelta.relativedelta(
         years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
 
-    netTotalResponse = ""
+    netTotalResponse = []
 
     for r in dt_rg_json:
         claim_str = str(r["claimNo"])
@@ -2026,30 +2024,45 @@ def allInOne(request):
 
         netTotal = relativedelta.relativedelta(
             years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        totalResponse = ''
+        localresponse = []
         print(claim_str + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+        print("total Response >>>>>>>>>"+totalResponse)
         for dtr in r["dateRange"]:
             # print(dtr["dt_from"])
             # print(dtr["dt_to"])
             dt_start_date = datetime.strptime(
                 dtr["dt_from"], '%d/%m/%Y').date()
             dt_end_date = datetime.strptime(dtr["dt_to"], '%d/%m/%Y').date()
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..")
+            print(claim_str)
+            print(dt_start_date)
+            print(dt_end_date)
+            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..")
+
             demoresponse, date_diff = mainEntry(
                 request, claim_str, dt_start_date, dt_end_date)
-            response = response, demoresponse
+
+            localresponse.append(demoresponse)
 
             netTotal = date_diff+netTotal
 
             totalResponse = {'ClaimID': claim_str,
-                             'Net Total': str(netTotal)
+                             'Net Total': str(netTotal),
+                             'claims': localresponse
                              }
-
-        netTotalResponse = netTotalResponse, totalResponse
+            # localresponse.append(totalResponse)
+            netTotalResponse.append(totalResponse)
+            # netTotalResponse.append(localresponse)
         grandTotal = grandTotal+netTotal
 
     # netTotalResponse = netTotalResponse, netTotalResponse
     # print(netTotalResponse)
-    grantTotalResponse = {'GrandTotal': str(grandTotal)
-                          }
-    response = grantTotalResponse, netTotalResponse, response
+    grantTotalResponse = {
+        'Grand-Total': str(grandTotal),
+        'Overall-claims': netTotalResponse
+    }
+    response.append(grantTotalResponse)
 
     return response
