@@ -1961,9 +1961,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
 
     print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
 
+    diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
     if(toConsider == True):
 
-        diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
@@ -2049,8 +2049,11 @@ def allInOne(request):
 
             netTotal = date_diff+netTotal
 
+            str_net_total = str(str(netTotal.years) + " Years and " + str(netTotal.months) +
+                                " Months and " + str(netTotal.days) + " Days")
+
             totalResponse = {'ClaimID': claim_str,
-                             'Net Total': str(netTotal),
+                             'Net Total': str_net_total,
                              'claims': localresponse
                              }
             # localresponse.append(totalResponse)
@@ -2060,8 +2063,12 @@ def allInOne(request):
 
     # netTotalResponse = netTotalResponse, netTotalResponse
     # print(netTotalResponse)
+
+    str_grand_total = str(str(grandTotal.years) + " Years and " + str(grandTotal.months) +
+                          " Months and " + str(grandTotal.days) + " Days")
+
     grantTotalResponse = {
-        'Grand-Total': str(grandTotal),
+        'Grand-Total': str_grand_total,
         'Overall-claims': netTotalResponse
     }
     response.append(grantTotalResponse)
