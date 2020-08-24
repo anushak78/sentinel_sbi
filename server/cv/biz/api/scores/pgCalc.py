@@ -1510,6 +1510,9 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
     DT_02042009_CUTOFF_TO_PERIOD = datetime(2009, 4, 2).date()
     DT_11072016_BC_50_CUTOFF = datetime(2016, 7, 11).date()
 
+    noDateDiff = relativedelta.relativedelta(
+        years=0, months=0, days=0, hours=0, minutes=0, seconds=0, microseconds=0)
+
     # DT_30062010_CUTOFF_FROM_PERIOD = datetime(2010, 6, 30).date()
     # DT_02042009_CUTOFF_TO_PERIOD = datetime(2018, 7, 17).date()
 
@@ -1557,7 +1560,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                          'CandidateStatus': 'INELIGIBLE',
                          'Reason': 'Age Greater than 57  - Ineligible',
                          })
-        return response
+        return response, noDateDiff
     elif(55 <= age_diff.years > 57):
         if (dt_retirement == "No Date Of Retirement Recieved"):
             log.info(
@@ -1569,7 +1572,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                         'CandidateStatus': 'INELIGIBLE',
                         'Reason': 'Age Greater than & Equal To 55 And Less than 57 & No Retirement Date  - Ineligible',
                         }
-            return response
+            return response, noDateDiff
 # TODO : What if the date is present , confirm with TRB Sasi Mme.
     # PG Details
 
@@ -1629,7 +1632,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                          'Status': 'FAIL',
                          'Reason': 'ALL 3 DATES ( PHD / NET / SLET ) ARE EMPTY - Dont Consider This Date',
                          })
-        return response
+        return response, noDateDiff
 
     dt_slet_por = datetime.strptime(str_dt_slet_por, '%d/%m/%Y').date() if(
         str_dt_slet_por != '01/01/0001' and len(str_dt_slet_por) != 0) else ''
@@ -1695,7 +1698,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                          'Status': 'INELIGIBLE',
                          'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
                          })
-        return response
+        return response, noDateDiff
     elif(v_subjApplied != v_subjHandled and v_subjApplied != v_pg_equiv_subjHandled):
         log.info(
             "allinOne : Step 3 - PG Subject Handled and Subject Applied For Are not Matching  ")
@@ -1706,7 +1709,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                          'Status': 'INELIGIBLE',
                          'Reason': 'PG Subject Handled and Subject Applied For Are not Matching - Dont Consider This Date',
                          })
-        return response
+        return response, noDateDiff
 
     # PG PHD COMBO Checks Start Here
     print(str_dt_phd_por)
@@ -1721,7 +1724,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                              'Status': 'INELIGIBLE',
                              'Reason': 'PG POR DATE > PHD POR DATE   - Dont Consider This Date',
                              })
-            return response
+            return response, noDateDiff
 
         else:
             if(dt_phd_vivo_por != ''):
@@ -1732,7 +1735,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                      'Status': 'INELIGIBLE',
                                      'Reason': 'PHD VIVA VOCE DATE > 4/10/2019   - Dont Consider This Date',
                                      })
-                    return response
+                    return response, noDateDiff
                 else:
                     dt_phd_por = dt_phd_vivo_por
                     # phdSubjToVerify  = v_phd_subjHandled if(v_phd_subjHandled != '') else ''
@@ -1749,7 +1752,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                          'Status': 'INELIGIBLE',
                                          'Reason': 'SUBJECT APPLIED Vs PHD SUBJECT OR PHD EQUIV SUBJECT DONT MATCH  - Dont Consider This Date',
                                          })
-                        return response
+                        return response, noDateDiff
             else:
                 toConsider = False
                 response.append({'Title':  'All in One Dates',
@@ -1757,14 +1760,26 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                  'Status': 'INELIGIBLE',
                                  'Reason': 'PHD VIVA VOCE DATE NOT AVAILABLE - Dont Consider This Date',
                                  })
-                return response
+                return response, noDateDiff
 
     if dt_phd_por != '':
         dt_sort_list.append(dt_phd_por)
 
     dt_earliest_2_consider = min(dt_sort_list)
 
+    # if (dt_elp_fromDt < dt_earliest_2_consider):
+    #     dt_elp_fromDt = dt_earliest_2_consider
+
     if (dt_elp_fromDt < dt_earliest_2_consider):
+        print("Inside the loop")
+        toConsider = False
+        response.append({'Title':  'All in One Dates',
+                         #  'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
+                         })
+        return response, noDateDiff
+    else:
         dt_elp_fromDt = dt_earliest_2_consider
 
     dt_top_date = DT_POR_TO_CUTOFF if(
@@ -1784,7 +1799,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                              'Status': 'INELIGIBLE',
                              'Reason': 'PHD OU POR >  3/4/2009 - Dont Consider This Date',
                              })
-            return response
+            return response, noDateDiff
 
     if(dt_mphil_por != ''):
         if(dt_mphil_por > DT_OC_CUTOFF_TO_PERIOD):
@@ -1794,7 +1809,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                              'Status': 'INELIGIBLE',
                              'Reason': 'MPHIL POR >  4/10/2019 - Dont Consider This Date',
                              })
-            return response
+            return response, noDateDiff
 
         if(dt_ou_mphil_por != ''):
             if(dt_ou_mphil_por > DT_OU_MPHIL_CUTOFF_TO_PERIOD):
@@ -1804,6 +1819,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                  'Status': 'INELIGIBLE',
                                  'Reason': 'MPHIL OU POR >  3/4/2009 - Dont Consider This Date',
                                  })
+                return response, noDateDiff
 
     # Bare Basic Mandatory Validations End Here -----------------------------------------------
     # else:
