@@ -1751,6 +1751,7 @@ def mainEntry(request, claimID, dt_elp_fromDt, dt_elp_toDt):
                                      })
                     return response
                 else:
+                    dt_phd_por = dt_phd_vivo_por
                     # phdSubjToVerify  = v_phd_subjHandled if(v_phd_subjHandled != '') else ''
                     # phdEquivSubjToVerify =  v_pg_equiv_subjHandled if(v_pg_equiv_subjHandled != '') else ''
                     print(v_subjApplied)
