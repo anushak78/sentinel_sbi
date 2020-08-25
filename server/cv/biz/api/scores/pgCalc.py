@@ -1797,23 +1797,38 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
     # if (dt_elp_fromDt < dt_earliest_2_consider):
     #     dt_elp_fromDt = dt_earliest_2_consider
 
-    if (dt_elp_fromDt < dt_earliest_2_consider):
-        print("Inside the loop")
-        toConsider = False
-        response.append({'Title':  'All in One Dates',
-                         'ClaimID': claimID,
-                         'Date Range Count ': cnt_dt_rng,
-                         'Claim From Date': str(dt_elp_fromDt),
-                         'Claim To Date': str(dt_elp_toDt),
-                         'Status': 'INELIGIBLE',
-                         'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
-                         })
-        return response, noDateDiff
+    # if (dt_elp_fromDt < dt_earliest_2_consider):
+    #     print("Inside the loop")
+    #     toConsider = False
+    #     response.append({'Title':  'All in One Dates',
+    #                      'ClaimID': claimID,
+    #                      'Date Range Count ': cnt_dt_rng,
+    #                      'Claim From Date': str(dt_elp_fromDt),
+    #                      'Claim To Date': str(dt_elp_toDt),
+    #                      'Status': 'INELIGIBLE',
+    #                      'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
+    #                      })
+    #     return response, noDateDiff
     # else:
     #     dt_elp_fromDt = dt_earliest_2_consider
 
     dt_top_date = DT_POR_TO_CUTOFF if(
         dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
+
+    if (dt_earliest_2_consider > dt_top_date):
+        print("Inside the loop")
+        toConsider = False
+        response.append({'Title':  'All in One Dates',
+                         #  'ClaimID': claimID,
+                         'Status': 'INELIGIBLE',
+                         'Reason': 'Earliest 2  Consider Date > To Date - Dont Consider This Date',
+                         'dt_earliest_2_consider': str(dt_earliest_2_consider),
+                         'dt_elp_fromDt': str(dt_elp_fromDt)
+                         })
+        print(response)
+        return response, noDateDiff
+    else:
+        dt_elp_fromDt = dt_earliest_2_consider
 
     dt_earliestFrom = dt_elp_fromDt
     print("From Date & To Date >>>>>>>>>>>>>>>>>>>>>>>")
