@@ -3145,16 +3145,6 @@
       "q_id": 7
     },
     {
-      "question": "Whether the consolidated teaching experience matched with the claimed experience as per the application?",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 39,
-      "q_id": 8
-    },
-    {
       "question": "Is there any period of teaching experience claimed from foreign university?",
       "options": {
         "option1": "Yes",

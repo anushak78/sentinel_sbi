@@ -7,6 +7,7 @@
     var vm = this;
     $scope.urlPath = window.location.origin;
     $scope.orchEntry = {};
+    $scope.claims = {};
     $scope.packages = {
       name: 'candidates',
       finalAction: false,
@@ -288,7 +289,6 @@
       vm.doc394 = '';
       vm.doc395 = '';
       vm.doc396 = '';
-      vm.doc398 = '';
       vm.doc399 = '';
       vm.doc3910 = '';
       vm.doc3911 = '';
@@ -1036,7 +1036,6 @@
       vm.radio_values.init_doc394 = "";
       vm.radio_values.init_doc395 = "";
       vm.radio_values.init_doc396 = "";
-      vm.radio_values.init_doc398 = "";
       vm.radio_values.init_doc399 = "";
       vm.radio_values.init_doc3910 = "";
       vm.radio_values.init_doc3911 = "";
@@ -1788,7 +1787,6 @@
       '39c4': 'Certificate have any PTA Experience',
       '39c5': 'No. of experience certificate',
       '39c6': 'Claims and experience documents uploaded matches',
-      '39c8': 'Consolidated teaching experience matched with the claimed experience as per the application',
       '39c9': 'Period of teaching experience claimed from foreign university',
       '39c10': 'Experience Certificate issued by Competent Authority',
       '39c11': 'Date of countersigning authority between 04-10-2019 to  30.11.2019',
@@ -2550,9 +2548,9 @@
         console.log(object);
         if (object['code'] == 1) {
           //to reinitialize ranges of work experience
-          for(var i=0; i< 35; i++){
-            $rootScope.documentWithQuestions['Work Experience'][i+187]['ranges'] = [1];
-          }
+          // for(var i=0; i< 35; i++){
+          //   $rootScope.documentWithQuestions['Work Experience'][i+187]['ranges'] = [1];
+          // }
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
           $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
@@ -2881,9 +2879,9 @@
         }
       }
 
-      if($scope.selectedDocType == 'Work Experience'){
-        var answers = [];
-      }
+      // if($scope.selectedDocType == 'Work Experience'){
+      //   var answers = [];
+      // }
 
 
       console.log($scope.finalJsonData);
@@ -2950,7 +2948,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc398, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -3215,7 +3213,18 @@
     $scope.converDateToSlash = function (date) {
       var newDate = '';
       if (date !== '') {
+        console.log('old date');
+        console.log(date);
         newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
+        console.log('new date');
+        console.log(newDate);
+      }
+      return newDate;
+    };
+    $scope.converDateToSlashInReverse = function (date) {
+      var newDate = '';
+      if (date !== '') {
+        newDate = date.split('-')[2] + '/' + date.split('-')[1] + '/' + date.split('-')[0];
       }
       return newDate;
     };
@@ -3310,29 +3319,30 @@
     $scope.checkEligibiltyDateRange = function() {
       $scope.elpStartDate = '';
       $scope.elpEndDate = '';
-      var jsonExperience = {};
+      var jsonExperienceArray = [];
+      var jsonExperience;
 
       $('.panel-experience').each(function(i, obj) {
-        jsonExperience['Claim '+(i+1)] = [];
+        jsonExperience = {};
+        jsonExperience['claimNo'] = i+1;
+        jsonExperience['dateRange'] = [];
         $(this).find('.doc39D').each(function(j, obj) {
           if($(this).val() != ''){
-            if(i==0){
-              $scope.elpStartDate = $(this).val().split(',')[0];
-              $scope.elpEndDate = $(this).val().split(',')[1];
-            }
+            var date = $(this).val();
             var a = {};
-            a.from_date = $(this).val().split(',')[0];
-            a.to_date = $(this).val().split(',')[1];
-            jsonExperience['Claim '+(i+1)].push(a);
+            a.dt_from = $scope.converDateToSlashRealTimeDate(date.split(',')[0]);
+            a.dt_to = $scope.converDateToSlashRealTimeDate(date.split(',')[1]);
+            jsonExperience['dateRange'].push(a);
           }
-          console.log($(this).val())
+          console.log(jsonExperience);
         });
+        jsonExperienceArray.push(jsonExperience);
       });
-
-      console.log(jsonExperience);
-      return JSON.stringify(jsonExperience);
+      console.log(JSON.stringify(jsonExperienceArray));
+      return JSON.stringify(jsonExperienceArray);
 
     };
+    
     $scope.checkDatePeriod = function () {
       var datesArray = [];
       var number = 17;
@@ -3375,18 +3385,18 @@
     };
 
     $scope.calculateExperienceModal = function() {
-      $('#modal-calculate-exp').modal('toggle');
+      $('#modal-calculate-exp').modal('show');
       $scope.initializeRanges();
     };
 
     $scope.CloseCalculateExperienceModal = function() {
-      $('#modal-calculate-exp').modal('toggle');
+      $('#modal-calculate-exp').modal('hide');
     };
 
     $scope.showExperienceModal = function () {
       $scope.checkEligibiltyDateRange();
       console.log($scope.finalJsonData['Work Experience']);
-      Http.post("/biz/scores/orchEntry", {
+      Http.post("/biz/scores/allInOne", {
         // 'float_pgMarks': 53,
         // 'dt_pg_por': "15/05/1991",
         // 'str_subjHandledStatus': 1,
@@ -3409,25 +3419,45 @@
         // 'bool_chk1': "False",
         // 'bool_chk2': "False",
         // $scope.finalJsonData['PG Degree Certificate']['answers'][7]['ans_id'] == 1 ? 'True' : 'False'
-        // $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False'
+        // $scope.finalJsonData['PG Degree Certificate']['answers'][13]['ans_id'] == 1 ? 'True' : 'False
+      // 'v_subjHandled': 'Physics',
+      // 'v_subjApplied': 'Physics',
+      // 'v_pg_equiv_subjHandled':'',
+      // 'v_phd_subjHandled': 'Physics',
+      // 'dt_dob': '15/06/1983',
+      // 'dt_retirement': '14/11/2030',
+      // 'float_pgMarks': '61.66',
+      // 'dt_pg_por': '02/08/2006',
+      // 'dt_phd_por': '13/02/2019',
+      // 'dt_phd_vivo_por': '03/03/2019',
+      // 'dt_ou_phd_por': '01/01/0001',
+      // 'dt_mphil_por': '06/06/2007',
+      // 'dt_ou_mphil_por': '01/01/0001',
+      // 'dt_elp_fromDt': '13/02/2019',
+      // 'dt_elp_toDt': '15/11/2019',
+      // 'str_caste': 'MBC_DNC_CATEGORY',
+      // 'bool_diffAbled': 'False',
+      // 'dt_slet_por': '01/01/0001',
+      // 'dt_net_por': '01/01/0001',
+      // 'v_subjSlet': '',
+      // 'v_,subjNet': '',
+      // 'dt_elp_dt_ranges': $scope.checkEligibiltyDateRange()
 
         'v_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_subjApplied': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
         'v_pg_equiv_subjHandled': '',
         'v_phd_subjHandled': $scope.candidateDetails['candidate_details'][0]['ug_main_subject'],
-        'dt_dob':  $scope.candidateDetails['candidate_details'][0]['ocd_date_of_birth'],
-        'dt_retirement': '',
+        'dt_dob':  $scope.converDateToSlashInReverse($scope.candidateDetails['candidate_details'][0]['oum_date_of_birth']),
+        'dt_retirement': '14/11/2030',
         'float_pgMarks': $scope.candidateDetails['candidate_details'][0]['pg_percentage'],
         'dt_pg_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltpg']),
         'dt_phd_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltphd']),
-        'dt_phd_vivo_por': '',
-        'dt_ou_phd_por': '',
+        'dt_phd_vivo_por': '03/03/2019',
+        'dt_ou_phd_por': '01/01/0001',
         'dt_mphil_por': $scope.converDateToSlash($scope.candidateDetails['candidate_details'][0]['ocad_publresltmphil']),
-        'dt_ou_mphil_por': '',
-        // 'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
-        // 'dt_elp_toDt': '15/11/2019',
-        'dt_elp_fromDt': $scope.converDateToSlash($scope.elpStartDate),
-        'dt_elp_toDt': $scope.converDateToSlash($scope.elpEndDate),
+        'dt_ou_mphil_por': '01/01/0001',
+        'dt_elp_fromDt': $scope.checkEligibilityFromDate(),
+        'dt_elp_toDt': '15/11/2019',
         'str_caste': $scope.changeCastName($scope.candidateDetails['candidate_details'][0]['octm_category_desc']),
         'bool_diffAbled': $scope.candidateDetails['candidate_details'][0]['is_handicapped'] == 'No' ? 'False' : 'True',
         'dt_slet_por': $scope.calculateSletNetDate('oaed_is_slet_checked'),
@@ -3442,13 +3472,21 @@
         // 'bool_chk1': 'False',
         // 'bool_chk2': 'False',
         // 'dt_omit_ranges': $scope.checkDatePeriod()
+        'dt_elp_dt_ranges': $scope.checkEligibiltyDateRange()
       }).then(function (object) {
         console.log(object);
-        $scope.orchEntry = object;
+        $scope.claims = object[0];
         $('#modal-exp').modal('toggle');
       })
     };
-
+    $scope.claimIndex = '';
+    $scope.showTable = function(claimId){
+      console.log(claimId);
+      $scope.claimIndex = claimId;
+      $scope.orchEntry = $scope.claims['Overall-claims'][claimId-1]['claims'];
+      console.log('orchEntry');
+      console.log($scope.orchEntry);
+    };
 
     $(document).on('click', '.showModalExp', function () {
       // if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {

@@ -891,97 +891,70 @@
               </tbody>
             </table>
           </div>
-
-          <div id="qualifications" class="panel panel-default">
+          <div id="claims" class="panel panel-default">
             <table class="table table-striped m-b-none"
                    style="color: black;">
               <thead>
               <tr>
-                <th rowspan="3">Qualifications<br></th>
-                <th colspan="2" rowspan="2">Eligible Period
-                </th>
-                <th colspan="5">Period of service with
-                  requisite
-                  Qalification<br></th>
-                <th rowspan="3">Name of the subject handled<br>
-                </th>
-                <th>Eligible From Date
-                </th>
-                <th>Eligible To Date
-                </th>
-                <th>Date Ranges To Omit
-                </th>
+                <th>Claim ID</th>
+                <th>Net Total</th>
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td colspan="2">Date</td>
-                <td rowspan="2">Years</td>
-                <td rowspan="2">Months</td>
-                <td rowspan="2">Days</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>From<br></td>
-                <td>To<br></td>
-                <td>From<br></td>
-                <td>To</td>
-                <td></td>
-              </tr>
-              <tr class="text-center" ng-repeat="o in orchEntry">
-                {{o}}
-                <td>{{o['Title'].split('(')[0]}}</td>
-                <td>{{o['From Date']!=
-                  undefined?o['From Date']:'-'}}
-                </td>
-                <td>{{o['To Date']!=
-                  undefined?o['To Date']:'-'}}
-                </td>
-                <td>{{o['Eligible From Date']!=
-                  undefined?o['Eligible From Date']:'-'}}
-                </td>
-                <td>{{o['Eligible To Date']!=
-                  undefined?o['Eligible To Date']:'-'}}
-                </td>
-                <td>
-                  <div ng-if="o['Date Difference To Consider']!=
-                    undefined">
-                    <a ng-click="openEducationModel($index)"
-                       style="cursor:pointer;text-decoration:
-                  underline">
-                      {{o['Date Difference To Consider'].split('and')[0]}}
-                    </a>
-                  </div>
-                  <div ng-if="o['Date Difference To Consider']==
-                    undefined">
-                    -
-                  </div>
-                </td>
-                <td>{{o['Date Difference To Consider']!=
-                  undefined?o['Date Difference To Consider'].split('and')[1]:'-'}}
-                </td>
-                <td>{{o['Date Difference To Consider']!=
-                  undefined?o['Date Difference To Consider'].split('and')[2]:'-'}}
-                </td>
-                <td>{{o['Subject Handled']!=
-                  undefined?o['Subject Handled']:'-'}}
-                </td>
-                <td>{{o['Eligible From Date']}}
-                </td>
-                <td>{{o['Eligible To Date']}}
-                </td>
-                <td>
-                  <p ng-repeat="r in o['Dates Ranges To Omit']">
-                    {{r[0]}} , {{r[1]}} <br/>
-                  </p>
-                </td>
+              <tr ng-repeat="c in claims['Overall-claims']">
+                <td><a style="cursor: pointer;text-decoration: underline" ng-click="showTable(c['ClaimID'])">{{c['ClaimID']}}</a></td>
+                <td>{{c['Net Total']}}</td>
               </tr>
               </tbody>
             </table>
+          </div>
+<!--          Claim ID {{claimIndex}} details (Possible claims candidate false under)-->
+          <div id="qualifications" class="panel panel-default">
+            <div class="panel-group m-b" id="accordionDateRange">
+              <div style="color: black;margin:10px">
+                <h6 class="panel-title">
+                  Claim ID {{claimIndex}} details (Possible claims candidate falls under)
+                </h6>
+              </div>
+              <div class="panel panel-default" ng-repeat="d in orchEntry">
+                <div class="panel-heading">
+                  <a class="accordion-toggle collapsed accordion-plus-toggle"
+                     data-toggle="collapse"
+                     data-parent="#accordionDateRange" href="#collapseD{{$index}}">
+                    <h6 class="panel-title">Date Range {{$index+1}}</h6>
+                  </a>
+                </div>
+                <div id="collapseD{{$index}}" class="panel-collapse collapse" style="height: 0;">
+                  <div class="panel-body text-sm" style="color: black">
+                    <table class="table table-striped m-b-none"
+                           style="color: black;">
+                      <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Claim From Date</th>
+                        <th>Claim To Date</th>
+                        <th>Eligible From Date</th>
+                        <th>Eligible To Date</th>
+                        <th>Date Difference To Consider</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr ng-repeat="dd in d">
+                        <td>{{dd['Title']}}</td>
+                        <td>{{dd['Status']}}</td>
+                        <td>{{dd['Claim From Date']}}</td>
+                        <td>{{dd['Claim To Date']}}</td>
+                        <td>{{dd['Eligible From Date']}}</td>
+                        <td>{{dd['Eligible To Date']}}</td>
+                        <td>{{dd['Date Difference To Consider']}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
