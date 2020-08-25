@@ -2637,6 +2637,10 @@ def singleEntry(request):
     print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
 
     if(toConsider == True):
+        one_day = relativedelta.relativedelta(
+            years=0, months=0, days=1, hours=0, minutes=0, seconds=0, microseconds=0)
+
+        dt_top_date = dt_top_date + one_day
 
         diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
 
