@@ -2429,6 +2429,8 @@ def singleEntry(request):
     if dt_phd_por != '':
         dt_sort_list.append(dt_phd_por)
 
+    print("SORT LIST >>>>>>>>>>>>>>"+str(dt_sort_list))
+
     dt_earliest_2_consider = min(dt_sort_list)
 
     print("Dennis is a good boy")
@@ -2436,20 +2438,24 @@ def singleEntry(request):
     print("dt_earliest_2_consider" + str(dt_earliest_2_consider))
     print("Dennis is a good boy")
 
-    if (dt_elp_fromDt < dt_earliest_2_consider):
+    # else:
+    #dt_elp_fromDt = dt_earliest_2_consider
+
+    dt_top_date = DT_POR_TO_CUTOFF if(
+        dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
+
+    if (dt_earliest_2_consider > dt_top_date):
         print("Inside the loop")
         toConsider = False
         response.append({'Title':  'All in One Dates',
                          #  'ClaimID': claimID,
                          'Status': 'INELIGIBLE',
-                         'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
+                         'Reason': 'Earliest 2  Consider Date > To Date - Dont Consider This Date',
+                         'dt_earliest_2_consider': str(dt_earliest_2_consider),
+                         'dt_elp_fromDt': str(dt_elp_fromDt)
                          })
+        print(response)
         return response
-    # else:
-        #dt_elp_fromDt = dt_earliest_2_consider
-
-    dt_top_date = DT_POR_TO_CUTOFF if(
-        dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
 
     dt_earliestFrom = dt_elp_fromDt
     print("From Date & To Date >>>>>>>>>>>>>>>>>>>>>>>")
