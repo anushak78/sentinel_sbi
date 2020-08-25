@@ -2019,6 +2019,9 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
     diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
     if(toConsider == True):
 
+        one_day = relativedelta.relativedelta(
+            years=0, months=0, days=1, hours=0, minutes=0, seconds=0, microseconds=0)
+
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
 
