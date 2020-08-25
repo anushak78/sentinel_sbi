@@ -2015,12 +2015,13 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
                     dt_top_date) + " & SC/ST/STA &  MARKS < 50%"
 
     print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
+    one_day = relativedelta.relativedelta(
+        years=0, months=0, days=1, hours=0, minutes=0, seconds=0, microseconds=0)
+
+    dt_top_date = dt_top_date + one_day
 
     diff = relativedelta.relativedelta(dt_top_date, dt_earliestFrom)
     if(toConsider == True):
-
-        one_day = relativedelta.relativedelta(
-            years=0, months=0, days=1, hours=0, minutes=0, seconds=0, microseconds=0)
 
         dt_diff_response = str(str(diff.years) + " Years and " + str(diff.months) +
                                " Months and " + str(diff.days) + " Days")
@@ -2321,8 +2322,10 @@ def singleEntry(request):
     percentileToBeConsidered = BusinessConstants.MARKS_55_PER if str(
         str_caste) == BusinessConstants.SC_CATEGORY or BusinessConstants.SCA_CATEGORY or BusinessConstants.ST_CATEGORY else BusinessConstants.MARKS_50_PER
 
-    diffAbledCheck = pg_diffAbCheck(
-        bool_diffAbled, float_pgMarks, percentileToBeConsidered, 'allinOne')
+    diffAbledCheck = bool_diffAbled
+
+  #  diffAbledCheck = pg_diffAbCheck(
+   #     bool_diffAbled, float_pgMarks, percentileToBeConsidered, 'allinOne')
     # End of Disability Check
     # ------------------------------------------------------------------------
     # Validations Start Here
@@ -2360,7 +2363,7 @@ def singleEntry(request):
                          'Reason': 'PG PHD NET SLET POR DATE > 04.10.2019 - Dont Consider This Date',
                          })
         return response
-    elif(v_subjApplied != v_subjHandled and v_subjApplied != v_pg_equiv_subjHandled):
+    elif(v_subjApplied != v_subjHandled and v_subjApplied != v_phd_equiv_subjHandled):
         log.info(
             "allinOne : Step 3 - PG Subject Handled and Subject Applied For Are not Matching  ")
         log.info("allinOne: Step 3.1 - Dont Consider This Date")
