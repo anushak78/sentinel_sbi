@@ -3367,8 +3367,6 @@
         $('.doc39D').datepicker({
           format: "dd-mm-yyyy",
           startView: 1,
-          minViewMode: 1,
-          maxViewMode: 2,
           multidate: true,
           multidateSeparator: ",",
           autoClose: true
@@ -3381,7 +3379,7 @@
           });
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
-      },500)
+      },200)
     };
 
     $scope.calculateExperienceModal = function() {
