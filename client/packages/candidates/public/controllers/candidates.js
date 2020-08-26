@@ -2982,6 +2982,21 @@
           elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
         });
 
+        $('.doc393,.doc394,.doc395,.doc3953,.doc3954,.doc3955,.doc3956,.doc3957,.doc3958,.doc3959,.doc3960,.doc3961,.doc3962,.doc3963,.doc3964,.doc3965,.doc3966,.doc3967,.doc3968,.doc3969,.doc3970,.doc3971,.doc3972,.doc3973,.doc3974,.doc3975,.doc3976,.doc3977,.doc3978,.doc3979,.doc3980,.doc3981,.doc3982,.doc3983,.doc3984,.doc3985,.doc3986,.doc3987').datepicker({
+          format: "dd/mm/yyyy",
+          startView: 1,
+          multidate: true,
+          multidateSeparator: "-",
+          autoClose: true
+        }).on("changeDate", function (event) {
+          var dates = event.dates, elem = $(this);
+          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
+          if (dates.length > 2) dates = dates.splice(dates.length - 1);
+          dates.sort(function (a, b) {
+            return new Date(a).getTime() - new Date(b).getTime()
+          });
+          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
+        });
 
 
         $('#selectDoc38').select2();
@@ -3510,23 +3525,6 @@
       if ($('#select2-dd').val() == [] || $('#select2-dd').val() == null) {
         return false;
       }
-      setTimeout(function () {
-        $('.doc393,.doc394,.doc395,.doc3916,.doc3917,.doc3953,.doc3954,.doc3955,.doc3956,.doc3957,.doc3958,.doc3959,.doc3960,.doc3961,.doc3962,.doc3963,.doc3964,.doc3965,.doc3966,.doc3967,.doc3968,.doc3969,.doc3970,.doc3971,.doc3972,.doc3973,.doc3974,.doc3975,.doc3976,.doc3977,.doc3978,.doc3979,.doc3980,.doc3981,.doc3982,.doc3983,.doc3984,.doc3985,.doc3986,.doc3987').datepicker({
-          format: "dd/mm/yyyy",
-          startView: 1,
-          multidate: true,
-          multidateSeparator: "-",
-          autoClose: true
-        }).on("changeDate", function (event) {
-          var dates = event.dates, elem = $(this);
-          if (elem.data("selecteddates") == dates.join(",")) return; //To prevernt recursive call, that lead to lead the maximum stack in the browser.
-          if (dates.length > 2) dates = dates.splice(dates.length - 1);
-          dates.sort(function (a, b) {
-            return new Date(a).getTime() - new Date(b).getTime()
-          });
-          elem.data("selecteddates", dates.join(",")).datepicker('setDates', dates);
-        });
-      }, 1000);
       return $('#select2-dd').val().includes(number.toString())
     };
 
