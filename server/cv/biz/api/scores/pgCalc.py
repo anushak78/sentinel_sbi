@@ -1681,6 +1681,8 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
     print(" dt_phd_por >>>>" + str(dt_phd_por))
     print(" dt_net_por >>>>" + str(dt_net_por))
     print(" dt_slet_por >>>>" + str(dt_slet_por))
+    print(" dt_elp_fromDt >>>>" + str(dt_elp_fromDt))
+    print(" dt_elp_toDt >>>>" + str(dt_elp_toDt))
 
     # Date CutOff Voilation Check Here
     pg_por_voilation = True if(dt_pg_por > DT_OC_CUTOFF_TO_PERIOD) else False
@@ -1727,9 +1729,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
         return response, noDateDiff
 
     # PG PHD COMBO Checks Start Here
-    print(str_dt_phd_por)
-    print(dt_pg_por)
-    print(dt_phd_por)
 
     if(len(str_dt_phd_por) != 0 and dt_phd_por != ''):
         if(dt_pg_por > dt_phd_por):
@@ -1759,11 +1758,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
                     return response, noDateDiff
                 else:
                     dt_phd_por = dt_phd_vivo_por
-                    # phdSubjToVerify  = v_phd_subjHandled if(v_phd_subjHandled != '') else ''
-                    # phdEquivSubjToVerify =  v_pg_equiv_subjHandled if(v_pg_equiv_subjHandled != '') else ''
-                    print(v_subjApplied)
-                    print(v_phd_subjHandled)
-                    print(v_phd_equiv_subjHandled)
 
                     if ((v_phd_subjHandled != '' and v_subjApplied != v_phd_subjHandled) or
                             (v_phd_equiv_subjHandled != '' and v_subjApplied != v_phd_equiv_subjHandled)):
@@ -1794,26 +1788,12 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
 
     dt_earliest_2_consider = min(dt_sort_list)
 
-    # if (dt_elp_fromDt < dt_earliest_2_consider):
-    #     dt_elp_fromDt = dt_earliest_2_consider
-
-    # if (dt_elp_fromDt < dt_earliest_2_consider):
-    #     print("Inside the loop")
-    #     toConsider = False
-    #     response.append({'Title':  'All in One Dates',
-    #                      'ClaimID': claimID,
-    #                      'Date Range Count ': cnt_dt_rng,
-    #                      'Claim From Date': str(dt_elp_fromDt),
-    #                      'Claim To Date': str(dt_elp_toDt),
-    #                      'Status': 'INELIGIBLE',
-    #                      'Reason': 'Eligible From Date > Earliest 2 Date - Dont Consider This Date',
-    #                      })
-    #     return response, noDateDiff
-    # else:
-    #     dt_elp_fromDt = dt_earliest_2_consider
-
     dt_top_date = DT_POR_TO_CUTOFF if(
         dt_elp_toDt > DT_POR_TO_CUTOFF) else dt_elp_toDt
+
+    print("dt_earliest_2_consider >>>> "+str(dt_earliest_2_consider))
+    print("dt_top_date >>>> "+str(dt_top_date))
+    print("dt_elp_fromDt >>>>>>>>>>>>"+str(dt_elp_fromDt))
 
     if (dt_earliest_2_consider > dt_top_date):
         print("Inside the loop")
@@ -1828,9 +1808,11 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
         print(response)
         return response, noDateDiff
     else:
-        dt_elp_fromDt = dt_earliest_2_consider
+        dt_elp_fromDt = dt_earliest_2_consider if (
+            dt_earliest_2_consider > dt_elp_fromDt) else dt_elp_fromDt
 
     dt_earliestFrom = dt_elp_fromDt
+
     print("From Date & To Date >>>>>>>>>>>>>>>>>>>>>>>")
     print(dt_earliestFrom)
     print(dt_top_date)
@@ -1879,8 +1861,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
     # else:
     toConsider = False  # After this this will be set by the validations
     ineligible_reason = "A Million Things"
-    print("dt_eligible_from : "+str(dt_earliestFrom))
-    print("dt_eligible_to : "+str(dt_top_date))
 
     if(dt_top_date < DT_OC_CUTOFF_FROM_PERIOD):
         strTitle.append(strTitle_PG_50_ONLY)
@@ -1927,7 +1907,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
                     toConsider = False
                     ineligible_reason = " 19/9/1991 < PG > 30/07/2002 & SC/ST/STA &  MARKS < 50%"
 
-    # if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date < DT_17072018_CUTOFF_TO_PERIOD): # Open condition combining both
     if (dt_earliestFrom > DT_OC_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):
 
         if(dt_phd_por != ''):
@@ -1951,8 +1930,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
                     ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & BC/BCM/MBC & PGR < 11/07/2016 &  MARKS < 55%"
 
         if(str_caste == BusinessConstants.OC_CATEGORY):
-            print("ISNDIERERE"+float_pgMarks)
-            print(toConsider)
             if(float(float_pgMarks) >= float(BusinessConstants.MARKS_55_PER)):
                 toConsider = True
             else:
@@ -1965,9 +1942,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
             else:
                 toConsider = False
                 ineligible_reason = " 19/9/1991 < PG > 15/11/2019 & DIFF ABLED or SC/ST/STA &  MARKS < 50%"
-
-    # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD & dt_top_date < DT_15112019_CUTOFF_TO_PERIOD):#TODO: Confirm with Sujitha
-    # if(dt_earliestFrom > DT_18072018_CUTOFF_FROM_PERIOD and dt_top_date <= DT_15112019_CUTOFF_TO_PERIOD):  # As confirmed by Sujitha
 
     if ((dt_earliestFrom > DT_31072002_CUTOFF_FROM_PERIOD and dt_top_date < DT_13062006_CUTOFF_TO_PERIOD) or
         (dt_earliestFrom > DT_14062006_CUTOFF_FROM_PERIOD and dt_top_date < DT_02042009_CUTOFF_TO_PERIOD) or
@@ -2029,7 +2003,6 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
                 ineligible_reason = str(dt_earliestFrom) + "< PG >" + str(
                     dt_top_date) + " & SC/ST/STA &  MARKS < 50%"
 
-    print("toConsider >>>>>>>>>>>>>>"+str(toConsider))
     one_day = relativedelta.relativedelta(
         years=0, months=0, days=1, hours=0, minutes=0, seconds=0, microseconds=0)
 
@@ -2052,7 +2025,7 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
             'Differently Abled': diffAbledCheck
         }
         finalResponse = ''
-        print(strTitle)
+
         for str_title in strTitle:
             finalResponse = {'Title':  str_title,
                              'ClaimID': claimID,
@@ -2081,11 +2054,9 @@ def mainEntry(request, cnt_dt_rng, claimID, dt_elp_fromDt, dt_elp_toDt):
 
 @svc_allInOne.post(require_csrf=False)
 def allInOne(request):
-    print("INSIDEEEEEEEE")
+
     dt_elp_dt_range_list = request.POST.get(
         "dt_elp_dt_ranges", "No List Present")
-
-    print(dt_elp_dt_range_list)
 
     dt_rg_json = json.loads(dt_elp_dt_range_list)
     dt_range_end_list = [0, 0]
@@ -2117,9 +2088,6 @@ def allInOne(request):
             demoresponse, date_diff = mainEntry(
                 request, cnt_dt_rng, claim_str, dt_start_date, dt_end_date)
 
-            print("Dennis..")
-            print(demoresponse)
-            print("Dennis ..")
             localresponse.append(demoresponse)
 
             netTotal = date_diff+netTotal
@@ -2131,14 +2099,8 @@ def allInOne(request):
                              'Net Total': str_net_total,
                              'claims': localresponse
                              }
-            # localresponse = []
-            # localresponse.append(totalResponse)
         netTotalResponse.append(totalResponse)
-        # netTotalResponse.append(localresponse)
         grandTotal = grandTotal+netTotal
-
-    # netTotalResponse = netTotalResponse, netTotalResponse
-    # print(netTotalResponse)
 
     str_grand_total = str(str(grandTotal.years) + " Years and " + str(grandTotal.months) +
                           " Months and " + str(grandTotal.days) + " Days")
