@@ -2434,7 +2434,9 @@ def singleEntry(request):
         print(response)
         return response
     else:
-        dt_elp_fromDt = dt_earliest_2_consider
+        # dt_elp_fromDt = dt_earliest_2_consider
+        dt_elp_fromDt = dt_earliest_2_consider if (
+            dt_earliest_2_consider > dt_elp_fromDt) else dt_elp_fromDt
 
     dt_earliestFrom = dt_elp_fromDt
     print("From Date & To Date >>>>>>>>>>>>>>>>>>>>>>>")
