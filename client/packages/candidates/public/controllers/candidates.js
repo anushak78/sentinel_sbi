@@ -2469,7 +2469,7 @@
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
          // $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
-         $scope.candidateDetails['document_list'] = $scope.sortDocumentsInOrder($scope.candidateDetails['document_list'])
+          $scope.candidateDetails['document_list'] = $scope.sortDocumentsInOrder($scope.candidateDetails['document_list'])
           $scope.allDocumentList = $scope.candidateDetails['document_list'];
           for (var i in $scope.candidateDetails['document_list']) {
             if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'BEDMARK') {
