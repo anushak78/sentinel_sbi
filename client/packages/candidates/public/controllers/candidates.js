@@ -2311,8 +2311,8 @@
 
     $scope.titles =
         {
-          "10th / SSLC Certificate": 'SSLC Certificate',
-          "12th / HSC Certificate": 'HSC Certificate',
+          "10th / SSLC Certificate": '10th / SSLC Certificate',
+          "12th / HSC Certificate": '12th / HSC Certificate',
           "Community Certificate": 'Community Certificate',
           "Diploma Certificate": 'Diploma Certificate',
           "Graduation Degree Certificate": 'UG Degree Certificate',
@@ -2358,53 +2358,6 @@
           "UG Degree / Equivalent or Provsisional Certificate": 'UG Degree',
           "UG Degree / Equivalent Consolidated Marksheet": 'UG Degree Consolidated Marksheet',
           "Work Experience": 'Work Experience',
-          "Work Experience 2": 'Work Experience 2',
-          "Work Experience 3": 'Work Experience 3',
-          "Work Experience 4": 'Work Experience 4',
-          "Work Experience 5": 'Work Experience 5',
-          "Work Experience 6": 'Work Experience 6',
-          "Work Experience 7": 'Work Experience 7',
-          "Work Experience 8": 'Work Experience 8',
-          "Work Experience 9": 'Work Experience 9',
-          "Work Experience 10": 'Work Experience 10',
-          "Work Experience 11": 'Work Experience 11',
-          "Work Experience 12": 'Work Experience 12',
-          "Work Experience 13": 'Work Experience 13',
-          "Work Experience 14": 'Work Experience 14',
-          "Work Experience 15": 'Work Experience 15',
-          "Work Experience 16": 'Work Experience 16',
-          "Work Experience 17": 'Work Experience 17',
-          "Work Experience 18": 'Work Experience 18',
-          "Work Experience 19": 'Work Experience 19',
-          "Work Experience 20": 'Work Experience 20',
-          "Work Experience 21": 'Work Experience 21',
-          "Work Experience 22": 'Work Experience 22',
-          "Work Experience 23": 'Work Experience 23',
-          "Work Experience 24": 'Work Experience 24',
-          "Work Experience 25": 'Work Experience 25',
-          "Work Experience 26": 'Work Experience 26',
-          "Work Experience 27": 'Work Experience 27',
-          "Work Experience 28": 'Work Experience 28',
-          "Work Experience 29": 'Work Experience 29',
-          "Work Experience 30": 'Work Experience 30',
-          "Work Experience 31": 'Work Experience 31',
-          "Work Experience 32": 'Work Experience 32',
-          "Work Experience 33": 'Work Experience 33',
-          "Work Experience 34": 'Work Experience 34',
-          "Work Experience 35": 'Work Experience 35',
-          "Work Experience 36": 'Work Experience 36',
-          "Work Experience 37": 'Work Experience 37',
-          "Work Experience 38": 'Work Experience 38',
-          "Work Experience 39": 'Work Experience 39',
-          "Work Experience 40": 'Work Experience 40',
-          "Work Experience 41": 'Work Experience 41',
-          "Work Experience 42": 'Work Experience 42',
-          "Work Experience 43": 'Work Experience 43',
-          "Work Experience 44": 'Work Experience 44',
-          "Work Experience 45": 'Work Experience 45',
-          "Work Experience 46": 'Work Experience 46',
-          "Work Experience 47": 'Work Experience 47',
-          "Work Experience 48": 'Work Experience 48',
           "UG Degree / Equivalent Marksheet": 'UG Degree / Equivalent Marksheet',
           "UG Degree / Equivalent Marksheet 2": 'UG Degree / Equivalent Marksheet 2',
           "UG Degree / Equivalent Marksheet 3": 'UG Degree / Equivalent Marksheet 3',
@@ -2586,8 +2539,6 @@
               $scope.newDocumentList.push($scope.candidateDetails['document_list'][i]);
             }
           }
-          console.log('$scope.newDocumentList');
-          console.log($scope.newDocumentList);
           $scope.candidateDetails['document_list'] = $scope.newDocumentList;
           $scope.finalJsonData = {};
           $scope.workExperience = [];
@@ -2635,6 +2586,14 @@
         }
 
       });
+    };
+
+    $scope.generateDoucmentListByArray = function(object){
+      var jsonObject =  [];
+      for(var i in object){
+        jsonObject.push(object[i][1]);
+      }
+      return jsonObject;
     };
 
     $scope.showCustomModal = function (candidate_id, rowsCurrentIndex) {
@@ -2948,7 +2907,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,#doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
