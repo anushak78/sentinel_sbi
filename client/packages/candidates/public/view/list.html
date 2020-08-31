@@ -2373,6 +2373,14 @@
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_phd_university']}}</span>
                       </section>
                     </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Mode of Study in Ph.D
+                        :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_phd_mode']}}</span>
+                      </section>
+                    </div>
                     <div class="clearfix"></div>
                   </div>
                   <div ng-if="selectedDocType.indexOf('Order of Qualification') > -1" TN>
@@ -2434,6 +2442,73 @@
                         04-10-2019
                         :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['education_cutoff']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For PG :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmed'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmed'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For M.Ed :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For M.Phil :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For Special B.Ed in Teaching :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_monofpassseniordip'] != '' && candidateDetails['candidate_details'][0]['ocad_monofpassseniordip'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For Senior Diploma in Teaching Deaf (Hearing Impairment)
+                        :<br/><span
+                          style="font-size: 14px">
+                        {{candidateDetails['candidate_details'][0]['ocad_monofpassseniordip']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltphd'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltphd'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For Ph.D :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For NET :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != null">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        POR For SLET
+                        :<br/><span
+                          style="font-size: 14px">
+                      {{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</span>
                       </section>
                     </div>
 

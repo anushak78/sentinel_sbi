@@ -2468,7 +2468,8 @@
           // }
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
-          $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
+         // $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
+         $scope.candidateDetails['document_list'] = $scope.sortDocumentsInOrder($scope.candidateDetails['document_list'])
           $scope.allDocumentList = $scope.candidateDetails['document_list'];
           for (var i in $scope.candidateDetails['document_list']) {
             if ($scope.candidateDetails['document_list'][i]['ocd_flag'] === 'BEDMARK') {
@@ -2549,6 +2550,239 @@
 
       });
     };
+
+    $scope.sortDocumentsInOrder = function(newDocumentList) {
+      let temp_list = []
+      let temp = newDocumentList.find(s => s.odm_name == 'Photo')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Sign')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Birth Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Gender Certificate(Transgender)')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'General Information')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Community Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PWD Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == '10th / SSLC Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == '12th / HSC Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Diploma Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'UG Degree / Equivalent or Provsisional Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'UG Degree / Equivalent Consolidated Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.filter(s => s.odm_name.includes('UG Degree / Equivalent Marksheet'))
+      if (temp) {
+        temp_list.push.apply(temp_list, temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Graduation Degree Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'B.Ed Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'B.Ed Degree / Equivalent Consolidated Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'B.Ed Degree / Equivalent Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate for B.Ed Degree')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'B.E or B.Tech degree in Computer Science or I.T - 4 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'BCA/B.Sc. degree in Computer Science or B.Sc. IT - 3 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'B.E. degree in Electronics and Communication Engineering - 4 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Special B.Ed in Teaching the Hearing Impairment – Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Special B.Ed Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Senior Diploma in Teaching Deaf (Hearing Impairment) – Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Special B.Ed Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Senior Diploma Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'MCA - 3 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.E. or M.Tech. degree in Computer Science or I.T. - 2 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.E or M.Tech degree in Communication Systems - 2 years')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Post Graduate Diploma in Computer application - 1 year')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PG Degree Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.Ed Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.Ed Degree / Equivalent Consolidated Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.Ed Degree / Equivalent Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PG Degree / Equivalent Consolidated Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PG Degree / Equivalent Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate for PG Degree')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate for M.Ed Degree')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.Phil Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'M.Phil Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Phd Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Phd Marksheet')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate for Ph.D Degree')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'SLET/NET Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'SLET / NET Exemption certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Order of Qualification')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.filter(s => s.odm_name.includes('Work Experience'))
+      if (temp) {
+        temp_list.push.apply(temp_list, temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Noc (Other Department)')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Discharged / to be discharged certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Highest Certificate For NSS')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Highest Certificate For NCC')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Medal Certificate (For Department)')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'NOC (For Department)')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Highest Sports Certificate')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Additional Mark')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Conduct certificate from head of institution last studied')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      return temp_list
+    }
 
     $scope.generateDoucmentListByArray = function(object){
       var jsonObject =  [];
