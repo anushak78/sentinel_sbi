@@ -417,6 +417,7 @@ def get_candidate_details(request):
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_pg_eduqst3) as possess_senior_diploma,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_is_handicaped) as is_handicapped,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=ocd.ocd_disability_type) as disability_type,
+      (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_phd_in_tamil) as phd_in_tamil,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_pstm_claim) as claimed_for_pstm,
       (select orvm_reference_value from oes_reference_value_master where orvm_reference_pk::varchar=oaed.oaed_phd_mode) as pg_mode_study,
       (select osmsm_sub_main_desc from oes_subject_main_sub_master where osmsm_sub_main_pk::varchar=oum.oum_subject) as subject_applied_for,
