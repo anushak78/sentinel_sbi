@@ -2462,13 +2462,20 @@
       }).then(function (object) {
         console.log(object);
         if (object['code'] == 1) {
+          $('.panel-experience').each(function(i, obj) {
+            $(this).find('.doc39D').each(function(j, obj) {
+              $(this).val(null)
+              console.log($(this).val())
+            })
+          })
           //to reinitialize ranges of work experience
-          // for(var i=0; i< 35; i++){
-          //   $rootScope.documentWithQuestions['Work Experience'][i+187]['ranges'] = [1];
-          // }
+          for(var i=0; i< 34; i++){
+            $rootScope.documentWithQuestions['Work Experience'][i+187]['ranges'] = [1];
+          }
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
          // $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
+          console.log($scope.candidateDetails['document_list'])
           $scope.candidateDetails['document_list'] = $scope.sortDocumentsInOrder($scope.candidateDetails['document_list'])
           $scope.allDocumentList = $scope.candidateDetails['document_list'];
           for (var i in $scope.candidateDetails['document_list']) {
@@ -2617,9 +2624,9 @@
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.find(s => s.odm_name == 'B.Ed Degree / Equivalent Marksheet')
+      temp = newDocumentList.filter(s => s.odm_name.includes('B.Ed Degree / Equivalent Marksheet'))
       if (temp) {
-        temp_list.push(temp)
+        temp_list.push.apply(temp_list, temp)
       }
       temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate for B.Ed Degree')
       if (temp) {
@@ -2685,17 +2692,17 @@
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.find(s => s.odm_name == 'M.Ed Degree / Equivalent Marksheet')
+      temp = newDocumentList.filter(s => s.odm_name.includes('M.Ed Degree / Equivalent Marksheet'))
       if (temp) {
-        temp_list.push(temp)
+        temp_list.push.apply(temp_list, temp)
       }
       temp = newDocumentList.find(s => s.odm_name == 'PG Degree / Equivalent Consolidated Marksheet')
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.find(s => s.odm_name == 'PG Degree / Equivalent Marksheet')
+      temp = newDocumentList.filter(s => s.odm_name.includes('PG Degree / Equivalent Marksheet'))
       if (temp) {
-        temp_list.push(temp)
+        temp_list.push.apply(temp_list, temp)
       }
       temp = newDocumentList.find(s => s.odm_name == 'PSTM Certificate')
       if (temp) {
@@ -2741,10 +2748,6 @@
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.filter(s => s.odm_name.includes('Work Experience'))
-      if (temp) {
-        temp_list.push.apply(temp_list, temp)
-      }
       temp = newDocumentList.find(s => s.odm_name == 'Noc (Other Department)')
       if (temp) {
         temp_list.push(temp)
@@ -2780,6 +2783,10 @@
       temp = newDocumentList.find(s => s.odm_name == 'Conduct certificate from head of institution last studied')
       if (temp) {
         temp_list.push(temp)
+      }
+      temp = newDocumentList.filter(s => s.odm_name.includes('Work Experience'))
+      if (temp) {
+        temp_list.push.apply(temp_list, temp)
       }
       return temp_list
     }
@@ -2854,6 +2861,8 @@
             iframe.width = '100%';
             iframe.height = '100%';
             iframe.src = $scope.allDocumentList[j]['ocd_doc_file_name'];
+            console.log($scope.allDocumentList)
+            console.log($scope.candidateDetails['candidate_details'][0])
             document.getElementById('iframeContainer').append(iframe);
           }
         }
