@@ -3396,6 +3396,13 @@
       }
       return newDate;
     };
+    $scope.converDateToSlashDOB = function (date) {
+      var newDate = '';
+      if (date !== '') {
+        newDate = date.split('-')[0] + '/' + date.split('-')[1] + '/' + date.split('-')[2];
+      }
+      return newDate;
+    };
     $scope.converDateToSlashInReverse = function (date) {
       var newDate = '';
       if (date !== '') {
@@ -3711,7 +3718,7 @@
     $scope.calculateAge = function () {
       $scope.calulatedDOB = '';
       Http.post("/biz/scores/dateDiff", {
-        dt_from: $scope.converDateToSlash($('.doc306').val()),
+        dt_from: $scope.converDateToSlashDOB($('.doc306').val()),
         dt_to: '01/07/2019'
       }).then(function (object) {
         $scope.calulatedDOB = object;
