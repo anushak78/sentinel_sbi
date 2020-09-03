@@ -2397,9 +2397,9 @@
     };
     $scope.addMoreRanges = function(index, arrayLength) {
       console.log(index);
-      if(arrayLength<5){
-        $rootScope.documentWithQuestions['Work Experience'][index]['ranges'].push((arrayLength+1))
-      };
+      // if(arrayLength<5){
+      $rootScope.documentWithQuestions['Work Experience'][index]['ranges'].push((arrayLength+1))
+      // };
       $scope.initializeRanges();
     };
     $scope.removeMoreRanges = function(parentIndex, index) {
