@@ -782,10 +782,10 @@
                   <td>
                     {{documentWithQuestions[key][$index]['question']}}
                   </td>
-                  <td ng-if="q.additional_info ==''">
+                  <td ng-if="q.additional_info ==''" align="justify" style="word-wrap: break-word;">
                     {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}
                   </td>
-                  <td ng-if="q.additional_info !=''">
+                  <td ng-if="q.additional_info !=''" align="justify" style="word-wrap: break-word;">
                     {{remarksText[q['doc_id'] +'c'+
                     q.qn_id]}} :- {{q.additional_info}}
                   </td>
