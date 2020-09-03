@@ -3392,11 +3392,7 @@
     $scope.converDateToSlash = function (date) {
       var newDate = '';
       if (date !== '') {
-        console.log('old date');
-        console.log(date);
         newDate = date.split('-')[0] + '/' + moment().month(date.split('-')[1]).format('MM') + '/' + date.split('-')[2];
-        console.log('new date');
-        console.log(newDate);
       }
       return newDate;
     };
@@ -3711,21 +3707,28 @@
         return 'N.A.';
       }
     };
-
-    vm.calculateAge = function (value) {
-      if (value != '') {
-        console.log(value);
-        var a = moment([2019, 7, 1]);
-        var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]).subtract(1, 'days');
-        var years = a.diff(b, 'year');
-        b.add(years, 'years');
-
-        var months = a.diff(b, 'months');
-        b.add(months, 'months');
-
-        var days = a.diff(b, 'days');
-        return years + ' years ' + months + ' months ' + days + ' days';
-      }
+    $scope.calulatedDOB = '';
+    $scope.calculateAge = function () {
+      $scope.calulatedDOB = '';
+      Http.post("/biz/scores/dateDiff", {
+        dt_from: $scope.converDateToSlash($('.doc306').val()),
+        dt_to: '01/07/2019'
+      }).then(function (object) {
+        $scope.calulatedDOB = object;
+      });
+      // if (value != '') {
+      //   console.log(value);
+      //   var a = moment([2019, 7, 1]);
+      //   var b = moment([value.split('-')[2], value.split('-')[1], value.split('-')[0]]).subtract(1, 'days');
+      //   var years = a.diff(b, 'year');
+      //   b.add(years, 'years');
+      //
+      //   var months = a.diff(b, 'months');
+      //   b.add(months, 'months');
+      //
+      //   var days = a.diff(b, 'days');
+      //   return years + ' years ' + months + ' months ' + days + ' days';
+      // }
     };
     vm.autoCalculateAge = function (value) {
       value = $scope.candidateDetails['candidate_details'][0]['ocd_date_of_birth'];
