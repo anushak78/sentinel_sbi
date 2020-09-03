@@ -211,14 +211,17 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio306" name="radio306"
                value="1" ng-model="$ctrl.radio_values.init_doc306"
-               ng-change="$ctrl.doc306=''"  >
+               ng-change="$ctrl.doc306=''">
         Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc306=='1' ? 'display:block':'display:none'}}">
-        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
                class="doc306 modified_date input-sm input-s datepicker-input form-control">
+        <button style="float: left; margin-left: 10px" class="btn btn-success"
+        ng-click="calculateAge()">Calculate DOB</button>
+        <br style="clear: both"/>
         <label style="margin-top: 5px">
-          Age (as on 01.07.2019) - {{$ctrl.calculateAge($ctrl.doc306)}}
+          Age (as on 01.07.2019) - {{calulatedDOB}}
         </label>
       </label>
     </div>
@@ -226,14 +229,17 @@
       <label class="radio-custom">
         <input type="radio" class="q_radio radio306" name="radio306"
                value="2" ng-model="$ctrl.radio_values.init_doc306"
-               ng-change="$ctrl.doc306=''" >
+               ng-change="$ctrl.doc306=''">
         Not Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc306=='2' ? 'display:block':'display:none'}}">
-        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
                class="doc306 modified_date input-sm input-s datepicker-input form-control">
+        <button style="float: left; margin-left: 10px" class="btn btn-success"
+                ng-click="calculateAge()">Calculate DOB</button>
+        <br style="clear: both"/>
         <label style="margin-top: 5px">
-          Age (as on 01.07.2019) - <span id="calculatedAge">{{$ctrl.calculateAge($ctrl.doc306)}}</span>
+          Age (as on 01.07.2019) - <span id="calculatedAge">{{calulatedDOB}}</span>
         </label>
       </label>
     </div>
