@@ -62,6 +62,10 @@ svc_singleEntry = Service(
     name="biz.api.scores.singleEntry", permission=NO_PERMISSION_REQUIRED,
     path="/biz/scores/singleEntry", cors_policy=cors.POLICY)
 
+svc_dateDiff = Service(
+    name="biz.api.scores.dateDiff", permission=NO_PERMISSION_REQUIRED,
+    path="/biz/scores/dateDiff", cors_policy=cors.POLICY)
+
 
 """
 This method is to check for SLET / NET Check
@@ -2434,7 +2438,7 @@ def singleEntry(request):
         print(response)
         return response
     else:
-        # dt_elp_fromDt = dt_earliest_2_consider
+        # dt_elp_fromDt = dt_earliest_2_considerex
         dt_elp_fromDt = dt_earliest_2_consider if (
             dt_earliest_2_consider > dt_elp_fromDt) else dt_elp_fromDt
 
@@ -2668,5 +2672,29 @@ def singleEntry(request):
                          'Status': 'INELIGIBLE',
                          'Reason': ineligible_reason,
                          })
+
+    return response
+
+
+@svc_dateDiff.post(require_csrf=False)
+def dateDiff(request):
+
+    sample_from_dt_str = request.POST.get(
+        "dt_from", '01/01/0001')
+
+    sample_to_dt_str = request.POST.get(
+        "dt_to", '01/01/0001')
+
+    sample_from_dt = datetime.strptime(sample_from_dt_str, '%d/%m/%Y').date() if(
+        sample_from_dt_str != '01/01/0001' and len(sample_from_dt_str) != 0) else ''
+
+    sample_to_dt = datetime.strptime(sample_to_dt_str, '%d/%m/%Y').date() if(
+        sample_to_dt_str != '01/01/0001' and len(sample_to_dt_str) != 0) else ''
+
+    sample_date_diff = relativedelta.relativedelta(
+        sample_to_dt, sample_from_dt)
+
+    response = str(str(sample_date_diff.years) + " Years and " + str(sample_date_diff.months) +
+                   " Months and " + str(sample_date_diff.days) + " Days")
 
     return response
