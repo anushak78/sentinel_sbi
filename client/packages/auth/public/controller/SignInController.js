@@ -11,6 +11,7 @@
                 if (data.authenticated) {
                     $state.go("main.candidates.list");
                     $rootScope.userData = data;
+                    console.log($rootScope.userData)
                     localStorage.userData = JSON.stringify($rootScope.userData);
                 } else {
                     Message.error("Invalid credentials")

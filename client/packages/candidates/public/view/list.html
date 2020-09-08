@@ -316,9 +316,14 @@
                     Verify
                   </a>
                 </ul>
-                <span class="hidden-sm">Document List</span>
+                <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px" ng-if="userData.level==2 || userData.level==3">
+                  <a class="btn btn-info"  ng-click="toggleL1Summary()" ng-if="!l1_summ_toggle"><i class="fa fa-plus"></i></a>
+                  <a class="btn btn-info"  ng-click="toggleL1Summary()" ng-if="l1_summ_toggle"><i class="fa fa-minus"></i></a>
+                </ul>
+                <span class="hidden-sm" ng-if="userData.level==2 || userData.level==3">L1 Summary</span>
+                <span class="hidden-sm" ng-if="userData.level==1">Document List</span>
               </header>
-              <table class="table m-b-none">
+              <table class="table m-b-none" ng-if="l1_summ_toggle">
                 <thead>
                 <tr>
                   <th>Document Name</th>
@@ -366,10 +371,10 @@
                 </tr>
                 </tbody>
               </table>
-              <div style="height: 10px; width: 100%"></div>
-              <div class="clearfix"></div>
-              <div style="height: 10px; width: 100%"></div>
-              <div class="clearfix"></div>
+              <div style="height: 10px; width: 100%" ng-if="l1_summ_toggle"></div>
+              <div class="clearfix" ng-if="l1_summ_toggle"></div>
+              <div style="height: 10px; width: 100%" ng-if="l1_summ_toggle"></div>
+              <div class="clearfix" ng-if="l1_summ_toggle"></div>
               <!--<div class="col-6" ng-if="userData.level==1 && showVerify">-->
               <!--<div class="form-group text-center">-->
               <!--<input type="button" class="btn btn-success text-center"-->
@@ -782,12 +787,15 @@
                   <td>
                     {{documentWithQuestions[key][$index]['question']}}
                   </td>
-                  <td ng-if="q.additional_info ==''" align="justify" style="word-wrap: break-word;">
-                    {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}
+                  <td ng-if="q.additional_info ==''" style="text-align: justify;word-wrap: normal;">
+                    <div>
+                      {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}
+                    </div>
                   </td>
-                  <td ng-if="q.additional_info !=''" align="justify" style="word-wrap: break-word;">
-                    {{remarksText[q['doc_id'] +'c'+
-                    q.qn_id]}} :- {{q.additional_info}}
+                  <td ng-if="q.additional_info !=''"  style="text-align: justify;word-wrap: normal;">
+                    <div>
+                      {{remarksText[q['doc_id'] +'c'+ q.qn_id]}}&nbsp;:-&nbsp;{{q.additional_info}}
+                    </div>
                   </td>
                 </tr>
                 </tbody>
@@ -1088,10 +1096,19 @@
             <div class="col-sm-5" style="height: 100% !important;">
               <section class="panel-default"
                        style="height: 100% !important;">
-                <header class="font-bold">Document Questions
-                  &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-                  {{titles[selectedDocType]}}
-                </header>
+                <div class="row">
+                  <div class="col-md-6">
+                    <header class="font-bold">Document Questions
+                      &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                      {{titles[selectedDocType]}}
+                    </header>
+                  </div>
+                  <div class="col-md-6" ng-if="selectedDocType.indexOf('L1') > -1">
+                    <div style="text-align: right;">
+                      <button ng-click="generatePDFL1Summary()" class="btn btn-success text-center">Download PDF</button>
+                    </div>
+                  </div>
+                  </div>
                 <div class="slimScrollDiv"
                      style="position: relative; overflow-x: hidden; overflow-y: scroll; width: auto;height: 35%">
                   <!--<div class="col-md-6">-->
@@ -1172,6 +1189,48 @@
                     <!--                      </section>-->
                     <!--                    </div>-->
                     <div class="clearfix"></div>
+                  </div>
+
+                  <div ng-if="selectedDocType.indexOf('L1') > -1">
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Gender :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Age as on 01.07.2019 (Years, Months, Days) :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_age']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Subject Applied For :<br/><span
+                          style="font-size: 14px">
+                        {{candidateDetails['candidate_details'][0]['subject_applied_for']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Communal Category.:<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        Differently Abled
+                        :<br/><span
+                          style="font-size: 14px">
+                        {{candidateDetails['candidate_details'][0]['is_handicapped']}}
+                        </span>
+                      </section>
+                    </div>
                   </div>
 
                   <div ng-if="selectedDocType.indexOf('Photo') > -1">
@@ -2925,8 +2984,11 @@
                        ng-include="'/candidates/view/templates/Additional_Documents.html'">
 
                   </div>
-                  <header class="panel-heading font-bold">
+                  <header class="panel-heading font-bold" ng-if="selectedDocType.indexOf('L1') == -1">
                     Questions :
+                  </header>
+                  <header class="panel-heading font-bold" ng-if="selectedDocType.indexOf('L1') > -1">
+                    Summary :
                   </header>
                   <section class="panel-body slim-scroll"
                            style="margin-top: -20px">
@@ -3498,6 +3560,10 @@
                     <div id="78"
                          ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 14'">
                       <ug-marksheet14></ug-marksheet14>
+                    </div>
+                    <div id="578"
+                         ng-if="selectedDocType=='L1'">
+                      <l1-summary></l1-summary>
                     </div>
                   </section>
                 </div>

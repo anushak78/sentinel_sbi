@@ -266,6 +266,7 @@
       vm.doc364 = '';
       vm.doc365 = '';
       vm.doc372 = '';
+      vm.doc272 = '';
       vm.doc373 = '';
       vm.doc374 = '';
       vm.doc375 = '';
@@ -1014,6 +1015,7 @@
       vm.radio_values.init_doc364 = "";
       vm.radio_values.init_doc365 = "";
       vm.radio_values.init_doc372 = "";
+      vm.radio_values.init_doc272 = "";
       vm.radio_values.init_doc373 = "";
       vm.radio_values.init_doc374 = "";
       vm.radio_values.init_doc375 = "";
@@ -2311,6 +2313,7 @@
 
     $scope.titles =
         {
+          "L1": 'L1 Consice History',
           "10th / SSLC Certificate": '10th / SSLC Certificate',
           "12th / HSC Certificate": '12th / HSC Certificate',
           "Community Certificate": 'Community Certificate',
@@ -2510,6 +2513,7 @@
             }
           }
           $scope.candidateDetails['document_list'] = $scope.newDocumentList;
+          $scope.calulatedDOB = '';
           $scope.finalJsonData = {};
           $scope.workExperience = [];
           $scope.resetValues();
@@ -2526,6 +2530,27 @@
               }
             }
             $scope.selectedInnerDoc = 0;
+          }
+          if ($rootScope.userData['level'] > 1) {
+            $scope.candidateDetails['document_list'].unshift(
+              {
+                doc_id: 0,
+                ocd_doc_file_name: "http://localhost:6544/docs/TRBAPE429394/TRBAPE429394_photo.jpg",
+                ocd_flag: "L1",
+                odm_name: "L1"})
+            $scope.l1_summary_questions = []
+            $scope.getMandatoryL1Summary()
+            $scope.l1_summ_toggle = false
+            $scope.l1_comm_toggle = false
+            $scope.l1_dis_toggle = false
+            $scope.l1_sub_toggle = false
+            $scope.l1_pub_toggle = false
+            $scope.l1_edu_toggle = false
+            $scope.l1_exp_toggle = false
+            $scope.l1_conduct_toggle = false
+          }
+          else if ($rootScope.userData['level'] == 1) {
+            $scope.l1_summ_toggle = true
           }
           $('#sideNav').animate({'right': '0%'}, 300);
           $scope.totalExperience = '';
@@ -2557,6 +2582,230 @@
 
       });
     };
+
+    $scope.toggleL1Summary = function() {
+      $scope.l1_summ_toggle = !$scope.l1_summ_toggle
+    }
+    $scope.toggleL1Comm = function() {
+      $scope.l1_comm_toggle = !$scope.l1_comm_toggle
+    }
+    $scope.toggleL1Disability = function() {
+      $scope.l1_dis_toggle = !$scope.l1_dis_toggle
+    }
+    $scope.toggleL1Subject = function() {
+      $scope.l1_sub_toggle = !$scope.l1_sub_toggle
+    }
+    $scope.toggleL1Publish = function() {
+      $scope.l1_pub_toggle = !$scope.l1_pub_toggle
+    }
+    $scope.toggleL1Edu = function() {
+      $scope.l1_edu_toggle = !$scope.l1_edu_toggle
+    }
+    $scope.toggleL1Exp = function() {
+      $scope.l1_exp_toggle = !$scope.l1_exp_toggle
+    }
+    $scope.toggleL1Conduct = function() {
+      $scope.l1_conduct_toggle = !$scope.l1_conduct_toggle
+    }
+
+    $scope.getMandatoryL1Summary = function() {
+      $scope.l1_summary_questions = []
+      $scope.l1_summary_comm_ques = []
+      $scope.l1_summary_exp_ques = []
+      $scope.l1_summary_edu_ques = []
+      let temp = {}
+      let temp1 = []
+      let odm_name = ''
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 26)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 26)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 29)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 29)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['status']['level1'][0]['answers'].find(s=> s.qn_id == 17)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 62)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 17)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 68)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 68)['status']['level1'][0]['answers'].find(s=> s.qn_id == 14)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 68)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 14)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 12)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 12)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 13)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 14)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 14)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['status']['level1'][0]['answers'].find(s=> s.qn_id == 2)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 2)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['status']['level1'][0]['answers'].find(s=> s.qn_id == 34)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 34)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['status']['level1'][0]['answers'].find(s=> s.qn_id == 36)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 36)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+      odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
+      temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+      temp1['question'] = temp1['question'] + ' (SSC)' 
+      if (temp)
+        temp['details'] = temp1
+      $scope.l1_summary_edu_ques.push(temp);
+      temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+      odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['odm_name']
+      temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+      temp1['question'] = temp1['question'] + ' (HSC)'
+      if (temp)
+        temp['details'] = temp1
+      $scope.l1_summary_edu_ques.push(temp);
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 38)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 38)['status']['level1'][0]['answers'].find(s=> s.qn_id == 24)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 38)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 24)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['status']['level1'][0]['answers'].find(s=> s.qn_id == 7)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 6)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_edu_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 3)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 3)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 3)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_comm_ques.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 36)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 36)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 36)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_questions.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 7)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+      }
+      console.log($scope.l1_summary_questions)
+    }
 
     $scope.sortDocumentsInOrder = function(newDocumentList) {
       let temp_list = []
@@ -3758,6 +4007,14 @@
           .from(element)
           .save();
     };
+    $scope.generatePDFL1Summary = function () {
+      // Choose the element that our invoice is rendered in.
+      var element = document.getElementById("l1-summary");
+      // Choose the element and save the PDF for our user.
+      html2pdf()
+          .from(element)
+          .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_l1-history.pdf');
+    };
 
   }
 
@@ -3776,6 +4033,10 @@
   }).directive('twelthCertificate', function () {
     return {
       templateUrl: "/candidates/view/templates/XII_HSC_ITI_Certificate.html"
+    };
+  }).directive('l1Summary', function () {
+    return {
+      templateUrl: "/candidates/view/templates/L1Summary.html"
     };
   }).directive('communityCertificate', function () {
     return {
