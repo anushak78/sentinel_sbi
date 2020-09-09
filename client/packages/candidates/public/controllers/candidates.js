@@ -3952,10 +3952,34 @@
         if (Object.keys($scope.newDocumentList).length > 0) {
           if (typeof $scope.newDocumentList.find(s => s.odm_name == docName) !== 'undefined') {
             for (var i in $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers']) {
-              console.log(i);
+              console.log($scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers']);
               if ($scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['qn_id'] == qId
                   && $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['ans_id'] == 2) {
                 return $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['additional_info'];
+              }
+              if ($scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['qn_id'] == qId
+                  && $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['ans_id'] == 1) {
+                let temp = 'Matched :- '
+                if (docName == 'PG Degree Certificate' && qId == 29) {
+                  temp = temp + $scope.candidateDetails['candidate_details'][0]['subject_applied_for']
+                }
+                if (docName == 'PG Degree Certificate' && qId == 9) {
+                  temp = temp + $scope.candidateDetails['candidate_details'][0]['pg_main_subject']
+                }
+                if (docName == 'SLET/NET Certificate' && qId == 10) {
+                  temp = temp + $scope.candidateDetails['candidate_details'][0]['oaed_net_subject_name']
+                }
+                if (docName == 'SLET/NET Certificate' && qId == 3) {
+                  temp = temp + $scope.candidateDetails['candidate_details'][0]['oaed_slet_subject_name']
+                }
+                if (docName == 'M.Ed Certificate' && qId == 7) {
+                  temp = temp + $scope.candidateDetails['candidate_details'][0]['med_main_subject']
+                }
+                if (docName == 'Phd Certificate' && qId == 8) {
+                  temp = temp
+                }
+                console.log(temp)
+                return temp
               }
             }
           } else {
