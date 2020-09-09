@@ -261,26 +261,26 @@ def get_candidate_list(request):
     print(user_id)
     limit = 50
 
-    if int(user_id) == 1:
-        pending_list_query += """ offset :offset rows fetch first 50 rows only
-                              """
-    else:
-        limit = limit*int(user_id)
-        print(limit)
-        if int(offset) == 0:
-            if level == 1:
+    if level == 1:
+        if int(user_id) == 1:
+            pending_list_query += """ offset :offset rows fetch first 50 rows only
+                                  """
+        else:
+            limit = limit*int(user_id)
+            print(limit)
+            if int(offset) == 0:
                 offset = (limit-50)+1
-            pending_list_query += """ offset """ + \
-                str(offset) + """  limit  50 """
+                pending_list_query += """ offset """ + \
+                    str(offset) + """  limit  50 """
 
     # else:
-        #   limit_rows = limit_rows * int(user_id)
-           #  if offset == 0:
-            #     offset = limit_rows - 50
-            # print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-            # print(offset)
-            # pending_list_query += """ offset :offset rows fetch next :limit rows only
-            #                       """
+     #   limit_rows = limit_rows * int(user_id)
+      #  if offset == 0:
+       #     offset = limit_rows - 50
+       # print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+       # print(offset)
+       # pending_list_query += """ offset :offset rows fetch next :limit rows only
+       #                       """
 
     # if int(offset) > 0 :
     # pending_list_query += """ offset :offset  rows fetch first 50 rows only
