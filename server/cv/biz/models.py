@@ -60,6 +60,7 @@ class DocumentTypes(Base):
             })
         return docs
 
+
 class QuestionTypes(Base):
     __tablename__ = 'cv_question_types_master'
     __table_args__ = {"schema": "cv"}
@@ -129,9 +130,9 @@ class CandidateDocumentStatus(Base):
         return docs
 
     @classmethod
-    def get_distinct_candidate(cls, dbsession,level):
+    def get_distinct_candidate(cls, dbsession, level):
         candidate_ids = dbsession.query(cls.candidate_id).distinct().filter(
-            cls.level==level
+            cls.level == level
         ).all()
         ids = []
         for user_id in candidate_ids:
@@ -154,11 +155,10 @@ class CandidateDocumentStatus(Base):
             })
         return docs
 
-
     @classmethod
-    def get_document_status_of_all_levels(cls,dbsession,user_id):
+    def get_document_status_of_all_levels(cls, dbsession, user_id):
         doc_status = dbsession.query(cls).with_entities(cls.doc_id,
-                                                        cls.status,DocumentTypes.doc_type,cls.level,cls.created_at).join(
+                                                        cls.status, DocumentTypes.doc_type, cls.level, cls.created_at).join(
             DocumentTypes, cls.doc_id == DocumentTypes.doc_id).filter(
             cls.candidate_id == user_id).all()
         docs = []
@@ -171,6 +171,7 @@ class CandidateDocumentStatus(Base):
                 "created_at": doc.created_at
             })
         return docs
+
 
 class VerificationAnswers(Base):
     __tablename__ = 'cv_verification_answers'
@@ -273,3 +274,15 @@ class UserComments(Base):
                 "comment": comment.comment
             })
         return comment_list
+
+
+class UserInterimAudit(Base):
+    __tablename__ = 'cv_interim_audit'
+    __table_args__ = {"schema": "cv"}
+
+    id = Column(Integer, primary_key=True)
+    candidate_id = Column(String(256), nullable=False)
+    level = Column(Integer, nullable=False)
+    comment = Column(String(512), nullable=False)
+    status = Column(Integer, nullable=False)
+    created_at = Column(DateTime, server_default=text('NOW()'))
