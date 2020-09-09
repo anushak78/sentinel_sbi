@@ -1,6 +1,6 @@
 <div ng-if="$index ==0">
   <div class="questions">
-    {{q.question}}
+    {{q.question}} <span style="font-size: small;color: red;" ng-if="selectedDocType.includes('Work Experience')">*</span>
   </div>
   <div class="col-sm-6">
     <div class="radio" ng-repeat="(key, value) in q.options">

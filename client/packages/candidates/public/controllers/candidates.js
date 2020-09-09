@@ -3299,11 +3299,13 @@
 
       console.log($scope.finalJsonData);
       console.log($scope.selectedDocType);
-      $scope.finalJsonData[$scope.selectedDocType] = {
-        "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
-        "status": documentApproved,
-        "answers": answers
-      };
+      if ($scope.selectedDocType != 'L1') {
+        $scope.finalJsonData[$scope.selectedDocType] = {
+          "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
+          "status": documentApproved,
+          "answers": answers
+        };
+      }
 
 
       if ($scope.selectedDocNo != ($scope.candidateDetails['document_list'].length - 1)) {
@@ -3439,7 +3441,7 @@
 
 
     $scope.submitQuestion = function (status) {
-      if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length) {
+      if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length-1) {
         if ($scope.packages.comment == "" && parseInt($scope.userData.level) > 1) {
           alert("Please select comment");
           return false;
@@ -3946,6 +3948,23 @@
 
     vm.findData = function (docName, qId) {
       console.log(docName);
+      if ($rootScope.userData.level > 1) {
+        if (Object.keys($scope.newDocumentList).length > 0) {
+          if (typeof $scope.newDocumentList.find(s => s.odm_name == docName) !== 'undefined') {
+            for (var i in $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers']) {
+              console.log(i);
+              if ($scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['qn_id'] == qId
+                  && $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['ans_id'] == 2) {
+                return $scope.newDocumentList.find(s => s.odm_name == docName)['status']['level1'][0]['answers'][i]['additional_info'];
+              }
+            }
+          } else {
+            return 'N.A.';
+          }
+        } else {
+          return 'N.A.';
+        } 
+      }
       if (Object.keys($scope.finalJsonData).length > 0) {
         if (typeof $scope.finalJsonData[docName] !== 'undefined') {
           console.log($scope.finalJsonData[docName]);

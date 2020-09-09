@@ -889,8 +889,11 @@
                 <td>{{e.owe_work_duration}}</td>
               </tr>
               <tr>
-                <td colspan="5">Grand Total(cutoff date before
-                  04.10.2019)
+                <td colspan="5">
+                  <span ng-if="userData.level == 1">Grand Total(cutoff date before
+                  04.10.2019)</span>
+                  <span ng-if="userData.level == 2">Grand Total(cutoff date before
+                    15.11.2019)</span>
                 </td>
                 <td>
                   {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +

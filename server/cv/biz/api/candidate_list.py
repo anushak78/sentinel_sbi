@@ -268,7 +268,8 @@ def get_candidate_list(request):
         limit = limit*int(user_id)
         print(limit)
         if int(offset) == 0:
-            offset = (limit-50)+1
+            if level == 1:
+                offset = (limit-50)+1
             pending_list_query += """ offset """ + \
                 str(offset) + """  limit  50 """
 
