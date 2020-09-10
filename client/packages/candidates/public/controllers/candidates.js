@@ -2608,6 +2608,56 @@
       $scope.l1_conduct_toggle = !$scope.l1_conduct_toggle
     }
 
+    $scope.eligibilityPDF = function() {
+      $scope.eligibility_summary = []
+      $scope.go_edu = {
+        pg: 'NA',
+        bed: 'NA',
+        med: 'NA'
+      }
+      let temp = []
+      let temp1 = []
+      let odm_name = ''
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.eligibility_summary.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+          $scope.go_edu.pg = temp1['options']['option'+temp['ans_id']]
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['status']['level1'][0]['answers'].find(s=> s.qn_id == 16)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 16)
+        if (temp)
+          temp['details'] = temp1
+        $scope.go_edu.bed = temp1['options']['option'+temp['ans_id']]
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['status']['level1'][0]['answers'].find(s=> s.qn_id == 16)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 16)
+        if (temp)
+          temp['details'] = temp1
+        $scope.go_edu.med = temp1['options']['option'+temp['ans_id']]
+      }
+
+      var element = document.getElementById("eligibility-summary");
+      // Choose the element and save the PDF for our user.
+      html2pdf()
+          .from(element)
+          .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_eligible.pdf');
+    }
+
     $scope.getMandatoryL1Summary = function() {
       $scope.l1_summary_questions = []
       $scope.l1_summary_comm_ques = []
