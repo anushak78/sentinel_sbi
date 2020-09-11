@@ -1408,6 +1408,17 @@
         <div class="row">
             <div class="col-md-6">
                 <span style="font-size: 14px">
+                    Date of Birth :
+                </span>
+            </div>
+            <div class="col-md-6">
+                <span style="font-size: 14px">{{go_edu.dob}}</span>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <span style="font-size: 14px">
                     Subject Applied For :
                 </span>
             </div>
@@ -1603,10 +1614,25 @@
         </section>
 
         <section class="panel panel-default" style="color: black !important;">
-            <header class="panel-heading">
-                Teaching Experience
-            </header>
             <div>
+                <div ng-repeat="sum in eligibility_summary_ofq track by $index">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                {{sum['details']['options']['option'+sum['ans_id']]}}
+                            </span>
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                </div>
                 <div class="row">
                     <div class="col-md-6">
                         <span style="font-size: 14px;">
@@ -1638,7 +1664,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <span style="font-size: 14px;">
-                            Total Eligible Teaching Experience 
+                            Total Eligible Teaching Experience
                         </span>
                     </div>
                     <div class="col-md-6">
@@ -1662,53 +1688,53 @@
                     </div>
                 </div>
             </div>
-                <div>
-                    <div ng-repeat="sum in eligibility_summary track by $index">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span style="font-size: 14px;">{{sum['details']['question']}}</span>
-                            </div>
-                            <div class="col-md-6">
-                                <span style="font-size: 14px;"
-                                    ng-if="sum.additional_info =='' || sum.additional_info ==null">
-                                    {{sum['details']['options']['option'+sum['ans_id']]}}
-                                </span>
-                                <span style="font-size: 14px;"
-                                    ng-if="sum.additional_info !='' && sum.additional_info !=null">
-                                    {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
-                                </span>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
+            <div>
+                <div ng-repeat="sum in eligibility_summary track by $index">
                     <div class="row">
                         <div class="col-md-6">
-                            <span style="font-size: 14px;">
-                                Eligible / Ineligible :
-                            </span>
+                            <span style="font-size: 14px;">{{sum['details']['question']}}</span>
                         </div>
                         <div class="col-md-6">
-                            <span style="font-size: 14px;">
-                                {{candidateDetails['comments']['level2']['status']==1?'Approved':'Rejected'}}
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                {{sum['details']['options']['option'+sum['ans_id']]}}
                             </span>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span style="font-size: 14px;">
-                                Remarks :
-                            </span>
-                        </div>
-                        <div class="col-md-6">
-                            <span style="font-size: 14px;">
-                                {{candidateDetails['comments']['level2']['comment']}}
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
                             </span>
                         </div>
                     </div>
                     <br>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            Eligible / Ineligible :
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['comments']['level2']['status']==1?'Approved':'Rejected'}}
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            Remarks :
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['comments']['level2']['comment']}}
+                        </span>
+                    </div>
+                </div>
+                <br>
             </div>
-        </section>
     </div>
+    </section>
+</div>
 </div>

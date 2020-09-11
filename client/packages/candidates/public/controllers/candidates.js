@@ -2610,14 +2610,34 @@
 
     $scope.eligibilityPDF = function() {
       $scope.eligibility_summary = []
+      $scope.eligibility_summary_ofq = []
       $scope.go_edu = {
         pg: 'NA',
         bed: 'NA',
-        med: 'NA'
+        med: 'NA',
+        dob: 'NA'
       }
       let temp = []
       let temp1 = []
       let odm_name = ''
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+        if (temp)
+          temp['details'] = temp1
+        $scope.go_edu.dob = temp.additional_info
+      }
+      if ($scope.go_edu.dob == '') { 
+        if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)) {
+          temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)['status']['level1'][0]['answers'].find(s=> s.qn_id == 6)
+          odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 30)['odm_name']
+          temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 6)
+          if (temp)
+            temp['details'] = temp1
+          $scope.go_edu.dob = temp.additional_info
+        }
+      }
       if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)) {
         temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
         odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
@@ -2625,6 +2645,14 @@
         if (temp)
           temp['details'] = temp1
         $scope.eligibility_summary.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['status']['level1'][0]['answers'].find(s=> s.qn_id == 36)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 140)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 36)
+        if (temp)
+          temp['details'] = temp1
+        $scope.eligibility_summary_ofq.push(temp);
       }
       if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)) {
         temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
