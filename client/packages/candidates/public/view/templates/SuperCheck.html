@@ -1,0 +1,1068 @@
+<div>
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                Is the name of the Post matching?
+            </div>
+            <div class="col-sm-6">
+                Assistant Professor for Government Arts & Science College & colleges of Education
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                Random Sl. No
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:4">
+        <div ng-if="q.q_id >=1 && q.q_id <= 4">
+            <div class="questions">
+                {{q.question}}
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}" name="radio{{q.doc_id}}{{q.q_id}}"
+                        value="1" ng-model="radio_values.init_doc999[q.q_id]">
+                    {{q.options.option1}}
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-custom">
+                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}" name="radio{{q.doc_id}}{{q.q_id}}"
+                        value="2" ng-model="radio_values.init_doc999[q.q_id]">
+                    {{q.options.option2}}
+                </label>
+            </div>
+            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                ng-if="q.q_id != 4">
+                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                    ng-model="doc999[q.q_id]" />
+            </label>
+            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                ng-if="q.q_id == 4">
+                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                    ng-model="doc999[q.q_id]" />
+            </label>
+        </div>
+    </div>
+    <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(3)">
+        <header class="panel-heading">
+            Questions for Community Certificate:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Comm()" ng-if="!l1_comm_toggle"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Comm()" ng-if="l1_comm_toggle"><i class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_comm_toggle">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:4:5">
+                <div ng-if="q.q_id >=5 && q.q_id <= 10">
+                    <div>
+                        <div class="questions">
+                            {{q.question}}
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option1}}
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option2}}
+                            </label>
+                        </div>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id != 7">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 7">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(3)">
+        <header class="panel-heading">
+            Questions for PSTM:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1PSTM()" ng-if="!l1_pstm"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1PSTM()" ng-if="l1_pstm"><i class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_pstm">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:10:6">
+                <div ng-if="q.q_id >=11 && q.q_id <= 16">
+                    <div class="questions">
+                        {{q.question}}
+                    </div>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                ng-model="radio_values.init_doc999[q.q_id]">
+                            {{q.options.option1}}
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                ng-model="radio_values.init_doc999[q.q_id]">
+                            {{q.options.option2}}
+                        </label>
+                    </div>
+                    <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}">
+                        <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                            ng-model="doc999[q.q_id]" />
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;">
+        <header class="panel-heading">
+            Educational Details:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Edu()" ng-if="!l1_edu_toggle"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Edu()" ng-if="l1_edu_toggle"><i class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_edu_toggle">
+            <section class="panel panel-default" style="color: black !important;">
+                <header class="panel-heading">
+                    Questions for SSLC:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:16:6">
+                    <div ng-if="q.q_id >=17 && q.q_id <= 22">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 17 && q.q_id != 18">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 17">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 18">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;">
+                <header class="panel-heading">
+                    Questions for HSC:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:22:6">
+                    <div ng-if="q.q_id >=23 && q.q_id <= 28">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 23 && q.q_id != 24">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 23">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 24">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;">
+                <header class="panel-heading">
+                    Questions for UG:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:28:7">
+                    <div ng-if="q.q_id >=29 && q.q_id <= 35">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 30 && q.q_id != 31">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 30">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 31">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(25)">
+                <header class="panel-heading">
+                    Questions for PG:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:35:7">
+                    <div ng-if="q.q_id >=36 && q.q_id <= 42">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 37 && q.q_id != 38">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 37">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 38">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(27)">
+                <header class="panel-heading">
+                    Questions for M.Phil:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:42:7">
+                    <div ng-if="q.q_id >=43 && q.q_id <= 49">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 44 && q.q_id != 45">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 44">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 45">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(29)">
+                <header class="panel-heading">
+                    Questions for Ph.D:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:49:7">
+                    <div ng-if="q.q_id >=50 && q.q_id <= 56">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 51 && q.q_id != 52">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 51">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 52">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(34)">
+                <header class="panel-heading">
+                    Questions for B.Ed:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:56:7">
+                    <div ng-if="q.q_id >=57 && q.q_id <= 63">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 58 && q.q_id != 59">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 58">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 59">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(35)">
+                <header class="panel-heading">
+                    Questions for M.Ed:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:63:7">
+                    <div ng-if="q.q_id >=64 && q.q_id <= 70">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 65 && q.q_id != 66">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 65">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 66">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;"
+                ng-if="findDocumentForSuperCheck(141)">
+                <header class="panel-heading">
+                    Questions for Special B.Ed degree:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:70:7">
+                    <div ng-if="q.q_id >=71 && q.q_id <= 77">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 72 && q.q_id != 73">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 72">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 73">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;"
+                ng-if="findDocumentForSuperCheck(142)">
+                <header class="panel-heading">
+                    Questions for Senior Diploma:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:77:7">
+                    <div ng-if="q.q_id >=78 && q.q_id <= 84">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 79 && q.q_id != 80">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 79">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 80">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;">
+        <header class="panel-heading">
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Add()" ng-if="!l1_add_edu"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Add()" ng-if="l1_add_edu"><i class="fa fa-minus"></i></a>
+            </ul>
+            Additional Educational Questions
+        </header>
+        <div ng-if="l1_add_edu">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:84:19">
+                <div ng-if="q.q_id >=85 && q.q_id <= 103">
+                    <div class="questions">
+                        {{q.question}}
+                    </div>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                ng-model="radio_values.init_doc999[q.q_id]">
+                            {{q.options.option1}}
+                        </label>
+                    </div>
+                    <label style="{{radio_values.init_doc999[q.q_id]=='1' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id == 91 || q.q_id == 92">
+                        <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                            ng-model="doc999[q.q_id]" />
+                    </label>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                ng-model="radio_values.init_doc999[q.q_id]">
+                            {{q.options.option2}}
+                        </label>
+                    </div>
+                    <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id != 91 && q.q_id != 92 && q.q_id != 96 && q.q_id != 100">
+                        <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                            ng-model="doc999[q.q_id]" />
+                    </label>
+                    <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id == 91 || q.q_id == 92 || q.q_id == 96 || q.q_id == 100">
+                        <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                            class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                            ng-model="doc999[q.q_id]" />
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(31)">
+        <header class="panel-heading">
+            Questions for Disability:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Disability()" ng-if="!l1_dis_toggle"><i
+                        class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Disability()" ng-if="l1_dis_toggle"><i
+                        class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_dis_toggle">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:104:3">
+                <div ng-if="q.q_id >=104 && q.q_id <= 106">
+                    <div>
+                        <div class="questions">
+                            {{q.question}}
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option1}}
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option2}}
+                            </label>
+                        </div>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(140)">
+        <header class="panel-heading">
+            Questions for Order of Qualification:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Subject()" ng-if="!l1_sub_toggle"><i
+                        class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Subject()" ng-if="l1_sub_toggle"><i
+                        class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_sub_toggle">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:106:20">
+                <div ng-if="q.q_id >=107 && q.q_id <= 125">
+                    <div>
+                        <div class="questions">
+                            {{q.question}}
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option1}}
+                            </label>
+                        </div>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='1' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 116">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='1' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 117">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" data-date-format="YYYY-MM-DD"
+                                class="modified_date input-sm input-s datepicker-input form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option2}}
+                            </label>
+                        </div>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id != 107 && q.q_id < 115">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 116">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id != 107 && q.q_id >= 117">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" data-date-format="YYYY-MM-DD"
+                                class="modified_date input-sm input-s datepicker-input form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{ radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 107">
+                            <select class="form-control" ng-model="doc999[q.q_id]">
+                                <option value="">--Select--</option>
+                                <option value="10+2+3+2+1 or 2 / 4 + Years">
+                                    10+2+3+2+1 or 2 / 4 + Years
+                                </option>
+                                <option value="10+2+3+2 / 3 year">
+                                    10+2+3+2 / 3 year
+                                </option>
+                                <option value="10+2+3+2+1 / 2 years / 1">
+                                    10+2+3+2+1 / 2 years / 1
+                                </option>
+                                <option value="10+2+3+2+1 / 2 / 4 Year">
+                                    10+2+3+2+1 / 2 / 4 Year
+                                </option>
+                                <option value="10+2+3+1/2+2/3+2/1 or 2/4 years">
+                                    10+2+3+1/2+2/3+2/1 or 2/4 years
+                                </option>
+                                <option value="Others">
+                                    Others
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;" ng-if="findDocumentForSuperCheck(36)">
+        <header class="panel-heading">
+            Questions for Conduct Certificate:
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Conduct()" ng-if="!l1_conduct_toggle"><i
+                        class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Conduct()" ng-if="l1_conduct_toggle"><i
+                        class="fa fa-minus"></i></a>
+            </ul>
+        </header>
+        <div ng-if="l1_conduct_toggle">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:125:1">
+                <div ng-if="q.q_id == 126">
+                    <div>
+                        <div class="questions">
+                            {{q.question}}
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option1}}
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option2}}
+                            </label>
+                        </div>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}">
+                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                ng-model="doc999[q.q_id]" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="panel panel-default" style="color: black !important;">
+        <header class="panel-heading">
+            <ul class="nav nav-tabs pull-right" style="margin-top:-9.5px;margin-right: 1px">
+                <a class="btn btn-info" ng-click="toggleL1Exp()" ng-if="!l1_exp_toggle"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info" ng-click="toggleL1Exp()" ng-if="l1_exp_toggle"><i class="fa fa-minus"></i></a>
+            </ul>
+            Teaching Experience
+        </header>
+        <div ng-if="l1_exp_toggle">
+            <section class="panel panel-default" style="color: black !important;">
+                <header class="panel-heading">
+                    Questions for Teaching Experience:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:126:4">
+                    <div ng-if="q.q_id >=127 && q.q_id <= 130">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 129 && q.q_id != 130">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{ radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 129 || q.q_id == 130">
+                                <select multiple="multiple" id="select2-dd" ng-model="$doc999[q.q_id]">
+                                    <optgroup label="--Select Serial no of mis-matched--">
+                                        <option value="{{ $index+1 }}"
+                                            ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
+                                            {{ $index+1 }}
+                                        </option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel panel-default" style="color: black !important;">
+                <header class="panel-heading">
+                    Questions for Validation of Teaching Experience:
+                </header>
+                <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:130:4">
+                    <div ng-if="q.q_id >=131 && q.q_id <= 134">
+                        <div>
+                            <div class="questions">
+                                {{q.question}}
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="1"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option1}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="2"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option2}}
+                                </label>
+                            </div>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id == 134">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                                ng-if="q.q_id != 134">
+                                <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
+                                    class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                    ng-model="doc999[q.q_id]" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="question">Total Period: </div>
+                </div>
+            </section>
+            <div ng-repeat="e in workExperience track by $index">
+                <section class="panel panel-default" style="color: black !important;">
+                    <header class="panel-heading">
+                        Teaching Experience {{$index+1}}
+                    </header>
+                    <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:135:5">
+                        <div ng-if="q.q_id >=136 && q.q_id <= 139">
+                            <div>
+                                <div class="questions">
+                                    {{q.question}}
+                                </div>
+                                <div class="radio">
+                                    <label class="radio-custom">
+                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{$index}}"
+                                            name="radio{{q.doc_id}}{{q.q_id}}{{$index}}" value="1"
+                                            ng-model="radio_values.init_doc999[q.q_id][$index]">
+                                        {{q.options.option1}}
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label class="radio-custom">
+                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{$index}}"
+                                            name="radio{{q.doc_id}}{{q.q_id}}{{$index}}" value="2"
+                                            ng-model="radio_values.init_doc999[q.q_id][$index]">
+                                        {{q.options.option2}}
+                                    </label>
+                                </div>
+                                <label
+                                    style="{{radio_values.init_doc999[q.q_id][$index]=='2' ? 'display:block':'display:none'}}"
+                                    ng-if="q.q_id != 137 && q.q_id != 138">
+                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{$index}}" maxlength="50"
+                                        class="form-control" ng-model="doc999[q.q_id][$index]" />
+                                </label>
+                                <label
+                                    style="{{radio_values.init_doc999[q.q_id][$index]=='2' ? 'display:block':'display:none'}}"
+                                    ng-if="q.q_id == 137 || q.q_id == 138">
+                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{$index}}"
+                                        class="doc306 modified_date input-sm input-s datepicker-input form-control"
+                                        ng-model="doc999[q.q_id][$index]" />
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:134:1">
+        <div ng-if="q.q_id == 135">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label class="radio-custom">
+                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                            name="radio{{q.doc_id}}{{q.q_id}}" value="1" ng-model="radio_values.init_doc999[q.q_id]">
+                        {{q.options.option1}}
+                    </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-custom">
+                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                            name="radio{{q.doc_id}}{{q.q_id}}" value="2" ng-model="radio_values.init_doc999[q.q_id]">
+                        {{q.options.option2}}
+                    </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-custom">
+                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                            name="radio{{q.doc_id}}{{q.q_id}}" value="3" ng-model="radio_values.init_doc999[q.q_id]">
+                        {{q.options.option3}}
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div ng-if="radio_values.init_doc999[q.q_id] == 3">
+                <label>Rejected Reasons : </label>
+                <select class="form-control" id="dd-comment-2" ng-model="packages.comment">
+                    <option value="">--Select--</option>
+                    <option>REJECTED – UNDER AGE
+                    </option>
+                    <option>REJECTED – OVER AGE
+                    </option>
+                    <option>REJECTED – UNDER QUALIFICATION
+                    </option>
+                    <option>REJECTED - OTHER THAN ABOVE
+                        REASON
+                    </option>
+                    <option>REJECTED – OVER AGE EX- SERVICE
+                        MAN/SERVICE MAN
+                        (GOING TO RETIRE)
+                    </option>
+                    <option>REJECTED – OVERAGE – OTHER
+                        STATE COMMUNITY
+                        CERIFICATE
+                    </option>
+                    <option>REJECTED – OVERAGE – COMMUNITY
+                    </option>
+                    <option>REJECTED – OVERAGE – COMMUNITY
+                        – OTHER PERSON
+                    </option>
+                    <option>REJECTED – OVERAGE – DESTITUTE
+                        WIDOW
+                    </option>
+                    <option>REJECTED - SSLC- OTHERPERSON
+                    </option>
+                    <option>REJECTED – NOT AVAILABLE –SSLC
+                    </option>
+                    <option>REJECTED – NOT AVAILABLE
+                        –COMMUNITY
+                    </option>
+                    <option>REJECTED – NOT CLEAR – SSLC
+                    </option>
+                    <option>REJECTED – NOT CLEAR -
+                        COMMUNITY
+                    </option>
+                    <option>REJECTED – PARTIALLY UPLOADED –
+                        SSLC
+                    </option>
+                    <option>REJECTED – PARTIALLY UPLOADED -
+                        COMMUNITY
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div>
+            <label>Name and Designation: </label>
+        </div>
+    </div>
+</div>

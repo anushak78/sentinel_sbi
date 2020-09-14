@@ -54,6 +54,16 @@
     ];
     $scope.initializeVariables = function () {
       $scope.radio = {};
+      $scope.doc999 = {}
+      for (let i = 1; i <=139; i++) {
+        if (i > 135) {
+          $scope.doc999[i] = {}
+          for (let j = 1; j <=48; j++) {
+            $scope.doc999[i][j] = '' 
+          }
+        }
+        $scope.doc999[i] = '' 
+      }
       vm.doc13 = '';
       vm.doc12 = '';
       vm.doc12 = '';
@@ -816,6 +826,17 @@
       vm.doc8814 = '';
       vm.doc8815 = '';
       vm.radio_values = {};
+      $scope.radio_values = {};
+      $scope.radio_values.init_doc999 = {}
+      for (let i = 1; i < 139; i++) {
+        if (i > 135) {
+          $scope.radio_values.init_doc999[i] = {}
+          for (let j = 1; j <=48; j++) {
+            $scope.radio_values.init_doc999[i][j] = '' 
+          }
+        }
+        $scope.radio_values.init_doc999[i] = ''
+      }
       vm.radio_values.init_doc12 = "";
       vm.radio_values.init_doc13 = "";
       vm.radio_values.init_doc14 = "";
@@ -2313,7 +2334,7 @@
 
     $scope.titles =
         {
-          "L1": 'L1 Consice History',
+          "L1": 'L1 Concice History',
           "10th / SSLC Certificate": '10th / SSLC Certificate',
           "12th / HSC Certificate": '12th / HSC Certificate',
           "Community Certificate": 'Community Certificate',
@@ -2513,12 +2534,25 @@
             }
           }
           $scope.candidateDetails['document_list'] = $scope.newDocumentList;
+          if ($rootScope.userData['level'] > 1) {
+            $scope.candidateDetails['document_list'].unshift(
+              {
+                doc_id: 999,
+                ocd_doc_file_name: "http://localhost:6544/docs/TRBAPE429394/TRBAPE429394_photo.jpg",
+                ocd_flag: "L1",
+                odm_name: "L1",
+                status: {
+                  level1: [],
+                  level2: []
+                }
+              })
+          }
           $scope.calulatedDOB = '';
           $scope.finalJsonData = {};
           $scope.workExperience = [];
           $scope.resetValues();
           $scope.safeApply();
-          if (typeof $scope.candidateDetails['document_list'][0]['status']['level' + $rootScope.userData['level']] != undefined && $scope.candidateDetails['document_list'][0]['status']['level' + $rootScope.userData['level']].length == 0) {
+          if (typeof $scope.candidateDetails['document_list'][1]['status']['level' + $rootScope.userData['level']] != undefined && $scope.candidateDetails['document_list'][1]['status']['level' + $rootScope.userData['level']].length == 0) {
             $scope.showVerify = true;
           } else {
             $scope.showVerify = false;
@@ -2532,12 +2566,6 @@
             $scope.selectedInnerDoc = 0;
           }
           if ($rootScope.userData['level'] > 1) {
-            $scope.candidateDetails['document_list'].unshift(
-              {
-                doc_id: 0,
-                ocd_doc_file_name: "http://localhost:6544/docs/TRBAPE429394/TRBAPE429394_photo.jpg",
-                ocd_flag: "L1",
-                odm_name: "L1"})
             $scope.l1_summary_questions = []
             $scope.getMandatoryL1Summary()
             $scope.l1_summ_toggle = false
@@ -2547,11 +2575,14 @@
             $scope.l1_pub_toggle = false
             $scope.l1_edu_toggle = false
             $scope.l1_exp_toggle = false
+            $scope.l1_add_edu = false
+            $scope.l1_pstm = false
             $scope.l1_conduct_toggle = false
           }
           else if ($rootScope.userData['level'] == 1) {
             $scope.l1_summ_toggle = true
           }
+          console.log($scope.candidateDetails['document_list'])
           $('#sideNav').animate({'right': '0%'}, 300);
           $scope.totalExperience = '';
           if (object['data']['work_experience'].length > 0) {
@@ -2583,6 +2614,15 @@
       });
     };
 
+    $scope.findDocumentForSuperCheck = function(doc_id) {
+      for (var i in $scope.candidateDetails['document_list']) {
+        if ($scope.candidateDetails['document_list'][i].doc_id == doc_id) {
+          return true
+        }
+      }
+      return false
+    }
+
     $scope.toggleL1Summary = function() {
       $scope.l1_summ_toggle = !$scope.l1_summ_toggle
     }
@@ -2603,6 +2643,12 @@
     }
     $scope.toggleL1Exp = function() {
       $scope.l1_exp_toggle = !$scope.l1_exp_toggle
+    }
+    $scope.toggleL1Add = function() {
+      $scope.l1_add_edu = !$scope.l1_add_edu
+    }
+    $scope.toggleL1PSTM = function() {
+      $scope.l1_pstm = !$scope.l1_pstm
     }
     $scope.toggleL1Conduct = function() {
       $scope.l1_conduct_toggle = !$scope.l1_conduct_toggle
@@ -3253,6 +3299,15 @@
             document.getElementById('iframeContainer').append(iframe);
           }
         }
+      }
+      else if ($scope.selectedDocType === 'L1') {
+        var element = document.getElementById("l1-summary");
+        console.log(element)
+        var iframe = document.createElement('iframe');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.srcdoc = html2pdf(element)
+        document.getElementById('iframeContainer').append(iframe);
       } else {
         var iframe = document.createElement('iframe');
         iframe.width = '100%';
@@ -3326,6 +3381,16 @@
       var documentApproved = 1;
       var flag = false;
       $scope.selectedInnerDoc = 0;
+      $scope.l1_summ_toggle = true
+      $scope.l1_comm_toggle = true
+      $scope.l1_dis_toggle = true
+      $scope.l1_sub_toggle = true
+      $scope.l1_pub_toggle = true
+      $scope.l1_edu_toggle = true
+      $scope.l1_exp_toggle = true
+      $scope.l1_add_edu = true
+      $scope.l1_pstm = true
+      $scope.l1_conduct_toggle = true
 
       let fields = $("label:visible input[type=text], label:visible select");
       if (fields.length > 0) {
@@ -3359,6 +3424,11 @@
             if (typeof vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
               object['additional_info'] = vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + "" + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
             }
+            if ($scope.selectedDocType == 'L1') {
+              if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
+                object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
+              } 
+            }
             answers.push(object);
 
             // if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
@@ -3377,13 +3447,13 @@
 
       console.log($scope.finalJsonData);
       console.log($scope.selectedDocType);
-      if ($scope.selectedDocType != 'L1') {
+      //if ($scope.selectedDocType != 'L1') {
         $scope.finalJsonData[$scope.selectedDocType] = {
           "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
           "status": documentApproved,
           "answers": answers
         };
-      }
+      //}
 
 
       if ($scope.selectedDocNo != ($scope.candidateDetails['document_list'].length - 1)) {
@@ -3441,14 +3511,14 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194, #doc9994, #doc9997, #doc99918, #doc99924, #doc99931, #doc99938, #doc99945, #doc99952, #doc99959, #doc99966, #doc99973, #doc99980, #doc99991, #doc99992, #doc99996, #doc999100, #doc999131, #doc999132, #doc999133, #doc999137, #doc999138, #doc117, #doc118, #doc119, #doc120, #doc121, #doc122, #doc123, #doc124, #doc125").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425, #doc99917, #doc99923, #doc99917, #doc99930, #doc99937, #doc99944, #doc99951, #doc99958, #doc99965, #doc99972, #doc99979").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -3517,6 +3587,12 @@
       }, 200);
     }, true);
 
+    $scope.$watch('radio_values.init_doc999', function (oldValue, newValue) {
+      setTimeout(function () {
+        console.log("here watch")
+        $scope.initializeInputs();
+      }, 200);
+    }, true);
 
     $scope.submitQuestion = function (status) {
       if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length-1) {
@@ -4158,6 +4234,10 @@
   }).directive('l1Summary', function () {
     return {
       templateUrl: "/candidates/view/templates/L1Summary.html"
+    };
+  }).directive('superCheck', function () {
+    return {
+      templateUrl: "/candidates/view/templates/SuperCheck.html"
     };
   }).directive('communityCertificate', function () {
     return {

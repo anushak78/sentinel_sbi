@@ -890,9 +890,7 @@
               </tr>
               <tr>
                 <td colspan="5">
-                  <span ng-if="userData.level == 1">Grand Total(cutoff date before
-                  04.10.2019)</span>
-                  <span ng-if="userData.level == 2">Grand Total(cutoff date before
+                  <span>Grand Total(cutoff date before
                     15.11.2019)</span>
                 </td>
                 <td>
@@ -3568,9 +3566,9 @@
                          ng-if="selectedDocType=='UG Degree / Equivalent Marksheet 14'">
                       <ug-marksheet14></ug-marksheet14>
                     </div>
-                    <div id="578"
+                    <div id="999"
                          ng-if="selectedDocType=='L1'">
-                      <l1-summary></l1-summary>
+                      <super-check></super-check>
                     </div>
                   </section>
                 </div>
@@ -3604,6 +3602,1080 @@
 
 
 </section>
+
+<div style="display: none;color:black">
+  <div id="l1-summary" style="padding-left: 15px;padding-right: 15px;">
+      <h2 style="text-align: center">L1 Concise Summary</h2>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Name:
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Father Name :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span
+                  style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Gender :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span
+                  style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Age as on 01.07.2019 (Years, Months, Days) :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_age']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Subject Applied For :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['subject_applied_for']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Communal Category :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Differently Abled :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_handicapped']}}</span>
+          </div>
+      </div>
+      <br>
+
+      <div>
+          <section class="panel panel-default" style="color: black !important;"
+              ng-if="candidateDetails['candidate_details'][0]['ocad_commcertno'] != '' && candidateDetails['candidate_details'][0]['ocad_commcertno'] != null">
+              <header class="panel-heading">
+                  Community Details
+              </header>
+              <div>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['community_issued_with_father_name'] != '' && candidateDetails['candidate_details'][0]['community_issued_with_father_name'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Community certificate issued
+                              with Father's Name.:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_with_father_name']}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt'] != '' && candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Community certificate issued
+                              date.:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_commcertno'] != '' && candidateDetails['candidate_details'][0]['ocad_commcertno'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Community Certificate no.:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_commcertno']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_subcaste'] != '' && candidateDetails['candidate_details'][0]['ocad_subcaste'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              SubCaste.:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_subcaste']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['religion'] != '' && candidateDetails['candidate_details'][0]['religion'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Religion.:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div>
+                      <div ng-repeat="sum in l1_summary_comm_ques track by $index">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                              </div>
+                              <div class="col-md-6">
+                                  <span style="font-size: 14px;"
+                                      ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                      {{sum['details']['options']['option'+sum['ans_id']]}}
+                                  </span>
+                                  <span style="font-size: 14px;"
+                                      ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                      {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                                  </span>
+                              </div>
+                          </div>
+                          <br>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="panel panel-default" style="color: black !important;"
+              ng-if="candidateDetails['candidate_details'][0]['is_handicapped'] != 'No'">
+              <header class="panel-heading">
+                  Disability Details
+              </header>
+              <div>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocd_disability_perc'] != '' && candidateDetails['candidate_details'][0]['ocd_disability_perc'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Disability Percentage
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              {{candidateDetails['candidate_details'][0]['ocd_disability_perc']}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['disability_type'] != '' && candidateDetails['candidate_details'][0]['disability_type'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Disability Type
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              {{candidateDetails['candidate_details'][0]['disability_type']}}
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="panel panel-default" style="color: black !important;">
+              <header class="panel-heading">
+                  Main Subject Details
+              </header>
+              <div>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['mphill_main_subject'] != '' && candidateDetails['candidate_details'][0]['mphill_main_subject'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              M.Phill Subject:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['mphill_main_subject']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['pg_main_subject'] != '' && candidateDetails['candidate_details'][0]['pg_main_subject'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              PG Main Subject:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['med_main_subject'] != '' && candidateDetails['candidate_details'][0]['med_main_subject'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              M.Ed Main Subject:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['med_main_subject']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != '' && candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Name of Subject in Senior Diploma:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              SLET Subject:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              NET Subject:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</span>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="panel panel-default" style="color: black !important;">
+              <header class="panel-heading">
+                  Publish Result Details
+              </header>
+              <div>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltpg'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltpg'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              PG Date of publication of result:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmed'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmed'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              M.Ed Date of publication of result:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltphd'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltphd'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              PHD: Date of publication of result:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              M.phil Date of publication of result:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Date of Publication of Result – Special B.Ed in Teaching the Hearing Impairment:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltseniordip'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltseniordip'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Date of Publication of Result – Senior Diploma:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltseniordip']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Date of Publication of Result – NET:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row"
+                      ng-if="candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != null">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px">
+                              Date of Publication of Result – SLET:
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span
+                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</span>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </div>
+      <section class="panel panel-default" style="color: black !important;">
+          <header class="panel-heading">
+              Education Qualification
+          </header>
+          <div>
+              <table class="table m-b-none">
+                  <thead>
+                      <tr>
+                          <th width="10%">Qualif-<br>ication</th>
+                          <th width="10%">Name of main subject</th>
+                          <th width="10%">Month/year of passing</th>
+                          <th width="15%">Date of publi-<br>cation of result</th>
+                          <th width="15%">Name of institution</th>
+                          <th width="15%">Name of university</th>
+                          <th width="15%">Mode of study</th>
+                          <th width="10%">Perce-<br>ntage of marks</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>SSC</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ssc_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltsslc']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ssc_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_sslcmode']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['scc_percentage']}}</td>
+                      </tr>
+                      <tr>
+                          <td>HSC</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['hsc_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publreslthsc']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['hsc_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_hscmode']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['hsc_percentage']}}</td>
+                      </tr>
+                      <tr>
+                          <td>UG</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_uginstitname']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['pg_main_subject'] != '' && candidateDetails['candidate_details'][0]['pg_main_subject'] != null">
+                          <td>PG</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_pginstitname']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['med_main_subject'] != '' && candidateDetails['candidate_details'][0]['med_main_subject'] != null">
+                          <td>M.Ed</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_college_name']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['mphill_main_subject'] != '' && candidateDetails['candidate_details'][0]['mphill_main_subject'] != null">
+                          <td>M.Phil</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_college_name']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['bed_main_subject'] != '' && candidateDetails['candidate_details'][0]['bed_main_subject'] != null">
+                          <td>B.Ed</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltdeged']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_college_name']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['phd_main_subject'] != '' && candidateDetails['candidate_details'][0]['phd_main_subject'] != null">
+                          <td>Ph.D</td>
+                          <td>{{candidateDetails['candidate_details'][0]['phd_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['phd_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_phdinstitname']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_phd_university']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_mode_study']}}</td>
+                          <td>-</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != null">
+                          <td>Special B.Ed</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudybedhearimp']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_percentbedhearimp']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != '' && candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != null">
+                          <td>Senior Diploma</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_monofpassseniordip']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltseniordip']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofinstit']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofuniv']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudyseniordip']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_percentseniordip']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != null">
+                          <td>NET</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != null">
+                          <td>SLET</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_state_uni_name']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <div>
+                  <div ng-repeat="sum in l1_summary_edu_ques track by $index">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                          </div>
+                          <div class="col-md-6">
+                              <span style="font-size: 14px;"
+                                  ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                  {{sum['details']['options']['option'+sum['ans_id']]}}
+                              </span>
+                              <span style="font-size: 14px;"
+                                  ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                  {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                              </span>
+                          </div>
+                      </div>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section class="panel panel-default" style="color: black !important;">
+          <header class="panel-heading">
+              Conduct Certificate
+          </header>
+          <div>
+              <div ng-repeat="sum in l1_summary_questions track by $index">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                              {{sum['details']['options']['option'+sum['ans_id']]}}
+                          </span>
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                              {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+      </section>
+
+      <section class="panel panel-default" style="color: black !important;">
+          <header class="panel-heading">
+              Teaching Experience
+          </header>
+          <div>
+              <table class="table m-b-none">
+                  <thead>
+                      <tr>
+                          <th rowspan="2">Sr. No.</th>
+                          <th rowspan="2">Name of College / Institute
+                              Worked
+                          </th>
+                          <th rowspan="2">Subject Handled</th>
+                          <th colspan="2">Period of work</th>
+                          <th rowspan="2">Total Period</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>
+                              From
+                          </td>
+                          <td>
+                              To
+                          </td>
+                          <td></td>
+                      </tr>
+                      <tr ng-repeat="e in workExperience">
+                          <td>{{$index+1}}</td>
+                          <td>{{e.owe_job_description}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['subject_applied_for']}}</td>
+                          <td>{{e.owe_yoe_from}}</td>
+                          <td>{{e.owe_yoe_to}}</td>
+                          <td>{{e.owe_work_duration}}</td>
+                      </tr>
+                      <tr>
+                          <td colspan="5">Grand Total(cutoff date before
+                              15.11.2019)
+                          </td>
+                          <td>
+                              {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                    candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                    candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+              <div>
+                  <div ng-repeat="sum in l1_summary_exp_ques track by $index">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                          </div>
+                          <div class="col-md-6">
+                              <span style="font-size: 14px;"
+                                  ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                  {{sum['details']['options']['option'+sum['ans_id']]}}
+                              </span>
+                              <span style="font-size: 14px;"
+                                  ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                  {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                              </span>
+                          </div>
+                      </div>
+                      <br>
+                  </div>
+              </div>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">
+                              Number of Teaching Experience Certificates submitted
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">
+                              {{candidateDetails['work_experience'].length}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">
+                              Total Work Experience
+                          </span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">
+                              {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                          candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                          candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+</div>
+
+<div style="display: none;color:black">
+  <div id="eligibility-summary" style="padding-left: 15px;padding-right: 15px;">
+      <h2 style="text-align: center">SUMMARY FOR ELIGIBILITY</h2>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Name:
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Gender :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span
+                  style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Date of Birth :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{go_edu.dob}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Subject Applied For :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['subject_applied_for']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Community :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  Differently Abled :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_handicapped']}}</span>
+          </div>
+      </div>
+      <br>
+
+      <section class="panel panel-default" style="color: black !important;">
+          <header class="panel-heading">
+              Education Qualification:
+          </header>
+          <div>
+              <table class="table m-b-none">
+                  <thead>
+                      <tr>
+                          <th width="10%">Particulars</th>
+                          <th width="15%">Date of publication of result</th>
+                          <th width="10%">Subject</th>
+                          <th width="15%">Mode of study</th>
+                          <th width="15%">PSTM</th>
+                          <th width="10%">Percentage of marks</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>10th Standard</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltsslc']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_sslcmode']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ssc_tamil_pass']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['scc_percentage']}}</td>
+                      </tr>
+                      <tr>
+                          <td>12th Standard</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publreslthsc']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_hscmode']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['hsc_tamil_pass']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['hsc_percentage']}}</td>
+                      </tr>
+                      <tr>
+                          <td>Under Graduate</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_tamil_pass']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ug_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['pg_main_subject'] != '' && candidateDetails['candidate_details'][0]['pg_main_subject'] != null">
+                          <td>Post Graduate</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_mode_of_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_tamil_pass']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['med_main_subject'] != '' && candidateDetails['candidate_details'][0]['med_main_subject'] != null">
+                          <td>M.Ed</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_mode_of_study']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['med_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['mphill_main_subject'] != '' && candidateDetails['candidate_details'][0]['mphill_main_subject'] != null">
+                          <td>M.Phil</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_mode_of_study']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['mphill_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['bed_main_subject'] != '' && candidateDetails['candidate_details'][0]['bed_main_subject'] != null">
+                          <td>B.Ed</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltdeged']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_mode_of_study']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['bed_percentage']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['phd_main_subject'] != '' && candidateDetails['candidate_details'][0]['phd_main_subject'] != null">
+                          <td>Ph.D</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['phd_main_subject']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['pg_mode_study']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['phd_in_tamil']}}</td>
+                          <td>-</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != null">
+                          <td>Special B.Ed</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudybedhearimp']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_percentbedhearimp']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != '' && candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != null">
+                          <td>Senior Diploma</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_publresltseniordip']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudyseniordip']}}</td>
+                          <td>-</td>
+                          <td>{{candidateDetails['candidate_details'][0]['ocad_percentseniordip']}}</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != null">
+                          <td>NET</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr
+                          ng-if="candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != null">
+                          <td>SLET</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</td>
+                          <td>{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+          </div>
+      </section>
+
+      <section class="panel panel-default" style="color: black !important;">
+          <header class="panel-heading">
+              Equivalent G.O:
+          </header>
+          <div>
+              <table class="table m-b-none">
+                  <thead>
+                      <tr>
+                          <th>Sr.no</th>
+                          <th>Particulars</th>
+                          <th>G.O.</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>PG</td>
+                          <td>{{go_edu.pg}}</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>B.Ed</td>
+                          <td>{{go_edu.bed}}</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>M.Ed</td>
+                          <td>{{go_edu.med}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <br>
+          </div>
+      </section>
+
+      <section class="panel panel-default" style="color: black !important;">
+          <div>
+              <div ng-repeat="sum in eligibility_summary_ofq track by $index">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                              {{sum['details']['options']['option'+sum['ans_id']]}}
+                          </span>
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                              {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Claim of Total Teaching Experience as per Application
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                      </span>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Total Teaching Experience as per Documents submitted
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                      </span>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Total Eligible Teaching Experience
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                      candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                      </span>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Subject Handled in Teaching :
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['candidate_details'][0]['subject_applied_for']}}
+                      </span>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <div ng-repeat="sum in eligibility_summary track by $index">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                      </div>
+                      <div class="col-md-6">
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                              {{sum['details']['options']['option'+sum['ans_id']]}}
+                          </span>
+                          <span style="font-size: 14px;"
+                              ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                              {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                          </span>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Eligible / Ineligible :
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['comments']['level2']['status']==1?'Approved':'Rejected'}}
+                      </span>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          Remarks :
+                      </span>
+                  </div>
+                  <div class="col-md-6">
+                      <span style="font-size: 14px;">
+                          {{candidateDetails['comments']['level2']['comment']}}
+                      </span>
+                  </div>
+              </div>
+              <br>
+          </div>
+  </div>
+  </section>
+</div>
+</div>
 
 
 <!--//USRB005114 NOC FOR POLICE DEPARTMENT-->
