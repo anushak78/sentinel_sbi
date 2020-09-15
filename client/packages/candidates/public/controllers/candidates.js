@@ -3306,7 +3306,8 @@
         var iframe = document.createElement('iframe');
         iframe.width = '100%';
         iframe.height = '100%';
-        iframe.srcdoc = html2pdf(element)
+        iframe.srcdoc = element.innerHTML
+        iframe.src = "../assets/src/images/order_of_edu.svg"
         document.getElementById('iframeContainer').append(iframe);
       } else {
         var iframe = document.createElement('iframe');
@@ -3376,11 +3377,7 @@
     };
 
 
-    $scope.showNextQuestion = function (value) {
-      var answers = [];
-      var documentApproved = 1;
-      var flag = false;
-      $scope.selectedInnerDoc = 0;
+    $scope.showAllL1Questions = function() {
       $scope.l1_summ_toggle = true
       $scope.l1_comm_toggle = true
       $scope.l1_dis_toggle = true
@@ -3391,6 +3388,32 @@
       $scope.l1_add_edu = true
       $scope.l1_pstm = true
       $scope.l1_conduct_toggle = true
+    }
+    $scope.isNextDisabled = function() {
+      if ($scope.selectedDocType == 'L1') {
+        if ($scope.l1_summ_toggle == false ||
+          $scope.l1_comm_toggle == false ||
+          $scope.l1_dis_toggle == false ||
+          $scope.l1_sub_toggle == false ||
+          $scope.l1_pub_toggle == false ||
+          $scope.l1_edu_toggle == false ||
+          $scope.l1_exp_toggle == false ||
+          $scope.l1_add_edu == false ||
+          $scope.l1_pstm == false ||
+          $scope.l1_conduct_toggle == false) {
+            return true
+          }
+        else
+          return false
+      }
+      else
+        return false
+    }
+    $scope.showNextQuestion = function (value) {
+      var answers = [];
+      var documentApproved = 1;
+      var flag = false;
+      $scope.selectedInnerDoc = 0;
 
       let fields = $("label:visible input[type=text], label:visible select");
       if (fields.length > 0) {
@@ -3436,6 +3459,38 @@
             // } else {
             //     flag = true
             // }
+          }
+        }
+        if ($scope.selectedDocType == 'L1' && $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'] >= 136) {
+          for (let j in $scope.workExperience) {
+            radioName = radioName + j
+            if ($('input[name=' + radioName + ']').length > 0) {
+              if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
+                alert('Please give all the answers');
+                return false;
+              } else {
+                if ($scope.documentWithQuestions[$scope.selectedDocType][i]['approved'] != $('input[name=' + radioName + ']:checked').val() && $scope.documentWithQuestions[$scope.selectedDocType][i]['required'] !== false) {
+                  documentApproved = 2;
+                }
+    
+                var object = {
+                  "qn_id": $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'],
+                  "ans_id": $('input[name=' + radioName + ']:checked').val()
+                }
+                if ($scope.selectedDocType == 'L1') {
+                  if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
+                    object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']][j]
+                  } 
+                }
+                answers.push(object);
+    
+                // if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
+                //     break
+                // } else {
+                //     flag = true
+                // }
+              }
+            }
           }
         }
       }

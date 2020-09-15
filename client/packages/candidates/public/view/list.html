@@ -3580,7 +3580,14 @@
                           ng-click="previousQuestions()">
                     Previous
                   </button>
+                  <button ng-show="selectedDocType == 'L1'"
+                    type="submit"
+                    class="btn btn-success btn-s-xs"
+                    ng-click="showAllL1Questions()">
+                    Show All
+                  </button>
                   <button ng-show="!showSubmit" type="submit"
+                          ng-disabled="isNextDisabled()"
                           class="btn btn-success btn-s-xs"
                           ng-click="showNextQuestion()">Next
                   </button>

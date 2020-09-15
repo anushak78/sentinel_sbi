@@ -934,7 +934,7 @@
                     <div class="question">Total Period: </div>
                 </div>
             </section>
-            <div ng-repeat="e in workExperience track by $index">
+            <div ng-repeat="e in workExperience track by $index" ng-init="firstIndex = $index">
                 <section class="panel panel-default" style="color: black !important;">
                     <header class="panel-heading">
                         Teaching Experience {{$index+1}}
@@ -947,32 +947,32 @@
                                 </div>
                                 <div class="radio">
                                     <label class="radio-custom">
-                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{$index}}"
-                                            name="radio{{q.doc_id}}{{q.q_id}}{{$index}}" value="1"
-                                            ng-model="radio_values.init_doc999[q.q_id][$index]">
+                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{firstIndex}}"
+                                            name="radio{{q.doc_id}}{{q.q_id}}{{firstIndex}}" value="1"
+                                            ng-model="radio_values.init_doc999[q.q_id][firstIndex]">
                                         {{q.options.option1}}
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label class="radio-custom">
-                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{$index}}"
-                                            name="radio{{q.doc_id}}{{q.q_id}}{{$index}}" value="2"
-                                            ng-model="radio_values.init_doc999[q.q_id][$index]">
+                                        <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}{{firstIndex}}"
+                                            name="radio{{q.doc_id}}{{q.q_id}}{{firstIndex}}" value="2"
+                                            ng-model="radio_values.init_doc999[q.q_id][firstIndex]">
                                         {{q.options.option2}}
                                     </label>
                                 </div>
                                 <label
-                                    style="{{radio_values.init_doc999[q.q_id][$index]=='2' ? 'display:block':'display:none'}}"
+                                    style="{{radio_values.init_doc999[q.q_id][firstIndex]=='2' ? 'display:block':'display:none'}}"
                                     ng-if="q.q_id != 137 && q.q_id != 138">
-                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{$index}}" maxlength="50"
-                                        class="form-control" ng-model="doc999[q.q_id][$index]" />
+                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{firstIndex}}" maxlength="50"
+                                        class="form-control" ng-model="doc999[q.q_id][firstIndex]" />
                                 </label>
                                 <label
-                                    style="{{radio_values.init_doc999[q.q_id][$index]=='2' ? 'display:block':'display:none'}}"
+                                    style="{{radio_values.init_doc999[q.q_id][firstIndex]=='2' ? 'display:block':'display:none'}}"
                                     ng-if="q.q_id == 137 || q.q_id == 138">
-                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{$index}}"
+                                    <input type="text" id="doc{{q.doc_id}}{{q.q_id}}{{firstIndex}}"
                                         class="doc306 modified_date input-sm input-s datepicker-input form-control"
-                                        ng-model="doc999[q.q_id][$index]" />
+                                        ng-model="doc999[q.q_id][firstIndex]" />
                                 </label>
                             </div>
                         </div>
