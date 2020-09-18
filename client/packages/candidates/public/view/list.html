@@ -3586,7 +3586,14 @@
                     ng-click="showAllL1Questions()">
                     Show All
                   </button>
-                  <button ng-show="!showSubmit" type="submit"
+                  <button ng-show="selectedDocType == 'L1'"
+                    type="submit"
+                    ng-disabled="isNextDisabled()"
+                    class="btn btn-success btn-s-xs"
+                    ng-click="submitSummaryL1()">
+                    Submit L1 Summary
+                  </button>
+                  <button ng-show="!showSubmit && selectedDocType != 'L1'" type="submit"
                           ng-disabled="isNextDisabled()"
                           class="btn btn-success btn-s-xs"
                           ng-click="showNextQuestion()">Next
@@ -3613,6 +3620,28 @@
 <div style="display: none;color:black">
   <div id="l1-summary" style="padding-left: 15px;padding-right: 15px;">
       <h2 style="text-align: center">L1 Concise Summary</h2>
+      <div class="row">
+        <div class="col-md-6">
+            <span style="font-size: 14px">
+                Name of the Post:
+            </span>
+        </div>
+        <div class="col-md-6">
+            <span style="font-size: 14px">Assistant Professor for Government Arts & Science College and Colleges of Education</span>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+            <span style="font-size: 14px">
+              Random Sl. No:
+            </span>
+        </div>
+        <div class="col-md-6">
+            <span style="font-size: 14px"></span>
+        </div>
+      </div>
+      <br>
       <div class="row">
           <div class="col-md-6">
               <span style="font-size: 14px">
@@ -4307,7 +4336,7 @@
                   <div class="row">
                       <div class="col-md-6">
                           <span style="font-size: 14px;">
-                              Total Work Experience
+                            Claim of Total Teaching Experience as per Application:
                           </span>
                       </div>
                       <div class="col-md-6">
@@ -4318,6 +4347,37 @@
                           </span>
                       </div>
                   </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                          Total Teaching Experience as per Documents submitted :
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                        </span>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                          Total Eligible Teaching Experience :
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                        </span>
+                    </div>
+                  </div>
+                  <br>
               </div>
           </div>
       </section>
