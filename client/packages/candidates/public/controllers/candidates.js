@@ -56,12 +56,6 @@
       $scope.radio = {};
       $scope.doc999 = {}
       for (let i = 1; i <=139; i++) {
-        if (i > 135) {
-          $scope.doc999[i] = {}
-          for (let j = 1; j <=48; j++) {
-            $scope.doc999[i][j] = '' 
-          }
-        }
         $scope.doc999[i] = '' 
       }
       vm.doc13 = '';
@@ -829,12 +823,6 @@
       $scope.radio_values = {};
       $scope.radio_values.init_doc999 = {}
       for (let i = 1; i < 139; i++) {
-        if (i > 135) {
-          $scope.radio_values.init_doc999[i] = {}
-          for (let j = 1; j <=48; j++) {
-            $scope.radio_values.init_doc999[i][j] = '' 
-          }
-        }
         $scope.radio_values.init_doc999[i] = ''
       }
       vm.radio_values.init_doc12 = "";
@@ -2534,19 +2522,6 @@
             }
           }
           $scope.candidateDetails['document_list'] = $scope.newDocumentList;
-          if ($rootScope.userData['level'] > 1) {
-            $scope.candidateDetails['document_list'].unshift(
-              {
-                doc_id: 999,
-                ocd_doc_file_name: "http://localhost:6544/docs/TRBAPE429394/TRBAPE429394_photo.jpg",
-                ocd_flag: "L1",
-                odm_name: "L1",
-                status: {
-                  level1: [],
-                  level2: []
-                }
-              })
-          }
           $scope.calulatedDOB = '';
           $scope.finalJsonData = {};
           $scope.workExperience = [];
@@ -2578,6 +2553,9 @@
             $scope.l1_add_edu = false
             $scope.l1_pstm = false
             $scope.l1_conduct_toggle = false
+            $scope.getMandatoryL1EduSummary()
+            $scope.getMandatoryL1ReserveSummary()
+
           }
           else if ($rootScope.userData['level'] == 1) {
             $scope.l1_summ_toggle = true
@@ -2652,6 +2630,242 @@
     }
     $scope.toggleL1Conduct = function() {
       $scope.l1_conduct_toggle = !$scope.l1_conduct_toggle
+    }
+    $scope.status = {
+      isopen: false
+    };
+  
+    $scope.toggleDropdown = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+      $scope.status.isopen = !$scope.status.isopen;
+    };
+
+    $scope.getMandatoryL1EduSummary = function() {
+
+      $scope.course_edu_summ = {}
+      $scope.community_summ = []
+      $scope.disability_summ = []
+      $scope.conduct_summ = []
+      $scope.edu_summ = []
+      $scope.exp_l1_summ = []
+      let temp = {}
+      let temp1 = {}
+      let odm_name = 'L1'
+      console.log($scope.candidateDetails['document_list'].find(s=> s.doc_id == 999))
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 999)) {
+        let data = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 999)
+        if (data['status']['level2'][0]) {
+          let answers = data['status']['level2'][0]['answers']
+          if (answers.find(s=> s.qn_id == 14)) {
+            temp = answers.find(s=> s.qn_id == 14)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 14)
+            if (temp)
+              temp['details'] = temp1
+            let obj = {
+              ans: temp['details'].options['option'+temp.ans_id],
+              additional_info: temp.additional_info
+            }
+            $scope.course_edu_summ[14] = obj
+          }
+          if (answers.find(s=> s.qn_id == 15)) {
+            temp = answers.find(s=> s.qn_id== 15)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 15)
+            if (temp)
+              temp['details'] = temp1
+            let obj = {
+              ans: temp['details'].options['option'+temp.ans_id],
+              additional_info: temp.additional_info
+            }
+            $scope.course_edu_summ[15] = obj
+          }
+
+          for (let i = 0; i < answers.length; i++) {
+            if (answers[i]['qn_id'] >= 6 && answers[i]['qn_id'] <= 12) {
+              temp = answers[i]
+              temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == temp.qn_id)
+              if (temp)
+                temp['details'] = temp1
+              $scope.community_summ.push(temp)
+            }
+            if (answers[i]['qn_id'] >= 94 && answers[i]['qn_id'] <= 96) {
+              temp = answers[i]
+              temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == temp.qn_id)
+              if (temp)
+                temp['details'] = temp1
+              $scope.disability_summ.push(temp)
+            }
+            if (answers[i]['qn_id'] >= 116 && answers[i]['qn_id'] <= 117) {
+              temp = answers[i]
+              temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == temp.qn_id)
+              if (temp)
+                temp['details'] = temp1
+              $scope.conduct_summ.push(temp)
+            }
+            if (answers[i]['qn_id'] >= 73 && answers[i]['qn_id'] <= 125) {
+              temp = answers[i]
+              temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == temp.qn_id)
+              if (temp)
+                temp['details'] = temp1
+              $scope.edu_summ.push(temp)
+            }
+            if (answers[i]['qn_id'] >= 133) {
+              temp = answers[i]
+              temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == temp.qn_id)
+              if (temp)
+                temp['details'] = temp1
+              $scope.exp_l1_summ.push(temp)
+            }
+          }
+        }
+      }
+    }
+
+    $scope.getMandatoryL1ReserveSummary = function() {
+      $scope.reserve_summary = {}
+      let temp = {}
+      let temp1 = {}
+      let odm_name = 'L1'
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 999)) {
+        let data = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 999)
+        if (data['status']['level2'][0]) {
+          let answers = data['status']['level2'][0]['answers']
+          if (answers.find(s=> s.qn_id == 2)) {
+            temp = answers.find(s=> s.qn_id == 2)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 2)
+            if (temp)
+              temp['details'] = temp1
+            $scope.reserve_summary[2] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 3)) {
+            temp = answers.find(s=> s.qn_id == 3)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[3] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 4)) {
+            temp = answers.find(s=> s.qn_id == 4)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[4] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 5)) {
+            temp = answers.find(s=> s.qn_id == 5)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[5] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 6)) {
+            temp = answers.find(s=> s.qn_id == 6)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 6)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[6] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 7)) {
+            temp = answers.find(s=> s.qn_id == 7)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[7] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 8)) {
+            temp = answers.find(s=> s.qn_id == 8)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[8] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 9)) {
+            temp = answers.find(s=> s.qn_id == 9)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[9] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 10)) {
+            temp = answers.find(s=> s.qn_id == 10)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[10] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 11)) {
+            temp = answers.find(s=> s.qn_id == 11)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[11] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 12)) {
+            temp = answers.find(s=> s.qn_id == 12)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 12)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[12] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 13)) {
+            temp = answers.find(s=> s.qn_id == 13)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[13] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 16)) {
+            temp = answers.find(s=> s.qn_id == 16)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 16)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[16] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 17)) {
+            temp = answers.find(s=> s.qn_id == 17)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 17)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[17] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 18)) {
+            temp = answers.find(s=> s.qn_id == 18)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 18)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[16] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 93)) {
+            temp = answers.find(s=> s.qn_id == 93)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 93)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[93] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 94)) {
+            temp = answers.find(s=> s.qn_id == 94)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 94)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[94] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 95)) {
+            temp = answers.find(s=> s.qn_id == 95)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 95)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[95] = temp;
+          }
+          if (answers.find(s=> s.qn_id == 96)) {
+            temp = answers.find(s=> s.qn_id == 96)
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 96)
+            if (temp)
+              temp['details'] = temp1
+              $scope.reserve_summary[96] = temp;
+          }
+        }
+      }
+
     }
 
     $scope.eligibilityPDF = function() {
@@ -2730,6 +2944,14 @@
       html2pdf()
           .from(element)
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_eligible.pdf');
+    }
+
+    $scope.l1PDFGeneric = function(str) {
+      var element = document.getElementById(str);
+      // Choose the element and save the PDF for our user.
+      html2pdf()
+          .from(element)
+          .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_report.pdf');
     }
 
     $scope.getMandatoryL1Summary = function() {
@@ -2957,7 +3179,11 @@
 
     $scope.sortDocumentsInOrder = function(newDocumentList) {
       let temp_list = []
-      let temp = newDocumentList.find(s => s.odm_name == 'Photo')
+      let temp = newDocumentList.find(s => s.odm_name == 'L1')
+      if (temp) {
+        temp_list.push(temp)
+      }
+      temp = newDocumentList.find(s => s.odm_name == 'Photo')
       if (temp) {
         temp_list.push(temp)
       }
@@ -3451,46 +3677,16 @@
             // }
           }
         }
-        if ($scope.selectedDocType == 'L1' && $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'] >= 136) {
-          for (let j in $scope.workExperience) {
-            radioName = radioName + j
-            if ($('input[name=' + radioName + ']').length > 0) {
-              if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
-                alert('Please give all the answers');
-                return false;
-              } else {
-                if ($scope.documentWithQuestions[$scope.selectedDocType][i]['approved'] != $('input[name=' + radioName + ']:checked').val() && $scope.documentWithQuestions[$scope.selectedDocType][i]['required'] !== false) {
-                  documentApproved = 2;
-                }
-    
-                var object = {
-                  "qn_id": $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'],
-                  "ans_id": $('input[name=' + radioName + ']:checked').val(),
-                  "work_ex_id": j
-                }
-                if ($scope.selectedDocType == 'L1') {
-                  if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
-                    object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']][j]
-                  } 
-                }
-                answers.push(object);
-    
-                // if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
-                //     break
-                // } else {
-                //     flag = true
-                // }
-              }
-            }
-          }
-        }
       }
-      var arr_data = {}
-      arr_data[$scope.selectedDocType] = {
+      var arr_data = []
+      var status = 1
+      if ($scope.radio_values.init_doc999[132] == 3)
+        status = 2
+      arr_data.push({
         "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
         "status": documentApproved,
         "answers": answers
-      }
+      })
       var arr_object = {
         candidate_id: $scope.rows[$scope.selectedIndex]['oum_user_id'],
         level: $rootScope.userData.level,
@@ -3502,7 +3698,9 @@
       console.log(arr_object)
 
       Http.post("/ui/verify-documents", arr_object).then(function (object) {
+        //console.log(object)
         if (object['code'] == 1) {
+          $('#modal-form').modal("toggle");
           $('#sideNav').animate({'right': '-65%'}, 300);
           $scope.pageChangeHandler($scope.currentPage)
         } else {
@@ -3596,38 +3794,6 @@
             // }
           }
         }
-        if ($scope.selectedDocType == 'L1' && $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'] >= 136) {
-          for (let j in $scope.workExperience) {
-            radioName = radioName + j
-            if ($('input[name=' + radioName + ']').length > 0) {
-              if (!$('input[name=' + radioName + ']:checked').val() && $('input[name=' + radioName + ']').is(":visible")) {
-                alert('Please give all the answers');
-                return false;
-              } else {
-                if ($scope.documentWithQuestions[$scope.selectedDocType][i]['approved'] != $('input[name=' + radioName + ']:checked').val() && $scope.documentWithQuestions[$scope.selectedDocType][i]['required'] !== false) {
-                  documentApproved = 2;
-                }
-    
-                var object = {
-                  "qn_id": $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id'],
-                  "ans_id": $('input[name=' + radioName + ']:checked').val()
-                }
-                if ($scope.selectedDocType == 'L1') {
-                  if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
-                    object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']][j]
-                  } 
-                }
-                answers.push(object);
-    
-                // if ($('input[name=' + radioName + ']:checked').val() != 1 && flag != true) {
-                //     break
-                // } else {
-                //     flag = true
-                // }
-              }
-            }
-          }
-        }
       }
 
       // if($scope.selectedDocType == 'Work Experience'){
@@ -3701,7 +3867,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194, #doc9994, #doc9997, #doc99918, #doc99924, #doc99931, #doc99938, #doc99945, #doc99952, #doc99959, #doc99966, #doc99973, #doc99980, #doc99991, #doc99992, #doc99996, #doc999100, #doc999131, #doc999132, #doc999133, #doc999137, #doc999138, #doc117, #doc118, #doc119, #doc120, #doc121, #doc122, #doc123, #doc124, #doc125").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194, #doc9994,#doc9995,#doc9999,#doc99920,#doc99923,#doc99927,#doc99933,#doc99939,#doc99945,#doc99951,#doc99957,#doc99963,#doc99969,#doc99990,#doc999107,#doc999108,#doc999109,#doc999110,#doc999111,#doc999112,#doc999113,#doc999114,#doc999115,#doc999116,#doc999120,#doc999134").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -3717,7 +3883,7 @@
         }).on('changeDate', function (value) {
           // vm.doc23 = moment(value.date).format("MM-YYYY")
         });
-        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc399').datepicker({
+        $('#doc255, #doc285, #doc3819, #doc4419, #doc4519, #doc4619, #doc4719,#doc4819, #doc629, #doc639, #doc649, #doc659, #doc669, #doc679, #doc7019,#doc7119,#doc7219,#doc7319,#doc7419,#doc7519,#doc7619,#doc7719,#doc7819, #doc809, #doc819, #doc829, #doc839, #doc849, #doc859, #doc869, #doc879, #doc889, .doc399, #doc99919, #doc99922, #doc99926, #doc99932, #doc99938, #doc99944, #doc99950, #doc99956, #doc99962, #doc99968').datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,
@@ -3785,7 +3951,7 @@
     }, true);
 
     $scope.submitQuestion = function (status) {
-      if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length-1) {
+      if (Object.keys($scope.finalJsonData).length == $scope.newDocumentList.length) {
         if ($scope.packages.comment == "" && parseInt($scope.userData.level) > 1) {
           alert("Please select comment");
           return false;

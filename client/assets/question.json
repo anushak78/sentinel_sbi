@@ -41,7 +41,7 @@
       "q_id": 4
     },
     {
-      "question": "Is Religion matched?",
+      "question": "Does age as on 01.07.2019 Matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -51,7 +51,7 @@
       "q_id": 5
     },
     {
-      "question": "Is Community matched?",
+      "question": "Is Religion matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -61,7 +61,7 @@
       "q_id": 6
     },
     {
-      "question": "Date of issuance of Community Certificate matched?",
+      "question": "Is Community matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -71,7 +71,7 @@
       "q_id": 7
     },
     {
-      "question": "Sub Caste matched?",
+      "question": "Whether Community Certificate issued by Competent Authority",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -81,7 +81,7 @@
       "q_id": 8
     },
     {
-      "question": "Community Certificate Number matched?",
+      "question": "Date of issuance of Community Certificate matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -91,7 +91,7 @@
       "q_id": 9
     },
     {
-      "question": "Whether Community Certificate issued in fathers’ name matched?",
+      "question": "Sub Caste matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -101,7 +101,7 @@
       "q_id": 10
     },
     {
-      "question": "Is the “subject” applied for the post matches?",
+      "question": "Community Certificate Number matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -111,7 +111,7 @@
       "q_id": 11
     },
     {
-      "question": "Any Course studied Simultaneously Matches?",
+      "question": "Whether Community Certificate issued in fathers’ name matched?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -121,7 +121,7 @@
       "q_id": 12
     },
     {
-      "question": "Any Course Completed after Discontinuing Matches?",
+      "question": "Is the “subject” applied for the post matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -131,7 +131,7 @@
       "q_id": 13
     },
     {
-      "question": "Whether “Passed in Tamil Language Part I (SSLC)” matches?",
+      "question": "Any Course studied Simultaneously Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -141,7 +141,7 @@
       "q_id": 14
     },
     {
-      "question": "Passed in Tamil Language Part I (HSC) Matches?",
+      "question": "Any Course Completed after Discontinuing Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -151,7 +151,7 @@
       "q_id": 15
     },
     {
-      "question": "Passed in Tamil Language Part I (UG Degree) matches?",
+      "question": "Whether “Passed in Tamil Language Part I (SSLC)” matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -161,7 +161,7 @@
       "q_id": 16
     },
     {
-      "question": "Whether month & year of passing for SSLC matches?",
+      "question": "Passed in Tamil Language Part I (HSC) Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -171,7 +171,7 @@
       "q_id": 17
     },
     {
-      "question": "Whether date of publication of result matches for SSLC?",
+      "question": "Passed in Tamil Language Part I (UG Degree) matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -181,7 +181,7 @@
       "q_id": 18
     },
     {
-      "question": "Name of the institution matches for SSLC?",
+      "question": "Whether month & year of passing for SSLC matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -191,7 +191,7 @@
       "q_id": 19
     },
     {
-      "question": "Name of the university matches for SSLC?",
+      "question": "Whether date of publication of result matches for SSLC?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -211,7 +211,7 @@
       "q_id": 21
     },
     {
-      "question": "Whether percentage of marks matches for SSLC?",
+      "question": "Whether month & year of passing for HSC matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -221,7 +221,7 @@
       "q_id": 22
     },
     {
-      "question": "Whether month & year of passing for HSC matches?",
+      "question": "Whether date of publication of result matches for HSC?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -231,7 +231,7 @@
       "q_id": 23
     },
     {
-      "question": "Whether date of publication of result matches for HSC?",
+      "question": "Whether mode of study matches for HSC?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -241,7 +241,7 @@
       "q_id": 24
     },
     {
-      "question": "Name of the institution matches for HSC?",
+      "question": "Whether Name of the Subject studied matches for UG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -251,7 +251,7 @@
       "q_id": 25
     },
     {
-      "question": "Name of the university matches for HSC?",
+      "question": "Whether month & year of passing for UG matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -261,7 +261,7 @@
       "q_id": 26
     },
     {
-      "question": "Whether mode of study matches for HSC?",
+      "question": "Whether date of publication of result matches for UG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -271,7 +271,7 @@
       "q_id": 27
     },
     {
-      "question": "Whether percentage of marks matches for HSC?",
+      "question": "Name of the institution matches for UG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -281,7 +281,7 @@
       "q_id": 28
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Name of the university matches for UG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -291,7 +291,7 @@
       "q_id": 29
     },
     {
-      "question": "Whether month & year of passing for UG matches?",
+      "question": "Whether mode of study matches for UG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -301,7 +301,7 @@
       "q_id": 30
     },
     {
-      "question": "Whether date of publication of result matches for UG?",
+      "question": "Whether subject studied matches for PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -311,7 +311,7 @@
       "q_id": 31
     },
     {
-      "question": "Name of the institution matches for UG?",
+      "question": "Whether month & year of passing for PG matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -321,7 +321,7 @@
       "q_id": 32
     },
     {
-      "question": "Name of the university matches for UG?",
+      "question": "Whether date of publication of result matches for PG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -331,7 +331,7 @@
       "q_id": 33
     },
     {
-      "question": "Whether mode of study matches for UG?",
+      "question": "Name of the institution matches for PG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -341,7 +341,7 @@
       "q_id": 34
     },
     {
-      "question": "Whether percentage of marks matches for UG?",
+      "question": "Name of the university matches for PG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -351,7 +351,7 @@
       "q_id": 35
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Whether mode of study matches for PG?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -361,7 +361,7 @@
       "q_id": 36
     },
     {
-      "question": "Whether month & year of passing for PG matches?",
+      "question": "Whether Name of the Subject studied matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -371,7 +371,7 @@
       "q_id": 37
     },
     {
-      "question": "Whether date of publication of result matches for PG?",
+      "question": "Whether month & year of passing for M.Phil matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -381,7 +381,7 @@
       "q_id": 38
     },
     {
-      "question": "Name of the institution matches for PG?",
+      "question": "Whether date of publication of result matches for M.Phil?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -391,7 +391,7 @@
       "q_id": 39
     },
     {
-      "question": "Name of the university matches for PG?",
+      "question": "Name of the institution matches for M.Phil?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -401,7 +401,7 @@
       "q_id": 40
     },
     {
-      "question": "Whether mode of study matches for PG?",
+      "question": "Name of the university matches for M.Phil?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -411,7 +411,7 @@
       "q_id": 41
     },
     {
-      "question": "Whether percentage of marks matches for PG?",
+      "question": "Whether mode of study matches for M.Phil?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -421,7 +421,7 @@
       "q_id": 42
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Whether Name of the Subject studied matches for Ph.D Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -431,7 +431,7 @@
       "q_id": 43
     },
     {
-      "question": "Whether month & year of passing for M.Phil matches?",
+      "question": "Whether month & year of passing for Ph.D matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -441,7 +441,7 @@
       "q_id": 44
     },
     {
-      "question": "Whether date of publication of result matches for M.Phil?",
+      "question": "Whether date of publication of result matches for Ph.D?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -451,7 +451,7 @@
       "q_id": 45
     },
     {
-      "question": "Name of the institution matches for M.Phil?",
+      "question": "Name of the institution matches for Ph.D?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -461,7 +461,7 @@
       "q_id": 46
     },
     {
-      "question": "Name of the university matches for M.Phil?",
+      "question": "Name of the university matches for Ph.D?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -471,7 +471,7 @@
       "q_id": 47
     },
     {
-      "question": "Whether mode of study matches for M.Phil?",
+      "question": "Whether mode of study matches for Ph.D?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -481,7 +481,7 @@
       "q_id": 48
     },
     {
-      "question": "Whether percentage of marks matches for M.Phil?",
+      "question": "Whether Name of the Subject studied matches for B.Ed Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -491,7 +491,7 @@
       "q_id": 49
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Whether month & year of passing for B.Ed matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -501,7 +501,7 @@
       "q_id": 50
     },
     {
-      "question": "Whether month & year of passing for Ph.D matches?",
+      "question": "Whether date of publication of result matches for B.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -511,7 +511,7 @@
       "q_id": 51
     },
     {
-      "question": "Whether date of publication of result matches for Ph.D?",
+      "question": "Name of the institution matches for B.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -521,7 +521,7 @@
       "q_id": 52
     },
     {
-      "question": "Name of the institution matches for Ph.D?",
+      "question": "Name of the university matches for B.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -531,7 +531,7 @@
       "q_id": 53
     },
     {
-      "question": "Name of the university matches for Ph.D?",
+      "question": "Whether mode of study matches for B.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -541,7 +541,7 @@
       "q_id": 54
     },
     {
-      "question": "Whether mode of study matches for Ph.D?",
+      "question": "Whether Name of the Subject studied matches for M.Ed Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -551,7 +551,7 @@
       "q_id": 55
     },
     {
-      "question": "Whether percentage of marks matches for Ph.D?",
+      "question": "Whether month & year of passing for M.Ed matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -561,7 +561,7 @@
       "q_id": 56
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Whether date of publication of result matches for M.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -571,7 +571,7 @@
       "q_id": 57
     },
     {
-      "question": "Whether month & year of passing for B.Ed matches?",
+      "question": "Name of the institution matches for M.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -581,7 +581,7 @@
       "q_id": 58
     },
     {
-      "question": "Whether date of publication of result matches for B.Ed?",
+      "question": "Name of the university matches for M.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -591,7 +591,7 @@
       "q_id": 59
     },
     {
-      "question": "Name of the institution matches for B.Ed?",
+      "question": "Whether mode of study matches for M.Ed?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -601,7 +601,7 @@
       "q_id": 60
     },
     {
-      "question": "Name of the university matches for B.Ed?",
+      "question": "Whether Name of the Subject studied matches for Special B.Ed degree in teaching the hearing impairment?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -611,7 +611,7 @@
       "q_id": 61
     },
     {
-      "question": "Whether mode of study matches for B.Ed?",
+      "question": "Whether month & year of passing for Special B.Ed degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -621,7 +621,7 @@
       "q_id": 62
     },
     {
-      "question": "Whether percentage of marks matches for B.Ed?",
+      "question": "Whether date of publication of result matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -631,7 +631,7 @@
       "q_id": 63
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Name of the institution matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -641,7 +641,7 @@
       "q_id": 64
     },
     {
-      "question": "Whether month & year of passing for M.Ed matches?",
+      "question": "Name of the university matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -651,7 +651,7 @@
       "q_id": 65
     },
     {
-      "question": "Whether date of publication of result matches for M.Ed?",
+      "question": "Whether mode of study matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -661,7 +661,7 @@
       "q_id": 66
     },
     {
-      "question": "Name of the institution matches for M.Ed?",
+      "question": "Whether Name of the Subject studied matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -671,7 +671,7 @@
       "q_id": 67
     },
     {
-      "question": "Name of the university matches for M.Ed?",
+      "question": "Whether month & year of passing for Senior Diploma in Teaching Deaf matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -681,7 +681,7 @@
       "q_id": 68
     },
     {
-      "question": "Whether mode of study matches for M.Ed?",
+      "question": "Whether date of publication of result matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -691,7 +691,7 @@
       "q_id": 69
     },
     {
-      "question": "Whether percentage of marks matches for M.Ed?",
+      "question": "Name of the institution matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -701,7 +701,7 @@
       "q_id": 70
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Name of the university matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -711,7 +711,7 @@
       "q_id": 71
     },
     {
-      "question": "Whether month & year of passing for Special B.Ed degree matches?",
+      "question": "Whether mode of study matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -721,7 +721,7 @@
       "q_id": 72
     },
     {
-      "question": "Whether date of publication of result matches for Special B.Ed degree?",
+      "question": "Whether equivalent subject in PG Degree, Government Order No.& Date matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -731,7 +731,7 @@
       "q_id": 73
     },
     {
-      "question": "Name of the institution matches for Special B.Ed degree?",
+      "question": "If PG Degree from Foreign University, Equivalent Certificate obtained from Association of Indian University New Delhi matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -741,7 +741,7 @@
       "q_id": 74
     },
     {
-      "question": "Name of the university matches for Special B.Ed degree?",
+      "question": "Whether Subject / Equivalent Subject in PG Degree and the post Applied for subject matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -751,7 +751,7 @@
       "q_id": 75
     },
     {
-      "question": "Whether mode of study matches for Special B.Ed degree?",
+      "question": "Whether the candidate has passed in the PG Degree with atleast 55% marks for General Category or its equivalent Grade from Recognized University (83)",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -761,7 +761,7 @@
       "q_id": 76
     },
     {
-      "question": "Whether percentage of marks matches for Special B.Ed degree?",
+      "question": "Whether the candidate has passed in the PG Degree with at least 50% marks for BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates or its equivalent Grade from Recognized University matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -771,7 +771,7 @@
       "q_id": 77
     },
     {
-      "question": "Whether subject studied matches?",
+      "question": "Whether the candidate has at least 50% in P.G with Ph.D Degree and has obtained their Master’s Degree prior to 19th September 1991 for “General Category” or its equivalent grade from Recognized University matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -781,7 +781,7 @@
       "q_id": 78
     },
     {
-      "question": "Whether month & year of passing for Senior Diploma in Teaching Deaf matches?",
+      "question": "Whether Candidate has passed in the NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -791,7 +791,7 @@
       "q_id": 79
     },
     {
-      "question": "Whether date of publication of result matches for Senior Diploma in Teaching Deaf?",
+      "question": "Qualifying Date of NET / JRF / CSIR Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -801,7 +801,7 @@
       "q_id": 80
     },
     {
-      "question": "Name of the institution matches for Senior Diploma in Teaching Deaf?",
+      "question": "Whether Candidate has passed in the SLET / SET / SLST matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -811,7 +811,7 @@
       "q_id": 81
     },
     {
-      "question": "Name of the university matches for Senior Diploma in Teaching Deaf?",
+      "question": "Qualifying Date of SLET / SET / SLET Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -821,7 +821,7 @@
       "q_id": 82
     },
     {
-      "question": "Whether mode of study matches for Senior Diploma in Teaching Deaf?",
+      "question": "Whether NET / SLET Exemption Certificate issued by Competent Authority matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -831,7 +831,7 @@
       "q_id": 83
     },
     {
-      "question": "Whether percentage of marks matches for Senior Diploma in Teaching Deaf?",
+      "question": "Whether Senior Diploma Certificate (Hearing Impairment) issued or / and recognized by Rehabilitation Council of India matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -841,7 +841,7 @@
       "q_id": 84
     },
     {
-      "question": "Whether equivalent subject in PG Degree, Government Order No.& Date matches?",
+      "question": "Whether Special B.Ed (Hearing Impairment) Degree issued by recognized University matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -851,7 +851,7 @@
       "q_id": 85
     },
     {
-      "question": "If PG Degree from Foreign University, Equivalent Certificate obtained from Association of Indian University New Delhi matches?",
+      "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -861,7 +861,7 @@
       "q_id": 86
     },
     {
-      "question": "Whether Subject / Equivalent Subject in PG Degree and the post Applied for subject matches?",
+      "question": "Whether the candidate has passed M.Phil in the relevant subject or its equivalent awarded as per UGC norms matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -871,7 +871,7 @@
       "q_id": 87
     },
     {
-      "question": "Whether the candidate has passed in the PG Degree with atleast 55% marks for General Category or its equivalent Grade from Recognized University (83)",
+      "question": "Whether the candidate has passed Ph.D in the relevant subject or its equivalent awarded as per UGC norms matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -881,7 +881,7 @@
       "q_id": 88
     },
     {
-      "question": "Whether the candidate has passed in the PG Degree with at least 50% marks for BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates or its equivalent Grade from Recognized University matches?",
+      "question": "If equivalent subject in Ph.D, Government Order No.& Date matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -891,7 +891,7 @@
       "q_id": 89
     },
     {
-      "question": "Whether the candidate has at least 50% in P.G with Ph.D Degree and has obtained their Master’s Degree prior to 19th September 1991 for “General Category” or its equivalent grade from Recognized University matches?",
+      "question": "Whether obtained Ph.D Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -901,7 +901,7 @@
       "q_id": 90
     },
     {
-      "question": "Whether Candidate has passed in the NET / JRF / UGC matches?",
+      "question": "Whether Ph.D Degree obtained from Foreign University matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -911,7 +911,7 @@
       "q_id": 91
     },
     {
-      "question": "Whether Candidate has passed in the SLET / SET / SLST matches?",
+      "question": "If Ph.D Degree obtained from Foreign University, whether Equivalent Certificate obtained matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -921,7 +921,7 @@
       "q_id": 92
     },
     {
-      "question": "Whether NET / SLET Exemption Certificate issued by Competent Authority matches?",
+      "question": "Whether studied the prescribed qualification in Tamil Medium PSTM and submitted the PSTM Certificate matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -931,7 +931,7 @@
       "q_id": 93
     },
     {
-      "question": "Whether Senior Diploma Certificate (Hearing Impairment) issued or / and recognized by Rehabilitation Council of India matches?",
+      "question": "Whether Persons with Disability Certificate submitted from Competent Authority matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -941,7 +941,7 @@
       "q_id": 94
     },
     {
-      "question": "Whether Special B.Ed (Hearing Impairment) Degree issued by recognized University matches?",
+      "question": "Category of Disability matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -951,7 +951,7 @@
       "q_id": 95
     },
     {
-      "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
+      "question": "Percentage of Disability matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -961,7 +961,7 @@
       "q_id": 96
     },
     {
-      "question": "Whether the candidate has passed M.Phil in the relevant subject or its equivalent awarded as per UGC norms matches?",
+      "question": "Whether Educational Qualification in the order [10+2+3+2+1 or 2 / 4 + Years ] or [10+2+3+2 / 3 years] or [10+2+3+2+1 / 2 years / 1 or 2 / 4 Years] or [10+2+3+1/2+2/3+2/1 or 2/4 years] or [others]  matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -971,7 +971,7 @@
       "q_id": 97
     },
     {
-      "question": "Whether the candidate has passed Ph.D in the relevant subject or its equivalent awarded as per UGC norms matches?",
+      "question": "Name of the Subject in which applied for the Post matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -981,7 +981,7 @@
       "q_id": 98
     },
     {
-      "question": "If equivalent subject in Ph.D, Government Order No.& Date matches?",
+      "question": "Name of the Subject in P.G Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -991,7 +991,7 @@
       "q_id": 99
     },
     {
-      "question": "Whether obtained Ph.D Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
+      "question": "Name of the Subject in M.Phil Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1001,7 +1001,7 @@
       "q_id": 100
     },
     {
-      "question": "Whether Ph.D Degree obtained from Foreign University matches?",
+      "question": "Name of the Subject in NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1011,7 +1011,7 @@
       "q_id": 101
     },
     {
-      "question": "If Ph.D Degree obtained from Foreign University, whether Equivalent Certificate obtained matches?",
+      "question": "Name of the Subject in SET / SLET /SLST matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1021,7 +1021,7 @@
       "q_id": 102
     },
     {
-      "question": "Whether studied the prescribed qualification in Tamil Medium PSTM and submitted the PSTM Certificate matches?",
+      "question": "Name of the Subject in Special B.Ed Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1031,7 +1031,7 @@
       "q_id": 103
     },
     {
-      "question": "Whether Persons with Disability Certificate submitted from Competent Authority matches?",
+      "question": "Name of the Subject in Senior Diploma matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1041,7 +1041,7 @@
       "q_id": 104
     },
     {
-      "question": "Category of Disability matches?",
+      "question": "Name of the Subject in M.Ed Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1051,7 +1051,7 @@
       "q_id": 105
     },
     {
-      "question": "Percentage of Disability matches?",
+      "question": "Whether the prescribed qualification is relevant to the post applied for matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1061,7 +1061,7 @@
       "q_id": 106
     },
     {
-      "question": "Whether Educational Qualification in the order [10+2+3+2+1 or 2 / 4 + Years ] or [10+2+3+2 / 3 years] or [10+2+3+2+1 / 2 years / 1 or 2 / 4 Years] or [10+2+3+1/2+2/3+2/1 or 2/4 years] or [others]  matches?",
+      "question": "Whether the publication of results for the prescribed qualifications is prior to the cut-off date 04.10.2019 matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1071,7 +1071,7 @@
       "q_id": 107
     },
     {
-      "question": "Name of the Subject in which applied for the Post matches?",
+      "question": "Date of Publication of results in P.G Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1081,7 +1081,7 @@
       "q_id": 108
     },
     {
-      "question": "Name of the Subject in P.G Degree matches?",
+      "question": "Date of Publication of results in M.Phil Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1091,7 +1091,7 @@
       "q_id": 109
     },
     {
-      "question": "Name of the Subject in M.Phil Degree matches?",
+      "question": "Date of Publication of results in Ph.D matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1101,7 +1101,7 @@
       "q_id": 110
     },
     {
-      "question": "Name of the Subject in NET / JRF / UGC matches?",
+      "question": "Date of Publication of results in NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1111,7 +1111,7 @@
       "q_id": 111
     },
     {
-      "question": "Name of the Subject in SET / SLET /SLST matches?",
+      "question": "Date of Publication of results in SET / SLET /SLST matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1121,7 +1121,7 @@
       "q_id": 112
     },
     {
-      "question": "Name of the Subject in Special B.Ed Degree matches?",
+      "question": "Date of Publication of results in Special B.Ed Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1131,7 +1131,7 @@
       "q_id": 113
     },
     {
-      "question": "Name of the Subject in Senior Diploma matches?",
+      "question": "Date of Publication of results in Senior Diploma matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1141,7 +1141,7 @@
       "q_id": 114
     },
     {
-      "question": "Name of the Subject in M.Ed Degree matches?",
+      "question": "Date of Publication of results in M.Ed Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1151,7 +1151,7 @@
       "q_id": 115
     },
     {
-      "question": "Whether the prescribed qualification is relevant to the post applied for matches?",
+      "question": "Last studied Conduct Certificate (Regular Course)",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1161,7 +1161,7 @@
       "q_id": 116
     },
     {
-      "question": "Whether the publication of results for the prescribed qualifications is prior to the cut-off date 04.10.2019 matches?",
+      "question": "Latest Conduct Certificate (Issued Date on or after 04.10.2019) matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1171,7 +1171,7 @@
       "q_id": 117
     },
     {
-      "question": "Date of Publication of results in P.G Degree matches?",
+      "question": "Whether Teaching Experience certificate submitted matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1181,7 +1181,7 @@
       "q_id": 118
     },
     {
-      "question": "Date of Publication of results in M.Phil Degree matches?",
+      "question": "Teaching Experience Certificate counter signed by Competent Authority",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1191,7 +1191,7 @@
       "q_id": 119
     },
     {
-      "question": "Date of Publication of results in Ph.D matches?",
+      "question": "Is the date of counter signing authority between 01.10.2019 to 30.11.2019 matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1201,7 +1201,7 @@
       "q_id": 120
     },
     {
-      "question": "Date of Publication of results in NET / JRF / UGC matches?",
+      "question": "Whether there is Teaching Experience period claimed in Polytechnic Institutions Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1211,7 +1211,7 @@
       "q_id": 121
     },
     {
-      "question": "Date of Publication of results in SET / SLET /SLST matches?",
+      "question": "Whether the teaching Experience period claimed in PTA Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1221,7 +1221,7 @@
       "q_id": 122
     },
     {
-      "question": "Date of Publication of results in Special B.Ed Degree matches?",
+      "question": "Whether the teaching Experience period claimed in schools/institutions other than Arts and Science, Engineering, Medical, Law Colleges / Universities Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1231,7 +1231,7 @@
       "q_id": 123
     },
     {
-      "question": "Date of Publication of results in Senior Diploma matches?",
+      "question": "Number of Teaching Experience Certificates submitted matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1241,7 +1241,7 @@
       "q_id": 124
     },
     {
-      "question": "Date of Publication of results in M.Ed Degree matches?",
+      "question": "Teaching Experience certificate issued between 04.10.2019 to 15.11.2019 matches",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1251,7 +1251,7 @@
       "q_id": 125
     },
     {
-      "question": "Latest Conduct Certificate (Issued Date on or after 04.10.2019) matches?",
+      "question": "Whether Teaching Experience in other Institution and other than mentioned in Notification?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1261,7 +1261,7 @@
       "q_id": 126
     },
     {
-      "question": "Whether Teaching Experience certificate submitted matches?",
+      "question": "Whether Name of the Institution matches (as per Table, Application and Experience Certificate )?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1271,7 +1271,7 @@
       "q_id": 127
     },
     {
-      "question": "Number of Teaching Experience Certificates submitted matches?",
+      "question": "Whether “Subject handled” matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1281,7 +1281,7 @@
       "q_id": 128
     },
     {
-      "question": "Teaching Experience certificate issued between 04.10.2019 to 15.11.2019 matches",
+      "question": "Whether period of Service Teaching Experience matches as per application? ",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1291,7 +1291,7 @@
       "q_id": 129
     },
     {
-      "question": "Teaching Experience Certificate counter signed by Competent Authority (232)",
+      "question": "Foreign University Experience : ",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1301,7 +1301,7 @@
       "q_id": 130
     },
     {
-      "question": "Whether “From(DD/MM/YYY)” date matches",
+      "question": "Whether the eligible Teaching Experience as in show table of L1 Certificate Verification matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1309,36 +1309,6 @@
       "approved": "1",
       "doc_id": 999,
       "q_id": 131
-    },
-    {
-      "question": "Whether “To (Dd/MM/YYYY)” date matches?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 999,
-      "q_id": 132
-    },
-    {
-      "question": "Whether type of the Institution matches?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 999,
-      "q_id": 133
-    },
-    {
-      "question": "Whether “Subject handled” matches?",
-      "options": {
-        "option1": "Yes",
-        "option2": "No"
-      },
-      "approved": "1",
-      "doc_id": 999,
-      "q_id": 134
     },
     {
       "question": "Status",
@@ -1349,7 +1319,7 @@
       },
       "approved": "1",
       "doc_id": 999,
-      "q_id": 135
+      "q_id": 132
     },
     {
       "question": "Grand Total (Cutoff date 15.11.2019) matches?",
@@ -1359,7 +1329,7 @@
       },
       "approved": "1",
       "doc_id": 999,
-      "q_id": 136
+      "q_id": 133
     },
     {
       "question": "Date of obtaining Prescribed Qualifications matches?",
@@ -1369,7 +1339,7 @@
       },
       "approved": "1",
       "doc_id": 999,
-      "q_id": 137
+      "q_id": 134
     },
     {
       "question": "Net Eligible Total Teaching Experience Period matches? (from date of obtaining prescribed qualification upto 15.11.2019 & Eligible worked period)",
@@ -1379,7 +1349,7 @@
       },
       "approved": "1",
       "doc_id": 999,
-      "q_id": 138
+      "q_id": 135
     },
     {
       "question": "Remarks",
@@ -1389,7 +1359,7 @@
       },
       "approved": "1",
       "doc_id": 999,
-      "q_id": 139
+      "q_id": 136
     }
   ],
   "10th / SSLC Certificate": [

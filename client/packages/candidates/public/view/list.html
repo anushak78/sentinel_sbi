@@ -1106,11 +1106,25 @@
                   </div>
                   <div class="col-md-6" ng-if="selectedDocType.indexOf('L1') > -1">
                     <div style="text-align: right;">
-                      <button ng-click="generatePDFL1Summary()" class="btn btn-success text-center">Download PDF</button>
-                    </div>
-                    <br>
-                    <div style="text-align: right;">
-                      <button ng-click="eligibilityPDF()" class="btn btn-success text-center">Download Eligibility PDF</button>
+                      <div class="dropdown">
+                        <button id="single-button" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                          Download PDF <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li role="menuitem">
+                            <button ng-click="generatePDFL1Summary()" class="btn btn-link text-center">Consolidated</button>      
+                          </li>
+                         <!-- <li role="menuitem">
+                            <button ng-click="eligibilityPDF()" class="btn btn-link text-center">Eligibility PDF</button>      
+                          </li>-->
+                          <li role="menuitem">
+                            <button ng-click="l1PDFGeneric('l1-edu-summary')" class="btn btn-link text-center">Teaching Experience PDF</button>      
+                          </li>
+                          <li role="menuitem">
+                            <button ng-click="l1PDFGeneric('l1-reserve')" class="btn btn-link text-center">Reservation PDF</button>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   </div>
@@ -3678,47 +3692,33 @@
       </div>
       <br>
       <div class="row">
-          <div class="col-md-6">
-              <span style="font-size: 14px">
-                  Age as on 01.07.2019 (Years, Months, Days) :
-              </span>
-          </div>
-          <div class="col-md-6">
-              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_age']}}</span>
-          </div>
+        <div class="col-md-6">
+            <span style="font-size: 14px">
+                Date of Birth and Age as on 01.07.2019 (Years, Months, Days) :
+            </span>
+        </div>
+        <div class="col-md-6">
+            <span
+                style="font-size: 14px">{{reserve_summary[4]['details']['options']['option'+reserve_summary[4]['ans_id']]}}</span>
+            <span
+                ng-if="reserve_summary[4].additional_info != null && reserve_summary[4].additional_info != ''">&nbsp;:-&nbsp;
+                reserve_summary[4].additional_info</span>
+        </div>
       </div>
       <br>
       <div class="row">
-          <div class="col-md-6">
-              <span style="font-size: 14px">
-                  Subject Applied For :
-              </span>
-          </div>
-          <div class="col-md-6">
-              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['subject_applied_for']}}</span>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-6">
-              <span style="font-size: 14px">
-                  Communal Category :
-              </span>
-          </div>
-          <div class="col-md-6">
-              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
-          </div>
-      </div>
-      <br>
-      <div class="row">
-          <div class="col-md-6">
-              <span style="font-size: 14px">
-                  Differently Abled :
-              </span>
-          </div>
-          <div class="col-md-6">
-              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['is_handicapped']}}</span>
-          </div>
+        <div class="col-md-6">
+            <span style="font-size: 14px">
+                Subject for which Post applied for :
+            </span>
+        </div>
+        <div class="col-md-6">
+            <span
+                style="font-size: 14px">{{reserve_summary[13]['details']['options']['option'+reserve_summary[13]['ans_id']]}}</span>
+            <span
+                ng-if="reserve_summary[13].additional_info != null && reserve_summary[13].additional_info != ''">&nbsp;:-&nbsp;
+                reserve_summary[13].additional_info</span>
+        </div>
       </div>
       <br>
 
@@ -3728,84 +3728,15 @@
               <header class="panel-heading">
                   Community Details
               </header>
-              <div>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['community_issued_with_father_name'] != '' && candidateDetails['candidate_details'][0]['community_issued_with_father_name'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Community certificate issued
-                              with Father's Name.:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_with_father_name']}}
-                          </span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt'] != '' && candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Community certificate issued
-                              date.:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_commcertno'] != '' && candidateDetails['candidate_details'][0]['ocad_commcertno'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Community Certificate no.:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_commcertno']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_subcaste'] != '' && candidateDetails['candidate_details'][0]['ocad_subcaste'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              SubCaste.:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_subcaste']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['religion'] != '' && candidateDetails['candidate_details'][0]['religion'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Religion.:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
-                      </div>
-                  </div>
-                  <br>
+                <div>
                   <div>
-                      <div ng-repeat="sum in l1_summary_comm_ques track by $index">
+                      <div ng-repeat="sum in community_summ track by $index">
                           <div class="row">
                               <div class="col-md-6">
                                   <span style="font-size: 14px;">{{sum['details']['question']}}</span>
                               </div>
                               <div class="col-md-6">
-                                  <span style="font-size: 14px;"
-                                      ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                                  <span style="font-size: 14px;">
                                       {{sum['details']['options']['option'+sum['ans_id']]}}
                                   </span>
                                   <span style="font-size: 14px;"
@@ -3825,227 +3756,23 @@
                   Disability Details
               </header>
               <div>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocd_disability_perc'] != '' && candidateDetails['candidate_details'][0]['ocd_disability_perc'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Disability Percentage
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              {{candidateDetails['candidate_details'][0]['ocd_disability_perc']}}
-                          </span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['disability_type'] != '' && candidateDetails['candidate_details'][0]['disability_type'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Disability Type
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              {{candidateDetails['candidate_details'][0]['disability_type']}}
-                          </span>
-                      </div>
-                  </div>
-              </div>
-          </section>
-          <section class="panel panel-default" style="color: black !important;">
-              <header class="panel-heading">
-                  Main Subject Details
-              </header>
-              <div>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['mphill_main_subject'] != '' && candidateDetails['candidate_details'][0]['mphill_main_subject'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              M.Phill Subject:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['mphill_main_subject']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['pg_main_subject'] != '' && candidateDetails['candidate_details'][0]['pg_main_subject'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              PG Main Subject:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['med_main_subject'] != '' && candidateDetails['candidate_details'][0]['med_main_subject'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              M.Ed Main Subject:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['med_main_subject']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != '' && candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Name of Subject in Senior Diploma:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              SLET Subject:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              NET Subject:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</span>
-                      </div>
-                  </div>
-              </div>
-          </section>
-          <section class="panel panel-default" style="color: black !important;">
-              <header class="panel-heading">
-                  Publish Result Details
-              </header>
-              <div>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltpg'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltpg'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              PG Date of publication of result:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmed'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmed'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              M.Ed Date of publication of result:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltphd'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltphd'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              PHD: Date of publication of result:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltmphil'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              M.phil Date of publication of result:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Date of Publication of Result – Special B.Ed in Teaching the Hearing Impairment:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltseniordip'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltseniordip'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Date of Publication of Result – Senior Diploma:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltseniordip']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_net_year_of_passing'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Date of Publication of Result – NET:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row"
-                      ng-if="candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != '' && candidateDetails['candidate_details'][0]['oaed_year_of_passing'] != null">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px">
-                              Date of Publication of Result – SLET:
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span
-                              style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</span>
-                      </div>
-                  </div>
+                <div ng-repeat="sum in community_summ track by $index">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span style="font-size: 14px;">{{sum['details']['question']}}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <span style="font-size: 14px;">
+                                {{sum['details']['options']['option'+sum['ans_id']]}}
+                            </span>
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                </div>
               </div>
           </section>
       </div>
@@ -4201,14 +3928,13 @@
               </table>
               <br>
               <div>
-                  <div ng-repeat="sum in l1_summary_edu_ques track by $index">
+                  <div ng-repeat="sum in edu_summ track by $index">
                       <div class="row">
                           <div class="col-md-6">
                               <span style="font-size: 14px;">{{sum['details']['question']}}</span>
                           </div>
                           <div class="col-md-6">
-                              <span style="font-size: 14px;"
-                                  ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                              <span style="font-size: 14px;">
                                   {{sum['details']['options']['option'+sum['ans_id']]}}
                               </span>
                               <span style="font-size: 14px;"
@@ -4227,14 +3953,13 @@
               Conduct Certificate
           </header>
           <div>
-              <div ng-repeat="sum in l1_summary_questions track by $index">
+              <div ng-repeat="sum in conduct_summ track by $index">
                   <div class="row">
                       <div class="col-md-6">
                           <span style="font-size: 14px;">{{sum['details']['question']}}</span>
                       </div>
                       <div class="col-md-6">
-                          <span style="font-size: 14px;"
-                              ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                          <span style="font-size: 14px;">
                               {{sum['details']['options']['option'+sum['ans_id']]}}
                           </span>
                           <span style="font-size: 14px;"
@@ -4286,28 +4011,30 @@
                           <td>{{e.owe_yoe_to}}</td>
                           <td>{{e.owe_work_duration}}</td>
                       </tr>
-                      <tr>
-                          <td colspan="5">Grand Total(cutoff date before
-                              15.11.2019)
-                          </td>
-                          <td>
-                              {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
-                    candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
-                    candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
-                          </td>
+                      <tr ng-repeat="sum in exp_l1_summ track by $index">
+                        <td colspan="5">{{sum['details']['question']}}
+                        </td>
+                        <td>
+                            <span style="font-size: 14px;">
+                                {{sum['details']['options']['option'+sum['ans_id']]}}
+                            </span>
+                            <span style="font-size: 14px;"
+                                ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                                {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{sum.additional_info}}
+                            </span>
+                        </td>
                       </tr>
                   </tbody>
               </table>
               <br>
               <div>
-                  <div ng-repeat="sum in l1_summary_exp_ques track by $index">
+                  <div ng-repeat="sum in exp_l1_summ track by $index">
                       <div class="row">
                           <div class="col-md-6">
                               <span style="font-size: 14px;">{{sum['details']['question']}}</span>
                           </div>
                           <div class="col-md-6">
-                              <span style="font-size: 14px;"
-                                  ng-if="sum.additional_info =='' || sum.additional_info ==null">
+                              <span style="font-size: 14px;">
                                   {{sum['details']['options']['option'+sum['ans_id']]}}
                               </span>
                               <span style="font-size: 14px;"
@@ -4320,19 +4047,6 @@
                   </div>
               </div>
               <div>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px;">
-                              Number of Teaching Experience Certificates submitted
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span style="font-size: 14px;">
-                              {{candidateDetails['work_experience'].length}}
-                          </span>
-                      </div>
-                  </div>
-                  <br>
                   <div class="row">
                       <div class="col-md-6">
                           <span style="font-size: 14px;">
@@ -4744,6 +4458,8 @@
 </div>
 </div>
 
+<div
+      ng-include="'/candidates/view/templates/L1Summary.html'"></div>
 
 <!--//USRB005114 NOC FOR POLICE DEPARTMENT-->
 <!--//USRB006593 NOC FOR OTHER DEPARTMENT-->

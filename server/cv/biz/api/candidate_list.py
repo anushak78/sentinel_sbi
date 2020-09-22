@@ -634,6 +634,13 @@ def get_candidate_details(request):
         "odm_name": "General Information",
         "doc_id": 10
     })
+    if level > 1:
+        document_list.insert(3, {
+            "ocd_doc_file_name": 'null',
+            "ocd_flag": "L1",
+            "odm_name": "L1",
+            "doc_id": 999
+        })
     if candidate_details[0]['ocad_bedhearimpcertno'] != '':
         document_list.insert(len(document_list), {
             "ocd_doc_file_name": '',
