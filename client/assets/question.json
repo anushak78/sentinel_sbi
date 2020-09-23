@@ -364,7 +364,8 @@
       "question": "Whether Name of the Subject studied matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -374,7 +375,8 @@
       "question": "Whether month & year of passing for M.Phil matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -384,7 +386,8 @@
       "question": "Whether date of publication of result matches for M.Phil?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -394,7 +397,8 @@
       "question": "Name of the institution matches for M.Phil?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -404,7 +408,8 @@
       "question": "Name of the university matches for M.Phil?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -414,7 +419,8 @@
       "question": "Whether mode of study matches for M.Phil?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -424,7 +430,8 @@
       "question": "Whether Name of the Subject studied matches for Ph.D Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -434,7 +441,8 @@
       "question": "Whether month & year of passing for Ph.D matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -444,7 +452,8 @@
       "question": "Whether date of publication of result matches for Ph.D?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -454,7 +463,8 @@
       "question": "Name of the institution matches for Ph.D?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -464,7 +474,8 @@
       "question": "Name of the university matches for Ph.D?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -474,7 +485,8 @@
       "question": "Whether mode of study matches for Ph.D?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -484,7 +496,8 @@
       "question": "Whether Name of the Subject studied matches for B.Ed Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -494,7 +507,8 @@
       "question": "Whether month & year of passing for B.Ed matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -504,7 +518,8 @@
       "question": "Whether date of publication of result matches for B.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -514,7 +529,8 @@
       "question": "Name of the institution matches for B.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -524,7 +540,8 @@
       "question": "Name of the university matches for B.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -534,7 +551,8 @@
       "question": "Whether mode of study matches for B.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -544,7 +562,8 @@
       "question": "Whether Name of the Subject studied matches for M.Ed Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -554,7 +573,8 @@
       "question": "Whether month & year of passing for M.Ed matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -564,7 +584,8 @@
       "question": "Whether date of publication of result matches for M.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -574,7 +595,8 @@
       "question": "Name of the institution matches for M.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -584,7 +606,8 @@
       "question": "Name of the university matches for M.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -594,7 +617,8 @@
       "question": "Whether mode of study matches for M.Ed?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -604,7 +628,8 @@
       "question": "Whether Name of the Subject studied matches for Special B.Ed degree in teaching the hearing impairment?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -614,7 +639,8 @@
       "question": "Whether month & year of passing for Special B.Ed degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -624,7 +650,8 @@
       "question": "Whether date of publication of result matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -634,7 +661,8 @@
       "question": "Name of the institution matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -644,7 +672,8 @@
       "question": "Name of the university matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -654,7 +683,8 @@
       "question": "Whether mode of study matches for Special B.Ed degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -664,7 +694,8 @@
       "question": "Whether Name of the Subject studied matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -674,7 +705,8 @@
       "question": "Whether month & year of passing for Senior Diploma in Teaching Deaf matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -684,7 +716,8 @@
       "question": "Whether date of publication of result matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -694,7 +727,8 @@
       "question": "Name of the institution matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -704,7 +738,8 @@
       "question": "Name of the university matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -714,7 +749,8 @@
       "question": "Whether mode of study matches for Senior Diploma in Teaching Deaf?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -724,7 +760,8 @@
       "question": "Whether equivalent subject in PG Degree, Government Order No.& Date matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -734,7 +771,8 @@
       "question": "If PG Degree from Foreign University, Equivalent Certificate obtained from Association of Indian University New Delhi matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -744,7 +782,8 @@
       "question": "Whether Subject / Equivalent Subject in PG Degree and the post Applied for subject matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -754,7 +793,8 @@
       "question": "Whether the candidate has passed in the PG Degree with atleast 55% marks for General Category or its equivalent Grade from Recognized University (83)",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -764,7 +804,8 @@
       "question": "Whether the candidate has passed in the PG Degree with at least 50% marks for BC/BCM/MBC&DNC/SC/SCA/ST and PWD Candidates or its equivalent Grade from Recognized University matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -774,7 +815,8 @@
       "question": "Whether the candidate has at least 50% in P.G with Ph.D Degree and has obtained their Master’s Degree prior to 19th September 1991 for “General Category” or its equivalent grade from Recognized University matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -784,7 +826,8 @@
       "question": "Whether Candidate has passed in the NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -794,7 +837,8 @@
       "question": "Qualifying Date of NET / JRF / CSIR Matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -804,7 +848,8 @@
       "question": "Whether Candidate has passed in the SLET / SET / SLST matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -814,7 +859,8 @@
       "question": "Qualifying Date of SLET / SET / SLET Matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -824,7 +870,8 @@
       "question": "Whether NET / SLET Exemption Certificate issued by Competent Authority matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -834,7 +881,8 @@
       "question": "Whether Senior Diploma Certificate (Hearing Impairment) issued or / and recognized by Rehabilitation Council of India matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -844,7 +892,8 @@
       "question": "Whether Special B.Ed (Hearing Impairment) Degree issued by recognized University matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -854,7 +903,8 @@
       "question": "Whether obtained M.Phil Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -864,7 +914,8 @@
       "question": "Whether the candidate has passed M.Phil in the relevant subject or its equivalent awarded as per UGC norms matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -874,7 +925,8 @@
       "question": "Whether the candidate has passed Ph.D in the relevant subject or its equivalent awarded as per UGC norms matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -884,7 +936,8 @@
       "question": "If equivalent subject in Ph.D, Government Order No.& Date matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -894,7 +947,8 @@
       "question": "Whether obtained Ph.D Degree on or after 03.04.2009 through Open University / Correspondence / Distance Education matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -904,7 +958,8 @@
       "question": "Whether Ph.D Degree obtained from Foreign University matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -914,7 +969,8 @@
       "question": "If Ph.D Degree obtained from Foreign University, whether Equivalent Certificate obtained matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -924,7 +980,8 @@
       "question": "Whether studied the prescribed qualification in Tamil Medium PSTM and submitted the PSTM Certificate matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -934,7 +991,8 @@
       "question": "Whether Persons with Disability Certificate submitted from Competent Authority matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -944,7 +1002,8 @@
       "question": "Category of Disability matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -954,7 +1013,8 @@
       "question": "Percentage of Disability matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -994,7 +1054,8 @@
       "question": "Name of the Subject in M.Phil Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1004,7 +1065,8 @@
       "question": "Name of the Subject in NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1014,7 +1076,8 @@
       "question": "Name of the Subject in SET / SLET /SLST matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1024,7 +1087,8 @@
       "question": "Name of the Subject in Special B.Ed Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1034,7 +1098,8 @@
       "question": "Name of the Subject in Senior Diploma matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1044,7 +1109,8 @@
       "question": "Name of the Subject in M.Ed Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1084,7 +1150,8 @@
       "question": "Date of Publication of results in M.Phil Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1094,7 +1161,8 @@
       "question": "Date of Publication of results in Ph.D matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1104,7 +1172,8 @@
       "question": "Date of Publication of results in NET / JRF / UGC matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1114,7 +1183,8 @@
       "question": "Date of Publication of results in SET / SLET /SLST matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1124,7 +1194,8 @@
       "question": "Date of Publication of results in Special B.Ed Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1134,7 +1205,8 @@
       "question": "Date of Publication of results in Senior Diploma matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1144,7 +1216,8 @@
       "question": "Date of Publication of results in M.Ed Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1164,7 +1237,8 @@
       "question": "Latest Conduct Certificate (Issued Date on or after 04.10.2019) matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No"
+        "option2": "No",
+        "option3": "Not Applicable"
       },
       "approved": "1",
       "doc_id": 999,

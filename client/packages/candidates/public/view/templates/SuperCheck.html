@@ -62,7 +62,7 @@
             </ul>
         </header>
         <div ng-if="l1_comm_toggle">
-            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:5:7">
+            <div ng-repeat="q in documentWithQuestions[selectedDocType] | limitTo:13">
                 <div ng-if="q.q_id >=6 && q.q_id <= 12">
                     <div>
                         <div class="questions">
@@ -85,9 +85,24 @@
                             </label>
                         </div>
                         <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
-                            ng-if="q.q_id != 9 && q.q_id != 12 && q.q_id != 10">
+                            ng-if="q.q_id != 9 && q.q_id != 12 && q.q_id != 10 && q.q_id != 7">
                             <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                                 ng-model="doc999[q.q_id]" />
+                        </label>
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                            ng-if="q.q_id == 7">
+                            <select class="form-control" ng-model="doc999[q.q_id]">
+                                <option value="">--Select--</option>
+                                <option value="OC">OC</option>
+                                <option value="OC - Other State">OC - Other State
+                                </option>
+                                <option value="BC">BC</option>
+                                <option value="BC-MUSLIM">BC-MUSLIM</option>
+                                <option value="SC">SC</option>
+                                <option value="SC(A)">SC(A)</option>
+                                <option value="ST">ST</option>
+                                <option value="MBC / DNC">MBC / DNC</option>
+                            </select>
                         </label>
                         <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
                             ng-if="q.q_id == 9">
@@ -97,7 +112,7 @@
                         </label>
                         <div style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
                             ng-if="q.q_id == 12">
-                            <select class="form-control" id="dd-comment-2" ng-model="doc999[q.q_id]">
+                            <select class="form-control" ng-model="doc999[q.q_id]">
                                 <option value="">--Select--</option>
                                 <option>Mother
                                 </option>
@@ -107,7 +122,8 @@
                         </div>
                         <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
                             ng-if="q.q_id == 10">
-                            <select ng-model="doc999[q.q_id]" id="doc999{{q.q_id}}">
+                            <select class="form-control" ng-model="doc999[q.q_id]" id="doc999{{q.q_id}}">
+                                <option value="">--Select--</option>
                                 <optgroup label="List of scheduled castes">
                                     <option value="AdiAndhra">Adi Andhra</option>
                                     <option value="Adi Dravida">Adi Dravida
@@ -1462,10 +1478,21 @@
                             {{q.options.option2}}
                         </label>
                     </div>
-                    <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}">
+                    <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id == 16">
                         <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                             ng-model="doc999[q.q_id]" />
                     </label>
+                    <div style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id == 16">
+                        <select class="form-control" ng-model="doc999[q.q_id]">
+                            <option value="">--Select--</option>
+                            <option value="Studied Tamil">Studied Tamil
+                            </option>
+                            <option value="Non Studied Tamil">Non Studied Tamil
+                            </option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1705,6 +1732,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1751,6 +1786,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1797,6 +1840,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1843,6 +1894,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1890,6 +1949,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1937,6 +2004,14 @@
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
+                            <div class="radio">
+                                <label class="radio-custom">
+                                    <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                        name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                        ng-model="radio_values.init_doc999[q.q_id]">
+                                    {{q.options.option3}}
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1984,6 +2059,14 @@
                             class="doc306 modified_date input-sm input-s datepicker-input form-control"
                             ng-model="doc999[q.q_id]" />
                     </label>
+                    <div class="radio">
+                        <label class="radio-custom">
+                            <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                ng-model="radio_values.init_doc999[q.q_id]">
+                            {{q.options.option3}}
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2025,6 +2108,14 @@
                             <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                                 ng-model="doc999[q.q_id]" />
                         </label>
+                        <div class="radio">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option3}}
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2114,6 +2205,14 @@
                                 </option>
                             </select>
                         </label>
+                        <div class="radio" ng-if="q.options.option3">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option3}}
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2152,17 +2251,18 @@
                                 {{q.options.option2}}
                             </label>
                         </div>
-                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
-                            ng-if="q.q_id == 117">
+                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}">
                             <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                                 ng-model="doc999[q.q_id]" />
                         </label>
-                        <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
-                            ng-if="q.q_id == 116">
-                            <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" data-date-format="YYYY-MM-DD"
-                                class="modified_date input-sm input-s datepicker-input form-control"
-                                ng-model="doc999[q.q_id]" />
-                        </label>
+                        <div class="radio" ng-if="q.options.option3">
+                            <label class="radio-custom">
+                                <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
+                                    name="radio{{q.doc_id}}{{q.q_id}}" value="3"
+                                    ng-model="radio_values.init_doc999[q.q_id]">
+                                {{q.options.option3}}
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2221,7 +2321,7 @@
                             </label>
                             <label style="{{ radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
                                 ng-if="q.q_id == 119 || q.q_id == 125">
-                                <select multiple="multiple" id="select2-dd" ng-model="$doc999[q.q_id]">
+                                <select multiple="multiple" id="select2-dd" ng-model="doc999[q.q_id]">
                                     <optgroup label="--Select Serial no of mis-matched--">
                                         <option value="{{ $index+1 }}"
                                             ng-repeat="x in [].constructor(candidateDetails['work_experience'].length) track by $index">
@@ -2304,8 +2404,7 @@
                                 <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                                     ng-model="doc999[q.q_id]" />
                             </label>
-                            <label
-                                style="{{radio_values.init_doc999[q.q_id][firstIndex]=='2' ? 'display:block':'display:none'}}"
+                            <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
                                 ng-if="q.q_id == 134">
                                 <input type="text" id="doc{{q.doc_id}}{{q.q_id}}"
                                     class="doc306 modified_date input-sm input-s datepicker-input form-control"
