@@ -3874,7 +3874,7 @@
           console.log($("#" + event.target.id + "_age").val('abcded'));
           // vm.doc13 = moment(value.date).format("DD-MM-YYYY")
         });
-        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425, #doc99917, #doc99923, #doc99917, #doc99930, #doc99937, #doc99944, #doc99951, #doc99958, #doc99965, #doc99972").datepicker({
+        $("#doc13, #doc14, #doc24, #doc254, .doc274, .doc684, .doc294,  .doc2515, #doc3411, #doc3715, .doc1415, .doc1425").datepicker({
           format: "M yyyy",
           startView: 1,
           minViewMode: 1,

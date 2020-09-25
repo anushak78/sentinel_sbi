@@ -1,0 +1,56 @@
+<div style="text-align: right;">
+    <a href="javascript:void(0)" ui-sref="main.candidates.list" class="btn btn-primary" >Back</a>
+</div>
+<section id="content" class="m-t-lg wrapper-md" style="overflow: auto;">
+    <div class="container">
+        <a class="navbar-brand block">TRBAPR Admin Scrutiny Portal</a>
+        <section class="panel panel-default bg-white m-t-lg">
+            <header class="panel-heading text-center">
+                <strong>Enter Details</strong>
+            </header>
+            <form class="panel-body wrapper-lg">
+                <div class="form-group">
+                    <label class="control-label">Full Name</label>
+                    <input type="text" ng-model="$ctrl.prelogin_fields.username" placeholder="Full name" class="form-control input-lg">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input type="email" ng-model="$ctrl.prelogin_fields.email" placeholder="Email"
+                        class="form-control input-lg">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Mobile No.</label>
+                    <input type="number" ng-model="$ctrl.prelogin_fields.phone_no" placeholder="Phone Number"
+                        class="form-control input-lg">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Signature</label>{{file}}
+                    <input type="file" accept="image/*" onchange="angular.element(this).scope().$ctrl.onFileChange(this.files)" file-model="$ctrl.prelogin_fields.sign" placeholder="sign"
+                        class="form-control input-lg">
+                </div>
+
+                <div class="form-group text-center" ng-if="$ctrl.flag=='btn'">
+                    <button class="btn btn-primary" ng-click="$ctrl.capturePhoto(); $ctrl.flag='video'">Click to Take
+                        Photo</button>
+                </div>
+                <div class="text-center" ng-hide="$ctrl.flag!='video'">
+                    <div>
+                        <video id="video">Video stream not available.</video>
+                    </div>
+                    <button ng-click="$ctrl.takePhoto(); $ctrl.flag='photo'" class="btn btn-primary">Take photo <span class="fa fa-camera"></span></button>
+                </div>
+                <div class="text-center" ng-hide="$ctrl.flag!='photo'">
+                    <div>
+                        <canvas id="canvas">
+                        </canvas>
+                    </div>
+                    <button ng-click="$ctrl.capturePhoto(); $ctrl.flag='video'" class="btn btn-primary">Refresh <span class="fa fa-refresh"></span></button>
+                </div>
+                <hr>
+                <div style="text-align: right;">
+                    <button ng-click="$ctrl.submitDetails()" class="btn btn-primary" ng-disabled="!$ctrl.submitDisabled()">Submit</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>

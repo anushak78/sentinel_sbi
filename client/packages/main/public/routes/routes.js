@@ -22,5 +22,11 @@ angular.module('app.main').config(function ($stateProvider, $urlRouterProvider) 
         name: '404',
         url: '/404',
         templateUrl: '/utilities/view/404.html'
+    }).state({
+        name: 'pre-sign-in',
+        url: '/pre-sign-in',
+        templateUrl: '/main/view/includes/pre-sign-in.html',
+        controller: 'MainController',
+        controllerAs: '$ctrl'
     })
 });
