@@ -21,7 +21,7 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     'cornice',
-    'psycopg2',
+    'psycopg2-binary',
     'colander',
     'python-dateutil',
 ]

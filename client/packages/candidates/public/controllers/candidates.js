@@ -2486,6 +2486,7 @@
           }
           $scope.candidateDetails = object['data'];
           $scope.newDocumentList = [];
+          console.log($scope.candidateDetails['document_list'])
          // $scope.candidateDetails['document_list'] = _.sortBy($scope.candidateDetails['document_list'], 'odm_name');
           console.log($scope.candidateDetails['document_list'])
           $scope.candidateDetails['document_list'] = $scope.sortDocumentsInOrder($scope.candidateDetails['document_list'])
@@ -2959,6 +2960,7 @@
       $scope.l1_summary_comm_ques = []
       $scope.l1_summary_exp_ques = []
       $scope.l1_summary_edu_ques = []
+      $scope.work_ex_dates = []
       let temp = {}
       let temp1 = []
       let odm_name = ''
@@ -3137,6 +3139,18 @@
         $scope.l1_summary_questions.push(temp);
       }
       if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 2)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 2)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
         temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 7)
         odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
         temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
@@ -3161,6 +3175,12 @@
         if (temp)
           temp['details'] = temp1
         $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 6)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 6)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
         temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
         odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
         temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
@@ -3173,6 +3193,30 @@
         if (temp)
           temp['details'] = temp1
         $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_summary_exp_ques.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == 87)
+        if (temp) {
+          odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+          temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 87)
+          if (temp)
+            temp['details'] = temp1
+          $scope.work_ex_dates.push(temp);
+        }
+        for (let i = 53; i <= 86; i++) {
+          temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == i)
+          if (temp) {
+            odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == i)
+            if (temp)
+              temp['details'] = temp1
+            $scope.work_ex_dates.push(temp);
+          }
+        }
       }
       console.log($scope.l1_summary_questions)
     }

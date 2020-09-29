@@ -4159,7 +4159,7 @@
                      <td>{{candidateDetails['candidate_details'][0]['bed_percentage']}}</td>
                  </tr>
                  <tr
-                     ng-if="candidateDetails['candidate_details'][0]['phd_main_subject'] != '' && candidateDetails['candidate_details'][0]['phd_main_subject'] != null">
+                     ng-if="candidateDetails['candidate_details'][0]['ocad_publresltphd'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltphd'] != null">
                      <td>Ph.D</td>
                      <td>{{candidateDetails['candidate_details'][0]['phd_main_subject']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['phd_year_of_passing']}}</td>
@@ -4293,6 +4293,7 @@
                          To
                      </td>
                      <td></td>
+                     <td>L1 Comments</td>
                  </tr>
                  <tr ng-repeat="e in workExperience">
                      <td>{{$index+1}}</td>
@@ -4301,6 +4302,16 @@
                      <td>{{e.owe_yoe_from}}</td>
                      <td>{{e.owe_yoe_to}}</td>
                      <td>{{e.owe_work_duration}}</td>
+                     <td>
+                        <span style="font-size: 14px;"
+                            ng-if="work_ex_dates[$index].additional_info =='' || work_ex_dates[$index].additional_info ==null">
+                            {{work_ex_dates[$index]['details']['options']['option'+work_ex_dates[$index]['ans_id']]}}
+                        </span>
+                        <span style="font-size: 14px;"
+                            ng-if="sum.additional_info !='' && sum.additional_info !=null">
+                            {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{work_ex_dates[$index].additional_info}}
+                        </span>
+                     </td>
                  </tr>
                  <tr>
                      <td colspan="5">Grand Total(cutoff date before
@@ -4339,20 +4350,7 @@
                   <div class="row">
                       <div class="col-md-6">
                           <span style="font-size: 14px;">
-                              Number of Teaching Experience Certificates submitted
-                          </span>
-                      </div>
-                      <div class="col-md-6">
-                          <span style="font-size: 14px;">
-                              {{candidateDetails['work_experience'].length}}
-                          </span>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <span style="font-size: 14px;">
-                              Total Work Experience
+                            Claim of Total Teaching Experience as per Application 
                           </span>
                       </div>
                       <div class="col-md-6">
@@ -4363,6 +4361,36 @@
                           </span>
                       </div>
                   </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                          Total Teaching Experience as per Documents submitted
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                        </span>
+                    </div>
+                </div>
+                <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                          Total Eligible Teaching Experience
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="font-size: 14px;">
+                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
+                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                        </span>
+                    </div>
+                </div>
               </div>
           </div>
       </section>
