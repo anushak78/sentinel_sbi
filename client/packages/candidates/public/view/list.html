@@ -4279,6 +4279,8 @@
                      <th rowspan="2">Subject Handled</th>
                      <th colspan="2">Period of work</th>
                      <th rowspan="2">Total Period</th>
+                     <th rowspan="2">L1 Work Duration</th>
+                     <th rowspan="2">L1 Subject</th>
                  </tr>
              </thead>
              <tbody>
@@ -4293,7 +4295,8 @@
                          To
                      </td>
                      <td></td>
-                     <td>L1 Comments</td>
+                     <td></td>
+                     <td></td>
                  </tr>
                  <tr ng-repeat="e in workExperience">
                      <td>{{$index+1}}</td>
@@ -4308,10 +4311,20 @@
                             {{work_ex_dates[$index]['details']['options']['option'+work_ex_dates[$index]['ans_id']]}}
                         </span>
                         <span style="font-size: 14px;"
-                            ng-if="sum.additional_info !='' && sum.additional_info !=null">
-                            {{remarksText[sum['doc_id'] +'c'+ sum.qn_id]}}&nbsp;:-&nbsp;{{work_ex_dates[$index].additional_info}}
+                            ng-if="work_ex_dates[$index].additional_info !='' && work_ex_dates[$index].additional_info !=null">
+                            {{remarksText[work_ex_dates[$index]['doc_id'] +'c'+ work_ex_dates[$index].qn_id]}}&nbsp;:-&nbsp;{{work_ex_dates[$index].additional_info}}
                         </span>
                      </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                          ng-if="subject_period[$index].additional_info =='' || subject_period[$index].additional_info ==null">
+                          {{subject_period[$index]['details']['options']['option'+subject_period[$index]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="subject_period[$index].additional_info !='' && subject_period[$index].additional_info !=null">
+                          {{remarksText[subject_period[$index]['doc_id'] +'c'+ subject_period[$index].qn_id]}}&nbsp;:-&nbsp;{{subject_period[$index].additional_info}}
+                      </span>
+                   </td>
                  </tr>
                  <tr>
                      <td colspan="5">Grand Total(cutoff date before

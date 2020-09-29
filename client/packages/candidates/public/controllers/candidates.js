@@ -2961,6 +2961,7 @@
       $scope.l1_summary_exp_ques = []
       $scope.l1_summary_edu_ques = []
       $scope.work_ex_dates = []
+      $scope.subject_period = []
       let temp = {}
       let temp1 = []
       let odm_name = ''
@@ -3217,6 +3218,17 @@
             $scope.work_ex_dates.push(temp);
           }
         }
+        for (let i = 18; i <= 52; i++) {
+          temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['status']['level1'][0]['answers'].find(s=> s.qn_id == i)
+          if (temp) {
+            odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 39)['odm_name']
+            temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == i)
+            if (temp)
+              temp['details'] = temp1
+            $scope.subject_period.push(temp);
+          }
+        }
+        console.log($scope.subject_period)
       }
       console.log($scope.l1_summary_questions)
     }
