@@ -2472,7 +2472,7 @@
       Http.get("/ui/candidate/" + candidate_id, {
         level: $rootScope.userData['level']
       }).then(function (object) {
-        console.log(object);
+        console.log(object['data']['candidate_details'][0].ug_percentage);
         if (object['code'] == 1) {
           $('.panel-experience').each(function(i, obj) {
             $(this).find('.doc39D').each(function(j, obj) {
@@ -2962,9 +2962,278 @@
       $scope.l1_summary_edu_ques = []
       $scope.work_ex_dates = []
       $scope.subject_period = []
+      $scope.l1_ssc = []
+      $scope.l1_hsc = []
+      $scope.l1_ug = []
+      $scope.l1_pg = []
+      $scope.l1_bed = []
+      $scope.l1_med = []
+      $scope.l1_phd = []
+      $scope.l1_mphil = []
+      $scope.l1_sbed = []
+      $scope.l1_sdiploma = []
+      $scope.l1_net = []
+      $scope.l1_slet = []
       let temp = {}
       let temp1 = []
       let odm_name = ''
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ssc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 4)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ssc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ssc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ssc.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_hsc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['status']['level1'][0]['answers'].find(s=> s.qn_id == 4)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_hsc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_hsc.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 2)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_hsc.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ug.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['status']['level1'][0]['answers'].find(s=> s.qn_id == 13)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ug.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['status']['level1'][0]['answers'].find(s=> s.qn_id == 15)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 37)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 15)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_ug.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_pg.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 13)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_pg.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 15)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 15)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_pg.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['status']['level1'][0]['answers'].find(s=> s.qn_id == 7)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_bed.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_bed.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 34)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_bed.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['status']['level1'][0]['answers'].find(s=> s.qn_id == 7)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 7)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_med.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_med.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['status']['level1'][0]['answers'].find(s=> s.qn_id == 11)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 35)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 11)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_med.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['status']['level1'][0]['answers'].find(s=> s.qn_id == 13)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sbed.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sbed.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 146)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sbed.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['status']['level1'][0]['answers'].find(s=> s.qn_id == 13)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 13)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sdiploma.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sdiploma.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 33)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_sdiploma.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_mphil.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_mphil.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['status']['level1'][0]['answers'].find(s=> s.qn_id == 9)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 9)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_mphil.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_mphil.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['status']['level1'][0]['answers'].find(s=> s.qn_id == 4)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 27)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_mphil.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 8)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 8)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_phd.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_phd.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['status']['level1'][0]['answers'].find(s=> s.qn_id == 4)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 29)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_phd.push(temp);
+      }
+      if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)) {
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 3)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 3)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_slet.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 4)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 4)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_slet.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 6)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 6)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_slet.push(temp);
+
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 10)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 10)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_net.push(temp);
+        temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['status']['level1'][0]['answers'].find(s=> s.qn_id == 12)
+        odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 28)['odm_name']
+        temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 12)
+        if (temp)
+          temp['details'] = temp1
+        $scope.l1_net.push(temp);
+      }
       if ($scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)) {
         temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['status']['level1'][0]['answers'].find(s=> s.qn_id == 26)
         odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 25)['odm_name']

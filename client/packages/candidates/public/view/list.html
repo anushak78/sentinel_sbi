@@ -4087,85 +4087,337 @@
                  <tr>
                      <td>SSC</td>
                      <td>-</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ssc_year_of_passing']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_publresltsslc']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ssc[1].additional_info =='' || l1_ssc[1].additional_info ==null">
+                      {{l1_ssc[1]['details']['options']['option'+l1_ssc[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ssc[1].additional_info !='' && l1_ssc[1].additional_info !=null">
+                          {{remarksText[l1_ssc[1]['doc_id'] +'c'+ l1_ssc[1].qn_id]}}&nbsp;:-&nbsp;{{l1_ssc[1].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ssc[0].additional_info =='' || l1_ssc[0].additional_info ==null">
+                      {{l1_ssc[0]['details']['options']['option'+l1_ssc[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ssc[0].additional_info !='' && l1_ssc[0].additional_info !=null">
+                          {{remarksText[l1_ssc[0]['doc_id'] +'c'+ l1_ssc[0].qn_id]}}&nbsp;:-&nbsp;{{l1_ssc[1].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>{{candidateDetails['candidate_details'][0]['ssc_university']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_sslcmode']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['scc_percentage']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ssc[2].additional_info =='' || l1_ssc[2].additional_info ==null">
+                      {{l1_ssc[2]['details']['options']['option'+l1_ssc[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ssc[2].additional_info !='' && l1_ssc[2].additional_info !=null">
+                          {{remarksText[l1_ssc[2]['doc_id'] +'c'+ l1_ssc[2].qn_id]}}&nbsp;:-&nbsp;{{l1_ssc[2].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ssc[3].additional_info =='' || l1_ssc[3].additional_info ==null">
+                      {{l1_ssc[3]['details']['options']['option'+l1_ssc[3]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ssc[3].additional_info !='' && l1_ssc[3].additional_info !=null">
+                          {{remarksText[l1_ssc[3]['doc_id'] +'c'+ l1_ssc[3].qn_id]}}&nbsp;:-&nbsp;{{l1_ssc[3].additional_info}}
+                      </span>
+                     </td>
                  </tr>
                  <tr>
                      <td>HSC</td>
                      <td>-</td>
-                     <td>{{candidateDetails['candidate_details'][0]['hsc_year_of_passing']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_publreslthsc']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_hsc[1].additional_info =='' || l1_hsc[1].additional_info ==null">
+                      {{l1_hsc[1]['details']['options']['option'+l1_hsc[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_hsc[1].additional_info !='' && l1_hsc[1].additional_info !=null">
+                          {{remarksText[l1_hsc[1]['doc_id'] +'c'+ l1_hsc[1].qn_id]}}&nbsp;:-&nbsp;{{l1_hsc[1].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_hsc[0].additional_info =='' || l1_hsc[0].additional_info ==null">
+                      {{l1_hsc[0]['details']['options']['option'+l1_hsc[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_hsc[0].additional_info !='' && l1_hsc[0].additional_info !=null">
+                          {{remarksText[l1_hsc[0]['doc_id'] +'c'+ l1_hsc[0].qn_id]}}&nbsp;:-&nbsp;{{l1_hsc[1].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>{{candidateDetails['candidate_details'][0]['hsc_university']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_hscmode']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['hsc_percentage']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_hsc[2].additional_info =='' || l1_hsc[2].additional_info ==null">
+                      {{l1_hsc[2]['details']['options']['option'+l1_hsc[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_hsc[2].additional_info !='' && l1_hsc[2].additional_info !=null">
+                          {{remarksText[l1_hsc[2]['doc_id'] +'c'+ l1_hsc[2].qn_id]}}&nbsp;:-&nbsp;{{l1_hsc[2].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_hsc[3].additional_info =='' || l1_hsc[3].additional_info ==null">
+                      {{l1_hsc[3]['details']['options']['option'+l1_hsc[3]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_hsc[3].additional_info !='' && l1_hsc[3].additional_info !=null">
+                          {{remarksText[l1_hsc[3]['doc_id'] +'c'+ l1_hsc[3].qn_id]}}&nbsp;:-&nbsp;{{l1_hsc[3].additional_info}}
+                      </span>
+                     </td>
                  </tr>
                  <tr>
                      <td>UG</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ug_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ug_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ug[0].additional_info =='' || l1_ug[0].additional_info ==null">
+                      {{l1_ug[0]['details']['options']['option'+l1_ug[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ug[0].additional_info !='' && l1_ug[0].additional_info !=null">
+                          {{remarksText[l1_ug[0]['doc_id'] +'c'+ l1_ug[0].qn_id]}}&nbsp;:-&nbsp;{{l1_ug[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ug[2].additional_info =='' || l1_ug[2].additional_info ==null">
+                      {{l1_ug[2]['details']['options']['option'+l1_ug[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ug[2].additional_info !='' && l1_ug[2].additional_info !=null">
+                          {{remarksText[l1_ug[2]['doc_id'] +'c'+ l1_ug[2].qn_id]}}&nbsp;:-&nbsp;{{l1_ug[2].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_uginstitname']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ug_university']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_ug[1].additional_info =='' || l1_ug[1].additional_info ==null">
+                      {{l1_ug[1]['details']['options']['option'+l1_ug[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_ug[1].additional_info !='' && l1_ug[1].additional_info !=null">
+                          {{remarksText[l1_ug[1]['doc_id'] +'c'+ l1_ug[1].qn_id]}}&nbsp;:-&nbsp;{{l1_ug[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ug_percentage']}}</td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['pg_main_subject'] != '' && candidateDetails['candidate_details'][0]['pg_main_subject'] != null">
                      <td>PG</td>
-                     <td>{{candidateDetails['candidate_details'][0]['pg_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['pg_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_pg[0].additional_info =='' || l1_pg[0].additional_info ==null">
+                      {{l1_pg[0]['details']['options']['option'+l1_pg[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_pg[0].additional_info !='' && l1_pg[0].additional_info !=null">
+                          {{remarksText[l1_pg[0]['doc_id'] +'c'+ l1_pg[0].qn_id]}}&nbsp;:-&nbsp;{{l1_pg[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_pg[2].additional_info =='' || l1_pg[2].additional_info ==null">
+                      {{l1_pg[2]['details']['options']['option'+l1_pg[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_pg[2].additional_info !='' && l1_pg[2].additional_info !=null">
+                          {{remarksText[l1_pg[2]['doc_id'] +'c'+ l1_pg[2].qn_id]}}&nbsp;:-&nbsp;{{l1_pg[2].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltpg']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_pginstitname']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['pg_university']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_pg[1].additional_info =='' || l1_pg[1].additional_info ==null">
+                      {{l1_pg[1]['details']['options']['option'+l1_pg[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_pg[1].additional_info !='' && l1_pg[1].additional_info !=null">
+                          {{remarksText[l1_pg[1]['doc_id'] +'c'+ l1_pg[1].qn_id]}}&nbsp;:-&nbsp;{{l1_pg[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['pg_mode_of_study']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['pg_percentage']}}</td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['med_main_subject'] != '' && candidateDetails['candidate_details'][0]['med_main_subject'] != null">
                      <td>M.Ed</td>
-                     <td>{{candidateDetails['candidate_details'][0]['med_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['med_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_med[0].additional_info =='' || l1_med[0].additional_info ==null">
+                      {{l1_med[0]['details']['options']['option'+l1_med[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_med[0].additional_info !='' && l1_med[0].additional_info !=null">
+                          {{remarksText[l1_med[0]['doc_id'] +'c'+ l1_med[0].qn_id]}}&nbsp;:-&nbsp;{{l1_med[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_med[2].additional_info =='' || l1_med[2].additional_info ==null">
+                      {{l1_med[2]['details']['options']['option'+l1_med[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_med[2].additional_info !='' && l1_med[2].additional_info !=null">
+                          {{remarksText[l1_med[2]['doc_id'] +'c'+ l1_med[2].qn_id]}}&nbsp;:-&nbsp;{{l1_med[2].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmed']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['med_college_name']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['med_university']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_med[1].additional_info =='' || l1_med[1].additional_info ==null">
+                      {{l1_med[1]['details']['options']['option'+l1_med[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_med[1].additional_info !='' && l1_med[1].additional_info !=null">
+                          {{remarksText[l1_med[1]['doc_id'] +'c'+ l1_med[1].qn_id]}}&nbsp;:-&nbsp;{{l1_med[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['med_mode_of_study']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['med_percentage']}}</td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['mphill_main_subject'] != '' && candidateDetails['candidate_details'][0]['mphill_main_subject'] != null">
                      <td>M.Phil</td>
-                     <td>{{candidateDetails['candidate_details'][0]['mphill_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['mphill_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_mphil[0].additional_info =='' || l1_mphil[0].additional_info ==null">
+                      {{l1_mphil[0]['details']['options']['option'+l1_mphil[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_mphil[0].additional_info !='' && l1_mphil[0].additional_info !=null">
+                          {{remarksText[l1_mphil[0]['doc_id'] +'c'+ l1_mphil[0].qn_id]}}&nbsp;:-&nbsp;{{l1_mphil[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_mphil[4].additional_info =='' || l1_mphil[4].additional_info ==null">
+                      {{l1_mphil[4]['details']['options']['option'+l1_mphil[4]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_mphil[4].additional_info !='' && l1_mphil[4].additional_info !=null">
+                          {{remarksText[l1_mphil[4]['doc_id'] +'c'+ l1_mphil[4].qn_id]}}&nbsp;:-&nbsp;{{l1_mphil[4].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltmphil']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['mphill_college_name']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['mphill_university']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['mphill_mode_of_study']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_mphil[2].additional_info =='' || l1_mphil[2].additional_info ==null">
+                      {{l1_mphil[2]['details']['options']['option'+l1_mphil[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_mphil[2].additional_info !='' && l1_mphil[2].additional_info !=null">
+                          {{remarksText[l1_mphil[2]['doc_id'] +'c'+ l1_mphil[2].qn_id]}}&nbsp;:-&nbsp;{{l1_mphil[2].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_mphil[1].additional_info =='' || l1_mphil[1].additional_info ==null">
+                      {{l1_mphil[1]['details']['options']['option'+l1_mphil[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_mphil[1].additional_info !='' && l1_mphil[1].additional_info !=null">
+                          {{remarksText[l1_mphil[1]['doc_id'] +'c'+ l1_mphil[1].qn_id]}}&nbsp;:-&nbsp;{{l1_mphil[1].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_mphil[3].additional_info =='' || l1_mphil[3].additional_info ==null">
+                      {{l1_mphil[3]['details']['options']['option'+l1_mphil[3]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_mphil[3].additional_info !='' && l1_mphil[3].additional_info !=null">
+                          {{remarksText[l1_mphil[3]['doc_id'] +'c'+ l1_mphil[3].qn_id]}}&nbsp;:-&nbsp;{{l1_mphil[3].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['mphill_percentage']}}</td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['bed_main_subject'] != '' && candidateDetails['candidate_details'][0]['bed_main_subject'] != null">
                      <td>B.Ed</td>
-                     <td>{{candidateDetails['candidate_details'][0]['bed_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['bed_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_bed[0].additional_info =='' || l1_bed[0].additional_info ==null">
+                      {{l1_bed[0]['details']['options']['option'+l1_bed[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_bed[0].additional_info !='' && l1_bed[0].additional_info !=null">
+                          {{remarksText[l1_bed[0]['doc_id'] +'c'+ l1_bed[0].qn_id]}}&nbsp;:-&nbsp;{{l1_bed[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_bed[2].additional_info =='' || l1_bed[2].additional_info ==null">
+                      {{l1_bed[2]['details']['options']['option'+l1_bed[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_bed[2].additional_info !='' && l1_bed[2].additional_info !=null">
+                          {{remarksText[l1_bed[2]['doc_id'] +'c'+ l1_bed[2].qn_id]}}&nbsp;:-&nbsp;{{l1_bed[2].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltdeged']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['bed_college_name']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['bed_university']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_bed[1].additional_info =='' || l1_bed[1].additional_info ==null">
+                      {{l1_bed[1]['details']['options']['option'+l1_bed[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_bed[1].additional_info !='' && l1_bed[1].additional_info !=null">
+                          {{remarksText[l1_bed[1]['doc_id'] +'c'+ l1_bed[1].qn_id]}}&nbsp;:-&nbsp;{{l1_bed[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['bed_mode_of_study']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['bed_percentage']}}</td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['ocad_publresltphd'] != '' && candidateDetails['candidate_details'][0]['ocad_publresltphd'] != null">
                      <td>Ph.D</td>
-                     <td>{{candidateDetails['candidate_details'][0]['phd_main_subject']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['phd_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_phd[0].additional_info =='' || l1_phd[0].additional_info ==null">
+                      {{l1_phd[0]['details']['options']['option'+l1_phd[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_phd[0].additional_info !='' && l1_phd[0].additional_info !=null">
+                          {{remarksText[l1_phd[0]['doc_id'] +'c'+ l1_phd[0].qn_id]}}&nbsp;:-&nbsp;{{l1_phd[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_phd[2].additional_info =='' || l1_phd[2].additional_info ==null">
+                      {{l1_phd[2]['details']['options']['option'+l1_phd[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_phd[2].additional_info !='' && l1_phd[2].additional_info !=null">
+                          {{remarksText[l1_phd[2]['doc_id'] +'c'+ l1_phd[2].qn_id]}}&nbsp;:-&nbsp;{{l1_phd[2].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_publresltphd']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_phdinstitname']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_phd_university']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_phd[1].additional_info =='' || l1_phd[1].additional_info ==null">
+                      {{l1_phd[1]['details']['options']['option'+l1_phd[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_phd[1].additional_info !='' && l1_phd[1].additional_info !=null">
+                          {{remarksText[l1_phd[1]['doc_id'] +'c'+ l1_phd[1].qn_id]}}&nbsp;:-&nbsp;{{l1_phd[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['pg_mode_study']}}</td>
                      <td>-</td>
                  </tr>
@@ -4174,28 +4426,100 @@
                      <td>Special B.Ed</td>
                      <td>-</td>
                      <td>-</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_publresltbedhearimp']}}</td>
-                     <td>-</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sbed[0].additional_info =='' || l1_sbed[0].additional_info ==null">
+                      {{l1_sbed[0]['details']['options']['option'+l1_sbed[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sbed[0].additional_info !='' && l1_sbed[0].additional_info !=null">
+                          {{remarksText[l1_sbed[0]['doc_id'] +'c'+ l1_sbed[0].qn_id]}}&nbsp;:-&nbsp;{{l1_sbed[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sbed[1].additional_info =='' || l1_sbed[1].additional_info ==null">
+                      {{l1_sbed[1]['details']['options']['option'+l1_sbed[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sbed[1].additional_info !='' && l1_sbed[1].additional_info !=null">
+                          {{remarksText[l1_sbed[1]['doc_id'] +'c'+ l1_sbed[1].qn_id]}}&nbsp;:-&nbsp;{{l1_sbed[1].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudybedhearimp']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_percentbedhearimp']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sbed[2].additional_info =='' || l1_sbed[2].additional_info ==null">
+                      {{l1_sbed[2]['details']['options']['option'+l1_sbed[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sbed[2].additional_info !='' && l1_sbed[2].additional_info !=null">
+                          {{remarksText[l1_sbed[2]['doc_id'] +'c'+ l1_sbed[2].qn_id]}}&nbsp;:-&nbsp;{{l1_sbed[2].additional_info}}
+                      </span>
+                     </td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != '' && candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub'] != null">
                      <td>Senior Diploma</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_monofpassseniordip']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_publresltseniordip']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofinstit']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sdiploma[0].additional_info =='' || l1_sdiploma[0].additional_info ==null">
+                      {{l1_sdiploma[0]['details']['options']['option'+l1_sdiploma[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sdiploma[0].additional_info !='' && l1_sdiploma[0].additional_info !=null">
+                          {{remarksText[l1_sdiploma[0]['doc_id'] +'c'+ l1_sdiploma[0].qn_id]}}&nbsp;:-&nbsp;{{l1_sdiploma[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sdiploma[1].additional_info =='' || l1_sdiploma[1].additional_info ==null">
+                      {{l1_sdiploma[1]['details']['options']['option'+l1_sdiploma[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sdiploma[1].additional_info !='' && l1_sdiploma[1].additional_info !=null">
+                          {{remarksText[l1_sdiploma[1]['doc_id'] +'c'+ l1_sdiploma[1].qn_id]}}&nbsp;:-&nbsp;{{l1_sdiploma[1].additional_info}}
+                      </span>
+                     </td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofuniv']}}</td>
                      <td>{{candidateDetails['candidate_details'][0]['ocad_modofstudyseniordip']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['ocad_percentseniordip']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_sdiploma[2].additional_info =='' || l1_sdiploma[2].additional_info ==null">
+                      {{l1_sdiploma[2]['details']['options']['option'+l1_sdiploma[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_sdiploma[2].additional_info !='' && l1_sdiploma[2].additional_info !=null">
+                          {{remarksText[l1_sdiploma[2]['doc_id'] +'c'+ l1_sdiploma[2].qn_id]}}&nbsp;:-&nbsp;{{l1_sdiploma[2].additional_info}}
+                      </span>
+                     </td>
                  </tr>
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_net_subject_name'] != null">
                      <td>NET</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_net_subject_name']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_net_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_net[0].additional_info =='' || l1_net[0].additional_info ==null">
+                      {{l1_net[0]['details']['options']['option'+l1_net[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_net[0].additional_info !='' && l1_net[0].additional_info !=null">
+                          {{remarksText[l1_net[0]['doc_id'] +'c'+ l1_net[0].qn_id]}}&nbsp;:-&nbsp;{{l1_net[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_net[1].additional_info =='' || l1_net[1].additional_info ==null">
+                      {{l1_net[1]['details']['options']['option'+l1_net[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_net[1].additional_info !='' && l1_net[1].additional_info !=null">
+                          {{remarksText[l1_net[1]['doc_id'] +'c'+ l1_net[1].qn_id]}}&nbsp;:-&nbsp;{{l1_net[1].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>-</td>
                      <td>-</td>
@@ -4205,11 +4529,38 @@
                  <tr
                      ng-if="candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != '' && candidateDetails['candidate_details'][0]['oaed_slet_subject_name'] != null">
                      <td>SLET</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_slet_subject_name']}}</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_year_of_passing']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_slet[0].additional_info =='' || l1_slet[0].additional_info ==null">
+                      {{l1_slet[0]['details']['options']['option'+l1_slet[0]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_slet[0].additional_info !='' && l1_slet[0].additional_info !=null">
+                          {{remarksText[l1_slet[0]['doc_id'] +'c'+ l1_slet[0].qn_id]}}&nbsp;:-&nbsp;{{l1_slet[0].additional_info}}
+                      </span>
+                     </td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_slet[1].additional_info =='' || l1_slet[1].additional_info ==null">
+                      {{l1_slet[1]['details']['options']['option'+l1_slet[1]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_slet[1].additional_info !='' && l1_slet[1].additional_info !=null">
+                          {{remarksText[l1_slet[1]['doc_id'] +'c'+ l1_slet[1].qn_id]}}&nbsp;:-&nbsp;{{l1_slet[1].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>-</td>
-                     <td>{{candidateDetails['candidate_details'][0]['oaed_state_uni_name']}}</td>
+                     <td>
+                      <span style="font-size: 14px;"
+                      ng-if="l1_slet[2].additional_info =='' || l1_slet[2].additional_info ==null">
+                      {{l1_slet[2]['details']['options']['option'+l1_slet[2]['ans_id']]}}
+                      </span>
+                      <span style="font-size: 14px;"
+                          ng-if="l1_slet[2].additional_info !='' && l1_slet[2].additional_info !=null">
+                          {{remarksText[l1_slet[2]['doc_id'] +'c'+ l1_slet[2].qn_id]}}&nbsp;:-&nbsp;{{l1_slet[2].additional_info}}
+                      </span>
+                     </td>
                      <td>-</td>
                      <td>-</td>
                  </tr>
