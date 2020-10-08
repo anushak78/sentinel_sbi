@@ -211,7 +211,7 @@
       "q_id": 21
     },
     {
-      "question": "Whether month & year of passing for HSC matches?",
+      "question": "Whether month & year of passing for HSC /  Diploma matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -221,7 +221,7 @@
       "q_id": 22
     },
     {
-      "question": "Whether date of publication of result matches for HSC?",
+      "question": "Whether date of publication of result matches for HSC /  Diploma?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -231,7 +231,7 @@
       "q_id": 23
     },
     {
-      "question": "Whether mode of study matches for HSC?",
+      "question": "Whether mode of study matches for HSC /  Diploma?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1458,7 +1458,7 @@
       "q_id": 6
     },
     {
-      "question": "Name in the certificate?",
+      "question": "Name in the SSLC certificate?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -1491,7 +1491,7 @@
       "q_id": 4
     },
     {
-      "question": "Is Tamil a Part-I language in the Mark sheet?",
+      "question": "Is Tamil a Part-I Language in SSLC?",
       "options": {
         "option1": "Studied Tamil in Part - I",
         "option2": "Not Studied Tamil"

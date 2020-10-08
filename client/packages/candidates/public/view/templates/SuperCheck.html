@@ -1479,7 +1479,7 @@
                         </label>
                     </div>
                     <label style="{{radio_values.init_doc999[q.q_id]=='2' ? 'display:block':'display:none'}}"
-                        ng-if="q.q_id == 16">
+                        ng-if="q.q_id != 16">
                         <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
                             ng-model="doc999[q.q_id]" />
                     </label>

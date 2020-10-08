@@ -1,3 +1,4 @@
+<form  name="frm">
 <div class="form-group" ng-repeat="q in documentWithQuestions[selectedDocType]">
   <div ng-include="'/candidates/view/templates/questions_valid_invalid.html'"></div>
 </div>
@@ -54,7 +55,7 @@
       </label>
       <label
         style="{{ $ctrl.radio_values.init_doc302=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc302"/>
+        <input type="number" maxlength="20" class="form-control" ng-model="$ctrl.doc302"/>
       </label>
     </div>
     <div class="radio">
@@ -108,7 +109,8 @@
       </label>
       <label
               style="{{ $ctrl.radio_values.init_doc304=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc304"/>
+        <input type="text" maxlength="20" class="form-control" name="doc304" ng-model="$ctrl.doc304" ng-pattern="/^[a-zA-Z]*$/"/>
+        <span ng-show="frm.doc304.$error.pattern" style="color: red;">Please use letters only</span>
       </label>
     </div>
     <div class="radio">
@@ -122,7 +124,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    DOB in the Certificate? <span style="font-size: small;color: red;">*</span>
+    DOB in the Mark sheet? <span style="font-size: small;color: red;">*</span>
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -291,3 +293,4 @@
   </div>
   <div class="clearfix"></div>
 </div>
+</form>

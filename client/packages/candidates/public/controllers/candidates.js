@@ -2391,6 +2391,7 @@
 
     $scope.currentPage = 1;
     $scope.pageSize = 10;
+    $scope.validationPattern = '/^[a-zA-Z\d\-\_]+$/';
 
     $scope.resetValues = function () {
       $scope.initializeVariables();
