@@ -256,6 +256,7 @@ def get_candidate_list(request):
 
     # pending_list_query += " and ocd.ocd_created_by = '"
     # pending_list_query += get_candidateID(user_id) + "'"
+    pending_list_query += "limit 10"
 
     print(pending_list_query)
     # count_query = """select count(*) as total_count
