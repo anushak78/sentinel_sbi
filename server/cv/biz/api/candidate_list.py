@@ -249,10 +249,10 @@ def get_candidate_list(request):
     elif category == 3:
         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
 
-    log(">>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-    log(user_id)
-    log(get_candidateID(user_id))
-    log(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    log.info(">>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    log.info(user_id)
+    log.info(get_candidateID(user_id))
+    log.info(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
     # pending_list_query += " and ocd.ocd_created_by = '"
     # pending_list_query += get_candidateID(user_id) + "'"
