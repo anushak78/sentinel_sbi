@@ -160,7 +160,6 @@ def get_candidateID(argument):
         6: "TRBAPE653921",
         7: "TRBAPE608695",
     }
-
     return switcher.get(argument)
 
 
@@ -250,8 +249,13 @@ def get_candidate_list(request):
     elif category == 3:
         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
 
-    pending_list_query += " and ocd.ocd_created_by = '"
-    pending_list_query += get_candidateID(user_id) + "'"
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    print(user_id)
+    print(get_candidateID(user_id))
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
+    # pending_list_query += " and ocd.ocd_created_by = '"
+    # pending_list_query += get_candidateID(user_id) + "'"
 
     print(pending_list_query)
     # count_query = """select count(*) as total_count
