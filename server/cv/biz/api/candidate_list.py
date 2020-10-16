@@ -251,7 +251,7 @@ def get_candidate_list(request):
 
     log.info(">>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     log.info(user_id)
-    log.info(get_candidateID(user_id))
+    log.info(get_candidateID(int(user_id)))
     log.info(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
     # pending_list_query += " and ocd.ocd_created_by = '"
