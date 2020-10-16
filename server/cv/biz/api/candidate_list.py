@@ -155,12 +155,10 @@ def get_candidateID(argument):
     switcher = {
         2: "TRBAPE781903",
         3: "TRBAPE205616",
-        4: "TRBAPE881157",
-        5: "TRBAPE744622",
-        6: "TRBAPE920218",
-        7: "TRBAPE696853",
-        8: "TRBAPE184376",
-        9: "TRBAPE721364",
+        4: "TRBAPE675098",
+        5: "TRBAPE501806",
+        6: "TRBAPE653921",
+        7: "TRBAPE608695",
     }
     return switcher.get(argument, "nothing")
 
