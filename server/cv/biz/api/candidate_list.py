@@ -162,7 +162,6 @@ def get_candidateID(argument):
         8: "TRBAPE184376",
         9: "TRBAPE721364",
     }
-
     return switcher.get(argument, "nothing")
 
 
