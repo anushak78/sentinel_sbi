@@ -160,7 +160,7 @@ def get_candidateID(argument):
         6: "TRBAPE653921",
         7: "TRBAPE608695",
     }
-    return switcher.get(argument)
+    return switcher.get(argument, "nothing")
 
 
 @svc_candidate_list.get()
