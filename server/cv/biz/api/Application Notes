@@ -1,0 +1,18 @@
+Application Notes
+
+    1. File Processor
+        a. Format Check 
+                1. Allowed formats - PDF , DOC , DOCX , TXT 
+                2. PDF 
+                    > Signed PDF    
+                    > Password Protected
+            
+        b.File Integrity Check
+                1. File Composition check 
+                        > File Readable Y/N 
+                        > File Composition ( Multi Page or Single Page )
+        c. Image Based Document Handler
+                1. File Reader 
+                        > Partially Readable
+                            >  
+                        > Fully Not Readable 

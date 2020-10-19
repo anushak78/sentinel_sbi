@@ -2682,7 +2682,7 @@ def dateDiff(request):
     sample_from_dt_str = request.POST.get(
         "dt_from", '01/01/0001')
 
-    sample_to_dt_str = request.POST.get(
+    sample_to_dt_str = request.POST.get(    
         "dt_to", '01/01/0001')
 
     sample_from_dt = datetime.strptime(sample_from_dt_str, '%d/%m/%Y').date() if(
