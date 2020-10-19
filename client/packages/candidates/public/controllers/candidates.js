@@ -2393,7 +2393,7 @@
 
     $scope.currentPage = 1;
     $scope.pageSize = 10;
-    $('#modal-instructions').modal({backdrop: 'static', keyboard: false});
+    //$('#modal-instructions').modal({backdrop: 'static', keyboard: false});
     $scope.sendImage = function(video, flag) {
       if (flag == 'screen') {
         let canvas = document.getElementById('canvas-screen');
