@@ -2402,7 +2402,7 @@
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 750, 500);
         let photo = canvas.toDataURL("image/png");
-        $http.post("http://192.168.1.170:2000/save", {
+        $http.post("http://"+ window.location.hostname + ":2000/save", {
           image: photo,
           candidate_id: $rootScope.userData.user_id,
           type: 'screen'
@@ -2419,7 +2419,7 @@
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 150, 100);
         let photo = canvas.toDataURL("image/png");
-        $http.post("http://192.168.1.170:2000/save", {
+        $http.post("http://"+ window.location.hostname + ":2000/save", {
           image: photo,
           candidate_id: $rootScope.userData.user_id,
           type: 'photo'
@@ -2442,7 +2442,7 @@
             setInterval(function() {
               $scope.sendImage(video, 'photo')
               console.log("here")
-            }, 30000); 
+            }, 3000); 
             $scope.openScreen();
             $('#modal-instructions').modal("toggle")
             
@@ -2462,7 +2462,7 @@
             screen.play();
             setInterval(function() {
               $scope.sendImage(screen, 'screen')
-            }, 30000);
+            }, 3000);
             if (stream.getVideoTracks()[0].getSettings().displaySurface != 'browser') {
               alert("Please select browser tab of application to continue!!")
               stream.getTracks()
