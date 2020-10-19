@@ -55,7 +55,7 @@
       </label>
       <label
         style="{{ $ctrl.radio_values.init_doc302=='2' ? 'display:block':'display:none'}}">
-        <input type="number" maxlength="20" class="form-control" ng-model="$ctrl.doc302"/>
+        <input type="number" min="1" class="form-control" ng-model="$ctrl.doc302"/>
       </label>
     </div>
     <div class="radio">
@@ -69,7 +69,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Birth Certificate / SSLC Certificate Issuing Authority
+    Birth Certificate / SSLC Certificate Issuing Authority :
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -109,8 +109,7 @@
       </label>
       <label
               style="{{ $ctrl.radio_values.init_doc304=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="20" class="form-control" name="doc304" ng-model="$ctrl.doc304" ng-pattern="/^[a-zA-Z]*$/"/>
-        <span ng-show="frm.doc304.$error.pattern" style="color: red;">Please use letters only</span>
+        <input type="text" maxlength="20" class="form-control" name="doc304" ng-model="$ctrl.doc304" restrict-input="{type: 'lettersOnly'}"/>
       </label>
     </div>
     <div class="radio">
@@ -135,7 +134,7 @@
         Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc305=='1' ? 'display:block':'display:none'}}">
-        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305" readonly='true'
                class="doc305 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
@@ -146,7 +145,7 @@
         Not Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc305=='2' ? 'display:block':'display:none'}}">
-        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305"
+        <input type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc305" readonly='true'
                class="doc305 modified_date input-sm input-s datepicker-input form-control">
       </label>
     </div>
@@ -206,7 +205,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Age as on 01.07.2019 (Years, Months, Days) <span style="font-size: small;color: red;">*</span>
+    Age as on 01.07.2019 ('Years', 'Months', 'Days') <span style="font-size: small;color: red;">*</span>
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -217,7 +216,7 @@
         Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc306=='1' ? 'display:block':'display:none'}}">
-        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306" readonly='true'
                class="doc306 modified_date input-sm input-s datepicker-input form-control">
         <button style="float: left; margin-left: 10px" class="btn btn-success"
         ng-click="calculateAge()">Calculate DOB</button>
@@ -235,7 +234,7 @@
         Not Matched
       </label>
       <label style="{{ $ctrl.radio_values.init_doc306=='2' ? 'display:block':'display:none'}}">
-        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306"
+        <input style="float: left" type="text" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc306" readonly='true'
                class="doc306 modified_date input-sm input-s datepicker-input form-control">
         <button style="float: left; margin-left: 10px" class="btn btn-success"
                 ng-click="calculateAge()">Calculate DOB</button>

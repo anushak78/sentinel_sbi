@@ -2,7 +2,7 @@
   <div class="questions">
     Whether Educational Qualification in the order 10+2+3+2+1 or 2 / 4 + Years
     (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or)
-    10+2+3+1/2+2/3+2/1 or 2/4 years or others - (Mandatory)
+    10+2+3+1/2+2/3+2/1 or 2/4 years or others
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -82,7 +82,7 @@
         <input type="radio" class="q_radio radio1403" name="radio1403"
                value="1" ng-model="$ctrl.radio_values.init_doc1403"
                ng-change="$ctrl.doc1403=''">
-        Yes
+        Matched
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc1403=='1' ? 'display:block':'display:none'}}">
@@ -96,7 +96,7 @@
         <input type="radio" class="q_radio radio1403" name="radio1403"
                value="2" ng-model="$ctrl.radio_values.init_doc1403"
                ng-change="$ctrl.doc1403=''">
-        No
+        Not Matched
       </label>
     </div>
     <div class="radio">
@@ -261,8 +261,7 @@
     <div class="clearfix"></div>
   </div>
   <div class="questions">
-    Whether the candidate possesses prescribed educational qualification before
-    the cutoff date 04.10.2019
+    Whether the candidate  possesses prescribed educational qualification before the cutoff date  04.10.2019– Yes / No
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -377,8 +376,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Whether studied PG Degree and passed NET/SLET in the same subject or its
-    equivalent as prescribed in the notification
+    Whether studied  PG Degree and passed NET/SLET in the same subject or its equivalent  as prescribed in the notification – Yes / No
   </div>
   <br/>
   <div class="col-sm-6">Name of the Subject Applied for :</div>
@@ -557,6 +555,10 @@
   <div class="clearfix"></div>
   <div class="col-sm-6">Name of the Ph.D Degree :</div>
   <div class="col-sm-6">{{$ctrl.findData('Phd Certificate',8)}}</div>
+  <div class="col-sm-6">Name of the Special B.Ed in Teaching the Hearing  Impairment :</div>
+  <div class="col-sm-6">N.A.</div>
+  <div class="col-sm-6">Name of the Senior Diploma in Teaching Deaf  (Hearing Impairment) :</div>
+  <div class="col-sm-6">{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</div>
   <div class="clearfix"></div>
   <!--  <div class="col-sm-6">Name of the Special B.Ed in Teaching the Hearing Impairment : </div>-->
   <!--  <div class="col-sm-6">{{$ctrl.findData('Special B.Ed in Teaching the Hearing Impairment – Marksheet',7)}}</div>-->
@@ -624,6 +626,10 @@
   <div class="clearfix"></div>
   <div class="col-sm-6">Name of the NET/SLET Passed subject :</div>
   <div class="col-sm-6">{{$ctrl.findData('SLET/NET Certificate',10)}} {{$ctrl.findData('SLET/NET Certificate',3)}}</div>
+  <div class="col-sm-6">Name of the Special B.Ed in Teaching the Hearing  Impairment :</div>
+  <div class="col-sm-6">N.A.</div>
+  <div class="col-sm-6">Name of the Senior Diploma in Teaching Deaf  (Hearing Impairment) :</div>
+  <div class="col-sm-6">{{candidateDetails['candidate_details'][0]['ocad_seniordipnameofsub']}}</div>
   <div class="clearfix"></div>
   <div class="col-sm-6">
     <div class="radio">

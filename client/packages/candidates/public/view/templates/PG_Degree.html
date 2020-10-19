@@ -58,7 +58,7 @@
       </label>
       <label
           style="{{ $ctrl.radio_values.init_doc253=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="100" class="form-control"
+        <input type="text" maxlength="100" class="form-control" restrict-input="{type: 'lettersAndDigitsOnly'}"
                ng-model="$ctrl.doc253"/>
       </label>
     </div>
@@ -198,14 +198,6 @@
               <input type="text" maxlength="20" class="form-control"
                      ng-model="$ctrl.doc2511"/>
           </label>
-      </div>
-      <div class="radio">
-        <label class="radio-custom">
-          <input type="radio" class="q_radio radio2511"
-                 name="radio2511" ng-model="$ctrl.radio_values.init_doc2511"
-                 value="3">
-          Not Applicable
-        </label>
       </div>
     </div>
   </div>

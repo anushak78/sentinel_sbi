@@ -3,7 +3,7 @@
 
   /* jshint -W098 */
 
-  function CandidatesController($scope, $stateParams, $rootScope, $ocLazyLoad, Http, Message) {
+  function CandidatesController($scope, $stateParams, $rootScope, $ocLazyLoad, Http, Message, $http) {
     var vm = this;
     $scope.urlPath = window.location.origin;
     $scope.orchEntry = {};
@@ -58,6 +58,7 @@
       for (let i = 1; i <=139; i++) {
         $scope.doc999[i] = '' 
       }
+      $scope.doc999[199] = ''
       vm.doc13 = '';
       vm.doc12 = '';
       vm.doc12 = '';
@@ -825,6 +826,7 @@
       for (let i = 1; i < 139; i++) {
         $scope.radio_values.init_doc999[i] = ''
       }
+      $scope.radio_values.init_doc999[199] = ''
       vm.radio_values.init_doc12 = "";
       vm.radio_values.init_doc13 = "";
       vm.radio_values.init_doc14 = "";
@@ -2391,7 +2393,95 @@
 
     $scope.currentPage = 1;
     $scope.pageSize = 10;
-    $scope.validationPattern = '/^[a-zA-Z\d\-\_]+$/';
+    $('#modal-instructions').modal({backdrop: 'static', keyboard: false});
+    $scope.sendImage = function(video, flag) {
+      if (flag == 'screen') {
+        let canvas = document.getElementById('canvas-screen');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        var context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 750, 500);
+        let photo = canvas.toDataURL("image/png");
+        $http.post("http://"+ window.location.hostname +":2000/save", {
+          image: photo,
+          candidate_id: $rootScope.userData.user_id,
+          type: 'screen'
+        }).then(function (object) {
+          if (object['code'] == 1) { 
+            console.log(object)
+          }
+        }, function(err) {
+          console.log(err)
+        })
+      }
+      else {
+        let canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 150, 100);
+        let photo = canvas.toDataURL("image/png");
+        $http.post("http://"+ window.location.hostname +":2000/save", {
+          image: photo,
+          candidate_id: $rootScope.userData.user_id,
+          type: 'photo'
+        }).then(function (object) {
+          if (object['code'] == 1) { 
+            console.log(object)
+          }
+        }, function(err) {
+          console.log(err)
+        })
+      }
+      // TODO: add api to send the image
+    }
+    $scope.openRTC = function () {
+      let video = document.getElementById('user-video');
+      if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            video.srcObject = stream;
+            video.play();
+            setInterval(function() {
+              $scope.sendImage(video, 'photo')
+              console.log("here")
+            }, 30000); 
+            $scope.openScreen();
+            $('#modal-instructions').modal("toggle")
+            
+        }).catch(function(err) {
+            console.log("An error occurred: "+ err); 
+            alert("An error occurred: "+ err)
+            window.location.reload()
+        });
+      }
+    };
+
+    $scope.openScreen = function () {
+      let screen = document.getElementById('screen-video');
+      if(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
+        navigator.mediaDevices.getDisplayMedia({ video: { displaySurface: 'browser' } }).then(function(stream) {
+            screen.srcObject = stream;
+            screen.play();
+            setInterval(function() {
+              $scope.sendImage(screen, 'screen')
+            }, 30000);
+            if (stream.getVideoTracks()[0].getSettings().displaySurface != 'browser') {
+              alert("Please select browser tab of application to continue!!")
+              stream.getTracks()
+                .forEach(track => track.stop())
+              $scope.openScreen()
+            }
+
+            stream.getVideoTracks()[0].onended = function () {
+              alert("Please share your screen to continue!!")
+              $scope.openScreen()  
+            }
+            
+        }).catch(function(err) {
+            console.log("An error occurred: " + err);
+            alert("An error occurred: "+ err)
+            $scope.openScreen()
+        });
+      }
+    }
 
     $scope.resetValues = function () {
       $scope.initializeVariables();
@@ -2430,7 +2520,7 @@
       Http.get("/ui/candidate-list", {
         limit: $scope.pageSize,
         offset: parseInt(($scope.currentPage - 1) * $scope.pageSize),
-        candidate_id: $scope.packages.searchByCandidateID,
+        candidate_id: $scope.packages.searchByCandidateID.toUpperCase(),
         status: $scope.packages.filterDD,
         user_id: $rootScope.userData['user_id']
       }).then(function (object) {
@@ -2473,7 +2563,7 @@
       Http.get("/ui/candidate/" + candidate_id, {
         level: $rootScope.userData['level']
       }).then(function (object) {
-        console.log(object['data']['candidate_details'][0].ug_percentage);
+        console.log(object['data']);
         if (object['code'] == 1) {
           $('.panel-experience').each(function(i, obj) {
             $(this).find('.doc39D').each(function(j, obj) {
@@ -3340,7 +3430,6 @@
       temp = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['status']['level1'][0]['answers'].find(s=> s.qn_id == 5)
       odm_name = $scope.candidateDetails['document_list'].find(s=> s.doc_id == 1)['odm_name']
       temp1 = $rootScope.documentWithQuestions[odm_name].find(s=> s.q_id == 5)
-      temp1['question'] = temp1['question'] + ' (SSC)' 
       if (temp)
         temp['details'] = temp1
       $scope.l1_summary_edu_ques.push(temp);
@@ -3517,7 +3606,7 @@
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.find(s => s.odm_name == 'Birth Certificate')
+      temp = newDocumentList.find(s => s.odm_name == 'General Information')
       if (temp) {
         temp_list.push(temp)
       }
@@ -3525,7 +3614,7 @@
       if (temp) {
         temp_list.push(temp)
       }
-      temp = newDocumentList.find(s => s.odm_name == 'General Information')
+      temp = newDocumentList.find(s => s.odm_name == 'Birth Certificate')
       if (temp) {
         temp_list.push(temp)
       }
@@ -4105,10 +4194,18 @@
 
             if (typeof vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
               object['additional_info'] = vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + "" + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
+              if (object['additional_info'] == null || object['additional_info'] == '') {
+                alert('Please fill all the fields');
+                return
+              }
             }
             if ($scope.selectedDocType == 'L1') {
               if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
                 object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
+                if (object['additional_info'] == null || object['additional_info'] == '') {
+                  alert('Please fill all the fields');
+                  return
+                } 
               } 
             }
             answers.push(object);
@@ -4193,7 +4290,7 @@
     $scope.initializeInputs = function () {
       console.log('initialize inpout');
       setTimeout(function () {
-        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194, #doc9994,#doc9995,#doc9999,#doc99920,#doc99923,#doc99927,#doc99933,#doc99939,#doc99945,#doc99951,#doc99957,#doc99963,#doc99969,#doc99990,#doc999107,#doc999108,#doc999109,#doc999110,#doc999111,#doc999112,#doc999113,#doc999114,#doc999115,#doc999120,#doc999134").datepicker({
+        $("#doc13, #doc23, #doc36, #doc84, #doc123, .doc284,.doc2812, .doc305,.doc306, #doc3211, #doc3213,#doc14613, #doc3311,  .doc3511, #doc3818, #doc446, #doc456, #doc466, #doc476, #doc486, .doc495,.doc505,#doc515,#doc525,#doc535,#doc545,.doc5513,.doc5613,#doc5713,#doc5813,#doc5913,#doc6013,#doc6113,#doc905,#doc915,#doc925, #doc628, #doc638, #doc648, #doc658, #doc668, #doc678, .doc6811, #doc2916, #doc2912, #doc706, #doc716, #doc726, #doc736, #doc746, #doc756, #doc766, #doc776, #doc786, #doc808, #doc818, #doc828, #doc838, #doc848, #doc858, #doc868, #doc878, #doc888, #doc1403, #doc1405, #doc1406, #doc1407, .doc1408, #doc14034, #doc14035, .doc1433, .doc3911, .doc39160, .doc39161, .doc39162, .doc39163, .doc39164, .doc39165, .doc39166, .doc39167, .doc39168, .doc39169, .doc39170, .doc39171, .doc39172, .doc39173, .doc39174, .doc39175, .doc39176, .doc39177, .doc39178, .doc39179, .doc39180, .doc39181, .doc39182, .doc39183, .doc39184, .doc39185, .doc39186, .doc39187, .doc39188, .doc39189, .doc39190, .doc39191, .doc39192, .doc39193, .doc39194, #doc9994,#doc9995,#doc9999,#doc99920,#doc99923,#doc99927,#doc99933,#doc99939,#doc99945,#doc99951,#doc99957,#doc99963,#doc99969,#doc99990,#doc999107,#doc999108,#doc999109,#doc999110,#doc999111,#doc999112,#doc999113,#doc999114,#doc999115,#doc999120,#doc999134, #doc999116").datepicker({
           format: 'dd-mm-yyyy',
           orientation: "auto"
         }).on('changeDate', function (value) {
@@ -4867,8 +4964,20 @@
       }
     };
     $scope.calulatedDOB = '';
+    function process(date){
+      var parts = date.split("/");
+      return new Date(parts[2], parts[1] - 1, parts[0]);
+    }
     $scope.calculateAge = function () {
       $scope.calulatedDOB = '';
+      if ($scope.converDateToSlashDOB($('.doc306').val())) {
+        console.log($scope.converDateToSlashDOB($('.doc306').val()))
+        let date1 = '01/07/2019'
+        let date2 = $scope.converDateToSlashDOB($('.doc306').val())
+        if(process(date2) > process(date1)){
+          alert("Please enter date before 01/07/2019")
+       }
+      }
       Http.post("/biz/scores/dateDiff", {
         dt_from: $scope.converDateToSlashDOB($('.doc306').val()),
         dt_to: '01/07/2019'
@@ -4927,7 +5036,7 @@
   }])
       .controller('CandidatesController', CandidatesController);
 
-  CandidatesController.$inject = ['$scope', '$stateParams', '$rootScope', '$ocLazyLoad', 'Http', 'Message'];
+  CandidatesController.$inject = ['$scope', '$stateParams', '$rootScope', '$ocLazyLoad', 'Http', 'Message', '$http'];
   angular
       .module('app.candidates').directive('tenthSslcCertificate', function () {
     return {
@@ -4940,6 +5049,10 @@
   }).directive('l1Summary', function () {
     return {
       templateUrl: "/candidates/view/templates/L1Summary.html"
+    };
+  }).directive('instructPage', function () {
+    return {
+      templateUrl: "/candidates/view/templates/instructions.html"
     };
   }).directive('superCheck', function () {
     return {
@@ -5508,6 +5621,35 @@
   }).directive('orderOfQualification', function () {
     return {
       templateUrl: "/candidates/view/templates/Order_Of_Qualification.html"
+    };
+  }).directive('restrictInput', function() {
+    return {
+      restrict: 'A',
+      require: 'ngModel',
+      link: function(scope, element, attr, ctrl) {
+        ctrl.$parsers.unshift(function(viewValue) {
+          var options = scope.$eval(attr.restrictInput);
+          if (!options.regex && options.type) {
+            switch (options.type) {
+              case 'digitsOnly': options.regex = '^[0-9]*$'; break;
+              case 'lettersOnly': options.regex = '^[a-zA-Z]*$'; break;
+              case 'lowercaseLettersOnly': options.regex = '^[a-z]*$'; break;
+              case 'uppercaseLettersOnly': options.regex = '^[A-Z]*$'; break;
+              case 'lettersAndDigitsOnly': options.regex = '^[a-zA-Z0-9]*$'; break;
+              case 'validPhoneCharsOnly': options.regex = '^[0-9 ()/-]*$'; break;
+              default: options.regex = '';
+            }
+          }
+          var reg = new RegExp(options.regex);
+          if (reg.test(viewValue)) { //if valid view value, return it
+            return viewValue;
+          } else { //if not valid view value, use the model value (or empty string if that's also invalid)
+            var overrideValue = (reg.test(ctrl.$modelValue) ? ctrl.$modelValue : '');
+            element.val(overrideValue);
+            return overrideValue;
+          }
+        });
+      }
     };
   })
 })();

@@ -35,7 +35,7 @@
     <div class="clearfix"></div>
 
     <div class="questions">
-        Name in the SLET certificate
+        Name in the SLET certificate?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -43,7 +43,7 @@
                 <input type="radio" class="q_radio radio282" name="radio282"
                        value="1" ng-model="$ctrl.radio_values.init_doc282"
                        ng-change="$ctrl.doc282=''">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
@@ -51,7 +51,7 @@
                 <input type="radio" class="q_radio radio282" name="radio282"
                        value="2" ng-model="$ctrl.radio_values.init_doc282"
                        ng-change="$ctrl.doc282=''">
-                Not Matching
+                Not Matched
             </label>
             <label
                     style="{{ $ctrl.radio_values.init_doc282=='2' ? 'display:block':'display:none'}}">
@@ -93,7 +93,7 @@
                 Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc283=='1' ? 'display:block':'display:none'}}">
-                <input type="text" ng-model="$ctrl.doc283"
+                <input type="text" ng-model="$ctrl.doc283" maxlength="20" restrict-input="{type: 'lettersOnly'}"
                        class="form-control">
             </label>
         </div>
@@ -105,7 +105,7 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc283=='2' ? 'display:block':'display:none'}}">
-                <input type="text" ng-model="$ctrl.doc283"
+                <input type="text" ng-model="$ctrl.doc283" maxlength="50" restrict-input="{type: 'lettersOnly'}"
                        class="form-control">
             </label>
         </div>
@@ -120,7 +120,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether passed in the SLET in the relevant Subject  <span style="font-size: small;color: red;">*</span>
+        Whether passed in the SLET in the relevant  Subject– Yes / No   <span style="font-size: small;color: red;">*</span>
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -282,7 +282,7 @@
                 <input type="radio" class="q_radio radio289" name="radio289"
                        value="1" ng-model="$ctrl.radio_values.init_doc289"
                        ng-change="$ctrl.doc289=''">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
@@ -290,7 +290,7 @@
                 <input type="radio" class="q_radio radio289" name="radio289"
                        value="2" ng-model="$ctrl.radio_values.init_doc289"
                        ng-change="$ctrl.doc289=''">
-                Not Matching
+                Not Matched
             </label>
             <label
                     style="{{ $ctrl.radio_values.init_doc289=='2' ? 'display:block':'display:none'}}">
@@ -332,7 +332,7 @@
                 Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc2810=='1' ? 'display:block':'display:none'}}">
-                <input type="text" ng-model="$ctrl.doc2810"
+                <input type="text" ng-model="$ctrl.doc2810" maxlength="20" restrict-input="{type: 'lettersOnly'}"
                        class="form-control">
             </label>
         </div>
@@ -344,7 +344,7 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc2810=='2' ? 'display:block':'display:none'}}">
-                <input type="text" ng-model="$ctrl.doc2810"
+                <input type="text" ng-model="$ctrl.doc2810" maxlength="50" restrict-input="{type: 'lettersOnly'}"
                        class="form-control">
             </label>
         </div>
@@ -358,7 +358,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Whether passed in the NET / CSIR / JRF as per UGC Norms in the relevant Subject <span style="font-size: small;color: red;">*</span>
+        Whether passed in the NET / CSIR / JRF as per UGC  Norms in the relevant Subject– Yes / No <span style="font-size: small;color: red;">*</span>
     </div>
     <div class="col-sm-12">
         <div class="radio">

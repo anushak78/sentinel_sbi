@@ -4,7 +4,7 @@
 
 <div>
     <div class="questions">
-        Is the document relevant to claim ?
+        Is the document relevant to claim  of Differently abled  Person ?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -43,7 +43,7 @@
                 <input type="radio" class="q_radio radio313" name="radio313"
                        value="1" ng-model="$ctrl.radio_values.init_doc313"
                        ng-change="$ctrl.doc313=''">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
@@ -51,11 +51,11 @@
                 <input type="radio" class="q_radio radio313" name="radio313"
                        value="2" ng-model="$ctrl.radio_values.init_doc313"
                        ng-change="$ctrl.doc313=''">
-                Not Matching
+                Not Matched
             </label>
             <label
               style="{{ $ctrl.radio_values.init_doc313=='2' ? 'display:block':'display:none'}}">
-                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc313"/>
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc313" restrict-input="{type: 'lettersAndDigitsOnly'}"/>
             </label>
         </div>
         <div class="radio">
@@ -85,7 +85,7 @@
                 <input type="radio" class="q_radio radio314" name="radio314"
                        value="1" ng-model="$ctrl.radio_values.init_doc314"
                        ng-change="$ctrl.doc314=''">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
@@ -93,7 +93,7 @@
                 <input type="radio" class="q_radio radio314" name="radio314"
                        value="2" ng-model="$ctrl.radio_values.init_doc314"
                        ng-change="$ctrl.doc314=''">
-                Not Matching
+                Not Matched
             </label>
             <label
                     style="{{ $ctrl.radio_values.init_doc314=='2' ? 'display:block':'display:none'}}">
@@ -105,7 +105,7 @@
                 <input type="radio" class="q_radio radio314" name="radio314"
                        value="3" ng-model="$ctrl.radio_values.init_doc314"
                        ng-change="$ctrl.doc314=''">
-                Not Applicable
+                Not Clear
             </label>
         </div>
     </div>
@@ -119,7 +119,7 @@
                 <input type="radio" class="q_radio radio315" name="radio315"
                        value="1" ng-model="$ctrl.radio_values.init_doc315"
                        ng-change="$ctrl.doc315=''">
-                Matching
+                Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc315=='1' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc315">
@@ -140,7 +140,7 @@
                 <input type="radio" class="q_radio radio315" name="radio315"
                        value="2" ng-model="$ctrl.radio_values.init_doc315"
                        ng-change="$ctrl.doc315=''">
-                Not Matching
+                Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc315=='2' ? 'display:block':'display:none'}}">
                 <select class="form-control" ng-model="$ctrl.doc315">
@@ -175,7 +175,7 @@
                 <input type="radio" class="q_radio radio316" name="radio316"
                        value="1" ng-model="$ctrl.radio_values.init_doc316"
                        ng-change="$ctrl.doc316=''">
-                Matching
+                Matched
             </label>
         </div>
         <div class="radio">
@@ -183,7 +183,7 @@
                 <input type="radio" class="q_radio radio316" name="radio316"
                        value="2" ng-model="$ctrl.radio_values.init_doc316"
                        ng-change="$ctrl.doc316=''">
-                Not Matching
+                Not Matched
             </label>
             <label
                 style="{{ $ctrl.radio_values.init_doc316=='2' ? 'display:block':'display:none'}}">

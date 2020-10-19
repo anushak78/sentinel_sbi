@@ -252,7 +252,7 @@
                     Not Matched
                 </label>
                 <label style="{{ $ctrl.radio_values.init_doc36=='2' ? 'display:block':'display:none'}}">
-                    <input type="text" id="doc36" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc36"
+                    <input type="text" id="doc36" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc36" readonly='true'
                            class="modified_date input-sm input-s datepicker-input form-control">
                 </label>
             </div>
@@ -295,7 +295,7 @@
                             Issued by - ST - Revenue Divisional Officer / Sub collector / Assistant collector (if the certificate is
                             issued after 11.11.1989)
                         </option>
-                        <option value="Issued by - SC/SCA - Tahsildar of native taluk of the candidate">
+                        <option value="Issued by - SC / SCA - Tahsildar of native taluk of the candidate">
                             Issued by - SC/SCA - Tahsildar of native taluk of the candidate
                         </option>
                         <option value="Issued by - BC /BCM/MBC / DNC – Headquarters / Special / Zonal Deputy Tahsildar">
@@ -364,16 +364,7 @@
                                value="1">
                         Matched
                     </label>
-                </div>
-                <div class="radio">
-                    <label class="radio-custom">
-                        <input type="radio"
-                               ng-model="$ctrl.radio_values.init_doc38"
-                               class="q_radio radio38" name="radio38"
-                               value="2">
-                        Not Matched
-                    </label>
-                    <label style="{{ $ctrl.radio_values.init_doc38=='2' ? 'display:block':'display:none'}}">
+                    <label style="{{ $ctrl.radio_values.init_doc38=='1' ? 'display:block':'display:none'}}">
                         <select ng-model="$ctrl.doc38" id="selectDoc38">
                             <optgroup label="List of scheduled castes">
                                 <option value="AdiAndhra">Adi Andhra</option>
@@ -1584,6 +1575,18 @@
                         <input type="radio"
                                ng-model="$ctrl.radio_values.init_doc38"
                                class="q_radio radio38" name="radio38"
+                               value="2">
+                        Not Matched
+                    </label>
+                    <label style="{{ $ctrl.radio_values.init_doc38=='2' ? 'display:block':'display:none'}}">
+                        <input type="text" maxlength="100" class="form-control" name="doc38" ng-model="$ctrl.doc38"/>
+                    </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-custom">
+                        <input type="radio"
+                               ng-model="$ctrl.radio_values.init_doc38"
+                               class="q_radio radio38" name="radio38"
                                value="3">
                         Not Clear
                     </label>
@@ -1634,7 +1637,9 @@
                     </option>
                     <option value="Jainism">Jainism
                     </option>
-                    <option value="Sikh">Sikh
+                    <option value="Sikah">Sikah
+                    </option>
+                    <option value="Others">Others
                     </option>
                 </select>
             </label>

@@ -56,7 +56,7 @@
       </label>
       <label
         style="{{ $ctrl.radio_values.init_doc373=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc373"/>
+        <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc373" restrict-input="{type: 'lettersAndDigitsOnly'}"/>
       </label>
     </div>
   </div>
@@ -102,7 +102,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="questions">
-    Name of the Subject in the UG? <span style="font-size: small;color: red;">*</span>
+    Name of the Subject in the UG Degree? <span style="font-size: small;color: red;">*</span>
   </div>
   <div class="col-sm-12">
     <div class="radio">
@@ -122,7 +122,7 @@
       </label>
        <label
         style="{{ $ctrl.radio_values.init_doc379=='2' ? 'display:block':'display:none'}}">
-        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc379"/>
+        <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc379" restrict-input="{type: 'lettersAndDigitsOnly'}"/>
       </label>
     </div>
     <div class="radio">
@@ -157,7 +157,7 @@
         </label>
         <label
                 style="{{ $ctrl.radio_values.init_doc3713=='2' ? 'display:block':'display:none'}}">
-          <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc3713"/>
+          <input type="text" maxlength="50" class="form-control" ng-model="$ctrl.doc3713" restrict-input="{type: 'lettersAndDigitsOnly'}"/>
         </label>
       </div>
       <div class="radio">
@@ -194,7 +194,7 @@
       </label>
       <label
         style="{{ $ctrl.radio_values.init_doc3715=='2' ? 'display:block':'display:none'}}">
-        <input type="text" id="doc3715" data-date-format="YYYY-MM-DD"
+        <input type="text" id="doc3715" data-date-format="YYYY-MM-DD" readonly='true'
                ng-model="$ctrl.doc3715"
                class="modified_date input-sm input-s datepicker-input form-control">
       </label>
@@ -273,7 +273,7 @@
       </label>
          <label
         style="{{ $ctrl.radio_values.init_doc3730=='2' ? 'display:block':'display:none'}}">
-        <input  type="text" maxlength="20"
+        <input  type="text" maxlength="20" restrict-input="{type: 'lettersAndDigitsOnly'}"
                ng-model="$ctrl.doc3730"
                class="form-control">
       </label>
@@ -290,7 +290,7 @@
   <div class="clearfix"></div>
 
   <div class="questions">
-    Whether the subject in UG Degree (or) Equivalent subject and the subject for which the candidate applied for is the same
+    Whether the subject in UG Degree (or) Equivalent subject and the  subject for which the candidate applied for is the same
   </div>
   <div class="col-sm-12">
     <div class="radio">

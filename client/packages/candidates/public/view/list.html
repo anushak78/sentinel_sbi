@@ -252,7 +252,7 @@
           <div class="col-md-4">
             <section class="panel-body" style="font-size: 12px">
               Have you possess Senior Diploma in Teaching Deaf Students?:<br/><span
-                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['possess_senior_diploma']}}</span>
+                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['possess_senior_diploma'] || 'No'}}</span>
             </section>
           </div>
           <div class="col-md-4" ng-if="candidateDetails['work_experience'].length<=0">
@@ -1110,6 +1110,17 @@
     </div>
   </div>
 
+  <div class="modal fade" id="modal-instructions" style="display: none;">
+    <div class="modal-dialog"
+         style="width: 96% !important;height: 100% !important;">
+      <div class="modal-content" style="height: 100% !important;">
+        <div class="modal-body" style="height: 100% !important;">
+          <instruct-page></instruct-page>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="modal-form" style="display: none;">
     <div class="modal-dialog"
          style="width: 96% !important;height: 100% !important;">
@@ -1122,7 +1133,15 @@
             <div class="col-sm-5" style="height: 100% !important;">
               <section class="panel-default"
                        style="height: 100% !important;">
-                <div class="row">
+                <div class="row" ng-if="selectedDocType.indexOf('L1') == -1">
+                  <div class="col-md-12">
+                    <header class="font-bold">Document Questions
+                      &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+                      {{titles[selectedDocType]}}
+                    </header>
+                  </div>
+                </div>
+                <div class="row" ng-if="selectedDocType.indexOf('L1') > -1">
                   <div class="col-md-6">
                     <header class="font-bold">Document Questions
                       &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
@@ -1166,7 +1185,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Name:<br/><span
+                        Name :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
                       </section>
                     </div>
@@ -1174,7 +1193,7 @@
                       <div class="col-md-6">
                         <section class="panel-body"
                                  style="font-size: 12px">
-                          Father Name :<br/><span
+                          Father's Name :<br/><span
                             style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_cand_father_first_name']}} {{candidateDetails['candidate_details'][0]['ocd_cand_father_last_name']}} </span>
                         </section>
                       </div>
@@ -1291,14 +1310,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Total no. of certificates attached :<br/><span
+                               No. of certificate/s attached :<br/><span
                           style="font-size: 14px">{{candidateDetails['work_experience'].length}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Total Work Experience :<br/><span
+                        Total Work Experience claimed :<br/><span
                           style="font-size: 14px">
                         {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
                         candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
@@ -1322,6 +1341,38 @@
                         {{candidateDetails['candidate_details'][0]['subject_applied_for']}}</span>
                       </section>
                     </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                               Ph.D mode of study :<br/><span
+                          style="font-size: 14px">
+                          {{candidateDetails['candidate_details'][0]['pg_mode_study']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                               Ph.D (registration date) :<br/><span
+                          style="font-size: 14px">
+                          {{candidateDetails['candidate_details'][0]['oaed_phd_reg_date']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                               Ph.D (date of viva voice) :<br/><span
+                          style="font-size: 14px">
+                          {{candidateDetails['candidate_details'][0]['oaed_date_viva']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                               Community :<br/><span
+                          style="font-size: 14px">
+                          {{candidateDetails['candidate_details'][0]['community']}}</span>
+                      </section>
+                    </div>
                   </div>
 
                   <div ng-if="selectedDocType.indexOf('General Information') > -1">
@@ -1337,16 +1388,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Birth Certificate issued at
-                        :<br/><span
+                        Birth Certificate issued at :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertificateissuedt']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Birth Certificate issuing
-                        authority :<br/><span
+                        Birth Certificate issuing authority :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertissuingauth']}}</span>
                       </section>
                     </div>
@@ -1355,8 +1404,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Birth Certificate
-                        no.:<br/><span
+                        Birth Certificate no. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_birthcertno']}}</span>
                       </section>
                     </div>
@@ -1484,7 +1532,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Community Certificate no.:<br/><span
+                        Community Certificate no. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_commcertno']}}</span>
                       </section>
                     </div>
@@ -1492,7 +1540,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Communal Category.:<br/><span
+                        Communal Category. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community']}}</span>
                       </section>
                     </div>
@@ -1502,7 +1550,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         Community certificate issued
-                        with Father's Name.:<br/><span
+                        with Father's Name. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_with_father_name']}}</span>
                       </section>
                     </div>
@@ -1510,7 +1558,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         Community certificate issued
-                        date.:<br/><span
+                        date. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_communitycertificateissuedt']}}</span>
                       </section>
                     </div>
@@ -1521,7 +1569,7 @@
                                style="font-size: 12px">
                         Community Certificate issued by
                         Tamil Nadu
-                        Government.:<br/><span
+                        Government. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_certificate_issued_by_tamil']}}</span>
                       </section>
                     </div>
@@ -1530,7 +1578,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         Community Certificate issuing
-                        authority.:<br/><span
+                        authority. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['community_issued_authority']}}</span>
                       </section>
                     </div>
@@ -1539,14 +1587,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        SubCaste.:<br/><span
+                        SubCaste. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_subcaste']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Religion.:<br/><span
+                        Religion. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['religion']}}</span>
                       </section>
                     </div>
@@ -1572,14 +1620,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        SSC Full Time:<br/><span
+                        SSC Full Time :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_part_full_time']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        SSC Percentage:<br/><span
+                        SSC Percentage :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['scc_percentage']}}</span>
                       </section>
                     </div>
@@ -1587,14 +1635,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        SSC Year Of Passing:<br/><span
+                        SSC Year Of Passing :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ssc_year_of_passing']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Date of Publication of Results:<br/><span
+                        Date of Publication of Results :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltsslc']}}</span>
                       </section>
                     </div>
@@ -1602,14 +1650,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Mode of study:<br/><span
+                        Mode of study :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_sslcmode']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        SSLC Certificate No.:<br/><span
+                        SSLC Certificate No. :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_sslccertno']}}</span>
                       </section>
                     </div>
@@ -1634,14 +1682,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        HSC Full Time:<br/><span
+                        HSC Full Time :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_part_full_time']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        HSC Percentage:<br/><span
+                        HSC Percentage :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_percentage']}}</span>
                       </section>
                     </div>
@@ -1649,7 +1697,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        HSC Month & Year Of Passing:<br/><span
+                        HSC Month & Year Of Passing :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['hsc_year_of_passing']}}</span>
                       </section>
                     </div>
@@ -1657,7 +1705,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         Date of publication of
-                        result:<br/><span
+                        result :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publreslthsc']}}</span>
                       </section>
                     </div>
@@ -1665,7 +1713,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Mode of study:<br/><span
+                        Mode of study :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_hscmode']}}</span>
                       </section>
                     </div>
@@ -1673,7 +1721,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         HSC Certificate
-                        Number:<br/><span
+                        Number :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_hsccertno']}}</span>
                       </section>
                     </div>
@@ -1698,14 +1746,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Duration:<br/><span
+                        UG Duration :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_duration']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Main Subject:<br/><span
+                        UG Main Subject :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_main_subject']}}</span>
                       </section>
                     </div>
@@ -1713,14 +1761,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Medium of Instructions:<br/><span
+                        UG Medium of Instructions :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_medium_of_instruction']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Percentage:<br/><span
+                        UG Percentage :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_percentage']}}</span>
                       </section>
                     </div>
@@ -1728,7 +1776,7 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Studied UG Degree in UGC Recognized University:<br/><span
+                        Studied UG Degree in UGC Recognized University :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_recognised_university']}}</span>
                       </section>
                     </div>
@@ -1736,14 +1784,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Study From:<br/><span
+                        UG Study From :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_study_from']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Study To:<br/><span
+                        UG Study To :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_study_to']}}</span>
                       </section>
                     </div>
@@ -1751,14 +1799,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Subject Group:<br/><span
+                        UG Subject Group :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_subject_group']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG University:<br/><span
+                        UG University :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_university']}}</span>
                       </section>
                     </div>
@@ -1766,14 +1814,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Tamil Pass:<br/><span
+                        UG Tamil Pass :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_tamil_pass']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Month & Year of Passing:<br/><span
+                        UG Month & Year of Passing :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_year_of_passing']}}</span>
                       </section>
                     </div>
@@ -1782,29 +1830,29 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         UG Degree Certificate
-                        Number:<br/><span
+                        Number :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugcertno']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        No Of Marksheet:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugmarksheetno']}}</span>
+                        No Of Marksheet :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_ugmarksheetno'] || 'Null'}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Date of publications of result:<br/><span
+                        Date of publications of result :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_publresltug']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Mode of study:<br/><span
+                        UG Mode of study :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_mode_of_study']}}</span>
                       </section>
                     </div>
@@ -1812,14 +1860,14 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG Consolidated Marksheet:<br/><span
+                        UG Consolidated Marksheet :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_consolidated_marksheet']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Name of institution studied in UG Degree:<br/><span
+                        Name of institution studied in UG Degree :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_uginstitname']}}</span>
                       </section>
                     </div>
@@ -1827,15 +1875,15 @@
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        Equivalent Govt orders for Qualification no.:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_eqgovordug']}}</span>
+                        Equivalent Govt orders for Qualification no. :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_eqgovordug'] || 'Null'}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
                       <section class="panel-body"
                                style="font-size: 12px">
-                        UG - Equivalent Govt orders for Qualification Date:<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_eqgovorddateug']}}</span>
+                        UG - Equivalent Govt orders for Qualification Date :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocad_eqgovorddateug'] || 'Null'}}</span>
                       </section>
                     </div>
                     <div class="clearfix"></div>
@@ -1851,7 +1899,7 @@
                       <section class="panel-body"
                                style="font-size: 12px">
                         Subject in UG degree (or) Equivalent subject and the subject applied for is the
-                        same:<br/><span
+                        same :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ug_subject_same']}}</span>
                       </section>
                     </div>
@@ -2467,7 +2515,7 @@
                                style="font-size: 12px">
                         Is Ph.D undergone in Tamil Medium
                         :<br/><span
-                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['phd_in_tamil']}}</span>
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['phd_in_tamil'] || 'No'}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
@@ -3673,7 +3721,7 @@
       <div class="row">
           <div class="col-md-6">
               <span style="font-size: 14px">
-                  Father Name :
+                  Father's Name :
               </span>
           </div>
           <div class="col-md-6">
@@ -4614,7 +4662,7 @@
          </div>
      </div>
  </section>
-+
+
  <section class="panel panel-default" style="color: black !important;">
      <header class="panel-heading">
          Teaching Experience
@@ -4719,9 +4767,9 @@
                       </div>
                       <div class="col-md-6">
                           <span style="font-size: 14px;">
-                              {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
-                          candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
-                          candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                            Years:  {{candidateDetails['candidate_details'][0]['owead_total_exp_years']}}
+                            Months: {{candidateDetails['candidate_details'][0]['owead_total_exp_months']}}
+                            Days: {{candidateDetails['candidate_details'][0]['owead_total_exp_days']}}
                           </span>
                       </div>
                   </div>
@@ -4734,9 +4782,9 @@
                     </div>
                     <div class="col-md-6">
                         <span style="font-size: 14px;">
-                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
-                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
-                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                          Years:  {{candidateDetails['candidate_details'][0]['owead_total_exp_years']}}
+                          Months: {{candidateDetails['candidate_details'][0]['owead_total_exp_months']}}
+                          Days: {{candidateDetails['candidate_details'][0]['owead_total_exp_days']}}
                         </span>
                     </div>
                 </div>
@@ -4749,9 +4797,9 @@
                     </div>
                     <div class="col-md-6">
                         <span style="font-size: 14px;">
-                            {{candidateDetails['candidate_details'][0]['owead_total_exp_years'] + ' Years ' +
-                        candidateDetails['candidate_details'][0]['owead_total_exp_months'] + ' months ' +
-                        candidateDetails['candidate_details'][0]['owead_total_exp_days'] +  ' Days '}}
+                          Years:  {{candidateDetails['candidate_details'][0]['owead_total_exp_years']}}
+                          Months: {{candidateDetails['candidate_details'][0]['owead_total_exp_months']}}
+                          Days: {{candidateDetails['candidate_details'][0]['owead_total_exp_days']}}
                         </span>
                     </div>
                 </div>
@@ -5114,7 +5162,6 @@
                       </span>
                   </div>
               </div>
-              <br>
           </div>
   </div>
   </section>

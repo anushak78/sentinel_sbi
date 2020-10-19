@@ -31,7 +31,7 @@
       "q_id": 3
     },
     {
-      "question": "Is Date of Birth & Age (As on 01.07.2019)(SSLC Mark Sheet) / Birth Certificate Matched?",
+      "question": "Is Date  of Birth Matched as per SSLC Mark Sheet / Birth Certificate",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -251,7 +251,7 @@
       "q_id": 25
     },
     {
-      "question": "Whether month & year of passing for UG matches?",
+      "question": "Whether month & year of passing for UG Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -261,7 +261,7 @@
       "q_id": 26
     },
     {
-      "question": "Whether date of publication of result matches for UG?",
+      "question": "Whether date of publication of result matches for UG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -271,7 +271,7 @@
       "q_id": 27
     },
     {
-      "question": "Name of the institution matches for UG?",
+      "question": "Name of the institution matches for UG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -281,7 +281,7 @@
       "q_id": 28
     },
     {
-      "question": "Name of the university matches for UG?",
+      "question": "Name of the university matches for UG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -291,7 +291,7 @@
       "q_id": 29
     },
     {
-      "question": "Whether mode of study matches for UG?",
+      "question": "Whether mode of study matches for UG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -301,7 +301,7 @@
       "q_id": 30
     },
     {
-      "question": "Whether subject studied matches for PG Degree?",
+      "question": "Whether Name of the Subject studied matches for  PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -311,7 +311,7 @@
       "q_id": 31
     },
     {
-      "question": "Whether month & year of passing for PG matches?",
+      "question": "Whether month & year of passing for PG Degree matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -321,7 +321,7 @@
       "q_id": 32
     },
     {
-      "question": "Whether date of publication of result matches for PG?",
+      "question": "Whether date of publication of result matches for PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -331,7 +331,7 @@
       "q_id": 33
     },
     {
-      "question": "Name of the institution matches for PG?",
+      "question": "Name of the institution matches for PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -341,7 +341,7 @@
       "q_id": 34
     },
     {
-      "question": "Name of the university matches for PG?",
+      "question": "Name of the university matches for PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -351,7 +351,7 @@
       "q_id": 35
     },
     {
-      "question": "Whether mode of study matches for PG?",
+      "question": "Whether mode of study matches for PG Degree?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -364,63 +364,57 @@
       "question": "Whether Name of the Subject studied matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
       "q_id": 37
     },
     {
-      "question": "Whether month & year of passing for M.Phil matches?",
+      "question": "Whether month & year of passing for M.Phil Degree matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
       "q_id": 38
     },
     {
-      "question": "Whether date of publication of result matches for M.Phil?",
+      "question": "Whether date of publication of result matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
       "q_id": 39
     },
     {
-      "question": "Name of the institution matches for M.Phil?",
+      "question": "Name of the institution matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
       "q_id": 40
     },
     {
-      "question": "Name of the university matches for M.Phil?",
+      "question": "Name of the university matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
       "q_id": 41
     },
     {
-      "question": "Whether mode of study matches for M.Phil?",
+      "question": "Whether mode of study matches for M.Phil Degree?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
@@ -760,8 +754,7 @@
       "question": "Whether equivalent subject in PG Degree, Government Order No.& Date matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
@@ -845,7 +838,7 @@
       "q_id": 80
     },
     {
-      "question": "Whether Candidate has passed in the SLET / SET / SLST matches?",
+      "question": "Whether Candidate has passed in the SLET / SET / SLET  matches?",
       "options": {
         "option1": "Yes",
         "option2": "No",
@@ -966,7 +959,7 @@
       "q_id": 91
     },
     {
-      "question": "If Ph.D Degree obtained from Foreign University, whether Equivalent Certificate obtained matches?",
+      "question": "If Ph.D Degree obtained from  Foreign University, whether Equivalent Certificate obtained from  Association of Indian Universities matches?",
       "options": {
         "option1": "Yes",
         "option2": "No",
@@ -977,7 +970,7 @@
       "q_id": 92
     },
     {
-      "question": "Whether studied the prescribed qualification in Tamil Medium PSTM and submitted the PSTM Certificate matches?",
+      "question": "Whether studied the prescribed  qualification in Tamil Medium PSTM and submitted the PSTM  Certificate for PG and Ph.D / PG, M.Ed and Ph.D or PG if NET / SET  Qualified matches?",
       "options": {
         "option1": "Yes",
         "option2": "No",
@@ -1049,6 +1042,16 @@
       "approved": "1",
       "doc_id": 999,
       "q_id": 99
+    },
+    {
+      "question": "Name of the Subject in Ph.D Degree matches?",
+      "options": {
+        "option1": "Yes",
+        "option2": "No"
+      },
+      "approved": "1",
+      "doc_id": 999,
+      "q_id": 199
     },
     {
       "question": "Name of the Subject in M.Phil Degree matches?",
@@ -1237,8 +1240,7 @@
       "question": "Latest Conduct Certificate (Issued Date on or after 04.10.2019) matches?",
       "options": {
         "option1": "Yes",
-        "option2": "No",
-        "option3": "Not Applicable"
+        "option2": "No"
       },
       "approved": "1",
       "doc_id": 999,
@@ -1285,7 +1287,7 @@
       "q_id": 121
     },
     {
-      "question": "Whether the teaching Experience period claimed in PTA Matches?",
+      "question": "Whether there is Teaching Experience period claimed in  PTA Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1295,7 +1297,7 @@
       "q_id": 122
     },
     {
-      "question": "Whether the teaching Experience period claimed in schools/institutions other than Arts and Science, Engineering, Medical, Law Colleges / Universities Matches?",
+      "question": "Whether there is Teaching Experience period claimed in  schools/institutions other than Arts and Science, Engineering, Medical,  Law Colleges / Universities Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1426,7 +1428,7 @@
       "q_id": 135
     },
     {
-      "question": "Remarks",
+      "question": "Remarks Matches?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1535,7 +1537,7 @@
   ],
   "12th / HSC Certificate": [
     {
-      "question": "Is the document Visible / Clear?",
+      "question": "Is the document Visible or Clear?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -1569,8 +1571,8 @@
     {
       "question": "Month & Year of Passing in the HSC Mark sheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1759,8 +1761,8 @@
     {
       "question": "Name in the marksheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -1803,8 +1805,8 @@
     {
       "question": "Name in the marksheet?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2593,8 +2595,8 @@
     {
       "question": "Name in the Destitute widow certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2626,8 +2628,8 @@
     {
       "question": "Name in the Ex-Servicemen certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2670,8 +2672,8 @@
     {
       "question": "Name in the NSS certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2716,8 +2718,8 @@
     {
       "question": "Name in the Medal certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2821,8 +2823,8 @@
     {
       "question": "Name in the Sports certificate?",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2844,8 +2846,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2882,8 +2884,8 @@
     {
       "question": "Name of Transgender certificate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2893,7 +2895,7 @@
   ],
   "Photo": [
     {
-      "question": "Is the document visible / clear ?",
+      "question": "Is the document visible or clear ?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2903,7 +2905,7 @@
       "q_id": 1
     },
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document relevant?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -2915,8 +2917,8 @@
     {
       "question": "Gender",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2926,7 +2928,7 @@
   ],
   "Sign": [
     {
-      "question": "Is the document Visible / Clear ?",
+      "question": "Is the document Visible or Clear ?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -2936,7 +2938,7 @@
       "q_id": 1
     },
     {
-      "question": "Is the document relevant to claim?",
+      "question": "Is the document relevant?",
       "options": {
         "option1": "Relevant",
         "option2": "Not Relevant"
@@ -2960,8 +2962,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -2983,8 +2985,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3006,8 +3008,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3029,8 +3031,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3052,8 +3054,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3075,8 +3077,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3098,8 +3100,8 @@
     {
       "question": "Name of the candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3302,8 +3304,8 @@
     {
       "question": "Name of candidate",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3468,7 +3470,7 @@
       "q_id": 3
     },
     {
-      "question": "Whether passed in the SLET in the relevant Subject",
+      "question": "Whether passed in the SLET in the relevant  Subject– Yes / No ",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -3535,7 +3537,7 @@
       "q_id": 10
     },
     {
-      "question": "Whether passed in the NET / CSIR / JRF as per UGC Norms in the relevant Subject",
+      "question": "Whether passed in the NET / CSIR / JRF as per UGC  Norms in the relevant Subject– Yes / No",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -3583,8 +3585,8 @@
     {
       "question": "Ph.D Certificate Number",
       "options": {
-        "option1": "Matching",
-        "option2": "Not Matching",
+        "option1": "Matched",
+        "option2": "Not Matched",
         "option3": "Not Clear"
       },
       "approved": "1",
@@ -3701,7 +3703,7 @@
       "q_id": 2
     },
     {
-      "question": "Birth Certificate / SSLC Certificate Issuing Authority",
+      "question": "Birth Certificate / SSLC Certificate Issuing Authority :",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -3797,8 +3799,8 @@
     {
       "question": "Disability Certificate Number",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching",
+        "option1": "Matched",
+        "option2": "Not matched",
         "option3": "Not Clear",
         "option4": "Not Applicable"
       },
@@ -3811,7 +3813,7 @@
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
-        "option3": "Not Applicable"
+        "option3": "Not Clear"
       },
       "approved": "1",
       "doc_id": 31,
@@ -4243,10 +4245,10 @@
       "q_id": 2
     },
     {
-      "question": "Whether submitted Last Studied conduct Certificate",
+      "question": "Whether  submitted Last Studied conduct Certificate – Yes / No",
       "options": {
-        "option1": "Matching",
-        "option2": "Not matching"
+        "option1": "Matched",
+        "option2": "Not matched"
       },
       "approved": "1",
       "doc_id": 36,
@@ -4263,7 +4265,7 @@
       "q_id": 4
     },
     {
-      "question": "Whether submitted Latest Conduct Certificate",
+      "question": "Whether submitted Latest  Conduct Certificate – Yes / No",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4371,7 +4373,7 @@
       "q_id": 29
     },
     {
-      "question": "Equivalent Government Order Number for UG",
+      "question": "Whether the subject in UG Degree (or) Equivalent subject and the  subject for which the candidate applied for is the same",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -4394,7 +4396,7 @@
       "q_id": 1
     },
     {
-      "question": "Is the document relevant to the claim of UG Degree?",
+      "question": "Is the document relevant to the claim of UG Degree Mark Sheets?",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -4508,7 +4510,7 @@
   ],
   "Work Experience": [
     {
-      "question": "Is the document visible / clear ?",
+      "question": "Is the document visible or clear ?",
       "options": {
         "option1": "Yes",
         "option2": "No"
@@ -4941,7 +4943,7 @@
       "q_id": 52
     },
     {
-      "question": "Whether claim No. 1 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 1 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4951,7 +4953,7 @@
       "q_id": 87
     },
     {
-      "question": "Whether claim No. 2 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 2 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4961,7 +4963,7 @@
       "q_id": 53
     },
     {
-      "question": "Whether claim No. 3 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 3 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4971,7 +4973,7 @@
       "q_id": 54
     },
     {
-      "question": "Whether claim No. 4 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 4 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4981,7 +4983,7 @@
       "q_id": 55
     },
     {
-      "question": "Whether claim No. 5 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 5 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -4991,7 +4993,7 @@
       "q_id": 56
     },
     {
-      "question": "Whether claim No. 6 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 6 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5001,7 +5003,7 @@
       "q_id": 57
     },
     {
-      "question": "Whether claim No. 7 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 7 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5011,7 +5013,7 @@
       "q_id": 58
     },
     {
-      "question": "Whether claim No. 8 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 8 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5021,7 +5023,7 @@
       "q_id": 59
     },
     {
-      "question": "Whether claim No. 9 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 9 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5031,7 +5033,7 @@
       "q_id": 60
     },
     {
-      "question": "Whether claim No. 10 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 10 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5041,7 +5043,7 @@
       "q_id": 61
     },
     {
-      "question": "Whether claim No. 11 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 11 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5051,7 +5053,7 @@
       "q_id": 62
     },
     {
-      "question": "Whether claim No. 12 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 12 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5061,7 +5063,7 @@
       "q_id": 63
     },
     {
-      "question": "Whether claim No. 13 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 13 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5071,7 +5073,7 @@
       "q_id": 64
     },
     {
-      "question": "Whether claim No. 14 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 14 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5081,7 +5083,7 @@
       "q_id": 65
     },
     {
-      "question": "Whether claim No. 15 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 15 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5091,7 +5093,7 @@
       "q_id": 66
     },
     {
-      "question": "Whether claim No. 16 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 16 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5101,7 +5103,7 @@
       "q_id": 67
     },
     {
-      "question": "Whether claim No. 17 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 17 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5111,7 +5113,7 @@
       "q_id": 68
     },
     {
-      "question": "Whether claim No. 18 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 18 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5121,7 +5123,7 @@
       "q_id": 69
     },
     {
-      "question": "Whether claim No. 19 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 19 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5131,7 +5133,7 @@
       "q_id": 70
     },
     {
-      "question": "Whether claim No. 20 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 20 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5141,7 +5143,7 @@
       "q_id": 71
     },
     {
-      "question": "Whether claim No. 21 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 21 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5151,7 +5153,7 @@
       "q_id": 72
     },
     {
-      "question": "Whether claim No. 22 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 22 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5161,7 +5163,7 @@
       "q_id": 73
     },
     {
-      "question": "Whether claim No. 23 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 23 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5171,7 +5173,7 @@
       "q_id": 74
     },
     {
-      "question": "Whether claim No. 24 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 24 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5181,7 +5183,7 @@
       "q_id": 75
     },
     {
-      "question": "Whether claim No. 25 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 25 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5191,7 +5193,7 @@
       "q_id": 76
     },
     {
-      "question": "Whether claim No. 26 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 26 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5201,7 +5203,7 @@
       "q_id": 77
     },
     {
-      "question": "Whether claim No. 27 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 27 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5211,7 +5213,7 @@
       "q_id": 78
     },
     {
-      "question": "Whether claim No. 28 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 28 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5221,7 +5223,7 @@
       "q_id": 79
     },
     {
-      "question": "Whether claim No. 29 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 29 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -5231,7 +5233,7 @@
       "q_id": 80
     },
     {
-      "question": "Whether claim No. 30 is relevant to the period mentioned in the experience certificate",
+      "question": "Whether claim No. 30 mentioned as per application is relevant to the period mentioned in the experience certificate",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -15266,7 +15268,7 @@
   ],
   "Order of Qualification": [
     {
-      "question": "Whether Educational Qualification in the order 10+2+3+2+1 or 2 / 4 + Years (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or) 10+2+3+1/2+2/3+2/1 or 2/4 years or others - (Mandatory)",
+      "question": "Whether Educational Qualification in the order 10+2+3+2+1 or 2 / 4 + Years (or) 10+2+3+2 / 3 years (or) 10+2+3+2+1 / 2 years / 1 or 2 / 4 Years (or) 10+2+3+1/2+2/3+2/1 or 2/4 years or others",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched",
@@ -15339,7 +15341,7 @@
       "q_id": 7
     },
     {
-      "question": "Whether the candidate possesses prescribed educational qualification  before the cutoff date 04.10.2019",
+      "question": "Whether the candidate  possesses prescribed educational qualification before the cutoff date  04.10.2019– Yes / No",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"
@@ -15371,7 +15373,7 @@
       "q_id": 9
     },
     {
-      "question": "Whether studied PG Degree and passed NET/SLET in the same subject or its equivalent as prescribed in the notification",
+      "question": "Whether studied  PG Degree and passed NET/SLET in the same subject or its equivalent  as prescribed in the notification – Yes / No",
       "options": {
         "option1": "Matched",
         "option2": "Not Matched"

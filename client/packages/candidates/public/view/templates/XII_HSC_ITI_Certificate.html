@@ -34,7 +34,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="questions">
-        Name in the Mark sheet?
+        Name in the HSC certificate?
     </div>
     <div class="col-sm-12">
         <div class="radio">
@@ -94,7 +94,7 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc23=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc23" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc23"
+                <input type="text" id="doc23" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc23" readonly='true'
                        class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
@@ -127,7 +127,7 @@
                 Not Matched
             </label>
             <label style="{{ $ctrl.radio_values.init_doc24=='2' ? 'display:block':'display:none'}}">
-                <input type="text" id="doc24" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc24"
+                <input type="text" id="doc24" data-date-format="YYYY-MM-DD" ng-model="$ctrl.doc24" readonly='true'
                        class="modified_date input-sm input-s datepicker-input form-control">
             </label>
         </div>
@@ -163,7 +163,7 @@
             </label>
             <label
                     style="{{ $ctrl.radio_values.init_doc27=='2' ? 'display:block':'display:none'}}">
-                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc27"/>
+                <input type="text" maxlength="20" class="form-control" ng-model="$ctrl.doc27" restrict-input="{type: 'lettersAndDigitsOnly'}"/>
             </label>
         </div>
     </div>
