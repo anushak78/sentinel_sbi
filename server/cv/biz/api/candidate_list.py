@@ -151,6 +151,18 @@ def _fix_document_urls(request, document_list, candidate_id):
     return new_document_list
 
 
+def get_candidateID(argument):
+    switcher = {
+        2: "TRBAPE781903",
+        3: "TRBAPE205616",
+        4: "TRBAPE675098",
+        5: "TRBAPE501806",
+        6: "TRBAPE653921",
+        7: "TRBAPE608695",
+    }
+    return switcher.get(argument, "nothing")
+
+
 @svc_candidate_list.get()
 def get_candidate_list(request):
 
@@ -185,7 +197,7 @@ def get_candidate_list(request):
     from oes_candidate_doc ocd
     INNER JOIN oes_user_master oum ON ocd.ocd_created_by = oum.oum_user_id
     INNER JOIN oes_candidate_details ON ocd.ocd_user_fk = oes_candidate_details.ocd_user_fk
-    where ocd.ocd_declare_flag='true1'
+    where ocd.ocd_declare_flag like 'true1'
    """
     if (candidate_id != None and candidate_id != ''):
         pending_list_query += "AND oum.oum_candidate_name LIKE '%" + candidate_id + "%' "
@@ -237,6 +249,15 @@ def get_candidate_list(request):
     elif category == 3:
         pending_list_query += "and ocd.ocd_agequotaradiocheck = '2'"
 
+    log.info(">>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    log.info(user_id)
+    log.info(get_candidateID(int(user_id)))
+    log.info(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
+    pending_list_query += " where ocd.ocd_created_by like '"
+    pending_list_query += get_candidateID(int(user_id)) + "'"
+    #pending_list_query += " limit 10"
+
     print(pending_list_query)
     # count_query = """select count(*) as total_count
     # from (""" + pending_list_query + """) abcd"""
@@ -259,28 +280,28 @@ def get_candidate_list(request):
     print(offset)
     print("*!@#!@#@!#!@#!@#!@!@#!@#!@#!@*")
     print(user_id)
-    limit = 50
+    # limit = 50
 
-    if level == 1:
-        if int(user_id) == 1:
-            pending_list_query += """ offset :offset rows fetch first 50 rows only
-                                  """
-        else:
-            limit = limit*int(user_id)
-            print(limit)
-            if int(offset) == 0:
-                offset = (limit-50)+1
-                pending_list_query += """ offset """ + \
-                    str(offset) + """  limit  50 """
+    # if level == 1:
+    #     if int(user_id) == 1:
+    #         pending_list_query += """ offset :offset rows fetch first 50 rows only
+    #                               """
+    #     else:
+    #         limit = limit*int(user_id)
+    #         print(limit)
+    #         if int(offset) == 0:
+    #             offset = (limit-50)+1
+    #             pending_list_query += """ offset """ + \
+    #                 str(offset) + """  limit  50 """
 
     # else:
-     #   limit_rows = limit_rows * int(user_id)
-      #  if offset == 0:
-       #     offset = limit_rows - 50
-       # print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-       # print(offset)
-       # pending_list_query += """ offset :offset rows fetch next :limit rows only
-       #                       """
+    #   limit_rows = limit_rows * int(user_id)
+    #  if offset == 0:
+    #     offset = limit_rows - 50
+    # print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    # print(offset)
+    # pending_list_query += """ offset :offset rows fetch next :limit rows only
+    #                       """
 
     # if int(offset) > 0 :
     # pending_list_query += """ offset :offset  rows fetch first 50 rows only
