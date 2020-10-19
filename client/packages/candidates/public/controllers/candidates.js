@@ -4194,18 +4194,10 @@
 
             if (typeof vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
               object['additional_info'] = vm["doc" + $scope.documentWithQuestions[$scope.selectedDocType][i]['doc_id'] + "" + $scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
-              if (object['additional_info'] == null || object['additional_info'] == '') {
-                alert('Please fill all the fields');
-                return
-              }
             }
             if ($scope.selectedDocType == 'L1') {
               if (typeof $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] != "undefined") {
-                object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']]
-                if (object['additional_info'] == null || object['additional_info'] == '') {
-                  alert('Please fill all the fields');
-                  return
-                } 
+                object['additional_info'] = $scope.doc999[$scope.documentWithQuestions[$scope.selectedDocType][i]['q_id']] 
               } 
             }
             answers.push(object);
@@ -4970,14 +4962,14 @@
     }
     $scope.calculateAge = function () {
       $scope.calulatedDOB = '';
-      if ($scope.converDateToSlashDOB($('.doc306').val())) {
+     /* if ($scope.converDateToSlashDOB($('.doc306').val())) {
         console.log($scope.converDateToSlashDOB($('.doc306').val()))
         let date1 = '01/07/2019'
         let date2 = $scope.converDateToSlashDOB($('.doc306').val())
         if(process(date2) > process(date1)){
           alert("Please enter date before 01/07/2019")
        }
-      }
+      }*/
       Http.post("/biz/scores/dateDiff", {
         dt_from: $scope.converDateToSlashDOB($('.doc306').val()),
         dt_to: '01/07/2019'
