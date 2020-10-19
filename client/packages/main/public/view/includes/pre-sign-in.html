@@ -1,13 +1,7 @@
-<div style="text-align: right;">
-    <a href="javascript:void(0)" ui-sref="main.candidates.list" class="btn btn-primary" >Back</a>
-</div>
 <section id="content" class="m-t-lg wrapper-md" style="overflow: auto;">
     <div class="container">
-        <a class="navbar-brand block">TRBAPR Admin Scrutiny Portal</a>
+        <a class="navbar-brand block">TRBAPR Admin Registration</a>
         <section class="panel panel-default bg-white m-t-lg">
-            <header class="panel-heading text-center">
-                <strong>Enter Details</strong>
-            </header>
             <form class="panel-body wrapper-lg">
                 <div class="form-group">
                     <label class="control-label">Full Name</label>
@@ -22,6 +16,21 @@
                     <label class="control-label">Mobile No.</label>
                     <input type="number" ng-model="$ctrl.prelogin_fields.phone_no" placeholder="Phone Number"
                         class="form-control input-lg">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Select IDs</label>
+                    <select class="form-control">
+                        <option value="Gen1User1">Gen1User1</option>
+                        <option value="Gen1User2">Gen1User2</option>
+                        <option value="Gen1User3">Gen1User3</option>
+                        <option value="Gen1User4">Gen1User4</option>
+                        <option value="Gen1User5">Gen1User5</option>
+                        <option value="Gen1User6">Gen1User6</option>
+                        <option value="Gen1User7">Gen1User7</option>
+                        <option value="Gen1User8">Gen1User8</option>
+                        <option value="Gen1User9">Gen1User9</option>
+                        <option value="Gen1User10">Gen1User10</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Signature</label>{{file}}
@@ -47,8 +56,10 @@
                     <button ng-click="$ctrl.capturePhoto(); $ctrl.flag='video'" class="btn btn-primary">Refresh <span class="fa fa-refresh"></span></button>
                 </div>
                 <hr>
-                <div style="text-align: right;">
-                    <button ng-click="$ctrl.submitDetails()" class="btn btn-primary" ng-disabled="!$ctrl.submitDisabled()">Submit</button>
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6" style="text-align: right">
+                        <button ng-click="$ctrl.submitDetails()" class="btn btn-primary" ng-disabled="!$ctrl.submitDisabled()">Submit</button>
+                        <button ng-click="$ctrl.gotoPageCandidateList()" class="btn btn-primary" ng-disabled="!$ctrl.submitDisabled()">Back</button>
                 </div>
             </form>
         </section>

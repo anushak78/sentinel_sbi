@@ -1,4 +1,4 @@
-angular.module('app.main').controller('MainController', function (Message, Session, $scope) {
+angular.module('app.main').controller('MainController', function (Message, Session, $scope, $state) {
     let vm = this;
     vm.defaultZoom  = '1.0';
     vm.prelogin_fields = {
@@ -70,6 +70,9 @@ angular.module('app.main').controller('MainController', function (Message, Sessi
         }, err=> {
             // todo manage error
         })
+    }
+    vm.gotoPageCandidateList = function() {
+        $state.go("main.candidates.list");
     }
     vm.submitDisabled = function () {
         if (vm.prelogin_fields.username == null || vm.prelogin_fields.username == '') {
