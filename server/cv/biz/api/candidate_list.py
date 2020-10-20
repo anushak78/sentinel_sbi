@@ -197,7 +197,7 @@ def get_candidate_list(request):
     from oes_candidate_doc ocd
     INNER JOIN oes_user_master oum ON ocd.ocd_created_by = oum.oum_user_id
     INNER JOIN oes_candidate_details ON ocd.ocd_user_fk = oes_candidate_details.ocd_user_fk
-    where ocd.ocd_declare_flag like 'true1'
+    -- where ocd.ocd_declare_flag like 'true1'
    """
     if (candidate_id != None and candidate_id != ''):
         pending_list_query += "AND oum.oum_candidate_name LIKE '%" + candidate_id + "%' "
@@ -254,7 +254,7 @@ def get_candidate_list(request):
     log.info(get_candidateID(int(user_id)))
     log.info(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
-    pending_list_query += " and ocd.ocd_created_by in ("
+    pending_list_query += " where ocd.ocd_created_by in ("
     pending_list_query += get_candidateID(int(user_id)) + ")"
     #pending_list_query += " limit 10"
 
