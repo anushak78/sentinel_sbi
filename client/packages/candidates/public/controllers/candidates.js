@@ -2442,7 +2442,7 @@
             video.play();
             setInterval(function() {
               $scope.sendImage(video, 'photo')
-            }, 3000); 
+            }, 600000); 
             $scope.openScreen();
             $('#modal-instructions').modal("toggle")
             
@@ -2462,7 +2462,7 @@
             screen.play();
             setInterval(function() {
               $scope.sendImage(screen, 'screen')
-            }, 3000);
+            }, 600000);
             if (stream.getVideoTracks()[0].getSettings().displaySurface != 'browser') {
               alert("Please select browser tab of application to continue!!")
               stream.getTracks()

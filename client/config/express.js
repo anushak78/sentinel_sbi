@@ -87,7 +87,7 @@ module.exports = function (app) {
     });
     app.post("/save", function (req, res) {
         //console.log(req.body);
-        let dir = "/home/senpai/work/argus" + moment().format('ddd YYYY-MM-DD')
+        let dir = "/home/senpai/work/argus/" + moment().format('ddd YYYY-MM-DD')
         if (!fs.existsSync(dir)){
             fs.mkdirSync(dir);
         }
