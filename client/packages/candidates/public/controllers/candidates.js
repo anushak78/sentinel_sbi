@@ -2393,20 +2393,21 @@
 
     $scope.currentPage = 1;
     $scope.pageSize = 10;
-    //$('#modal-instructions').modal({backdrop: 'static', keyboard: false});
+    $('#modal-instructions').modal({backdrop: 'static', keyboard: false});
     $scope.sendImage = function(video, flag) {
       if (flag == 'screen') {
         let canvas = document.getElementById('canvas-screen');
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         var context = canvas.getContext('2d');
-        context.drawImage(video, 0, 0, 750, 500);
+        context.drawImage(video, 0, 0, 1000, 500);
         let photo = canvas.toDataURL("image/png");
-        $http.post("http://"+ window.location.hostname + ":2000/save", {
+        $http.post("/save", {
           image: photo,
           candidate_id: $rootScope.userData.user_id,
           type: 'screen'
         }).then(function (object) {
+          console.log(object)
           if (object['code'] == 1) { 
             console.log(object)
           }
@@ -2419,7 +2420,7 @@
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 150, 100);
         let photo = canvas.toDataURL("image/png");
-        $http.post("http://"+ window.location.hostname + ":2000/save", {
+        $http.post("/save", {
           image: photo,
           candidate_id: $rootScope.userData.user_id,
           type: 'photo'
@@ -2441,7 +2442,6 @@
             video.play();
             setInterval(function() {
               $scope.sendImage(video, 'photo')
-              console.log("here")
             }, 3000); 
             $scope.openScreen();
             $('#modal-instructions').modal("toggle")

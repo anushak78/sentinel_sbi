@@ -10,6 +10,7 @@ const helmet = require('helmet');
 const session = require('express-session');
 const _ = require("lodash");
 let log4js = require('log4js');
+var moment = require('moment');
 log4js.configure({
     appenders: {
         out: {type: 'stdout'},
@@ -83,6 +84,21 @@ module.exports = function (app) {
                 require(path.join(app.root, "packages", rootPath, "server", "routes", js))(app)
             });
         }
+    });
+    app.post("/save", function (req, res) {
+        //console.log(req.body);
+        let dir = "/home/senpai/work/argus" + moment().format('ddd YYYY-MM-DD')
+        if (!fs.existsSync(dir)){
+            fs.mkdirSync(dir);
+        }
+        var data = req.body.image.replace(/^data:image\/png;base64,/, "");
+        fs.writeFile(dir + "/" + req.body.candidate_id+"_"+ req.body.type+"_"+moment().format('hh:mm:ss A')+ ".png", data, 'base64', function(err) {
+            console.log('err',err);
+        });
+        res.send({
+            code: 1,
+            message: 'success'
+        })
     });
     // this should be at the end
     app.all("*", function (req, res) {
