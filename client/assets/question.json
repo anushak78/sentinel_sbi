@@ -3217,16 +3217,6 @@
       "q_id": 15
     },
     {
-      "question": "Studied the Course in Calendar Year pattern (Jan to Dec)",
-      "options": {
-        "option1": "Matched",
-        "option2": "Not Matched"
-      },
-      "approved": "1",
-      "doc_id": 25,
-      "q_id": 16
-    },
-    {
       "question": "Whether studied PG Degree in Tamil Medium",
       "options": {
         "option1": "Matched",
