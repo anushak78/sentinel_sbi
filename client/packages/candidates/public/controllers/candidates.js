@@ -4247,6 +4247,11 @@
       console.log($scope.finalJsonData);
     };
 
+    $scope.filterObject = function (q_id, array) {
+      console.log(array)
+      return array.find(s => s.q_id == q_id)
+    }
+
 
     $scope.setAnswerGiven = function () {
       if (typeof $scope.finalJsonData[$scope.selectedDocType] != 'undefined') {

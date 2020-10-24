@@ -810,11 +810,11 @@
                 <tr ng-if="finalJsonData"
                     ng-repeat="q in finalJsonData[key]['answers']">
                   <td>
-                    {{documentWithQuestions[key][$index]['question']}}
+                    {{ filterObject(q.qn_id, documentWithQuestions[key])['question'] }}
                   </td>
                   <td ng-if="q.additional_info ==''" style="text-align: justify;word-wrap: normal;">
                     <div>
-                      {{documentWithQuestions[key][$index]['options']['option'+q.ans_id]}}
+                      {{filterObject(q.qn_id, documentWithQuestions[key])['options']['option'+q.ans_id]}}
                     </div>
                   </td>
                   <td ng-if="q.additional_info !=''"  style="text-align: justify;word-wrap: normal;">
