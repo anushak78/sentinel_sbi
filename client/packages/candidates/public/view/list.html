@@ -791,13 +791,105 @@
             </section>
           </div>
         </div>
+        <style>
+        #invoice {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+        }
+        #invoice::after {
+          content: "";
+          opacity: 0.08;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-position: center top 150px;
+          background-repeat: repeat-y;
+          background-size: 100%;
+          position: absolute;
+          z-index: -1;   
+        }
+        #l1-summary {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+        }
+        #l1-summary::after {
+          content: "";
+          opacity: 0.08;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-position: center top 150px;
+          background-repeat: repeat-y;
+          background-size: 100%;
+          position: absolute;
+          z-index: -1;   
+        }
+        #l1-reserve {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+        }
+        #l1-reserve::after {
+          content: "";
+          opacity: 0.08;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-position: center top 150px;
+          background-repeat: repeat-y;
+          background-size: 100%;
+          position: absolute;
+          z-index: -1;   
+        }
+        #l1-edu-summary {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+        }
+        #l1-edu-summary::after {
+          content: "";
+          opacity: 0.08;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-position: center top 150px;
+          background-repeat: repeat-y;
+          background-size: 100%;
+          position: absolute;
+          z-index: -1;   
+        }
+        .panel-transparent {
+          background: none;
+        }
+        .panel-transparent .panel-heading{
+          background: rgba(122, 130, 136, 0.2)!important;
+        }
+        .panel-transparent .panel-body{
+          background: rgba(46, 51, 56, 0.2)!important;
+        }
+        </style>
         <div style="display: none;color:black">
-          <div id="invoice">
+          <div id="invoice" class="watermark">
             <h2 style="text-align: center">Scrutiny Summary</h2>
-            <section class="panel panel-default"
+           <section class="panel panel-default panel-transparent"
                      ng-repeat="(key, value) in finalJsonData">
               <header class="panel-heading">
-                <span class="hidden-sm">{{key}}</span>
+                <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4"><span class="hidden-sm">{{key}}</span></div>
+                  <div class="col-md-4">
+                  </div>
+                </div>
               </header>
               <table class="table m-b-none">
                 <thead>
@@ -826,6 +918,32 @@
                 </tbody>
               </table>
             </section>
+            <div class="row" style="display: flex;align-items: center;">
+              <div class="col-md-6">
+                <span>Photo</span>
+              </div>
+              <div class="col-md-6">
+                <img src="{{l1_photo}}" width="100px" height="100px">
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row" style="display: flex;align-items: center;">
+              <div class="col-md-6">
+                <span>Signature</span>
+              </div>
+              <div class="col-md-6">
+                <img src="{{l1_sign}}" width="100px" height="100px">
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-6">
+                <span>Name</span>
+              </div>
+              <div class="col-md-6">
+                <span>{{l1_title}}</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -3787,7 +3905,7 @@
  </div>
  <br>
  <div>
-     <section class="panel panel-default" style="color: black !important;"
+     <section class="panel panel-default panel-transparent" style="color: black !important;"
          ng-if="candidateDetails['candidate_details'][0]['ocad_commcertno'] != '' && candidateDetails['candidate_details'][0]['ocad_commcertno'] != null">
          <header class="panel-heading">
              Community Details
@@ -3883,7 +4001,7 @@
              </div>
          </div>
      </section>
-     <section class="panel panel-default" style="color: black !important;"
+     <section class="panel panel-default panel-transparent" style="color: black !important;"
          ng-if="candidateDetails['candidate_details'][0]['is_handicapped'] != 'No'">
          <header class="panel-heading">
              Disability Details
@@ -3918,7 +4036,7 @@
              </div>
          </div>
      </section>
-     <section class="panel panel-default" style="color: black !important;">
+     <section class="panel panel-default panel-transparent" style="color: black !important;">
          <header class="panel-heading">
              Main Subject Details
          </header>
@@ -4002,7 +4120,7 @@
              </div>
          </div>
      </section>
-     <section class="panel panel-default" style="color: black !important;">
+     <section class="panel panel-default panel-transparent" style="color: black !important;">
          <header class="panel-heading">
              Publish Result Details
          </header>
@@ -4113,7 +4231,7 @@
          </div>
      </section>
  </div>
- <section class="panel panel-default" style="color: black !important;">
+ <section class="panel panel-default panel-transparent" style="color: black !important;">
      <header class="panel-heading">
          Education Qualification
      </header>
@@ -4637,7 +4755,7 @@
          </div>
      </div>
  </section>
- <section class="panel panel-default" style="color: black !important;">
+ <section class="panel panel-default panel-transparent" style="color: black !important;">
      <header class="panel-heading">
          Conduct Certificate
      </header>
@@ -4663,7 +4781,7 @@
      </div>
  </section>
 
- <section class="panel panel-default" style="color: black !important;">
+ <section class="panel panel-default panel-transparent" style="color: black !important;">
      <header class="panel-heading">
          Teaching Experience
      </header>
@@ -4806,6 +4924,32 @@
               </div>
           </div>
       </section>
+      <div class="row" style="display: flex;align-items: center;">
+        <div class="col-md-6">
+          <span>Photo</span>
+        </div>
+        <div class="col-md-6">
+          <img src="{{l1_photo}}" width="100px" height="100px">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row" style="display: flex;align-items: center;">
+        <div class="col-md-6">
+          <span>Signature</span>
+        </div>
+        <div class="col-md-6">
+          <img src="{{l1_sign}}" width="100px" height="100px">
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <span>Name</span>
+        </div>
+        <div class="col-md-6">
+          <span>{{l1_title}}</span>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -5165,6 +5309,32 @@
           </div>
   </div>
   </section>
+  <div class="row" style="display: flex;align-items: center;">
+    <div class="col-md-6">
+      <span>Photo</span>
+    </div>
+    <div class="col-md-6">
+      <img src="{{l1_photo}}" width="100px" height="100px">
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="row" style="display: flex;align-items: center;">
+    <div class="col-md-6">
+      <span>Signature</span>
+    </div>
+    <div class="col-md-6">
+      <img src="{{l1_sign}}" width="100px" height="100px">
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <span>Name</span>
+    </div>
+    <div class="col-md-6">
+      <span>{{l1_title}}</span>
+    </div>
+  </div>
 </div>
 </div>
 

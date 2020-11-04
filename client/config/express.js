@@ -11,6 +11,7 @@ const session = require('express-session');
 const _ = require("lodash");
 let log4js = require('log4js');
 var moment = require('moment');
+var QRCode = require('qrcode')
 log4js.configure({
     appenders: {
         out: {type: 'stdout'},
@@ -85,6 +86,20 @@ module.exports = function (app) {
             });
         }
     });
+    app.post('/qr_code', function (req, res) {
+        let code = req.body.candidate_id
+        let name = req.body.name
+        let dob = req.body.dob
+        QRCode.toDataURL(code+' '+name+' '+dob, function (err, url) {
+            console.log(err)
+            res.send({
+                code: 1,
+                message: 'success',
+                obj: url
+            })
+          })
+    })
+
     app.post("/save", function (req, res) {
         //console.log(req.body);
         let dir = "/home/senpai/work/argus/" + moment().format('ddd YYYY-MM-DD')

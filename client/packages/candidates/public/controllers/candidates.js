@@ -2681,11 +2681,81 @@
             $scope.totalExperience = Math.floor($scope.noOfDays / 365) + ' Years ' + Math.floor(($scope.noOfDays % 365) / 30) + ' Months ' + Math.floor((306 % 365) % 30) + ' Days';
 
           }
+          $http.post("/qr_code", {
+            candidate_id: object['data']['candidate_details'][0].oum_user_id,
+            name: $scope.candidateDetails['candidate_details'][0]['oum_candidate_name'],
+            dob: $scope.candidateDetails['candidate_details'][0]['ocd_date_of_birth']
+          }).then(function (object) {
+            console.log(object)
+            if (object.data['code'] == 1) { 
+              $scope.image_qr = object.data['obj']
+              let invoice_div = document.getElementById('invoice')
+              invoice_div = document.head.appendChild(document.createElement("style"));
+              invoice_div.innerHTML = "#invoice::after {background: url("+$scope.image_qr+")}";
+              let l1_summ_div = document.getElementById('l1-summary')
+              l1_summ_div = document.head.appendChild(document.createElement("style"));
+              l1_summ_div.innerHTML = "#l1-summary::after {background: url("+$scope.image_qr+")}";
+              let l1_res_div = document.getElementById('l1-reserve')
+              l1_res_div = document.head.appendChild(document.createElement("style"));
+              l1_res_div.innerHTML = "#l1-reserve::after {background: url("+$scope.image_qr+")}";
+              let l1_edu_div = document.getElementById('l1-edu-summary')
+              l1_edu_div = document.head.appendChild(document.createElement("style"));
+              l1_edu_div.innerHTML = "#l1-edu-summary::after {background: url("+$scope.image_qr+")}";
+              //invoice_div.style.background='url('+$scope.image_qr+')'
+            }
+          }, function(err) {
+            console.log(err)
+          })
+          var photo = ''
+          var sign = ''
+          if ($rootScope.userData.level == 1) {
+            $scope.switchFuctionLevel1($rootScope.userData.user_id)
+          }
+          $scope.l1_photo = "../../../../../assets/photo_sign/" + $scope.l1_photo
+          $scope.l1_sign = "../../../../../assets/photo_sign/" + $scope.l1_sign
         } else {
           Message.error(object['message']);
         }
 
       });
+    };
+    $scope.switchFuctionLevel1 = function (id) {
+      switch (id) {
+          case 1:
+              $scope.l1_title = "V.BALAMURUGAN JEGAN"
+              $scope.l1_photo = '1photo-1.jpg'
+              $scope.l1_sign = '1signature-1.jpg'
+              break;
+          case 2:
+              $scope.l1_title = "B.PRAKASH"
+              $scope.l1_photo = '2photo.jpg'
+              $scope.l1_sign = '2sign-1.jpg'
+              break;
+          case 3:
+              $scope.l1_title = "E.HENRY PETU"
+              $scope.l1_photo = '3photo.jpg'
+              $scope.l1_sign = '3sign.jpg'
+              break;
+          case 4:
+              $scope.l1_title = "P.THIRUPATHI"
+              $scope.l1_photo = '4photo.jpg'
+              $scope.l1_sign = '4sign.jpg'
+              break;
+          case 5:
+              $scope.l1_title = "A.PUSHPARAJ"
+              $scope.l1_photo = '5Photo.jpg'
+              $scope.l1_sign = '5Sign.jpg'
+              break;
+          case 6:
+              $scope.l1_title = "S.VENKET RAGAVAN"
+              $scope.l1_photo = '6photo.jpeg'
+              $scope.l1_sign = '6sign.jpeg'
+              break;
+          default: 
+              $scope.l1_title = "Bharathan"
+              break;
+
+      }
     };
 
     $scope.findDocumentForSuperCheck = function(doc_id) {
