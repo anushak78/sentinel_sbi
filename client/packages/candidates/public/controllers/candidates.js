@@ -2732,7 +2732,7 @@
               $scope.l1_sign = '2sign-1.jpg'
               break;
           case 4:
-              $scope.l1_title = "E.HENRY PETU"
+              $scope.l1_title = "E.HENRY PETER"
               $scope.l1_photo = '3photo.jpg'
               $scope.l1_sign = '3sign.jpg'
               break;
@@ -5098,6 +5098,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
+          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
           .save();
     };
     $scope.generatePDFL1Summary = function () {
