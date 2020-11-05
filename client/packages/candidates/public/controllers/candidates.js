@@ -2721,32 +2721,32 @@
     };
     $scope.switchFuctionLevel1 = function (id) {
       switch (id) {
-          case 1:
+          case 2:
               $scope.l1_title = "V.BALAMURUGAN JEGAN"
               $scope.l1_photo = '1photo-1.jpg'
               $scope.l1_sign = '1signature-1.jpg'
               break;
-          case 2:
+          case 3:
               $scope.l1_title = "B.PRAKASH"
               $scope.l1_photo = '2photo.jpg'
               $scope.l1_sign = '2sign-1.jpg'
               break;
-          case 3:
+          case 4:
               $scope.l1_title = "E.HENRY PETU"
               $scope.l1_photo = '3photo.jpg'
               $scope.l1_sign = '3sign.jpg'
               break;
-          case 4:
+          case 5:
               $scope.l1_title = "P.THIRUPATHI"
               $scope.l1_photo = '4photo.jpg'
               $scope.l1_sign = '4sign.jpg'
               break;
-          case 5:
+          case 6:
               $scope.l1_title = "A.PUSHPARAJ"
               $scope.l1_photo = '5Photo.jpg'
               $scope.l1_sign = '5Sign.jpg'
               break;
-          case 6:
+          case 7:
               $scope.l1_title = "S.VENKET RAGAVAN"
               $scope.l1_photo = '6photo.jpeg'
               $scope.l1_sign = '6sign.jpeg'
