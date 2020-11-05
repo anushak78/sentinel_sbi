@@ -2751,6 +2751,16 @@
               $scope.l1_photo = '6photo.jpeg'
               $scope.l1_sign = '6sign.jpeg'
               break;
+          case 8:
+              $scope.l1_title = "R. Deepak"
+              $scope.l1_photo = '8photo.jpg'
+              $scope.l1_sign = '8sign.jpg'
+              break;
+          case 9:
+              $scope.l1_title = "R. Vignesh"
+              $scope.l1_photo = '9photo.jpg'
+              $scope.l1_sign = '9sign.jpg'
+              break;
           default: 
               $scope.l1_title = "Bharathan"
               break;
