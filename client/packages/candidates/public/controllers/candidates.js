@@ -4077,6 +4077,7 @@
       console.log('in iframe');
       $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
       $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+      $scope.selectedDocID = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['doc_id'];
       $scope.setIframe();
 
       if ($scope.selectedDocNo == 0) {
@@ -4097,6 +4098,7 @@
         $scope.selectedDocNo = index;
         $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
         $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+        $scope.selectedDocID = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['doc_id']
         console.log('selected doc type');
         // if ($scope.selectedDocType == 'Work Experience') {
         //   if (typeof $scope.finalJsonData['PG Degree Certificate'] == 'undefined') {
@@ -4121,6 +4123,7 @@
       $scope.selectedDocNo = ($scope.selectedDocNo - 1);
       $scope.selectedDocType = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['odm_name'];
       $scope.selectedDocPath = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['ocd_doc_file_name'];
+      $scope.selectedDocID = $scope.candidateDetails['document_list'][$scope.selectedDocNo]['doc_id'];
       $scope.selectedInnerDoc = 0;
       $scope.setIframe();
     };
@@ -4304,7 +4307,7 @@
       console.log($scope.selectedDocType);
       //if ($scope.selectedDocType != 'L1') {
         $scope.finalJsonData[$scope.selectedDocType] = {
-          "doc_id": $scope.documentWithQuestions[$scope.selectedDocType][0]['doc_id'],
+          "doc_id": $scope.selectedDocID,
           "status": documentApproved,
           "answers": answers
         };
@@ -4332,7 +4335,7 @@
     };
 
     $scope.filterObject = function (q_id, array) {
-      console.log(array)
+     // console.log(array)
       return array.find(s => s.q_id == q_id)
     }
 
