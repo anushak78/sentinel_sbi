@@ -2711,6 +2711,9 @@
           if ($rootScope.userData.level == 1) {
             $scope.switchFuctionLevel1($rootScope.userData.user_id)
           }
+          if ($rootScope.userData.level == 2) {
+            $scope.switchFuctionLevel2($rootScope.userData.user_id)
+          }
           $scope.l1_photo = "../../../../../assets/photo_sign/" + $scope.l1_photo
           $scope.l1_sign = "../../../../../assets/photo_sign/" + $scope.l1_sign
         } else {
@@ -2760,6 +2763,62 @@
               $scope.l1_title = "R. Vignesh"
               $scope.l1_photo = '9photo.jpg'
               $scope.l1_sign = '9sign.jpg'
+              break;
+          default: 
+              $scope.l1_title = "Bharathan"
+              break;
+
+      }
+    };
+    $scope.switchFuctionLevel2 = function (id) {
+      switch (id) {
+          case 1:
+              $scope.l1_title = "OM Vijayakumar"
+              $scope.l1_photo = 'OM Vijayakumar Photo and Signature.jpg'
+              break;
+          case 2:
+              $scope.l1_title = "M. Thameem Ahmed"
+              $scope.l1_photo = 'M. Thameem Ahmed Photo and Signature.jpg'
+              break;
+          case 3:
+              $scope.l1_title = "S Nirmala"
+              $scope.l1_photo = 'S Nirmala Photo and Signature.jpg'
+              break;
+          case 4:
+              $scope.l1_title = "D Kannadasan"
+              $scope.l1_photo = 'D Kannadasan Phot and Signature.jpg'
+              break;
+          case 5:
+              $scope.l1_title = "R D Harikumar"
+              $scope.l1_photo = 'R D Harikumar Photo and signature.jpg'
+              break;
+          case 6:
+              $scope.l1_title = "D Kala"
+              $scope.l1_photo = 'D Kala Photo and signature.jpg'
+              break;
+          case 7:
+              $scope.l1_title = "M. Kanaga"
+              $scope.l1_photo = 'M. Kanaga Photo and Signature.jpg'
+              break;
+          case 8:
+              $scope.l1_title = "David Carphin"
+              $scope.l1_photo = 'David Carphin Photo and Signature.jpg'
+              break;
+          case 9:
+              $scope.l1_title = "E Thirunavukkarasu"
+              $scope.l1_photo = 'E Thirunavukkarasu Photo and Signature.jpg'
+              break;
+          case 10:
+              $scope.l1_title = "Sumithra"
+              $scope.l1_sign = 'Sumithra Sign.jpg'
+              break;
+          case 11:
+              $scope.l1_title = "Bharathan"
+              $scope.l1_photo = 'Bharathan Photo and Signature.png'
+              break;
+          case 12:
+              $scope.l1_title = "K. Seenivasan"
+              $scope.l1_photo = 'Seenivasan Photo and Signature.jpg'
               break;
           default: 
               $scope.l1_title = "Bharathan"
