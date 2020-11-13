@@ -256,9 +256,10 @@ def get_candidate_list(request):
     log.info(get_candidateID(int(user_id)))
     log.info(">>>>>>>>>>Dennis>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
-    pending_list_query += " where ocd.ocd_created_by in ("
-    pending_list_query += get_candidateID(int(user_id)) + ")"
-    #pending_list_query += " limit 10"
+    if level == 1:
+        pending_list_query += " where ocd.ocd_created_by in ("
+        pending_list_query += get_candidateID(int(user_id)) + ")"
+        #pending_list_query += " limit 10"
 
     print(pending_list_query)
     count_query = """select count(*) as total_count
