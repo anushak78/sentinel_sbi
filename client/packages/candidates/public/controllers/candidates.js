@@ -2712,7 +2712,7 @@
             $scope.switchFuctionLevel1($rootScope.userData.user_id)
           }
           if ($rootScope.userData.level == 2) {
-            $scope.switchFuctionLevel2($rootScope.userData.user_id)
+            $scope.switchFuctionLevel2($rootScope.userData.login)
           }
           $scope.l1_photo = "../../../../../assets/photo_sign/" + $scope.l1_photo
           $scope.l1_sign = "../../../../../assets/photo_sign/" + $scope.l1_sign
@@ -2772,51 +2772,51 @@
     };
     $scope.switchFuctionLevel2 = function (id) {
       switch (id) {
-          case 1:
+          case 'gen2user1':
               $scope.l1_title = "OM Vijayakumar"
               $scope.l1_photo = 'OM Vijayakumar Photo and Signature.jpg'
               break;
-          case 2:
+          case 'gen2user2':
               $scope.l1_title = "M. Thameem Ahmed"
               $scope.l1_photo = 'M. Thameem Ahmed Photo and Signature.jpg'
               break;
-          case 3:
+          case 'gen2user3':
               $scope.l1_title = "S Nirmala"
               $scope.l1_photo = 'S Nirmala Photo and Signature.jpg'
               break;
-          case 4:
+          case 'gen2user4':
               $scope.l1_title = "D Kannadasan"
               $scope.l1_photo = 'D Kannadasan Phot and Signature.jpg'
               break;
-          case 5:
+          case 'gen2user5':
               $scope.l1_title = "R D Harikumar"
               $scope.l1_photo = 'R D Harikumar Photo and signature.jpg'
               break;
-          case 6:
+          case 'gen2user6':
               $scope.l1_title = "D Kala"
               $scope.l1_photo = 'D Kala Photo and signature.jpg'
               break;
-          case 7:
+          case 'gen2user7':
               $scope.l1_title = "M. Kanaga"
               $scope.l1_photo = 'M. Kanaga Photo and Signature.jpg'
               break;
-          case 8:
+          case 'gen2user8':
               $scope.l1_title = "David Carphin"
               $scope.l1_photo = 'David Carphin Photo and Signature.jpg'
               break;
-          case 9:
+          case 'gen2user9':
               $scope.l1_title = "E Thirunavukkarasu"
               $scope.l1_photo = 'E Thirunavukkarasu Photo and Signature.jpg'
               break;
-          case 10:
+          case 'gen2user10':
               $scope.l1_title = "Sumithra"
               $scope.l1_sign = 'Sumithra Sign.jpg'
               break;
-          case 11:
+          case 'gen2user11':
               $scope.l1_title = "Bharathan"
               $scope.l1_photo = 'Bharathan Photo and Signature.png'
               break;
-          case 12:
+          case 'gen2user13':
               $scope.l1_title = "K. Seenivasan"
               $scope.l1_photo = 'Seenivasan Photo and Signature.jpg'
               break;
@@ -3178,7 +3178,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
+          .set({ margin: [15, 10, 15, 10], jsPDF: { unit: 'mm', format: 'A4', orientation: 'landscape' }, pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_eligible.pdf');
     }
 
@@ -3187,7 +3187,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
+          .set({ margin: [15, 10, 15, 10], jsPDF: { unit: 'mm', format: 'A4', orientation: 'landscape' }, pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_report.pdf');
     }
 
@@ -5171,7 +5171,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
+          .set({ margin: [15, 10, 15, 10], jsPDF: { unit: 'mm', format: 'A4', orientation: 'landscape' }, pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_l1-history.pdf');
     };
 
