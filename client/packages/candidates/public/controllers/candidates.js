@@ -3178,7 +3178,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
+          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_eligible.pdf');
     }
 
@@ -3187,7 +3187,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
+          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_report.pdf');
     }
 
@@ -5171,7 +5171,7 @@
       // Choose the element and save the PDF for our user.
       html2pdf()
           .from(element)
-          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }})
+          .set({ pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }, jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }})
           .save($scope.candidateDetails['candidate_details'][0]['oum_candidate_name'] + '_l1-history.pdf');
     };
 
