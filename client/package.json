@@ -32,6 +32,7 @@
     "pdfmake": "^0.1.37",
     "pg": "6.*",
     "pg-hstore": "2.*",
+    "qrcode": "^1.4.4",
     "request": "^2.87.0",
     "sequelize": "3.*",
     "skipper": "0.8.5",
