@@ -1,3 +1,33 @@
+<section class="layout-column wrapper" style="width: 100%;height: 100%" ng-if="!flag_back">
+  <section style="width: 100%;height: 100%" class="wrapper">
+    <section class="panel panel-default" style="height: 100%">
+      <div class="wrapper header h4 " style="padding: 10px;">
+        <div class="col-xs-3">
+          Module List
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 text-center" ng-repeat="(k, v) in modules_list track by $index">
+            <div style="height: 50px;
+            border: 2px solid black;
+            margin: 20px 20px 20px 20px;cursor: default;" class="module_list" ng-click="getKeyData(k, v.module_name)">{{v.module_name}}</div>
+          </div>
+      </div>
+      </div>
+    </section>
+  </section>
+</section>
+
+<section class="layout-column wrapper" style="width: 100%;height: 100%" ng-if="flag_back">
+  <div class="text-right" ng-if="flag_back">
+    <button ng-click="goBack()" class="btn btn-default">Back</button>
+  </div>
+  <div class="wrapper header h4 " style="padding: 10px;">
+    <div class="col-xs-3">
+      {{module_title}}
+    </div>
+  </div>
 <section class="layout-column wrapper" style="width: 100%;height: 100%">
   <section style="width: 100%;height: 100%" class="wrapper">
     <section class="panel panel-default" style="height: 100%">
@@ -328,6 +358,7 @@
           <div style="clear: both"></div>
           <div
               ng-if="userData.level==1 || userData.level==2 || userData.level==3"
+              ng-hide="true"
               class="col-sm-12"
               style="color: black !important;">
             <section class="panel panel-default">
@@ -411,6 +442,7 @@
             <br/>
           </div>
           <div ng-if="userData.level==2 || userData.level==3"
+          ng-hide="true"
                class="col-sm-12"
                style="color: black !important;">
             <section class="panel panel-default">
@@ -603,7 +635,7 @@
               </div>
             </section>
           </div>
-          <div ng-if="userData.level==3" class="col-sm-12"
+          <div ng-if="userData.level==3" ng-hide="true" class="col-sm-12"
                style="color: black !important;">
             <section class="panel panel-default">
               <header class="panel-heading">
@@ -957,30 +989,28 @@
               <input type="button"
                      class="btn btn-success text-center"
                      ng-click=generatePDF()
+                     ng-hide="true"
                      value="Download Pdf"/>
             </div>
           </div>
-          <div class="col-6" ng-if="userData.level==1 && showVerify">
-            <div class="form-group text-center">
+          <div class="row">
+          <div class="col-sm-6" style="text-align: right;" ng-if="userData.level==1 && showVerify">
+            <div class="form-group">
               <input type="button"
                      class="btn btn-success text-center"
                      ng-click=submitQuestion()
-                     value="Submit"/>
+                     value="Accept"/>
             </div>
           </div>
-          <div>
-            <div ng-if="userData.level > 1 && rows[selectedIndex]['status']<1"
-                 class="form-group text-center float-left">
+          <div class="col-sm-6" ng-if="userData.level==1 && showVerify">
+            <div class="form-group">
               <input type="button"
-                     class="btn btn-success text-center"
-                     ng-click=submitQuestion(1)
-                     value="Approve"/>
-              <input type="button"
-                     class="btn btn-danger text-center"
-                     ng-click=submitQuestion(2)
+                     class="btn btn-warn text-center"
+                     ng-click=submitQuestion()
                      value="Reject"/>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </div>
@@ -1388,6 +1418,13 @@
                                style="font-size: 12px">
                         Age as on 01.07.2019 (Years, Months, Days) :<br/><span
                           style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_age']}}</span>
+                      </section>
+                    </div>
+                    <div class="col-md-6">
+                      <section class="panel-body"
+                               style="font-size: 12px">
+                        DOB :<br/><span
+                          style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth']}}</span>
                       </section>
                     </div>
                     <div class="col-md-6">
@@ -3824,6 +3861,7 @@
 
 
 </section>
+</section>
 
 <div style="display: none;color:black">
   <div id="l1-summary" style="padding-left: 15px;padding-right: 15px;">
@@ -3860,6 +3898,17 @@
           <div class="col-md-6">
               <span
                   style="font-size: 14px">{{candidateDetails['candidate_details'][0]['orvm_reference_value']}}</span>
+          </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-6">
+              <span style="font-size: 14px">
+                  DOB :
+              </span>
+          </div>
+          <div class="col-md-6">
+              <span style="font-size: 14px">{{candidateDetails['candidate_details'][0]['ocd_date_of_birth']}}</span>
           </div>
       </div>
       <br>
@@ -5312,6 +5361,7 @@
           </div>
   </div>
   </section>
+</section>
   <div class="row" style="display: flex;align-items: center;">
     <div class="col-md-6">
       <span>Photo</span>

@@ -2397,7 +2397,22 @@
 
     $scope.currentPage = 1;
     $scope.pageSize = 10;
-    $('#modal-instructions').modal({backdrop: 'static', keyboard: false});
+    $scope.flag_back = false
+    $scope.getModuleList = function() {
+      Http.get("/assets/modules.json", 'local').then(function (object) {
+        $scope.modules_list = object;
+        console.log($scope.modules_list)
+      })
+    }
+    $scope.getKeyData = function(key, module_name) {
+      $scope.flag_back = true
+      $scope.module_title = module_name
+    }
+    $scope.goBack = function() {
+      $scope.flag_back = false
+    } 
+    $scope.getModuleList()
+   // $('#modal-instructions').modal({backdrop: 'static', keyboard: false});
     $scope.sendImage = function(video, flag) {
       if (flag == 'screen') {
         let canvas = document.getElementById('canvas-screen');
@@ -3100,6 +3115,7 @@
           }
         }
       }
+      console.log($scope.reserve_summary)
 
     }
 

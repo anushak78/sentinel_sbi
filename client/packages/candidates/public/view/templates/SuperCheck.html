@@ -2032,6 +2032,11 @@
                             {{q.options.option1}}
                         </label>
                     </div>
+                    <label style="{{radio_values.init_doc999[q.q_id]=='1' ? 'display:block':'display:none'}}"
+                        ng-if="q.q_id == 90">
+                        <input type="text" id="doc{{q.doc_id}}{{q.q_id}}" maxlength="50" class="form-control"
+                            ng-model="doc999[q.q_id]" />
+                    </label>
                     <div class="radio">
                         <label class="radio-custom">
                             <input type="radio" class="q_radio radio{{q.doc_id}}{{q.q_id}}"
