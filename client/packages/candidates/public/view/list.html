@@ -33,29 +33,25 @@
     <section class="panel panel-default" style="height: 100%">
       <div class="wrapper header h4 " style="padding: 10px;">
         <div class="col-xs-3">
-          Candidate List
+          Exception List
         </div>
-        <div class="col-xs-3">
+        <!-- <div class="col-xs-3">
           <button type="button" class="btn btn-success"
                   ng-click="exportCandidateData()">Export Reports
           </button>
-        </div>
+        </div> -->
 
         <div class="col-xs-4">
-          <input type="text" placeholder="Search By Candidate Name"
+          <input type="text" placeholder="Search By Policy Details"
                  id="searchByCandidateID"
                  class="form-control"
-                 ng-model="packages.searchByCandidateID">
+                 ng-model="searchTxt">
         </div>
         <div ng-if="userData.level == 1" class="col-xs-2">
           <select class="form-control DD" id="DD"
                   ng-model="packages.filterDD">
             <option value="">All</option>
             <option value="A">Approved</option>
-            <option value="R">{{userData.level==1?'Not Matching /
-              Not
-              Clear':'Rejected'}}
-            </option>
             <option value="P">Pending</option>
           </select>
         </div>
@@ -64,22 +60,15 @@
         <table class="table table-striped b-t b-light text-sm">
           <thead>
           <tr>
-            <th width="5%">No</th>
-            <th width="15%">Candidate Name</th>
-            <th width="30%">Email</th>
-            <!--<th width="20%">Mobile NO.</th>-->
-            <!--<th width="20%">Email</th>-->
-            <th width="15%" ng-if="userData.level>1">Level 1
-              Status
-            </th>
-            <th width="15%" ng-if="userData.level>2">Level 2
-              Status
-            </th>
-            <th width="20%">Status</th>
+            <th width="20%">ROW NO</th>
+            <th width="20%">POLICY_NO</th>
+            <th width="20%">PLAN_ID </th>
+            <th width="20%"> UIN </th> 
+            <th width="20%">STATUS</th>
           </tr>
           </thead>
           <tbody>
-          <tr dir-paginate="u in rows | itemsPerPage: pageSize"
+          <tr dir-paginate="u in rows | itemsPerPage: pageSize | filter: searchTxt"
               total-items="totalCount"
               current-page="currentPage" class="listingDiv"
               data-index="{{$index}}"
@@ -88,35 +77,26 @@
 
             <td width="5%"
                 data-ng-init="currentCount=((currentPage-1)*pageSize)"
-                ng-click="showCustomModal(u.oum_user_id,$index)">
+                ng-click="showCustomModal(u.POLICY_NO,$index,u)">
               {{currentCount+$index+1}}
             </td>
-            <td ng-click="showCustomModal(u.oum_user_id,$index)">
-              {{u.oum_candidate_name}}
+            <td ng-click="showCustomModal(u.POLICY_NO,$index,u)">
+              {{u.POLICY_NO}}
             </td>
-            <td ng-click="showCustomModal(u.oum_user_id,$index)">
-              {{u.oum_email_id}}
+            <td ng-click="showCustomModal(u.POLICY_NO,$index,u)">
+              {{u.PLAN_ID}}
             </td>
-            <td ng-click="showCustomModal(u.oum_user_id,$index)"
-                ng-if="userData.level>1">
-              Not Matching / Not Clear
+            <td ng-click="showCustomModal(u.POLICY_NO,$index,u)">
+              {{u.UIN}}
             </td>
-            <td ng-click="showCustomModal(u.oum_user_id,$index)"
-                ng-if="userData.level>2">
-              Rejected
-            </td>
-            <!--<td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.oum_mobile_no}}</td>-->
-            <!--<td ng-click="showCustomModal(u.oum_user_id,$index)">{{u.oum_email_id}}</td>-->
-            <!--LEVEL WISE STATUS-->
-            <!--LEVEL 1-->
             <td ng-if="userData.level == 1"
-                ng-click="showCustomModal(u.oum_user_id,$index)">
+                ng-click="showCustomModal(u.oum_user_id,$index,u)">
               {{u.status == 2 ? 'Not Matching / Not Clear' :
               u.status == 1 ? 'Matched' : 'Pending'}}
             </td>
 
             <td ng-if="userData.level >1 "
-                ng-click="showCustomModal(u.oum_user_id,$index)">
+                ng-click="showCustomModal(u.oum_user_id,$index,u)">
               {{u.status == 2 ? 'Rejected' : u.status == 1 ?
               'Approved' : 'Pending'}}
             </td>
@@ -184,12 +164,12 @@
       <section class="wrapper header h4"
                style="width: 100%;min-height:7%;position:absolute;top:0;z-index:9;color:white;background: #89cc97;">
         <div class="col-sm-12">
-          <div class="col-xs-4">Candidate Details</div>
-          <div class="col-xs-6 text-right">
+          <div class="col-xs-4">Policy Details</div>
+          <!-- <div class="col-xs-6 text-right">
                         <span ng-click="showApplicationForm()"
                               style="text-decoration: underline">Application Form</span>
-          </div>
-          <div class="col-xs-2">
+          </div> -->
+          <div class="col-xs-8">
                             <span ng-click="closeCustomModal()" class="close"
                                   data-dismiss="popover"
                                   style="opacity:1;color:white;">×</span>
@@ -235,10 +215,10 @@
         <div class="slimScrollDiv"
              style="position: relative; overflow-y: scroll; width: auto;">
 
-          <div class="col-md-4">
+          <div class="col-md-8">
             <section class="panel-body" style="font-size: 12px">
-              Name:<br/><span
-                style="font-size: 14px">{{candidateDetails['candidate_details'][0]['oum_candidate_name']}}</span>
+              POLICY NO :&emsp;<span
+                style="font-size: 14px">{{jsondata.POLICY_NO}}</span>
             </section>
           </div>
           <div class="col-md-4">

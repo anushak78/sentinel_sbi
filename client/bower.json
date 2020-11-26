@@ -1,5 +1,5 @@
 {
-  "name": "TBX",
+  "name": "sentinel",
   "dependencies": {
     "angular": "1.*",
     "angular-ui-router": "1.*",
@@ -9,7 +9,7 @@
     "angularUtils-pagination": "angular-utils-pagination#^0.11.1",
     "parsleyjs": "2.6.0",
     "oclazyload": "1.*",
-    "daterangepicker": "^2.0.12"
+    "daterangepicker": "^1.6.0"
   },
   "resolutions": {
     "moment": "~2.10.3"
